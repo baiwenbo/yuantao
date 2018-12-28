@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/backstage-manager/backstage-dao/backstage-dao.iml" filepath="$PROJECT_DIR$/backstage-manager/backstage-dao/backstage-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backstage-manager/backstage-manager.iml" filepath="$PROJECT_DIR$/backstage-manager/backstage-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backstage-manager/backstage-pojo/backstage-pojo.iml" filepath="$PROJECT_DIR$/backstage-manager/backstage-pojo/backstage-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backstage-manager/backstage-service/backstage-service.iml" filepath="$PROJECT_DIR$/backstage-manager/backstage-service/backstage-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backstage-manager/backstage-web/backstage-web.iml" filepath="$PROJECT_DIR$/backstage-manager/backstage-web/backstage-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/product-common/product-common.iml" filepath="$PROJECT_DIR$/product-common/product-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/product-parent/product-parent.iml" filepath="$PROJECT_DIR$/product-parent/product-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/product-shiro/product-shiro.iml" filepath="$PROJECT_DIR$/product-shiro/product-shiro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/separate-manaer/separate-dao/separate-dao.iml" filepath="$PROJECT_DIR$/separate-manaer/separate-dao/separate-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/separate-manaer/separate-manaer.iml" filepath="$PROJECT_DIR$/separate-manaer/separate-manaer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/separate-manaer/separate-pojo/separate-pojo.iml" filepath="$PROJECT_DIR$/separate-manaer/separate-pojo/separate-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/separate-manaer/separate-service/separate-service.iml" filepath="$PROJECT_DIR$/separate-manaer/separate-service/separate-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/separate-manaer/separate-web/separate-web.iml" filepath="$PROJECT_DIR$/separate-manaer/separate-web/separate-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shiro-web/shiro-web.iml" filepath="$PROJECT_DIR$/shiro-web/shiro-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/yuantao.iml" filepath="$PROJECT_DIR$/.idea/yuantao.iml" />
+    </modules>
+  </component>
+</project>

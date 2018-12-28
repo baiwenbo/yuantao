@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="backstage-dao" />
+        <module name="backstage-pojo" />
+        <module name="backstage-service" />
+        <module name="backstage-web" />
+        <module name="product-common" />
+        <module name="product-shiro" />
+        <module name="separate-dao" />
+        <module name="separate-pojo" />
+        <module name="separate-service" />
+        <module name="separate-web" />
+        <module name="shiro-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="backstage-dao" target="1.8" />
+      <module name="backstage-manager" target="1.8" />
+      <module name="backstage-pojo" target="1.8" />
+      <module name="backstage-service" target="1.8" />
+      <module name="backstage-web" target="1.8" />
+      <module name="product-common" target="1.8" />
+      <module name="product-parent" target="1.8" />
+      <module name="product-shiro" target="1.8" />
+      <module name="separate-dao" target="1.8" />
+      <module name="separate-manaer" target="1.8" />
+      <module name="separate-pojo" target="1.8" />
+      <module name="separate-service" target="1.8" />
+      <module name="separate-web" target="1.8" />
+      <module name="shiro-web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
