@@ -28,12 +28,6 @@
       <module name="product-common" target="1.8" />
       <module name="product-parent" target="1.8" />
       <module name="product-shiro" target="1.8" />
-      <module name="separate-dao" target="1.8" />
-      <module name="separate-manaer" target="1.8" />
-      <module name="separate-pojo" target="1.8" />
-      <module name="separate-service" target="1.8" />
-      <module name="separate-web" target="1.8" />
-      <module name="shiro-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
