@@ -8,6 +8,7 @@
   <artifactId>backstage-web</artifactId>
   <packaging>war</packaging>
   
+  <!-- sssss-->
   <dependencies>
   		<dependency>
 			<groupId>cn.vo</groupId>
