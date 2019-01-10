@@ -9,14 +9,12 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import cn.vo.ResultUtils;
+import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 
 import cn.vo.backstage.Utils.ListResult;
@@ -73,15 +71,16 @@ public class UserController {
 	}
 	
 	@PostMapping("/insert")
-	public String insert(@ModelAttribute User user){
+	@ResponseBody
+	public String insert(@RequestBody User user){
 		try {
 			user.setCreateTime(new Date());
 			iUserService.insertUser(user);
 		} catch (Exception e) {
 			e.printStackTrace();
-			return "redirect:/users/list";
+			return "error";
 		}
-		return "redirect:/users/list";
+		return "ok";
 	}
 	@GetMapping("/edit")
 	public String edit(Model model,Integer id){
@@ -90,15 +89,19 @@ public class UserController {
 		return "views/user/userEdit";
 	}
 	
+
 	@PostMapping("/update")
-	public String update(@ModelAttribute User user){
+	@ResponseBody
+	public String  update(@RequestBody User user){
+
 		try {
 			iUserService.updateId(user);
+
 		} catch (Exception e) {
 			e.printStackTrace();
-			return "redirect:/users/list";
+			return "error";
 		}
-		return "redirect:/users/list";
+		return "ok";
 	}
 	@ResponseBody
 	@GetMapping("/del")

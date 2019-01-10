@@ -15,7 +15,7 @@
         <div class="layui-card">
           <div class="layui-card-header">基本信息</div>
           <div class="layui-card-body" pad15="">
-            <form action="" th:action="@{/module/update}" method="post">
+            <form>
             <div class="layui-form" lay-filter="" th:each="deail:${deial}">
                <input type="hidden" name="id" th:value="${deail.id}" class="layui-input" />
               
@@ -40,7 +40,7 @@
               </div>
               <div class="layui-form-item">
                 <div class="layui-input-block">
-                  <button class="layui-btn" lay-submit="" type="submit" lay-filter="setmyinfo">确认修改</button>
+                  <button class="layui-btn" lay-submit="" id="submitModlue" type="submit" lay-filter="setmyinfo">确认修改</button>
                   <button type="reset" class="layui-btn layui-btn-primary">重新填写</button>
                 </div>
               </div>
@@ -51,7 +51,40 @@
       </div>
     </div>
   </div>
+  <script th:src="@{/layuiadmin/layui/jquery-1.9.0.js}" ></script>
+  <script th:src="@{/layuiadmin/layui/layui.js}" ></script>
+  <script>
+      $(document).ready(function(){
+          $("#submitModlue").click(function(){
+              var data = {};
+              var t = $('form').serializeArray();
+              $.each(t, function() {
+                  data [this.name] = this.value;
+              });
+              $.ajax({
+                  type:"post",
+                  contentType: 'application/json;charset=UTF-8',
+                  url:"/module/update",
+                  dataType:"text",
+                  async : false,
+                  data: JSON.stringify(data),
+                  success:function(result){
+                      if(result=="ok"){
+                          alert("更新成功！");
+                          window.parent.location.reload();
+                      }else{
+                          alert(result);
+                      }
+                  },
+                  error: function(result) {
+                      alert("服务异常");
+                  }
 
+              });
+
+          });
+      });
+  </script>
 
 </body>
 </html>

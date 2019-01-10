@@ -25,9 +25,9 @@ public class LoginController {
 	public String sigin() {
 		return "views/component/login";
 	}
-	@GetMapping("/tg")
-	public String tg() {
-		return "tg";
+	@GetMapping("/")
+	public String mission() {
+		return "redirect:/index";
 	}
 
 

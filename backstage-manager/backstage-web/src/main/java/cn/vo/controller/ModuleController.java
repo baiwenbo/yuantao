@@ -8,11 +8,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import cn.vo.backstage.Utils.ListResult;
 import cn.vo.backstage.Utils.PageUtils;
@@ -57,14 +53,15 @@ public class ModuleController {
 	}
 	
 	@PostMapping("/insert")
-	public String insert(@ModelAttribute Module module){
+	@ResponseBody
+	public String insert(@RequestBody Module module){
 		try {
 			iModuleService.insert(module);
 		} catch (Exception e) {
 			e.printStackTrace();
-			return "redirect:/module/list";
+			return "服务异常";
 		}
-		return "redirect:/module/list";
+		return "ok";
 	}
 	@GetMapping("/edit")
 	public String edit(Model model,Integer id){
@@ -74,14 +71,15 @@ public class ModuleController {
 	}
 	
 	@PostMapping("/update")
-	public String update(@ModelAttribute Module module){
+	@ResponseBody
+	public String update(@RequestBody Module module){
 		try {
 			iModuleService.update(module);
 		} catch (Exception e) {
 			e.printStackTrace();
-			return "redirect:/module/list";
+			return "服务异常";
 		}
-		return "redirect:/module/list";
+		return "ok";
 	}
 	@ResponseBody
 	@GetMapping("/del")

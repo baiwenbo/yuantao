@@ -13,9 +13,7 @@
 </head>
 <body>
  <div class="layui-btn-group" style="margin-bottom: 15px;">
-                      
-                            <i class="layui-icon"> <a class="layui-btn layui-btn-sm layui-btn-primary" lay-href="/add" th:href="@{/module/add}"> 新增</a></i>
-                       
+     <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="moduleAdd()"> 新增</button>
                     </div>
   <div class="moduleQuery">
             权限名：
@@ -52,8 +50,17 @@ layui.use('table', function(){
 	    var data = obj.data //获得当前行数据
 	    ,layEvent = obj.event; //获得 lay-event 对应的值
 	    if(layEvent === 'detail'){
-	      console.log(data.id);
-	      window.location.href="/module/deial?id="+data.id;
+            layer.open({
+                type: 2,
+                shade: false,
+                maxmin: true,
+                area: ['70%', '70%']
+                ,content: '/module/deial?id='+data.id
+                ,yes: function(index){
+                    layer.close(index);
+                }
+            });
+
 	    } else if(layEvent === 'del'){
 	      layer.confirm('真的删除行么', function(index){
 	    	  $.ajax({
@@ -73,8 +80,16 @@ layui.use('table', function(){
 	    	  location.reload();
 	      });
 	    } else if(layEvent === 'edit'){
-	 /*      layer.msg('编辑操作'); */
-	    	 window.location.href="/module/edit?id="+data.id;
+            layer.open({
+                type: 2,
+                shade: false,
+                maxmin: true,
+                area: ['70%', '70%']
+                ,content: '/module/edit?id='+data.id
+                ,yes: function(index){
+                    layer.close(index);
+                }
+            });
 	    }
 	  });
   var $ = layui.$, active =
@@ -102,8 +117,20 @@ $('.moduleQuery .layui-btn').on('click', function ()
     active[type] ? active[type].call(this) : '';
 });
 
- 
 });
+
+function moduleAdd(){
+    layer.open({
+        type: 2,
+        shade: false,
+        maxmin: true,
+        area: ['70%', '70%']
+        ,content: '/module/add'
+        ,yes: function(index){
+            layer.close(index);
+        }
+    });
+}
 </script>
 </body>
 </html>     

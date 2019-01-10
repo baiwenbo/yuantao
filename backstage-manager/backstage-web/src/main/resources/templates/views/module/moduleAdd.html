@@ -14,7 +14,7 @@
     <div class="layui-card">
       <div class="layui-card-header">添加权限</div>
       <div class="layui-card-body" style="padding: 15px;">
-        <form class="layui-form" th:action="@{/module/insert}" lay-filter="component-form-group" method="post">
+        <form class="layui-form"  lay-filter="component-form-group">
           <div class="layui-form-item">
             <label class="layui-form-label">权限名</label>
             <div class="layui-input-block">
@@ -42,7 +42,7 @@
           <div class="layui-form-item layui-layout-admin">
             <div class="layui-input-block">
               <div class="layui-footer" style="left: 0;">
-                <input class="layui-btn" lay-submit=""  type="submit" value="立即提交"/>
+                <button class="layui-btn" lay-submit="" id="submitModle" type="submit" >立即提交</button>
                 <button type="reset" class="layui-btn layui-btn-primary">重置</button>
               </div>
             </div>
@@ -51,26 +51,54 @@
       </div>
     </div>
   </div>
-
-    
- <script th:src="@{/layuiadmin/layui/layui.js}" ></script>
+  <script th:src="@{/layuiadmin/layui/jquery-1.9.0.js}" ></script>
+  <script th:src="@{/layuiadmin/layui/layui.js}" ></script>
   <script>
-  layui.config({
-    base: '/layuiadmin/' //静态资源所在路径
-  }).extend({
-    index: 'lib/index' //主入口模块
-  }).use(['index', 'form', 'laydate'], function(){
-	   var $ = layui.$
-	    ,admin = layui.admin
-	    ,element = layui.element
-	    ,layer = layui.layer
-	    ,laydate = layui.laydate
-	    ,form = layui.form;
-      return false;
-    });
-  });
+      layui.config({
+          base: '/layuiadmin/' //静态资源所在路径
+      }).extend({
+          index: 'lib/index' //主入口模块
+      }).use(['index', 'form', 'laydate'], function(){
+          var $ = layui.$
+              ,admin = layui.admin
+              ,element = layui.element
+              ,layer = layui.layer
+              ,laydate = layui.laydate
+              ,form = layui.form;
+          return false;
+      });
+  </script>
+  <script>
+  $(document).ready(function(){
+      $("#submitModle").click(function(){
+          var data = {};
+          var t = $('form').serializeArray();
+          $.each(t, function() {
+              data [this.name] = this.value;
+          });
+          $.ajax({
+              type:"post",
+              contentType: 'application/json;charset=UTF-8',
+              url:"/module/insert",
+              dataType:"text",
+              async : false,
+              data: JSON.stringify(data),
+              success:function(result){
+                  if(result=="ok"){
+                      alert("更新成功！");
+                      window.parent.location.reload();
+                  }else{
+                      alert(result);
+                  }
+              },
+              error: function(result) {
+                  alert("服务异常");
+              }
 
-  
+          });
+
+      });
+  });
   </script>
 </body>
 </html>

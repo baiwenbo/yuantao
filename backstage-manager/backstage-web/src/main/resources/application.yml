@@ -3,7 +3,7 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://111.231.145.251:3306/product?characterEncoding=utf-8
+    url: jdbc:mysql://111.231.145.251:3306/product?characterEncoding=utf-8&useSSL=false
     username: root
     password: yiYIAA%6hjIJ
   thymeleaf:
