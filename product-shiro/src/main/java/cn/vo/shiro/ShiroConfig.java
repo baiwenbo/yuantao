@@ -88,6 +88,7 @@ public class ShiroConfig {
         filterChainDefinitionManager.put("/login", "anon");
         filterChainDefinitionManager.put("/sigin", "anon");
         filterChainDefinitionManager.put("/index", "anon");
+        filterChainDefinitionManager.put("/qizheScpc", "anon");
        /* filterChainDefinitionManager.put("/logout", "logout");*/
         
         filterChainDefinitionManager.put("/*/*", "authc");

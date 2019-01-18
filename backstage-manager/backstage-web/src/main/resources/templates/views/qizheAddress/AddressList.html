@@ -41,10 +41,10 @@ layui.use('table', function(){
     ,page: true //开启分页
     ,cols: [[ //表头
       {field: 'id', title: 'ID', width:80, sort: true, fixed: 'left'}
-      ,{field: 'qgongsi', title: 'qgongsi', width:80}
-      ,{field: 'bumen', title: 'bumen',width:80}
+      ,{field: 'qgongsi', title: '分公司', width:80}
+      ,{field: 'bumen', title: '编号',width:80}
       ,{field: 'qbianhao', title: 'qbianhao', width:120}
-      ,{field: 'qname', title: 'qname', width:150,templet:function(d){
+      ,{field: 'qname', title: '名称', width:150,templet:function(d){
                   return '<a class="layui-blue" href="/qizheAddress/mark/'+d.qname+'" style="color: #cf3607">'+d.qname+'</a>';
               }}
       ,{field: 'qnamehao', title: 'qnamehao', width:150}
