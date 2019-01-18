@@ -49,21 +49,18 @@
                     <td  width="100px;">选项</td>
                     <td  width="200px;">扣分原因</td>
                 </tr>
-                <!--<c:forEach items="${topics}" var="topic">-->
-                <!--<tr>-->
-                    <!--<td width="80px;">${topic[0]}</td>-->
-                    <!--<td  width="80px;">${topic[1]}</td>-->
-                    <!--<td  width="400px;">★加油站内干净整洁（满分5分）（除了卫生间独立考核，油站内所有顾客能见到、接触到的地方）-->
-                        <!--发现一处明显垃圾、杂物扣1分，该项扣完为止； 评分标准：当MMP到达油站发现地上有垃圾或油渍，观察油站员工有否随时清扫以保持油站的干净整洁，-->
-                        <!--若MMP离开油站时该垃圾已清扫干净或油站员工正在清扫，给分，若垃圾仍未清扫，扣分。以下所有卫生项目均按此标准考评。-->
-                    <!--</td>-->
-                    <!--<td width="60px;">5</td>-->
-                    <!--<td  width="60px;"></td>-->
-                    <!--<td  width="100px;"></td>-->
-                    <!--<td  width="100px;"></td>-->
-                    <!--<td  width="200px;"></td>-->
-                <!--</tr>-->
-                <!--</c:forEach>-->
+                <tr th:each="entries,itemContent:${itemContents}" >
+
+
+                    <td  width="80px;"><span th:text="${entries.description}"></span></td>
+                    <td  width="80px;"><span th:text="${entries.explainName}"></span></td>
+                    <td  width="80px;"><span th:text="${entries.issueName}"></span></td>
+                    <td width="60px;">5</td>
+                    <td  width="60px;"></td>
+                    <td  width="100px;"></td>
+                    <td  width="100px;"></td>
+                    <td  width="200px;"></td>
+                </tr>
 
             </table>
         </div>

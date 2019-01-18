@@ -2,9 +2,9 @@ package cn.vo.controller.hans;
 
 import cn.vo.backstage.Utils.ListResult;
 import cn.vo.backstage.Utils.PageUtils;
-import cn.vo.dao.hans.TopicMapper;
+import cn.vo.dao.hans.ItemContentMapper;
 import cn.vo.pojo.QizheAddress;
-import cn.vo.pojo.entity.Topic;
+import cn.vo.pojo.entity.ItemContent;
 import cn.vo.service.IqizheAddressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,7 +26,7 @@ public class QizheAddressController {
     private IqizheAddressService iqizheAddressService;
 
     @Autowired
-    private TopicMapper topicMapper;
+    private ItemContentMapper itemContentMapper;
 
     @GetMapping("/list")
     public String list(){
@@ -49,10 +49,10 @@ public class QizheAddressController {
     }
     @GetMapping("mark/{qname}")
     public String mark(@PathVariable String qname, Model model){
-                 List<Topic> topics=topicMapper.findAll();
+                 List<ItemContent> itemContents=itemContentMapper.findAll();
               QizheAddress qizheAddress=iqizheAddressService.getByQname(qname);
               model.addAttribute("qizheAddress",qizheAddress);
-              model.addAttribute("topics",topics);
+              model.addAttribute("itemContents",itemContents);
         return "views/qizheAddress/mark";
     }
 

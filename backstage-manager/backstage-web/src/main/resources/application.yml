@@ -10,7 +10,6 @@ spring:
     prefix: classpath:/templates/
     cache: false  # 此处为不缓存页面
   jpa:
-      database: MYSQL
       hibernate:
         ddl-auto: update # 启动时是否更新数据库：none, update
       show-sql: false

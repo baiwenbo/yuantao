@@ -2,24 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6a0708d-a1b7-4867-a320-5b37c785b543" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/backstage_web_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/backstage_web_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_theborakompanioni_thymeleaf_extras_shiro_2_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_core_1_2_5.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-manager/backstage-dao/backstage-dao.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-manager/backstage-dao/backstage-dao.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-manager/backstage-dao/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-manager/backstage-dao/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-manager/backstage-pojo/backstage-pojo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-manager/backstage-pojo/backstage-pojo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-manager/backstage-pojo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-manager/backstage-pojo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-manager/backstage-service/backstage-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-manager/backstage-service/backstage-service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-manager/backstage-web/backstage-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-manager/backstage-web/backstage-web.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-manager/backstage-dao/src/main/java/cn/vo/dao/hans/TopicMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-manager/backstage-dao/src/main/java/cn/vo/dao/hans/ItemContentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-manager/backstage-pojo/src/main/java/cn/vo/pojo/entity/Topic.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/hans/QizheAddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/hans/QizheAddressController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/hans/QizheScpcController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/hans/QizheScpcController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views/qizheAddress/AddressList.html" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views/qizheAddress/AddressList.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views/qizheAddress/mark.html" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views/qizheAddress/mark.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-shiro/product-shiro.iml" beforeDir="false" afterPath="$PROJECT_DIR$/product-shiro/product-shiro.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-shiro/src/main/java/cn/vo/shiro/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-shiro/src/main/java/cn/vo/shiro/ShiroConfig.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/backstage-manager/target/" />
     <ignored path="$PROJECT_DIR$/product-common/target/" />
@@ -65,112 +53,35 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/application.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="24" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TopicMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-dao/src/main/java/cn/vo/dao/hans/TopicMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="9" column="62" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="62" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-dao/src/main/java/cn/vo/dao/hans/TestMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Topic.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-pojo/src/main/java/cn/vo/pojo/entity/Topic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-897">
-              <caret line="12" column="18" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#538#539#0" expanded="true" />
-                <element signature="e#563#564#0" expanded="true" />
-                <element signature="e#597#598#0" expanded="true" />
-                <element signature="e#625#626#0" expanded="true" />
-                <element signature="e#655#656#0" expanded="true" />
-                <element signature="e#681#682#0" expanded="true" />
-                <element signature="e#719#720#0" expanded="true" />
-                <element signature="e#749#750#0" expanded="true" />
-                <element signature="e#781#782#0" expanded="true" />
-                <element signature="e#809#810#0" expanded="true" />
-                <element signature="e#851#852#0" expanded="true" />
-                <element signature="e#885#886#0" expanded="true" />
-                <element signature="e#926#927#0" expanded="true" />
-                <element signature="e#960#961#0" expanded="true" />
-                <element signature="e#1014#1015#0" expanded="true" />
-                <element signature="e#1060#1061#0" expanded="true" />
-                <element signature="e#1073#1074#0" expanded="true" />
-                <element signature="e#1103#1104#0" expanded="true" />
-                <element signature="e#1149#1150#0" expanded="true" />
-                <element signature="e#1187#1188#0" expanded="true" />
-                <element signature="e#1218#1219#0" expanded="true" />
-                <element signature="e#1245#1246#0" expanded="true" />
-                <element signature="e#1285#1286#0" expanded="true" />
-                <element signature="e#1317#1318#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mark.html" pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="mark.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views/qizheAddress/mark.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="49" column="49" selection-start-line="49" selection-start-column="49" selection-end-line="49" selection-end-column="49" />
+            <state relative-caret-position="414">
+              <caret line="27" column="62" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddressList.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views/qizheAddress/AddressList.html">
+      <file leaf-file-name="QizheAddressController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/hans/QizheAddressController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="39" column="33" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="33" />
+            <state relative-caret-position="352">
+              <caret line="52" column="39" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="39" />
               <folding>
-                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-pojo/src/main/java/cn/vo/pojo/entity/Test.java">
+      <file leaf-file-name="ItemContent.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-pojo/src/main/java/cn/vo/pojo/entity/ItemContent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="20" column="18" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="18" />
+            <state relative-caret-position="401">
+              <caret line="21" column="28" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#423#424#0" expanded="true" />
-                <element signature="e#448#449#0" expanded="true" />
-                <element signature="e#482#483#0" expanded="true" />
-                <element signature="e#510#511#0" expanded="true" />
-                <element signature="e#541#542#0" expanded="true" />
-                <element signature="e#568#569#0" expanded="true" />
-                <element signature="e#608#609#0" expanded="true" />
-                <element signature="e#640#641#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -199,6 +110,7 @@
       <find>user</find>
       <find>meta</find>
       <find>input</find>
+      <find>entries</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -225,11 +137,12 @@
         <option value="$PROJECT_DIR$/backstage-manager/backstage-pojo/src/main/java/cn/vo/pojo/entity/Test.java" />
         <option value="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/hans/QizheScpcController.java" />
         <option value="$PROJECT_DIR$/backstage-manager/backstage-dao/src/main/java/cn/vo/dao/hans/TestMapper.java" />
-        <option value="$PROJECT_DIR$/backstage-manager/backstage-dao/src/main/java/cn/vo/dao/hans/TopicMapper.java" />
         <option value="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views/qizheAddress/AddressList.html" />
-        <option value="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/hans/QizheAddressController.java" />
         <option value="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/backstage-manager/backstage-pojo/src/main/java/cn/vo/pojo/entity/Topic.java" />
+        <option value="$PROJECT_DIR$/backstage-manager/backstage-dao/src/main/java/cn/vo/dao/hans/TopicMapper.java" />
+        <option value="$PROJECT_DIR$/backstage-manager/backstage-pojo/src/main/java/cn/vo/pojo/entity/ItemContent.java" />
+        <option value="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/hans/QizheAddressController.java" />
         <option value="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views/qizheAddress/mark.html" />
       </list>
     </option>
@@ -285,7 +198,6 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -579,6 +491,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -703,53 +616,55 @@
       <workItem from="1545985232813" duration="4730000" />
       <workItem from="1547099349905" duration="733000" />
       <workItem from="1547100302620" duration="569000" />
-      <workItem from="1547778207474" duration="13265000" />
+      <workItem from="1547778207474" duration="13543000" />
+      <workItem from="1547801260035" duration="4518000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30670000" />
+    <option name="totallyTimeSpent" value="35466000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50067025" side_tool="true" weight="0.46077034" />
-      <window_info anchor="bottom" id="JRebel Console" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5013405" side_tool="true" weight="0.46077034" />
+      <window_info anchor="bottom" id="JRebel Console" order="0" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="5" weight="0.3297587" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="JRebel Executor" />
+      <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="JRebel Executor" order="1" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Database" order="6" sideWeight="0.49858356" weight="0.3297587" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" sideWeight="0.49858356" weight="0.25" />
       <window_info id="UI Designer" order="4" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49932975" visible="true" weight="0.46077034" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.3281027" />
+      <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49865952" weight="0.46077034" />
+      <window_info anchor="bottom" id="TODO" order="8" />
+      <window_info anchor="bottom" id="Messages" order="15" weight="0.3281027" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="3" />
-      <window_info anchor="bottom" id="Java Enterprise" order="10" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49932975" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="16" sideWeight="0.49932975" weight="0.3281027" />
+      <window_info anchor="bottom" id="Run" order="4" weight="0.3286119" />
+      <window_info anchor="bottom" id="Spring" order="9" weight="0.32952926" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20643431" />
-      <window_info anchor="bottom" id="Problems" order="7" weight="0.3286119" />
+      <window_info anchor="bottom" id="Problems" order="10" weight="0.3286119" />
       <window_info anchor="right" id="Bean Validation" order="9" sideWeight="0.49858356" weight="0.3297587" />
       <window_info id="Web" order="5" side_tool="true" />
-      <window_info id="JRebel" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32952926" />
+      <window_info id="JRebel" order="8" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Coverage" order="3" sideWeight="0.50141644" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="3" weight="0.32952926" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="2" />
     </layout>
     <layout-to-restore>
       <window_info id="Designer" order="3" />
@@ -775,7 +690,6 @@
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="15" sideWeight="0.49932975" weight="0.3286119" />
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.3297587" />
-      <window_info anchor="bottom" id="Find" order="3" weight="0.32952926" />
       <window_info anchor="bottom" id="JRebel Executor" order="0" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.20643431" />
       <window_info anchor="bottom" id="JRebel Console" order="1" side_tool="true" />
@@ -787,8 +701,9 @@
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="right" id="Coverage" order="4" sideWeight="0.50141644" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.46077034" />
+      <window_info anchor="bottom" id="Find" order="3" weight="0.32952926" />
       <window_info anchor="right" id="Bean Validation" order="10" sideWeight="0.49858356" weight="0.3297587" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.46077034" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -804,13 +719,45 @@
       </list>
     </option>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="4" />
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="itemContents.get(0)" />
+        <watch expression="itemContents.get(0)" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -820,18 +767,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views/role/roleAdd.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-207" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/product-common/src/main/java/cn/vo/backstage/Utils/ListResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/RoleController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -1027,9 +962,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1075,13 +1007,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/hans/HansController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="50" column="55" selection-start-line="50" selection-start-column="55" selection-end-line="50" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-pojo/src/main/java/cn/vo/pojo/QizheAddress.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-92">
@@ -1093,13 +1018,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/apache-maven-3.3.9/maven/org/springframework/data/spring-data-jpa/1.11.9.RELEASE/spring-data-jpa-1.11.9.RELEASE-sources.jar!/org/springframework/data/jpa/repository/JpaRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="43" column="19" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -1120,34 +1038,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/hans/QizheAddressController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="54" column="40" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views/qizheAddress/AddressList.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
+        <state relative-caret-position="897">
           <caret line="39" column="33" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="33" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views/qizheAddress/mark.html">
+    <entry file="jar://$PROJECT_DIR$/../jdk/jdk1.8.0_91/src.zip!/java/io/Serializable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="49" column="49" selection-start-line="49" selection-start-column="49" selection-end-line="49" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="24" />
+        <state relative-caret-position="3335">
+          <caret line="168" column="17" selection-start-line="168" selection-start-column="17" selection-end-line="168" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1161,20 +1062,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-dao/src/main/java/cn/vo/dao/hans/TopicMapper.java">
+    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="62" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="62" />
+        <state relative-caret-position="322">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/apache-maven-3.3.9/maven/org/springframework/data/spring-data-jpa/1.11.9.RELEASE/spring-data-jpa-1.11.9.RELEASE-sources.jar!/org/springframework/data/jpa/repository/JpaRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-pojo/src/main/java/cn/vo/pojo/entity/Topic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+            <element signature="e#566#567#0" expanded="true" />
+            <element signature="e#600#601#0" expanded="true" />
+            <element signature="e#628#629#0" expanded="true" />
+            <element signature="e#658#659#0" expanded="true" />
+            <element signature="e#684#685#0" expanded="true" />
+            <element signature="e#722#723#0" expanded="true" />
+            <element signature="e#752#753#0" expanded="true" />
+            <element signature="e#784#785#0" expanded="true" />
+            <element signature="e#812#813#0" expanded="true" />
+            <element signature="e#854#855#0" expanded="true" />
+            <element signature="e#888#889#0" expanded="true" />
+            <element signature="e#926#927#0" expanded="true" />
+            <element signature="e#960#961#0" expanded="true" />
+            <element signature="e#1014#1015#0" expanded="true" />
+            <element signature="e#1060#1061#0" expanded="true" />
+            <element signature="e#1094#1095#0" expanded="true" />
+            <element signature="e#1124#1125#0" expanded="true" />
+            <element signature="e#1170#1171#0" expanded="true" />
+            <element signature="e#1208#1209#0" expanded="true" />
+            <element signature="e#1239#1240#0" expanded="true" />
+            <element signature="e#1266#1267#0" expanded="true" />
+            <element signature="e#1306#1307#0" expanded="true" />
+            <element signature="e#1338#1339#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-dao/src/main/java/cn/vo/dao/hans/ItemContentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/hans/HansController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-453">
+          <caret line="50" column="55" selection-start-line="50" selection-start-column="55" selection-end-line="50" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-pojo/src/main/java/cn/vo/pojo/entity/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="18" />
+        <state relative-caret-position="145">
+          <caret line="13" selection-start-line="13" selection-end-line="14" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#423#424#0" expanded="true" />
@@ -1189,37 +1145,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-pojo/src/main/java/cn/vo/pojo/entity/Topic.java">
+    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-pojo/src/main/java/cn/vo/pojo/entity/ItemContent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-897">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="18" />
+        <state relative-caret-position="401">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#538#539#0" expanded="true" />
-            <element signature="e#563#564#0" expanded="true" />
-            <element signature="e#597#598#0" expanded="true" />
-            <element signature="e#625#626#0" expanded="true" />
-            <element signature="e#655#656#0" expanded="true" />
-            <element signature="e#681#682#0" expanded="true" />
-            <element signature="e#719#720#0" expanded="true" />
-            <element signature="e#749#750#0" expanded="true" />
-            <element signature="e#781#782#0" expanded="true" />
-            <element signature="e#809#810#0" expanded="true" />
-            <element signature="e#851#852#0" expanded="true" />
-            <element signature="e#885#886#0" expanded="true" />
-            <element signature="e#926#927#0" expanded="true" />
-            <element signature="e#960#961#0" expanded="true" />
-            <element signature="e#1014#1015#0" expanded="true" />
-            <element signature="e#1060#1061#0" expanded="true" />
-            <element signature="e#1073#1074#0" expanded="true" />
-            <element signature="e#1103#1104#0" expanded="true" />
-            <element signature="e#1149#1150#0" expanded="true" />
-            <element signature="e#1187#1188#0" expanded="true" />
-            <element signature="e#1218#1219#0" expanded="true" />
-            <element signature="e#1245#1246#0" expanded="true" />
-            <element signature="e#1285#1286#0" expanded="true" />
-            <element signature="e#1317#1318#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/hans/QizheAddressController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="52" column="39" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views/qizheAddress/mark.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="27" column="62" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
         </state>
       </provider>
     </entry>

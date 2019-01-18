@@ -7,23 +7,23 @@ import javax.persistence.Table;
 
 /**
  * @author <a href="wenbo.bai@vtradex.net">柏文博</a>
- * @since 2019-01-18 14:05
+ * @since 2019-01-18 16:58
  */
 @Entity
-@Table(name="topic")
-public class Topic {
+@Table(name="ITEM_CONTENT")
+public class ItemContent {
 
     @Id   // 表明id
     @GeneratedValue   //  自动生成
     private Long id ;
 
-    private String top ;
+    private String topName ;
 
-    private String issue ;
+    private String issueName ;
 
     private String description ;
 
-    private String explain ;
+    private String explainName ;
 
     private String name;
 
@@ -35,20 +35,20 @@ public class Topic {
         this.id = id;
     }
 
-    public String getTop() {
-        return top;
+    public String getTopName() {
+        return topName;
     }
 
-    public void setTop(String top) {
-        this.top = top;
+    public void setTopName(String topName) {
+        this.topName = topName;
     }
 
-    public String getIssue() {
-        return issue;
+    public String getIssueName() {
+        return issueName;
     }
 
-    public void setIssue(String issue) {
-        this.issue = issue;
+    public void setIssueName(String issueName) {
+        this.issueName = issueName;
     }
 
     public String getDescription() {
@@ -59,12 +59,12 @@ public class Topic {
         this.description = description;
     }
 
-    public String getExplain() {
-        return explain;
+    public String getExplainName() {
+        return explainName;
     }
 
-    public void setExplain(String explain) {
-        this.explain = explain;
+    public void setExplainName(String explainName) {
+        this.explainName = explainName;
     }
 
     public String getName() {
