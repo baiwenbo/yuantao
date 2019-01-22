@@ -35,6 +35,16 @@ public class QizheAddress {
 
     private String a10sm;
 
+    private String a01;
+
+    public String getA01() {
+        return a01;
+    }
+
+    public void setA01(String a01) {
+        this.a01 = a01;
+    }
+
     private  Integer disabled;
 
     public Integer getDisabled() {

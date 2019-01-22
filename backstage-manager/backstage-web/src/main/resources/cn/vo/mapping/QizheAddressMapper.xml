@@ -19,6 +19,7 @@
     <result column="a08sm" property="a08sm" jdbcType="VARCHAR" />
     <result column="a09sm" property="a09sm" jdbcType="VARCHAR" />
     <result column="a10sm" property="a10sm" jdbcType="VARCHAR" />
+    <result column="a01" property="a01" jdbcType="VARCHAR" />
     <result column="disabled" property="disabled" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Example_Where_Clause" >
@@ -81,7 +82,7 @@
   </sql>
   <sql id="Base_Column_List" >
     id, qgongsi, bumen, qbianhao, qname, qnamehao, address, a01sm, a02sm, a03sm, a04sm, 
-    a05sm, a06sm, a07sm, a08sm, a09sm, a10sm,disabled
+    a05sm, a06sm, a07sm, a08sm, a09sm, a10sm,disabled,a01
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="cn.vo.pojo.QizheAddressExample" >
     select

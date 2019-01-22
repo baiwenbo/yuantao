@@ -49,7 +49,7 @@ public class QizheAddressController {
     }
     @GetMapping("mark/{qname}")
     public String mark(@PathVariable String qname, Model model){
-                 List<ItemContent> itemContents=itemContentMapper.findAll();
+              List<ItemContent> itemContents=itemContentMapper.findAll();
               QizheAddress qizheAddress=iqizheAddressService.getByQname(qname);
               model.addAttribute("qizheAddress",qizheAddress);
               model.addAttribute("itemContents",itemContents);

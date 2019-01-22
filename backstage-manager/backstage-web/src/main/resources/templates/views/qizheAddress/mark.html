@@ -50,13 +50,13 @@
                     <td  width="200px;">扣分原因</td>
                 </tr>
                 <tr th:each="entries,itemContent:${itemContents}" >
-
-
                     <td  width="80px;"><span th:text="${entries.description}"></span></td>
                     <td  width="80px;"><span th:text="${entries.explainName}"></span></td>
                     <td  width="80px;"><span th:text="${entries.issueName}"></span></td>
-                    <td width="60px;">5</td>
-                    <td  width="60px;"></td>
+                    <td width="60px;"><span th:text="${qizheAddress[entries.description]}"></span></td>
+                    <td  width="60px;"><div th:with="company=${entries.description},flag=${company}+'sm'">
+                        <span th:text="${qizheAddress[flag]}"></span>
+                    </div></td>
                     <td  width="100px;"></td>
                     <td  width="100px;"></td>
                     <td  width="200px;"></td>
