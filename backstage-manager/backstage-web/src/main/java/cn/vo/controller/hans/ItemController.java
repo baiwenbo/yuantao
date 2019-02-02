@@ -19,8 +19,8 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
-@RequestMapping("qizheAddress")
-public class QizheAddressController {
+@RequestMapping("item")
+public class ItemController {
 
     @Autowired
     private IqizheAddressService iqizheAddressService;
@@ -30,7 +30,7 @@ public class QizheAddressController {
 
     @GetMapping("/list")
     public String list(){
-        return "views/qizheAddress/AddressList";
+        return "views/item/AddressList";
     }
     @GetMapping("/listJson")
     @ResponseBody
@@ -53,7 +53,9 @@ public class QizheAddressController {
               QizheAddress qizheAddress=iqizheAddressService.getByQname(qname);
               model.addAttribute("qizheAddress",qizheAddress);
               model.addAttribute("itemContents",itemContents);
-        return "views/qizheAddress/mark";
+        return "views/item/mark";
     }
+
+
 
 }

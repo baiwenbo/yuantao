@@ -37,7 +37,7 @@ layui.use('table', function(){
   table.render({
     elem: '#demo'
     ,height: 600
-    ,url: '/qizheAddress/listJson' //数据接口
+    ,url: '/item/listJson' //数据接口
     ,page: true //开启分页
     ,cols: [[ //表头
       {field: 'id', title: 'ID', width:80, sort: true, fixed: 'left'}
@@ -45,7 +45,7 @@ layui.use('table', function(){
       ,{field: 'bumen', title: '编号',width:80}
       ,{field: 'qbianhao', title: 'qbianhao', width:120}
       ,{field: 'qname', title: '名称', width:150,templet:function(d){
-                  return '<a class="layui-blue" href="/qizheAddress/mark/'+d.qname+'" style="color: #cf3607">'+d.qname+'</a>';
+                  return '<a class="layui-blue" href="/item/mark/'+d.qname+'" style="color: #cf3607">'+d.qname+'</a>';
               }}
       ,{field: 'qnamehao', title: 'qnamehao', width:150}
       ,{field: 'address', title: 'address', width:150}
@@ -64,7 +64,7 @@ layui.use('table', function(){
                           curr: 1 //重新从第 1 页开始
                       }
             , where: { qname: qname}//这里传参  向后台
-            , url: '/qizheAddress/listJson'//后台做模糊搜索接口路径
+            , url: '/item/listJson'//后台做模糊搜索接口路径
             , method: 'get'
               });
       }
@@ -88,7 +88,7 @@ alert(name);
         shade: false,
         maxmin: true,
         area: ['90%', '90%']
-        ,content: '/qizheAddress/mark/1'
+        ,content: '/item/mark/1'
         ,yes: function(index){
             layer.close(index);
         }
