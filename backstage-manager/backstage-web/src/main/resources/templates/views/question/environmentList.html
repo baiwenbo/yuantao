@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>地址</title>
+    <link rel="stylesheet"  th:href="@{/layuiadmin/layui/css/layui.css}" media="all"/>
+    <link rel="stylesheet"  th:href="@{/layuiadmin/style/admin.css}" media="all"/>
+    <style>
+        body{margin: 10px;}
+        .demo-carousel{height: 200px; line-height: 200px; text-align: center;}
+    </style>
+</head>
+<body>
+<div class="layui-btn-group" style="margin-bottom: 15px;">
+
+</div>
+<div class="demoTable">
+    qname：
+    <div class="layui-inline">
+        <input class="layui-input" id="qname" autocomplete="off"/>
+    </div>
+    <button class="layui-btn" data-type="reload">搜索</button>
+</div>
+<table id="demo" lay-filter="test"></table>
+
+<script th:src="@{/layuiadmin/layui/layui.js}" ></script>
+<script>
+    layui.use('table', function(){
+        var table = layui.table;
+        var $ = layui.$
+            ,admin = layui.admin
+            ,element = layui.element
+            ,router = layui.router();
+
+        //第一个实例
+        table.render({
+            elem: '#demo'
+            ,height: 600
+            ,url: '/item/listJson' //数据接口
+            ,page: true //开启分页
+            ,cols: [[ //表头
+                {field: 'id', title: 'ID', width:80, sort: true, fixed: 'left'}
+                ,{field: 'qgongsi', title: '分公司', width:80}
+                ,{field: 'bumen', title: '编号',width:80}
+                ,{field: 'qbianhao', title: 'qbianhao', width:120}
+                ,{field: 'qname', title: '名称', width:150,templet:function(d){
+                        return '<a class="layui-blue" onclick="mark()" style="color: #cf3607">'+d.qname+'</a>';
+                    }}
+                ,{field: 'qnamehao', title: 'qnamehao', width:150}
+                ,{field: 'address', title: 'address', width:150}
+
+            ]]
+        });
+        var $ = layui.$, active =
+            {
+                reload: function () {
+                    var qname = $('#qname').val();//获取输入框的值
+                    //执行重载
+                    table.reload('demo',
+                        {
+                            page:
+                                {
+                                    curr: 1 //重新从第 1 页开始
+                                }
+                            , where: { qname: qname}//这里传参  向后台
+                            , url: '/item/listJson'//后台做模糊搜索接口路径
+                            , method: 'get'
+                        });
+                }
+            };
+
+
+//这个是用于创建点击事件的实例
+        $('.demoTable .layui-btn').on('click', function ()
+        {
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+
+    });
+
+
+    function mark(){
+        layer.open({
+            type: 2,
+            shade: false,
+            maxmin: true,
+            area: ['90%', '90%']
+            ,content: '/environment/environmentQuestion/1'
+            ,yes: function(index){
+                layer.close(index);
+            }
+        });
+    }
+
+</script>
+</body>
+</html>
