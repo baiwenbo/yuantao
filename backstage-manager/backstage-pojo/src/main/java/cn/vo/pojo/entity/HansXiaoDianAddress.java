@@ -43,6 +43,8 @@ public class HansXiaoDianAddress {
 
     private String redundance3;
 
+    private  Integer disabled;
+
     public Long getId() {
         return id;
     }
@@ -153,5 +155,13 @@ public class HansXiaoDianAddress {
 
     public void setRedundance3(String redundance3) {
         this.redundance3 = redundance3;
+    }
+
+    public Integer getDisabled() {
+        return disabled;
+    }
+
+    public void setDisabled(Integer disabled) {
+        this.disabled = disabled;
     }
 }
