@@ -1,5 +1,6 @@
 package cn.vo.controller.hans;
 
+import cn.vo.Utils.FileUpload;
 import cn.vo.pojo.Question;
 import cn.vo.service.IQuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +34,11 @@ public class EnvironmentController {
     @PostMapping("saveQuestion")
     public String saveQuestion(@RequestParam("file") MultipartFile file){
 
-        return  "";
+      String  ss=  FileUpload.uploadFile(file,file.getName());
+
+      System.out.println(ss);
+
+        return  ss;
 
     }
 

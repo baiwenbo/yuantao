@@ -6,7 +6,10 @@ import cn.vo.dao.hans.CustomerMapper;
 import cn.vo.pojo.QizheAddress;
 import cn.vo.pojo.entity.Customer;
 import cn.vo.pojo.entity.HansXiaoDianAddress;
+import cn.vo.pojo.entity.XiaodianAddress;
 import cn.vo.service.HansXiaoDianAddressService;
+import cn.vo.service.IXiaodianAddressService;
+import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -22,6 +25,9 @@ public class HansXiaoDianAddressController {
 
     @Autowired
     private HansXiaoDianAddressService hansXiaoDianAddressService;
+
+    @Autowired
+    private IXiaodianAddressService xiaodianAddressService;
 
     @Autowired
     private CustomerMapper customerMapper;
@@ -56,6 +62,21 @@ public class HansXiaoDianAddressController {
         return "ok";
     }
 
+    @ResponseBody
+    @GetMapping("queryName")
+    public String queryName(String name){
+        String json="";
+        try{
+            List<XiaodianAddress> list =xiaodianAddressService.queryLikeName(name);
+            json= JSONObject.toJSONString(list);
+        }catch (Exception e){
+            e.printStackTrace();
+
+        }
+        return  json;
+
+
+    }
 
 
 }

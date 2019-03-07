@@ -21,9 +21,16 @@
         <input class="layui-input" id="qname" autocomplete="off"/>
     </div>
     <button class="layui-btn" data-type="reload">搜索</button>
+
+        <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="question()">录入</button>
+
 </div>
 <table id="demo" lay-filter="test"></table>
-
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail"  >查看</a>
+    <a class="layui-btn layui-btn-xs" lay-event="edit" >编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del" >删除</a>
+</script>
 <script th:src="@{/layuiadmin/layui/layui.js}" ></script>
 <script>
     layui.use('table', function(){
@@ -45,11 +52,10 @@
                 ,{field: 'pianqu', title: '片区',width:80}
                 ,{field: 'company', title: '公司名称',width:80}
                 ,{field: 'code', title: '门店代码',width:80}
-                ,{field: 'name', title: '店名', width:150,templet:function(d){
-                        return '<a class="layui-blue" onclick="mark('+d.id+')" style="color: #cf3607">'+d.name+'</a>';
-                    }}
+                ,{field: 'name', title: '店名', width:150}
                 ,{field: 'area', title: '区域', width:150}
                 ,{field: 'address', title: '地址', width:150}
+                ,{fixed: 'right',title: '操作', width: 170, align:'center', toolbar: '#barDemo'}
 
             ]]
         });
@@ -79,11 +85,60 @@
             active[type] ? active[type].call(this) : '';
         });
 
+
+        table.on('tool(test)', function(obj){ //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
+            var data = obj.data //获得当前行数据
+                ,layEvent = obj.event; //获得 lay-event 对应的值
+            if(layEvent === 'detail'){
+                layer.open({
+                    type: 2,
+                    shade: false,
+                    maxmin: true,
+                    area: ['70%', '70%']
+                    ,content: '/users/deial?id='+data.id
+                    ,yes: function(index){
+                        layer.close(index);
+                    }
+                });
+
+            } else if(layEvent === 'del'){
+                layer.confirm('真的删除问卷吗？', function(index){
+                    $.ajax({
+                        type: "get",
+                        url: "/testPaper/delete",
+                        data: "id="+data.id,
+                        dataType: "text",
+                        success: function (data) {
+                            layer.msg('删除成功');
+                        },
+                        error: function () {
+                            layer.msg('删除失败');
+                        }
+
+                    })
+                    layer.close(index);
+                    location.reload();
+                });
+            } else if(layEvent === 'edit'){
+                layer.open({
+                    type: 2,
+                    shade: false,
+                    maxmin: true,
+                    area: ['70%', '70%']
+                    ,content: '/users/edit?id='+data.id
+                    ,yes: function(index){
+                        layer.close(index);
+                    }
+                });
+            }
+
+        });
+
     });
 
 
-    function mark(id){
-        alert(id);
+    function question(){
+
         layer.open({
             type: 2,
             shade: false,
