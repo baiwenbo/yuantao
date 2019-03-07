@@ -14,6 +14,35 @@ $(document).ready(function(){
     $("#twelve").hide();
     $("#thirteen").hide();
 
+
+    $("#submit").click(function(){
+        var data = {};
+        var t = $('form').serializeArray();
+        $.each(t, function() {
+            data [this.name] = this.value;
+        });
+        $.ajax({
+            type:"post",
+            contentType: 'application/json;charset=UTF-8',
+            url:"/xiaodian/save",
+            dataType:"text",
+            async : false,
+            data: JSON.stringify(data),
+            success:function(result){
+                if(result=="ok"){
+                    alert("更新成功！");
+                    window.parent.location.reload();
+                }else{
+                    alert(result);
+                }
+            },
+            error: function(result) {
+                alert("服务异常");
+            }
+
+        });
+
+    });
 });
 
 function oneDiv(type) {
