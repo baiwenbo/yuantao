@@ -22,7 +22,7 @@ $(document).ready(function(){
       var customerName=$("#customerName").val();
         $.ajax({
             type:"get",
-            url:"/xiaodian/queryName",
+            url:"/environment/queryName",
             data: "name="+customerName,
             dataType:"json",
             async : false,
