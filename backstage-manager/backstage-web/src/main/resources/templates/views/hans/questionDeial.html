@@ -23,11 +23,7 @@
               <div class="layui-form-item">
                 <label class="layui-form-label">门店名称</label>
                 <div class="layui-input-block" id="company">
-                  <input type="text" id="customerName" lay-verify="required" autocomplete="off" placeholder="门店名称" class="layui-input" style="width: 200px;"/>
-
-                </div>
-                <div id="companyList">
-
+                  <input type="text" id="customerName" lay-verify="required" autocomplete="off" th:value="${name}" class="layui-input" style="width: 200px;"/>
 
                 </div>
 
@@ -189,7 +185,7 @@
                 <label style="width: 100px;">3-1进店初步感受是否符合要求？(单选）</label>
                 <div class="layui-input-block">
                   <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic3One" value="1:完全符合" th:checked="${#strings.contains(deial.topic3One,'1:完全符合')}"/><br/>
-                  <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic3One" value="2:不符合要求"   th:checked="${#strings.contains(deial.topic3One,'1:完全符合')}" />
+                  <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic3One" value="2:不符合要求"   th:checked="${#strings.contains(deial.topic3One,'2:不符合要求')}" />
 
                 </div>
               </div><br/>

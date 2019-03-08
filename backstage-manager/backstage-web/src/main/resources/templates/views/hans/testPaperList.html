@@ -45,7 +45,8 @@
     });
 
 </script>
-<script>
+<script th:inline="javascript">
+    /*<![CDATA[*/
     layui.use('table', function(){
         var table = layui.table;
         var $ = layui.$
@@ -127,6 +128,7 @@
                     location.reload();
                 });
             } else if(layEvent === 'edit'){
+
                 layer.open({
                     type: 2,
                     shade: false,
@@ -158,7 +160,7 @@
         });
     }
 
-
+    /*]]>*/
 </script>
 </body>
 </html>
