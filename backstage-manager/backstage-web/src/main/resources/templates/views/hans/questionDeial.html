@@ -38,7 +38,7 @@
                 </div>
               </div><br/>
                       <div id="one" th:switch="${deial.topic1One}">
-                        <div th:case="${#strings.contains(deial.topic1One,'2:不符合要求')}" >
+
                           <div   th:each="list:${list[0]}"   >
                           <label style="width: 100px;">1-2:不符合要求的原因是？(多选）</label><br/>
                             <table border="1" style="align:center">
@@ -93,7 +93,7 @@
                               </table>
 
                             </div><br/>
-                      </div>
+
                             <div class="layui-col-md12">
                               <div class="layui-card">
                                 <div class="layui-card-header">上传多张图片</div>
