@@ -14,9 +14,6 @@ $(document).ready(function(){
     $("#twelve").hide();
     $("#thirteen").hide();
 
-
-
-
     $("#queryCompany").click(function(){
         $("#companyList").empty();
       var customerName=$("#customerName").val();
