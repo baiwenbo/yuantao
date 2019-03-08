@@ -15,44 +15,14 @@ $(document).ready(function(){
     $("#thirteen").hide();
 
 
-    $("#submit").click(function(){
-        var data = {};
-        var t = $('form').serializeArray();
 
-        $.each(t, function() {
-            data [this.name] = this.value;
-
-
-        });
-        $.ajax({
-            type:"post",
-            contentType: 'application/json;charset=UTF-8',
-            url:"/testPaper/save",
-            dataType:"text",
-            async : false,
-            data: JSON.stringify(data),
-            success:function(result){
-                if(result=="ok"){
-                    alert("提交成功！");
-                    window.parent.location.reload();
-                }else{
-                    alert(result);
-                }
-            },
-            error: function(result) {
-                alert("服务异常");
-            }
-
-        });
-
-    });
 
     $("#queryCompany").click(function(){
       var customerName=$("#customerName").val();
         $.ajax({
             type:"get",
             url:"/xiaodian/queryName",
-            data: "id="+customerName,
+            data: "name="+customerName,
             dataType:"json",
             async : false,
             success:function(result){
