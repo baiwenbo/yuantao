@@ -135,6 +135,38 @@ public class TestPaper {
 
     private String topic13Fraction;
 
+
+    //关联字段显示
+    private String name;
+
+    private String yetai;
+
+    private String pianqu;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getYetai() {
+        return yetai;
+    }
+
+    public void setYetai(String yetai) {
+        this.yetai = yetai;
+    }
+
+    public String getPianqu() {
+        return pianqu;
+    }
+
+    public void setPianqu(String pianqu) {
+        this.pianqu = pianqu;
+    }
+
     public Integer getId() {
         return id;
     }
