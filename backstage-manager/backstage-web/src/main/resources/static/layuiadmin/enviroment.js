@@ -18,6 +18,7 @@ $(document).ready(function(){
 
 
     $("#queryCompany").click(function(){
+        $("#companyList").empty();
       var customerName=$("#customerName").val();
         $.ajax({
             type:"get",
