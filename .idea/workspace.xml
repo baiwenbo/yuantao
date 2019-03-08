@@ -3,9 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="f6a0708d-a1b7-4867-a320-5b37c785b543" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/hans/TestPaperController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/hans/TestPaperController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views.html" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views/component/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views/component/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-manager/backstage-dao/src/main/java/cn/vo/dao/hans/CustomerMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-manager/backstage-dao/src/main/java/cn/vo/dao/hans/ItemContentMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-manager/backstage-pojo/src/main/java/cn/vo/pojo/entity/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-manager/backstage-pojo/src/main/java/cn/vo/pojo/entity/ItemContent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/hans/DesignController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/hans/HansXiaoDianAddressController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/hans/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/hans/ItemController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/backstage-manager/target/" />
     <ignored path="$PROJECT_DIR$/product-common/target/" />
@@ -22,7 +26,6 @@
     <ignored path="$PROJECT_DIR$/separate-manaer/separate-pojo/target/" />
     <ignored path="$PROJECT_DIR$/product-shiro/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,77 +55,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/hans/EnvironmentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+            <state relative-caret-position="208">
+              <caret line="23" column="46" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views/component/login.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views/question/environmentList.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="49" column="15" selection-start-line="49" selection-start-column="15" selection-end-line="49" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="error.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/error.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="userEdit.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views/user/userEdit.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="userAdd.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views/user/userAdd.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1104" />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="deial.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views/user/deial.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="29" column="72" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views/app/message/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1051" />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/application.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" column="50" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userList.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views/user/userList.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-690" />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forget.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views/component/forget.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-345" />
+            <state relative-caret-position="-798" />
           </provider>
         </entry>
       </file>
@@ -152,6 +97,7 @@
       <find>entries</find>
       <find>select</find>
       <find>qizheAddress</find>
+      <find>environment</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -190,20 +136,15 @@
         <option value="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views/item/AddressList.html" />
         <option value="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/hans/ItemController.java" />
         <option value="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views/item/editdesign.html" />
-        <option value="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/hans/DesignController.java" />
         <option value="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views/item/editDesign.html" />
         <option value="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views/item/design.html" />
         <option value="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/hans/TestPaperController.java" />
         <option value="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views.html" />
         <option value="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views/component/login.html" />
+        <option value="$PROJECT_DIR$/backstage-manager/backstage-dao/src/main/java/cn/vo/dao/hans/CustomerMapper.java" />
+        <option value="$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/hans/DesignController.java" />
       </list>
     </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -248,9 +189,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -468,61 +407,14 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="message" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yuantao" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yuantao" type="462c0819:PsiDirectoryNode" />
-              <item name="backstage-manager" type="462c0819:PsiDirectoryNode" />
-              <item name="backstage-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="component" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yuantao" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yuantao" type="462c0819:PsiDirectoryNode" />
-              <item name="backstage-manager" type="462c0819:PsiDirectoryNode" />
-              <item name="backstage-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="component" type="462c0819:PsiDirectoryNode" />
-              <item name="anim" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yuantao" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yuantao" type="462c0819:PsiDirectoryNode" />
-              <item name="backstage-manager" type="462c0819:PsiDirectoryNode" />
-              <item name="backstage-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="question" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yuantao" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yuantao" type="462c0819:PsiDirectoryNode" />
-              <item name="backstage-manager" type="462c0819:PsiDirectoryNode" />
-              <item name="backstage-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -534,7 +426,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546009956405" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552046880331" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -567,26 +459,14 @@
   <component name="RunManager">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method>
+      <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-      <method>
+      <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
@@ -596,37 +476,24 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <method>
+      <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
+    <configuration default="true" type="TestNG">
       <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
       <properties />
       <listeners />
-      <method>
+      <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
@@ -658,121 +525,93 @@
       <workItem from="1551061747466" duration="637000" />
       <workItem from="1551232646516" duration="7022000" />
       <workItem from="1551404577749" duration="2219000" />
+      <workItem from="1552045180995" duration="1535000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77486000" />
+    <option name="totallyTimeSpent" value="78741000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5020107" side_tool="true" weight="0.32952926" />
-      <window_info anchor="bottom" id="JRebel Console" order="0" side_tool="true" weight="0.32952926" />
-      <window_info anchor="right" id="Maven Projects" order="5" weight="0.3297587" />
-      <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
-      <window_info anchor="bottom" id="JRebel Executor" order="1" />
-      <window_info id="Capture Tool" order="7" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22520107" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
-      <window_info anchor="right" id="Database" order="6" sideWeight="0.49858356" weight="0.3297587" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" sideWeight="0.49858356" weight="0.25" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49798927" weight="0.4807418" />
-      <window_info anchor="bottom" id="TODO" order="8" />
-      <window_info anchor="bottom" id="Messages" order="15" weight="0.3281027" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="3" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="16" sideWeight="0.49932975" weight="0.3281027" />
-      <window_info anchor="bottom" id="Run" order="4" weight="0.3286119" />
-      <window_info anchor="bottom" id="Spring" order="9" weight="0.32952926" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32952926" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20643431" />
-      <window_info anchor="bottom" id="Problems" order="10" weight="0.3286119" />
-      <window_info anchor="right" id="Bean Validation" order="9" sideWeight="0.49858356" weight="0.3297587" />
-      <window_info id="Web" order="5" side_tool="true" />
-      <window_info id="JRebel" order="8" side_tool="true" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Spring" order="9" weight="0.32952926" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="6" sideWeight="0.49858356" weight="0.3297587" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info id="UI Designer" order="4" />
+      <window_info id="Web" order="5" side_tool="true" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Capture Tool" order="7" />
       <window_info id="JRebel" order="8" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20375335" />
-      <window_info anchor="right" id="Coverage" order="3" sideWeight="0.50141644" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="8" />
+      <window_info anchor="bottom" id="JRebel Console" order="0" side_tool="true" weight="0.32952926" />
       <window_info anchor="bottom" id="JRebel Executor" order="1" />
-      <window_info anchor="right" id="Maven Projects" order="5" weight="0.3297587" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" sideWeight="0.49858356" weight="0.3297587" />
       <window_info anchor="bottom" id="Message" order="2" />
-      <window_info anchor="right" id="Ant Build" order="1" sideWeight="0.49858356" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.32952926" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5020107" side_tool="true" weight="0.32952926" />
-      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
-      <window_info anchor="bottom" id="Problems" order="10" weight="0.3286119" />
-      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
-      <window_info id="Designer" order="2" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" />
-      <window_info anchor="bottom" id="JRebel Console" order="0" side_tool="true" weight="0.32952926" />
-      <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="16" sideWeight="0.49932975" weight="0.3281027" />
-      <window_info id="Web" order="5" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Run" order="4" weight="0.3286119" />
-      <window_info id="Capture Tool" order="7" />
-      <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49798927" weight="0.46077034" />
+      <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49798927" weight="0.46033993" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="8" />
+      <window_info anchor="bottom" id="Spring" order="9" weight="0.32952926" />
+      <window_info anchor="bottom" id="Problems" order="10" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5020107" side_tool="true" weight="0.32952926" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+      <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="15" weight="0.3281027" />
+      <window_info anchor="bottom" id="Version Control" order="16" sideWeight="0.49932975" weight="0.3281027" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" sideWeight="0.49858356" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Coverage" order="4" sideWeight="0.50141644" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" weight="0.3297587" />
+      <window_info anchor="right" id="Database" order="7" sideWeight="0.49858356" weight="0.3297587" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="Bean Validation" order="10" sideWeight="0.49858356" weight="0.3297587" />
     </layout>
     <layout-to-restore>
-      <window_info id="Designer" order="3" />
-      <window_info anchor="right" id="Palette" order="3" />
       <window_info id="JRebel" order="0" side_tool="true" />
-      <window_info anchor="bottom" id="Spring" order="9" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.20643431" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="3" />
       <window_info id="Image Layers" order="4" />
-      <window_info anchor="bottom" id="Run" order="4" weight="0.3286119" />
-      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" sideWeight="0.49858356" weight="0.25" />
       <window_info id="UI Designer" order="5" />
+      <window_info id="Web" order="6" side_tool="true" />
       <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info id="Capture Tool" order="8" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50067025" side_tool="true" weight="0.3281027" />
-      <window_info anchor="bottom" id="Messages" order="16" weight="0.3286119" />
+      <window_info anchor="bottom" id="JRebel Executor" order="0" />
+      <window_info anchor="bottom" id="JRebel Console" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="2" />
+      <window_info anchor="bottom" id="Find" order="3" weight="0.32952926" />
+      <window_info anchor="bottom" id="Run" order="4" weight="0.3286119" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.46077034" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Spring" order="9" />
       <window_info anchor="bottom" id="Problems" order="10" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50067025" side_tool="true" weight="0.3281027" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="15" sideWeight="0.49932975" weight="0.3286119" />
+      <window_info anchor="bottom" id="Messages" order="16" weight="0.3286119" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" sideWeight="0.49858356" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Coverage" order="4" sideWeight="0.50141644" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.3297587" />
-      <window_info anchor="bottom" id="JRebel Executor" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.20643431" />
-      <window_info anchor="bottom" id="JRebel Console" order="1" side_tool="true" />
       <window_info anchor="right" id="Database" order="7" sideWeight="0.49858356" weight="0.3297587" />
-      <window_info anchor="bottom" id="Message" order="2" />
-      <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
-      <window_info anchor="right" id="Coverage" order="4" sideWeight="0.50141644" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="3" weight="0.32952926" />
       <window_info anchor="right" id="Bean Validation" order="10" sideWeight="0.49858356" weight="0.3297587" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.46077034" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -813,14 +652,22 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="4" />
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
         <watch expression="itemContents.get(0)" />
@@ -836,98 +683,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backstage-manager/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="30" column="43" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-pojo/src/main/java/cn/vo/pojo/ModuleExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-dao/src/main/java/cn/vo/dao/ModuleMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-service/src/main/java/cn/vo/service/IModuleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-dao/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/product-common/src/main/java/cn/vo/backstage/Utils/PageUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-dao/src/main/java/cn/vo/dao/QizheAddressMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/product-shiro/src/main/java/cn/vo/shiro/ShiroRealm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-874">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/product-shiro/src/main/java/cn/vo/shiro/ShiroConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="90" column="52" selection-start-line="90" selection-start-column="43" selection-end-line="90" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../jdk/jdk1.8.0_91/src.zip!/java/io/Serializable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3335">
-          <caret line="168" column="17" selection-start-line="168" selection-start-column="17" selection-end-line="168" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-pojo/src/main/java/cn/vo/pojo/entity/Topic.java" />
-    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-pojo/src/main/java/cn/vo/pojo/Module.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-pojo/src/main/java/cn/vo/pojo/QizheAddress.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="897">
-          <caret line="40" column="18" selection-start-line="40" selection-start-column="15" selection-end-line="40" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/cn/vo/mapping/QizheAddressMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9292">
@@ -942,13 +697,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/apache-maven-3.3.9/maven/org/springframework/spring-expression/4.3.13.RELEASE/spring-expression-4.3.13.RELEASE-sources.jar!/org/springframework/expression/spel/ast/Indexer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12305">
-          <caret line="575" selection-start-line="575" selection-end-line="575" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://D:/apache-maven-3.3.9/maven/org/springframework/spring-expression/4.3.13.RELEASE/spring-expression-4.3.13.RELEASE-sources.jar!/org/springframework/expression/spel/ast/Indexer.java" />
     <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-dao/src/main/java/cn/vo/dao/hans/TestMapper.java" />
     <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views/hans/reload.html" />
     <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-service/src/main/java/cn/vo/service/IqizheAddressService.java">
@@ -967,20 +716,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-pojo/src/main/java/cn/vo/pojo/entity/ItemContent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-69">
-          <caret line="27" column="23" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/apache-maven-3.3.9/maven/org/springframework/data/spring-data-jpa/1.11.9.RELEASE/spring-data-jpa-1.11.9.RELEASE-sources.jar!/org/springframework/data/jpa/repository/JpaRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://D:/apache-maven-3.3.9/maven/org/springframework/data/spring-data-jpa/1.11.9.RELEASE/spring-data-jpa-1.11.9.RELEASE-sources.jar!/org/springframework/data/jpa/repository/JpaRepository.java" />
     <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -992,27 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="1" column="199" selection-start-line="1" selection-start-column="199" selection-end-line="1" selection-end-column="199" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-dao/src/main/java/cn/vo/dao/hans/ItemContentMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="9" column="74" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/hans/DesignController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="652">
-          <caret line="37" column="37" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/hans/ItemController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="54" column="60" selection-start-line="54" selection-start-column="48" selection-end-line="54" selection-end-column="60" />
         </state>
       </provider>
     </entry>
@@ -1068,20 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/hans/HansXiaoDianAddressController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-759">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/hans/TestPaperController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views/component/reg.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-276" />
@@ -1127,18 +828,156 @@
         <state relative-caret-position="-1051" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views/component/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="49" column="15" selection-start-line="49" selection-start-column="15" selection-end-line="49" selection-end-column="15" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views/question/environmentQuestion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1425">
+          <caret line="75" column="54" selection-start-line="75" selection-start-column="54" selection-end-line="75" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-service/src/main/java/cn/vo/service/IQuestionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-service/src/main/java/cn/vo/service/impl/QuestionServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="20" column="62" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-pojo/src/main/java/cn/vo/pojo/QuestionExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="47" column="50" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-dao/src/main/java/cn/vo/dao/hans/XiaoDianAddressMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-pojo/src/main/java/cn/vo/pojo/entity/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-dao/src/main/java/cn/vo/dao/hans/CustomerMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/hans/HansXiaoDianAddressController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="59" column="39" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/hans/TestPaperController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/hans/ItemController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="44" column="57" selection-start-line="44" selection-start-column="37" selection-end-line="44" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="106" column="46" selection-start-line="106" selection-start-column="35" selection-end-line="106" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-dao/src/main/java/cn/vo/dao/hans/ItemContentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="9" column="74" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-pojo/src/main/java/cn/vo/pojo/entity/ItemContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="931">
+          <caret line="76" selection-start-line="15" selection-end-line="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-pojo/src/main/java/cn/vo/pojo/entity/HansXiaoDianAddress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-pojo/src/main/java/cn/vo/pojo/entity/TestPaper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-pojo/src/main/java/cn/vo/pojo/entity/TestPaperExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-pojo/src/main/java/cn/vo/pojo/entity/XiaodianAddressExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-209">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-pojo/src/main/java/cn/vo/pojo/entity/XiaodianAddress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/hans/DesignController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/java/cn/vo/controller/hans/EnvironmentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="23" column="46" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage-manager/backstage-web/src/main/resources/templates/views/question/environmentList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-798" />
       </provider>
     </entry>
   </component>
