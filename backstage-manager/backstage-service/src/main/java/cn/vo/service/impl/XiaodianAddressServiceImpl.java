@@ -19,4 +19,9 @@ public class XiaodianAddressServiceImpl implements IXiaodianAddressService {
     public List<XiaodianAddress> queryLikeName(String name) {
         return xiaodianAddressMapper.queryLikeName(name);
     }
+
+    @Override
+    public XiaodianAddress getById(Long id) {
+        return xiaodianAddressMapper.selectByPrimaryKey(id);
+    }
 }
