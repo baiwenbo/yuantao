@@ -84,7 +84,7 @@ public class TestPaperController {
         XiaodianAddress xiaodianAddress=xiaodianAddressService.getById(Long.valueOf(testPaper.getCompanyId()));
         model.addAttribute("testPaper",testPaper);
         model.addAttribute("name",xiaodianAddress.getName());
-        return "views/hans/questionEdit";
+        return "views/hans/questionetor";
     }
     @GetMapping("deial")
     public String deial(Integer id, Model model){
@@ -94,7 +94,12 @@ public class TestPaperController {
         XiaodianAddress xiaodianAddress=xiaodianAddressService.getById(Long.valueOf(testPaper.getCompanyId()));
         model.addAttribute("testPaper",testPaper);
         model.addAttribute("name",xiaodianAddress.getName());
-        return "views/hans/questionDeial";
+        return "views/hans/questionetor";
+    }
+
+    @GetMapping("add")
+    public String add(){
+        return "views/hans/questionAdd";
     }
 
     @PostMapping("update")
