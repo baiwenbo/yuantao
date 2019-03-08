@@ -19,7 +19,8 @@ public class EnvironmentController {
     private IQuestionService questionService;
 
     @GetMapping("list")
-    public  String list(){
+    public  String list(String close,Model model){
+        model.addAttribute("close",close);
         return "views/question/environmentList";
     }
 
