@@ -70,6 +70,16 @@
     <result column="topic13_four" property="topic13Four" jdbcType="VARCHAR" />
     <result column="topic13_fraction" property="topic13Fraction" jdbcType="VARCHAR" />
   </resultMap>
+
+  <resultMap id="QueryResultMap" type="cn.vo.pojo.entity.TestPaper" >
+    <id column="id" property="id"  />
+    <result column="company_id" property="companyId"  />
+    <result column="name" property="name"  />
+    <result column="yetai" property="yetai"  />
+    <result column="pianqu" property="pianqu"  />
+
+  </resultMap>
+
   <sql id="Example_Where_Clause" >
     <where >
       <foreach collection="oredCriteria" item="criteria" separator="or" >
@@ -140,6 +150,9 @@
     topic10_fraction, topic11_one, topic11_two, topic11_three, topic11_four, topic11_fraction, 
     topic12_one, topic12_two, topic12_three, topic12_four, topic12_fraction, topic13_one, 
     topic13_two, topic13_three, topic13_four, topic13_fraction
+  </sql>
+  <sql id="query_List" >
+    t.id, t.company_id, h.name ,h.yetai,h.pianqu
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="cn.vo.pojo.entity.TestPaperExample" >
     select
@@ -1126,7 +1139,7 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="cn.vo.pojo.entity.TestPaper" >
     update test_paper
-    set company_id = #{companyId,jdbcType=INTEGER},
+    set
       topic1_one = #{topic1One,jdbcType=VARCHAR},
       topic1_two = #{topic1Two,jdbcType=VARCHAR},
       topic1_three = #{topic1Three,jdbcType=VARCHAR},
@@ -1194,4 +1207,14 @@
       topic13_fraction = #{topic13Fraction,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <select id="getListQuery" resultMap="QueryResultMap" parameterType="map">
+    select  <include refid="query_List" /> from test_paper t left join hans_xiaodian_address h on  t.company_id=h.id where
+    <if test="name != null and name.length()>0" >
+      h.name = #{name} and
+    </if>
+    h.disabled=0 limit  #{index} , #{pageSize}
+  </select>
+
+
 </mapper>
