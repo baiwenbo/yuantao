@@ -38,60 +38,62 @@
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic1One" value="2:不符合要求" th:checked="${#strings.contains(deial.topic1One,'2:不符合要求')}"  />
               </div>
             </div><br/>
-            <div id="one">
-              <div   th:each="list:${list[0]}"  >
-                <label style="width: 100px;">1-2:不符合要求的原因是？(多选）</label><br/>
-                <table border="1" style="align:center">
-                  <tr>
-                    <td ><span th:text="${list.option1}" /></td>
-                    <td width="80px;"><input th:attr ="checked=${deial.topic1Two.contains(list.option1)?true:false}"  th:value="${list.option1}"    type="checkbox" name="topic1Two" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr>
-                  <tr>
-                    <td ><span th:text="${list.option2}" /></td>
-                    <td width="80px;"><input type="checkbox" name="topic1Two" th:attr ="checked=${deial.topic1Two.contains(list.option2)?true:false}"  th:value="${list.option2}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr>
-                  <tr>
-                    <td ><span th:text="${list.option3}" /></td>
-                    <td width="80px;"><input type="checkbox" name="topic1Two"  th:attr ="checked=${deial.topic1Two.contains(list.option3)?true:false}"  th:value="${list.option3}"    lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr>
-                  <tr>
-                    <td ><span th:text="${list.option4}" /></td>
-                    <td width="80px;"><input type="checkbox" name="topic1Two" th:attr ="checked=${deial.topic1Two.contains(list.option4)?true:false}"  th:value="${list.option4}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr>
-                  <tr>
-                    <td ><span th:text="${list.option5}" /></td>
-                    <td width="80px;"><input type="checkbox" name="topic1Two"  th:attr ="checked=${deial.topic1Two.contains(list.option5)?true:false}"  th:value="${list.option5}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr>
-                  <tr>
-                    <td ><span th:text="${list.option6}" /></td>
-                    <td width="80px;"><input type="text" class="layui-input"/></td>
-                  </tr>
+            <div id="one" th:switch="${deial.topic1One}">
+              <div th:case="${#strings.contains(deial.topic1One,'2:不符合要求')}">
+                <div   th:each="list:${list[0]}"  >
+                  <label style="width: 100px;">1-2:不符合要求的原因是？(多选）</label><br/>
+                  <table border="1" style="align:center">
+                    <tr>
+                      <td ><span th:text="${list.option1}" /></td>
+                      <td width="80px;"><input th:attr ="checked=${deial.topic1Two.contains(list.option1)?true:false}"  th:value="${list.option1}"    type="checkbox" name="topic1Two" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    </tr>
+                    <tr>
+                      <td ><span th:text="${list.option2}" /></td>
+                      <td width="80px;"><input type="checkbox" name="topic1Two" th:attr ="checked=${deial.topic1Two.contains(list.option2)?true:false}"  th:value="${list.option2}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    </tr>
+                    <tr>
+                      <td ><span th:text="${list.option3}" /></td>
+                      <td width="80px;"><input type="checkbox" name="topic1Two"  th:attr ="checked=${deial.topic1Two.contains(list.option3)?true:false}"  th:value="${list.option3}"    lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    </tr>
+                    <tr>
+                      <td ><span th:text="${list.option4}" /></td>
+                      <td width="80px;"><input type="checkbox" name="topic1Two" th:attr ="checked=${deial.topic1Two.contains(list.option4)?true:false}"  th:value="${list.option4}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    </tr>
+                    <tr>
+                      <td ><span th:text="${list.option5}" /></td>
+                      <td width="80px;"><input type="checkbox" name="topic1Two"  th:attr ="checked=${deial.topic1Two.contains(list.option5)?true:false}"  th:value="${list.option5}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    </tr>
+                    <tr>
+                      <td ><span th:text="${list.option6}" /></td>
+                      <td width="80px;"><input type="text" class="layui-input"/></td>
+                    </tr>
 
-                </table>
+                  </table>
 
-              </div><br/>
-              <div   th:each="list:${list[1]}"  >
-                <label style="width: 100px;">1-3检测中共有几处不符合要求？(单选）</label><br/><br/>
+                </div><br/>
+                <div   th:each="list:${list[1]}"  >
+                  <label style="width: 100px;">1-3检测中共有几处不符合要求？(单选）</label><br/><br/>
 
-                <table border="1" >
-                  <tr>
-                    <td ><span th:text="${list.option1}" /></td>
-                    <td width="80px;"><input type="radio" th:value="${list.option1}" th:attr ="checked=${deial.topic1Three == list.option1?true:false}"    name="topic1Three" style="height: 20px;width: 50px;"/></td>
-                  </tr>
-                  <tr>
-                    <td ><span th:text="${list.option2}" /></td>
-                    <td width="80px;"><input type="radio" th:value="${list.option2}"  name="topic1Three" th:attr ="checked=${deial.topic1Three == list.option2?true:false}"   style="height: 20px;width: 50px;"/></td>
-                  </tr>
-                  <tr>
-                    <td ><span th:text="${list.option3}" /></td>
-                    <td width="80px;"><input type="radio" th:value="${list.option3}" th:attr ="checked=${deial.topic1Three == list.option3?true:false}"  name="topic1Three"  style="height: 20px;width: 50px;"/></td>
-                  </tr>
-                  <tr>
-                    <td ><span th:text="${list.option4}" /></td>
-                    <td width="80px;"><input type="radio" th:value="${list.option4}" th:attr ="checked=${deial.topic1Three == list.option4?true:false}"   name="topic1Three"  style="height: 20px;width: 50px;"/></td>
-                  </tr>
-                </table>
-              </div><br/>
+                  <table border="1" >
+                    <tr>
+                      <td ><span th:text="${list.option1}" /></td>
+                      <td width="80px;"><input type="radio" th:value="${list.option1}" th:attr ="checked=${deial.topic1Three == list.option1?true:false}"    name="topic1Three" style="height: 20px;width: 50px;"/></td>
+                    </tr>
+                    <tr>
+                      <td ><span th:text="${list.option2}" /></td>
+                      <td width="80px;"><input type="radio" th:value="${list.option2}"  name="topic1Three" th:attr ="checked=${deial.topic1Three == list.option2?true:false}"   style="height: 20px;width: 50px;"/></td>
+                    </tr>
+                    <tr>
+                      <td ><span th:text="${list.option3}" /></td>
+                      <td width="80px;"><input type="radio" th:value="${list.option3}" th:attr ="checked=${deial.topic1Three == list.option3?true:false}"  name="topic1Three"  style="height: 20px;width: 50px;"/></td>
+                    </tr>
+                    <tr>
+                      <td ><span th:text="${list.option4}" /></td>
+                      <td width="80px;"><input type="radio" th:value="${list.option4}" th:attr ="checked=${deial.topic1Three == list.option4?true:false}"   name="topic1Three"  style="height: 20px;width: 50px;"/></td>
+                    </tr>
+                  </table>
+                </div><br/>
+              </div>
               <div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
@@ -115,57 +117,59 @@
 
               </div>
             </div><br/>
-            <div id="two">
-              <div  lay-filter="" th:each="list:${list[2]}" id="">
-                <label style="width: 100px;">2-2:不符合要求的原因是？(多选）</label><br/><br/>
-                <table border="1" style="align:center">
-                  <tr>
-                    <td ><span th:text="${list.option1}" /></td>
-                    <td width="80px;"><input type="checkbox" name="topic2Two" th:value="${list.option1}" th:attr ="checked=${deial.topic2Two.contains(list.option1)?true:false}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr>
-                  <tr>
-                    <td ><span th:text="${list.option2}" /></td>
-                    <td width="80px;"><input type="checkbox"  name="topic2Two" th:value="${list.option2}" th:attr ="checked=${deial.topic2Two.contains(list.option2)?true:false}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr>
-                  <tr>
-                    <td ><span th:text="${list.option3}" /></td>
-                    <td width="80px;"><input type="checkbox"  name="topic2Two"  th:value="${list.option3}" th:attr ="checked=${deial.topic2Two.contains(list.option3)?true:false}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr>
-                  <tr>
-                    <td ><span th:text="${list.option4}" /></td>
-                    <td width="80px;"><input type="checkbox"  name="topic2Two" th:value="${list.option4}" th:attr ="checked=${deial.topic2Two.contains(list.option4)?true:false}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr>
+            <div id="two" th:switch="${deial.topic2One}">
+              <div th:case="${#strings.contains(deial.topic2One,'2:不符合要求')}">
+                  <div  lay-filter="" th:each="list:${list[2]}" id="">
+                    <label style="width: 100px;">2-2:不符合要求的原因是？(多选）</label><br/><br/>
+                    <table border="1" style="align:center">
+                      <tr>
+                        <td ><span th:text="${list.option1}" /></td>
+                        <td width="80px;"><input type="checkbox" name="topic2Two" th:value="${list.option1}" th:attr ="checked=${deial.topic2Two.contains(list.option1)?true:false}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                      </tr>
+                      <tr>
+                        <td ><span th:text="${list.option2}" /></td>
+                        <td width="80px;"><input type="checkbox"  name="topic2Two" th:value="${list.option2}" th:attr ="checked=${deial.topic2Two.contains(list.option2)?true:false}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                      </tr>
+                      <tr>
+                        <td ><span th:text="${list.option3}" /></td>
+                        <td width="80px;"><input type="checkbox"  name="topic2Two"  th:value="${list.option3}" th:attr ="checked=${deial.topic2Two.contains(list.option3)?true:false}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                      </tr>
+                      <tr>
+                        <td ><span th:text="${list.option4}" /></td>
+                        <td width="80px;"><input type="checkbox"  name="topic2Two" th:value="${list.option4}" th:attr ="checked=${deial.topic2Two.contains(list.option4)?true:false}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                      </tr>
 
-                  <tr>
-                    <td ><span th:text="${list.option5}" /></td>
-                    <td width="80px;"><input type="text"  name="topic2Two" class="layui-input"/></td>
-                  </tr>
+                      <tr>
+                        <td ><span th:text="${list.option5}" /></td>
+                        <td width="80px;"><input type="text"  name="topic2Two" class="layui-input"/></td>
+                      </tr>
 
-                </table>
+                    </table>
 
-              </div><br/>
-              <div  lay-filter="" th:each="list:${list[3]}">
-                <label style="width: 100px;">2-3检测中共有几处不符合要求？(单选）</label><br/><br/>
+                  </div><br/>
+                  <div  lay-filter="" th:each="list:${list[3]}">
+                    <label style="width: 100px;">2-3检测中共有几处不符合要求？(单选）</label><br/><br/>
 
-                <table border="1" >
-                  <tr>
-                    <td ><span th:text="${list.option1}" /></td>
-                    <td width="80px;"><input type="radio" th:value="${list.option1}" th:attr ="checked=${deial.topic2Three == list.option1?true:false}"  name="topic2Three" style="height: 20px;width: 50px;"/></td>
-                  </tr>
-                  <tr>
-                    <td ><span th:text="${list.option2}" /></td>
-                    <td width="80px;"><input type="radio"  name="topic2Three" th:value="${list.option2}"  th:attr ="checked=${deial.topic2Three == list.option2?true:false}" style="height: 20px;width: 50px;"/></td>
-                  </tr>
-                  <tr>
-                    <td ><span th:text="${list.option3}" /></td>
-                    <td width="80px;"><input type="radio"  name="topic2Three" th:value="${list.option3}" th:attr ="checked=${deial.topic2Three == list.option3?true:false}"  style="height: 20px;width: 50px;"/></td>
-                  </tr>
-                  <tr>
-                    <td ><span th:text="${list.option4}" /></td>
-                    <td width="80px;"><input type="radio"  name="topic2Three" th:value="${list.option4}"  th:attr ="checked=${deial.topic2Three == list.option4?true:false}" style="height: 20px;width: 50px;"/></td>
-                  </tr>
-                </table>
-              </div><br/>
+                    <table border="1" >
+                      <tr>
+                        <td ><span th:text="${list.option1}" /></td>
+                        <td width="80px;"><input type="radio" th:value="${list.option1}" th:attr ="checked=${deial.topic2Three == list.option1?true:false}"  name="topic2Three" style="height: 20px;width: 50px;"/></td>
+                      </tr>
+                      <tr>
+                        <td ><span th:text="${list.option2}" /></td>
+                        <td width="80px;"><input type="radio"  name="topic2Three" th:value="${list.option2}"  th:attr ="checked=${deial.topic2Three == list.option2?true:false}" style="height: 20px;width: 50px;"/></td>
+                      </tr>
+                      <tr>
+                        <td ><span th:text="${list.option3}" /></td>
+                        <td width="80px;"><input type="radio"  name="topic2Three" th:value="${list.option3}" th:attr ="checked=${deial.topic2Three == list.option3?true:false}"  style="height: 20px;width: 50px;"/></td>
+                      </tr>
+                      <tr>
+                        <td ><span th:text="${list.option4}" /></td>
+                        <td width="80px;"><input type="radio"  name="topic2Three" th:value="${list.option4}"  th:attr ="checked=${deial.topic2Three == list.option4?true:false}" style="height: 20px;width: 50px;"/></td>
+                      </tr>
+                    </table>
+                  </div><br/>
+              </div>
               <div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
@@ -190,8 +194,8 @@
 
               </div>
             </div><br/>
-            <div id="three">
-              <div  lay-filter="" th:each="list:${list[4]}" id="">
+            <div id="three" th:switch="${deial.topic3One}">
+              <div  lay-filter="" th:each="list:${list[4]}" th:case="${#strings.contains(deial.topic3One,'1:完全符合')}">
                 <label style="width: 100px;">3-2:不符合要求的原因是？(多选）</label><br/><br/>
                 <table border="1" >
                   <tr>
@@ -243,8 +247,8 @@
 
               </div>
             </div><br/>
-            <div id="four">
-              <div  lay-filter="" th:each="list:${list[5]}" id="">
+            <div id="four" th:switch="${deial.topic4One}">
+              <div  lay-filter="" th:each="list:${list[5]}" th:case="${#strings.contains(deial.topic4One,'2:不符合要求')}">
                 <label style="width: 100px;">4-2:不符合要求的原因是？(多选）</label><br/><br/>
                 <table border="1" >
                   <tr>
@@ -299,8 +303,8 @@
 
               </div>
             </div><br/>
-            <div id="five">
-              <div  lay-filter="" th:each="list:${list[6]}" id="">
+            <div id="five" th:switch="${deial.topic5One}">
+              <div  lay-filter="" th:each="list:${list[6]}" th:case="${#strings.contains(deial.topic5One,'2:不符合要求')}">
                 <label style="width: 100px;">5-2:不符合要求的原因是？(多选）</label><br/><br/>
                 <table border="1" >
                   <tr>
@@ -356,8 +360,8 @@
 
               </div>
             </div><br/>
-            <div id="six">
-              <div  lay-filter="" th:each="list:${list[7]}" id="">
+            <div id="six" th:switch="${deial.topic6One}">
+              <div  lay-filter="" th:each="list:${list[7]}" th:case="${#strings.contains(deial.topic6One,'2:不符合要求')}">
                 <label style="width: 100px;">6-2:不符合要求的原因是？(多选）</label><br/><br/>
                 <table border="1" >
                   <tr>
@@ -413,8 +417,8 @@
 
               </div>
             </div><br/>
-            <div id="seven">
-              <div  lay-filter="" th:each="list:${list[8]}" id="">
+            <div id="seven" th:switch="${deial.topic7One}">
+              <div  lay-filter="" th:each="list:${list[8]}" th:case="${#strings.contains(deial.topic7One,'2:不符合要求')}">
                 <label style="width: 100px;">7-2:不符合要求的原因是？(多选）</label><br/><br/>
                 <table border="1" >
                   <tr>
@@ -466,8 +470,8 @@
 
               </div>
             </div><br/>
-            <div id="eight">
-              <div  lay-filter="" th:each="list:${list[9]}" id="">
+            <div id="eight" th:switch="${deial.topic8One}">
+              <div  lay-filter="" th:each="list:${list[9]}" th:case="${#strings.contains(deial.topic8One,'2:不符合要求')}">
                 <label style="width: 100px;">8-2:不符合要求的原因是？(多选）</label><br/><br/>
                 <table border="1" >
                   <tr>
@@ -513,16 +517,18 @@
                 <label style="width: 100px;">1有休闲区 </label> <input type="radio" name="topic9One" value="1有休闲区" th:checked="${#strings.contains(deial.topic9One,'1有休闲区')}"/><br/>
                 <label style="width: 100px;">2无休闲区</label> <input type="radio" name="topic9One" value="2无休闲区" th:checked="${#strings.contains(deial.topic9One,'2无休闲区')}"/>
               </div>
-              <div id="ninesuper">
-                <label style="width: 100px;">9-2休闲区域是否符合要求？(单选）</label>
-                <div class="layui-input-block">
-                  <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic9Two" value="1:完全符合" th:checked="${#strings.contains(deial.topic9Two,'1:完全符合')}" /><br/>
-                  <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic9Two" value="2:不符合要求" th:checked="${#strings.contains(deial.topic9Two,'2:不符合要求')}" />
-                </div>
+              <div id="ninesuper" th:switch="${deial.topic9One}">
+                <div th:case="${#strings.contains(deial.topic9One,'2无休闲区')}">
+                  <label style="width: 100px;">9-2休闲区域是否符合要求？(单选）</label>
+                  <div class="layui-input-block">
+                    <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic9Two" value="1:完全符合" th:checked="${#strings.contains(deial.topic9Two,'1:完全符合')}" /><br/>
+                    <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic9Two" value="2:不符合要求" th:checked="${#strings.contains(deial.topic9Two,'2:不符合要求')}" />
+                  </div>
+                  </div>
               </div><br/>
             </div>
-            <div id="nine">
-              <div  lay-filter="" th:each="list:${list[10]}" id="">
+            <div id="nine" th:switch="${deial.topic9Two}">
+              <div  lay-filter="" th:each="list:${list[10]}" th:case="${#strings.contains(deial.topic9Two,'2:不符合要求')}">
                 <label style="width: 100px;">9-3不符合要求的原因是？(多选）</label><br/><br/>
                 <table border="1" >
                   <tr>
@@ -564,26 +570,27 @@
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic10One" value="2:不符合要求" th:checked="${#strings.contains(deial.topic10One,'2:不符合要求')}" />
               </div>
             </div><br/>
-            <div id="ten" >
-              <div  lay-filter="" th:each="list:${list[11]}" id="">
-                <label style="width: 100px;">10-2:不符合要求的原因是？(多选）</label><br/><br/>
-                <table border="1" >
-                  <tr>
-                    <td ><span th:text="${list.option1}" /></td>
-                    <td width="80px;"><input type="checkbox" name="topic10Two" th:value="${list.option1}"  th:attr ="checked=${deial.topic10Two.contains(list.option1)?true:false}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr>
-                  <tr>
-                    <td ><span th:text="${list.option2}" /></td>
-                    <td width="80px;"><input type="checkbox" name="topic10Two" th:value="${list.option2}" th:attr ="checked=${deial.topic10Two.contains(list.option2)?true:false}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr>
-                  <tr>
-                    <td ><span th:text="${list.option3}" /></td>
-                    <td width="80px;"><input type="text" name="topic10Two" class="layui-input"/></td>
-                  </tr>
+            <div id="ten" th:switch="${deial.topic10One}">
+              <div th:case="${#strings.contains(deial.topic10One,'2:不符合要求')}">
+                <div  lay-filter="" th:each="list:${list[11]}" id="">
+                  <label style="width: 100px;">10-2:不符合要求的原因是？(多选）</label><br/><br/>
+                  <table border="1" >
+                    <tr>
+                      <td ><span th:text="${list.option1}" /></td>
+                      <td width="80px;"><input type="checkbox" name="topic10Two" th:value="${list.option1}"  th:attr ="checked=${deial.topic10Two.contains(list.option1)?true:false}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    </tr>
+                    <tr>
+                      <td ><span th:text="${list.option2}" /></td>
+                      <td width="80px;"><input type="checkbox" name="topic10Two" th:value="${list.option2}" th:attr ="checked=${deial.topic10Two.contains(list.option2)?true:false}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    </tr>
+                    <tr>
+                      <td ><span th:text="${list.option3}" /></td>
+                      <td width="80px;"><input type="text" name="topic10Two" class="layui-input"/></td>
+                    </tr>
 
-                </table>
-              </div><br/>
-              <div  lay-filter="" th:each="list:${list[12]}" id="">
+                  </table>
+                </div><br/>
+                <div  lay-filter="" th:each="list:${list[12]}" id="">
 
                 <label style="width: 100px;">10-3检测中共有几处不符合要求？(单选）</label><br/><br/>
                 <table border="1" >
@@ -609,6 +616,7 @@
                   </tr>
                 </table>
               </div><br/>
+              </div>
               <div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
@@ -631,8 +639,8 @@
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic11One" value="2:不符合要求"  th:checked="${#strings.contains(deial.topic11One,'2:不符合要求')}" />
               </div>
             </div><br/>
-            <div id="eleven" >
-              <div  lay-filter="" th:each="list:${list[13]}" id="">
+            <div id="eleven" th:switch="${deial.topic11One}" >
+              <div  lay-filter="" th:each="list:${list[13]}" th:case="${#strings.contains(deial.topic11One,'2:不符合要求')}">
                 <label style="width: 100px;">11-2:不符合要求的原因是？(多选）</label><br/><br/>
                 <table border="1" >
                   <tr>
@@ -673,8 +681,8 @@
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic12One" value="2:不符合要求"  th:checked="${#strings.contains(deial.topic12One,'2:不符合要求')}" />
               </div>
             </div><br/>
-            <div id="twelve">
-              <div  lay-filter="" th:each="list:${list[14]}" id="">
+            <div id="twelve" th:switch="${deial.topic12One}">
+              <div  lay-filter="" th:each="list:${list[14]}" th:case="${#strings.contains(deial.topic12One,'2:不符合要求')}">
                 <label style="width: 100px;">12-2:不符合要求的原因是？(多选）</label><br/><br/>
                 <table border="1" >
                   <tr>
@@ -715,8 +723,8 @@
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic13One" value="2:不符合要求"  th:checked="${#strings.contains(deial.topic13One,'2:不符合要求')}" />
               </div>
             </div><br/>
-            <div id="thirteen">
-              <div  lay-filter="" th:each="list:${list[15]}" id="">
+            <div id="thirteen" th:switch="${deial.topic13One}">
+              <div  lay-filter="" th:each="list:${list[15]}" th:case="${#strings.contains(deial.topic13One,'2:不符合要求')}">
                 <label style="width: 100px;">13-2:不符合要求的原因是？(多选）</label><br/><br/>
                 <table border="1" >
                   <tr>

@@ -37,8 +37,9 @@
                   <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic1One" value="2:不符合要求" th:checked="${#strings.contains(deial.topic1One,'2:不符合要求')}"  />
                 </div>
               </div><br/>
-                      <div id="one">
-                          <div   th:each="list:${list[0]}"  >
+                      <div id="one" th:switch="${deial.topic1One}">
+                        <div th:case="${#strings.contains(deial.topic1One,'2:不符合要求')}" >
+                          <div   th:each="list:${list[0]}"   >
                           <label style="width: 100px;">1-2:不符合要求的原因是？(多选）</label><br/>
                             <table border="1" style="align:center">
                               <tr>
@@ -90,7 +91,9 @@
                                   <td width="80px;"><input type="radio" th:value="${list.option4}" th:attr ="checked=${deial.topic1Three == list.option4?true:false}"  name="topic1Three"  style="height: 20px;width: 50px;"/></td>
                                 </tr>
                               </table>
+
                             </div><br/>
+                      </div>
                             <div class="layui-col-md12">
                               <div class="layui-card">
                                 <div class="layui-card-header">上传多张图片</div>
@@ -105,6 +108,7 @@
                                 </div>
                               </div>
                             </div>
+
                       </div>
                   <div class="layui-form-item">
                     <label style="width: 100px;">2-1店外设施是否符合要求？(单选）</label>
@@ -242,7 +246,8 @@
 
                 </div>
               </div><br/>
-              <div id="four">
+              <div id="four" th:switch="${deial.topic4One}">
+                <div th:case="${#strings.contains(deial.topic4One,'2:不符合要求')}">
                   <div  lay-filter="" th:each="list:${list[5]}" id="">
                     <label style="width: 100px;">4-2:不符合要求的原因是？(多选）</label><br/><br/>
                     <table border="1" >
@@ -274,6 +279,7 @@
                     </table>
 
                   </div><br/>
+                </div>
                   <div class="layui-col-md12">
                     <div class="layui-card">
                       <div class="layui-card-header">上传多张图片</div>
@@ -298,7 +304,8 @@
 
                   </div>
                 </div><br/>
-              <div id="five">
+              <div id="five" th:switch="${deial.topic5One}">
+                <div th:case="${#strings.contains(deial.topic5One,'2:不符合要求')}">
                 <div  lay-filter="" th:each="list:${list[6]}" id="">
                   <label style="width: 100px;">5-2:不符合要求的原因是？(多选）</label><br/><br/>
                   <table border="1" >
@@ -330,6 +337,7 @@
                   </table>
 
                 </div><br/>
+                </div>
                 <div class="layui-col-md12">
                   <div class="layui-card">
                     <div class="layui-card-header">上传多张图片</div>
@@ -355,7 +363,8 @@
 
                 </div>
               </div><br/>
-              <div id="six">
+              <div id="six" th:switch="${deial.topic6One}">
+                <div th:case="${#strings.contains(deial.topic6One,'2:不符合要求')}">
               <div  lay-filter="" th:each="list:${list[7]}" id="">
                 <label style="width: 100px;">6-2:不符合要求的原因是？(多选）</label><br/><br/>
                 <table border="1" >
@@ -388,6 +397,7 @@
                 </table>
 
               </div><br/>
+                </div>
                 <div class="layui-col-md12">
                   <div class="layui-card">
                     <div class="layui-card-header">上传多张图片</div>
@@ -412,7 +422,8 @@
 
                 </div>
               </div><br/>
-              <div id="seven">
+              <div id="seven" th:switch="${deial.topic7One}">
+                <div th:case="${#strings.contains(deial.topic7One,'2:不符合要求')}">
               <div  lay-filter="" th:each="list:${list[8]}" id="">
                 <label style="width: 100px;">7-2:不符合要求的原因是？(多选）</label><br/><br/>
                 <table border="1" >
@@ -441,6 +452,7 @@
                 </table>
 
               </div><br/>
+                </div>
                 <div class="layui-col-md12">
                   <div class="layui-card">
                     <div class="layui-card-header">上传多张图片</div>
@@ -465,7 +477,8 @@
 
                 </div>
               </div><br/>
-              <div id="eight">
+              <div id="eight" th:switch="${deial.topic8One}">
+                <div th:case="${#strings.contains(deial.topic8One,'2:不符合要求')}">
               <div  lay-filter="" th:each="list:${list[9]}" id="">
                 <label style="width: 100px;">8-2:不符合要求的原因是？(多选）</label><br/><br/>
                 <table border="1" >
@@ -490,6 +503,7 @@
                 </table>
 
               </div><br/>
+                </div>
                 <div class="layui-col-md12">
                   <div class="layui-card">
                     <div class="layui-card-header">上传多张图片</div>
@@ -512,7 +526,10 @@
                   <label style="width: 100px;">1有休闲区 </label> <input type="radio" name="topic9One" value="1" th:checked="${#strings.contains(deial.topic9One,'1有休闲区')}"/><br/>
                   <label style="width: 100px;">2无休闲区</label> <input type="radio" name="topic9One" value="2" th:checked="${#strings.contains(deial.topic9One,'2无休闲区')}"/>
                 </div>
-                <div id="ninesuper">
+                <div th:switch="${deial.topic9One}">
+                  <div th:case="${#strings.contains(deial.topic9One,'2无休闲区')}">
+                <div id="ninesuper" >
+
                 <label style="width: 100px;">9-2休闲区域是否符合要求？(单选）</label>
                 <div class="layui-input-block">
                   <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic9Two" value="1" th:checked="${#strings.contains(deial.topic9Two,'1:完全符合')}" /><br/>
@@ -520,7 +537,8 @@
                 </div>
               </div><br/>
               </div>
-              <div id="nine">
+              <div id="nine" th:switch="${deial.topic9Two}">
+                <div th:case="${#strings.contains(deial.topic9Two,'2:不符合要求')}">
               <div  lay-filter="" th:each="list:${list[10]}" id="">
                 <label style="width: 100px;">9-3不符合要求的原因是？(多选）</label><br/><br/>
                 <table border="1" >
@@ -540,6 +558,9 @@
                 </table>
 
               </div><br/>
+                </div>
+              </div>
+              </div>
                 <div class="layui-col-md12">
                   <div class="layui-card">
                     <div class="layui-card-header">上传多张图片</div>
@@ -563,7 +584,8 @@
                   <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic10One" value="2" th:checked="${#strings.contains(deial.topic10One,'2:不符合要求')}" />
                 </div>
               </div><br/>
-              <div id="ten" >
+              <div id="ten" th:switch="${deial.topic10One}">
+                <div th:case="${#strings.contains(deial.topic10One,'2:不符合要求')}">
                 <div  lay-filter="" th:each="list:${list[11]}" id="">
                   <label style="width: 100px;">10-2:不符合要求的原因是？(多选）</label><br/><br/>
                   <table border="1" >
@@ -608,6 +630,7 @@
                     </tr>
                   </table>
                 </div><br/>
+                </div>
                 <div class="layui-col-md12">
                   <div class="layui-card">
                     <div class="layui-card-header">上传多张图片</div>
@@ -630,8 +653,8 @@
                   <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic11One" value="2"  th:checked="${#strings.contains(deial.topic11One,'2:不符合要求')}" />
                 </div>
               </div><br/>
-              <div id="eleven" >
-                <div  lay-filter="" th:each="list:${list[13]}" id="">
+              <div id="eleven" th:switch="${deial.topic11One}" >
+                <div  lay-filter="" th:each="list:${list[13]}" th:case="${#strings.contains(deial.topic11One,'2:不符合要求')}">
                   <label style="width: 100px;">11-2:不符合要求的原因是？(多选）</label><br/><br/>
                   <table border="1" >
                     <tr>
@@ -672,8 +695,8 @@
                   <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic12One" value="2"  th:checked="${#strings.contains(deial.topic12One,'2:不符合要求')}" />
                 </div>
               </div><br/>
-              <div id="twelve">
-                <div  lay-filter="" th:each="list:${list[14]}" id="">
+              <div id="twelve" th:switch="${deial.topic12One}">
+                <div  lay-filter="" th:each="list:${list[14]}" th:case="${#strings.contains(deial.topic12One,'2:不符合要求')}">
                   <label style="width: 100px;">12-2:不符合要求的原因是？(多选）</label><br/><br/>
                   <table border="1" >
                     <tr>
@@ -714,8 +737,8 @@
                   <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic13One" value="2"  th:checked="${#strings.contains(deial.topic13One,'2:不符合要求')}" />
                 </div>
               </div><br/>
-              <div id="thirteen">
-                  <div  lay-filter="" th:each="list:${list[15]}" id="">
+              <div id="thirteen" th:switch="deial.topic13One">
+                  <div  lay-filter="" th:each="list:${list[15]}" th:case="${#strings.contains(deial.topic13One,'2:不符合要求')}">
                     <label style="width: 100px;">13-2:不符合要求的原因是？(多选）</label><br/><br/>
                     <table border="1" >
                       <tr>
