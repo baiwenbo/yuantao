@@ -30,7 +30,21 @@
     <a class="layui-btn layui-btn-xs" lay-event="edit" >编辑</a>
     <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del" >删除</a>
 </script>
+<input type="text" id="opener" th:value="${close}"/>
 <script th:src="@{/layuiadmin/layui/layui.js}" ></script>
+<script >
+    $(document).ready(function(){
+        alert(1);
+        var closeParent=$("#opener").val();
+        alert(closeParent);
+        if (closeParent!=null||closeParent!=''){
+            alert(closeParent);
+            window.opener.location.href = window.opener.location.href;
+            window.close();
+        } 
+    });
+
+</script>
 <script>
     layui.use('table', function(){
         var table = layui.table;
@@ -43,23 +57,20 @@
         table.render({
             elem: '#demo'
             ,height: 600
-            ,url: '/item/listJson' //数据接口
+            ,url: '/testPaper/listJson' //数据接口
             ,page: true //开启分页
             ,cols: [[ //表头
                 {field: 'id', title: 'ID', width:80, sort: true, fixed: 'left'}
-                ,{field: 'qgongsi', title: '分公司', width:80}
-                ,{field: 'bumen', title: '编号',width:80}
-                ,{field: 'qbianhao', title: 'qbianhao', width:120}
-                ,{field: 'qname', title: '名称', width:150}
-                ,{field: 'qnamehao', title: 'qnamehao', width:150}
-                ,{field: 'address', title: '地址', width:150}
+                ,{field: 'name', title: '门店名称', width:80}
+                ,{field: 'yetai', title: '业态',width:80}
+                ,{field: 'pianqu', title: '片区', width:120}
                 ,{fixed: 'right',title: '操作', width: 170, align:'center', toolbar: '#barDemo'}
             ]]
         });
         var $ = layui.$, active =
             {
                 reload: function () {
-                    var qname = $('#qname').val();//获取输入框的值
+                    var name = $('#qname').val();//获取输入框的值
                     //执行重载
                     table.reload('demo',
                         {
@@ -67,8 +78,8 @@
                                 {
                                     curr: 1 //重新从第 1 页开始
                                 }
-                            , where: { qname: qname}//这里传参  向后台
-                            , url: '/item/listJson'//后台做模糊搜索接口路径
+                            , where: { name: name}//这里传参  向后台
+                            , url: '/testPaper/listJson'//后台做模糊搜索接口路径
                             , method: 'get'
                         });
                 }
@@ -91,7 +102,7 @@
                     shade: false,
                     maxmin: true,
                     area: ['70%', '70%']
-                    ,content: '/testPaper/deial?id=2'
+                    ,content: '/testPaper/deial?id='+data.id
                     ,yes: function(index){
                         layer.close(index);
                     }
@@ -121,7 +132,7 @@
                     shade: false,
                     maxmin: true,
                     area: ['70%', '70%']
-                    ,content: '/testPaper/edit?id=2'
+                    ,content: '/testPaper/edit?id='+data.id
                     ,yes: function(index){
                         layer.close(index);
                     }

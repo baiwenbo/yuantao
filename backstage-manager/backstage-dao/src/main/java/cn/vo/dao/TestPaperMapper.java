@@ -3,6 +3,7 @@ package cn.vo.dao;
 import cn.vo.pojo.entity.TestPaper;
 import cn.vo.pojo.entity.TestPaperExample;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -32,4 +33,5 @@ public interface TestPaperMapper {
 
     int updateByPrimaryKey(TestPaper record);
     void delCompanyId(Integer companyId);
+    List<TestPaper> getListQuery(Map map);
 }

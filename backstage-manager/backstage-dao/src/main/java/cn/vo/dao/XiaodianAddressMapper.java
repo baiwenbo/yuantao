@@ -37,5 +37,5 @@ public interface XiaodianAddressMapper {
 
     int updateByPrimaryKey(XiaodianAddress record);
 
-     List<XiaodianAddress> queryLikeName(String name);
+     List<XiaodianAddress> queryLikeName(@Param("name") String name);
 }

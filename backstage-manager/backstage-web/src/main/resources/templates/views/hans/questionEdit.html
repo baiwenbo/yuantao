@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+  <meta charset="utf-8"/>
+  <meta name="renderer" content="webkit"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+  <link rel="stylesheet"  th:href="@{/layuiadmin/layui/css/layui.css}"  media="all"/>
+  <link rel="stylesheet"  th:href="@{/layuiadmin/style/admin.css}" media="all"/>
+</head>
+<body>
+<div >
+  <div >
+    <div >
+      <div >
+
+
+
+
+
+        <div  pad15="" th:each="deial:${testPaper}">
+          <form enctype="multipart/form-data" method="post" th:action="@{/testPaper/update}">
+            <input type="hidden" name="id" th:value="${deial.id}"/>
+            <div class="layui-form-item">
+              <label class="layui-form-label">门店名称</label>
+              <div class="layui-input-block" id="company">
+                <input type="text" id="customerName" lay-verify="required" autocomplete="off" placeholder="门店名称" class="layui-input" style="width: 200px;"/>
+
+              </div>
+
+            </div>
+            <h1 align="center" >环境</h1>
+            <div class="layui-form-item">
+              <h3 >店外区域</h3><br/>
+              <label style="width: 100px;">1-1店外环境是否符合要求？(单选）</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic1One" th:checked="${#strings.contains(deial.topic1One,'1:完全符合')}" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic1One" value="2:不符合要求" th:checked="${#strings.contains(deial.topic1One,'2:不符合要求')}"  />
+              </div>
+            </div><br/>
+            <div id="one">
+              <div   th:each="list:${list[0]}"  >
+                <label style="width: 100px;">1-2:不符合要求的原因是？(多选）</label><br/>
+                <table border="1" style="align:center">
+                  <tr>
+                    <td ><span th:text="${list.option1}" /></td>
+                    <td width="80px;"><input th:attr ="checked=${deial.topic1Two.contains(list.option1)?true:false}"  th:value="${list.option1}"    type="checkbox" name="topic1Two" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option2}" /></td>
+                    <td width="80px;"><input type="checkbox" name="topic1Two" th:attr ="checked=${deial.topic1Two.contains(list.option2)?true:false}"  th:value="${list.option2}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option3}" /></td>
+                    <td width="80px;"><input type="checkbox" name="topic1Two"  th:attr ="checked=${deial.topic1Two.contains(list.option3)?true:false}"  th:value="${list.option3}"    lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option4}" /></td>
+                    <td width="80px;"><input type="checkbox" name="topic1Two" th:attr ="checked=${deial.topic1Two.contains(list.option4)?true:false}"  th:value="${list.option4}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option5}" /></td>
+                    <td width="80px;"><input type="checkbox" name="topic1Two"  th:attr ="checked=${deial.topic1Two.contains(list.option5)?true:false}"  th:value="${list.option5}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option6}" /></td>
+                    <td width="80px;"><input type="text" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+
+              </div><br/>
+              <div   th:each="list:${list[1]}"  >
+                <label style="width: 100px;">1-3检测中共有几处不符合要求？(单选）</label><br/><br/>
+
+                <table border="1" >
+                  <tr>
+                    <td ><span th:text="${list.option1}" /></td>
+                    <td width="80px;"><input type="radio" th:value="${list.option1}" th:attr ="checked=${deial.topic1Three == list.option1?true:false}"    name="topic1Three" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option2}" /></td>
+                    <td width="80px;"><input type="radio" th:value="${list.option2}"  name="topic1Three" th:attr ="checked=${deial.topic1Three == list.option2?true:false}"   style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option3}" /></td>
+                    <td width="80px;"><input type="radio" th:value="${list.option3}" th:attr ="checked=${deial.topic1Three == list.option3?true:false}"  name="topic1Three"  style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option4}" /></td>
+                    <td width="80px;"><input type="radio" th:value="${list.option4}" th:attr ="checked=${deial.topic1Three == list.option4?true:false}"   name="topic1Three"  style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                </table>
+              </div><br/>
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <input type="file" name="csfile" class="layui-btn" id="test-upload-more">多图片上传</input>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-list"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label style="width: 100px;">2-1店外设施是否符合要求？(单选）</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic2One" value="1:完全符合  " th:checked="${#strings.contains(deial.topic2One,'1:完全符合')}"/><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic2One" value="2:不符合要求"  th:checked="${#strings.contains(deial.topic2One,'2:不符合要求')}" />
+
+              </div>
+            </div><br/>
+            <div id="two">
+              <div  lay-filter="" th:each="list:${list[2]}" id="">
+                <label style="width: 100px;">2-2:不符合要求的原因是？(多选）</label><br/><br/>
+                <table border="1" style="align:center">
+                  <tr>
+                    <td ><span th:text="${list.option1}" /></td>
+                    <td width="80px;"><input type="checkbox" name="topic2Two" th:value="${list.option1}" th:attr ="checked=${deial.topic2Two.contains(list.option1)?true:false}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option2}" /></td>
+                    <td width="80px;"><input type="checkbox"  name="topic2Two" th:value="${list.option2}" th:attr ="checked=${deial.topic2Two.contains(list.option2)?true:false}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option3}" /></td>
+                    <td width="80px;"><input type="checkbox"  name="topic2Two"  th:value="${list.option3}" th:attr ="checked=${deial.topic2Two.contains(list.option3)?true:false}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option4}" /></td>
+                    <td width="80px;"><input type="checkbox"  name="topic2Two" th:value="${list.option4}" th:attr ="checked=${deial.topic2Two.contains(list.option4)?true:false}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+                  <tr>
+                    <td ><span th:text="${list.option5}" /></td>
+                    <td width="80px;"><input type="text"  name="topic2Two" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+
+              </div><br/>
+              <div  lay-filter="" th:each="list:${list[3]}">
+                <label style="width: 100px;">2-3检测中共有几处不符合要求？(单选）</label><br/><br/>
+
+                <table border="1" >
+                  <tr>
+                    <td ><span th:text="${list.option1}" /></td>
+                    <td width="80px;"><input type="radio" th:value="${list.option1}" th:attr ="checked=${deial.topic2Three == list.option1?true:false}"  name="topic2Three" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option2}" /></td>
+                    <td width="80px;"><input type="radio"  name="topic2Three" th:value="${list.option2}"  th:attr ="checked=${deial.topic2Three == list.option2?true:false}" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option3}" /></td>
+                    <td width="80px;"><input type="radio"  name="topic2Three" th:value="${list.option3}" th:attr ="checked=${deial.topic2Three == list.option3?true:false}"  style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option4}" /></td>
+                    <td width="80px;"><input type="radio"  name="topic2Three" th:value="${list.option4}"  th:attr ="checked=${deial.topic2Three == list.option4?true:false}" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                </table>
+              </div><br/>
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="test-upload-more">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-list"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <h3 >购物环境</h3><br/>
+              <label style="width: 100px;">3-1进店初步感受是否符合要求？(单选）</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic3One" value="1:完全符合" th:checked="${#strings.contains(deial.topic3One,'1:完全符合')}"/><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic3One" value="2:不符合要求"   th:checked="${#strings.contains(deial.topic3One,'1:完全符合')}" />
+
+              </div>
+            </div><br/>
+            <div id="three">
+              <div  lay-filter="" th:each="list:${list[4]}" id="">
+                <label style="width: 100px;">3-2:不符合要求的原因是？(多选）</label><br/><br/>
+                <table border="1" >
+                  <tr>
+                    <td ><span th:text="${list.option1}" /></td>
+                    <td width="80px;"><input type="checkbox" name="topic3Two" th:value="${list.option1}" th:attr ="checked=${deial.topic3Two.contains(list.option1)?true:false}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option2}" /></td>
+                    <td width="80px;"><input type="checkbox" name="topic3Two" th:value="${list.option2}" th:attr ="checked=${deial.topic3Two.contains(list.option2)?true:false}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option3}" /></td>
+                    <td width="80px;"><input type="checkbox" name="topic3Two" th:value="${list.option3}" th:attr ="checked=${deial.topic3Two.contains(list.option3)?true:false}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option4}" /></td>
+                    <td width="80px;"><input type="checkbox" name="topic3Two" th:value="${list.option4}"  th:attr ="checked=${deial.topic3Two.contains(list.option4)?true:false}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+                  <tr>
+                    <td ><span th:text="${list.option5}" /></td>
+                    <td width="80px;"><input type="text" name="topic3Two"  class="layui-input"/></td>
+                  </tr>
+
+                </table>
+
+              </div><br/>
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="test-upload-more">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-list"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+
+              <label style="width: 100px;">4-1进店初步感受是否符合要求？(单选）</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic4One" value="1:完全符合" th:checked="${#strings.contains(deial.topic4One,'1:完全符合')}"/><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic4One" value="2:不符合要求" th:checked="${#strings.contains(deial.topic4One,'2:不符合要求')}" />
+
+              </div>
+            </div><br/>
+            <div id="four">
+              <div  lay-filter="" th:each="list:${list[5]}" id="">
+                <label style="width: 100px;">4-2:不符合要求的原因是？(多选）</label><br/><br/>
+                <table border="1" >
+                  <tr>
+                    <td ><span th:text="${list.option1}" /></td>
+                    <td width="80px;"><input type="checkbox" name="topic4Two"  th:value="${list.option1}" th:attr ="checked=${deial.topic4Two.contains(list.option1)?true:false}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option2}" /></td>
+                    <td width="80px;"><input type="checkbox"  name="topic4Two" th:value="${list.option2}"  th:attr ="checked=${deial.topic4Two.contains(list.option2)?true:false}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option3}" /></td>
+                    <td width="80px;"><input type="checkbox"  name="topic4Two" th:value="${list.option3}" th:attr ="checked=${deial.topic4Two.contains(list.option3)?true:false}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option4}" /></td>
+                    <td width="80px;"><input type="checkbox"   name="topic4Two" th:value="${list.option4}" th:attr ="checked=${deial.topic4Two.contains(list.option4)?true:false}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option5}" /></td>
+                    <td width="80px;"><input type="checkbox"   name="topic4Two" th:value="${list.option5}"  th:attr ="checked=${deial.topic4Two.contains(list.option5)?true:false}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option6}" /></td>
+                    <td width="80px;"><input type="text"  name="topic4Two"  class="layui-input"/></td>
+                  </tr>
+
+                </table>
+
+              </div><br/>
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="test-upload-more">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-list"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <h3 >店内天花板及地面</h3><br/>
+              <label style="width: 100px;">5-1店内天花板及地面是否符合要求？(单选）</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic5One" value="1:完全符合" th:checked="${#strings.contains(deial.topic5One,'1:完全符合')}"/><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic5One" value="2:不符合要求" th:checked="${#strings.contains(deial.topic5One,'2:不符合要求')}"/>
+
+              </div>
+            </div><br/>
+            <div id="five">
+              <div  lay-filter="" th:each="list:${list[6]}" id="">
+                <label style="width: 100px;">5-2:不符合要求的原因是？(多选）</label><br/><br/>
+                <table border="1" >
+                  <tr>
+                    <td ><span th:text="${list.option1}" /></td>
+                    <td width="80px;"><input type="checkbox" name="topic5Two" th:value="${list.option1}" th:attr ="checked=${deial.topic5Two.contains(list.option1)?true:false}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option2}" /></td>
+                    <td width="80px;"><input type="checkbox" name="topic5Two" th:value="${list.option2}" th:attr ="checked=${deial.topic5Two.contains(list.option2)?true:false}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option3}" /></td>
+                    <td width="80px;"><input type="checkbox" name="topic5Two" th:value="${list.option3}" th:attr ="checked=${deial.topic5Two.contains(list.option3)?true:false}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option4}" /></td>
+                    <td width="80px;"><input type="checkbox" name="topic5Two" th:value="${list.option4}" th:attr ="checked=${deial.topic5Two.contains(list.option4)?true:false}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option5}" /></td>
+                    <td width="80px;"><input type="checkbox" name="topic5Two" th:value="${list.option5}" th:attr ="checked=${deial.topic5Two.contains(list.option5)?true:false}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option6}" /></td>
+                    <td width="80px;"><input type="text" name="topic5Two" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+
+              </div><br/>
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="test-upload-more">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-list"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="layui-form-item">
+
+              <label style="width: 100px;">6-1店内天花板及地面是否符合要求？(单选）</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic6One" value="1:完全符合"  th:checked="${#strings.contains(deial.topic6One,'1:完全符合')}"/><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic6One" value="2:不符合要求"  th:checked="${#strings.contains(deial.topic6One,'2:不符合要求')}" />
+
+              </div>
+            </div><br/>
+            <div id="six">
+              <div  lay-filter="" th:each="list:${list[7]}" id="">
+                <label style="width: 100px;">6-2:不符合要求的原因是？(多选）</label><br/><br/>
+                <table border="1" >
+                  <tr>
+                    <td ><span th:text="${list.option1}" /></td>
+                    <td width="80px;"><input type="checkbox" name="topic6Two" th:value="${list.option1}" th:attr ="checked=${deial.topic6Two.contains(list.option1)?true:false}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option2}" /></td>
+                    <td width="80px;"><input type="checkbox"  name="topic6Two" th:value="${list.option2}"  th:attr ="checked=${deial.topic6Two.contains(list.option2)?true:false}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option3}" /></td>
+                    <td width="80px;"><input type="checkbox"  name="topic6Two" th:value="${list.option3}" th:attr ="checked=${deial.topic6Two.contains(list.option3)?true:false}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option4}" /></td>
+                    <td width="80px;"><input type="checkbox"  name="topic6Two"  th:value="${list.option4}" th:attr ="checked=${deial.topic6Two.contains(list.option4)?true:false}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option5}" /></td>
+                    <td width="80px;"><input type="checkbox"   name="topic6Two" th:value="${list.option5}" th:attr ="checked=${deial.topic6Two.contains(list.option5)?true:false}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+                  <tr>
+                    <td ><span th:text="${list.option6}" /></td>
+                    <td width="80px;"><input type="text"  name="topic6Two" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+
+              </div><br/>
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="test-upload-more">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-list"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <h3 >柜台区域</h3><br/>
+              <label style="width: 100px;">7-1柜台区域是否符合要求？(单选）</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic7One" value="1:完全符合" th:checked="${#strings.contains(deial.topic7One,'1:完全符合')}" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic7One" value="2:不符合要求" th:checked="${#strings.contains(deial.topic7One,'2:不符合要求')}" />
+
+              </div>
+            </div><br/>
+            <div id="seven">
+              <div  lay-filter="" th:each="list:${list[8]}" id="">
+                <label style="width: 100px;">7-2:不符合要求的原因是？(多选）</label><br/><br/>
+                <table border="1" >
+                  <tr>
+                    <td ><span th:text="${list.option1}" /></td>
+                    <td width="80px;"><input type="checkbox"  name="topic7Two" th:value="${list.option1}" th:attr ="checked=${deial.topic7Two.contains(list.option1)?true:false}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option2}" /></td>
+                    <td width="80px;"><input type="checkbox" name="topic7Two" th:value="${list.option2}" th:attr ="checked=${deial.topic7Two.contains(list.option2)?true:false}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option3}" /></td>
+                    <td width="80px;"><input type="checkbox"  name="topic7Two" th:value="${list.option3}" th:attr ="checked=${deial.topic7Two.contains(list.option3)?true:false}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option4}" /></td>
+                    <td width="80px;"><input type="checkbox"  name="topic7Two" th:value="${list.option4}" th:attr ="checked=${deial.topic7Two.contains(list.option4)?true:false}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+                  <tr>
+                    <td ><span th:text="${list.option5}" /></td>
+                    <td width="80px;"><input type="text" name="topic7Two" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+
+              </div><br/>
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="test-upload-more">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-list"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <h3 >速食台及关东煮区域</h3><br/>
+              <label style="width: 100px;">8-1速食台及关东煮区域是否符合要求？(单选）</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic8One" value="1:完全符合" th:checked="${#strings.contains(deial.topic8One,'1:完全符合')}" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic8One" value="2:不符合要求"  th:checked="${#strings.contains(deial.topic8One,'2:不符合要求')}" />
+
+              </div>
+            </div><br/>
+            <div id="eight">
+              <div  lay-filter="" th:each="list:${list[9]}" id="">
+                <label style="width: 100px;">8-2:不符合要求的原因是？(多选）</label><br/><br/>
+                <table border="1" >
+                  <tr>
+                    <td ><span th:text="${list.option1}" /></td>
+                    <td width="80px;"><input type="checkbox" name="topic8Two" th:value="${list.option1}" th:attr ="checked=${deial.topic8Two.contains(list.option1)?true:false}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option2}" /></td>
+                    <td width="80px;"><input type="checkbox"  name="topic8Two" th:value="${list.option2}" th:attr ="checked=${deial.topic8Two.contains(list.option2)?true:false}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option3}" /></td>
+                    <td width="80px;"><input type="checkbox"   name="topic8Two" th:value="${list.option3}"  th:attr ="checked=${deial.topic8Two.contains(list.option3)?true:false}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+                  <tr>
+                    <td ><span th:text="${list.option4}" /></td>
+                    <td width="80px;"><input type="text"  name="topic8Two" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+
+              </div><br/>
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="test-upload-more">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-list"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <h3 >休闲区域</h3><br/>
+              <label style="width: 100px;">9-1门店内有无休闲区？</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1有休闲区 </label> <input type="radio" name="topic9One" value="1有休闲区" th:checked="${#strings.contains(deial.topic9One,'1有休闲区')}"/><br/>
+                <label style="width: 100px;">2无休闲区</label> <input type="radio" name="topic9One" value="2无休闲区" th:checked="${#strings.contains(deial.topic9One,'2无休闲区')}"/>
+              </div>
+              <div id="ninesuper">
+                <label style="width: 100px;">9-2休闲区域是否符合要求？(单选）</label>
+                <div class="layui-input-block">
+                  <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic9Two" value="1:完全符合" th:checked="${#strings.contains(deial.topic9Two,'1:完全符合')}" /><br/>
+                  <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic9Two" value="2:不符合要求" th:checked="${#strings.contains(deial.topic9Two,'2:不符合要求')}" />
+                </div>
+              </div><br/>
+            </div>
+            <div id="nine">
+              <div  lay-filter="" th:each="list:${list[10]}" id="">
+                <label style="width: 100px;">9-3不符合要求的原因是？(多选）</label><br/><br/>
+                <table border="1" >
+                  <tr>
+                    <td ><span th:text="${list.option1}" /></td>
+                    <td width="80px;"><input type="checkbox"  name="topic9Three" th:value="${list.option1}" th:attr ="checked=${deial.topic9Three.contains(list.option1)?true:false}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option2}" /></td>
+                    <td width="80px;"><input type="checkbox" name="topic9Three" th:value="${list.option2}" th:attr ="checked=${deial.topic9Three.contains(list.option2)?true:false}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option3}" /></td>
+                    <td width="80px;"><input type="text" name="topic9Three" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+
+              </div><br/>
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="test-upload-more">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-list"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <h3 >货架风幕柜冷冻柜</h3><br/>
+              <label style="width: 100px;">10-1货架风幕柜冷冻柜是否符合要求？(单选）</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic10One" value="1:完全符合" th:checked="${#strings.contains(deial.topic10One,'1:完全符合')}"/><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic10One" value="2:不符合要求" th:checked="${#strings.contains(deial.topic10One,'2:不符合要求')}" />
+              </div>
+            </div><br/>
+            <div id="ten" >
+              <div  lay-filter="" th:each="list:${list[11]}" id="">
+                <label style="width: 100px;">10-2:不符合要求的原因是？(多选）</label><br/><br/>
+                <table border="1" >
+                  <tr>
+                    <td ><span th:text="${list.option1}" /></td>
+                    <td width="80px;"><input type="checkbox" name="topic10Two" th:value="${list.option1}"  th:attr ="checked=${deial.topic10Two.contains(list.option1)?true:false}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option2}" /></td>
+                    <td width="80px;"><input type="checkbox" name="topic10Two" th:value="${list.option2}" th:attr ="checked=${deial.topic10Two.contains(list.option2)?true:false}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option3}" /></td>
+                    <td width="80px;"><input type="text" name="topic10Two" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+              <div  lay-filter="" th:each="list:${list[12]}" id="">
+
+                <label style="width: 100px;">10-3检测中共有几处不符合要求？(单选）</label><br/><br/>
+                <table border="1" >
+                  <tr>
+                    <td ><span th:text="${list.option1}" /></td>
+                    <td width="80px;"><input type="radio"  name="topic10Three" th:value="${list.option1}" th:attr ="checked=${deial.topic10Three == list.option1?true:false}"  style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option2}" /></td>
+                    <td width="80px;"><input type="radio"  name="topic10Three" th:value="${list.option2}" th:attr ="checked=${deial.topic10Three == list.option2?true:false}"  style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option3}" /></td>
+                    <td width="80px;"><input type="radio"  name="topic10Three" th:value="${list.option3}" th:attr ="checked=${deial.topic10Three == list.option3?true:false}"  style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option4}" /></td>
+                    <td width="80px;"><input type="radio"  name="topic10Three"  th:value="${list.option4}" th:attr ="checked=${deial.topic10Three == list.option4?true:false}"  style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option5}" /></td>
+                    <td width="80px;"><input type="radio"  name="topic10Three"  th:value="${list.option5}"  th:attr ="checked=${deial.topic10Three == list.option5?true:false}" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                </table>
+              </div><br/>
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="test-upload-more">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-list"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label style="width: 100px;">11-1货架风幕柜冷冻柜是否符合要求？(单选）</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic11One" value="1:完全符合" th:checked="${#strings.contains(deial.topic11One,'1:完全符合')}"/><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic11One" value="2:不符合要求"  th:checked="${#strings.contains(deial.topic11One,'2:不符合要求')}" />
+              </div>
+            </div><br/>
+            <div id="eleven" >
+              <div  lay-filter="" th:each="list:${list[13]}" id="">
+                <label style="width: 100px;">11-2:不符合要求的原因是？(多选）</label><br/><br/>
+                <table border="1" >
+                  <tr>
+                    <td ><span th:text="${list.option1}" /></td>
+                    <td width="80px;"><input type="checkbox" name="topic11Two" th:value="${list.option1}" th:attr ="checked=${deial.topic11Two.contains(list.option1)?true:false}"  lay-skin="primary"  style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option2}" /></td>
+                    <td width="80px;"><input type="checkbox"  name="topic11Two" th:value="${list.option2}" th:attr ="checked=${deial.topic11Two.contains(list.option2)?true:false}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option3}" /></td>
+                    <td width="80px;"><input type="text"  name="topic11Two" th:value="${list.option3}"  class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <input type="file" class="layui-btn" id="test-upload-more">多图片上传</input>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-list"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <h3 >洗手池</h3><br/>
+              <label style="width: 100px;">12-1洗手池是否符合要求？(单选）</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic12One" value="1:完全符合" th:checked="${#strings.contains(deial.topic12One,'1:完全符合')}" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic12One" value="2:不符合要求"  th:checked="${#strings.contains(deial.topic12One,'2:不符合要求')}" />
+              </div>
+            </div><br/>
+            <div id="twelve">
+              <div  lay-filter="" th:each="list:${list[14]}" id="">
+                <label style="width: 100px;">12-2:不符合要求的原因是？(多选）</label><br/><br/>
+                <table border="1" >
+                  <tr>
+                    <td ><span th:text="${list.option1}" /></td>
+                    <td width="80px;"><input type="checkbox" name="topic12Two" th:value="${list.option1}" th:attr ="checked=${deial.topic12Two.contains(list.option1)?true:false}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option2}" /></td>
+                    <td width="80px;"><input type="checkbox" name="topic12Two" th:value="${list.option2}" th:attr ="checked=${deial.topic12Two.contains(list.option2)?true:false}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option3}" /></td>
+                    <td width="80px;"><input type="text" name="topic12Two" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="test-upload-more">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-list"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <h3 >安全管理</h3><br/>
+              <label style="width: 100px;">13-1安全管理是否符合要求？(单选）</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic13One" value="1:完全符合" th:checked="${#strings.contains(deial.topic13One,'1:完全符合')}" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic13One" value="2:不符合要求"  th:checked="${#strings.contains(deial.topic13One,'2:不符合要求')}" />
+              </div>
+            </div><br/>
+            <div id="thirteen">
+              <div  lay-filter="" th:each="list:${list[15]}" id="">
+                <label style="width: 100px;">13-2:不符合要求的原因是？(多选）</label><br/><br/>
+                <table border="1" >
+                  <tr>
+                    <td ><span th:text="${list.option1}" /></td>
+                    <td width="80px;"><input type="checkbox" name="topic13Two" th:value="${list.option1}"   lay-skin="primary" th:attr ="checked=${deial.topic13Two.contains(list.option1)?true:false}" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option2}" /></td>
+                    <td width="80px;"><input type="checkbox" name="topic13Two" th:value="${list.option2}"   lay-skin="primary" th:attr ="checked=${deial.topic13Two.contains(list.option2)?true:false}" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option3}" /></td>
+                    <td width="80px;"><input type="checkbox" name="topic13Two" th:value="${list.option3}" th:attr ="checked=${deial.topic13Two.contains(list.option3)?true:false}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option4}" /></td>
+                    <td width="80px;"><input type="checkbox" name="topic13Two" th:value="${list.option4}" th:attr ="checked=${deial.topic13Two.contains(list.option4)?true:false}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td ><span th:text="${list.option5}" /></td>
+                    <td width="80px;"><input type="text" name="topic13Two" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="test-upload-morecs">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="layui-form-item layui-layout-admin">
+              <div class="layui-input-block">
+                <div class="layui-footer" style="left: 0;">
+                  <input class="layui-btn" lay-submit="" lay-filter="component-form-demo1" type="submit"  value="提交"/>
+                  <button  class="layui-btn layui-btn-primary" onclick="resert()"> 重置</button>
+                </div>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script th:src="@{/layuiadmin/layui/jquery-1.9.0.js}" ></script>
+<script th:src="@{/layuiadmin/layui/layui.js}" ></script>
+<script th:inline="javascript">
+
+    layui.config({
+        base: '/layuiadmin/' //静态资源所在路径
+    }).extend({
+        index: 'lib/index' //主入口模块
+    }).use(['index', 'upload'], function(){
+        var $ = layui.jquery
+            ,upload = layui.upload;
+        //多图片上传
+
+        upload.render({
+            elem: '#test-upload-morecs'
+            ,url: '/environment/saveQuestion'
+            ,multiple: true
+            ,before: function(obj){
+                //预读本地文件示例，不支持ie8
+                /*<![CDATA[*/
+                obj.preview(function(index, file, result){
+                    $('#test-upload-more-listcs').append('<img src="'+ result +'" alt="'+ file.name +'" class="layui-upload-img"  />')
+                });
+                /*]]>*/
+            }
+            ,done: function(res){
+                //上传完毕
+            }
+        });
+
+
+    });
+</script>
+
+</body>
+</html>
