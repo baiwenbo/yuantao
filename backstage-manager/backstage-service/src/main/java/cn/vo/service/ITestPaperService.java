@@ -19,5 +19,9 @@ public interface ITestPaperService {
 
     Integer count();
 
+    List<TestPaper> getMendianQuery(Map map);
+
+    List<TestPaper> getCompanyQuery(Map map);
+
 
 }

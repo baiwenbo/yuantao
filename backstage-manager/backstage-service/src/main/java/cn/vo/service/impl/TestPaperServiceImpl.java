@@ -50,4 +50,14 @@ public class TestPaperServiceImpl implements ITestPaperService {
         TestPaperExample testPaperExample=new TestPaperExample();
         return testPaperMapper.countByExample(testPaperExample);
     }
+
+    @Override
+    public List<TestPaper> getMendianQuery(Map map) {
+        return testPaperMapper.getMendianQuery(map);
+    }
+
+    @Override
+    public List<TestPaper> getCompanyQuery(Map map) {
+        return testPaperMapper.getMendianQuery(map);
+    }
 }

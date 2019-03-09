@@ -39,8 +39,7 @@ public class TestPaperController {
     @Autowired
     private IUserService iUserService;
 
-    @Autowired
-    private TestPaperMapper testPaperMapper;
+
 
 
     @GetMapping("list")
@@ -61,11 +60,11 @@ public class TestPaperController {
         List<TestPaper> list=null;
         if("0".equals(user.getScpcqx())){
             map.put("code", user.getUsername());
-            list=testPaperMapper.getMendianQuery(map);
+            list=testPaperService.getMendianQuery(map);
         }
         if("2".equals(user.getScpcqx())){
             map.put("company", user.getUsername());
-            list=testPaperMapper.getCompanyQuery(map);
+            list=testPaperService.getCompanyQuery(map);
         }
         if("5".equals(user.getScpcqx()) ||" 3".equals(user.getScpcqx()) ){
             list=testPaperService.getListQuery(map);
@@ -80,6 +79,7 @@ public class TestPaperController {
     @PostMapping("save")
     public String save(@ModelAttribute TestPaper testPaper){
         try {
+            saveTestPaper(testPaper);
             testPaperService.save(testPaper);
         }catch (Exception e){
             e.printStackTrace();
@@ -127,13 +127,46 @@ public class TestPaperController {
     }
 
     @PostMapping("update")
-    public String update(@ModelAttribute TestPaper testPaper){
+    public String update(@ModelAttribute TestPaper testPaper,HttpServletRequest request){
         try{
-            testPaperService.updateId(testPaper);
+
+            TestPaper  testPaperMendian=testPaperService.getById(testPaper.getId());
+
+            saveTestPaper(testPaper);
+            HttpSession session=request.getSession();
+            User user=(User) session.getAttribute("USER");
+
+            if("开".equals(testPaperMendian.getAppeal())){
+                if("0".equals(user.getScpcqx())){
+                    testPaperMendian.setQcheck(testPaper.getQcheck());
+                    testPaperMendian.setQcheckstatus("已申诉");
+                    testPaperService.updateId(testPaperMendian);
+                }
+
+                if("3".equals(user.getScpcqx())){
+                    testPaperMendian.setQchecksn(testPaper.getQchecksn());
+                    testPaperMendian.setQcheckstatus("已批复");
+                    testPaperService.updateId(testPaperMendian);
+                }
+            }
+            if("5".equals(user.getScpcqx())){
+                testPaperService.updateId(testPaper);
+            }
         }catch (Exception e){
             e.printStackTrace();
             return "redirect:/testPaper/list?close="+"error";
         }
         return  "redirect:/testPaper/list?close="+"ok";
+    }
+
+    public TestPaper saveTestPaper(TestPaper testPaper){
+        XiaodianAddress xiaodianAddress=xiaodianAddressService.getById(Long.valueOf(testPaper.getCompanyId()));
+        testPaper.setName(xiaodianAddress.getName());
+        testPaper.setCode(xiaodianAddress.getCode());
+        testPaper.setCompany(xiaodianAddress.getCompany());
+        testPaper.setAddress(xiaodianAddress.getAddress());
+        testPaper.setPianqu(xiaodianAddress.getPianqu());
+        testPaper.setCity(xiaodianAddress.getCity());
+        return testPaper;
     }
 }
