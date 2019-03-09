@@ -271,6 +271,7 @@
     <result column="topic40_four" property="topic40Four" jdbcType="VARCHAR" />
     <result column="topic40_fraction" property="topic40Fraction" jdbcType="VARCHAR" />
     <result column="topic40_six" property="topic40Six" jdbcType="VARCHAR" />
+    <result column="company" property="company" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -372,7 +373,8 @@
     topic37_one, topic37_two, topic37_three, topic37_four, topic37_fraction, topic37_six, 
     topic38_one, topic38_two, topic38_three, topic38_four, topic38_fraction, topic38_six, 
     topic39_one, topic39_two, topic39_three, topic39_four, topic39_fraction, topic39_six, 
-    topic40_one, topic40_two, topic40_three, topic40_four, topic40_fraction, topic40_six
+    topic40_one, topic40_two, topic40_three, topic40_four, topic40_fraction, topic40_six,
+    company
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="cn.vo.pojo.entity.TestPaperExample" >
     select
@@ -494,7 +496,7 @@
       topic39_two, topic39_three, topic39_four, 
       topic39_fraction, topic39_six, topic40_one, 
       topic40_two, topic40_three, topic40_four, 
-      topic40_fraction, topic40_six)
+      topic40_fraction, topic40_six,company)
     values (#{id,jdbcType=INTEGER}, #{monthjudge,jdbcType=INTEGER}, #{appeal,jdbcType=VARCHAR}, 
       #{qcheck,jdbcType=VARCHAR}, #{qchecksn,jdbcType=VARCHAR}, #{qcheckinput,jdbcType=VARCHAR}, 
       #{qcheckstatus,jdbcType=VARCHAR}, #{checkstatus,jdbcType=VARCHAR}, #{companyId,jdbcType=INTEGER}, 
@@ -584,7 +586,7 @@
       #{topic39Two,jdbcType=VARCHAR}, #{topic39Three,jdbcType=VARCHAR}, #{topic39Four,jdbcType=VARCHAR}, 
       #{topic39Fraction,jdbcType=VARCHAR}, #{topic39Six,jdbcType=VARCHAR}, #{topic40One,jdbcType=VARCHAR}, 
       #{topic40Two,jdbcType=VARCHAR}, #{topic40Three,jdbcType=VARCHAR}, #{topic40Four,jdbcType=VARCHAR}, 
-      #{topic40Fraction,jdbcType=VARCHAR}, #{topic40Six,jdbcType=VARCHAR})
+      #{topic40Fraction,jdbcType=VARCHAR}, #{topic40Six,jdbcType=VARCHAR},#{company})
   </insert>
   <insert id="insertSelective" parameterType="cn.vo.pojo.entity.TestPaper" >
     insert into test_paper
@@ -1396,6 +1398,9 @@
       <if test="topic40Six != null" >
         topic40_six,
       </if>
+      <if test="company != null" >
+        company,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -2205,6 +2210,9 @@
       <if test="topic40Six != null" >
         #{topic40Six,jdbcType=VARCHAR},
       </if>
+      <if test="company != null" >
+        #{company,jdbcType=VARCHAR},
+      </if>
     </trim>
   </insert>
   <select id="countByExample" parameterType="cn.vo.pojo.entity.TestPaperExample" resultType="java.lang.Integer" >
@@ -2380,6 +2388,9 @@
       </if>
       <if test="record.topic5Two != null" >
         topic5_two = #{record.topic5Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.company != null" >
+        company = #{record.company,jdbcType=VARCHAR},
       </if>
       <if test="record.topic5Three != null" >
         topic5_three = #{record.topic5Three,jdbcType=VARCHAR},
@@ -3298,6 +3309,7 @@
       topic40_three = #{record.topic40Three,jdbcType=VARCHAR},
       topic40_four = #{record.topic40Four,jdbcType=VARCHAR},
       topic40_fraction = #{record.topic40Fraction,jdbcType=VARCHAR},
+    company = #{record.company,jdbcType=VARCHAR},
       topic40_six = #{record.topic40Six,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -3347,6 +3359,9 @@
       </if>
       <if test="executedate != null" >
         executeDate = #{executedate,jdbcType=VARCHAR},
+      </if>
+      <if test="company != null" >
+        company = #{company,jdbcType=VARCHAR},
       </if>
       <if test="starttime != null" >
         startTime = #{starttime,jdbcType=VARCHAR},
@@ -4319,6 +4334,7 @@
       topic29_six = #{topic29Six,jdbcType=VARCHAR},
       topic30_one = #{topic30One,jdbcType=VARCHAR},
       topic30_two = #{topic30Two,jdbcType=VARCHAR},
+      company = #{company,jdbcType=VARCHAR},
       topic30_three = #{topic30Three,jdbcType=VARCHAR},
       topic30_four = #{topic30Four,jdbcType=VARCHAR},
       topic30_fraction = #{topic30Fraction,jdbcType=VARCHAR},
