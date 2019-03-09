@@ -4429,4 +4429,10 @@
     </if>
     limit  #{index} , #{pageSize}
   </select>
+
+
+   <update id="updateAppeal" parameterType="map" >
+      update test_paper
+      set appeal = #{appeal}
+    </update>
 </mapper>

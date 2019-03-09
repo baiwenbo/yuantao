@@ -22,7 +22,8 @@
     </div>
     <button class="layui-btn" data-type="reload">搜索</button>
     <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="question()">录入</button>
-
+    <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="appealOpen()">申诉开</button>
+    <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="appealClose()">申诉关</button>
 </div>
 <table id="demo" lay-filter="test"></table>
 <script type="text/html" id="barDemo">
@@ -164,6 +165,32 @@
             maxmin: true,
             area: ['90%', '90%']
             ,content: '/testPaper/add'
+            ,yes: function(index){
+                layer.close(index);
+            }
+        });
+    }
+    function appealOpen(){
+
+        layer.open({
+            type: 2,
+            shade: false,
+            maxmin: true,
+            area: ['90%', '90%']
+            ,content: '/testPaper/appealOpen'
+            ,yes: function(index){
+                layer.close(index);
+            }
+        });
+    }
+    function appealClose(){
+
+        layer.open({
+            type: 2,
+            shade: false,
+            maxmin: true,
+            area: ['90%', '90%']
+            ,content: '/testPaper/appealClose'
             ,yes: function(index){
                 layer.close(index);
             }

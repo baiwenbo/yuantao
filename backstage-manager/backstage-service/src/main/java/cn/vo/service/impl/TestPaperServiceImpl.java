@@ -60,4 +60,9 @@ public class TestPaperServiceImpl implements ITestPaperService {
     public List<TestPaper> getCompanyQuery(Map map) {
         return testPaperMapper.getMendianQuery(map);
     }
+
+    @Override
+    public void updateAppeal(Map map) {
+        testPaperMapper.updateAppeal(map);
+    }
 }

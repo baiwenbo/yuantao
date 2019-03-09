@@ -23,5 +23,7 @@ public interface ITestPaperService {
 
     List<TestPaper> getCompanyQuery(Map map);
 
+    void updateAppeal(Map map);
+
 
 }

@@ -141,6 +141,7 @@ public class TestPaperController {
             testPaper.setTopic39Four(FileUpload.uploadFile(topic39Fourfile,topic39Fourfile.getName()));
             testPaper.setTopic40Four(FileUpload.uploadFile(topic40Fourfile,topic40Fourfile.getName()));
             saveTestPaper(testPaper);
+            testPaper.setCheckstatus("正在审核");
             testPaperService.save(testPaper);
         }catch (Exception e){
             e.printStackTrace();
@@ -210,6 +211,21 @@ public class TestPaperController {
             e.printStackTrace();
             return "redirect:/testPaper/list?close="+"error";
         }
+        return  "redirect:/testPaper/list?close="+"ok";
+    }
+
+    @GetMapping("appealOpen")
+    public String appealOpen(){
+        Map map=new HashMap();
+        map.put("appeal","开");
+        testPaperService.updateAppeal(map);
+        return  "redirect:/testPaper/list?close="+"ok";
+    }
+    @GetMapping("appealClose")
+    public String appealClose(){
+        Map map=new HashMap();
+        map.put("appeal","关");
+        testPaperService.updateAppeal(map);
         return  "redirect:/testPaper/list?close="+"ok";
     }
 

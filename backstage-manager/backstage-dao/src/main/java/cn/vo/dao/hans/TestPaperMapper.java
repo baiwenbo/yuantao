@@ -38,4 +38,6 @@ public interface TestPaperMapper {
     List<TestPaper> getMendianQuery(Map map);
     //公司查询
     List<TestPaper> getCompanyQuery(Map map);
+
+    void updateAppeal(Map map);
 }
