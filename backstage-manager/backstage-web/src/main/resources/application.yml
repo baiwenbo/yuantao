@@ -13,7 +13,6 @@ spring:
       hibernate:
         ddl-auto: update # 启动时是否更新数据库：none, update
       show-sql: false
- 
 mybatis:
   mapper-locations: classpath:cn/vo/mapping/**/*.xml
   type-aliases-package: cn.vo.pojo
