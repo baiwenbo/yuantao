@@ -15,5 +15,5 @@ spring:
       show-sql: false
  
 mybatis:
-  mapper-locations: classpath:cn/vo/mapping/*.xml
+  mapper-locations: classpath:cn/vo/mapping/**/*.xml
   type-aliases-package: cn.vo.pojo

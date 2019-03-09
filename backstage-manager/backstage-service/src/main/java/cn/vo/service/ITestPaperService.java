@@ -13,10 +13,6 @@ public interface ITestPaperService {
 
     void deleteId(Integer id);
 
-    void delCompanyId(Integer companyId);
-
-    TestPaper getCompanyId(Integer companyId);
-
     TestPaper getById(Integer id);
 
     List<TestPaper> getListQuery(Map map);

@@ -1,4 +1,4 @@
-package cn.vo.dao;
+package cn.vo.dao.hans;
 
 import cn.vo.pojo.entity.TestPaper;
 import cn.vo.pojo.entity.TestPaperExample;
@@ -7,7 +7,6 @@ import java.util.Map;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-
 
 @Mapper
 public interface TestPaperMapper {
@@ -32,6 +31,6 @@ public interface TestPaperMapper {
     int updateByPrimaryKeySelective(TestPaper record);
 
     int updateByPrimaryKey(TestPaper record);
-    void delCompanyId(Integer companyId);
-    List<TestPaper> getListQuery(Map map);
+
+	 List<TestPaper> getListQuery(Map map);
 }
