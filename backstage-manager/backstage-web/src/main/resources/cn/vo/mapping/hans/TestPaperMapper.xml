@@ -4406,9 +4406,27 @@
   <select id="getListQuery" resultMap="BaseResultMap" parameterType="map">
     select  <include refid="Base_Column_List" /> from test_paper
     <if test="name != null and name.length()>0" >
-      where  name like '%${name}%'
+      where  name like '%${name}%' or company like '%${name}%'
     </if>
    limit  #{index} , #{pageSize}
   </select>
 
+
+  <select id="getMendianQuery" resultMap="BaseResultMap" parameterType="map">
+    select  <include refid="Base_Column_List" /> from test_paper
+    where  code = #{code}
+    <if test="name != null and name.length()>0" >
+      and  name like '%${name}%'
+    </if>
+    limit  #{index} , #{pageSize}
+  </select>
+
+  <select id="getCompanyQuery" resultMap="BaseResultMap" parameterType="map">
+    select  <include refid="Base_Column_List" /> from test_paper
+    where  company = #{company}
+    <if test="name != null and name.length()>0" >
+      and  name like '%${name}%'
+    </if>
+    limit  #{index} , #{pageSize}
+  </select>
 </mapper>

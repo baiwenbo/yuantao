@@ -33,4 +33,9 @@ public interface TestPaperMapper {
     int updateByPrimaryKey(TestPaper record);
 
 	 List<TestPaper> getListQuery(Map map);
+
+	 //门店查询
+    List<TestPaper> getMendianQuery(Map map);
+    //公司查询
+    List<TestPaper> getCompanyQuery(Map map);
 }

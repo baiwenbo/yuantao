@@ -3,12 +3,17 @@ package cn.vo.controller.hans;
 
 import cn.vo.backstage.Utils.ListResult;
 import cn.vo.backstage.Utils.PageUtils;
+import cn.vo.dao.hans.TestPaperMapper;
 import cn.vo.pojo.Question;
+import cn.vo.pojo.User;
 import cn.vo.pojo.entity.TestPaper;
 import cn.vo.pojo.entity.XiaodianAddress;
 import cn.vo.service.IQuestionService;
 import cn.vo.service.ITestPaperService;
+import cn.vo.service.IUserService;
 import cn.vo.service.IXiaodianAddressService;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -31,6 +36,12 @@ public class TestPaperController {
     @Autowired
     private IXiaodianAddressService xiaodianAddressService;
 
+    @Autowired
+    private IUserService iUserService;
+
+    @Autowired
+    private TestPaperMapper testPaperMapper;
+
 
     @GetMapping("list")
     public  String  list(String close,Model model){
@@ -40,12 +51,25 @@ public class TestPaperController {
 
     @GetMapping("/listJson")
     @ResponseBody
-    public ListResult<TestPaper> listJson(String name, Integer page, Integer limit){
+    public ListResult<TestPaper> listJson(HttpServletRequest request,String name, Integer page, Integer limit){
         Map map=new HashMap<>();
         map.put("name", name);
         map.put("index", PageUtils.getPageIndex(page, limit));
         map.put("pageSize", PageUtils.getPageSize(page, limit));
-        List<TestPaper> list=testPaperService.getListQuery(map);
+        HttpSession session=request.getSession();
+        User user=(User) session.getAttribute("USER");
+        List<TestPaper> list=null;
+        if("0".equals(user.getScpcqx())){
+            map.put("code", user.getUsername());
+            list=testPaperMapper.getMendianQuery(map);
+        }
+        if("2".equals(user.getScpcqx())){
+            map.put("company", user.getUsername());
+            list=testPaperMapper.getCompanyQuery(map);
+        }
+        if("5".equals(user.getScpcqx()) ||" 3".equals(user.getScpcqx()) ){
+            list=testPaperService.getListQuery(map);
+        }
         ListResult<TestPaper> result=new ListResult<>();
         result.setCode("0");
         result.setCount(Long.valueOf(testPaperService.count()));
