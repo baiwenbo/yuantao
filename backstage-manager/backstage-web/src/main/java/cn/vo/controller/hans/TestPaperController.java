@@ -51,12 +51,16 @@ public class TestPaperController {
     private IUserService iUserService;
 
 
-
-
     @GetMapping("list")
     public  String  list(String close, Model model){
         model.addAttribute("close",close);
         return "views/hans/testPaperList";
+    }
+
+    @GetMapping("appealList")
+    public  String  appealList(String close, Model model){
+        model.addAttribute("close",close);
+        return "views/hans/testAppealPaperList";
     }
 
     @GetMapping("/listJson")
