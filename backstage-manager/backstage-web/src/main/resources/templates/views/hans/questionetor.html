@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" >
+<html  xmlns:th="http://www.thymeleaf.org" >
 <head>
   <meta charset="utf-8"/>
   <meta name="renderer" content="webkit"/>
@@ -14,6 +14,7 @@
     <div >
       <div >
         <div  pad15="" style="align-items: center;" th:each="deial:${testPaper}">
+
           <form enctype="multipart/form-data" method="post" th:action="@{/testPaper/update}" style="align:center" align="center" >
               <input type="hidden" name="id" th:value="${deial.id}"/>
             <div class="layui-form-item">
@@ -24,13 +25,14 @@
               </div>
 
             </div>
+
             <h1 align="center" >环境</h1>
             <div class="layui-form-item">
               <h3 >店外区域</h3><br/>
               <label style="width: 100px;">1-1店外环境是否符合要求？(单选）</label>
               <div class="layui-input-block">
-                <label style="width: 100px;">1.完全符合</label> <input type="radio" name="topic1One" value="1.完全符合"  th:checked="${#strings.contains(deial.topic1One,'1.完全符合')}" onclick="oneDiv(1)" checked="checked"/><br/>
-                <label style="width: 100px;">2.不符合要求</label> <input type="radio" name="topic1One" value="2.不符合要求" th:checked="${#strings.contains(deial.topic1One,'2.不符合要求')}"   onclick="oneDiv(2)" />
+                <label style="width: 100px;">1.完全符合</label> <input type="radio" name="topic1One" value="1.完全符合" th:if="${deial.topic1One!=null}" th:checked="${#strings.contains(deial.topic1One,'1.完全符合')}" /><br/>
+                <label style="width: 100px;">2.不符合要求</label> <input type="radio" name="topic1One" value="2.不符合要求" th:if="${deial.topic1One!=null}" th:checked="${#strings.contains(deial.topic1One,'2.不符合要求')}"    />
               </div>
             </div><br/>
             <div id="one">
@@ -84,7 +86,11 @@
                   <td width="80px;"><input type="radio" value="4.4处及以上" th:if="${deial.topic1Three!=null}"  name="topic1Three" th:checked="${#strings.contains(deial.topic1Three,'4处')}"   style="height: 20px;width: 50px;"/></td>
                 </tr>
               </table><br/>
-              <div class="layui-col-md12">
+
+              <input type="file" class="layui-btn" name="topic1Fourfile"  value="上传图片"/>
+              <input name="t1" type="hidden" th:value="${deial.topic1Four}"/>
+              <input type="text" class="layui-btn"  id="t1" value="查看图片" onclick="look(this)"/>
+             <!-- <div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -97,13 +103,13 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
             </div>
             <div class="layui-form-item">
               <label style="width: 100px;">2-1店外设施是否符合要求？(单选）</label>
               <div class="layui-input-block">
-                <label style="width: 100px;">1.完全符合   </label> <input type="radio" name="topic2One" value="1.完全符合"  th:if="${deial.topic2One!=null}" th:checked="${#strings.contains(deial.topic2One,'1.完全符合')}" onclick="twoDiv(1)" checked="checked"/><br/>
-                <label style="width: 100px;">2.不符合要求</label> <input type="radio" name="topic2One" value="2.不符合要求" th:if="${deial.topic2One!=null}" th:checked="${#strings.contains(deial.topic2One,'不符合要求')}" onclick="twoDiv(2)" />
+                <label style="width: 100px;">1.完全符合   </label> <input type="radio" name="topic2One" value="1.完全符合"  th:if="${deial.topic2One!=null}" th:checked="${#strings.contains(deial.topic2One,'1.完全符合')}"/><br/>
+                <label style="width: 100px;">2.不符合要求</label> <input type="radio" name="topic2One" value="2.不符合要求" th:if="${deial.topic2One!=null}" th:checked="${#strings.contains(deial.topic2One,'不符合要求')}"  />
 
               </div>
             </div><br/>
@@ -158,7 +164,10 @@
                   </tr>
                 </table>
               </div><br/>
-              <div class="layui-col-md12">
+              <input type="file" class="layui-btn" name="topic2Fourfile" value="上传图片"/>
+              <input name="t2" type="hidden" th:value="${deial.topic2Four}"/>
+              <input type="text" class="layui-btn"  id="t2" value="查看图片" onclick="look(this)"/>
+            <!--  <div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -171,14 +180,14 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
             </div>
             <div class="layui-form-item">
               <h3 >购物环境</h3><br/>
               <label style="width: 100px;">3-1进店初步感受是否符合要求？(单选）</label>
               <div class="layui-input-block">
-                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic3One" th:if="${deial.topic3One!=null}" value="1.完全符合"  th:checked="${#strings.contains(deial.topic3One,'完全符合')}" onclick="threeDiv(1)" checked="checked" /><br/>
-                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic3One" th:if="${deial.topic3One!=null}" value="2.不符合要求" th:checked="${#strings.contains(deial.topic3One,'不符合要求')}"   onclick="threeDiv(2)"/>
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic3One" th:if="${deial.topic3One!=null}" value="1.完全符合"  th:checked="${#strings.contains(deial.topic3One,'完全符合')}"  /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic3One" th:if="${deial.topic3One!=null}" value="2.不符合要求" th:checked="${#strings.contains(deial.topic3One,'不符合要求')}"   />
 
               </div>
             </div><br/>
@@ -211,7 +220,7 @@
                 </table>
 
               </div><br/>
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -224,14 +233,17 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic3Fourfile"  value="上传图片"/>
+              <input name="t3" type="hidden" th:value="${deial.topic3Four}"/>
+              <input type="text" class="layui-btn"  id="t3" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
 
               <label style="width: 100px;">4-1进店初步感受是否符合要求？(单选）</label>
               <div class="layui-input-block">
-                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic4One" th:if="${deial.topic4One!=null}"  th:checked="${#strings.contains(deial.topic4One,'1.完全符合')}" value="1.完全符合" checked="checked" onclick="fourDiv(1)"/><br/>
-                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic4One" th:if="${deial.topic4One!=null}"  th:checked="${#strings.contains(deial.topic4One,'不符合')}" value="2.不符合要求" onclick="fourDiv(2)" />
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic4One" th:if="${deial.topic4One!=null}"  th:checked="${#strings.contains(deial.topic4One,'1.完全符合')}" value="1.完全符合"/><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic4One" th:if="${deial.topic4One!=null}"  th:checked="${#strings.contains(deial.topic4One,'不符合')}" value="2.不符合要求" />
 
               </div>
             </div><br/>
@@ -267,7 +279,7 @@
                 </table>
 
               </div><br/>
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -280,14 +292,17 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic4Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t4" type="hidden" th:value="${deial.topic4Four}"/>
+              <input type="text" class="layui-btn"  id="t4" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
               <h3 >店内天花板及地面</h3><br/>
               <label style="width: 100px;">5-1店内天花板及地面是否符合要求？(单选）</label>
               <div class="layui-input-block">
-                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic5One" th:if="${deial.topic5One!=null}"   value="1.完全符合" th:checked="${#strings.contains(deial.topic5One,'1.完全符合')}" onclick="fiveDiv(1)" checked="checked"/><br/>
-                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic5One" th:if="${deial.topic5One!=null}"  value="2.不符合要求"  th:checked="${#strings.contains(deial.topic5One,'不符合')}" onclick="fiveDiv(2)"/>
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic5One" th:if="${deial.topic5One!=null}"   value="1.完全符合" th:checked="${#strings.contains(deial.topic5One,'1.完全符合')}" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic5One" th:if="${deial.topic5One!=null}"  value="2.不符合要求"  th:checked="${#strings.contains(deial.topic5One,'不符合')}"/>
 
               </div>
             </div><br/>
@@ -323,7 +338,7 @@
                 </table>
               </div>
             </div><br/>
-            <div class="layui-col-md12">
+            <!--<div class="layui-col-md12">
               <div class="layui-card">
                 <div class="layui-card-header">上传多张图片</div>
                 <div class="layui-card-body">
@@ -336,14 +351,17 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div>-->
+              <input type="file" class="layui-btn" name="topic5Fourfile" id="test-upload-normal" value="上传图片"/>
+            <input name="t5" type="hidden" th:value="${deial.topic5Four}"/>
+            <input type="text" class="layui-btn"  id="t5" value="查看图片" onclick="look(this)"/>
 
             <div class="layui-form-item">
 
               <label style="width: 100px;">6-1店内天花板及地面是否符合要求？(单选）</label>
               <div class="layui-input-block">
-                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic6One"  value="1.完全符合"  th:if="${deial.topic6One!=null}" th:checked="${#strings.contains(deial.topic6One,'1.完全符合')}" onclick="sixDiv(1)" checked="checked"/><br/>
-                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic6One" value="2.不符合要求"  th:if="${deial.topic6One!=null}" th:checked="${#strings.contains(deial.topic6One,'不符合')}"  onclick="sixDiv(2)" />
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic6One"  value="1.完全符合"  th:if="${deial.topic6One!=null}" th:checked="${#strings.contains(deial.topic6One,'1.完全符合')}"/><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic6One" value="2.不符合要求"  th:if="${deial.topic6One!=null}" th:checked="${#strings.contains(deial.topic6One,'不符合')}"  />
 
               </div>
             </div><br/>
@@ -380,7 +398,7 @@
                 </table>
 
               </div><br/>
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -393,14 +411,18 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic6Fourfile" id="test-upload-normal" value="上传图片"/>
+
+              <input name="t6" type="hidden" th:value="${deial.topic6Four}"/>
+              <input type="text" class="layui-btn"  id="t6" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
               <h3 >柜台区域</h3><br/>
               <label style="width: 100px;">7-1柜台区域是否符合要求？(单选）</label>
               <div class="layui-input-block">
-                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic7One" value="1.完全符合"  th:if="${deial.topic7One!=null}"  th:checked="${#strings.contains(deial.topic7One,'1.完全符合')}" checked="checked" onclick="sevenDiv(1)" /><br/>
-                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic7One" value="2.不符合要求"  th:if="${deial.topic7One!=null}" th:checked="${#strings.contains(deial.topic7One,'不符合')}" onclick="sevenDiv(2)" />
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic7One" value="1.完全符合"  th:if="${deial.topic7One!=null}"  th:checked="${#strings.contains(deial.topic7One,'1.完全符合')}" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic7One" value="2.不符合要求"  th:if="${deial.topic7One!=null}" th:checked="${#strings.contains(deial.topic7One,'不符合')}"  />
 
               </div>
             </div><br/>
@@ -433,7 +455,7 @@
                 </table>
 
               </div><br/>
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -446,14 +468,18 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic7Fourfile" id="test-upload-normal" value="上传图片"/>
+
+              <input name="t7" type="hidden" th:value="${deial.topic7Four}"/>
+              <input type="text" class="layui-btn"  id="t7" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
               <h3 >速食台及关东煮区域</h3><br/>
               <label style="width: 100px;">8-1速食台及关东煮区域是否符合要求？(单选）</label>
               <div class="layui-input-block">
-                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic8One" value="1.完全符合"  th:if="${deial.topic8One!=null}" th:checked="${#strings.contains(deial.topic8One,'完全符合')}"   checked="checked" onclick="eightDiv(1)" /><br/>
-                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic8One" value="2.不符合要求"  th:if="${deial.topic8One!=null}"  th:checked="${#strings.contains(deial.topic8One,'不符合要求')}" onclick="eightDiv(2)" />
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic8One" value="1.完全符合"  th:if="${deial.topic8One!=null}" th:checked="${#strings.contains(deial.topic8One,'完全符合')}"   /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic8One" value="2.不符合要求"  th:if="${deial.topic8One!=null}"  th:checked="${#strings.contains(deial.topic8One,'不符合要求')}"  />
 
               </div>
             </div><br/>
@@ -482,7 +508,7 @@
                 </table>
 
               </div><br/>
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -495,20 +521,23 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic8Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t8" type="hidden" th:value="${deial.topic8Four}"/>
+              <input type="text" class="layui-btn"  id="t8" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
               <h3 >休闲区域</h3><br/>
               <label style="width: 100px;">9-1门店内有无休闲区？</label>
               <div class="layui-input-block">
-                <label style="width: 100px;">1:有休闲区 </label> <input type="radio" name="topic9One" value="1.有休闲区" onclick="ninesuperDiv(1)" checked="checked"  th:if="${deial.topic9One!=null}" th:checked="${#strings.contains(deial.topic9One,'有休闲区')}"/><br/>
-                <label style="width: 100px;">2:无休闲区</label> <input type="radio" name="topic9One" value="2.无休闲区" onclick="ninesuperDiv(2)"  th:if="${deial.topic9One!=null}" th:checked="${#strings.contains(deial.topic9One,'无休闲区')}" />
+                <label style="width: 100px;">1:有休闲区 </label> <input type="radio" name="topic9One" value="1.有休闲区"   th:if="${deial.topic9One!=null}" th:checked="${#strings.contains(deial.topic9One,'有休闲区')}"/><br/>
+                <label style="width: 100px;">2:无休闲区</label> <input type="radio" name="topic9One" value="2.无休闲区"  th:if="${deial.topic9One!=null}" th:checked="${#strings.contains(deial.topic9One,'无休闲区')}" />
               </div>
               <div id="ninesuper">
                 <label style="width: 100px;">9-2休闲区域是否符合要求？(单选）</label>
                 <div class="layui-input-block">
-                  <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic9Two" value="1.完全符合"  th:if="${deial.topic9Two!=null}" th:checked="${#strings.contains(deial.topic9Two,'完全符合')}" onclick="nineDiv(1)" checked="checked" /><br/>
-                  <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic9Two" value="2.不符合要求"  th:if="${deial.topic9Two!=null}" th:checked="${#strings.contains(deial.topic9Two,'不符合要求')}" onclick="nineDiv(2)" />
+                  <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic9Two" value="1.完全符合"  th:if="${deial.topic9Two!=null}" th:checked="${#strings.contains(deial.topic9Two,'完全符合')}" /><br/>
+                  <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic9Two" value="2.不符合要求"  th:if="${deial.topic9Two!=null}" th:checked="${#strings.contains(deial.topic9Two,'不符合要求')}"  />
                 </div>
               </div><br/>
             </div>
@@ -532,7 +561,7 @@
                 </table>
 
               </div><br/>
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -545,14 +574,17 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic9Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t9" type="hidden" th:value="${deial.topic9Four}"/>
+              <input type="text" class="layui-btn"  id="t9" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
               <h3 >货架:风幕柜:冷冻柜</h3><br/>
               <label style="width: 100px;">10-1货架:风幕柜:冷冻柜是否符合要求？(单选）</label>
               <div class="layui-input-block">
-                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic10One" value="1.完全符合" checked="checked" onclick="tenDiv(1)"  th:if="${deial.topic10One!=null}" th:checked="${#strings.contains(deial.topic10One,'1.完全符合')}" /><br/>
-                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic10One" value="2.不符合要求"  th:if="${deial.topic10One!=null}" th:checked="${#strings.contains(deial.topic10One,'不符合要求')}" onclick="tenDiv(2)" />
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic10One" value="1.完全符合"   th:if="${deial.topic10One!=null}" th:checked="${#strings.contains(deial.topic10One,'1.完全符合')}" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic10One" value="2.不符合要求"  th:if="${deial.topic10One!=null}" th:checked="${#strings.contains(deial.topic10One,'不符合要求')}"  />
               </div>
             </div><br/>
             <div id="ten" >
@@ -600,7 +632,7 @@
                   </tr>
                 </table>
               </div><br/>
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -613,13 +645,16 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic10Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t10" type="hidden" th:value="${deial.topic10Four}"/>
+              <input type="text" class="layui-btn"  id="t10" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
               <label style="width: 100px;">11-1货架:风幕柜:冷冻柜是否符合要求？(单选）</label>
               <div class="layui-input-block">
-                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic11One" value="1.完全符合"  th:if="${deial.topic11One!=null}"  th:checked="${#strings.contains(deial.topic11One,'1.完全符合')}" checked="checked" onclick="elevenDiv(1)" /><br/>
-                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic11One" value="2.不符合要求"  th:if="${deial.topic11One!=null}" th:checked="${#strings.contains(deial.topic11One,'不符合')}" onclick="elevenDiv(2)" />
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic11One" value="1.完全符合"  th:if="${deial.topic11One!=null}"  th:checked="${#strings.contains(deial.topic11One,'1.完全符合')}" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic11One" value="2.不符合要求"  th:if="${deial.topic11One!=null}" th:checked="${#strings.contains(deial.topic11One,'不符合')}"  />
               </div>
             </div><br/>
             <div id="eleven" >
@@ -641,7 +676,7 @@
 
                 </table>
               </div><br/>
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -654,14 +689,17 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic11Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t11" type="hidden" th:value="${deial.topic11Four}"/>
+              <input type="text" class="layui-btn"  id="t11" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
               <h3 >洗手池</h3><br/>
               <label style="width: 100px;">12-1洗手池是否符合要求？(单选）</label>
               <div class="layui-input-block">
-                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic12One" value="1.完全符合"  th:if="${deial.topic12One!=null}" th:checked="${#strings.contains(deial.topic12One,'1.完全符合')}" checked="checked" onclick="twelveDiv(1)" /><br/>
-                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic12One" value="2.不符合要求"  th:if="${deial.topic12One!=null}" th:checked="${#strings.contains(deial.topic12One,'不符合')}" onclick="twelveDiv(2)" />
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic12One" value="1.完全符合"  th:if="${deial.topic12One!=null}" th:checked="${#strings.contains(deial.topic12One,'1.完全符合')}"  /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic12One" value="2.不符合要求"  th:if="${deial.topic12One!=null}" th:checked="${#strings.contains(deial.topic12One,'不符合')}"  />
               </div>
             </div><br/>
             <div id="twelve">
@@ -683,7 +721,7 @@
 
                 </table>
               </div><br/>
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -696,14 +734,17 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic12Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t12" type="hidden" th:value="${deial.topic12Four}"/>
+              <input type="text" class="layui-btn"  id="t12" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
               <h3 >安全管理</h3><br/>
               <label style="width: 100px;">13-1安全管理是否符合要求？(单选）</label>
               <div class="layui-input-block">
-                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic13One" value="1.完全符合"  th:if="${deial.topic13One!=null}" th:checked="${#strings.contains(deial.topic13One,'1.完全符合')}" onclick="thirteenDiv(1)" checked="checked" /><br/>
-                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic13One" value="2.不符合要求"  th:if="${deial.topic13One!=null}" th:checked="${#strings.contains(deial.topic13One,'不符合')}"  onclick="thirteenDiv(2)" />
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic13One" value="1.完全符合"  th:if="${deial.topic13One!=null}" th:checked="${#strings.contains(deial.topic13One,'1.完全符合')}"  /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic13One" value="2.不符合要求"  th:if="${deial.topic13One!=null}" th:checked="${#strings.contains(deial.topic13One,'不符合')}"  />
               </div>
             </div><br/>
             <div id="thirteen">
@@ -733,7 +774,7 @@
 
                 </table>
               </div><br/>
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -746,7 +787,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic13Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t13" type="hidden" th:value="${deial.topic13Four}"/>
+              <input type="text" class="layui-btn"  id="t13" value="查看图片" onclick="look(this)"/>
             </div>
 
             <h1 align="center">商品</h1>
@@ -785,7 +829,7 @@
 
                 </table>
               </div><br/>
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -798,7 +842,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic14Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t14" type="hidden" th:value="${deial.topic14Four}"/>
+              <input type="text" class="layui-btn"  id="t14" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
               <h3 >水果蔬菜</h3><br/>
@@ -828,7 +875,7 @@
 
                 </table>
               </div><br/>
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -841,7 +888,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic15Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t15" type="hidden" th:value="${deial.topic15Four}"/>
+              <input type="text" class="layui-btn"  id="t15" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
               <h3 >冰淇淋柜</h3><br/>
@@ -903,7 +953,7 @@
 
                 </table>
               </div><br/>
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -916,7 +966,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic16Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t16" type="hidden" th:value="${deial.topic16Four}"/>
+              <input type="text" class="layui-btn"  id="t16" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
               <h3 >风幕柜</h3><br/>
@@ -961,7 +1014,7 @@
 
                 </table>
               </div><br/>
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -974,7 +1027,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic17Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t17" type="hidden" th:value="${deial.topic17Four}"/>
+              <input type="text" class="layui-btn"  id="t17" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
               <h3 >饮料柜</h3><br/>
@@ -1005,7 +1061,7 @@
                 </table>
               </div><br/>
 
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -1018,7 +1074,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic18Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t18" type="hidden" th:value="${deial.topic18Four}"/>
+              <input type="text" class="layui-btn"  id="t18" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
               <h3 >收银台热食</h3><br/>
@@ -1071,7 +1130,7 @@
 
                 </table>
               </div><br/>
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -1084,7 +1143,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic19Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t19" type="hidden" th:value="${deial.topic19Four}"/>
+              <input type="text" class="layui-btn"  id="t19" value="查看图片" onclick="look(this)"/>
 
               <label style="width: 100px;">20-1收银台热食是否符合要求？(单选）</label>
               <div class="layui-input-block">
@@ -1126,7 +1188,7 @@
 
                   </table>
                 </div><br/>
-                <div class="layui-col-md12">
+                <!--<div class="layui-col-md12">
                   <div class="layui-card">
                     <div class="layui-card-header">上传多张图片</div>
                     <div class="layui-card-body">
@@ -1139,7 +1201,10 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div>-->
+                <input type="file" class="layui-btn" name="topic20Fourfile" id="test-upload-normal" value="上传图片"/>
+                <input name="t20" type="hidden" th:value="${deial.topic20Four}"/>
+                <input type="text" class="layui-btn"  id="t20" value="查看图片" onclick="look(this)"/>
               </div>
 
             </div>
@@ -1202,7 +1267,7 @@
 
                 </table>
               </div><br/>
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -1215,7 +1280,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic21Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t21" type="hidden" th:value="${deial.topic21Four}"/>
+              <input type="text" class="layui-btn"  id="t21" value="查看图片" onclick="look(this)"/>
 
             </div>
             <div class="layui-form-item">
@@ -1264,7 +1332,7 @@
                   </tr>
                 </table>
               </div><br/>
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -1277,7 +1345,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic22Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t22" type="hidden" th:value="${deial.topic22Four}"/>
+              <input type="text" class="layui-btn"  id="t22" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
               <label style="width: 100px;">23-1货品陈列是否符合要求？(单选）</label>
@@ -1319,7 +1390,7 @@
                 </table>
               </div><br/>
 
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -1332,7 +1403,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic23Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t23" type="hidden" th:value="${deial.topic23Four}"/>
+              <input type="text" class="layui-btn"  id="t23" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
               <label style="width: 100px;">24-1货品陈列是否符合要求？(单选）</label>
@@ -1357,7 +1431,7 @@
                 </table>
               </div><br/>
 
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -1370,7 +1444,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic24Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t24" type="hidden" th:value="${deial.topic24Four}"/>
+              <input type="text" class="layui-btn"  id="t24" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
               <label style="width: 100px;">25-1货品陈列是否符合要求？(单选）</label>
@@ -1395,7 +1472,7 @@
                 </table>
               </div><br/>
 
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -1408,7 +1485,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic25Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t25" type="hidden" th:value="${deial.topic25Four}"/>
+              <input type="text" class="layui-btn"  id="t25" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
               <h3>经营</h3>
@@ -1434,7 +1514,7 @@
                 </table>
               </div><br/>
 
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -1447,7 +1527,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic26Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t26" type="hidden" th:value="${deial.topic26Four}"/>
+              <input type="text" class="layui-btn"  id="t26" value="查看图片" onclick="look(this)"/>
             </div>
             <h1 align="center">服务</h1>
             <div class="layui-form-item">
@@ -1506,7 +1589,7 @@
                 </table>
               </div><br/>
 
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -1519,7 +1602,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic27Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t27" type="hidden" th:value="${deial.topic27Four}"/>
+              <input type="text" class="layui-btn"  id="t27" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
               <label style="width: 100px;">28-1顾客进店是否符合要求？</label>
@@ -1543,7 +1629,7 @@
 
                 </table>
               </div><br/>
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -1556,7 +1642,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic28Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t28" type="hidden" th:value="${deial.topic28Four}"/>
+              <input type="text" class="layui-btn"  id="t28" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
               <h3>顾客结账</h3>
@@ -1613,7 +1702,7 @@
 
                 </table>
               </div><br/>
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -1626,7 +1715,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic29Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t29" type="hidden" th:value="${deial.topic29Four}"/>
+              <input type="text" class="layui-btn"  id="t29" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
               <label style="width: 100px;">30-1结账时店员是否符合要求？</label>
@@ -1679,7 +1771,7 @@
 
                 </table>
               </div><br/>
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -1692,7 +1784,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic30Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t30" type="hidden" th:value="${deial.topic30Four}"/>
+              <input type="text" class="layui-btn"  id="t30" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
               <label style="width: 100px;">31-1付款后店员是否符合要求？</label>
@@ -1741,7 +1836,7 @@
 
                 </table>
               </div><br/>
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -1754,7 +1849,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic31Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t31" type="hidden" th:value="${deial.topic31Four}"/>
+              <input type="text" class="layui-btn"  id="t31" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
               <h3>顾客离开</h3>
@@ -1779,7 +1877,7 @@
 
                 </table>
               </div><br/>
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -1792,7 +1890,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic32Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t32" type="hidden" th:value="${deial.topic32Four}"/>
+              <input type="text" class="layui-btn"  id="t32" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
               <h3>员工仪容仪表</h3>
@@ -1861,7 +1962,7 @@
 
                 </table>
               </div><br/>
-              <div class="layui-col-md12">
+             <!-- <div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -1874,7 +1975,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic33Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t33" type="hidden" th:value="${deial.topic33Four}"/>
+              <input type="text" class="layui-btn"  id="t33" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
               <label style="width: 100px;">34-1员工仪容仪表是否符合要求？</label>
@@ -1925,7 +2029,7 @@
 
                 </table>
               </div><br/>
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -1938,7 +2042,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic34Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t34" type="hidden" th:value="${deial.topic34Four}"/>
+              <input type="text" class="layui-btn"  id="t34" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
               <label style="width: 100px;">35-1员工仪容仪表是否符合要求？</label>
@@ -1989,7 +2096,7 @@
 
                 </table>
               </div><br/>
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -2002,7 +2109,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic35Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t35" type="hidden" th:value="${deial.topic35Four}"/>
+              <input type="text" class="layui-btn"  id="t35" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
               <label style="width: 100px;">36-1员工仪容仪表是否符合要求？</label>
@@ -2053,7 +2163,7 @@
 
                 </table>
               </div><br/>
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -2066,7 +2176,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic36Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t36" type="hidden" th:value="${deial.topic36Four}"/>
+              <input type="text" class="layui-btn"  id="t36" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
               <label style="width: 100px;">37-1员工仪容仪表是否符合要求？</label>
@@ -2125,7 +2238,7 @@
 
                 </table>
               </div><br/>
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -2138,7 +2251,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic37Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t37" type="hidden" th:value="${deial.topic37Four}"/>
+              <input type="text" class="layui-btn"  id="t37" value="查看图片" onclick="look(this)"/>
             </div>
 
             <div class="layui-form-item">
@@ -2178,7 +2294,7 @@
                 </table>
               </div><br/>
 
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -2191,7 +2307,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic38Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t38" type="hidden" th:value="${deial.topic38Four}"/>
+              <input type="text" class="layui-btn"  id="t38" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
               <h3>证照管理</h3>
@@ -2227,7 +2346,7 @@
                 </table>
               </div><br/>
 
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -2240,7 +2359,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic39Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t39" type="hidden" th:value="${deial.topic39Four}"/>
+              <input type="text" class="layui-btn"  id="t39" value="查看图片" onclick="look(this)"/>
             </div>
             <h1 align="center">服务产品</h1>
             <div class="layui-form-item">
@@ -2288,7 +2410,7 @@
 
                 </table>
               </div><br/>
-              <div class="layui-col-md12">
+              <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
                   <div class="layui-card-body">
@@ -2301,7 +2423,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <input type="file" class="layui-btn" name="topic40Fourfile" id="test-upload-normal" value="上传图片"/>
+              <input name="t40" type="hidden" th:value="${deial.topic40Four}"/>
+              <input type="text" class="layui-btn"  id="t40" value="查看图片" onclick="look(this)"/>
             </div>
 
 
@@ -2319,6 +2444,7 @@
     </div>
   </div>
 </div>
+
 <script th:src="@{/layuiadmin/layui/jquery-1.9.0.js}" ></script>
 <script th:src="@{/layuiadmin/layui/layui.js}" ></script>
 <script th:inline="javascript">
@@ -2355,6 +2481,23 @@
 <script>
   $(document).ready(function(){
   });
+
+  function look(obj) {
+    /*<![CDATA[*/
+    var name=$("input[name="+obj.id+"]").val();
+    /*]]>*/
+    layer.open({
+      type: 2,
+      shade: false,
+      maxmin: true,
+      area: ['30%', '30%']
+      ,content: '/testPaper/seeImg?fileName='+name
+      ,yes: function(index){
+        layer.close(index);
+      }
+    });
+
+  }
 </script>
 </body>
 </html>
