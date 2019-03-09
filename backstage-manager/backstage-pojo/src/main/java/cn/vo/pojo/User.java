@@ -21,6 +21,12 @@ public class User {
 
     private Integer count;
 
+    private String scpcqx;
+
+    private String shop;
+
+    private String company;
+
     public Integer getId() {
         return id;
     }
@@ -91,5 +97,29 @@ public class User {
 
     public void setCount(Integer count) {
         this.count = count;
+    }
+
+    public String getScpcqx() {
+        return scpcqx;
+    }
+
+    public void setScpcqx(String scpcqx) {
+        this.scpcqx = scpcqx == null ? null : scpcqx.trim();
+    }
+
+    public String getShop() {
+        return shop;
+    }
+
+    public void setShop(String shop) {
+        this.shop = shop == null ? null : shop.trim();
+    }
+
+    public String getCompany() {
+        return company;
+    }
+
+    public void setCompany(String company) {
+        this.company = company == null ? null : company.trim();
     }
 }
