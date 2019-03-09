@@ -21,7 +21,6 @@ public interface UserMapper {
     int insertSelective(User record);
 
     List<User> selectByExample(UserExample example);
-    List<User> getListQuery(Map map);
 
     User selectByPrimaryKey(Integer id);
 
@@ -32,4 +31,6 @@ public interface UserMapper {
     int updateByPrimaryKeySelective(User record);
 
     int updateByPrimaryKey(User record);
+
+	   List<User> getListQuery(Map map);
 }
