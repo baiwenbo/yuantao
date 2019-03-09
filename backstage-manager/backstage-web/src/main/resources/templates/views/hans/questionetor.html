@@ -69,19 +69,19 @@
               <table border="1" >
                 <tr>
                   <td >1.1处</td>
-                  <td width="80px;"><input type="radio" value="1.1处" th:checked="${#strings.contains(deial.topic1Three,'1处')}" name="topic1Three" style="height: 20px;width: 50px;"/></td>
+                  <td width="80px;"><input type="radio" value="1.1处" th:if="${deial.topic1Three!=null}" th:checked="${#strings.contains(deial.topic1Three,'1处')}" name="topic1Three" style="height: 20px;width: 50px;"/></td>
                 </tr>
                 <tr>
                   <td >2.2处</td>
-                  <td width="80px;"><input type="radio" value="2.2处" th:checked="${#strings.contains(deial.topic1Three,'2处')}"  name="topic1Three"  style="height: 20px;width: 50px;" /> </td>
+                  <td width="80px;"><input type="radio" value="2.2处" th:if="${deial.topic1Three!=null}" th:checked="${#strings.contains(deial.topic1Three,'2处')}"  name="topic1Three"  style="height: 20px;width: 50px;" /> </td>
                 </tr>
                 <tr>
                   <td >3.3处</td>
-                  <td width="80px;"><input type="radio" value="3.3处" name="topic1Three"  th:checked="${#strings.contains(deial.topic1Three,'3处')}"  style="height: 20px;width: 50px;"/></td>
+                  <td width="80px;"><input type="radio" value="3.3处" th:if="${deial.topic1Three!=null}" name="topic1Three"  th:checked="${#strings.contains(deial.topic1Three,'3处')}"  style="height: 20px;width: 50px;"/></td>
                 </tr>
                 <tr>
                   <td >4.4处及以上</td>
-                  <td width="80px;"><input type="radio" value="4.4处及以上"  name="topic1Three" th:checked="${#strings.contains(deial.topic1Three,'4处')}"   style="height: 20px;width: 50px;"/></td>
+                  <td width="80px;"><input type="radio" value="4.4处及以上" th:if="${deial.topic1Three!=null}"  name="topic1Three" th:checked="${#strings.contains(deial.topic1Three,'4处')}"   style="height: 20px;width: 50px;"/></td>
                 </tr>
               </table><br/>
               <div class="layui-col-md12">
