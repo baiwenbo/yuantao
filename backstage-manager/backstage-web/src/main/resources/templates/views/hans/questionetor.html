@@ -39,27 +39,27 @@
               <table border="1" style="align:center">
                 <tr>
                   <td >1.门店外三米内不干净，有纸屑.烟头.杂物</td>
-                  <td width="80px;"><input value="1.门店外三米内不干净，有纸屑.烟头.杂物" type="checkbox"  name="topic1Two" th:checked="${#strings.contains(deial.topic1Two,'1.门店外三米内不干净，有纸屑.烟头.杂物')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  <td width="80px;"><input value="1.门店外三米内不干净，有纸屑.烟头.杂物" type="checkbox"  name="topic1Two" th:if="${deial.topic1Two!=null}" th:checked="${#strings.contains(deial.topic1Two,'1.门店外三米内不干净，有纸屑.烟头.杂物')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                 </tr>
                 <tr>
                   <td >2.屋檐有蜘蛛网</td>
-                  <td width="80px;"><input type="checkbox" name="topic1Two" value="2.屋檐有蜘蛛网" th:checked="${#strings.contains(deial.topic1Two,'2.屋檐有蜘蛛网')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  <td width="80px;"><input type="checkbox" name="topic1Two" value="2.屋檐有蜘蛛网" th:if="${deial.topic1Two!=null}" th:checked="${#strings.contains(deial.topic1Two,'2.屋檐有蜘蛛网')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                 </tr>
                 <tr>
                   <td >3.店外招牌不干净整洁</td>
-                  <td width="80px;"><input type="checkbox" name="topic1Two" value="3.店外招牌不干净整洁" th:checked="${#strings.contains(deial.topic1Two,'3.店外招牌不干净整洁')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  <td width="80px;"><input type="checkbox" name="topic1Two" value="3.店外招牌不干净整洁" th:if="${deial.topic1Two!=null}" th:checked="${#strings.contains(deial.topic1Two,'3.店外招牌不干净整洁')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                 </tr>
                 <tr>
                   <td >4.灯管有损坏</td>
-                  <td width="80px;"><input type="checkbox" name="topic1Two"  value="4.灯管有损坏" th:checked="${#strings.contains(deial.topic1Two,'灯管有损坏')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  <td width="80px;"><input type="checkbox" name="topic1Two"  value="4.灯管有损坏" th:if="${deial.topic1Two!=null}"  th:checked="${#strings.contains(deial.topic1Two,'灯管有损坏')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                 </tr>
                 <tr>
                   <td >5.招牌灯未正常开启/关闭</td>
-                  <td width="80px;"><input type="checkbox" name="topic1Two"  value="5.招牌灯未正常开启/关闭"  th:checked="${#strings.contains(deial.topic1Two,'招牌灯未正常开启/关闭')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  <td width="80px;"><input type="checkbox" name="topic1Two"  value="5.招牌灯未正常开启/关闭" th:if="${deial.topic1Two!=null}"  th:checked="${#strings.contains(deial.topic1Two,'招牌灯未正常开启/关闭')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                 </tr>
                 <tr>
                   <td >6.其他请注明</td>
-                  <td width="80px;"><input type="text" class="layui-input"/></td>
+                  <td width="80px;"><input type="text" name="topic1Six" th:value="${deial.topic1Six}" class="layui-input"/></td>
                 </tr>
 
               </table><br/>
@@ -113,24 +113,24 @@
                 <table border="1" style="align:center">
                   <tr>
                     <td >1.玻璃清洁有污渍</td>
-                    <td width="80px;"><input type="checkbox" name="topic2Two" value="1.玻璃清洁有污渍"  th:checked="${#strings.contains(deial.topic2Two,'1.玻璃清洁有污渍')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox" name="topic2Two" value="1.玻璃清洁有污渍" th:if="${deial.topic2Two!=null}"  th:checked="${#strings.contains(deial.topic2Two,'1.玻璃清洁有污渍')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >2.橱窗海报有过期内容</td>
-                    <td width="80px;"><input type="checkbox"  name="topic2Two" value="2.橱窗海报有过期内容" th:checked="${#strings.contains(deial.topic2Two,'橱窗海报有过期内容')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox"  name="topic2Two" value="2.橱窗海报有过期内容" th:if="${deial.topic2Two!=null}" th:checked="${#strings.contains(deial.topic2Two,'橱窗海报有过期内容')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >3.店外海报张贴在腰线以下</td>
-                    <td width="80px;"><input type="checkbox"  name="topic2Two"  value="3.店外海报张贴在腰线以下" th:checked="${#strings.contains(deial.topic2Two,'店外海报张贴在腰线以下')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox"  name="topic2Two"  value="3.店外海报张贴在腰线以下" th:if="${deial.topic2Two!=null}" th:checked="${#strings.contains(deial.topic2Two,'店外海报张贴在腰线以下')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >4.门店有海报张贴不整齐工整</td>
-                    <td width="80px;"><input type="checkbox"  name="topic2Two" value="4.门店有海报张贴不整齐工整" th:checked="${#strings.contains(deial.topic2Two,'门店有海报张贴不整齐工整')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox"  name="topic2Two" value="4.门店有海报张贴不整齐工整" th:if="${deial.topic2Two!=null}" th:checked="${#strings.contains(deial.topic2Two,'门店有海报张贴不整齐工整')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
 
                   <tr>
                     <td >5.其他请注明</td>
-                    <td width="80px;"><input type="text"  name="topic2Two" class="layui-input" /></td>
+                    <td width="80px;"><input type="text"  name="topic2Six" th:value="${deial.topic2Six}" class="layui-input" /></td>
                   </tr>
 
                 </table>
@@ -142,19 +142,19 @@
                 <table border="1" >
                   <tr>
                     <td >1.1处</td>
-                    <td width="80px;"><input type="radio" value="1.1处"  name="topic2Three" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="radio" value="1.1处"  name="topic2Three" th:if="${deial.topic2Three!=null}" th:checked="${#strings.contains(deial.topic2Three,'1处')}" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >2.2处</td>
-                    <td width="80px;"><input type="radio"  name="topic2Three" value="2.2处"  style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="radio"  name="topic2Three" value="2.2处" th:if="${deial.topic2Three!=null}" th:checked="${#strings.contains(deial.topic2Three,'2处')}"  style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >3.3处</td>
-                    <td width="80px;"><input type="radio"  name="topic2Three" value="3.3处"  style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="radio"  name="topic2Three" value="3.3处" th:if="${deial.topic2Three!=null}" th:checked="${#strings.contains(deial.topic2Three,'3处')}"  style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >4.4处及以上</td>
-                    <td width="80px;"><input type="radio"  name="topic2Three" value="4.4处及以上"  style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="radio"  name="topic2Three" value="4.4处及以上" th:if="${deial.topic2Three!=null}" th:checked="${#strings.contains(deial.topic2Three,'4处及以上')}" style="height: 20px;width: 50px;"/></td>
                   </tr>
                 </table>
               </div><br/>
@@ -205,7 +205,7 @@
 
                   <tr>
                     <td >5.其他请注明</td>
-                    <td width="80px;"><input type="text" name="topic3Two"  class="layui-input"/></td>
+                    <td width="80px;"><input type="text" name="topic3Six" th:value="${deial.topic3Six}"  class="layui-input"/></td>
                   </tr>
 
                 </table>
@@ -241,27 +241,27 @@
                 <table border="1" >
                   <tr>
                     <td >1.店内客显和TV设备未正常播放</td>
-                    <td width="80px;"><input type="checkbox" name="topic4Two"  value="1.店内客显和TV设备未正常播放" th:checked="${#strings.contains(deial.topic4Two,'店内客显和TV设备未正常播放')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox" name="topic4Two"  value="1.店内客显和TV设备未正常播放"  th:if="${deial.topic4Two!=null}"  th:checked="${#strings.contains(deial.topic4Two,'店内客显和TV设备未正常播放')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >2.有过期促销活动或宣传视频等内容</td>
-                    <td width="80px;"><input type="checkbox"  name="topic4Two" value="2.有过期促销活动或宣传视频等内容" th:checked="${#strings.contains(deial.topic4Two,'有过期促销活动或宣传视频等内容')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox"  name="topic4Two" value="2.有过期促销活动或宣传视频等内容"  th:if="${deial.topic4Two!=null}" th:checked="${#strings.contains(deial.topic4Two,'有过期促销活动或宣传视频等内容')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >3.有违规播放电视剧或者电影</td>
-                    <td width="80px;"><input type="checkbox"  name="topic4Two" value="3.有违规播放电视剧或者电影" th:checked="${#strings.contains(deial.topic4Two,'有违规播放电视剧或者电影')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox"  name="topic4Two" value="3.有违规播放电视剧或者电影"  th:if="${deial.topic4Two!=null}" th:checked="${#strings.contains(deial.topic4Two,'有违规播放电视剧或者电影')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >4.美陈.物料未按公司标准摆放</td>
-                    <td width="80px;"><input type="checkbox"   name="topic4Two" value="4.美陈.物料未按公司标准摆放" th:checked="${#strings.contains(deial.topic4Two,'物料未按公司标准摆放')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox"   name="topic4Two" value="4.美陈.物料未按公司标准摆放"  th:if="${deial.topic4Two!=null}" th:checked="${#strings.contains(deial.topic4Two,'物料未按公司标准摆放')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >5.有过期促销物料存在</td>
-                    <td width="80px;"><input type="checkbox"   name="topic4Two" value="5.有过期促销物料存在" th:checked="${#strings.contains(deial.topic4Two,'有过期促销物料存在')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox"   name="topic4Two" value="5.有过期促销物料存在"  th:if="${deial.topic4Two!=null}" th:checked="${#strings.contains(deial.topic4Two,'有过期促销物料存在')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >6.其他请注明_</td>
-                    <td width="80px;"><input type="text"  name="topic4Two"  class="layui-input"/></td>
+                    <td width="80px;"><input type="text"  name="topic4Six" th:value="${deial.topic4Six}"  class="layui-input"/></td>
                   </tr>
 
                 </table>
@@ -297,27 +297,27 @@
                 <table border="1" >
                   <tr>
                     <td >1.店内垃圾桶表面不干净</td>
-                    <td width="80px;"><input type="checkbox" name="topic5Two" value="1.店内垃圾桶表面不干净" th:checked="${#strings.contains(deial.topic5Two,'店内垃圾桶表面不干净')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox" name="topic5Two" value="1.店内垃圾桶表面不干净"  th:if="${deial.topic5Two!=null}" th:checked="${#strings.contains(deial.topic5Two,'店内垃圾桶表面不干净')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >2.垃圾袋有外露</td>
-                    <td width="80px;"><input type="checkbox" name="topic5Two" value="2.垃圾袋有外露" th:checked="${#strings.contains(deial.topic5Two,'垃圾袋有外露')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox" name="topic5Two" value="2.垃圾袋有外露"  th:if="${deial.topic5Two!=null}" th:checked="${#strings.contains(deial.topic5Two,'垃圾袋有外露')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >3.桶内垃圾有溢出未及时处理</td>
-                    <td width="80px;"><input type="checkbox" name="topic5Two" value="3.桶内垃圾有溢出未及时处理" th:checked="${#strings.contains(deial.topic5Two,'桶内垃圾有溢出未及时处理')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox" name="topic5Two" value="3.桶内垃圾有溢出未及时处理"  th:if="${deial.topic5Two!=null}" th:checked="${#strings.contains(deial.topic5Two,'桶内垃圾有溢出未及时处理')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >4.贩物篮不干净，有污渍油渍</td>
-                    <td width="80px;"><input type="checkbox" name="topic5Two" value="4.贩物篮不干净，有污渍油渍" th:checked="${#strings.contains(deial.topic5Two,'有污渍油渍')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox" name="topic5Two" value="4.贩物篮不干净，有污渍油渍"  th:if="${deial.topic5Two!=null}" th:checked="${#strings.contains(deial.topic5Two,'有污渍油渍')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >5.贩物篮数量低于5个</td>
-                    <td width="80px;"><input type="checkbox" name="topic5Two" value="5.贩物篮数量低于5个" th:checked="${#strings.contains(deial.topic5Two,'贩物篮数量低于5个')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox" name="topic5Two" value="5.贩物篮数量低于5个"  th:if="${deial.topic5Two!=null}" th:checked="${#strings.contains(deial.topic5Two,'贩物篮数量低于5个')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >6.其他请注明</td>
-                    <td width="80px;"><input type="text" name="topic5Two" class="layui-input" /></td>
+                    <td width="80px;"><input type="text" name="topic5Six" th:value="${deial.topic5Six}" class="layui-input" /></td>
                   </tr>
 
                 </table>
@@ -342,8 +342,8 @@
 
               <label style="width: 100px;">6-1店内天花板及地面是否符合要求？(单选）</label>
               <div class="layui-input-block">
-                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic6One"  value="1.完全符合" th:checked="${#strings.contains(deial.topic6One,'1.完全符合')}" onclick="sixDiv(1)" checked="checked"/><br/>
-                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic6One" value="2.不符合要求" th:checked="${#strings.contains(deial.topic6One,'不符合')}"  onclick="sixDiv(2)" />
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic6One"  value="1.完全符合"  th:if="${deial.topic6One!=null}" th:checked="${#strings.contains(deial.topic6One,'1.完全符合')}" onclick="sixDiv(1)" checked="checked"/><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic6One" value="2.不符合要求"  th:if="${deial.topic6One!=null}" th:checked="${#strings.contains(deial.topic6One,'不符合')}"  onclick="sixDiv(2)" />
 
               </div>
             </div><br/>
@@ -353,28 +353,28 @@
                 <table border="1" >
                   <tr>
                     <td > 1.店内天花板有蜘蛛网（注意墙角）</td>
-                    <td width="80px;"><input type="checkbox" name="topic6Two" value=" 1.店内天花板有蜘蛛网（注意墙角）" th:checked="${#strings.contains(deial.topic6Two,'店内天花板有蜘蛛网（注意墙角）')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox" name="topic6Two" value=" 1.店内天花板有蜘蛛网（注意墙角）" th:if="${deial.topic6Two!=null}"  th:checked="${#strings.contains(deial.topic6Two,'店内天花板有蜘蛛网（注意墙角）')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >2.地板有垃圾，有污渍，有铺纸皮（下雨天不考评地板污渍）</td>
-                    <td width="80px;"><input type="checkbox"  name="topic6Two" value="2.地板有垃圾，有污渍，有铺纸皮（下雨天不考评地板污渍）" th:checked="${#strings.contains(deial.topic6Two,'有铺纸皮（下雨天不考评地板污渍')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox"  name="topic6Two" value="2.地板有垃圾，有污渍，有铺纸皮（下雨天不考评地板污渍）" th:if="${deial.topic6Two!=null}"  th:checked="${#strings.contains(deial.topic6Two,'有铺纸皮（下雨天不考评地板污渍')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >3.吊旗不整齐完整，有破损</td>
-                    <td width="80px;"><input type="checkbox"  name="topic6Two"  value="3.吊旗不整齐完整，有破损" th:checked="${#strings.contains(deial.topic6Two,'吊旗不整齐完整，有破损')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox"  name="topic6Two"  value="3.吊旗不整齐完整，有破损" th:if="${deial.topic6Two!=null}" th:checked="${#strings.contains(deial.topic6Two,'吊旗不整齐完整，有破损')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >4.下雨天门店未将“小心地滑挃示牌立出</td>
-                    <td width="80px;"><input type="checkbox"  name="topic6Two"  value="4.下雨天门店未将“小心地滑挃示牌立出"  th:checked="${#strings.contains(deial.topic6Two,'小心地滑挃示牌立出')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox"  name="topic6Two"  value="4.下雨天门店未将“小心地滑挃示牌立出" th:if="${deial.topic6Two!=null}"  th:checked="${#strings.contains(deial.topic6Two,'小心地滑挃示牌立出')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >5.非下雨天考核门店地面湿滑时未将“小心地滑” 指示牌立出</td>
-                    <td width="80px;"><input type="checkbox"   name="topic6Two" value="5.非下雨天考核门店地面湿滑时未将“小心地滑” 指示牌立出" th:checked="${#strings.contains(deial.topic6Two,'非下雨天考核门店地面湿滑时未将')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox"   name="topic6Two" value="5.非下雨天考核门店地面湿滑时未将“小心地滑” 指示牌立出" th:if="${deial.topic6Two!=null}" th:checked="${#strings.contains(deial.topic6Two,'非下雨天考核门店地面湿滑时未将')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
 
                   <tr>
                     <td >6.其他请注明</td>
-                    <td width="80px;"><input type="text"  name="topic6Two" class="layui-input"/></td>
+                    <td width="80px;"><input type="text"  name="topic6Six" th:value="${deial.topic6Six}" class="layui-input"/></td>
                   </tr>
 
                 </table>
@@ -399,8 +399,8 @@
               <h3 >柜台区域</h3><br/>
               <label style="width: 100px;">7-1柜台区域是否符合要求？(单选）</label>
               <div class="layui-input-block">
-                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic7One" value="1.完全符合" th:checked="${#strings.contains(deial.topic7One,'1.完全符合')}" checked="checked" onclick="sevenDiv(1)" /><br/>
-                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic7One" value="2.不符合要求" th:checked="${#strings.contains(deial.topic7One,'不符合')}" onclick="sevenDiv(2)" />
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic7One" value="1.完全符合"  th:if="${deial.topic7One!=null}"  th:checked="${#strings.contains(deial.topic7One,'1.完全符合')}" checked="checked" onclick="sevenDiv(1)" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic7One" value="2.不符合要求"  th:if="${deial.topic7One!=null}" th:checked="${#strings.contains(deial.topic7One,'不符合')}" onclick="sevenDiv(2)" />
 
               </div>
             </div><br/>
@@ -410,24 +410,24 @@
                 <table border="1" >
                   <tr>
                     <td >1.收银前后柜台，台面不干净整洁，有污渍</td>
-                    <td width="80px;"><input type="checkbox"  name="topic7Two" value="1.收银前后柜台，台面不干净整洁，有污渍" th:checked="${#strings.contains(deial.topic7Two,'台面不干净整洁，有污渍')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox"  name="topic7Two" value="1.收银前后柜台，台面不干净整洁，有污渍"  th:if="${deial.topic7Two!=null}"  th:checked="${#strings.contains(deial.topic7Two,'台面不干净整洁，有污渍')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >2.收银前后柜台有杂物</td>
-                    <td width="80px;"><input type="checkbox" name="topic7Two" value="2.收银前后柜台有杂物"  lay-skin="primary" th:checked="${#strings.contains(deial.topic7Two,'收银前后柜台有杂物')}" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox" name="topic7Two" value="2.收银前后柜台有杂物"  lay-skin="primary"  th:if="${deial.topic7Two!=null}" th:checked="${#strings.contains(deial.topic7Two,'收银前后柜台有杂物')}" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >3.收银前后柜台有门店经营文件（台账.通知等）</td>
-                    <td width="80px;"><input type="checkbox"  name="topic7Two" value="3.收银前后柜台有门店经营文件（台账.通知等）" th:checked="${#strings.contains(deial.topic7Two,'收银前后柜台有门店经营文件')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox"  name="topic7Two" value="3.收银前后柜台有门店经营文件（台账.通知等）"  th:if="${deial.topic7Two!=null}" th:checked="${#strings.contains(deial.topic7Two,'收银前后柜台有门店经营文件')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >4.收银前后柜台有员工私人物品</td>
-                    <td width="80px;"><input type="checkbox"  name="topic7Two" value="4.收银前后柜台有员工私人物品" th:checked="${#strings.contains(deial.topic7Two,'收银前后柜台有员工私人物品')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox"  name="topic7Two" value="4.收银前后柜台有员工私人物品"  th:if="${deial.topic7Two!=null}" th:checked="${#strings.contains(deial.topic7Two,'收银前后柜台有员工私人物品')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
 
                   <tr>
                     <td >5.其他请注明</td>
-                    <td width="80px;"><input type="text" name="topic7Two" class="layui-input"/></td>
+                    <td width="80px;"><input type="text" name="topic7Six" th:value="${deial.topic7Six}" class="layui-input"/></td>
                   </tr>
 
                 </table>
@@ -452,8 +452,8 @@
               <h3 >速食台及关东煮区域</h3><br/>
               <label style="width: 100px;">8-1速食台及关东煮区域是否符合要求？(单选）</label>
               <div class="layui-input-block">
-                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic8One" value="1.完全符合" th:checked="${#strings.contains(deial.topic8One,'完全符合')}"   checked="checked" onclick="eightDiv(1)" /><br/>
-                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic8One" value="2.不符合要求"  th:checked="${#strings.contains(deial.topic8One,'不符合要求')}" onclick="eightDiv(2)" />
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic8One" value="1.完全符合"  th:if="${deial.topic8One!=null}" th:checked="${#strings.contains(deial.topic8One,'完全符合')}"   checked="checked" onclick="eightDiv(1)" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic8One" value="2.不符合要求"  th:if="${deial.topic8One!=null}"  th:checked="${#strings.contains(deial.topic8One,'不符合要求')}" onclick="eightDiv(2)" />
 
               </div>
             </div><br/>
@@ -463,20 +463,20 @@
                 <table border="1" >
                   <tr>
                     <td >1.打餐区不干净整洁有商品堆积，有多余物料堆积</td>
-                    <td width="80px;"><input type="checkbox" name="topic8Two" value="1.打餐区不干净整洁有商品堆积，有多余物料堆积"   th:checked="${#strings.contains(deial.topic8Two,'打餐区不干净整洁有商品堆积，有多余物料堆积')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox" name="topic8Two" value="1.打餐区不干净整洁有商品堆积，有多余物料堆积"  th:if="${deial.topic8Two!=null}"  th:checked="${#strings.contains(deial.topic8Two,'打餐区不干净整洁有商品堆积，有多余物料堆积')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >2.关东煮锅.烤肠机.茶叶蛋锅.蒸包机周边有汢渍.有污渍</td>
-                    <td width="80px;"><input type="checkbox"  name="topic8Two" value="2.关东煮锅.烤肠机.茶叶蛋锅.蒸包机周边有汢渍.有污渍"  th:checked="${#strings.contains(deial.topic8Two,'关东煮锅.烤肠机.茶叶蛋锅.蒸包机周边有汢渍.有污渍')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox"  name="topic8Two" value="2.关东煮锅.烤肠机.茶叶蛋锅.蒸包机周边有汢渍.有污渍"  th:if="${deial.topic8Two!=null}" th:checked="${#strings.contains(deial.topic8Two,'关东煮锅.烤肠机.茶叶蛋锅.蒸包机周边有汢渍.有污渍')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >3.关东煮锅.烤肠机防尘罩上有汢渍.有污渍</td>
-                    <td width="80px;"><input type="checkbox"   name="topic8Two" value="3.关东煮锅.烤肠机防尘罩上有汢渍.有污渍" th:checked="${#strings.contains(deial.topic8Two,'关东煮锅.烤肠机防尘罩上有汢渍.有污渍')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox"   name="topic8Two" value="3.关东煮锅.烤肠机防尘罩上有汢渍.有污渍"  th:if="${deial.topic8Two!=null}" th:checked="${#strings.contains(deial.topic8Two,'关东煮锅.烤肠机防尘罩上有汢渍.有污渍')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
 
                   <tr>
                     <td >4.其他请注明</td>
-                    <td width="80px;"><input type="text"  name="topic8Two" class="layui-input"/></td>
+                    <td width="80px;"><input type="text"  name="topic8Six" th:value="${deial.topic8Six}" class="layui-input"/></td>
                   </tr>
 
                 </table>
@@ -501,14 +501,14 @@
               <h3 >休闲区域</h3><br/>
               <label style="width: 100px;">9-1门店内有无休闲区？</label>
               <div class="layui-input-block">
-                <label style="width: 100px;">1:有休闲区 </label> <input type="radio" name="topic9One" value="1.有休闲区" onclick="ninesuperDiv(1)" checked="checked" th:checked="${#strings.contains(deial.topic9One,'有休闲区')}"/><br/>
-                <label style="width: 100px;">2:无休闲区</label> <input type="radio" name="topic9One" value="2.无休闲区" onclick="ninesuperDiv(2)" th:checked="${#strings.contains(deial.topic9One,'无休闲区')}" />
+                <label style="width: 100px;">1:有休闲区 </label> <input type="radio" name="topic9One" value="1.有休闲区" onclick="ninesuperDiv(1)" checked="checked"  th:if="${deial.topic9One!=null}" th:checked="${#strings.contains(deial.topic9One,'有休闲区')}"/><br/>
+                <label style="width: 100px;">2:无休闲区</label> <input type="radio" name="topic9One" value="2.无休闲区" onclick="ninesuperDiv(2)"  th:if="${deial.topic9One!=null}" th:checked="${#strings.contains(deial.topic9One,'无休闲区')}" />
               </div>
               <div id="ninesuper">
                 <label style="width: 100px;">9-2休闲区域是否符合要求？(单选）</label>
                 <div class="layui-input-block">
-                  <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic9Two" value="1.完全符合" th:checked="${#strings.contains(deial.topic9Two,'完全符合')}" onclick="nineDiv(1)" checked="checked" /><br/>
-                  <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic9Two" value="2.不符合要求" th:checked="${#strings.contains(deial.topic9Two,'不符合要求')}" onclick="nineDiv(2)" />
+                  <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic9Two" value="1.完全符合"  th:if="${deial.topic9Two!=null}" th:checked="${#strings.contains(deial.topic9Two,'完全符合')}" onclick="nineDiv(1)" checked="checked" /><br/>
+                  <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic9Two" value="2.不符合要求"  th:if="${deial.topic9Two!=null}" th:checked="${#strings.contains(deial.topic9Two,'不符合要求')}" onclick="nineDiv(2)" />
                 </div>
               </div><br/>
             </div>
@@ -518,15 +518,15 @@
                 <table border="1" >
                   <tr>
                     <td >1.休闲区桌面不干净，有污渍，有垃圾</td>
-                    <td width="80px;"><input type="checkbox"  name="topic9Three" value="1.休闲区桌面不干净，有污渍，有垃圾" th:checked="${#strings.contains(deial.topic9Three,'休闲区桌面不干净，有污渍，有垃圾')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox"  name="topic9Three" value="1.休闲区桌面不干净，有污渍，有垃圾"  th:if="${deial.topic9Three!=null}" th:checked="${#strings.contains(deial.topic9Three,'休闲区桌面不干净，有污渍，有垃圾')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >2.桌椅摆放不整齐</td>
-                    <td width="80px;"><input type="checkbox" name="topic9Three"  value="2.桌椅摆放不整齐" lay-skin="primary"  th:checked="${#strings.contains(deial.topic9Three,'桌椅摆放不整齐')}" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox" name="topic9Three"  value="2.桌椅摆放不整齐" lay-skin="primary"  th:if="${deial.topic9Three!=null}"  th:checked="${#strings.contains(deial.topic9Three,'桌椅摆放不整齐')}" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >3.其他请注明</td>
-                    <td width="80px;"><input type="text" name="topic9Three" class="layui-input"/></td>
+                    <td width="80px;"><input type="text" name="topic9Six" th:value="${deial.topic9Six}" class="layui-input"/></td>
                   </tr>
 
                 </table>
@@ -551,8 +551,8 @@
               <h3 >货架:风幕柜:冷冻柜</h3><br/>
               <label style="width: 100px;">10-1货架:风幕柜:冷冻柜是否符合要求？(单选）</label>
               <div class="layui-input-block">
-                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic10One" value="1.完全符合" checked="checked" onclick="tenDiv(1)" th:checked="${#strings.contains(deial.topic10One,'1.完全符合')}" /><br/>
-                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic10One" value="2.不符合要求" th:checked="${#strings.contains(deial.topic10One,'不符合要求')}" onclick="tenDiv(2)" />
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic10One" value="1.完全符合" checked="checked" onclick="tenDiv(1)"  th:if="${deial.topic10One!=null}" th:checked="${#strings.contains(deial.topic10One,'1.完全符合')}" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic10One" value="2.不符合要求"  th:if="${deial.topic10One!=null}" th:checked="${#strings.contains(deial.topic10One,'不符合要求')}" onclick="tenDiv(2)" />
               </div>
             </div><br/>
             <div id="ten" >
@@ -561,15 +561,15 @@
                 <table border="1" >
                   <tr>
                     <td >1.货架和三个设备层板不清洁有灰尘.虫尸</td>
-                    <td width="80px;"><input type="checkbox" name="topic10Two" value="1.货架和三个设备层板不清洁有灰尘.虫尸" th:checked="${#strings.contains(deial.topic10Two,'货架和三个设备层板不清洁有灰尘.虫尸')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox" name="topic10Two" value="1.货架和三个设备层板不清洁有灰尘.虫尸"  th:if="${deial.topic10Two!=null}" th:checked="${#strings.contains(deial.topic10Two,'货架和三个设备层板不清洁有灰尘.虫尸')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >2.商品不清洁有灰尘</td>
-                    <td width="80px;"><input type="checkbox" name="topic10Two" value="2.商品不清洁有灰尘" th:checked="${#strings.contains(deial.topic10Two,'货架和三个设备层板不清洁有灰尘.虫尸')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox" name="topic10Two" value="2.商品不清洁有灰尘"  th:if="${deial.topic10Two!=null}" th:checked="${#strings.contains(deial.topic10Two,'货架和三个设备层板不清洁有灰尘.虫尸')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >3.其他请注明</td>
-                    <td width="80px;"><input type="text" name="topic10Two" class="layui-input"/></td>
+                    <td width="80px;"><input type="text" name="topic10Six" th:value="${deial.topic10Six}" class="layui-input"/></td>
                   </tr>
 
                 </table>
@@ -618,8 +618,8 @@
             <div class="layui-form-item">
               <label style="width: 100px;">11-1货架:风幕柜:冷冻柜是否符合要求？(单选）</label>
               <div class="layui-input-block">
-                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic11One" value="1.完全符合" th:checked="${#strings.contains(deial.topic11One,'1.完全符合')}" checked="checked" onclick="elevenDiv(1)" /><br/>
-                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic11One" value="2.不符合要求" th:checked="${#strings.contains(deial.topic11One,'不符合')}" onclick="elevenDiv(2)" />
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic11One" value="1.完全符合"  th:if="${deial.topic11One!=null}"  th:checked="${#strings.contains(deial.topic11One,'1.完全符合')}" checked="checked" onclick="elevenDiv(1)" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic11One" value="2.不符合要求"  th:if="${deial.topic11One!=null}" th:checked="${#strings.contains(deial.topic11One,'不符合')}" onclick="elevenDiv(2)" />
               </div>
             </div><br/>
             <div id="eleven" >
@@ -628,15 +628,15 @@
                 <table border="1" >
                   <tr>
                     <td >1.风幕柜温度未定时检查未在温度登记表上做记录并签字</td>
-                    <td width="80px;"><input type="checkbox" name="topic11Two" value="1.风幕柜温度未定时检查未在温度登记表上做记录并签字"  th:checked="${#strings.contains(deial.topic11Two,'风幕柜温度未定时检查未在温度登记表上做记录并签字')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox" name="topic11Two" value="1.风幕柜温度未定时检查未在温度登记表上做记录并签字"   th:if="${deial.topic11Two!=null}" th:checked="${#strings.contains(deial.topic11Two,'风幕柜温度未定时检查未在温度登记表上做记录并签字')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >2.冷冻柜温度未定时检查未在温度登记表上做记录并签字</td>
-                    <td width="80px;"><input type="checkbox"  name="topic11Two" value="2.冷冻柜温度未定时检查未在温度登记表上做记录并签字" th:checked="${#strings.contains(deial.topic11Two,'冷冻柜温度未定时检查未在温度登记表上做记录并签字')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox"  name="topic11Two" value="2.冷冻柜温度未定时检查未在温度登记表上做记录并签字"  th:if="${deial.topic11Two!=null}" th:checked="${#strings.contains(deial.topic11Two,'冷冻柜温度未定时检查未在温度登记表上做记录并签字')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >3.其他请注明</td>
-                    <td width="80px;"><input type="text"  name="topic11Two"   class="layui-input"/></td>
+                    <td width="80px;"><input type="text"  name="topic11Six" th:value="${deial.topic11Six}"  class="layui-input"/></td>
                   </tr>
 
                 </table>
@@ -660,8 +660,8 @@
               <h3 >洗手池</h3><br/>
               <label style="width: 100px;">12-1洗手池是否符合要求？(单选）</label>
               <div class="layui-input-block">
-                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic12One" value="1.完全符合" th:checked="${#strings.contains(deial.topic12One,'1.完全符合')}" checked="checked" onclick="twelveDiv(1)" /><br/>
-                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic12One" value="2.不符合要求" th:checked="${#strings.contains(deial.topic12One,'不符合')}" onclick="twelveDiv(2)" />
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic12One" value="1.完全符合"  th:if="${deial.topic12One!=null}" th:checked="${#strings.contains(deial.topic12One,'1.完全符合')}" checked="checked" onclick="twelveDiv(1)" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic12One" value="2.不符合要求"  th:if="${deial.topic12One!=null}" th:checked="${#strings.contains(deial.topic12One,'不符合')}" onclick="twelveDiv(2)" />
               </div>
             </div><br/>
             <div id="twelve">
@@ -670,15 +670,15 @@
                 <table border="1" >
                   <tr>
                     <td >1.抹布未存放在洗手池上</td>
-                    <td width="80px;"><input type="checkbox" name="topic12Two" value="1.抹布未存放在洗手池上"  th:checked="${#strings.contains(deial.topic12Two,'抹布未存放在洗手池上')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox" name="topic12Two" value="1.抹布未存放在洗手池上"  th:if="${deial.topic12Two!=null}"  th:checked="${#strings.contains(deial.topic12Two,'抹布未存放在洗手池上')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >2.洗手池上洗手液等其他用具摆放不整齐</td>
-                    <td width="80px;"><input type="checkbox" name="topic12Two" value="2.洗手池上洗手液等其他用具摆放不整齐" th:checked="${#strings.contains(deial.topic12Two,'洗手池上洗手液等其他用具摆放不整齐')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox" name="topic12Two" value="2.洗手池上洗手液等其他用具摆放不整齐"  th:if="${deial.topic12Two!=null}" th:checked="${#strings.contains(deial.topic12Two,'洗手池上洗手液等其他用具摆放不整齐')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >3.其他请注明_</td>
-                    <td width="80px;"><input type="text" name="topic12Two" class="layui-input"/></td>
+                    <td width="80px;"><input type="text" name="topic12Six" th:value="${deial.topic12Six}" class="layui-input"/></td>
                   </tr>
 
                 </table>
@@ -702,8 +702,8 @@
               <h3 >安全管理</h3><br/>
               <label style="width: 100px;">13-1安全管理是否符合要求？(单选）</label>
               <div class="layui-input-block">
-                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic13One" value="1.完全符合" th:checked="${#strings.contains(deial.topic13One,'1.完全符合')}" onclick="thirteenDiv(1)" checked="checked" /><br/>
-                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic13One" value="2.不符合要求" th:checked="${#strings.contains(deial.topic13One,'不符合')}"  onclick="thirteenDiv(2)" />
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic13One" value="1.完全符合"  th:if="${deial.topic13One!=null}" th:checked="${#strings.contains(deial.topic13One,'1.完全符合')}" onclick="thirteenDiv(1)" checked="checked" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic13One" value="2.不符合要求"  th:if="${deial.topic13One!=null}" th:checked="${#strings.contains(deial.topic13One,'不符合')}"  onclick="thirteenDiv(2)" />
               </div>
             </div><br/>
             <div id="thirteen">
@@ -712,23 +712,23 @@
                 <table border="1" >
                   <tr>
                     <td >1.灭火器.消防栓前方1米内有遮挡</td>
-                    <td width="80px;"><input type="checkbox" name="topic13Two" value="1.灭火器.消防栓前方1米内有遮挡"  th:checked="${#strings.contains(deial.topic13Two,'灭火器.消防栓前方1米内有遮挡')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox" name="topic13Two" value="1.灭火器.消防栓前方1米内有遮挡"  th:if="${deial.topic13Two!=null}" th:checked="${#strings.contains(deial.topic13Two,'灭火器.消防栓前方1米内有遮挡')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >2.安全指示灯未正常亮起</td>
-                    <td width="80px;"><input type="checkbox" name="topic13Two" value="2.安全指示灯未正常亮起"   th:checked="${#strings.contains(deial.topic13Two,'安全指示灯未正常亮起')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox" name="topic13Two" value="2.安全指示灯未正常亮起"   th:if="${deial.topic13Two!=null}" th:checked="${#strings.contains(deial.topic13Two,'安全指示灯未正常亮起')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >3.观察应急照明灯正常工作指示灯未亮起</td>
-                    <td width="80px;"><input type="checkbox" name="topic13Two" value="3.观察应急照明灯正常工作指示灯未亮起"  th:checked="${#strings.contains(deial.topic13Two,'察应急照明灯正常工作指示灯未亮起')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox" name="topic13Two" value="3.观察应急照明灯正常工作指示灯未亮起"  th:if="${deial.topic13Two!=null}"  th:checked="${#strings.contains(deial.topic13Two,'察应急照明灯正常工作指示灯未亮起')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >4.安全出口指示地贴不完整有破损，消防通道不畅通</td>
-                    <td width="80px;"><input type="checkbox" name="topic13Two" value="4.安全出口指示地贴不完整有破损，消防通道不畅通"  th:checked="${#strings.contains(deial.topic13Two,'安全出口指示地贴不完整有破损，消防通道不畅通')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox" name="topic13Two" value="4.安全出口指示地贴不完整有破损，消防通道不畅通"  th:if="${deial.topic13Two!=null}" th:checked="${#strings.contains(deial.topic13Two,'安全出口指示地贴不完整有破损，消防通道不畅通')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >5.其他请注明</td>
-                    <td width="80px;"><input type="text" name="topic13Two" class="layui-input"/></td>
+                    <td width="80px;"><input type="text" name="topic13Six" th:value="${deial.topic13Six}" class="layui-input"/></td>
                   </tr>
 
                 </table>
@@ -739,6 +739,1561 @@
                   <div class="layui-card-body">
                     <div class="layui-upload">
                       <button type="button" class="layui-btn" id="test-upload-morecs">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h1 align="center">商品</h1>
+            <div class="layui-form-item">
+              <h3 >价签管理</h3><br/>
+              <label style="width: 100px;">14-1价签管理是否符合要求？(单选）</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic14One" value="1.完全符合"  th:if="${deial.topic14One!=null}" th:checked="${#strings.contains(deial.topic14One,'1.完全符合')}" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic14One" value="2.不符合要求"  th:if="${deial.topic14One!=null}" th:checked="${#strings.contains(deial.topic14One,'不符合要求')}" />
+              </div>
+            </div><br/>
+            <div id="th14">
+              <div  lay-filter="" >
+                <label style="width: 100px;">14-1价签管理是否符合要求？(单选）</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.灭火器.消防栓前方1米内有遮挡</td>
+                    <td width="80px;"><input type="checkbox" name="topic14Two" value="1.灭火器.消防栓前方1米内有遮挡"   th:if="${deial.topic14Two!=null}"  th:checked="${#strings.contains(deial.topic14Two,'消防栓前方1米内有遮挡')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2.安全指示灯未正常亮起</td>
+                    <td width="80px;"><input type="checkbox" name="topic14Two" value="2.安全指示灯未正常亮起" th:if="${deial.topic14Two!=null}"  th:checked="${#strings.contains(deial.topic14Two,'消防栓前方1米内有遮挡')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3.观察应急照明灯正常工作指示灯未亮起</td>
+                    <td width="80px;"><input type="checkbox" name="topic14Two" value="3.观察应急照明灯正常工作指示灯未亮起"  th:if="${deial.topic14Two!=null}"  th:checked="${#strings.contains(deial.topic14Two,'消防栓前方1米内有遮挡')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >4.安全出口指示地贴不完整有破损，消防通道不畅通</td>
+                    <td width="80px;"><input type="checkbox" name="topic14Two" value="4.安全出口指示地贴不完整有破损，消防通道不畅通" th:if="${deial.topic14Two!=null}"  th:checked="${#strings.contains(deial.topic14Two,'消防栓前方1米内有遮挡')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >5.其他请注明</td>
+                    <td width="80px;"><input type="text" name="topic14Six" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic14Four">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <h3 >水果蔬菜</h3><br/>
+              <label style="width: 100px;">15-1水果蔬菜是否符合要求？(单选）</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic15One" value="1.完全符合" th:if="${deial.topic15One!=null}"  th:checked="${#strings.contains(deial.topic15One,'完全符合')}" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic15One" value="2.不符合要求"  th:if="${deial.topic15One!=null}"  th:checked="${#strings.contains(deial.topic15One,'不符合要求')}" />
+              </div>
+            </div><br/>
+            <div id="th15">
+              <div  lay-filter="" >
+                <label style="width: 100px;">15-2不符合要求的原因是？(多选）</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.灭火器.消防栓前方1米内有遮挡</td>
+                    <td width="80px;"><input type="checkbox" name="topic15Two" value="1.生鲜商品陈列不整齐" th:if="${deial.topic15Two!=null}"  th:checked="${#strings.contains(deial.topic15Two,'生鲜商品陈列不整齐')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2.安全指示灯未正常亮起</td>
+                    <td width="80px;"><input type="checkbox" name="topic15Two" value="2.未及时打理"  th:if="${deial.topic15Two!=null}"  th:checked="${#strings.contains(deial.topic15Two,'未及时打理')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+                  <tr>
+                    <td >3.其他请注明 注意；蔬菜2张，水果2张）【无水果蔬菜则直接得分】</td>
+                    <td width="80px;"><input type="text" name="topic15Six"  th:value="${deial.topic15Six}" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic15Four">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <h3 >冰淇淋柜</h3><br/>
+              <label style="width: 100px;">16-1冰淇淋柜是否符合要求？(单选）</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic16One" value="1.完全符合" th:if="${deial.topic15Two!=null}"  th:checked="${#strings.contains(deial.topic15Two,'未及时打理')}"  /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic16One" value="2.不符合要求"  th:if="${deial.topic15Two!=null}"  th:checked="${#strings.contains(deial.topic15Two,'未及时打理')}"  />
+              </div>
+            </div><br/>
+            <div id="th16">
+              <div  lay-filter="" >
+                <label style="width: 100px;">16-2不符合要求的原因是？(多选）</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.冰柜内冰品陈列有超过红色警戒线</td>
+                    <td width="80px;"><input type="checkbox" name="topic16Two" value="1.冰柜内冰品陈列有超过红色警戒线" th:if="${deial.topic15Two!=null}"  th:checked="${#strings.contains(deial.topic15Two,'未及时打理')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2.柜壁冰霜厚度超过1cm</td>
+                    <td width="80px;"><input type="checkbox" name="topic16Two" value="2.柜壁冰霜厚度超过1cm" th:if="${deial.topic15Two!=null}"  th:checked="${#strings.contains(deial.topic15Two,'未及时打理')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3.冰柜推拉门未保持关闭</td>
+                    <td width="80px;"><input type="checkbox" name="topic16Two" value="3.冰柜推拉门未保持关闭" th:if="${deial.topic15Two!=null}"  th:checked="${#strings.contains(deial.topic15Two,'未及时打理')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >4.只能存放雪糕.水饺.汢圆.面点，有存放日配原材料及其他有气味冻制品</td>
+                    <td width="80px;"><input type="checkbox" name="topic16Two" value="4.只能存放雪糕.水饺.汢圆.面点，有存放日配原材料及其他有气味冻制品"  th:if="${deial.topic15Two!=null}"  th:checked="${#strings.contains(deial.topic15Two,'未及时打理')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+                  <tr>
+                    <td >5.其他请注明</td>
+                    <td width="80px;"><input type="text" name="topic16Six" th:value="${deial.topic16Six}" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+              <div  lay-filter="" >
+                <label style="width: 100px;">16-3检测中共有几处不符合要求？(单选））</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.1处</td>
+                    <td width="80px;"><input type="radio" name="topic16Three" value="1.1处"  th:if="${deial.topic16Three!=null}"  th:checked="${#strings.contains(deial.topic16Three,'1处')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2.2处</td>
+                    <td width="80px;"><input type="radio" name="topic16Three" value="2.2处"  th:if="${deial.topic16Three!=null}"  th:checked="${#strings.contains(deial.topic16Three,'2处')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3.3处</td>
+                    <td width="80px;"><input type="radio" name="topic16Three" value="3.3处" th:if="${deial.topic16Three!=null}"  th:checked="${#strings.contains(deial.topic16Three,'3处')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >4.4处及以上</td>
+                    <td width="80px;"><input type="radio" name="topic16Three" value="4.4处及以上"  th:if="${deial.topic16Three!=null}"  th:checked="${#strings.contains(deial.topic16Three,'4处及以上')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+
+
+                </table>
+              </div><br/>
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic16Four">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <h3 >风幕柜</h3><br/>
+              <label style="width: 100px;">17-1风幕柜是否符合要求？(单选）</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic17One" value="1.完全符合" th:if="${deial.topic17One!=null}"  th:checked="${#strings.contains(deial.topic17One,'完全符合')}"/><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic17One" value="2.不符合要求"  th:if="${deial.topic17One!=null}"  th:checked="${#strings.contains(deial.topic17One,'不符合要求')}" />
+              </div>
+            </div><br/>
+            <div id="th17">
+              <div  lay-filter="" >
+                <label style="width: 100px;">17-2不符合要求的原因是？(多选）</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.风幕柜内商品未超出3处未前进陈列</td>
+                    <td width="80px;"><input type="checkbox" name="topic17Two" value="1.风幕柜内商品未超出3处未前进陈列"  th:if="${deial.topic17Two!=null}"  th:checked="${#strings.contains(deial.topic17Two,'风幕柜内商品未超出3处未前进陈列')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2.饭团.三明治.便当陈列总数量低于9个</td>
+                    <td width="80px;"><input type="checkbox" name="topic17Two" value="2.饭团.三明治.便当陈列总数量低于9个" th:if="${deial.topic17Two!=null}"  th:checked="${#strings.contains(deial.topic17Two,'2.饭团.三明治.便当陈列总数量低于9个')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+                  <tr>
+                    <td >3.其他请注明</td>
+                    <td width="80px;"><input type="text" name="topic17Six" th:value="${deial.topic17Six}" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+              <div  lay-filter="" >
+                <label style="width: 100px;">16-3检测中共有几处不符合要求？(单选））</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.1处</td>
+                    <td width="80px;"><input type="radio" name="topic17Three" value="1.1处" th:if="${deial.topic17Three!=null}"  th:checked="${#strings.contains(deial.topic17Three,'1处')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2.2处</td>
+                    <td width="80px;"><input type="radio" name="topic17Three" value="2.2处"  th:if="${deial.topic17Three!=null}"  th:checked="${#strings.contains(deial.topic17Three,'2处')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+
+                </table>
+              </div><br/>
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic17Four">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <h3 >饮料柜</h3><br/>
+              <label style="width: 100px;">18-1饮料柜是否符合要求？(单选）</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic18One" value="1.完全符合" th:if="${deial.topic18One!=null}"  th:checked="${#strings.contains(deial.topic18One,'完全符合')}"/><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic18One" value="2.不符合要求"  th:if="${deial.topic18One!=null}"  th:checked="${#strings.contains(deial.topic18One,'不符合要求')}" />
+              </div>
+            </div><br/>
+            <div id="th18">
+              <div  lay-filter="" >
+                <label style="width: 100px;">18-2不符合要求的原因是？(多选）</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.饮料冷藏柜内商品是否超出3处未前进陈列</td>
+                    <td width="80px;"><input type="checkbox" name="topic18Two" value="1.饮料冷藏柜内商品是否超出3处未前进陈列" th:if="${deial.topic18Two!=null}"  th:checked="${#strings.contains(deial.topic18Two,'料冷藏柜内商品是否超出3处未前进陈列')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2.饮料冷藏柜内货架商品欠品是否超出2处（注意；供应链欠品不考核门店）</td>
+                    <td width="80px;"><input type="checkbox" name="topic18Two" value="2.饮料冷藏柜内货架商品欠品是否超出2处（注意；供应链欠品不考核门店）" th:if="${deial.topic18Two!=null}"  th:checked="${#strings.contains(deial.topic18Two,'饮料冷藏柜内货架商品欠品是否超出2处')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+                  <tr>
+                    <td >3.其他请注明</td>
+                    <td width="80px;"><input type="text" name="topic18Six" th:value="${deial.topic18Six}" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic18Four">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <h3 >收银台热食</h3><br/>
+              <label style="width: 100px;">19-1收银台热食是否符合要求？(单选）</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic19One" value="1.完全符合" th:if="${deial.topic19One!=null}"  th:checked="${#strings.contains(deial.topic19One,'完全符合')}" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic19One" value="2.不符合要求"  th:if="${deial.topic19One!=null}"  th:checked="${#strings.contains(deial.topic19One,'不符合要求')}"  />
+              </div>
+            </div><br/>
+            <div id="th19">
+              <div  lay-filter="" >
+                <label style="width: 100px;">19-2不符合要求的原因是？(多选）</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.关东煮有发黑品项</td>
+                    <td width="80px;"><input type="checkbox" name="topic19Two" value="1.关东煮有发黑品项"  th:if="${deial.topic19Two!=null}"  th:checked="${#strings.contains(deial.topic19Two,'关东煮有发黑品项')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2.关东煮品项数低于5个</td>
+                    <td width="80px;"><input type="checkbox" name="topic19Two" value="2.关东煮品项数低于5个"  th:if="${deial.topic19Two!=null}"  th:checked="${#strings.contains(deial.topic19Two,'关东煮品项数低于5个')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3.烤肠机烤肠陈列数低于5根</td>
+                    <td width="80px;"><input type="checkbox" name="topic19Two" value="3.烤肠机烤肠陈列数低于5根"  th:if="${deial.topic19Two!=null}"  th:checked="${#strings.contains(deial.topic19Two,'烤肠机烤肠陈列数低于5根')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >4.烤肠有发黑.表皮爆裂情况</td>
+                    <td width="80px;"><input type="checkbox" name="topic19Two" value="4.烤肠有发黑.表皮爆裂情况"  th:if="${deial.topic19Two!=null}"  th:checked="${#strings.contains(deial.topic19Two,'烤肠有发黑.表皮爆裂情况')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+                  <tr>
+                    <td >3.其他请注明</td>
+                    <td width="80px;"><input type="text" name="topic19Six" th:value="${deial.topic19Six}" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+              <div  lay-filter="" >
+                <label style="width: 100px;">19-3检测中共有几处不符合要求？(单选）</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.1处</td>
+                    <td width="80px;"><input type="radio" name="topic19Three" value="1.1处"  th:if="${deial.topic19Three!=null}"  th:checked="${#strings.contains(deial.topic19Three,'1处')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2.2处及以上</td>
+                    <td width="80px;"><input type="radio" name="topic19Three" value="2.2处及以上"  th:if="${deial.topic19Three!=null}"  th:checked="${#strings.contains(deial.topic19Three,'2处及以上')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+
+                </table>
+              </div><br/>
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic19Four">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <label style="width: 100px;">20-1收银台热食是否符合要求？(单选）</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic20One" value="1.完全符合" th:if="${deial.topic20One!=null}"  th:checked="${#strings.contains(deial.topic20One,'完全符合')}" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic20One" value="2.不符合要求"   th:if="${deial.topic20One!=null}"  th:checked="${#strings.contains(deial.topic20One,'不符合要求')}" />
+              </div><br/>
+              <div id="th20">
+                <div  lay-filter="" >
+                  <label style="width: 100px;">20-2不符合要求的原因是？(多选）</label><br/><br/>
+                  <table border="1"  align="center" >
+                    <tr>
+                      <td >1.蒸包机蒸包陈列品项数低于4个</td>
+                      <td width="80px;"><input type="checkbox" name="topic20Two" value="1.蒸包机蒸包陈列品项数低于4个"  th:if="${deial.topic20Two!=null}"  th:checked="${#strings.contains(deial.topic20Two,'蒸包机蒸包陈列品项数低于4个')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    </tr>
+                    <tr>
+                      <td >2.茶叶蛋陈列数量低于10个</td>
+                      <td width="80px;"><input type="checkbox" name="topic20Two" value="2.茶叶蛋陈列数量低于10个"  th:if="${deial.topic20Two!=null}"  th:checked="${#strings.contains(deial.topic20Two,'茶叶蛋陈列数量低于10个')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    </tr>
+
+                    <tr>
+                      <td >3.其他请注明</td>
+                      <td width="80px;"><input type="text" name="topic20Six" th:value="${deial.topic20Six}" class="layui-input"/></td>
+                    </tr>
+
+                  </table>
+                </div><br/>
+                <div  lay-filter="" >
+                  <label style="width: 100px;">20-3检测中共有几处不符合要求？(单选）</label><br/><br/>
+                  <table border="1"  align="center" >
+                    <tr>
+                      <td >1.1处</td>
+                      <td width="80px;"><input type="radio" name="topic20Three" value="1.1处"  th:if="${deial.topic20Three!=null}"  th:checked="${#strings.contains(deial.topic20Three,'1处')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    </tr>
+                    <tr>
+                      <td >2.2处及以上</td>
+                      <td width="80px;"><input type="radio" name="topic20Three" value="2.2处及以上"  th:if="${deial.topic20Three!=null}"  th:checked="${#strings.contains(deial.topic20Three,'2处及以上')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    </tr>
+
+
+                  </table>
+                </div><br/>
+                <div class="layui-col-md12">
+                  <div class="layui-card">
+                    <div class="layui-card-header">上传多张图片</div>
+                    <div class="layui-card-body">
+                      <div class="layui-upload">
+                        <button type="button" class="layui-btn" id="topic20Four">多图片上传</button>
+                        <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                          预览图：
+                          <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="layui-form-item">
+              <h3 >面包货架</h3><br/>
+              <label style="width: 100px;">21-1面包货架是否符合要求？(单选）</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic21One" value="1.完全符合" th:if="${deial.topic21One!=null}"  th:checked="${#strings.contains(deial.topic21One,'完全符合')}"/><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic21One" value="2.不符合要求"   th:if="${deial.topic21One!=null}"  th:checked="${#strings.contains(deial.topic21One,'不符合要求')}" />
+              </div>
+            </div><br/>
+            <div id="th21">
+              <div  lay-filter="" >
+                <label style="width: 100px;">21-2不符合要求的原因是？(多选）</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.面包货架未符合陈列原则</td>
+                    <td width="80px;"><input type="checkbox" name="topic21Two" value="1.面包货架未符合陈列原则"  th:if="${deial.topic21Two!=null}"  th:checked="${#strings.contains(deial.topic21Two,'面包货架未符合陈列原则')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2.面包品项数低于6个</td>
+                    <td width="80px;"><input type="checkbox" name="topic21Two" value="2.面包品项数低于6个"  th:if="${deial.topic21Two!=null}"  th:checked="${#strings.contains(deial.topic21Two,'面包品项数低于6个')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3.面包陈列总数低于12个</td>
+                    <td width="80px;"><input type="checkbox" name="topic21Two" value="3.面包陈列总数低于12个"  th:if="${deial.topic21Two!=null}"  th:checked="${#strings.contains(deial.topic21Two,'面包陈列总数低于12个')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >4.离峰时，面包未集中向上陈列</td>
+                    <td width="80px;"><input type="checkbox" name="topic21Two" value="4.离峰时，面包未集中向上陈列"  th:if="${deial.topic21Two!=null}"  th:checked="${#strings.contains(deial.topic21Two,'面包未集中向上陈列')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+                  <tr>
+                    <td >其他请注明</td>
+                    <td width="80px;"><input type="text" name="topic21Six"  th:value="${deial.topic21Six}" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+              <div  lay-filter="" >
+                <label style="width: 100px;">21-3检测中共有几处不符合要求？(单选）</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.1处</td>
+                    <td width="80px;"><input type="radio" name="topic21Three" value="1.1处"   th:if="${deial.topic21Three!=null}"  th:checked="${#strings.contains(deial.topic21Three,'1处')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2.2处</td>
+                    <td width="80px;"><input type="radio" name="topic21Three" value="2.2处"   th:if="${deial.topic21Three!=null}"  th:checked="${#strings.contains(deial.topic21Three,'2处')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3.3处</td>
+                    <td width="80px;"><input type="radio" name="topic21Three" value="3.3处"  th:if="${deial.topic21Three!=null}"  th:checked="${#strings.contains(deial.topic21Three,'3处')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >4.4处及以上</td>
+                    <td width="80px;"><input type="radio" name="topic21Three" value="4.4处及以上"   th:if="${deial.topic21Three!=null}"  th:checked="${#strings.contains(deial.topic21Three,'4处及以上')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+
+                </table>
+              </div><br/>
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic21Four">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="layui-form-item">
+              <h3 >货品陈列</h3><br/>
+              <label style="width: 100px;">22-1货品陈列是否符合要求？(单选）</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic22One" value="1.完全符合" th:if="${deial.topic22One!=null}"  th:checked="${#strings.contains(deial.topic22One,'完全符合')}"/><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic22One" value="2.不符合要求"  th:if="${deial.topic22One!=null}"  th:checked="${#strings.contains(deial.topic22One,'不符合要求')}" />
+              </div>
+            </div><br/>
+            <div id="th22">
+              <div  lay-filter="" >
+                <label style="width: 100px;">22-2不符合要求的原因是？(多选）</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.商品破包涨袋变形存架</td>
+                    <td width="80px;"><input type="checkbox" name="topic22Two" value="1.商品破包涨袋变形存架" th:if="${deial.topic22Two!=null}"  th:checked="${#strings.contains(deial.topic22Two,'商品破包涨袋变形存架')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2.单层货架商品未前进陈列数超2个</td>
+                    <td width="80px;"><input type="checkbox" name="topic22Two" value="2.单层货架商品未前进陈列数超2个" th:if="${deial.topic22Two!=null}"  th:checked="${#strings.contains(deial.topic22Two,'单层货架商品未前进陈列数超2个')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3.单层货架欠品数超2个</td>
+                    <td width="80px;"><input type="checkbox" name="topic22Two" value="3.单层货架欠品数超2个" th:if="${deial.topic22Two!=null}"  th:checked="${#strings.contains(deial.topic22Two,'单层货架欠品数超2个')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+                  <tr>
+                    <td >3.其他请注明</td>
+                    <td width="80px;"><input type="text" name="topic22Six" th:value="${deial.topic22Six}" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+              <div  lay-filter="" >
+                <label style="width: 100px;">22-3检测中共有几处不符合要求？(单选）</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.1处</td>
+                    <td width="80px;"><input type="radio" name="topic22Three" value="1.1处" th:if="${deial.topic22Three!=null}"  th:checked="${#strings.contains(deial.topic22Three,'1处')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+                  <tr>
+                    <td >2.2处及以上</td>
+                    <td width="80px;"><input type="radio" name="topic22Three" value="2.2处及以上" th:if="${deial.topic22Three!=null}"  th:checked="${#strings.contains(deial.topic22Three,'2处及以上')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                </table>
+              </div><br/>
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic22Four">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label style="width: 100px;">23-1货品陈列是否符合要求？(单选）</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic23One" value="1.完全符合" th:if="${deial.topic23One!=null}"  th:checked="${#strings.contains(deial.topic23One,'完全符合')}" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic23One" value="2.不符合要求"  th:if="${deial.topic23One!=null}"  th:checked="${#strings.contains(deial.topic23One,'不符合要求')}" />
+              </div>
+            </div><br/>
+            <div id="th23 ">
+              <div  lay-filter="" >
+                <label style="width: 100px;">23-2不符合要求的原因是？(多选）</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.常规商品陈列不整齐</td>
+                    <td width="80px;"><input type="checkbox" name="topic23Two" value="1.常规商品陈列不整齐" th:if="${deial.topic23Two!=null}"  th:checked="${#strings.contains(deial.topic23Two,'常规商品陈列不整齐')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2.常规商品货量不丰满</td>
+                    <td width="80px;"><input type="checkbox" name="topic23Two" value="2.常规商品货量不丰满"  th:if="${deial.topic23Two!=null}"  th:checked="${#strings.contains(deial.topic23Two,'常规商品货量不丰满')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3.常规商品陈列未前后左右对齐</td>
+                    <td width="80px;"><input type="checkbox" name="topic23Two" value="3.常规商品陈列未前后左右对齐" th:if="${deial.topic23Two!=null}"  th:checked="${#strings.contains(deial.topic23Two,'常规商品陈列未前后左右对齐')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >4.常规商品陈列未正面朝外</td>
+                    <td width="80px;"><input type="checkbox" name="topic23Two" value="4.常规商品陈列未正面朝外" th:if="${deial.topic23Two!=null}"  th:checked="${#strings.contains(deial.topic23Two,'常规商品陈列未正面朝外')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >5.缺货商品挂放缺货牌后，左右商品拉牌面货架有空位</td>
+                    <td width="80px;"><input type="checkbox" name="topic23Two" value="5.缺货商品挂放缺货牌后，左右商品拉牌面货架有空位" th:if="${deial.topic23Two!=null}"  th:checked="${#strings.contains(deial.topic23Two,'左右商品拉牌面货架有空位')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+                  <tr>
+                    <td >其他请注明</td>
+                    <td width="80px;"><input type="text" name="topic23Six" th:value="${deial.topic23Six}" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic23Four">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label style="width: 100px;">24-1货品陈列是否符合要求？(单选）</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic24One" value="1.完全符合" th:if="${deial.topic24One!=null}"  th:checked="${#strings.contains(deial.topic24One,'完全符合')}" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic24One" value="2.不符合要求" th:if="${deial.topic24One!=null}"  th:checked="${#strings.contains(deial.topic24One,'不符合要求')}" />
+              </div>
+            </div><br/>
+            <div id="th24 ">
+              <div  lay-filter="" >
+                <label style="width: 100px;">24-2不符合要求的原因是？(多选）</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.门店内货物或推车堵塞通道影响顾客贩物</td>
+                    <td width="80px;"><input type="checkbox" name="topic24Two" value="1.门店内货物或推车堵塞通道影响顾客贩物"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >其他请注明</td>
+                    <td width="80px;"><input type="text" name="topic24Six" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic24Four">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label style="width: 100px;">25-1货品陈列是否符合要求？(单选）</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic25One" value="1.完全符合" onclick="th25Div(1)" checked="checked" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic25One" value="2.不符合要求"  onclick="th25Div(2)" />
+              </div>
+            </div><br/>
+            <div id="th25">
+              <div  lay-filter="" >
+                <label style="width: 100px;">25-2不符合要求的原因是？(多选）</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.商品直接落地存放</td>
+                    <td width="80px;"><input type="checkbox" name="topic25Two" value="1.商品直接落地存放" th:if="${deial.topic25Two!=null}"  th:checked="${#strings.contains(deial.topic25Two,'商品直接落地存放')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >其他请注明</td>
+                    <td width="80px;"><input type="text" name="topic25Six" th:value="${deial.topic25Six}" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic25Four">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <h3>经营</h3>
+              <label style="width: 100px;">26-1经营是否符合要求？(单选）</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic26One" value="1.完全符合" th:if="${deial.topic26One!=null}"  th:checked="${#strings.contains(deial.topic26One,'完全符合')}" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic26One" value="2.不符合要求"  th:if="${deial.topic26One!=null}"  th:checked="${#strings.contains(deial.topic26One,'不符合要求')}"  />
+              </div>
+            </div><br/>
+            <div id="th26">
+              <div  lay-filter="" >
+                <label style="width: 100px;">26-2不符合要求的原因是？(多选）</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.有过期变质商品存架</td>
+                    <td width="80px;"><input type="checkbox" name="topic26Two" value="1.有过期变质商品存架"   th:if="${deial.topic26Two!=null}"  th:checked="${#strings.contains(deial.topic26Two,'有过期变质商品存架')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >其他请注明</td>
+                    <td width="80px;"><input type="text" name="topic26Six" th:value="${deial.topic26Six}" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic26Four">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h1 align="center">服务</h1>
+            <div class="layui-form-item">
+              <h3>顾客进店</h3><span>注意；未喊欢迎光临苏宁小店“即扣4分 其他仸意1项不达标即扣1分，总分4分，最多扣4分</span>
+              <label style="width: 100px;">27-1顾客进店是否符合要求？(单选）</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic27One"  value="1.完全符合" th:if="${deial.topic27One!=null}"  th:checked="${#strings.contains(deial.topic27One,'完全符合')}" onclick="th27Div(1)" checked="checked" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic27One" value="2.不符合要求" th:if="${deial.topic27One!=null}"  th:checked="${#strings.contains(deial.topic27One,'不符合要求')}" onclick="th27Div(2)" />
+              </div>
+            </div><br/>
+            <div id="th27">
+              <div  lay-filter="" >
+                <label style="width: 100px;">27-2不符合要求的原因是？(多选）</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.员工对所有进店顾客未喊“欢迎光临苏宁小店</td>
+                    <td width="80px;"><input type="checkbox" name="topic27Two" value="1.员工对所有进店顾客未喊“欢迎光临苏宁小店"  th:if="${deial.topic27Two!=null}"  th:checked="${#strings.contains(deial.topic27Two,'员工对所有进店顾客未喊')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2.员工未面带微笑</td>
+                    <td width="80px;"><input type="checkbox" name="topic27Two" value="2.员工未面带微笑" th:if="${deial.topic27Two!=null}"  th:checked="${#strings.contains(deial.topic27Two,'员工未面带微笑')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3.员工未对所有顾客都有服务用语</td>
+                    <td width="80px;"><input type="checkbox" name="topic27Two" value="1.有过期变质商品存架"  th:if="${deial.topic27Two!=null}"  th:checked="${#strings.contains(deial.topic27Two,'有过期变质商品存架')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+                  <tr>
+                    <td >其他请注明</td>
+                    <td width="80px;"><input type="text" name="topic27Six"  th:value="${deial.topic27Six}" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+              <div  lay-filter="" >
+                <label style="width: 100px;">27-3检测中共有几处不符合要求？(单选）</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.1处</td>
+                    <td width="80px;"><input type="radio" name="topic27Three" value="1.1处"  th:if="${deial.topic27Three!=null}"  th:checked="${#strings.contains(deial.topic27Three,'1处')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2.2处</td>
+                    <td width="80px;"><input type="radio" name="topic27Three" value="2.2处"  th:if="${deial.topic27Three!=null}"  th:checked="${#strings.contains(deial.topic27Three,'2处')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3.3处</td>
+                    <td width="80px;"><input type="radio" name="topic27Three" value="2.3处" th:if="${deial.topic27Three!=null}"  th:checked="${#strings.contains(deial.topic27Three,'3处')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >4.4处及以上</td>
+                    <td width="80px;"><input type="radio" name="topic27Three" value="4.4处及以上" th:if="${deial.topic27Three!=null}"  th:checked="${#strings.contains(deial.topic27Three,'4处及以上')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+
+                </table>
+              </div><br/>
+
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic27Four">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label style="width: 100px;">28-1顾客进店是否符合要求？</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic28One" value="1.完全符合" th:if="${deial.topic28One!=null}"  th:checked="${#strings.contains(deial.topic28One,'完全符合')}"  /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic28One" value="2.不符合要求"  th:if="${deial.topic28One!=null}"  th:checked="${#strings.contains(deial.topic28One,'不符合要求')}"  />
+              </div>
+            </div><br/>
+            <div id="th28">
+              <div  lay-filter="" >
+                <label style="width: 100px;">28-2不符合要求的原因？</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.当月活动未推荐和宣传</td>
+                    <td width="80px;"><input type="checkbox" name="topic28Two" value="1.当月活动未推荐和宣传" th:if="${deial.topic28Two!=null}"  th:checked="${#strings.contains(deial.topic28Two,'当月活动未推荐和宣传')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >其他请注明</td>
+                    <td width="80px;"><input type="text" name="topic28Six" th:value="${deial.topic28Six}" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic28Four">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <h3>顾客结账</h3>
+              <label style="width: 100px;">29-1结账前店员是否符合要求？</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic29One" value="1.完全符合" th:if="${deial.topic29One!=null}"  th:checked="${#strings.contains(deial.topic29One,'完全符合')}" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic29One" value="2.不符合要求"  th:if="${deial.topic29One!=null}"  th:checked="${#strings.contains(deial.topic29One,'不符合要求')}" />
+              </div>
+            </div><br/>
+            <div id="th29">
+              <div  lay-filter="" >
+                <label style="width: 100px;">29-2不符合要求的原因？</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.未询问顾客是小店超级会员</td>
+                    <td width="80px;"><input type="checkbox" name="topic29Two" value="1.未询问顾客是小店超级会员"  th:if="${deial.topic29Two!=null}"  th:checked="${#strings.contains(deial.topic29Two,'未询问顾客是小店超级会员')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2.未询问顾客出示会员码</td>
+                    <td width="80px;"><input type="checkbox" name="topic29Two" value="2.未询问顾客出示会员码" th:if="${deial.topic29Two!=null}"  th:checked="${#strings.contains(deial.topic29Two,'未询问顾客出示会员码')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3.未推荐顾客下载APP</td>
+                    <td width="80px;"><input type="checkbox" name="topic29Two" value="3.未推荐顾客下载APP" th:if="${deial.topic29Two!=null}"  th:checked="${#strings.contains(deial.topic29Two,'未推荐顾客下载APP')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+                  <tr>
+                    <td >其他请注明</td>
+                    <td width="80px;"><input type="text" name="topic29Six" th:value="${deial.topic29Six}" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+              <div  lay-filter="" >
+                <label style="width: 100px;">29-3检测中共有几处不符合要求？(单选）</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.1处</td>
+                    <td width="80px;"><input type="radio" name="topic29Three" value="1.1处"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2.2处</td>
+                    <td width="80px;"><input type="radio" name="topic29Three" value="2.2处"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3.3处</td>
+                    <td width="80px;"><input type="radio" name="topic29Three" value="2.3"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >4.4处及以上</td>
+                    <td width="80px;"><input type="radio" name="topic29Three" value="4.4处及以上"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+
+                </table>
+              </div><br/>
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic29Four">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label style="width: 100px;">30-1结账时店员是否符合要求？</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic30One" value="1.完全符合" th:if="${deial.topic30One!=null}"  th:checked="${#strings.contains(deial.topic30One,'完全符合')}" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic30One" value="2.不符合要求" th:if="${deial.topic30One!=null}"  th:checked="${#strings.contains(deial.topic30One,'不符合要求')}"  />
+              </div>
+            </div><br/>
+            <div id="th30">
+              <div  lay-filter="" >
+                <label style="width: 100px;">30-2不符合要求的原因？</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.未主动询问顾客支付方式</td>
+                    <td width="80px;"><input type="checkbox" name="topic30Two" value="1.未主动询问顾客支付方式"  th:if="${deial.topic30Two!=null}"  th:checked="${#strings.contains(deial.topic30Two,'未主动询问顾客支付方式')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2.未主动询问顾客支付方式</td>
+                    <td width="80px;"><input type="checkbox" name="topic30Two" value="2.未主动询问顾客支付方式"  th:if="${deial.topic30Two!=null}"  th:checked="${#strings.contains(deial.topic30Two,'未主动询问顾客支付方式')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3.顾客贩买2件及以上商品时，未主动为顾客提供贩物袋，并帮顾客装袋，商品双手递交给顾客</td>
+                    <td width="80px;"><input type="checkbox" name="topic30Two" value="3.顾客贩买2件及以上商品时，未主动为顾客提供贩物袋，并帮顾客装袋，商品双手递交给顾客"  th:if="${deial.topic30Two!=null}"  th:checked="${#strings.contains(deial.topic30Two,'未主动为顾客提供贩物袋')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >4.未报出应收总金额</td>
+                    <td width="80px;"><input type="checkbox" name="topic30Two" value="4.未报出应收总金额"  th:if="${deial.topic30Two!=null}"  th:checked="${#strings.contains(deial.topic30Two,'未报出应收总金额')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+                  <tr>
+                    <td >其他请注明</td>
+                    <td width="80px;"><input type="text" name="topic30Six" th:value="${deial.topic30Six}" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+              <div  lay-filter="" >
+                <label style="width: 100px;">30-3检测中共有几处不符合要求？(单选）</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.1处</td>
+                    <td width="80px;"><input type="radio" name="topic30Three" value="1.1处" th:if="${deial.topic30Three!=null}"  th:checked="${#strings.contains(deial.topic30Three,'1处')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+                  <tr>
+                    <td >2处及以上</td>
+                    <td width="80px;"><input type="radio" name="topic30Three" value="2.2处及以上" th:if="${deial.topic30Three!=null}"  th:checked="${#strings.contains(deial.topic30Three,'2处及以上')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+
+                </table>
+              </div><br/>
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic30Four">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label style="width: 100px;">31-1付款后店员是否符合要求？</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic31One" value="1.完全符合" th:if="${deial.topic31One!=null}"  th:checked="${#strings.contains(deial.topic31One,'完全符合')}" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic31One" value="2.不符合要求"  th:if="${deial.topic31One!=null}"  th:checked="${#strings.contains(deial.topic31One,'不符合要求')}" />
+              </div>
+            </div><br/>
+            <div id="th31">
+              <div  lay-filter="" >
+                <label style="width: 100px;">31-2不符合要求的原因？</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.未主动向顾客呈递贩物小票及找零【含刷卡】</td>
+                    <td width="80px;"><input type="checkbox" name="topic31Two" value="1.未主动向顾客呈递贩物小票及找零【含刷卡】" th:if="${deial.topic31Two!=null}"  th:checked="${#strings.contains(deial.topic31Two,'未主动向顾客呈递贩物小票及找零')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2.未双手呈递或者递交收银小票</td>
+                    <td width="80px;"><input type="checkbox" name="topic31Two" value="2.未双手呈递或者递交收银小票"  th:if="${deial.topic31Two!=null}"  th:checked="${#strings.contains(deial.topic31Two,'未双手呈递或者递交收银小票')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3.未双手呈递或者递交收银小票</td>
+                    <td width="80px;"><input type="checkbox" name="topic31Two" value="3.未双手呈递或者递交收银小票" th:if="${deial.topic31Two!=null}"  th:checked="${#strings.contains(deial.topic31Two,'未双手呈递或者递交收银小票')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+                  <tr>
+                    <td >其他请注明</td>
+                    <td width="80px;"><input type="text" name="topic31Six" th:value="${deial.topic31Six}" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+              <div  lay-filter="" >
+                <label style="width: 100px;">31-3检测中共有几处不符合要求？(单选）</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.1处</td>
+                    <td width="80px;"><input type="radio" name="topic31Three" value="1.1处" th:if="${deial.topic31Three!=null}"  th:checked="${#strings.contains(deial.topic31Three,'1处')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+                  <tr>
+                    <td >2处及以上</td>
+                    <td width="80px;"><input type="radio" name="topic31Three" value="2.2处及以上" th:if="${deial.topic31Three!=null}"  th:checked="${#strings.contains(deial.topic31Three,'2处及')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+
+                </table>
+              </div><br/>
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic31Four">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <h3>顾客离开</h3>
+              <label style="width: 100px;">32-1顾客离开是否符合要求？</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic32One" value="1.完全符合" th:if="${deial.topic32One!=null}"  th:checked="${#strings.contains(deial.topic32One,'完全符合')}" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic32One" value="2.不符合要求"  th:if="${deial.topic32One!=null}"  th:checked="${#strings.contains(deial.topic32One,'不符合要求')}" />
+              </div>
+            </div><br/>
+            <div id="th32">
+              <div  lay-filter="" >
+                <label style="width: 100px;">32-2不符合要求的原因？</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.顾客离开门店时，员工未对所有顾客告别（发现一次未道别就扣分）</td>
+                    <td width="80px;"><input type="checkbox" name="topic32Two" value="1.顾客离开门店时，员工未对所有顾客告别（发现一次未道别就扣分）" th:if="${deial.topic32Two!=null}"  th:checked="${#strings.contains(deial.topic32Two,'顾客离开门店时，员工未对所有顾客告别')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >其他请注明</td>
+                    <td width="80px;"><input type="text" name="topic32Six" th:value="${deial.topic32Six}" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic32Four">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <h3>员工仪容仪表</h3>
+              <label style="width: 100px;">33-1员工仪容仪表是否符合要求？</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic33One" value="1.完全符合" th:if="${deial.topic33One!=null}"  th:checked="${#strings.contains(deial.topic33One,'完全符合')}"/><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic33One" value="2.不符合要求" th:if="${deial.topic33One!=null}"  th:checked="${#strings.contains(deial.topic33One,'不符合要求')}" />
+              </div>
+            </div><br/>
+            <div id="th33">
+              <div  lay-filter="" >
+                <label style="width: 100px;">33-2不符合要求的原因？</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.未着工装</td>
+                    <td width="80px;"><input type="checkbox" name="topic33Two" value="1.未着工装"  th:if="${deial.topic33Two!=null}"  th:checked="${#strings.contains(deial.topic33Two,'未着工装')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2.工装不干净工整</td>
+                    <td width="80px;"><input type="checkbox" name="topic33Two" value="2.工装不干净工整"  th:if="${deial.topic33Two!=null}"  th:checked="${#strings.contains(deial.topic33Two,'工装不干净工整')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3.上衣未在裤子外</td>
+                    <td width="80px;"><input type="checkbox" name="topic33Two" value="3.上衣未在裤子外" th:if="${deial.topic33Two!=null}"  th:checked="${#strings.contains(deial.topic33Two,'上衣未在裤子外')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >4.未佩戴工牌</td>
+                    <td width="80px;"><input type="checkbox" name="topic33Two" value="4.未佩戴工牌" th:if="${deial.topic33Two!=null}"  th:checked="${#strings.contains(deial.topic33Two,'未佩戴工牌')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >5.大区未按照季节统一工装</td>
+                    <td width="80px;"><input type="checkbox" name="topic33Two" value="5.大区未按照季节统一工装" th:if="${deial.topic33Two!=null}"  th:checked="${#strings.contains(deial.topic33Two,'大区未按照季节统一工装')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >6.内衬衣有外漏</td>
+                    <td width="80px;"><input type="checkbox" name="topic33Two" value="6.内衬衣有外漏" th:if="${deial.topic33Two!=null}"  th:checked="${#strings.contains(deial.topic33Two,'内衬衣有外漏')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >其他请注明</td>
+                    <td width="80px;"><input type="text" name="topic33Six" th:value="${deial.topic33Six}" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+              <div  lay-filter="" >
+                <label style="width: 100px;">33-3检测中共有几处不符合要求？(单选）</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.1处</td>
+                    <td width="80px;"><input type="radio" name="topic33Three" value="1.1处"  th:if="${deial.topic33Three!=null}"  th:checked="${#strings.contains(deial.topic33Three,'1处')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2处</td>
+                    <td width="80px;"><input type="radio" name="topic33Three" value="2.2处" th:if="${deial.topic33Three!=null}"  th:checked="${#strings.contains(deial.topic33Three,'2处')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3处</td>
+                    <td width="80px;"><input type="radio" name="topic33Three" value="3.3处" th:if="${deial.topic33Three!=null}"  th:checked="${#strings.contains(deial.topic33Three,'3处')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+                  <tr>
+                    <td >4处及以上</td>
+                    <td width="80px;"><input type="radio" name="topic33Three" value="4.4处及以上" th:if="${deial.topic33Three!=null}"  th:checked="${#strings.contains(deial.topic33Three,'4处及以上')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+
+                </table>
+              </div><br/>
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic33Four">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label style="width: 100px;">34-1员工仪容仪表是否符合要求？</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic34One" value="1.完全符合" th:if="${deial.topic34One!=null}"  th:checked="${#strings.contains(deial.topic34One,'完全符合')}" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic34One" value="2.不符合要求"  th:if="${deial.topic34One!=null}"  th:checked="${#strings.contains(deial.topic34One,'不符合要求')}" />
+              </div>
+            </div><br/>
+            <div id="th34">
+              <div  lay-filter="" >
+                <label style="width: 100px;">34-2不符合要求的原因？</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.未着深色工整长裤</td>
+                    <td width="80px;"><input type="checkbox" name="topic34Two" value="1.未着深色工整长裤"  th:if="${deial.topic34Two!=null}"  th:checked="${#strings.contains(deial.topic34Two,'未着深色工整长裤')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2.裤子长度未遮住脚踝</td>
+                    <td width="80px;"><input type="checkbox" name="topic34Two" value="2.裤子长度未遮住脚踝" th:if="${deial.topic34Two!=null}"  th:checked="${#strings.contains(deial.topic34Two,'裤子长度未遮住脚踝')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3.穿拖鞋式雨鞋.凉鞋.拖鞋.高跟鞋.靴子</td>
+                    <td width="80px;"><input type="checkbox" name="topic34Two" value="3.穿拖鞋式雨鞋.凉鞋.拖鞋.高跟鞋.靴子"  th:if="${deial.topic34Two!=null}"  th:checked="${#strings.contains(deial.topic34Two,'拖鞋式雨鞋.凉鞋.拖鞋.高跟鞋.靴子')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >4.未穿袜子</td>
+                    <td width="80px;"><input type="checkbox" name="topic34Two" value="4.未穿袜子" th:if="${deial.topic34Two!=null}"  th:checked="${#strings.contains(deial.topic34Two,'未穿袜子')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >其他请注明</td>
+                    <td width="80px;"><input type="text" name="topic34Six" th:value="${deial.topic34Six}" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+              <div  lay-filter="" >
+                <label style="width: 100px;">34-3检测中共有几处不符合要求？(单选）</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.1处</td>
+                    <td width="80px;"><input type="radio" name="topic34Three" value="1.1处" th:if="${deial.topic34Three!=null}"  th:checked="${#strings.contains(deial.topic34Three,'1处')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2处及以上</td>
+                    <td width="80px;"><input type="radio" name="topic34Three" value="2.2处及以上" th:if="${deial.topic34Three!=null}"  th:checked="${#strings.contains(deial.topic34Three,'2处及以上')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+
+                </table>
+              </div><br/>
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic34Four">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label style="width: 100px;">35-1员工仪容仪表是否符合要求？</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic35One" value="1.完全符合" th:if="${deial.topic35One!=null}"  th:checked="${#strings.contains(deial.topic35One,'完全符合')}" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic35One" value="2.不符合要求" th:if="${deial.topic35One!=null}"  th:checked="${#strings.contains(deial.topic35One,'不符合要求')}" />
+              </div>
+            </div><br/>
+            <div id="th35">
+              <div  lay-filter="" >
+                <label style="width: 100px;">35-2不符合要求的原因？</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.头发染夸张颜色</td>
+                    <td width="80px;"><input type="checkbox" name="topic35Two" value="1.头发染夸张颜色"  th:if="${deial.topic35Two!=null}"  th:checked="${#strings.contains(deial.topic35Two,'头发染夸张颜色')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2.头部不干净有头屑</td>
+                    <td width="80px;"><input type="checkbox" name="topic35Two" value="2.头部不干净有头屑" th:if="${deial.topic35Two!=null}"  th:checked="${#strings.contains(deial.topic35Two,'头部不干净有头屑')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3.男生头发过眉，两侧过耳，留鬓角，带耳环.耳钉</td>
+                    <td width="80px;"><input type="checkbox" name="topic35Two" value="3.男生头发过眉，两侧过耳，留鬓角，带耳环.耳钉"  th:if="${deial.topic35Two!=null}"  th:checked="${#strings.contains(deial.topic35Two,'男生头发过眉，两侧过耳，留鬓角，带耳环.耳钉')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >4.女生长发未扎起来，刘海遮眼睛，带耳钉.耳环</td>
+                    <td width="80px;"><input type="checkbox" name="topic35Two" value="4.女生长发未扎起来，刘海遮眼睛，带耳钉.耳环"  th:if="${deial.topic35Two!=null}"  th:checked="${#strings.contains(deial.topic35Two,'女生长发未扎起来，刘海遮眼睛，带耳钉.耳环')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >其他请注明</td>
+                    <td width="80px;"><input type="text" name="topic35Six" th:value="${deial.topic35Six}" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+              <div  lay-filter="" >
+                <label style="width: 100px;">35-3检测中共有几处不符合要求？(单选）</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.1处</td>
+                    <td width="80px;"><input type="radio" name="topic35Three" value="1.1处"  th:if="${deial.topic35Three!=null}"  th:checked="${#strings.contains(deial.topic35Three,'1处')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2处及以上</td>
+                    <td width="80px;"><input type="radio" name="topic35Three" value="2.2处及以上"   th:if="${deial.topic35Three!=null}"  th:checked="${#strings.contains(deial.topic35Three,'2处及以上')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+
+                </table>
+              </div><br/>
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic35Four">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label style="width: 100px;">36-1员工仪容仪表是否符合要求？</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic36One" value="1.完全符合" th:if="${deial.topic36One!=null}"  th:checked="${#strings.contains(deial.topic36One,'完全符合')}" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic36One" value="2.不符合要求"  th:if="${deial.topic36One!=null}"  th:checked="${#strings.contains(deial.topic36One,'不符合要求')}" />
+              </div>
+            </div><br/>
+            <div id="th36">
+              <div  lay-filter="" >
+                <label style="width: 100px;">36-2不符合要求的原因？</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.上班前吃葱蒜等有异味食物</td>
+                    <td width="80px;"><input type="checkbox" name="topic36Two" value="1.上班前吃葱蒜等有异味食物"  th:if="${deial.topic36Two!=null}"  th:checked="${#strings.contains(deial.topic36Two,'上班前吃葱蒜等有异味食物')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2.上班前喝酒及含酒精饮料</td>
+                    <td width="80px;"><input type="checkbox" name="topic356wo" value="2.上班前喝酒及含酒精饮料" th:if="${deial.topic36Two!=null}"  th:checked="${#strings.contains(deial.topic36Two,'上班前喝酒及含酒精饮料')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3.男生留胡须或戴金属项链或化妆</td>
+                    <td width="80px;"><input type="checkbox" name="topic36Two" value="3.男生留胡须或戴金属项链或化妆"  th:if="${deial.topic36Two!=null}"  th:checked="${#strings.contains(deial.topic36Two,'男生留胡须或戴金属项链或化妆')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >4.女生上班浓妆艳抹；戴假睫毛；戴鼻环.唇环</td>
+                    <td width="80px;"><input type="checkbox" name="topic36Two" value="4.女生上班浓妆艳抹；戴假睫毛；戴鼻环.唇环"  th:if="${deial.topic36Two!=null}"  th:checked="${#strings.contains(deial.topic36Two,'女生上班浓妆艳抹；戴假睫毛；戴鼻环.唇环')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >其他请注明</td>
+                    <td width="80px;"><input type="text" name="topic36Six" th:value="${deial.topic36Six}" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+              <div  lay-filter="" >
+                <label style="width: 100px;">36-3检测中共有几处不符合要求？(单选）</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.1处</td>
+                    <td width="80px;"><input type="radio" name="topic36Three" value="1.1处"  th:if="${deial.topic36Three!=null}"  th:checked="${#strings.contains(deial.topic36Three,'1处')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2处及以上</td>
+                    <td width="80px;"><input type="radio" name="topic36Three" value="2.2处及以上" th:if="${deial.topic36Three!=null}"  th:checked="${#strings.contains(deial.topic36Three,'2处及以上')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+
+                </table>
+              </div><br/>
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic36Four">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label style="width: 100px;">37-1员工仪容仪表是否符合要求？</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic37One" value="1.完全符合" th:if="${deial.topic37One!=null}"  th:checked="${#strings.contains(deial.topic37One,'完全符合')}"  /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic37One" value="2.不符合要求" th:if="${deial.topic37One!=null}"  th:checked="${#strings.contains(deial.topic37One,'不符合要求')}"  />
+              </div>
+            </div><br/>
+            <div id="th37">
+              <div  lay-filter="" >
+                <label style="width: 100px;">37-2不符合要求的原因？</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.手部未保持清洁，指甲有污垢</td>
+                    <td width="80px;"><input type="checkbox" name="topic37Two" value="1.手部未保持清洁，指甲有污垢"  th:if="${deial.topic37Two!=null}"  th:checked="${#strings.contains(deial.topic37Two,'手部未保持清洁')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2.指甲未修剪整齐，长度为从掌心方向能看到指甲露出指尖</td>
+                    <td width="80px;"><input type="checkbox" name="topic37Two" value="2.指甲未修剪整齐，长度为从掌心方向能看到指甲露出指尖" th:if="${deial.topic37Two!=null}"  th:checked="${#strings.contains(deial.topic37Two,'长度为从掌心方向能看到指甲露出指尖')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3.当班期间能涂指甲油</td>
+                    <td width="80px;"><input type="checkbox" name="topic37Two" value="3.当班期间能涂指甲油"  th:if="${deial.topic37Two!=null}"  th:checked="${#strings.contains(deial.topic37Two,'当班期间能涂指甲油')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >4.带假指甲</td>
+                    <td width="80px;"><input type="checkbox" name="topic37Two" value="4.带假指甲" th:if="${deial.topic37Two!=null}"  th:checked="${#strings.contains(deial.topic37Two,'带假指甲')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >5.有纹身.刺青（包括手臂.手肘处）</td>
+                    <td width="80px;"><input type="checkbox" name="topic37Two" value="5.有纹身.刺青（包括手臂.手肘处）"  th:if="${deial.topic37Two!=null}"  th:checked="${#strings.contains(deial.topic37Two,'有纹身.刺青（包括手臂.手肘处')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >6.上班时佩戴饰物</td>
+                    <td width="80px;"><input type="checkbox" name="topic37Two" value="6.上班时佩戴饰物" th:if="${deial.topic37Two!=null}"  th:checked="${#strings.contains(deial.topic37Two,'上班时佩戴饰物')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >其他请注明</td>
+                    <td width="80px;"><input type="text" name="topic37Six"  th:value="${deial.topic37Six}" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+              <div  lay-filter="" >
+                <label style="width: 100px;">37-3检测中共有几处不符合要求？(单选）</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.1处</td>
+                    <td width="80px;"><input type="radio" name="topic37Three" value="1.1处"  th:if="${deial.topic37Three!=null}"  th:checked="${#strings.contains(deial.topic37Three,'1处')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2处及以上</td>
+                    <td width="80px;"><input type="radio" name="topic37Three" value="2.2处及以上" th:if="${deial.topic37Three!=null}"  th:checked="${#strings.contains(deial.topic37Three,'2处及以上')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+
+                </table>
+              </div><br/>
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic37Four">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="layui-form-item">
+              <h3>员工行为检查</h3>
+              <label style="width: 100px;">38-1员工行为检查是否符合要求？</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic38One" value="1.完全符合" th:if="${deial.topic38One!=null}"  th:checked="${#strings.contains(deial.topic38One,'完全符合')}" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic38One" value="2.不符合要求"  th:if="${deial.topic38One!=null}"  th:checked="${#strings.contains(deial.topic38One,'不符合要求')}"  />
+              </div>
+            </div><br/>
+            <div id="th38">
+              <div  lay-filter="" >
+                <label style="width: 100px;">38-2不符合要求的原因？</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.在卖场聚众聊天.嬉戏玩耍，倚靠货架</td>
+                    <td width="80px;"><input type="checkbox" name="topic38Two" value="1.在卖场聚众聊天.嬉戏玩耍，倚靠货架"  th:if="${deial.topic38Two!=null}"  th:checked="${#strings.contains(deial.topic38Two,'在卖场聚众聊天.嬉戏玩耍，倚靠货架')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2.着工装在店内吸烟</td>
+                    <td width="80px;"><input type="checkbox" name="topic38Two" value="2.着工装在店内吸烟"  th:if="${deial.topic38Two!=null}"  th:checked="${#strings.contains(deial.topic38Two,'着工装在店内吸烟')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3.着工装在店内吃饭，在顾客休息区域休息</td>
+                    <td width="80px;"><input type="checkbox" name="topic38Two" value="3.着工装在店内吃饭，在顾客休息区域休息" th:if="${deial.topic38Two!=null}"  th:checked="${#strings.contains(deial.topic38Two,'在顾客休息区域休息')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >4.在卖场玩手机（包括不限于着工装抽烟.打电话.玩游戏等）</td>
+                    <td width="80px;"><input type="checkbox" name="topic38Two" value="4.在卖场玩手机（包括不限于着工装抽烟.打电话.玩游戏等）" th:if="${deial.topic38Two!=null}"  th:checked="${#strings.contains(deial.topic38Two,'包括不限于着工装抽烟')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+                  <tr>
+                    <td >其他请注明</td>
+                    <td width="80px;"><input type="text" name="topic38Six" th:value="${deial.topic38Six}" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic38Four">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <h3>证照管理</h3>
+              <label style="width: 100px;">39-1证照管理是否符合要求？</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic39One" value="1.完全符合" th:if="${deial.topic39One!=null}"  th:checked="${#strings.contains(deial.topic39One,'完全符合')}" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic39One" value="2.不符合要求"  th:if="${deial.topic39One!=null}"  th:checked="${#strings.contains(deial.topic39One,'不符合要求')}"  />
+              </div>
+            </div><br/>
+            <div id="th39">
+              <div  lay-filter="" >
+                <label style="width: 100px;">39-2不符合要求的原因？</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.门店营业许可证未公示</td>
+                    <td width="80px;"><input type="checkbox" name="topic39Two" value="1.门店营业许可证未公示"  th:if="${deial.topic39Two!=null}"  th:checked="${#strings.contains(deial.topic39Two,'门店营业许可证未公示')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2.食品经营许可证未公示</td>
+                    <td width="80px;"><input type="checkbox" name="topic39Two" value="2.食品经营许可证未公示"  th:if="${deial.topic39Two!=null}"  th:checked="${#strings.contains(deial.topic39Two,'食品经营许可证未公示')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3.员工健康证未在收银区公示</td>
+                    <td width="80px;"><input type="checkbox" name="topic39Two" value="3.员工健康证未在收银区公示" th:if="${deial.topic39Two!=null}"  th:checked="${#strings.contains(deial.topic39Two,'员工健康证未在收银区公示')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+
+                  <tr>
+                    <td >其他请注明</td>
+                    <td width="80px;"><input type="text" name="topic39Six" th:value="${deial.topic39Six}" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic39Four">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h1 align="center">服务产品</h1>
+            <div class="layui-form-item">
+              <label style="width: 100px;">40-1服务产品是否符合要求？</label>
+              <div class="layui-input-block">
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic40One" value="1.完全符合" th:if="${deial.topic40One!=null}"  th:checked="${#strings.contains(deial.topic40One,'完全符合')}" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic40One" value="2.不符合要求"  th:if="${deial.topic40One!=null}"  th:checked="${#strings.contains(deial.topic40One,'不符合要求')}"  />
+              </div>
+            </div><br/>
+            <div id="th40">
+              <div  lay-filter="" >
+                <label style="width: 100px;">40-2不符合要求的原因？</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.服务区域不干净整洁</td>
+                    <td width="80px;"><input type="checkbox" name="topic40Two" value="1.服务区域不干净整洁"  th:if="${deial.topic40Two!=null}"  th:checked="${#strings.contains(deial.topic40Two,'服务区域不干净整洁')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2.服务区域有营业商品堆积占用</td>
+                    <td width="80px;"><input type="checkbox" name="topic40Two" value="2.服务区域有营业商品堆积占用" th:if="${deial.topic40Two!=null}"  th:checked="${#strings.contains(deial.topic40Two,'服务区域有营业商品堆积占用')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3.苏宁帮客没有物料宣传</td>
+                    <td width="80px;"><input type="checkbox" name="topic40Two" value="3.苏宁帮客没有物料宣传"  th:if="${deial.topic40Two!=null}"  th:checked="${#strings.contains(deial.topic40Two,'苏宁帮客没有物料宣传')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >其他请注明</td>
+                    <td width="80px;"><input type="text" name="topic40Six" th:value="${deial.topic40Six}" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+              <div  lay-filter="" >
+                <label style="width: 100px;">40-3检测中共有几处不符合要求？(单选）</label><br/><br/>
+                <table border="1"  align="center" >
+                  <tr>
+                    <td >1.1处</td>
+                    <td width="80px;"><input type="radio" name="topic40Three" value="1.1处"  th:if="${deial.topic40Three!=null}"  th:checked="${#strings.contains(deial.topic40Three,'1处')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2处及以上</td>
+                    <td width="80px;"><input type="radio" name="topic40Three" value="2.2处及以上" th:if="${deial.topic40Three!=null}"  th:checked="${#strings.contains(deial.topic40Three,'2处及以上')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+
+                </table>
+              </div><br/>
+              <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic40Four">多图片上传</button>
                       <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
                         预览图：
                         <div class="layui-upload-list" id="test-upload-more-listcs"></div>
@@ -799,7 +2354,6 @@
 </script>
 <script>
   $(document).ready(function(){
-alert(111);
   });
 </script>
 </body>
