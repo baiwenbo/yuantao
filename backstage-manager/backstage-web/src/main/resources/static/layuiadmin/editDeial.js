@@ -1,71 +1,171 @@
 $(document).ready(function(){
+    var th1= 	$("input[name='topic1One']:checked").val();
+    var th2= 	$("input[name='topic2One']:checked").val();
+    var th3= 	$("input[name='topic3One']:checked").val();
+    var th4= 	$("input[name='topic4One']:checked").val();
+    var th5= 	$("input[name='topic5One']:checked").val();
+    var th6= 	$("input[name='topic6One']:checked").val();
+    var th7= 	$("input[name='topic7One']:checked").val();
+    var th8= 	$("input[name='topic8One']:checked").val();
+    var th9= 	$("input[name='topic9One']:checked").val();
+    var th9t= 	$("input[name='topic9Two']:checked").val();
+    var th10= 	$("input[name='topic10One']:checked").val();
+    var th11= 	$("input[name='topic11One']:checked").val();
+    var th12= 	$("input[name='topic12One']:checked").val();
+    var th13= 	$("input[name='topic13One']:checked").val();
+    var th14= 	$("input[name='topic14One']:checked").val();
+    var th15= 	$("input[name='topic15One']:checked").val();
+    var th16= 	$("input[name='topic16One']:checked").val();
+    var th17= 	$("input[name='topic17One']:checked").val();
+    var th18= 	$("input[name='topic18One']:checked").val();
+    var th19= 	$("input[name='topic19One']:checked").val();
+    var th20= 	$("input[name='topic20One']:checked").val();
+    var th21= 	$("input[name='topic21One']:checked").val();
+    var th22= 	$("input[name='topic22One']:checked").val();
+    var th23= 	$("input[name='topic23One']:checked").val();
+    var th24= 	$("input[name='topic24One']:checked").val();
+    var th25= 	$("input[name='topic25One']:checked").val();
+    var th26= 	$("input[name='topic26One']:checked").val();
+    var th27= 	$("input[name='topic27One']:checked").val();
+    var th28= 	$("input[name='topic28One']:checked").val();
+    var th29= 	$("input[name='topic29One']:checked").val();
+    var th30= 	$("input[name='topic30One']:checked").val();
+    var th31= 	$("input[name='topic31One']:checked").val();
+    var th32= 	$("input[name='topic32One']:checked").val();
+    var th33= 	$("input[name='topic33One']:checked").val();
+    var th34= 	$("input[name='topic34One']:checked").val();
+    var th35= 	$("input[name='topic35One']:checked").val();
+    var th36= 	$("input[name='topic36One']:checked").val();
+    var th37= 	$("input[name='topic37One']:checked").val();
+    var th38= 	$("input[name='topic38One']:checked").val();
+    var th39= 	$("input[name='topic39One']:checked").val();
+    var th40= 	$("input[name='topic40One']:checked").val();
+if (th1.indexOf("完全")>0){
     $("#one").hide();
+}
+if (th2.indexOf("完全")>0){
     $("#two").hide();
+}
+if (th3.indexOf("完全")>0){
     $("#three").hide();
+}
+if (th4.indexOf("完全")>0){
     $("#four").hide();
+}
+if (th5.indexOf("完全")>0){
     $("#five").hide();
+}
+if (th6.indexOf("完全")>0){
     $("#six").hide();
+}
+if (th7.indexOf("完全")>0){
     $("#seven").hide();
+}
+if (th8.indexOf("完全")>0){
     $("#eight").hide();
+}
+if (th9.indexOf("有")>0){
     $("#ninesuper").hide();
+}
+if (th9t.indexOf("完全")>0){
     $("#nine").hide();
+}
+if (th10.indexOf("完全")>0){
     $("#ten").hide();
+}
+if (th11.indexOf("完全")>0){
     $("#eleven").hide();
+}
+if (th12.indexOf("完全")>0){
     $("#twelve").hide();
+}
+if (th13.indexOf("完全")>0){
     $("#thirteen").hide();
+}
+if (th14.indexOf("完全")>0){
     $("#th14").hide();
+}
+if (th15.indexOf("完全")>0){
     $("#th15").hide();
+}
+if (th16.indexOf("完全")>0){
     $("#th16").hide();
-    $("#th17").hide();
-    $("#th18").hide();
-    $("#th19").hide();
-    $("#th20").hide();
-    $("#th21").hide();
-    $("#th22").hide();
-    $("#th23").hide();
-    $("#th24").hide();
-    $("#th25").hide();
-    $("#th26").hide();
-    $("#th27").hide();
-    $("#th28").hide();
-    $("#th29").hide();
-    $("#th30").hide();
-    $("#th31").hide();
-    $("#th32").hide();
-    $("#th33").hide();
-    $("#th34").hide();
-    $("#th35").hide();
-    $("#th36").hide();
-    $("#th37").hide();
-    $("#th38").hide();
-    $("#th39").hide();
-    $("#th40").hide();
+}
+    if (th17.indexOf("完全")>0){
+        $("#th17").hide();
+    }
+    if (th18.indexOf("完全")>0){
+        $("#th18").hide();
+    }
+    if (th19.indexOf("完全")>0){
+        $("#th19").hide();
+    }
+    if (th20.indexOf("完全")>0){
+        $("#th20").hide();
+    }
+    if (th21.indexOf("完全")>0){
+        $("#th21").hide();
+    }
+    if (th22.indexOf("完全")>0){
+        $("#th22").hide();
+    }
+    if (th23.indexOf("完全")>0){
+        $("#th23").hide();
+    }
+    if (th24.indexOf("完全")>0){
+        $("#th24").hide();
+    }
+    if (th25.indexOf("完全")>0){
+        $("#th25").hide();
+    }
+    if (th26.indexOf("完全")>0){
+        $("#th26").hide();
+    }
+    if (th27.indexOf("完全")>0){
+        $("#th27").hide();
+    }
+    if (th28.indexOf("完全")>0){
+        $("#th28").hide();
+    }
+    if (th29.indexOf("完全")>0){
+        $("#th29").hide();
+    }
+    if (th30.indexOf("完全")>0){
+        $("#th30").hide();
+    }
+    if (th31.indexOf("完全")>0){
+        $("#th31").hide();
+    }
+    if (th32.indexOf("完全")>0){
+        $("#th32").hide();
+    }
+    if (th33.indexOf("完全")>0){
+        $("#th33").hide();
+    }
+    if (th34.indexOf("完全")>0){
+        $("#th34").hide();
+    }
+    if (th35.indexOf("完全")>0){
+        $("#th35").hide();
+    }
+    if (th36.indexOf("完全")>0){
+        $("#th36").hide();
+    }
+    if (th37.indexOf("完全")>0){
+        $("#th37").hide();
+    }
+    if (th38.indexOf("完全")>0){
+        $("#th38").hide();
+    }
+    if (th39.indexOf("完全")>0){
+        $("#th39").hide();
+    }
+    if (th40.indexOf("完全")>0){
+        $("#th40").hide();
+    }
 
 
-    $("#queryCompany").click(function(){
-        $("#companyList").empty();
-      var customerName=$("#customerName").val();
-        $.ajax({
-            type:"get",
-            url:"/environment/queryName",
-            data: "name="+customerName,
-            dataType:"json",
-            async : false,
-            success:function(result){
-                var html="<select name='companyId' style='width: 130px;height: 40px'>"
-               for (var i=0;i<result.length;i++){
-                    html+="<option value="+result[i].id+">"+result[i].name+"</option>"
-               }
-                html+="</select>"
-                $("#companyList").append(html);
-            },
-            error: function(result) {
-                alert("服务异常");
-            }
 
-        });
-
-    });
 });
 
 function oneDiv(type) {
