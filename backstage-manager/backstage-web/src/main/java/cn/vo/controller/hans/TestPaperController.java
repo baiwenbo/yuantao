@@ -12,7 +12,6 @@ import cn.vo.service.ITestPaperService;
 import cn.vo.service.IUserService;
 import cn.vo.service.IXiaodianAddressService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -34,12 +33,6 @@ public class TestPaperController {
     @Autowired
     private IQuestionService questionService;
 
-    private final ResourceLoader resourceLoader;
-
-    @Autowired
-    public TestPaperController(ResourceLoader resourceLoader) {
-        this.resourceLoader = resourceLoader;
-    }
 
     @Autowired
     private ITestPaperService testPaperService;
@@ -151,7 +144,7 @@ public class TestPaperController {
             testPaper.setTopic40Four(FileUpload.uploadFile(topic40Fourfile,topic40Fourfile.getName()));
             saveTestPaper(testPaper);
             testPaper.setCheckstatus("正在审核");
-            testPaperService.save(testPaper);
+            testPaperService.save(FractionUtil.getFraction(testPaper));
         }catch (Exception e){
             e.printStackTrace();
             return "redirect:/testPaper/list?close="+"error";
@@ -269,7 +262,7 @@ public class TestPaperController {
                 }
             }
             if("5".equals(user.getScpcqx())){
-                testPaperService.updateId(testPaper);
+                testPaperService.updateId(FractionUtil.getFraction(testPaper));
             }
         }catch (Exception e){
             e.printStackTrace();
@@ -315,16 +308,6 @@ public class TestPaperController {
 
 
 
-    //图片显示
-    @RequestMapping("show/{fileName}")
-    public ResponseEntity showPhotos(@PathVariable("fileName") String fileName){
 
-        try {
-            // 由于是读取本机的文件，file是一定要加上的， path是在application配置文件中的路径
-            return ResponseEntity.ok(resourceLoader.getResource("file:" +"G:/cs"+ fileName));
-        } catch (Exception e) {
-            return ResponseEntity.notFound().build();
-        }
-    }
 
 }
