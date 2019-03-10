@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
   <link rel="stylesheet"  th:href="@{/layuiadmin/layui/css/layui.css}"  media="all"/>
   <link rel="stylesheet"  th:href="@{/layuiadmin/style/admin.css}" media="all"/>
+
 </head>
 <body>
 <div >
@@ -15,64 +16,63 @@
       <div >
         <div  pad15="" style="align-items: center;">
           <form enctype="multipart/form-data" th:action="@{/testPaper/save}" method="post" style="align:center" align="center" >
-            <div class="layui-form-item">
-              <label class="layui-form-label">门店名称</label>
-              <div class="layui-input-block" id="company">
-                <input type="text" id="customerName" lay-verify="required" autocomplete="off" placeholder="门店名称" class="layui-input" style="width: 200px;"/>
 
+
+          <div class="layui-form-item" >
+              <div class="layui-inline">
+                  <div class="layui-input-inline" >
+                      <input type="text" id="customerName" lay-verify="required" autocomplete="off" placeholder="可输入门店关键字进行搜索"  class="layui-input"  style="width: 200px;"/>
+                  </div>
               </div>
-              <div id="companyList">
-
-
+              <div class="layui-inline" style="padding-left: 60px;">
+                  <div id="companyList" style="width:100px; float: left">
+                  </div>
+                  <div class="layui-input-inline" style="float:right">
+                      <input class="layui-btn" style="width: 85px" data-type="reload" id="queryCompany" value="搜索" />
+                  </div>
               </div>
-              <input class="layui-btn" data-type="reload" id="queryCompany" value="搜索" />
-            </div>
-
-
-
-
-          <div class="layui-form-item">
-            
               <div class="layui-inline">
                   <label class="layui-form-label">执行日期</label>
                   <div class="layui-input-inline">
-                      <input type="text" name="executeDate" lay-verify="email" autocomplete="off" class="layui-input" />
+                      <input type="text" name="executedate" id="executedate" placeholder="yyyy-MM-dd HH:mm:ss" autocomplete="off" class="layui-input" />
                   </div>
               </div>
-              <div class="layui-inline">
-                  <label class="layui-form-label">进店时间</label>
-                  <div class="layui-input-inline">
-                      <input type="text" name="startTime" lay-verify="email" autocomplete="off" class="layui-input" />
-                  </div>
-              </div>
+
           </div>
 
           <div class="layui-form-item">
               <div class="layui-inline">
+                  <label class="layui-form-label">进店时间</label>
+                  <div class="layui-input-inline">
+                      <input type="text" name="starttime" id="starttime" placeholder="yyyy-MM-dd HH:mm:ss" autocomplete="off" class="layui-input" />
+                  </div>
+              </div>
+              <div class="layui-inline">
                   <label class="layui-form-label">离店时间</label>
                   <div class="layui-input-inline">
-                      <input type="tel" name="endTime" lay-verify="required|phone" autocomplete="off" class="layui-input" />
+                      <input type="text" name="endtime" id="endtime" placeholder="yyyy-MM-dd HH:mm:ss" autocomplete="off" class="layui-input" />
                   </div>
               </div>
               <div class="layui-inline">
                   <label class="layui-form-label">神客姓名</label>
                   <div class="layui-input-inline">
-                      <input type="text" name="personName" lay-verify="email" autocomplete="off" class="layui-input" />
+                      <input type="text" name="personname" lay-verify="email" autocomplete="off" class="layui-input" />
                   </div>
               </div>
+
+          </div>
+
+          <div class="layui-form-item">
               <div class="layui-inline">
                   <label class="layui-form-label">购买商品</label>
                   <div class="layui-input-inline">
                       <input type="text" name="commodity" lay-verify="email" autocomplete="off" class="layui-input" />
                   </div>
               </div>
-          </div>
-
-          <div class="layui-form-item">
               <div class="layui-inline">
                   <label class="layui-form-label">进店时店内员工人数</label>
                   <div class="layui-input-inline">
-                      <input type="tel" name="populationQty" lay-verify="required|phone" autocomplete="off" class="layui-input" />
+                      <input type="tel" name="populationqty" lay-verify="required|phone" autocomplete="off" class="layui-input" />
                   </div>
               </div>
 
@@ -83,33 +83,31 @@
                       <input type="tel" name="money" lay-verify="required|phone" autocomplete="off" class="layui-input" />
                   </div>
               </div>
+
+          </div>
+
+          <div class="layui-form-item">
               <div class="layui-inline">
                   <label class="layui-form-label">资料链接</label>
                   <div class="layui-input-inline">
                       <input type="text" name="url" lay-verify="email" autocomplete="off" class="layui-input" />
                   </div>
               </div>
-          </div>
-
-          <div class="layui-form-item">
               <div class="layui-inline">
                   <label class="layui-form-label">店内消费人数（不含神客）</label>
                   <div class="layui-input-inline">
-                      <input type="text" name="consumeQty" lay-verify="email" autocomplete="off" class="layui-input" />
+                      <input type="text" name="consumeqty" lay-verify="email" autocomplete="off" class="layui-input" />
                   </div>
               </div>
 
               <div class="layui-inline">
                   <label class="layui-form-label" style="height:50px;">收银员姓名（如无法看清楚姓名描述体貌特征）</label>
                   <div class="layui-input-inline">
-                      <input type="text" name="cashierName" lay-verify="email" autocomplete="off" class="layui-input" />
+                      <input type="text" name="cashiername" lay-verify="email" autocomplete="off" class="layui-input" />
                   </div>
               </div>
 
           </div>
-
-
-
 
 
 
@@ -199,7 +197,7 @@
             </div><br/>
             <div id="two">
               <div  lay-filter="">
-                  <input type="text" name="topic2Two" value=""  lay-skin="primary" style="height: 20px;width: 50px;"/>
+
                 <label style="width: 100px;">2-2不符合要求的原因是？(多选）</label><br/><br/>
                <table border="1"  align="center" style="align:center">
                   <tr>

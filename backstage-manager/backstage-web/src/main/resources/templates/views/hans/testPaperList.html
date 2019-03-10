@@ -16,9 +16,27 @@
 
 </div>
 <div class="demoTable">
-    qname：
+    公司门店：
     <div class="layui-inline">
         <input class="layui-input" id="qname" autocomplete="off"/>
+    </div>
+    申诉状态：
+    <div class="layui-inline">
+        <select name="qcheckstatus" id="qcheckstatus" class="layui-input" style="width: 120px;">
+            <option value="">请选择</option>
+            <option value="正在审核">正在审核</option>
+            <option value="审核通过">审核通过</option>
+            <option value="待审核">待审核</option>
+        </select>
+    </div>
+    审核状态：
+    <div class="layui-inline">
+        <select name="checkstatus" id="checkstatus" class="layui-input" style="width: 120px;">
+            <option value="">请选择</option>
+            <option value="已审核">已审核</option>
+            <option value="待批复">待批复</option>
+            <option value="已批复">已批复</option>
+        </select>
     </div>
     <button class="layui-btn" data-type="reload">搜索</button>
     <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="question()">录入</button>
@@ -67,14 +85,14 @@
             ,page: true //开启分页
             ,cols: [[ //表头
                 {field: 'id', title: 'ID', width:80, sort: true, fixed: 'left'}
-                ,{field: 'company', title: '公司', width:120}
-                ,{field: 'name', title: '门店名称', width:200}
-                ,{field: 'code', title: '门店代码',width:120}
+                ,{field: 'company', title: '公司', width:80}
+                ,{field: 'name', title: '门店名称', width:160}
+                ,{field: 'code', title: '门店代码',width:100}
                 ,{field: 'score', title: '总分',width:60}
                 ,{field: 'url', title: '视频和图片下载地址',width:200}
-                ,{field: 'checkStatus', title: '审核状态',width:120}
-                ,{field: 'qcheckStatus', title: '申诉状态',width:120}
-                ,{field: 'executeDate', title: '执行日期',width:120}
+                ,{field: 'checkstatus', title: '审核状态',width:100}
+                ,{field: 'qcheckstatus', title: '申诉状态',width:100}
+                ,{field: 'executedate', title: '执行日期',width:160}
                 ,{fixed: 'right',title: '操作', width: 150, align:'center', toolbar: '#barDemo'}
             ]]
         });
@@ -82,6 +100,10 @@
             {
                 reload: function () {
                     var name = $('#qname').val();//获取输入框的值
+                    var qcheckstatus = $('#qcheckstatus').val();//获取输入框的值
+
+                    var checkstatus = $('#checkstatus').val();//获取输入框的值
+
                     //执行重载
                     table.reload('demo',
                         {
@@ -89,7 +111,9 @@
                                 {
                                     curr: 1 //重新从第 1 页开始
                                 }
-                            , where: { name: name}//这里传参  向后台
+                            , where: { name: name,
+                                qcheckstatus:qcheckstatus,
+                                checkstatus:checkstatus}//这里传参  向后台
                             , url: '/testPaper/listJson'//后台做模糊搜索接口路径
                             , method: 'get'
                         });
