@@ -272,6 +272,7 @@
     <result column="topic40_fraction" property="topic40Fraction" jdbcType="VARCHAR" />
     <result column="topic40_six" property="topic40Six" jdbcType="VARCHAR" />
     <result column="company" property="company" jdbcType="VARCHAR" />
+    <result column="disabled" property="disabled" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -374,7 +375,7 @@
     topic38_one, topic38_two, topic38_three, topic38_four, topic38_fraction, topic38_six, 
     topic39_one, topic39_two, topic39_three, topic39_four, topic39_fraction, topic39_six, 
     topic40_one, topic40_two, topic40_three, topic40_four, topic40_fraction, topic40_six,
-    company
+    company,disabled
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="cn.vo.pojo.entity.TestPaperExample" >
     select
@@ -4405,8 +4406,15 @@
 
   <select id="getListQuery" resultMap="BaseResultMap" parameterType="map">
     select  <include refid="Base_Column_List" /> from test_paper
+    where disabled=0
     <if test="name != null and name.length()>0" >
-      where  name like '%${name}%' or company like '%${name}%'
+      and  name like '%${name}%' or company like '%${name}%'
+    </if>
+    <if test="qcheckstatus != null and qcheckstatus.length()>0" >
+      and  qcheckStatus = #{qcheckstatus}
+    </if>
+    <if test="checkstatus != null and checkstatus.length()>0" >
+      and  checkStatus = #{checkstatus}
     </if>
    limit  #{index} , #{pageSize}
   </select>
@@ -4418,6 +4426,12 @@
     <if test="name != null and name.length()>0" >
       and  name like '%${name}%'
     </if>
+    <if test="qcheckstatus != null and qcheckstatus.length()>0" >
+      and  qcheckStatus = #{qcheckstatus}
+    </if>
+    <if test="checkstatus != null and checkstatus.length()>0" >
+      and  checkStatus = #{checkstatus}
+    </if>
     limit  #{index} , #{pageSize}
   </select>
 
@@ -4426,6 +4440,12 @@
     where  company = #{company}
     <if test="name != null and name.length()>0" >
       and  name like '%${name}%'
+    </if>
+    <if test="qcheckstatus != null and qcheckstatus.length()>0" >
+      and  qcheckStatus = #{qcheckstatus}
+    </if>
+    <if test="checkstatus != null and checkstatus.length()>0" >
+      and  checkStatus = #{checkstatus}
     </if>
     limit  #{index} , #{pageSize}
   </select>
