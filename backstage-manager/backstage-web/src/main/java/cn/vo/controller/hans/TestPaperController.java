@@ -12,8 +12,7 @@ import cn.vo.service.ITestPaperService;
 import cn.vo.service.IUserService;
 import cn.vo.service.IXiaodianAddressService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.ResourceLoader;
-import org.springframework.http.ResponseEntity;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -58,9 +57,12 @@ public class TestPaperController {
 
     @GetMapping("/listJson")
     @ResponseBody
-    public ListResult<TestPaper> listJson(HttpServletRequest request, String name, Integer page, Integer limit){
+    public ListResult<TestPaper> listJson(HttpServletRequest request, String name,String qcheckstatus,
+                                          String checkstatus, Integer page, Integer limit){
         Map map=new HashMap<>();
         map.put("name", name);
+        map.put("qcheckstatus", qcheckstatus);
+        map.put("checkstatus", checkstatus);
         map.put("index", PageUtils.getPageIndex(page, limit));
         map.put("pageSize", PageUtils.getPageSize(page, limit));
         HttpSession session=request.getSession();
@@ -175,6 +177,7 @@ public class TestPaperController {
     public String deial(Integer id, Model model){
         TestPaper testPaper=testPaperService.getById(id);
         model.addAttribute("testPaper",testPaper);
+        model.addAttribute("deialName","查看页面");
         return "views/hans/questionetor";
     }
 
@@ -197,12 +200,14 @@ public class TestPaperController {
                          @RequestParam("topic29Fourfile") MultipartFile topic29Fourfile, @RequestParam("topic30Fourfile") MultipartFile topic30Fourfile, @RequestParam("topic31Fourfile") MultipartFile topic31Fourfile,
                          @RequestParam("topic32Fourfile") MultipartFile topic32Fourfile, @RequestParam("topic33Fourfile") MultipartFile topic33Fourfile, @RequestParam("topic34Fourfile") MultipartFile topic34Fourfile,
                          @RequestParam("topic35Fourfile") MultipartFile topic35Fourfile, @RequestParam("topic36Fourfile") MultipartFile topic36Fourfile, @RequestParam("topic37Fourfile") MultipartFile topic37Fourfile,
-                         @RequestParam("topic38Fourfile") MultipartFile topic38Fourfile, @RequestParam("topic39Fourfile") MultipartFile topic39Fourfile, @RequestParam("topic40Fourfile") MultipartFile topic40Fourfile){
+                         @RequestParam("topic38Fourfile") MultipartFile topic38Fourfile, @RequestParam("topic39Fourfile") MultipartFile topic39Fourfile, @RequestParam("topic40Fourfile") MultipartFile topic40Fourfile,
+                         @RequestParam("trough1File") MultipartFile trough1File){
         try{
 
             if (!topic1Fourfile.isEmpty()){
                 testPaper.setTopic1Four(FileUpload.uploadFile(topic1Fourfile,topic1Fourfile.getName()));
             }
+            testPaper.setTrough1(FileUpload.uploadFile(trough1File,trough1File.getName()));
             // 感觉提出去写也是这样于是就这样了
             testPaper.setTopic2Four(FileUpload.uploadFile(topic2Fourfile,topic2Fourfile.getName()));
             testPaper.setTopic3Four(FileUpload.uploadFile(topic3Fourfile,topic3Fourfile.getName()));

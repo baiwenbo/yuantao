@@ -541,6 +541,16 @@ public class TestPaper {
 
     private  String company;
 
+    private  Integer disabled;
+
+    public Integer getDisabled() {
+        return disabled;
+    }
+
+    public void setDisabled(Integer disabled) {
+        this.disabled = disabled;
+    }
+
     public String getCompany() {
         return company;
     }
