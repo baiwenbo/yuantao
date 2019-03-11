@@ -52,9 +52,9 @@ public class FractionUtil {
             if (testPaper.getTopic7Three() != null && !testPaper.getTopic7Three().isEmpty()) {
                 testPaper.setTopic7Fraction(FractionUtil.getNumber(testPaper.getTopic7Three()));
             } else if (testPaper.getTopic7Two() != null && !testPaper.getTopic7Two().isEmpty()) {
-                testPaper.setTopic7Fraction("-4");
+                testPaper.setTopic7Fraction("-2");
             } else {
-                testPaper.setTopic7Fraction("4");
+                testPaper.setTopic7Fraction("2");
             }
             if (testPaper.getTopic8Three() != null && !testPaper.getTopic8Three().isEmpty()) {
                 testPaper.setTopic8Fraction(FractionUtil.getNumber(testPaper.getTopic8Three()));
@@ -199,9 +199,9 @@ public class FractionUtil {
             if (testPaper.getTopic28Three() != null && !testPaper.getTopic28Three().isEmpty()) {
                 testPaper.setTopic28Fraction(FractionUtil.getNumber(testPaper.getTopic28Three()));
             } else if (testPaper.getTopic28Two() != null && !testPaper.getTopic28Two().isEmpty()) {
-                testPaper.setTopic28Fraction("-4");
+                testPaper.setTopic28Fraction("-2");
             } else {
-                testPaper.setTopic28Fraction("4");
+                testPaper.setTopic28Fraction("2");
             }
             if (testPaper.getTopic29Three() != null && !testPaper.getTopic29Three().isEmpty()) {
                 testPaper.setTopic29Fraction(FractionUtil.getNumber(testPaper.getTopic29Three()));
