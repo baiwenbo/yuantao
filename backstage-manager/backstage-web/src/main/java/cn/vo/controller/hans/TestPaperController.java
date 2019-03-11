@@ -277,18 +277,20 @@ public class TestPaperController {
     }
 
     @GetMapping("appealOpen")
+    @ResponseBody
     public String appealOpen(){
         Map map=new HashMap();
         map.put("appeal","开");
         testPaperService.updateAppeal(map);
-        return  "redirect:/testPaper/list?close="+"ok";
+        return  "ok";
     }
     @GetMapping("appealClose")
+    @ResponseBody
     public String appealClose(){
         Map map=new HashMap();
         map.put("appeal","关");
         testPaperService.updateAppeal(map);
-        return  "redirect:/testPaper/list?close="+"ok";
+        return  "ok";
     }
 
     public TestPaper saveTestPaper(TestPaper testPaper){
