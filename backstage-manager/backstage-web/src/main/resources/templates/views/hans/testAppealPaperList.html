@@ -158,7 +158,6 @@
 
 
     function question(){
-
         layer.open({
             type: 2,
             shade: false,
@@ -171,30 +170,37 @@
         });
     }
     function appealOpen(){
-
-        layer.open({
-            type: 2,
-            shade: false,
-            maxmin: true,
-            area: ['100%', '100%']
-            ,content: '/testPaper/appealOpen'
-            ,yes: function(index){
-                layer.close(index);
+        $.ajax({
+            type: "get",
+            url: "/testPaper/appealOpen",
+            data: {},
+            dataType: "text",
+            success: function (data) {
+               alert("打开成功");
+            },
+            error: function () {
+                alert("成功");
             }
-        });
+
+        })
+        location.reload();
+
     }
     function appealClose(){
-
-        layer.open({
-            type: 2,
-            shade: false,
-            maxmin: true,
-            area: ['100%', '100%']
-            ,content: '/testPaper/appealClose'
-            ,yes: function(index){
-                layer.close(index);
+        $.ajax({
+            type: "get",
+            url: "/testPaper/appealClose",
+            data:{},
+            dataType: "text",
+            success: function (data) {
+                alert("打开成功");
+            },
+            error: function () {
+                alert("成功");
             }
-        });
+
+        })
+        location.reload();
     }
 
     /*]]>*/
