@@ -40,7 +40,7 @@ layui.use('table', function(){
   table.render({
     elem: '#roleList'
     ,height: 600
-    ,url: '/role/listJson' //数据接口
+    ,url: path+'/role/listJson' //数据接口
     ,page: true //开启分页
     ,cols: [[ //表头
       {field: 'id', title: 'ID', width:80, sort: true, fixed: 'left'}
@@ -54,12 +54,12 @@ layui.use('table', function(){
 	    ,layEvent = obj.event; //获得 lay-event 对应的值
 	    if(layEvent === 'detail'){
 	      console.log(data.id);
-	      window.location.href="/role/deial?id="+data.id;
+	      window.location.href=path+"/role/deial?id="+data.id;
 	    } else if(layEvent === 'del'){
 	      layer.confirm('真的删除行么', function(index){
 	    	  $.ajax({
                       type: "get",
-                    url: "/role/del",
+                    url: path+"/role/del",
                      data: "id="+data.id,
                      dataType: "text",
                       success: function (data) {
@@ -75,9 +75,9 @@ layui.use('table', function(){
 	      });
 	    } else if(layEvent === 'edit'){
 	 /*      layer.msg('编辑操作'); */
-	    	 window.location.href="/role/edit?id="+data.id;
+	    	 window.location.href=path+"/role/edit?id="+data.id;
 	    }else if(layEvent == 'distribution'){
-	    	window.location.href="/distribution/list?id="+data.id;
+	    	window.location.href=path+"/distribution/list?id="+data.id;
 	    }
 	  });
   var $ = layui.$, active =
@@ -92,7 +92,7 @@ layui.use('table', function(){
                           curr: 1 //重新从第 1 页开始
                       }
             , where: { name: roleName}//这里传参  向后台
-            , url: '/role/listJson'//后台做模糊搜索接口路径
+            , url: path+'/role/listJson'//后台做模糊搜索接口路径
             , method: 'get'
               });
       }

@@ -81,13 +81,13 @@ function login(){
 	var password=$("#LAY-user-login-password").val();
 	  $.ajax({
 	      type:"POST",
-	       url:"/login",
+	       url:path+"/login",
 	      data:{"loginName":loginName,"password":password},
 	      dataType:"text",
 	      success:function(data){
 	       if(data=="登录成功"){
 	    	   alert("登录成功！");
-	    	   window.location.href="/views"
+	    	   window.location.href=path+"/views"
 	       }else{
 	    	   alert(data);
 	       }

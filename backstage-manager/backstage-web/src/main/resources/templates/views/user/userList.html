@@ -41,7 +41,7 @@ layui.use('table', function(){
   table.render({
     elem: '#demo'
     ,height: 600
-    ,url: '/users/listJson' //数据接口
+    ,url: path+'/users/listJson' //数据接口
     ,page: true //开启分页
     ,cols: [[ //表头
       {field: 'id', title: 'ID', width:80, sort: true, fixed: 'left'}
@@ -61,7 +61,7 @@ layui.use('table', function(){
                 shade: false,
                 maxmin: true,
                 area: ['70%', '70%']
-                ,content: '/users/deial?id='+data.id
+                ,content:path+ '/users/deial?id='+data.id
                 ,yes: function(index){
                     layer.close(index);
                 }
@@ -71,7 +71,7 @@ layui.use('table', function(){
 	      layer.confirm('真的删除行么', function(index){
 	    	  $.ajax({
                       type: "get",
-                    url: "/users/del",
+                    url: path+"/users/del",
                      data: "id="+data.id,
                      dataType: "text",
                       success: function (data) {
@@ -111,7 +111,7 @@ layui.use('table', function(){
                           curr: 1 //重新从第 1 页开始
                       }
             , where: { username: username}//这里传参  向后台
-            , url: '/users/listJson'//后台做模糊搜索接口路径
+            , url:path+ '/users/listJson'//后台做模糊搜索接口路径
             , method: 'get'
               });
       }
@@ -133,7 +133,7 @@ function userAdd(){
         shade: false,
         maxmin: true,
         area: ['70%', '70%']
-        ,content: '/users/add'
+        ,content: path+'/users/add'
         ,yes: function(index){
             layer.close(index);
         }

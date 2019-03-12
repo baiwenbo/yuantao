@@ -47,7 +47,7 @@ $(document).ready(function(){
       var customerName=$("#customerName").val();
         $.ajax({
             type:"get",
-            url:"/environment/queryName",
+            url:path+"/environment/queryName",
             data: "name="+customerName,
             dataType:"json",
             async : false,
