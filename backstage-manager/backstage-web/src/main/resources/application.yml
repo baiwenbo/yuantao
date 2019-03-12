@@ -3,15 +3,17 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://111.231.145.251:3306/product?characterEncoding=utf-8&useSSL=false
+#    url: jdbc:mysql://111.231.145.251:3306/product?characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://39.104.179.64:3306/product?characterEncoding=utf-8&useSSL=false
     username: root
-    password: yiYIAA%6hjIJ
+#   password: yiYIAA%6hjIJ
+    password: Bfk5yEhvafyDqvrc
   thymeleaf:
     prefix: classpath:/templates/
     cache: false  # 此处为不缓存页面
   jpa:
       hibernate:
-        ddl-auto: update # 启动时是否更新数据库：none, update
+        ddl-auto: none # 启动时是否更新数据库：none, update
       show-sql: false
 mybatis:
   mapper-locations: classpath:cn/vo/mapping/**/*.xml
