@@ -2630,17 +2630,18 @@
       alert("无图片");
       return;
     }
+      layer.open({
+          type: 2,
+          shade: false,
+          maxmin: true,
+          area: ['30%', '30%']
+          ,content:path+ '/testPaper/seeImg?fileName='+name
+          ,yes: function(index){
+              layer.close(index);
+          }
+      });
     /*]]>*/
-    layer.open({
-      type: 2,
-      shade: false,
-      maxmin: true,
-      area: ['30%', '30%']
-      ,content:path+ '/testPaper/seeImg?fileName='+name
-      ,yes: function(index){
-        layer.close(index);
-      }
-    });
+
 
   }
 </script>
