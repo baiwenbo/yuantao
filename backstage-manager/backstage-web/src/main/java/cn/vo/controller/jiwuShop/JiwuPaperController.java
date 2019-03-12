@@ -1,5 +1,4 @@
-package cn.vo.controller.hans;
-
+package cn.vo.controller.jiwuShop;
 
 import cn.vo.Utils.FileUpload;
 import cn.vo.backstage.Utils.ListResult;
@@ -11,23 +10,25 @@ import cn.vo.service.IQuestionService;
 import cn.vo.service.ITestPaperService;
 import cn.vo.service.IUserService;
 import cn.vo.service.IXiaodianAddressService;
-import org.springframework.beans.factory.annotation.Autowired;
-
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
-
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
 @Controller
-@RequestMapping("testPaper")
-public class TestPaperController {
+@RequestMapping("iiwuPaperController")
+public class JiwuPaperController {
 
     @Autowired
     private IQuestionService questionService;

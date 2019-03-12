@@ -88,56 +88,49 @@
                 </dd>
               </dl>
             </li>
-            <li data-name="component" class="layui-nav-item">
+           <li data-name="component" class="layui-nav-item">
               <a href="javascript:;" lay-tips="组件" lay-direction="2">
                 <i class="layui-icon layui-icon-component"></i>
-                <cite>问卷管理</cite>
+                <cite>小店问卷</cite>
               </a>
               <dl class="layui-nav-child">
-                <dd data-name="grid">
-                  <a href="javascript:;">小店问卷</a>
-                  <dl class="layui-nav-child">
-                  <!--  <dd >
-                      <a lay-href="item/list">查看问卷</a>
-                    </dd>
-                    <dd >
-                      <a lay-href="design/questionnaireList">问卷设计</a>
-                    </dd>-->
                     <dd >
                       <a lay-href="testPaper/list">申诉查看</a>
                     </dd>
                   <dd >
                       <a lay-href="testPaper/appealList">查看问卷</a>
-                    </dd>
-                  </dl>
+                  </dd>
+              </dl>
+           </li>
+
+            <li data-name="app" class="layui-nav-item">
+              <a href="javascript:;" lay-tips="应用" lay-direction="2">
+                <i class="layui-icon layui-icon-app"></i>
+                <cite>常规店问卷</cite>
+              </a>
+              <dl class="layui-nav-child">
+                <dd>
+                <a lay-href="testPaper/list" >申诉查看</a>
+              </dd>
+                <dd>
+                  <a lay-href="testPaper/appealList" >查看问卷</a>
                 </dd>
-
-
               </dl>
             </li>
-
-            <!--<li data-name="app" class="layui-nav-item">-->
-              <!--<a href="javascript:;" lay-tips="应用" lay-direction="2">-->
-                <!--<i class="layui-icon layui-icon-app"></i>-->
-                <!--<cite>应用</cite>-->
-              <!--</a>-->
-              <!--<dl class="layui-nav-child">-->
-                <!--<dd>-->
-                  <!--<a lay-href="/message/message" >消息中心</a>-->
-                <!--</dd>-->
-              <!--</dl>-->
-            <!--</li>-->
-            <!--<li data-name="senior" class="layui-nav-item">-->
-              <!--<a href="javascript:;" lay-tips="高级" lay-direction="2">-->
-                <!--<i class="layui-icon layui-icon-senior"></i>-->
-                <!--<cite>高级</cite>-->
-              <!--</a>-->
-              <!--<dl class="layui-nav-child">-->
-                <!--<dd>-->
-                  <!--<a layadmin-event="im">LayIM 通讯系统</a>  -->
-                <!--</dd>-->
-              <!--</dl>-->
-            <!--</li>-->
+            <li data-name="senior" class="layui-nav-item">
+              <a href="javascript:;" lay-tips="高级" lay-direction="2">
+                <i class="layui-icon layui-icon-senior"></i>
+                <cite>极物店问卷</cite>
+              </a>
+              <dl class="layui-nav-child">
+                <dd>
+                  <a lay-href="testPaper/list" >申诉查看</a>
+                </dd>
+                <dd>
+                  <a lay-href="testPaper/appealList" >查看问卷</a>
+                </dd>
+              </dl>
+            </li>
             <shiro:hasPermission shiro:hasPermission="admin">
             <li data-name="user" class="layui-nav-item">
               <a href="javascript:;" lay-tips="用户" lay-direction="2">
@@ -160,28 +153,28 @@
               </dl>
             </li>
             </shiro:hasPermission>
-            <!--<li data-name="set" class="layui-nav-item">-->
-              <!--<a href="javascript:;" lay-tips="设置" lay-direction="2">-->
-                <!--<i class="layui-icon layui-icon-set"></i>-->
-                <!--<cite>设置</cite>-->
-              <!--</a>-->
-              <!--<dl class="layui-nav-child">-->
-                <!--<dd>-->
-                  <!--<a href="javascript:;">系统设置</a>-->
-                  <!--<dl class="layui-nav-child">-->
-                    <!--<dd><a lay-href="views/component/anim/website.html">网站设置</a></dd>-->
-                    <!--<dd><a lay-href="views/component/anim/email.html">邮件服务</a></dd>-->
-                  <!--</dl>-->
-                <!--</dd>-->
-                <!--<dd>-->
-                  <!--<a href="javascript:;">我的设置</a>-->
-                  <!--<dl class="layui-nav-child">-->
-                    <!--<dd><a lay-href="views/component/anim/info.html">基本资料</a></dd>-->
-                    <!--<dd><a lay-href="views/component/anim/password.html">修改密码</a></dd>-->
-                  <!--</dl>-->
-                <!--</dd>-->
-              <!--</dl>-->
-            <!--</li>-->
+<!--            <li data-name="set" class="layui-nav-item">
+              <a href="javascript:;" lay-tips="设置" lay-direction="2">
+                <i class="layui-icon layui-icon-set"></i>
+                <cite>设置</cite>
+              </a>
+              <dl class="layui-nav-child">
+                <dd>
+                  <a href="javascript:;">系统设置</a>
+                  <dl class="layui-nav-child">
+                    <dd><a lay-href="views/component/anim/website.html">网站设置</a></dd>
+                    <dd><a lay-href="views/component/anim/email.html">邮件服务</a></dd>
+                  </dl>
+                </dd>
+                <dd>
+                  <a href="javascript:;">我的设置</a>
+                  <dl class="layui-nav-child">
+                    <dd><a lay-href="views/component/anim/info.html">基本资料</a></dd>
+                    <dd><a lay-href="views/component/anim/password.html">修改密码</a></dd>
+                  </dl>
+                </dd>
+              </dl>
+            </li>-->
           </ul>
         </div>
       </div>

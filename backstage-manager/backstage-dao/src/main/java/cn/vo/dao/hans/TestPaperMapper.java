@@ -40,4 +40,7 @@ public interface TestPaperMapper {
     List<TestPaper> getCompanyQuery(Map map);
 
     void updateAppeal(Map map);
+
+    void batchCheck(Map map);
+
 }

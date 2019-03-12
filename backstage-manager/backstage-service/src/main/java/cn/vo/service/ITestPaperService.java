@@ -25,5 +25,7 @@ public interface ITestPaperService {
 
     void updateAppeal(Map map);
 
+    void batchCheck(Map map);
+
 
 }

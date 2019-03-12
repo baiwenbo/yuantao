@@ -4455,4 +4455,9 @@
       update test_paper
       set appeal = #{appeal}
     </update>
+  <update id="batchCheck" parameterType="map" >
+      update test_paper
+      set checkStatus = #{checkStatus}
+    </update>
+
 </mapper>

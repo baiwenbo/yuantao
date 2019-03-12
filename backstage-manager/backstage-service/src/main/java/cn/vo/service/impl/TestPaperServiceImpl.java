@@ -65,4 +65,9 @@ public class TestPaperServiceImpl implements ITestPaperService {
     public void updateAppeal(Map map) {
         testPaperMapper.updateAppeal(map);
     }
+
+    @Override
+    public void batchCheck(Map map) {
+        testPaperMapper.batchCheck(map);
+    }
 }

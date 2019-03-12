@@ -21,34 +21,25 @@
             <input type="hidden" name="companyId" th:value="${deial.companyId}"/>
           <h3 align="center" >总分:<span th:text="${deial.score}"></span> </h3>
             <div class="layui-form-item ">
-
-              <div class="layui-inline">
-                <div class="layui-input-inline" >
-                  <input type="text" id="customerName" lay-verify="required" th:value="${deial.name}" autocomplete="off" placeholder="可输入门店关键字进行搜索"  class="layui-input"  style="width: 200px;"/>
-                </div>
+            <div class="layui-inline">
+              <label class="layui-form-label">审核状态</label>
+              <div class="layui-input-inline">
+                <select name="checkstatus"  style="height: 35px;width: 200px;" >
+                  <option value="正在审核" th:selected="${deial.checkstatus == '正在审核'}" >正在审核</option>
+                  <option value="审核通过" th:selected="${deial.checkstatus == '审核通过'}" >审核通过</option>
+                  <option value="待审核" th:selected="${deial.checkstatus == '待审核'}" >待审核</option>
+                </select>
               </div>
-              <div class="layui-inline" style="padding-left: 60px;">
-                <div id="companyList" style="width:100px; float: left">
-                </div>
-                <div class="layui-input-inline" style="float:right">
-                  <input class="layui-btn" style="width: 85px" data-type="reload" id="queryCompany" value="搜索" />
-                </div>
-              </div>
-
-
+            </div>
             </div>
         <div class="layui-form-item">
+
           <div class="layui-inline">
-            <label class="layui-form-label">审核状态</label>
+            <label class="layui-form-label">门店名称</label>
             <div class="layui-input-inline">
-              <select name="checkstatus"  style="height: 35px;width: 200px;" >
-                <option value="正在审核" th:selected="${deial.checkstatus == '正在审核'}" >正在审核</option>
-                <option value="审核通过" th:selected="${deial.checkstatus == '审核通过'}" >审核通过</option>
-                <option value="待审核" th:selected="${deial.checkstatus == '待审核'}" >待审核</option>
-              </select>
+              <input type="tel" th:value="${deial.name}" autocomplete="off" class="layui-input" />
             </div>
           </div>
-
           <div class="layui-inline">
             <label class="layui-form-label">门店编号</label>
             <div class="layui-input-inline">
@@ -2607,10 +2598,8 @@
   </div>
 </div>
 
-
 <script th:src="@{/layuiadmin/layui/jquery-1.9.0.js}" ></script>
 <script th:src="@{/layuiadmin/layui/layui.js}" ></script>
-<script th:src="@{/layuiadmin/enviroment.js}" ></script>
 <script th:src="@{/layuiadmin/editDeial.js}" ></script>
 <script th:inline="javascript">
 
