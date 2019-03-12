@@ -143,14 +143,18 @@
                 <textarea name="qchecksn" th:text="${deial.qchecksn}" class="layui-textarea"></textarea>
               </div>
             </div>
-            <div class="layui-col-md6">
-              <select name="qcheckstatus" lay-verify="">
-                <option value="已回复" th:selected="${deial.qcheckstatus == '已回复'}" >已回复</option>
-                <option value="未申诉" th:selected="${deial.qcheckstatus == '未申诉'}" >未申诉</option>
-                <option value="已批复" th:selected="${deial.qcheckstatus == '已批复'}" >已批复</option>
-                <option value="请客户批复" th:selected="${deial.qcheckstatus == '请客户批复'}" >请客户批复</option>
-              </select>
+            <div class="layui-form-item layui-form-text">
+              <label class="layui-form-label">申述状态</label>
+              <div class="layui-input-inline">
+                <select name="qcheckstatus"  style="height: 35px;width: 200px;" >
+                  <option value="已回复" th:selected="${deial.qcheckstatus == '已回复'}" >已回复</option>
+                  <option value="未申诉" th:selected="${deial.qcheckstatus == '未申诉'}" >未申诉</option>
+                  <option value="已批复" th:selected="${deial.qcheckstatus == '已批复'}" >已批复</option>
+                  <option value="请客户批复" th:selected="${deial.qcheckstatus == '请客户批复'}" >请客户批复</option>
+                </select>
+              </div>
             </div>
+
             <div class="layui-form-item layui-form-text">
               <label class="layui-form-label">申诉答复</label>
               <div class="layui-input-block">
