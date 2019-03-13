@@ -347,7 +347,8 @@
             </div>
             <div class="layui-form-item">
               <h3 >购物环境</h3><br/>
-              <label style="width: 100px;">3-1进店初步感受是否符合要求？(单选）</label>
+              <label style="width: 100px;">3-1进店初步感受是否符合要求？(单选）</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【进店时，门铃、音乐正常播放，并且音量适中[地铁店不考核门铃，直接得分]；店内灯光全部亮启，营造出购物环境；空调开启温度：冷气温度26℃，暖气温度18℃】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic3One" th:if="${deial.topic3One!=null}" value="1.完全符合"  th:checked="${#strings.contains(deial.topic3One,'完全符合')}" onclick="threeDiv(1)" /><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic3One" th:if="${deial.topic3One!=null}" value="2.不符合要求" th:checked="${#strings.contains(deial.topic3One,'不符合要求')}"  onclick="threeDiv(2)" />
@@ -403,7 +404,8 @@
             </div>
             <div class="layui-form-item">
 
-              <label style="width: 100px;">4-1进店初步感受是否符合要求？(单选）</label>
+              <label style="width: 100px;">4-1进店初步感受是否符合要求？(单选）</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【店内收银机客显和TV设备正常播放，电视不能播放电视剧或者电影，美陈、物料（重点关注会员物料）是否按公司标准摆放，是否及时更新，无过期促销活动或宣传视频等内容】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic4One" th:if="${deial.topic4One!=null}"  th:checked="${#strings.contains(deial.topic4One,'1.完全符合')}" value="1.完全符合" onclick="fourDiv(1)"/><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic4One" th:if="${deial.topic4One!=null}"  th:checked="${#strings.contains(deial.topic4One,'不符合')}" value="2.不符合要求" onclick="fourDiv(2)"/>
@@ -462,7 +464,8 @@
             </div>
             <div class="layui-form-item">
               <h3 >店内天花板及地面</h3><br/>
-              <label style="width: 100px;">5-1店内天花板及地面是否符合要求？(单选）</label>
+              <label style="width: 100px;">5-1店内天花板及地面是否符合要求？(单选）</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【店内垃圾桶表面干净，无垃圾袋外露，桶内垃圾不能溢出，购物篮清洁无污渍、油渍，且数量不低于5个】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic5One" th:if="${deial.topic5One!=null}"   value="1.完全符合" th:checked="${#strings.contains(deial.topic5One,'1.完全符合')}" onclick="fiveDiv(1)" /><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic5One" th:if="${deial.topic5One!=null}"  value="2.不符合要求"  th:checked="${#strings.contains(deial.topic5One,'不符合')}" onclick="fiveDiv(2)"/>
@@ -522,7 +525,8 @@
 
             <div class="layui-form-item">
 
-              <label style="width: 100px;">6-1店内天花板及地面是否符合要求？(单选）</label>
+              <label style="width: 100px;">6-1店内天花板及地面是否符合要求？(单选）</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【店内天花板无蜘蛛网，地板无垃圾，无污渍，无铺纸皮[下雨天不考评地板污渍]；吊旗是挂放整齐，无破损；门店有将 “小心地滑” 指示牌立出[下雨天考评]】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic6One"  value="1.完全符合"  th:if="${deial.topic6One!=null}" th:checked="${#strings.contains(deial.topic6One,'1.完全符合')}"  onclick="sixDiv(1)"/><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic6One" value="2.不符合要求"  th:if="${deial.topic6One!=null}" th:checked="${#strings.contains(deial.topic6One,'不符合')}"  onclick="sixDiv(2)" />
@@ -583,7 +587,8 @@
             </div>
             <div class="layui-form-item">
               <h3 >柜台区域</h3><br/>
-              <label style="width: 100px;">7-1柜台区域是否符合要求？(单选）</label>
+              <label style="width: 100px;">7-1柜台区域是否符合要求？(单选）</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【收银前后柜台，台面干净整洁，无污渍，无杂物，无文件，无私人物品[任一不合格即扣分]】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic7One" value="1.完全符合"  th:if="${deial.topic7One!=null}"  th:checked="${#strings.contains(deial.topic7One,'1.完全符合')}"  onclick="sevenDiv(1)"/><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic7One" value="2.不符合要求"  th:if="${deial.topic7One!=null}" th:checked="${#strings.contains(deial.topic7One,'不符合')}"  onclick="sevenDiv(2)" />
@@ -640,7 +645,8 @@
             </div>
             <div class="layui-form-item">
               <h3 >速食台及关东煮区域</h3><br/>
-              <label style="width: 100px;">8-1速食台及关东煮区域是否符合要求？(单选）</label>
+              <label style="width: 100px;">8-1速食台及关东煮区域是否符合要求？(单选）</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【打餐区是否干净整洁，无杂物堆积；关东煮锅、烤肠机、茶叶蛋锅、蒸包机周边、防尘罩上无汤渍、无污渍[无相关器具则直接得分]】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic8One" value="1.完全符合"  th:if="${deial.topic8One!=null}" th:checked="${#strings.contains(deial.topic8One,'完全符合')}"  onclick="eightDiv(1)" /><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic8One" value="2.不符合要求"  th:if="${deial.topic8One!=null}"  th:checked="${#strings.contains(deial.topic8One,'不符合要求')}" onclick="eightDiv(2)" />
@@ -698,7 +704,8 @@
                 <label style="width: 100px;">2:无休闲区</label> <input type="radio" name="topic9One" value="2.无休闲区"  th:if="${deial.topic9One!=null}" th:checked="${#strings.contains(deial.topic9One,'无休闲区')}" onclick="ninesuperDiv(2)"/>
               </div>
               <div id="ninesuper">
-                <label style="width: 100px;">9-2休闲区域是否符合要求？(单选）</label>
+                <label style="width: 100px;">9-2休闲区域是否符合要求？(单选）</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607">【休闲区桌面干净，无污渍，无垃圾，桌椅摆放整齐[如果休闲区有顾客坐着，不考核有顾客入座位置，其他位置桌椅需摆放整齐；无休闲区，则不考评整齐及清洁度]】</label>
                 <div class="layui-input-block">
                   <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic9Two" value="1.完全符合"  th:if="${deial.topic9Two!=null}" th:checked="${#strings.contains(deial.topic9Two,'完全符合')}" onclick="nineDiv(1)"/><br/>
                   <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic9Two" value="2.不符合要求"  th:if="${deial.topic9Two!=null}" th:checked="${#strings.contains(deial.topic9Two,'不符合要求')}"  onclick="nineDiv(2)"/>
@@ -745,7 +752,8 @@
             </div>
             <div class="layui-form-item">
               <h3 >货架:风幕柜:冷冻柜</h3><br/>
-              <label style="width: 100px;">10-1货架:风幕柜:冷冻柜是否符合要求？(单选）</label>
+              <label style="width: 100px;">10-1货架:风幕柜:冷冻柜是否符合要求？(单选）</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【货架清洁无灰尘、虫尸[货架及商品同时考评，任一不合格即扣分]（风幕柜、冷冻柜、常温货架3处）】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic10One" value="1.完全符合"   th:if="${deial.topic10One!=null}" th:checked="${#strings.contains(deial.topic10One,'1.完全符合')}" onclick="tenDiv(1)"/><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic10One" value="2.不符合要求"  th:if="${deial.topic10One!=null}" th:checked="${#strings.contains(deial.topic10One,'不符合要求')}"  onclick="tenDiv(2)"/>
@@ -815,7 +823,8 @@
               <input type="text" class="layui-btn"  id="t10" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
-              <label style="width: 100px;">11-1货架:风幕柜:冷冻柜是否符合要求？(单选）</label>
+              <label style="width: 100px;">11-1货架:风幕柜:冷冻柜是否符合要求？(单选）</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【风幕柜及冷冻柜温度定时检查，并在温度登记表上做好记录、签字】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic11One" value="1.完全符合"  th:if="${deial.topic11One!=null}"  th:checked="${#strings.contains(deial.topic11One,'1.完全符合')}"  onclick="elevenDiv(1)" /><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic11One" value="2.不符合要求"  th:if="${deial.topic11One!=null}" th:checked="${#strings.contains(deial.topic11One,'不符合')}"  onclick="elevenDiv(2)" />
@@ -860,7 +869,8 @@
             </div>
             <div class="layui-form-item">
               <h3 >洗手池</h3><br/>
-              <label style="width: 100px;">12-1洗手池是否符合要求？(单选）</label>
+              <label style="width: 100px;">12-1洗手池是否符合要求？(单选）</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【洗手池上不能有抹布存放，池上其他用具摆放整齐[如无洗手池门店则直接得分]】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic12One" value="1.完全符合"  th:if="${deial.topic12One!=null}" th:checked="${#strings.contains(deial.topic12One,'1.完全符合')}"  onclick="twelveDiv(1)"/><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic12One" value="2.不符合要求"  th:if="${deial.topic12One!=null}" th:checked="${#strings.contains(deial.topic12One,'不符合')}" onclick="twelveDiv(2)" />
@@ -905,7 +915,8 @@
             </div>
             <div class="layui-form-item">
               <h3 >安全管理</h3><br/>
-              <label style="width: 100px;">13-1安全管理是否符合要求？(单选）</label>
+              <label style="width: 100px;">13-1安全管理是否符合要求？(单选）</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【消防设备（灭火器、消防栓）前方1米内无遮挡；安全指示灯正常工作；应急照明灯无损坏；疏散地贴无破损，消防通道畅通】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic13One" value="1.完全符合"  th:if="${deial.topic13One!=null}" th:checked="${#strings.contains(deial.topic13One,'1.完全符合')}" onclick="thirteenDiv(1)" /><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic13One" value="2.不符合要求"  th:if="${deial.topic13One!=null}" th:checked="${#strings.contains(deial.topic13One,'不符合')}" onclick="thirteenDiv(2)" />
@@ -960,7 +971,8 @@
             <h1 align="center">商品</h1>
             <div class="layui-form-item">
               <h3 >价签管理</h3><br/>
-              <label style="width: 100px;">14-1价签管理是否符合要求？(单选）</label>
+              <label style="width: 100px;">14-1价签管理是否符合要求？(单选）</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【所有货架的价签是否及时更新、价签破损或缺失数总计≤5个则得分；价签商品左下角对齐，未对齐≤5个则得分】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic14One" value="1.完全符合"  th:if="${deial.topic14One!=null}" th:checked="${#strings.contains(deial.topic14One,'1.完全符合')}" onclick="th14Div(1)"/><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic14One" value="2.不符合要求"  th:if="${deial.topic14One!=null}" th:checked="${#strings.contains(deial.topic14One,'不符合要求')}" onclick="th14Div(2)"/>
@@ -1013,7 +1025,8 @@
             </div>
             <div class="layui-form-item">
               <h3 >水果蔬菜</h3><br/>
-              <label style="width: 100px;">15-1水果蔬菜是否符合要求？(单选）</label>
+              <label style="width: 100px;">15-1水果蔬菜是否符合要求？(单选）</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【生鲜商品陈列整齐，整理及时；（蔬菜2张，水果2张）[无水果蔬菜则直接得分]】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic15One" value="1.完全符合" th:if="${deial.topic15One!=null}"  th:checked="${#strings.contains(deial.topic15One,'完全符合')}" onclick="th15Div(1)" /><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic15One" value="2.不符合要求"  th:if="${deial.topic15One!=null}"  th:checked="${#strings.contains(deial.topic15One,'不符合要求')}" onclick="th15Div(2)"/>
@@ -1059,7 +1072,8 @@
             </div>
             <div class="layui-form-item">
               <h3 >冰淇淋柜</h3><br/>
-              <label style="width: 100px;">16-1冰淇淋柜是否符合要求？(单选）</label>
+              <label style="width: 100px;">16-1冰淇淋柜是否符合要求？(单选）</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【冰柜内冰品陈列不超过红色警戒线，柜壁冰霜厚度不超过1cm则得分，冰柜推拉门保持关闭，有一项没有做到即扣分（只能存放雪糕、水饺、汤圆、面点，不得存放日配原材料及其他有气味冻制品）】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic16One" value="1.完全符合" th:if="${deial.topic16One!=null}"  th:checked="${#strings.contains(deial.topic16One,'完全符合')}" onclick="th16Div(1)" /><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic16One" value="2.不符合要求"  th:if="${deial.topic16One!=null}"  th:checked="${#strings.contains(deial.topic16One,'不符合要求')}" onclick="th16Div(2)" />
@@ -1137,7 +1151,8 @@
             </div>
             <div class="layui-form-item">
               <h3 >风幕柜</h3><br/>
-              <label style="width: 100px;">17-1风幕柜是否符合要求？(单选）</label>
+              <label style="width: 100px;">17-1风幕柜是否符合要求？(单选）</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【风幕柜货架未前进陈列数≤3个则得分；检查风幕柜饭团、三明治、便当总数量不低于9个则得分】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic17One" value="1.完全符合" th:if="${deial.topic17One!=null}"  th:checked="${#strings.contains(deial.topic17One,'完全符合')}" onclick="th17Div(1)"/><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic17One" value="2.不符合要求"  th:if="${deial.topic17One!=null}"  th:checked="${#strings.contains(deial.topic17One,'不符合要求')}" onclick="th17Div(2)" />
@@ -1164,7 +1179,7 @@
                 </table>
               </div><br/>
               <div  lay-filter="" >
-                <label style="width: 100px;">16-3检测中共有几处不符合要求？(单选））</label><br/><br/>
+                <label style="width: 100px;">17-3检测中共有几处不符合要求？(单选））</label><br/><br/>
                 <table border="1"  align="center" >
                   <tr>
                     <td >1.1处</td>
@@ -1198,7 +1213,8 @@
             </div>
             <div class="layui-form-item">
               <h3 >饮料柜</h3><br/>
-              <label style="width: 100px;">18-1饮料柜是否符合要求？(单选）</label>
+              <label style="width: 100px;">18-1饮料柜是否符合要求？(单选）</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【饮料冷藏柜货架未前进陈列数≤3个则得分，饮料冷藏柜货架欠品数≤2个则得分】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic18One" value="1.完全符合" th:if="${deial.topic18One!=null}"  th:checked="${#strings.contains(deial.topic18One,'完全符合')}" onclick="th18Div(1)"/><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic18One" value="2.不符合要求"  th:if="${deial.topic18One!=null}"  th:checked="${#strings.contains(deial.topic18One,'不符合要求')}" onclick="th18Div(2)"/>
@@ -1245,7 +1261,8 @@
             </div>
             <div class="layui-form-item">
               <h3 >收银台热食</h3><br/>
-              <label style="width: 100px;">19-1收银台热食是否符合要求？(单选）</label>
+              <label style="width: 100px;">19-1收银台热食是否符合要求？(单选）</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【关东煮无发黑品项，品项数不低于5个；烤肠机陈列量不低于5根，无发黑品质、无表皮爆裂品项；[高峰时必须陈列丰满，收银台无此设备即得分]】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic19One" value="1.完全符合" th:if="${deial.topic19One!=null}"  th:checked="${#strings.contains(deial.topic19One,'完全符合')}" onclick="th19Div(1)"/><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic19One" value="2.不符合要求"  th:if="${deial.topic19One!=null}"  th:checked="${#strings.contains(deial.topic19One,'不符合要求')}"  onclick="th19Div(2)" />
@@ -1313,7 +1330,8 @@
               <input type="text" class="layui-btn"  id="t19" value="查看图片" onclick="look(this)"/>
             </div>
             <div>
-              <label style="width: 100px;">20-1收银台热食是否符合要求？(单选）</label>
+              <label style="width: 100px;">20-1收银台热食是否符合要求？(单选）</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【蒸包机陈列品项数不低于4个；茶叶蛋陈列数量不低于10个；[高峰时必须陈列丰满，收银台无此设备即得分]】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic20One" value="1.完全符合" th:if="${deial.topic20One!=null}"  th:checked="${#strings.contains(deial.topic20One,'完全符合')}" onclick="th20Div(1)" /><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic20One" value="2.不符合要求"   th:if="${deial.topic20One!=null}"  th:checked="${#strings.contains(deial.topic20One,'不符合要求')}" onclick="th20Div(2)" />
@@ -1375,7 +1393,8 @@
             </div>
             <div class="layui-form-item">
               <h3 >面包货架</h3><br/>
-              <label style="width: 100px;">21-1面包货架是否符合要求？(单选）</label>
+              <label style="width: 100px;">21-1面包货架是否符合要求？(单选）</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【检查面包货架是否陈列整齐丰满【如未发现面包货架即扣分】，面包品项数不低于6个，面包总数量不低于12个】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic21One" value="1.完全符合" th:if="${deial.topic21One!=null}"  th:checked="${#strings.contains(deial.topic21One,'完全符合')}" onclick="th21Div(1)"/><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic21One" value="2.不符合要求"   th:if="${deial.topic21One!=null}"  th:checked="${#strings.contains(deial.topic21One,'不符合要求')}" onclick="th21Div(2)" />
@@ -1453,7 +1472,8 @@
             </div>
             <div class="layui-form-item">
               <h3 >货品陈列</h3><br/>
-              <label style="width: 100px;">22-1货品陈列是否符合要求？(单选）</label>
+              <label style="width: 100px;">22-1货品陈列是否符合要求？(单选）</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【商品无破损、无挤压变形、无空框，缺货是否严重（常温商品:单层货架上的未前进陈列数＞2个则扣分，单层货架欠品数＞2个则扣分）】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic22One" value="1.完全符合" th:if="${deial.topic22One!=null}"  th:checked="${#strings.contains(deial.topic22One,'完全符合')}" onclick="th22Div(1)"/><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic22One" value="2.不符合要求"  th:if="${deial.topic22One!=null}"  th:checked="${#strings.contains(deial.topic22One,'不符合要求')}" onclick="th22Div(2)"/>
@@ -1516,7 +1536,8 @@
               <input type="text" class="layui-btn"  id="t22" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
-              <label style="width: 100px;">23-1货品陈列是否符合要求？(单选）</label>
+              <label style="width: 100px;">23-1货品陈列是否符合要求？(单选）</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【常规商品陈列（重点检查香烟和酒架陈列）整齐丰满，前后对齐、左右对齐、正面朝外】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic23One" value="1.完全符合" th:if="${deial.topic23One!=null}"  th:checked="${#strings.contains(deial.topic23One,'完全符合')}" onclick="th23Div(1)" /><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic23One" value="2.不符合要求"  th:if="${deial.topic23One!=null}"  th:checked="${#strings.contains(deial.topic23One,'不符合要求')}" onclick="th23Div(2)"/>
@@ -1574,7 +1595,8 @@
               <input type="text" class="layui-btn"  id="t23" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
-              <label style="width: 100px;">24-1货品陈列是否符合要求？(单选）</label>
+              <label style="width: 100px;">24-1货品陈列是否符合要求？(单选）</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【门店内货物或推车等物品不得堵塞购物通道，不得影响顾客购物和店面整体形象】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic24One" value="1.完全符合" th:if="${deial.topic24One!=null}"  th:checked="${#strings.contains(deial.topic24One,'完全符合')}" onclick="th24Div(1)"/><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic24One" value="2.不符合要求" th:if="${deial.topic24One!=null}"  th:checked="${#strings.contains(deial.topic24One,'不符合要求')}" onclick="th24Div(2)"/>
@@ -1615,7 +1637,8 @@
               <input type="text" class="layui-btn"  id="t24" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
-              <label style="width: 100px;">25-1货品陈列是否符合要求？(单选）</label>
+              <label style="width: 100px;">25-1货品陈列是否符合要求？(单选）</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【商品不得直接落地，地堆陈列必须使用防潮栈板】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic25One" th:if="${deial.topic25One!=null}"  th:checked="${#strings.contains(deial.topic25One,'完全符合')}"  value="1.完全符合" onclick="th25Div(1)" /><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic25One" th:if="${deial.topic25One!=null}"  th:checked="${#strings.contains(deial.topic25One,'不符合要求')}"  value="2.不符合要求"  onclick="th25Div(2)" />
@@ -1657,7 +1680,8 @@
             </div>
             <div class="layui-form-item">
               <h3>经营</h3>
-              <label style="width: 100px;">26-1经营是否符合要求？(单选）</label>
+              <label style="width: 100px;">26-1经营是否符合要求？(单选）</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【是否有过期变质商品存架（随机抽查冷藏奶、便当、饭团、面包2-3个单品），如有，门店当月巡检成绩计0分】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic26One" value="1.完全符合" th:if="${deial.topic26One!=null}"  th:checked="${#strings.contains(deial.topic26One,'完全符合')}" onclick="th26Div(1)"/><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic26One" value="2.不符合要求"  th:if="${deial.topic26One!=null}"  th:checked="${#strings.contains(deial.topic26One,'不符合要求')}" onclick="th26Div(2)" />
@@ -1700,7 +1724,8 @@
             <h1 align="center">服务</h1>
             <div class="layui-form-item">
               <h3>顾客进店</h3><span>注意；未喊欢迎光临苏宁小店“即扣4分 其他仸意1项不达标即扣1分，总分4分，最多扣4分</span>
-              <label style="width: 100px;">27-1顾客进店是否符合要求？(单选）</label>
+              <label style="width: 100px;">27-1顾客进店是否符合要求？(单选）</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【顾客进店时，员工与顾客有眼神接触并使用“欢迎光临苏宁小店”等招呼问候用语，并积极帮助顾客，面带微笑，目光友善，服务有亲和力；巡店过程中，员工对所有顾客进店均有问候语则该题给分】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic27One"  value="1.完全符合" th:if="${deial.topic27One!=null}"  th:checked="${#strings.contains(deial.topic27One,'完全符合')}" onclick="th27Div(1)"  /><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic27One" value="2.不符合要求" th:if="${deial.topic27One!=null}"  th:checked="${#strings.contains(deial.topic27One,'不符合要求')}" onclick="th27Div(2)" />
@@ -1773,7 +1798,8 @@
               <input type="text" class="layui-btn"  id="t27" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
-              <label style="width: 100px;">28-1顾客进店是否符合要求？</label>
+              <label style="width: 100px;">28-1顾客进店是否符合要求？</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【顾客进店时促销：顾客进店购物过程中，有员工主动上前为顾客介绍当月活动或商品】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic28One" value="1.完全符合" th:if="${deial.topic28One!=null}"  th:checked="${#strings.contains(deial.topic28One,'完全符合')}"  onclick="th28Div(1)"/><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic28One" value="2.不符合要求"  th:if="${deial.topic28One!=null}"  th:checked="${#strings.contains(deial.topic28One,'不符合要求')}"  onclick="th28Div(2)"/>
@@ -1814,7 +1840,8 @@
             </div>
             <div class="layui-form-item">
               <h3>顾客结账</h3>
-              <label style="width: 100px;">29-1结账前店员是否符合要求？</label>
+              <label style="width: 100px;">29-1结账前店员是否符合要求？</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【结账前：询问顾客是否是小店超级会员，出示会员码，如无，则推荐顾客下载小店APP】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic29One" value="1.完全符合" th:if="${deial.topic29One!=null}"  th:checked="${#strings.contains(deial.topic29One,'完全符合')}" onclick="th29Div(1)"/><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic29One" value="2.不符合要求"  th:if="${deial.topic29One!=null}"  th:checked="${#strings.contains(deial.topic29One,'不符合要求')}" onclick="th29Div(2)"/>
@@ -1886,7 +1913,8 @@
               <input type="text" class="layui-btn"  id="t29" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
-              <label style="width: 100px;">30-1结账时店员是否符合要求？</label>
+              <label style="width: 100px;">30-1结账时店员是否符合要求？</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【结账时：主动询问顾客的支付方式，“您好，请问您使用苏宁支付吗？”，购2件及以上商品时，是否主动为顾客提供购物袋，报出应收总金额，帮顾客装袋并双手递给顾客】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic30One" value="1.完全符合" th:if="${deial.topic30One!=null}"  th:checked="${#strings.contains(deial.topic30One,'完全符合')}" onclick="th30Div(1)"/><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic30One" value="2.不符合要求" th:if="${deial.topic30One!=null}"  th:checked="${#strings.contains(deial.topic30One,'不符合要求')}"  onclick="th30Div(2)"/>
@@ -1955,7 +1983,8 @@
               <input type="text" class="layui-btn"  id="t30" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
-              <label style="width: 100px;">31-1付款后店员是否符合要求？</label>
+              <label style="width: 100px;">31-1付款后店员是否符合要求？</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【付款后：主动向顾客双手呈递购物小票及找零【含刷卡】，并推荐顾客进入门店社群】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic31One" value="1.完全符合" th:if="${deial.topic31One!=null}"  th:checked="${#strings.contains(deial.topic31One,'完全符合')}" onclick="th31Div(1)"/><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic31One" value="2.不符合要求"  th:if="${deial.topic31One!=null}"  th:checked="${#strings.contains(deial.topic31One,'不符合要求')}" onclick="th31Div(2)"/>
@@ -2021,7 +2050,8 @@
             </div>
             <div class="layui-form-item">
               <h3>顾客离开</h3>
-              <label style="width: 100px;">32-1顾客离开是否符合要求？</label>
+              <label style="width: 100px;">32-1顾客离开是否符合要求？</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【顾客离开门店时，员工有向顾客表示谢意：“谢谢光临”等告别用语，员工对所有顾客离店均有告别用语则该题给分】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic32One" value="1.完全符合" th:if="${deial.topic32One!=null}"  th:checked="${#strings.contains(deial.topic32One,'完全符合')}" onclick="th32Div(1)"/><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic32One" value="2.不符合要求"  th:if="${deial.topic32One!=null}"  th:checked="${#strings.contains(deial.topic32One,'不符合要求')}" onclick="th32Div(2)"/>
@@ -2062,7 +2092,8 @@
             </div>
             <div class="layui-form-item">
               <h3>员工仪容仪表</h3>
-              <label style="width: 100px;">33-1员工仪容仪表是否符合要求？</label>
+              <label style="width: 100px;">33-1员工仪容仪表是否符合要求？</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【着工装且工装平整、干净，无油渍，无脏黑；上衣放在裤子外面；按标准佩戴工牌；按季节穿不同工装；内衬衣服不外漏；操作熟食必须佩带手套和口罩】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic33One" value="1.完全符合" th:if="${deial.topic33One!=null}"  th:checked="${#strings.contains(deial.topic33One,'完全符合')}" onclick="th33Div(1)"/><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic33One" value="2.不符合要求" th:if="${deial.topic33One!=null}"  th:checked="${#strings.contains(deial.topic33One,'不符合要求')}" onclick="th33Div(3)"/>
@@ -2146,7 +2177,8 @@
               <input type="text" class="layui-btn"  id="t33" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
-              <label style="width: 100px;">34-1员工仪容仪表是否符合要求？</label>
+              <label style="width: 100px;">34-1员工仪容仪表是否符合要求？</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607">【穿蓝色、深色牛仔长裤或蓝色、深色无其他装饰休闲裤；不得穿乞丐裤、哈韩裤或其他夸张裤；裤子长度以遮住脚踝为准；不得穿拖鞋式雨鞋、凉鞋、拖鞋、高跟鞋、靴子；必须穿袜子】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic34One" value="1.完全符合" th:if="${deial.topic34One!=null}"  th:checked="${#strings.contains(deial.topic34One,'完全符合')}" onclick="th34Div(1)"/><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic34One" value="2.不符合要求"  th:if="${deial.topic34One!=null}"  th:checked="${#strings.contains(deial.topic34One,'不符合要求')}" onclick="th34Div(2)"/>
@@ -2213,7 +2245,8 @@
               <input type="text" class="layui-btn"  id="t34" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
-              <label style="width: 100px;">35-1员工仪容仪表是否符合要求？</label>
+              <label style="width: 100px;">35-1员工仪容仪表是否符合要求？</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【不允许挑染或全染夸张颜色；头发干净，看不到头屑；男生不留鬓角；男生前面头发不得超过眉毛；男生两侧头发必须露出整个耳朵；女生刘海不得遮住眼睛；女生长发（过肩即为长发）要扎起，不得披发；不戴耳环、耳钉】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic35One" value="1.完全符合" th:if="${deial.topic35One!=null}"  th:checked="${#strings.contains(deial.topic35One,'完全符合')}" onclick="th35Div(1)"/><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic35One" value="2.不符合要求" th:if="${deial.topic35One!=null}"  th:checked="${#strings.contains(deial.topic35One,'不符合要求')}" onclick="th35Div(2)"/>
@@ -2280,7 +2313,8 @@
               <input type="text" class="layui-btn"  id="t35" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
-              <label style="width: 100px;">36-1员工仪容仪表是否符合要求？</label>
+              <label style="width: 100px;">36-1员工仪容仪表是否符合要求？</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【男生：不留胡须；不戴金属项链；不得化妆；上班前不吃葱、蒜等有异味食物；不喝酒及含酒精的饮料；女生：上班可淡妆，不得浓妆艳抹；不得戴假睫毛；不得戴鼻环、唇环；上班前不吃葱、蒜等有异味食物；不喝酒及含酒精的饮料】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic36One" value="1.完全符合" th:if="${deial.topic36One!=null}"  th:checked="${#strings.contains(deial.topic36One,'完全符合')}" onclick="th36Div(1)"/><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic36One" value="2.不符合要求"  th:if="${deial.topic36One!=null}"  th:checked="${#strings.contains(deial.topic36One,'不符合要求')}" onclick="th36Div(2)" />
@@ -2347,7 +2381,8 @@
               <input type="text" class="layui-btn"  id="t36" value="查看图片" onclick="look(this)"/>
             </div>
             <div class="layui-form-item">
-              <label style="width: 100px;">37-1员工仪容仪表是否符合要求？</label>
+              <label style="width: 100px;">37-1员工仪容仪表是否符合要求？</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【手部保持清洁，指甲无污垢；指甲修剪整齐，长度为从掌心方向看不到指甲露出指尖为适合；当班期间不能涂指甲油；不带假指甲；不得有纹身、刺青（包括手臂、手肘处）；上班时不允许佩戴任何饰物（戒指、手表等）】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic37One" value="1.完全符合" th:if="${deial.topic37One!=null}"  th:checked="${#strings.contains(deial.topic37One,'完全符合')}"  onclick="th37Div(1)"/><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic37One" value="2.不符合要求" th:if="${deial.topic37One!=null}"  th:checked="${#strings.contains(deial.topic37One,'不符合要求')}" onclick="th37Div(2)" />
@@ -2424,7 +2459,8 @@
 
             <div class="layui-form-item">
               <h3>员工行为检查</h3>
-              <label style="width: 100px;">38-1员工行为检查是否符合要求？</label>
+              <label style="width: 100px;">38-1员工行为检查是否符合要求？</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【员工在店内的行为有无违背店面运营管理规范；[包括但不限于：着工装抽烟、在收银台接听电话，在售卖区玩手机，聚众聊天等等]】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic38One" value="1.完全符合" th:if="${deial.topic38One!=null}"  th:checked="${#strings.contains(deial.topic38One,'完全符合')}" onclick="th38Div(1)"/><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic38One" value="2.不符合要求"  th:if="${deial.topic38One!=null}"  th:checked="${#strings.contains(deial.topic38One,'不符合要求')}"  onclick="th38Div(2)"/>
@@ -2479,7 +2515,8 @@
             </div>
             <div class="layui-form-item">
               <h3>证照管理</h3>
-              <label style="width: 100px;">39-1证照管理是否符合要求？</label>
+              <label style="width: 100px;">39-1证照管理是否符合要求？</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【门店营业许可证、食品经营许可证、员工健康证是否在收银区公示】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic39One" value="1.完全符合" th:if="${deial.topic39One!=null}"  th:checked="${#strings.contains(deial.topic39One,'完全符合')}" onclick="th39Div(1)"/><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic39One" value="2.不符合要求"  th:if="${deial.topic39One!=null}"  th:checked="${#strings.contains(deial.topic39One,'不符合要求')}"  onclick="th39Div(2)"/>
@@ -2531,7 +2568,8 @@
             </div>
             <h1 align="center">服务产品</h1>
             <div class="layui-form-item">
-              <label style="width: 100px;">40-1服务产品是否符合要求？</label>
+              <label style="width: 100px;">40-1服务产品是否符合要求？</label><br/>
+              <label style="text-align: left;font-size: 12px;color: #cf3607">【苏宁邮局和苏宁有房服务区域是否符合标准，苏宁帮客是否有物料宣传】</label>
               <div class="layui-input-block">
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic40One" value="1.完全符合" th:if="${deial.topic40One!=null}"  th:checked="${#strings.contains(deial.topic40One,'完全符合')}" onclick="th30Div(1)"/><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic40One" value="2.不符合要求"  th:if="${deial.topic40One!=null}"  th:checked="${#strings.contains(deial.topic40One,'不符合要求')}" onclick="th40Div(2)" />
