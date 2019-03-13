@@ -8,4 +8,23 @@
   <groupId>cn.vo</groupId>
   <artifactId>product-common</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml</artifactId>
+      <version>${poi.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>net.sf.jxls</groupId>
+      <artifactId>jxls-core</artifactId>
+      <version>1.0.6</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>net.sf.jxls</groupId>
+      <artifactId>jxls-core</artifactId>
+      <version>1.0.6</version>
+    </dependency>
+  </dependencies>
 </project>
