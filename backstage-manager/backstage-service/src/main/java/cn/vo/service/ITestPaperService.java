@@ -27,5 +27,7 @@ public interface ITestPaperService {
 
     void batchCheck(Map map);
 
+    List<TestPaper> queryAll();
+
 
 }

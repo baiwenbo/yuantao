@@ -70,4 +70,10 @@ public class TestPaperServiceImpl implements ITestPaperService {
     public void batchCheck(Map map) {
         testPaperMapper.batchCheck(map);
     }
+
+    @Override
+    public List<TestPaper> queryAll() {
+        TestPaperExample testPaperExample=new TestPaperExample();
+        return testPaperMapper.selectByExample(testPaperExample);
+    }
 }
