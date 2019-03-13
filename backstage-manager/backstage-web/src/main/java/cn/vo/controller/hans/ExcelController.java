@@ -4,7 +4,9 @@ import cn.vo.Utils.TemplateExcelUtils;
 import cn.vo.pojo.entity.TestPaper;
 import cn.vo.service.ITestPaperService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.util.ResourceUtils;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,15 +19,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@RestController
+@Controller
 @RequestMapping("excel")
 public class ExcelController {
 
     @Autowired
     private ITestPaperService testPaperService;
 
-    @RequestMapping(value = "/export")
-    public void excel(HttpServletResponse response,Integer id) {
+    @GetMapping("/export")
+    public void excel(HttpServletResponse response) {
 
         /**
          * excel导出
