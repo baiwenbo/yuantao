@@ -47,13 +47,13 @@ public class ChangguiPaperController {
     @GetMapping("list")
     public  String  list(String close, Model model){
         model.addAttribute("close",close);
-        return "views/hans/testPaperList";
+        return "views/changguiShop/testPaperList";
     }
 
     @GetMapping("appealList")
     public  String  appealList(String close, Model model){
         model.addAttribute("close",close);
-        return "views/hans/testAppealPaperList";
+        return "views/changguiShop/testAppealPaperList";
     }
 
     @GetMapping("/listJson")
@@ -184,7 +184,7 @@ public class ChangguiPaperController {
 
     @GetMapping("add")
     public String add(){
-        return "views/hans/questionAdd";
+        return "views/changguiShop/questionAdd";
     }
 
     @PostMapping("update")
