@@ -142,6 +142,9 @@ public class TestPaperController {
 
             TestPaper  testPaperMendian=testPaperService.getById(testPaper.getId());
 
+            if(testPaper.getCompanyId()==null){
+                testPaper.setCompanyId(testPaperMendian.getCompanyId());
+            }
             saveTestPaper(testPaper);
             HttpSession session=request.getSession();
             User user=(User) session.getAttribute("USER");
