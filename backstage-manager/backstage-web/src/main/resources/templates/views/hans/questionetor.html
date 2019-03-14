@@ -507,13 +507,14 @@
                   </tr>
 
                 </table>
+              </div><br/>
+              <div align="left" class="layui-col-md10">
+                <input type="file" align="left" class="layui-btn" name="topic5Fourfile" id="test-upload-normal" value="上传图片"/>
+                <input name="t5"  type="hidden" th:value="${deial.topic5Four}"/>
+                <input type="text" align="left" class="layui-btn"  id="t5" value="查看图片" onclick="look(this)"/>
               </div>
             </div><br/>
-            <div align="left" class="layui-col-md10">
-            <input type="file" align="left" class="layui-btn" name="topic5Fourfile" id="test-upload-normal" value="上传图片"/>
-            <input name="t5"  type="hidden" th:value="${deial.topic5Four}"/>
-            <input type="text" align="left" class="layui-btn"  id="t5" value="查看图片" onclick="look(this)"/>
-            </div>
+
             <!--<div class="layui-col-md12">
               <div class="layui-card">
                 <div class="layui-card-header">上传多张图片</div>
@@ -2643,7 +2644,7 @@
               <label style="width: 100px;">40-1服务产品是否符合要求？</label><br/>
               <label style="text-align: left;font-size: 12px;color: #cf3607">【苏宁邮局和苏宁有房服务区域是否符合标准，苏宁帮客是否有物料宣传】</label>
               <div align="left" >
-                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic40One" value="1.完全符合" th:if="${deial.topic40One!=null}"  th:checked="${#strings.contains(deial.topic40One,'完全符合')}" onclick="th30Div(1)"/><br/>
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic40One" value="1.完全符合" th:if="${deial.topic40One!=null}"  th:checked="${#strings.contains(deial.topic40One,'完全符合')}" onclick="th40Div(1)"/><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic40One" value="2.不符合要求"  th:if="${deial.topic40One!=null}"  th:checked="${#strings.contains(deial.topic40One,'不符合要求')}" onclick="th40Div(2)" />
               </div>
             </div><br/>
