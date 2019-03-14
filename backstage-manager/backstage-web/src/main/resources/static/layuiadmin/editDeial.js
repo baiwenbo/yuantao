@@ -163,7 +163,30 @@ if (th16.indexOf("完全")>0){
     if (th40.indexOf("完全")>0){
         $("#th40").hide();
     }
+    $("#queryCompany").click(function(){
+        $("#companyList").empty();
+        var customerName=$("#customerName").val();
+        $.ajax({
+            type:"get",
+            url:path+"/environment/queryName",
+            data: "name="+customerName,
+            dataType:"json",
+            async : false,
+            success:function(result){
+                var html="<select name='companyId' style='width: 130px;height: 40px'>"
+                for (var i=0;i<result.length;i++){
+                    html+="<option value="+result[i].id+">"+result[i].name+"</option>"
+                }
+                html+="</select>"
+                $("#companyList").append(html);
+            },
+            error: function(result) {
+                alert("服务异常");
+            }
 
+        });
+
+    });
 
 
 });
