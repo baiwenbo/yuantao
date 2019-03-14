@@ -27,9 +27,19 @@
 <script >
 
   $(document).ready(function(){
+    var imgList=new Array();
 var name=$("#filename").val();
     /*<![CDATA[*/
-var html='<img src="'+path+name+'"   style="width: 300px" />';
+    if (name!=""){
+      imgList=name.split(",");
+    }
+    var html="";
+for (var i=0;i<imgList.length;i++){
+ var imgUrl=path+imgList[i];
+
+   html+='<img src="'+imgUrl+'"   style="width: 300px" /><br/>';
+
+}
     /*]]>*/
 $("#imgSee").append(html);
   });
