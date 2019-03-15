@@ -18,5 +18,10 @@ public class RoutController {
      return    "views/routine/routAdd";
     }
 
+    @GetMapping("routList")
+    public  String routList(){
+        return    "views/routine/routList";
+    }
+
 
 }

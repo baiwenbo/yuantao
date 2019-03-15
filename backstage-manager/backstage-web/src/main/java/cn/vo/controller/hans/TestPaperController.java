@@ -54,13 +54,14 @@ public class TestPaperController {
         model.addAttribute("close",close);
         return "views/hans/testAppealPaperList";
     }
-
+    //增加类型 区分苏宁小店 常规小店等
     @GetMapping("/listJson")
     @ResponseBody
     public ListResult<TestPaper> listJson(HttpServletRequest request, String name,String qcheckstatus,
-                                          String checkstatus, Integer page, Integer limit){
+                                          String checkstatus,Integer type, Integer page, Integer limit){
         Map map=new HashMap<>();
         map.put("name", name);
+        map.put("type", type);
         map.put("qcheckstatus", qcheckstatus);
         map.put("checkstatus", checkstatus);
         map.put("index", PageUtils.getPageIndex(page, limit));
@@ -206,6 +207,7 @@ public class TestPaperController {
         testPaper.setAddress(xiaodianAddress.getAddress());
         testPaper.setPianqu(xiaodianAddress.getPianqu());
         testPaper.setCity(xiaodianAddress.getCity());
+        testPaper.setDaqu(xiaodianAddress.getDaqu());
         return testPaper;
     }
 

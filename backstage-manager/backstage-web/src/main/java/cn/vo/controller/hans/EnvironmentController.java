@@ -59,6 +59,19 @@ public class EnvironmentController {
         }
         return  json;
     }
+    @GetMapping("queryCode")
+    @ResponseBody
+    public String queryCode(String code){
+        String json="";
+        try{
+             XiaodianAddress xiaodianAddress=xiaodianAddressService.getCode(code);
+            json= JSONObject.toJSONString(xiaodianAddress);
+        }catch (Exception e){
+            e.printStackTrace();
+            return "error";
+        }
+        return  json;
+    }
 
 
 
