@@ -21,10 +21,12 @@
         <input class="layui-input" id="qname" autocomplete="off"/>
     </div>
     <button class="layui-btn" data-type="reload">搜索</button>
-    <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="question()">录入</button>
-    <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="appealOpen()">申诉开</button>
-    <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="appealClose()">申诉关</button>
-    <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="batchCheck()">批量审核通过</button>
+    <span th:if="${scpcqx == '5'}">
+        <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="question()">录入</button>
+        <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="appealOpen()">申诉开</button>
+        <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="appealClose()">申诉关</button>
+        <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="batchCheck()">批量审核通过</button>
+    </span>
 </div>
 <table id="demo" lay-filter="test"></table>
 <script type="text/html" id="barDemo">
@@ -65,7 +67,7 @@
         table.render({
             elem: '#demo'
             ,height: 600
-            ,url:path+ '/testPaper/listJson' //数据接口
+            ,url:path+ '/testPaper/listJson?type=1' //数据接口
             ,page: true //开启分页
             ,cols: [[ //表头
                 {field: 'id', title: 'ID', width:80, sort: true, fixed: 'left'}
@@ -92,7 +94,7 @@
                                     curr: 1 //重新从第 1 页开始
                                 }
                             , where: { name: name}//这里传参  向后台
-                            , url: path+'/testPaper/listJson'//后台做模糊搜索接口路径
+                            , url: path+'/testPaper/listJson?type=2'//后台做模糊搜索接口路径
                             , method: 'get'
                         });
                 }

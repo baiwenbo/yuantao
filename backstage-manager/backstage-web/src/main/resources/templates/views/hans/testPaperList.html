@@ -40,9 +40,10 @@
         </select>
     </div>
     <button class="layui-btn" data-type="reload">搜索</button>
-    <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="question()">录入</button>
-    <a data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" th:href="@{/excel/export}">导出</a>
-
+    <span th:if="${scpcqx == '5'}">
+        <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="question()">录入</button>
+        <a data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" th:href="@{/excel/export}">导出</a>
+    </span>
 </div>
 <table id="demo" lay-filter="test"></table>
 <script type="text/html" id="barDemo">
