@@ -22,130 +22,204 @@
   <div >
     <div >
       <div >
-        <div  pad15="" style="align-items: center;">
+        <div  pad15="" style="align-items: center;" th:each="deial:${testPaper}">
           <form enctype="multipart/form-data" th:action="@{/testPaper/save}" method="post" style="align:center" align="center" >
             <div th:replace="views/hans/addFile::html" ></div>
 
-          <div class="layui-form-item" >
-              <div class="layui-inline">
-                  <div class="layui-input-inline" >
-                      <input type="text" id="customerName" lay-verify="required" autocomplete="off" placeholder="可输入门店关键字进行搜索"  class="layui-input"  style="width: 200px;"/>
+              <h3 align="center" >总分:<span th:text="${deial.score}"></span> </h3>
+              <div class="layui-form-item ">
+
+                  <div class="layui-inline">
+                      <div class="layui-input-inline" >
+                          <input type="text" id="customerName" lay-verify="required" th:value="${deial.name}" autocomplete="off" placeholder="可输入门店关键字进行搜索"  class="layui-input"  style="width: 200px;"/>
+                      </div>
+                  </div>
+                  <div class="layui-inline" style="padding-left: 60px;">
+                      <div id="companyList" style="width:100px; float: left">
+                      </div>
+                      <div class="layui-input-inline" style="float:right">
+                          <input class="layui-btn" style="width: 85px" data-type="reload" id="queryCompany" value="搜索" />
+                      </div>
+                  </div>
+
+
+              </div>
+              <div class="layui-form-item">
+                  <div class="layui-inline">
+                      <label class="layui-form-label">审核状态</label>
+                      <div class="layui-input-inline">
+                          <select name="checkstatus"  style="height: 35px;width: 200px;" >
+                              <option value="正在审核" th:selected="${deial.checkstatus == '正在审核'}" >正在审核</option>
+                              <option value="审核通过" th:selected="${deial.checkstatus == '审核通过'}" >审核通过</option>
+                              <option value="待审核" th:selected="${deial.checkstatus == '待审核'}" >待审核</option>
+                          </select>
+                      </div>
+                  </div>
+
+                  <div class="layui-inline">
+                      <label class="layui-form-label">门店编号</label>
+                      <div class="layui-input-inline">
+                          <input type="tel" name="code"  th:value="${deial.code}" autocomplete="off" class="layui-input" />
+                      </div>
+                  </div>
+                  <div class="layui-inline">
+                      <label class="layui-form-label">门店地址</label>
+                      <div class="layui-input-inline">
+                          <input type="text" name="address" th:value="${deial.address}" autocomplete="off" class="layui-input" />
+                      </div>
+                  </div>
+
+              </div>
+
+              <div class="layui-form-item">
+                  <div class="layui-inline">
+                      <label class="layui-form-label">所在片区</label>
+                      <div class="layui-input-inline">
+                          <input type="text" name="pianqu" th:value="${deial.pianqu}" autocomplete="off" class="layui-input" />
+                      </div>
+                  </div>
+                  <div class="layui-inline">
+                      <label class="layui-form-label">所在城市</label>
+                      <div class="layui-input-inline">
+                          <input type="text" name="city" th:value="${deial.city}" autocomplete="off" class="layui-input" />
+                      </div>
+                  </div>
+                  <div class="layui-inline">
+                      <label class="layui-form-label">执行日期</label>
+                      <div class="layui-input-inline">
+                          <input type="text" name="executedate"  id="executedate"  th:value="${deial.executedate}" autocomplete="off" class="layui-input" />
+                      </div>
+                  </div>
+
+              </div>
+              <div class="layui-form-item">
+                  <div class="layui-inline">
+                      <label class="layui-form-label">进店时间</label>
+                      <div class="layui-input-inline">
+                          <input type="text" name="starttime" id="starttime" th:value="${deial.starttime}" autocomplete="off" class="layui-input" />
+                      </div>
+                  </div>
+                  <div class="layui-inline">
+                      <label class="layui-form-label">离店时间</label>
+                      <div class="layui-input-inline">
+                          <input type="text" name="endtime" id="endtime" th:value="${deial.endtime}" autocomplete="off" class="layui-input" />
+                      </div>
+                  </div>
+                  <div class="layui-inline">
+                      <label class="layui-form-label">神客姓名</label>
+                      <div class="layui-input-inline">
+                          <input type="text" name="personname" th:value="${deial.personname}" autocomplete="off" class="layui-input" />
+                      </div>
+                  </div>
+
+              </div>
+
+              <div class="layui-form-item">
+                  <div class="layui-inline">
+                      <label class="layui-form-label">购买商品</label>
+                      <div class="layui-input-inline">
+                          <input type="text" name="commodity" lth:value="${deial.commodity}" autocomplete="off" class="layui-input" />
+                      </div>
+                  </div>
+                  <div class="layui-inline">
+                      <label class="layui-form-label">进店时店内员工人数</label>
+                      <div class="layui-input-inline">
+                          <input type="tel" name="populationqty" th:value="${deial.populationqty}" autocomplete="off" class="layui-input" />
+                      </div>
+                  </div>
+                  <div class="layui-inline">
+                      <label class="layui-form-label">花费金额</label>
+                      <div class="layui-input-inline">
+                          <input type="tel" name="money" th:value="${deial.money}" autocomplete="off" class="layui-input" />
+                      </div>
                   </div>
               </div>
-              <div class="layui-inline" style="padding-left: 60px;">
-                  <div id="companyList" style="width:100px; float: left">
+
+              <div class="layui-form-item">
+                  <div class="layui-inline">
+                      <label class="layui-form-label">链接和提取码</label>
+                      <div class="layui-input-inline">
+                          <input type="text" name="url" th:value="${deial.url}" autocomplete="off" class="layui-input" />
+                      </div>
                   </div>
-                  <div class="layui-input-inline" style="float:right">
-                      <input class="layui-btn" style="width: 85px" data-type="reload" id="queryCompany" value="搜索" />
+                  <div class="layui-inline">
+                      <label class="layui-form-label">店内消费人数（不含神客）</label>
+                      <div class="layui-input-inline">
+                          <input type="text" name="consumeqty" th:value="${deial.consumeqty}" autocomplete="off" class="layui-input" />
+                      </div>
                   </div>
+
+                  <div class="layui-inline">
+                      <label class="layui-form-label" style="height:50px;">收银员姓名（如无法看清楚姓名描述体貌特征）</label>
+                      <div class="layui-input-inline">
+                          <input type="text" name="cashiername" th:value="${deial.cashiername}" autocomplete="off" class="layui-input" />
+                      </div>
+                  </div>
+
               </div>
-              <div class="layui-inline">
-                  <label class="layui-form-label">执行日期</label>
+              <div class="layui-form-item layui-form-text">
+                  <label class="layui-form-label">门店店长申诉</label>
+                  <div class="layui-input-block">
+                      <textarea name="qcheck" th:text="${deial.qcheck}" class="layui-textarea"></textarea>
+                  </div>
+                  <input type="file" class="layui-btn" name="trough1File"  value="上传图片"/>
+                  <input name="mark1" type="hidden" th:value="${deial.trough1}"/>
+                  <input type="text" class="layui-btn"  id="mark1" value="查看扣分点图片" onclick="look(this)"/>
+              </div>
+
+              <div class="layui-form-item layui-form-text">
+                  <label class="layui-form-label">申述状态</label>
                   <div class="layui-input-inline">
-                      <input type="text" name="executedate" id="executedate" placeholder="yyyy-MM-dd HH:mm:ss" autocomplete="off" class="layui-input" />
+                      <select name="qcheckstatus"  style="height: 35px;width: 200px;" >
+                          <option value="已回复" th:selected="${deial.qcheckstatus == '已回复'}" >已回复</option>
+                          <option value="已申诉" th:selected="${deial.qcheckstatus == '已申诉'}" >已申诉</option>
+                          <option value="已批复" th:selected="${deial.qcheckstatus == '已批复'}" >已批复</option>
+                          <option value="待批复" th:selected="${deial.qcheckstatus == '待批复'}" >请客户批复</option>
+                      </select>
                   </div>
               </div>
 
-          </div>
-
-          <div class="layui-form-item">
-              <div class="layui-inline">
-                  <label class="layui-form-label">进店时间</label>
-                  <div class="layui-input-inline">
-                      <input type="text" name="starttime" id="starttime" placeholder="yyyy-MM-dd HH:mm:ss" autocomplete="off" class="layui-input" />
+              <div class="layui-form-item layui-form-text">
+                  <label class="layui-form-label">顸实咨询申诉复审</label>
+                  <div class="layui-input-block">
+                      <textarea name="qcheckinput" th:text="${deial.qcheckinput}"  class="layui-textarea"></textarea>
                   </div>
               </div>
-              <div class="layui-inline">
-                  <label class="layui-form-label">离店时间</label>
-                  <div class="layui-input-inline">
-                      <input type="text" name="endtime" id="endtime" placeholder="yyyy-MM-dd HH:mm:ss" autocomplete="off" class="layui-input" />
+              <div class="layui-form-item layui-form-text">
+                  <label class="layui-form-label">苏宁总部终审</label>
+                  <div class="layui-input-block">
+                      <textarea name="qchecksn" th:text="${deial.qchecksn}" class="layui-textarea"></textarea>
                   </div>
               </div>
-              <div class="layui-inline">
-                  <label class="layui-form-label">神客姓名</label>
-                  <div class="layui-input-inline">
-                      <input type="text" name="personname" lay-verify="email" autocomplete="off" class="layui-input" />
-                  </div>
-              </div>
-
-          </div>
-
-          <div class="layui-form-item">
-              <div class="layui-inline">
-                  <label class="layui-form-label">购买商品</label>
-                  <div class="layui-input-inline">
-                      <input type="text" name="commodity" lay-verify="email" autocomplete="off" class="layui-input" />
-                  </div>
-              </div>
-              <div class="layui-inline">
-                  <label class="layui-form-label">进店时店内员工人数</label>
-                  <div class="layui-input-inline">
-                      <input type="tel" name="populationqty" lay-verify="required|phone" autocomplete="off" class="layui-input" />
-                  </div>
-              </div>
-
-
-              <div class="layui-inline">
-                  <label class="layui-form-label">花费金额</label>
-                  <div class="layui-input-inline">
-                      <input type="tel" name="money" lay-verify="required|phone" autocomplete="off" class="layui-input" />
-                  </div>
-              </div>
-
-          </div>
-
-          <div class="layui-form-item">
-              <div class="layui-inline">
-                  <label class="layui-form-label">资料链接</label>
-                  <div class="layui-input-inline">
-                      <input type="text" name="url" lay-verify="email" autocomplete="off" class="layui-input" />
-                  </div>
-              </div>
-              <div class="layui-inline">
-                  <label class="layui-form-label">店内消费人数（不含神客）</label>
-                  <div class="layui-input-inline">
-                      <input type="text" name="consumeqty" lay-verify="email" autocomplete="off" class="layui-input" />
-                  </div>
-              </div>
-
-              <div class="layui-inline">
-                  <label class="layui-form-label" style="height:50px;">收银员姓名（如无法看清楚姓名描述体貌特征）</label>
-                  <div class="layui-input-inline">
-                      <input type="text" name="cashiername" lay-verify="email" autocomplete="off" class="layui-input" />
-                  </div>
-              </div>
-
-          </div>
-
 
 
           <div class="text-left">
             <div align="left">
               <label style="width: 100px;">1-1外观形象是否符合要求？(单选）</label><br/>
               <div >
-                <label style="width: 100px;">1.完全符合</label> <input type="radio" name="topic1One" value="1.完全符合" onclick="oneDiv(1)" checked="checked"/><br/>
-                <label style="width: 100px;">2.不符合要求</label> <input type="radio" name="topic1One" value="2.不符合要求"  onclick="oneDiv(2)" />
+                <label style="width: 100px;">1.完全符合</label> <input type="radio" name="topic1One" value="1.完全符合" th:if="${deial.topic1One!=null}" th:checked="${#strings.contains(deial.topic1One,'1.完全符合')}"  onclick="oneDiv(1)" checked="checked"/><br/>
+                <label style="width: 100px;">2.不符合要求</label> <input type="radio" name="topic1One" value="2.不符合要求" th:if="${deial.topic1One!=null}" th:checked="${#strings.contains(deial.topic1One,'1.不符合要求')}"   onclick="oneDiv(2)" />
               </div>
             </div><br/>
             <div id="one" align="left">
 
                 <label style="width: 100px;">1-2不符合要求的原因是？(多选）</label><br/>
-               <table    >
+               <table >
                   <tr>
                     <td >1.苏宁店招明显遮挡有破损</td>
-                    <td width="80px;"><input value="1.苏宁店招明显遮挡有破损" type="checkbox" name="topic1Two" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input value="1.苏宁店招明显遮挡有破损" type="checkbox" name="topic1Two" th:if="${deial.topic1Two!=null}" th:checked="${#strings.contains(deial.topic1Two,'1.苏宁店招明显遮挡有破损')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >2.外部橱窗干净明亮</td>
-                    <td width="80px;"><input type="checkbox" name="topic1Two" value="2.外部橱窗干净明亮"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox" name="topic1Two" value="2.外部橱窗干净明亮"  th:if="${deial.topic1Two!=null}" th:checked="${#strings.contains(deial.topic1Two,'1.外部橱窗干净明亮')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >3.户内外广告内容无过期</td>
-                    <td width="80px;"><input type="checkbox" name="topic1Two" value="3.户内外广告内容无过期"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr>
+                    <td width="80px;"><input type="checkbox" name="topic1Two" value="3.户内外广告内容无过期" th:if="${deial.topic1Two!=null}" th:checked="${#strings.contains(deial.topic1Two,'1.户内外广告内容无过期')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr> <input type="checkbox" name="topic1Two"  value=""  checked="checked"  style="display:none"/>
                   <tr>
                     <td >其他请注明</td>
-                    <td width="80px;"><input type="text" name="topic1Six" class="layui-input"/></td>
+                    <td width="80px;"><input type="text" name="topic1Six" th:value="${deial.topic1Six}" class="layui-input"/></td>
                   </tr>
 
                 </table><br/>
@@ -394,20 +468,18 @@
               </div><br/><br/><br/>
               <div  lay-filter="" >
                 <label style="width: 100px;">5-3几人不合格？(单选）</label><br/><br/>
-                  <table>
-                      <tr>
-                          <td >1.1人</td>
-                          <td width="80px;"><input type="radio" value="1.1人"  name="topic5Three" style="height: 20px;width: 50px;"/></td>
-                      </tr>
-                      <tr>
-                          <td >2.2人</td>
-                          <td width="80px;"><input type="radio"  name="topic5Three" value="2.2人"  style="height: 20px;width: 50px;"/></td>
-                      </tr>
-                      <tr>
-                          <td >3.3人及以上</td>
-                          <td width="80px;"><input type="radio"  name="topic5Three" value="3.人及以上"  style="height: 20px;width: 50px;"/></td>
-                      </tr>
-                  </table>
+                  <tr>
+                      <td >1.1人</td>
+                      <td width="80px;"><input type="radio" value="1.1人"  name="topic5Three" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                      <td >2.2人</td>
+                      <td width="80px;"><input type="radio"  name="topic5Three" value="2.2人"  style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                      <td >3.3人及以上</td>
+                      <td width="80px;"><input type="radio"  name="topic5Three" value="3.人及以上"  style="height: 20px;width: 50px;"/></td>
+                  </tr>
               </div>
                 <input type="file" class="layui-btn" name="topic5Fourfile" id="test-upload-normal" value="上传图片"/>
                 <input  type="button" class="layui-btn"  id="topic5Fourfile" onclick="fileFour(this)"  value="上传图片"/>
@@ -439,7 +511,7 @@
             <div id="six" align="left">
               <div  lay-filter="" >
                 <label style="width: 100px;">6-2不符合要求的原因是？(多选）</label><br/><br/>
-               <table  >
+               <table    >
                   <tr>
                     <td >1.店员营业期间站姿不自然</td>
                     <td width="80px;"><input type="checkbox" name="topic6Two" value=" 1.店员营业期间站姿不自然"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
@@ -466,20 +538,18 @@
               </div><br/>
                 <div  lay-filter="" >
                     <label style="width: 100px;">6-3几人不合格？(单选）</label><br/><br/>
-                    <table>
-                        <tr>
-                            <td >1.1人</td>
-                            <td width="80px;"><input type="radio" value="1.1人"  name="topic6Three" style="height: 20px;width: 50px;"/></td>
-                        </tr>
-                        <tr>
-                            <td >2.2人</td>
-                            <td width="80px;"><input type="radio"  name="topic6Three" value="2.2人"  style="height: 20px;width: 50px;"/></td>
-                        </tr>
-                        <tr>
-                            <td >3.3人及以上</td>
-                            <td width="80px;"><input type="radio"  name="topic6Three" value="3.人及以上"  style="height: 20px;width: 50px;"/></td>
-                        </tr>
-                    </table>
+                    <tr>
+                        <td >1.1人</td>
+                        <td width="80px;"><input type="radio" value="1.1人"  name="topic6Three" style="height: 20px;width: 50px;"/></td>
+                    </tr>
+                    <tr>
+                        <td >2.2人</td>
+                        <td width="80px;"><input type="radio"  name="topic6Three" value="2.2人"  style="height: 20px;width: 50px;"/></td>
+                    </tr>
+                    <tr>
+                        <td >3.3人及以上</td>
+                        <td width="80px;"><input type="radio"  name="topic6Three" value="3.人及以上"  style="height: 20px;width: 50px;"/></td>
+                    </tr>
                 </div>
                 <input type="file" class="layui-btn" name="topic6Fourfile" id="test-upload-normal" value="上传图片"/>
                 <input  type="button" class="layui-btn"  id="topic6Fourfile" onclick="fileFour(this)"  value="上传图片"/>
@@ -847,6 +917,7 @@
                   </div>
               </div><br/>
               <div id="th14" align="left">
+
                       <div  align="left"  >
                           <label style="width: 100px;">14-2不符合要求的原因是？(多选）</label><br/><br/>
                           <table align="left" >
@@ -893,7 +964,7 @@
 
 
                           </table>
-                      </div><br/><br/><br/><br/>
+                      </div><br/>
                   <input type="file" class="layui-btn" name="topic14Fourfile" id="test-upload-normal" value="上传图片"/>
                   <input  type="button" class="layui-btn"  id="topic14Fourfile" onclick="fileFour(this)"  value="上传图片"/>
                   <!--<div class="layui-col-md12">
@@ -910,14 +981,14 @@
                           </div>
                       </div>
                   </div>-->
-              </div><br/><br/>
+              </div>
               <div   align="left">
                   <label style="width: 100px;">15-1消防安全是否符合要求？(单选）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合</label> <input type="radio" name="topic15One" value="1.完全符合" onclick="th15Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic15One" value="2.不符合要求"  onclick="th15Div(2)" />
                   </div>
-              </div><br/><br/>
+              </div><br/>
               <div id="th15" align="left">
                   <div  lay-filter="" >
                       <label style="width: 100px;">15-2不符合要求的原因是？(多选）</label><br/><br/>
@@ -1185,16 +1256,16 @@
 
 
                       </table>
-                      <input type="file" class="layui-btn" name="topic19Fourfile" id="test-upload-normal" value="上传图片"/>
-                      <input  type="button" class="layui-btn"  id="topic19Fourfile" onclick="fileFour(this)"  value="上传图片"/>
                   </div><br/>
+                  <input type="file" class="layui-btn" name="topic19Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic19Fourfile" onclick="fileFour(this)"  value="上传图片"/>
 
                   <label style="width: 100px;">20-1违规销售是否符合要求？(单选）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic20One" value="1.完全符合" onclick="th20Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic20One" value="2.不符合要求"  onclick="th20Div(2)" />
                   </div><br/>
-              <div id="th20" align="left" >
+              <div id="th20" align="left">
                   <div  lay-filter="" >
                       <label style="width: 100px;">20-2不符合要求的原因是？(多选）</label><br/><br/>
                       <table    >
@@ -1233,7 +1304,7 @@
 
               <div class="layui-form-item layui-layout-admin">
               <div class="layui-input-block">
-                <div style="left: 0;height: 30px">
+                <div class="layui-footer" style="left: 0;">
                   <input class="layui-btn" lay-submit="" lay-filter="component-form-demo1" type="submit"  value="提交"/>
                   <button  class="layui-btn layui-btn-primary" onclick="resert()"> 重置</button>
                 </div>
