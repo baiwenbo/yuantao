@@ -92,7 +92,7 @@ public class FractionUtil {
                 if (testPaper.getTopic8Three() != null && !testPaper.getTopic8Three().isEmpty()) {
                     testPaper.setTopic8Fraction(FractionUtil.getNumber("th8",testPaper.getTopic8Three()));
                 } else if (testPaper.getTopic8Two() != null && !testPaper.getTopic8Two().isEmpty()) {
-                    testPaper.setTopic2Fraction("0");
+                    testPaper.setTopic8Fraction("0");
                 } else {
                     testPaper.setTopic8Fraction("2");
                 }

@@ -66,6 +66,7 @@ $(document).ready(function(){
         });
 
     });
+
 });
 
 function oneDiv(type) {
@@ -344,10 +345,11 @@ layui.config({
 }).extend({
     index: 'lib/index' //主入口模块
 }).use(['index', 'laydate'], function(){
-    var laydate = layui.laydate;
+    var $ = layui.jquery
+        ,laydate = layui.laydate
+
 
     //示例代码
-
 
     //日期时间选择器
     laydate.render({
@@ -362,4 +364,5 @@ layui.config({
         elem: '#endtime'
         ,type: 'datetime'
     });
+
 });

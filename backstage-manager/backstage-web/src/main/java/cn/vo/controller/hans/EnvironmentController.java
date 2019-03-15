@@ -39,13 +39,10 @@ public class EnvironmentController {
     }
 
     @PostMapping("saveQuestion")
+    @ResponseBody
     public String saveQuestion(@RequestParam("file") MultipartFile file){
-
-      String  ss=  FileUpload.uploadFile(file,file.getName());
-
-      System.out.println(ss);
-
-        return  ss;
+      String  path=  FileUpload.uploadFile(file,file.getName());
+        return  path;
 
     }
 
