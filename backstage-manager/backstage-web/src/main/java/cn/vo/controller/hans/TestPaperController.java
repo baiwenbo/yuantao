@@ -53,6 +53,16 @@ public class TestPaperController {
         return "views/hans/testPaperList";
     }
 
+    @GetMapping("scpcqxEdit")
+    public  String  scpcqxEdit(String close, Model model,HttpServletRequest request){
+        HttpSession session=request.getSession();
+        User user= (User) session.getAttribute("USER");
+        model.addAttribute("scpcqx",user.getScpcqx());
+        model.addAttribute("close",close);
+        return "views/hans/questionetor";
+    }
+
+
     @GetMapping("appealList")
     public  String  appealList(String close, Model model,HttpServletRequest request){
         HttpSession session=request.getSession();
