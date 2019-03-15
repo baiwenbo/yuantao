@@ -40,7 +40,7 @@
         </select>
     </div>
     <button class="layui-btn" data-type="reload">搜索</button>
-    <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="question()">录入</button>
+    <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="routAdd()">录入</button>
     <a data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" th:href="@{/excel/export}">导出</a>
 
 </div>
@@ -181,16 +181,13 @@
         });
 
     });
-
-
-    function question(){
-
+    function routAdd(){
         layer.open({
             type: 2,
             shade: false,
             maxmin: true,
             area: ['100%', '100%']
-            ,content:path+ '/testPaper/add'
+            ,content:path+ '/rout/routAdd'
             ,yes: function(index){
                 layer.close(index);
             }
