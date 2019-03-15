@@ -26,18 +26,18 @@
           <form enctype="multipart/form-data" method="post" th:action="@{/testPaper/update}" style="align:center" align="center" >
             <div th:replace="views/hans/addFile::html" ></div>
               <input type="hidden" name="id" th:value="${deial.id}"/>
+              <input type="hidden" name="companyId" id="companyId" th:value="${deial.companyId}"/>
 
           <h3 align="center" >总分:<span th:text="${deial.score}"></span> </h3>
             <div class="layui-form-item ">
 
               <div class="layui-inline">
                 <div class="layui-input-inline" >
-                  <input type="text" id="customerName" lay-verify="required" th:value="${deial.name}" autocomplete="off" placeholder="可输入门店关键字进行搜索"  class="layui-input"  style="width: 200px;"/>
+                  <input type="text" id="code" name="code" lay-verify="required" th:value="${deial.code}" autocomplete="off" placeholder="可输入门店代码进行搜索"  class="layui-input"  style="width: 200px;"/>
                 </div>
               </div>
               <div class="layui-inline" style="padding-left: 60px;">
-                <div id="companyList" style="width:100px; float: left">
-                </div>
+
                 <div class="layui-input-inline" style="float:right">
                   <input class="layui-btn" style="width: 85px" data-type="reload" id="queryCompany" value="搜索" />
                 </div>
@@ -58,15 +58,15 @@
           </div>
 
           <div class="layui-inline">
-            <label class="layui-form-label">门店编号</label>
+            <label class="layui-form-label">门店名称</label>
             <div class="layui-input-inline">
-              <input type="tel" name="code"  th:value="${deial.code}" autocomplete="off" class="layui-input" />
+              <input type="tel" name="name"  id="name" th:value="${deial.name}" disabled="disabled" autocomplete="off" class="layui-input" />
             </div>
           </div>
           <div class="layui-inline">
             <label class="layui-form-label">门店地址</label>
             <div class="layui-input-inline">
-              <input type="text" name="address" th:value="${deial.address}" autocomplete="off" class="layui-input" />
+              <input type="text" name="address" id="address" th:value="${deial.address}" disabled="disabled" autocomplete="off" class="layui-input" />
             </div>
           </div>
 
@@ -76,13 +76,13 @@
           <div class="layui-inline">
             <label class="layui-form-label">所在片区</label>
             <div class="layui-input-inline">
-              <input type="text" name="pianqu" th:value="${deial.pianqu}" autocomplete="off" class="layui-input" />
+              <input type="text" name="pianqu" id="pianqu" th:value="${deial.pianqu}" disabled="disabled" autocomplete="off" class="layui-input" />
             </div>
           </div>
           <div class="layui-inline">
             <label class="layui-form-label">所在城市</label>
             <div class="layui-input-inline">
-              <input type="text" name="city" th:value="${deial.city}" autocomplete="off" class="layui-input" />
+              <input type="text" name="city" th:value="${deial.city}" disabled="disabled" autocomplete="off" class="layui-input" />
             </div>
           </div>
           <div class="layui-inline">
@@ -115,13 +115,73 @@
 
         </div>
 
-        <div class="layui-form-item">
-          <div class="layui-inline">
-            <label class="layui-form-label">购买商品</label>
-            <div class="layui-input-inline">
-              <input type="text" name="commodity" lth:value="${deial.commodity}" autocomplete="off" class="layui-input" />
+            <div class="layui-form-item">
+              <div class="layui-inline">
+                <label class="layui-form-label">大区</label>
+                <div class="layui-input-inline">
+                  <input type="text" name="daqu" id="daqu" disabled="disabled" th:value="${deial.daqu}"  autocomplete="off" class="layui-input" />
+                </div>
+              </div>
+              <div class="layui-inline">
+                <label class="layui-form-label">所属子公司</label>
+                <div class="layui-input-inline">
+                  <input type="text" name="company" id="company" disabled="disabled"  th:value="${deial.company}" autocomplete="off" class="layui-input" />
+                </div>
+              </div>
+              <div class="layui-inline">
+                <label class="layui-form-label">购买商品</label>
+                <div class="layui-input-inline">
+                  <input type="text" name="commodity" lth:value="${deial.commodity}" autocomplete="off" class="layui-input" />
+                </div>
+              </div>
+
             </div>
-          </div>
+            <div class="layui-form-item">
+              <div class="layui-inline">
+                <label class="layui-form-label">点检日期</label>
+                <div class="layui-input-inline">
+                  <input type="text" name="spotdate" id="spotdate" th:value="${deial.spotdate}" placeholder="yyyy-MM-dd HH:mm:ss" autocomplete="off" class="layui-input" />
+                </div>
+              </div>
+              <div class="layui-inline">
+                <label class="layui-form-label">天气</label>
+                <div class="layui-input-inline">
+                  <input type="text" name="weather"  th:value="${deial.weather}" autocomplete="off" class="layui-input" />
+                </div>
+              </div>
+
+
+              <div class="layui-inline">
+                <label class="layui-form-label">是否地铁</label>
+                <div class="layui-input-inline">
+                  <input type="text" name="metro" th:value="${deial.metro}" autocomplete="off" class="layui-input" />
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <div class="layui-inline">
+                <label class="layui-form-label">支付方式</label>
+                <div class="layui-input-inline">
+                  <input type="text" name="payment"  th:value="${deial.payment}"  autocomplete="off" class="layui-input" />
+                </div>
+              </div>
+              <div class="layui-inline">
+                <label class="layui-form-label">收银员截图</label>
+                <div class="layui-input-inline">
+                  <input type="text" name="screenshot"  th:value="${deial.screenshot}" autocomplete="off" class="layui-input" />
+                </div>
+              </div>
+
+
+              <div class="layui-inline">
+                <label class="layui-form-label">视频连接</label>
+                <div class="layui-input-inline">
+                  <input type="text" name="vedio" th:value="${deial.vedio}" autocomplete="off" class="layui-input" />
+                </div>
+              </div>
+            </div>
+        <div class="layui-form-item">
+
           <div class="layui-inline">
             <label class="layui-form-label">进店时店内员工人数</label>
             <div class="layui-input-inline">
@@ -132,6 +192,12 @@
             <label class="layui-form-label">花费金额</label>
             <div class="layui-input-inline">
               <input type="tel" name="money" th:value="${deial.money}" autocomplete="off" class="layui-input" />
+            </div>
+          </div>
+          <div class="layui-inline">
+            <label class="layui-form-label">视频时长</label>
+            <div class="layui-input-inline">
+              <input type="text" name="duration" th:value="${deial.duration}" autocomplete="off" class="layui-input" />
             </div>
           </div>
         </div>
