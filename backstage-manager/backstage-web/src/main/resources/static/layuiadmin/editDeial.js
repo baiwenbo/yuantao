@@ -164,21 +164,31 @@ if (th16.indexOf("完全")>0){
         $("#th40").hide();
     }
     $("#queryCompany").click(function(){
-        $("#companyList").empty();
-        var customerName=$("#customerName").val();
+
+        var code=$("#code").val();
+        if (code==""){
+            alert("门店编码不能为空");
+            return;
+        }
+        $("#name").val("");
+        $("#address").val("");
+        $("#pianqu").val("");
+        $("#daqu").val("");
+        $("#company").val("");
+        $("#companyId").val("");
         $.ajax({
             type:"get",
-            url:path+"/environment/queryName",
-            data: "name="+customerName,
+            url:path+"/environment/queryCode",
+            data: "code="+code,
             dataType:"json",
             async : false,
             success:function(result){
-                var html="<select name='companyId' style='width: 130px;height: 40px'>"
-                for (var i=0;i<result.length;i++){
-                    html+="<option value="+result[i].id+">"+result[i].name+"</option>"
-                }
-                html+="</select>"
-                $("#companyList").append(html);
+                $("#name").val(result.name);
+                $("#address").val(result.address);
+                $("#pianqu").val(result.pianqu);
+                $("#daqu").val(result.daqu);
+                $("#company").val(result.company);
+                $("#companyId").val(result.id);
             },
             error: function(result) {
                 alert("服务异常");
