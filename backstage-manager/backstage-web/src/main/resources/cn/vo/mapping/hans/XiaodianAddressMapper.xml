@@ -80,7 +80,7 @@
   </sql>
   <sql id="Base_Column_List" >
     id, yetai, pianqu, daqu, company, code, name, province, city, area, redundance1, 
-    redundance2, redundance3, disabled
+    redundance2, redundance3, disabled,address
   </sql>
   <sql id="Blob_Column_List" >
     address

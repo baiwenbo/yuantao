@@ -273,6 +273,18 @@
     <result column="topic40_six" property="topic40Six" jdbcType="VARCHAR" />
     <result column="company" property="company" jdbcType="VARCHAR" />
     <result column="disabled" property="disabled" />
+
+
+    <result column="weather" property="weather" />
+    <result column="metro" property="metro" />
+    <result column="payment" property="payment" />
+    <result column="screenshot" property="screenshot" />
+    <result column="vedio" property="vedio" />
+    <result column="duration" property="duration" />
+    <result column="type" property="type" />
+    <result column="spotdate" property="spotdate" />
+    <result column="daqu" property="daqu" />
+
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -375,7 +387,7 @@
     topic38_one, topic38_two, topic38_three, topic38_four, topic38_fraction, topic38_six, 
     topic39_one, topic39_two, topic39_three, topic39_four, topic39_fraction, topic39_six, 
     topic40_one, topic40_two, topic40_three, topic40_four, topic40_fraction, topic40_six,
-    company,disabled
+    company,disabled ,weather,metro,payment,screenshot,vedio,duration,type,spotdate,daqu
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="cn.vo.pojo.entity.TestPaperExample" >
     select
@@ -1402,6 +1414,34 @@
       <if test="company != null" >
         company,
       </if>
+      <if test="weather != null" >
+        weather,
+      </if>
+      <if test="metro != null" >
+        metro,
+      </if>
+      <if test="payment != null" >
+        payment,
+      </if>
+      <if test="screenshot != null" >
+        screenshot,
+      </if>
+      <if test="vedio != null" >
+        vedio,
+      </if>
+      <if test="duration != null" >
+        duration,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="spotdate != null" >
+        spotdate,
+      </if>
+      <if test="daqu != null" >
+        daqu,
+      </if>
+      disabled,
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -2214,6 +2254,34 @@
       <if test="company != null" >
         #{company,jdbcType=VARCHAR},
       </if>
+      <if test="weather != null" >
+        #{weather},
+      </if>
+      <if test="metro != null" >
+        #{metro},
+      </if>
+      <if test="payment != null" >
+        #{payment},
+      </if>
+      <if test="screenshot != null" >
+        #{screenshot},
+      </if>
+      <if test="vedio != null" >
+        #{vedio},
+      </if>
+      <if test="duration != null" >
+        #{duration},
+      </if>
+      <if test="type != null" >
+        #{type},
+      </if>
+      <if test="spotdate != null" >
+        #{spotdate},
+      </if>
+      <if test="daqu != null" >
+        #{daqu},
+      </if>
+      0,
     </trim>
   </insert>
   <select id="countByExample" parameterType="cn.vo.pojo.entity.TestPaperExample" resultType="java.lang.Integer" >
@@ -4126,6 +4194,34 @@
       <if test="topic40Six != null" >
         topic40_six = #{topic40Six,jdbcType=VARCHAR},
       </if>
+      <if test="weather != null" >
+        weather = #{weather},
+      </if>
+      <if test="metro != null" >
+        metro = #{metro},
+      </if>
+      <if test="payment != null" >
+        payment = #{payment},
+      </if>
+      <if test="screenshot != null" >
+        screenshot = #{screenshot},
+      </if>
+      <if test="vedio != null" >
+        vedio = #{vedio},
+      </if>
+      <if test="duration != null" >
+        duration = #{duration},
+      </if>
+      <if test="type != null" >
+        type = #{type},
+      </if>
+      <if test="spotdate != null" >
+        spotdate = #{spotdate},
+      </if>
+      <if test="daqu != null" >
+        daqu = #{daqu},
+      </if>
+
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
@@ -4406,7 +4502,7 @@
 
   <select id="getListQuery" resultMap="BaseResultMap" parameterType="map">
     select  <include refid="Base_Column_List" /> from test_paper
-    where disabled=0
+    where disabled=0  and type=#{type}
     <if test="name != null and name.length()>0" >
       and  name like '%${name}%' or company like '%${name}%'
     </if>
@@ -4422,7 +4518,7 @@
 
   <select id="getMendianQuery" resultMap="BaseResultMap" parameterType="map">
     select  <include refid="Base_Column_List" /> from test_paper
-    where  code = #{code}
+    where  code = #{code} and type=#{type}
     <if test="name != null and name.length()>0" >
       and  name like '%${name}%'
     </if>
@@ -4437,7 +4533,7 @@
 
   <select id="getCompanyQuery" resultMap="BaseResultMap" parameterType="map">
     select  <include refid="Base_Column_List" /> from test_paper
-    where  company = #{company}
+    where  company = #{company} and type=#{type}
     <if test="name != null and name.length()>0" >
       and  name like '%${name}%'
     </if>
