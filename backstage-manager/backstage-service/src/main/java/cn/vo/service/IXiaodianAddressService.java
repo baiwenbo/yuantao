@@ -9,4 +9,6 @@ public interface IXiaodianAddressService {
     List<XiaodianAddress> queryLikeName(String name);
 
     XiaodianAddress getById(Long id);
+
+    XiaodianAddress getCode(String code);
 }
