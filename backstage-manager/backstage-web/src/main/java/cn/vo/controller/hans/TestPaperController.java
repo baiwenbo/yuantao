@@ -11,6 +11,7 @@ import cn.vo.service.IQuestionService;
 import cn.vo.service.ITestPaperService;
 import cn.vo.service.IUserService;
 import cn.vo.service.IXiaodianAddressService;
+import cn.vo.util.SorceUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Controller;
@@ -50,7 +51,10 @@ public class TestPaperController {
     }
 
     @GetMapping("appealList")
-    public  String  appealList(String close, Model model){
+    public  String  appealList(String close, Model model,HttpServletRequest request){
+        HttpSession session=request.getSession();
+        User user= (User) session.getAttribute("USER");
+        model.addAttribute("scpcqx",user.getScpcqx());
         model.addAttribute("close",close);
         return "views/hans/testAppealPaperList";
     }
@@ -93,7 +97,11 @@ public class TestPaperController {
 
             saveTestPaper(testPaper);
             testPaper.setCheckstatus("正在审核");
-            testPaperService.save(FractionUtil.getFraction(testPaper));
+            if (testPaper.getType()==1){
+                testPaperService.save(FractionUtil.getFraction(testPaper));
+            }else if (testPaper.getType()==2){
+                testPaperService.save(SorceUtils.getFraction(testPaper));
+            }
         }catch (Exception e){
             e.printStackTrace();
             return "redirect:/testPaper/list?close="+"error";
