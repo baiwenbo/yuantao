@@ -543,6 +543,16 @@ public class TestPaper {
 
     private  Integer disabled;
 
+    private String weather;
+    private String metro;
+    private String payment;
+    private String screenshot;
+    private String vedio;
+    private String duration;
+    private Integer type;
+    private String spotdate;
+    private String daqu;
+
     //用于导出每题第三项选择的分数 start
     private		String th1sorce;
     private		String 		th2sorce;
@@ -625,6 +635,79 @@ public class TestPaper {
     private		String		th38mark;
     private		String		th39mark;
     private		String		th40mark;
+
+
+    public String getDaqu() {
+        return daqu;
+    }
+
+    public void setDaqu(String daqu) {
+        this.daqu = daqu;
+    }
+
+    public String getSpotdate() {
+        return spotdate;
+    }
+
+    public void setSpotdate(String spotdate) {
+        this.spotdate = spotdate;
+    }
+
+    public String getWeather() {
+        return weather;
+    }
+
+    public void setWeather(String weather) {
+        this.weather = weather;
+    }
+
+    public String getMetro() {
+        return metro;
+    }
+
+    public void setMetro(String metro) {
+        this.metro = metro;
+    }
+
+    public String getPayment() {
+        return payment;
+    }
+
+    public void setPayment(String payment) {
+        this.payment = payment;
+    }
+
+    public String getScreenshot() {
+        return screenshot;
+    }
+
+    public void setScreenshot(String screenshot) {
+        this.screenshot = screenshot;
+    }
+
+    public String getVedio() {
+        return vedio;
+    }
+
+    public void setVedio(String vedio) {
+        this.vedio = vedio;
+    }
+
+    public String getDuration() {
+        return duration;
+    }
+
+    public void setDuration(String duration) {
+        this.duration = duration;
+    }
+
+    public Integer getType() {
+        return type;
+    }
+
+    public void setType(Integer type) {
+        this.type = type;
+    }
 
     public Integer getDisabled() {
         return disabled;
