@@ -2751,33 +2751,7 @@
 <script th:src="@{/layuiadmin/layui/layui.js}" ></script>
 <script th:src="@{/layuiadmin/editDeial.js}" ></script>
 <script th:src="@{/layuiadmin/fileImg.js}" ></script>
-<script th:inline="javascript">
 
-  layui.config({
-    base: path+'/layuiadmin/' //静态资源所在路径
-  }).extend({
-    index: 'lib/index' //主入口模块
-  }).use(['index', 'laydate'], function(){
-    var laydate = layui.laydate;
-
-    //示例代码
-
-    //日期时间选择器
-    laydate.render({
-      elem: '#executedate'
-      ,type: 'datetime'
-    });
-    laydate.render({
-      elem: '#starttime'
-      ,type: 'datetime'
-    });
-    laydate.render({
-      elem: '#endtime'
-      ,type: 'datetime'
-    });
-  });
-
-</script>
 <script>
   $(document).ready(function(){
     var deialName=$("#deialName").val();
@@ -2793,7 +2767,8 @@
       alert("无图片");
       return;
     }
-      layer.open({
+      window.location.href=path+ "/testPaper/seeImg?fileName="+name;
+      /*layer.open({
           type: 2,
           shade: false,
           maxmin: true,
@@ -2802,7 +2777,7 @@
           ,yes: function(index){
               layer.close(index);
           }
-      });
+      });*/
     /*]]>*/
 
 
