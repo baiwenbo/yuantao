@@ -89,13 +89,13 @@
         </div>
         <div class="layui-form-item">
           <div class="layui-inline">
-            <label class="layui-form-label">视频连接</label>
+            <label class="layui-form-label">视频链接</label>
             <div class="layui-input-inline">
               <input type="text" name="vedio" th:value="${deial.vedio}" autocomplete="off" class="layui-input" />
             </div>
           </div>
           <div class="layui-inline">
-            <label class="layui-form-label">链接和提取码</label>
+            <label class="layui-form-label">视频链接提取码</label>
             <div class="layui-input-inline">
               <input type="text" name="url" th:value="${deial.url}" autocomplete="off" class="layui-input" />
             </div>
@@ -112,7 +112,7 @@
               <div class="layui-inline">
                 <label class="layui-form-label">购买商品</label>
                 <div class="layui-input-inline">
-                  <input type="text" name="commodity" lth:value="${deial.commodity}" autocomplete="off" class="layui-input" />
+                  <input type="text" name="commodity" th:value="${deial.commodity}" autocomplete="off" class="layui-input" />
                 </div>
               </div>
               <div class="layui-inline">
@@ -141,10 +141,10 @@
                   <input type="text" name="payment"  th:value="${deial.payment}"  autocomplete="off" class="layui-input" />
                 </div>
               </div>
-              <div class="layui-inline">
-                <label class="layui-form-label">点检日期</label>
-                <div class="layui-input-inline">
-                  <input type="text" name="spotdate" id="spotdate" th:value="${deial.spotdate}" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input" />
+               <div class="layui-inline">
+                      <label class="layui-form-label">点检日期</label>
+                      <div class="layui-input-inline">
+                  <input type="text" name="spotdate" id="spotdate" th:value="${deial.spotdate}" placeholder="yyyy-MM-dd HH:mm:ss" autocomplete="off" class="layui-input"  />
                 </div>
               </div>
 
@@ -196,14 +196,6 @@
         </div>
 
         <div class="layui-form-item">
-
-          <div class="layui-inline">
-            <label class="layui-form-label">店内消费人数（不含神客）</label>
-            <div class="layui-input-inline">
-              <input type="text" name="consumeqty" th:value="${deial.consumeqty}" autocomplete="off" class="layui-input" />
-            </div>
-          </div>
-
           <div class="layui-inline">
             <label class="layui-form-label" style="height:50px;">收银员姓名（如无法看清楚姓名描述体貌特征）</label>
             <div class="layui-input-inline">
