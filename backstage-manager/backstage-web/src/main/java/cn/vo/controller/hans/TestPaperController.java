@@ -53,14 +53,6 @@ public class TestPaperController {
         return "views/hans/testPaperList";
     }
 
-    @GetMapping("appealList")
-    public  String  appealList(String close, Model model,HttpServletRequest request){
-        HttpSession session=request.getSession();
-        User user= (User) session.getAttribute("USER");
-        model.addAttribute("scpcqx",user.getScpcqx());
-        model.addAttribute("close",close);
-        return "views/hans/testAppealPaperList";
-    }
     //增加类型 区分苏宁小店 常规小店等
     @GetMapping("/listJson")
     @ResponseBody
@@ -125,9 +117,11 @@ public class TestPaperController {
     }
 
     @GetMapping("edit")
-    public String edit(Integer id, Model model){
-
+    public String edit(Integer id, Model model,HttpServletRequest request){
         TestPaper testPaper=testPaperService.getById(id);
+        HttpSession session=request.getSession();
+        User user= (User) session.getAttribute("USER");
+        model.addAttribute("scpcqx",user.getScpcqx());
         model.addAttribute("testPaper",testPaper);
         return "views/hans/questionetor";
     }

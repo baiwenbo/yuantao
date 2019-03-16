@@ -495,4 +495,8 @@ layui.config({
         elem: '#endtime'
         ,type: 'datetime'
     });
+    laydate.render({
+        elem: '#spotdate'
+        ,type: 'datetime'
+    });
 });
