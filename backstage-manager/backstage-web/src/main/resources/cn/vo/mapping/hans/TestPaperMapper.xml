@@ -4504,7 +4504,7 @@
     select  <include refid="Base_Column_List" /> from test_paper
     where disabled=0  and type=#{type}
     <if test="name != null and name.length()>0" >
-      and  name like '%${name}%' or company like '%${name}%'
+      and  (name like '%${name}%' or company like '%${name}%')
     </if>
     <if test="qcheckstatus != null and qcheckstatus.length()>0" >
       and  qcheckStatus = #{qcheckstatus}
