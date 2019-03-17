@@ -48,7 +48,7 @@ public class TestPaperController {
     public  String  list(String close, Model model,HttpServletRequest request){
         HttpSession session=request.getSession();
         User user= (User) session.getAttribute("USER");
-        model.addAttribute("scpcqx",user.getScpcqx());
+        model.addAttribute("user",user);
         model.addAttribute("close",close);
         return "views/hans/testPaperList";
     }
