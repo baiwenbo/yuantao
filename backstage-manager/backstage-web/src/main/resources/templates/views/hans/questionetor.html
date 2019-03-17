@@ -43,7 +43,7 @@
                 </div>
               </div>
               <div class="layui-inline">
-                <label class="layui-form-label">总分</label>
+                <label class="layui-form-label"><b>总分</b></label>
                 <div class="layui-input-inline">
                   <input type="tel" name="name"  id="score" th:value="${deial.score}" disabled="disabled" autocomplete="off" class="layui-input" />
                 </div>
@@ -216,6 +216,7 @@
               <label class="layui-form-label">申述状态</label>
               <div class="layui-input-inline">
                 <select name="qcheckstatus"  style="height: 35px;width: 200px;" >
+                  <option value="" th:selected="${deial.qcheckstatus == ''}" >请选择</option>
                   <option value="已回复" th:selected="${deial.qcheckstatus == '已回复'}" >已回复</option>
                   <option value="已申诉" th:selected="${deial.qcheckstatus == '已申诉'}" >已申诉</option>
                   <option value="已批复" th:selected="${deial.qcheckstatus == '已批复'}" >已批复</option>
