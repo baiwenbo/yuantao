@@ -30,7 +30,7 @@
               <div class="layui-form-item" >
                   <div class="layui-inline">
                       <div class="layui-input-inline" >
-                          <input type="text" id="code" name="code" lay-verify="required" autocomplete="off" placeholder="可输入门店代码进行搜索"  class="layui-input"  style="width: 200px;"/>
+                          <input type="text" id="code" name="code" lay-verify="required" required="true" autocomplete="off" placeholder="请输入门店代码进行搜索"  class="layui-input"  style="width: 200px;"/>
                       </div>
                   </div>
                   <div class="layui-inline" style="padding-left: 60px;">
@@ -225,7 +225,7 @@
                     <td width="80px;"><input type="radio" value="3.3起及以上" name="topic1Three"  style="height: 20px;width: 50px;"/></td>
                   </tr>
                 </table><br/>
-                <input type="file" class="layui-btn"  name="topic1Fourfile" id="test-upload-normal" />
+                <input type="file" class="layui-btn"  name="topic1Fourfile" id="test-upload-normal" onchange="validate_img(this);" />
                 <input  type="button" class="layui-btn"  id="topic1Fourfile" onclick="fileFour(this)"  value="上传图片"/>
 
             </div>

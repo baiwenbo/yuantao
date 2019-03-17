@@ -379,7 +379,7 @@
                           <tr>
                               <td >4.有异味</td>
                               <td width="80px;"><input type="checkbox" name="topic3Two" value="4.有异味" th:if="${deial.topic3Two!=null}" th:checked="${#strings.contains(deial.topic3Two,'有异味')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                          </tr>
+                          </tr><input type="checkbox" name="topic3Two"  value=""  checked="checked"  style="display:none"/>
 
                           <tr>
                               <td >其他请注明</td>
@@ -423,7 +423,7 @@
                 </div>
               </div>-->
             </div>
-              </div>
+             </div>
             <div   align="left">
 
               <label style="width: 100px;">4-1商品陈列是否符合要求？(单选）</label><br/>
@@ -1355,6 +1355,7 @@
                   <input  type="button" class="layui-btn"  id="topic19Fourfile" onclick="fileFour(this)"  value="上传图片"/>
                   <input name="t19" type="hidden" th:value="${deial.topic19Four}"/>
                   <input type="text" class="layui-btn"  id="t19" value="查看扣分点图片" onclick="look(this)"/>
+              </div>
                   <label style="width: 100px;">20-1违规销售是否符合要求？(单选）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic20One" value="1.完全符合" onclick="th20Div(1)" th:if="${deial.topic20One!=null}" th:checked="${#strings.contains(deial.topic20One,'完全符合')}" /><br/>
@@ -1398,7 +1399,7 @@
 
               </div>
 
-          </div>
+
               <input type="hidden" id="deialName" th:value="${deialSee}"/>
               <div class="layui-form-item layui-layout-admin" id="">
               <div class="layui-input-block">
