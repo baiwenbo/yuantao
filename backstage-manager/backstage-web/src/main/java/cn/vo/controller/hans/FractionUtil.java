@@ -474,7 +474,7 @@ public class FractionUtil {
         String num="";
         String score="";
         try {
-            three=three.substring(three.indexOf(".") + 1);
+            three=three.substring(three.indexOf("、") + 1);
             three=three.trim();
             if(three != null && !"".equals(three)){
                 for(int i=0;i<three.length();i++){
