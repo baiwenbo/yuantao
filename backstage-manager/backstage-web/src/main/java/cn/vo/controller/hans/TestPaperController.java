@@ -123,14 +123,23 @@ public class TestPaperController {
         User user= (User) session.getAttribute("USER");
         model.addAttribute("scpcqx",user.getScpcqx());
         model.addAttribute("testPaper",testPaper);
-        return "views/hans/questionetor";
+      if (testPaper.getType()==2){
+            return "views/routine/routEditDeial";
+        }else{
+            return "views/hans/questionetor";
+        }
     }
     @GetMapping("deial")
     public String deial(Integer id, Model model){
         TestPaper testPaper=testPaperService.getById(id);
         model.addAttribute("testPaper",testPaper);
         model.addAttribute("deialName","查看页面");
-        return "views/hans/questionetor";
+         if (testPaper.getType()==2){
+             return "views/routine/routEditDeial";
+        }else{
+            return "views/hans/questionetor";
+        }
+
     }
 
     @GetMapping("add")

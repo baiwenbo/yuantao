@@ -43,4 +43,6 @@ public interface TestPaperMapper {
 
     void batchCheck(Map map);
 
+    List<TestPaper> queryAll(Map map);
+
 }

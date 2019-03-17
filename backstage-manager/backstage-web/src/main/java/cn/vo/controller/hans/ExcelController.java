@@ -27,8 +27,10 @@ public class ExcelController {
     private ITestPaperService testPaperService;
 
     @GetMapping("/export")
-    public void excel(HttpServletResponse response) {
+    public void excel(HttpServletResponse response,Integer type) {
 
+        Map map=new HashMap();
+        map.put("type",type);
         /**
          * excel导出
          * 1.获取数据集List 插入到map集合中
@@ -36,7 +38,7 @@ public class ExcelController {
          * 3.将新生成的excel文件从浏览器输出
          * 4.删除新生成的模板文件
          */
-        List<TestPaper> list=testPaperService.queryAll();
+        List<TestPaper> list=testPaperService.queryAll(map);
         List<TestPaper> paperList=   ExcelSorceUtils.getSorce(list);
         Map<String, Object> beans = new HashMap();
         beans.put("list", paperList);

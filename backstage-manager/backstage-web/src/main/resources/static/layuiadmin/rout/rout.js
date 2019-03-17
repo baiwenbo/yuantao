@@ -79,6 +79,13 @@ function threeDiv(type) {
         $("#three").hide();
     }
 }
+function th3Div(type) {
+    if (type==2){
+        $("#th3").hide();
+    }else{
+        $("#th3").show();
+    }
+}
 function fourDiv(type) {
     if (type==2){
         $("#four").show();
@@ -206,7 +213,7 @@ layui.config({
     base: path+'/layuiadmin/' //静态资源所在路径
 }).extend({
     index: 'lib/index' //主入口模块
-}).use(['index', 'laydate'], function(){
+}).use(['index', 'form','laydate'], function(){
     var $ = layui.jquery
         ,laydate = layui.laydate
 
@@ -232,3 +239,27 @@ layui.config({
     });
 
 });
+//限制上传文件的类型和大小
+function validate_img(ele){
+    // 返回 KB，保留小数点后两位
+    //alert((ele.files[0].size/(1024*1024)).toFixed(2));
+    var file = ele.value;
+
+    if(!/.(gif|jpg|jpeg|png|GIF|JPG|bmp)$/.test(file)){
+
+        alert("图片类型必须是.gif,jpeg,jpg,png,bmp中的一种");
+        return false;
+
+    }else{
+
+        //alert((ele.files[0].size).toFixed(2));
+        //返回Byte(B),保留小数点后两位
+        if(((ele.files[0].size).toFixed(2))>=(2*1024*1024)){
+
+            alert("请上传小于2M的图片");
+            ele.value="";
+            return false;
+        }
+    }
+    alert("图片通过");
+}

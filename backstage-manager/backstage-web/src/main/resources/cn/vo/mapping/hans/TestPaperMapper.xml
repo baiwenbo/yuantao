@@ -4545,8 +4545,6 @@
     </if>
     limit  #{index} , #{pageSize}
   </select>
-
-
    <update id="updateAppeal" parameterType="map" >
       update test_paper
       set appeal = #{appeal}
@@ -4555,5 +4553,14 @@
       update test_paper
       set checkStatus = #{checkStatus}
     </update>
+
+
+  <select id="queryAll" resultMap="BaseResultMap" parameterType="map">
+    select  <include refid="Base_Column_List" /> from test_paper
+    where  disabled=0
+    <if test="type != null" >
+      and  type=#{type}
+    </if>
+  </select>
 
 </mapper>
