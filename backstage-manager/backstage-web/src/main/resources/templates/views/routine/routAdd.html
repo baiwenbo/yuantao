@@ -287,45 +287,65 @@
             <div   align="left">
               <label style="width: 100px;">3-1门店内是否有卫生间？(单选）</label><br/>
               <div >
-                <label style="width: 100px;">1:有卫生间 </label> <input type="radio" name="topic3One" value="1.有卫生间"  onclick="threeDiv(1)" checked="checked" /><br/>
-                <label style="width: 100px;">2:无卫生间</label> <input type="radio" name="topic3One" value="2.无卫生间"   onclick="threeDiv(2)"/>
+                <label style="width: 100px;">1:有卫生间 </label> <input type="radio" name="trough2" value="1.有卫生间"  onclick="th3Div(1)" checked="checked" /><br/>
+                <label style="width: 100px;">2:无卫生间</label> <input type="radio" name="trough2" value="2.无卫生间"   onclick="th3Div(2)"/>
 
               </div>
             </div><br/>
-            <div   align="left">
-              <label style="width: 100px;">3-1门店内是否有卫生间？(单选）</label><br/>
-              <div >
-                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic3One" value="1.完全符合"  onclick="threeDiv(1)" checked="checked" /><br/>
-                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic3One" value="2.不符合要求"   onclick="threeDiv(2)"/>
+            <div id="th3">
+                <div   align="left">
+                  <label style="width: 100px;">3-2卫生间是否符合要求？(单选）</label><br/>
+                  <div >
+                    <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic3One" value="1.完全符合"  onclick="threeDiv(1)" checked="checked" /><br/>
+                    <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic3One" value="2.不符合要求"   onclick="threeDiv(2)"/>
 
-              </div>
-            </div><br/>
-            <div id="three" align="left">
+                  </div>
+                </div><br/>
+                <div id="three" align="left">
               <div  lay-filter=""  >
-                <label style="width: 100px;">3-2不符合要求的原因是？(多选）</label><br/><br/>
+                <label style="width: 100px;">3-3不符合要求的原因是？(多选）</label><br/><br/>
                <table    >
                   <tr>
-                    <td >1.进店时，门铃.音乐未常播放</td>
-                    <td width="80px;"><input type="checkbox" name="topic3Two" value="1.进店时，门铃.音乐未常播放"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >1.地面不整洁不干净</td>
+                    <td width="80px;"><input type="checkbox" name="topic3Two" value="1.地面不整洁不干净"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >2.门铃播放和音乐播放音量不适中，过大影响顾客讲话或过小听不到欢迎光临【地铁店不考核门铃，直接得分】</td>
-                    <td width="80px;"><input type="checkbox" name="topic3Two" value="2.门铃播放和音乐播放音量不适中，过大影响顾客讲话或过小听不到欢迎光临地铁店不考核门铃，直接得分"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >2.台面不整洁不干净</td>
+                    <td width="80px;"><input type="checkbox" name="topic3Two" value="2.台面不整洁不干净"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >3.店内灯光未全部亮启，有灯管不亮未报修的情况</td>
-                    <td width="80px;"><input type="checkbox" name="topic3Two" value="3.店内灯光未全部亮启，有灯管不亮未报修的情况"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >3.镜面不整洁不干净</td>
+                    <td width="80px;"><input type="checkbox" name="topic3Two" value="3.镜面不整洁不干净"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >4.空调未根据气候情况开启（开启温度要求：冷气温度未达26℃，暖气温度未达18℃）</td>
-                    <td width="80px;"><input type="checkbox" name="topic3Two" value="4.空调未根据气候情况开启（开启温度要求：冷气温度未达26℃，暖气温度未达18℃）"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >4.马桶不整洁不干净</td>
+                    <td width="80px;"><input type="checkbox" name="topic3Two" value="4.马桶不整洁不干净"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >4.有异味</td>
+                    <td width="80px;"><input type="checkbox" name="topic3Two" value="4.有异味"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
 
                   <tr>
-                    <td >5.其他请注明</td>
+                    <td >其他请注明</td>
                     <td width="80px;"><input type="text" name="topic3Six"  class="layui-input"/></td>
                   </tr>
 
+                </table>
+
+              </div><br/>
+              <div  lay-filter=""  >
+                <label style="width: 100px;">3-4几起不合格？(单选）</label><br/><br/>
+               <table    >
+                   <tr>
+                       <td >1.1起</td>
+                       <td width="80px;"><input type="radio" value="1.1起"  name="topic3Three" style="height: 20px;width: 50px;"/></td>
+                   </tr>
+
+                   <tr>
+                       <td >2.2起及以上</td>
+                       <td width="80px;"><input type="radio"  name="topic3Three" value="2.2起及以上"  style="height: 20px;width: 50px;"/></td>
+                   </tr>
                 </table>
 
               </div><br/>
@@ -346,7 +366,8 @@
                 </div>
               </div>-->
             </div>
-            <div   align="left">
+            </div>
+           <div   align="left">
 
               <label style="width: 100px;">4-1商品陈列是否符合要求？(单选）</label><br/>
               <div >
