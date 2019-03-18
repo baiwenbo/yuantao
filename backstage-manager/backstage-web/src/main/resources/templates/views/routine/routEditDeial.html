@@ -25,7 +25,8 @@
         <div  pad15="" style="align-items: center;" th:each="deial:${testPaper}">
           <form enctype="multipart/form-data" th:action="@{/testPaper/save}" method="post" style="align:center" align="center" >
             <div th:replace="views/hans/addFile::html" ></div>
-
+              <input type="hidden" name="id" th:value="${deial.id}"/>
+              <input type="hidden" name="companyId" id="companyId" th:value="${deial.companyId}"/>
               <h3 align="center" >总分:<span th:text="${deial.score}"></span> </h3>
               <div class="layui-form-item ">
 
@@ -210,7 +211,7 @@
 
               </div>
               <div class="layui-form-item layui-form-text">
-                  <label class="layui-form-label">门店店长申诉</label>
+                  <label class="layui-form-label" style="width: 65px">门店店长申诉</label>
                   <div class="layui-input-block">
                       <textarea name="qcheck" th:text="${deial.qcheck}" class="layui-textarea"></textarea>
                   </div>
@@ -223,6 +224,7 @@
                   <label class="layui-form-label">申述状态</label>
                   <div class="layui-input-inline">
                       <select name="qcheckstatus"  style="height: 35px;width: 200px;" >
+                          <option value="" th:selected="${deial.qcheckstatus == ''}" >请选择</option>
                           <option value="已回复" th:selected="${deial.qcheckstatus == '已回复'}" >已回复</option>
                           <option value="已申诉" th:selected="${deial.qcheckstatus == '已申诉'}" >已申诉</option>
                           <option value="已批复" th:selected="${deial.qcheckstatus == '已批复'}" >已批复</option>
@@ -231,6 +233,18 @@
                   </div>
               </div>
 
+              <div class="layui-form-item layui-form-text">
+                  <label class="layui-form-label" style="width: 65px">顸实咨询申诉复审</label>
+                  <div class="layui-input-block">
+                      <textarea name="qcheckinput" th:text="${deial.qcheckinput}"  class="layui-textarea"></textarea>
+                  </div>
+              </div>
+              <div class="layui-form-item layui-form-text">
+                  <label class="layui-form-label" style="width: 65px">苏宁总部终审</label>
+                  <div class="layui-input-block">
+                      <textarea name="qchecksn" th:text="${deial.qchecksn}" class="layui-textarea"></textarea>
+                  </div>
+              </div>
           <div class="text-left">
             <div align="left">
               <label style="width: 100px;">1-1外观形象是否符合要求？(单选）</label><br/>
@@ -1379,7 +1393,7 @@
 
 
               <input type="hidden" id="deialName" th:value="${deialSee}"/>
-              <div class="layui-form-item layui-layout-admin" id="">
+              <div class="layui-form-item layui-layout-admin" id="deialSee">
               <div class="layui-input-block">
                 <div class="layui-footer" style="left: 0;">
                   <input class="layui-btn" lay-submit="" lay-filter="component-form-demo1" type="submit"  value="提交"/>
