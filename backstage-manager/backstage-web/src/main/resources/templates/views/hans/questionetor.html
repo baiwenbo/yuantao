@@ -785,8 +785,8 @@
             <div align="left" class="layui-col-md10">
               <label style="width: 100px;">9-1门店内有无休闲区？</label>
               <div align="left">
-                <label style="width: 100px;">1:无休闲区 </label> <input type="radio" name="topic9One" value="1、有休闲区"   th:if="${deial.topic9One!=null}" th:checked="${#strings.contains(deial.topic9One,'有休闲区')}" onclick="ninesuperDiv(1)"/><br/>
-                <label style="width: 100px;">2:有休闲区</label> <input type="radio" name="topic9One" value="2、无休闲区"  th:if="${deial.topic9One!=null}" th:checked="${#strings.contains(deial.topic9One,'无休闲区')}" onclick="ninesuperDiv(2)"/>
+                <label style="width: 100px;">1:无休闲区 </label> <input type="radio" name="topic9One" value="1、无休闲区"   th:if="${deial.topic9One!=null}" th:checked="${#strings.contains(deial.topic9One,'无休闲区')}" onclick="ninesuperDiv(1)"/><br/>
+                <label style="width: 100px;">2:有休闲区</label> <input type="radio" name="topic9One" value="2、有休闲区"  th:if="${deial.topic9One!=null}" th:checked="${#strings.contains(deial.topic9One,'有休闲区')}" onclick="ninesuperDiv(2)"/>
               </div>
               <div id="ninesuper" align="left">
                 <label style="width: 100px;">9-2休闲区域是否符合要求？(单选）</label><br/>
@@ -2076,19 +2076,19 @@
                 <table align="left" >
                   <tr>
                     <td >1、1处</td>
-                    <td width="80px;"><input type="radio" name="topic29Three" value="1、1处"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="radio" name="topic29Three" value="1、1处"  th:if="${deial.topic29Three!=null}"  th:checked="${#strings.contains(deial.topic29Three,'1处')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >2、2处</td>
-                    <td width="80px;"><input type="radio" name="topic29Three" value="2、2处"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="radio" name="topic29Three" value="2、2处" th:if="${deial.topic29Three!=null}"  th:checked="${#strings.contains(deial.topic29Three,'2处')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >3、3处</td>
-                    <td width="80px;"><input type="radio" name="topic29Three" value="2、3"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="radio" name="topic29Three" value="2、3处"  th:if="${deial.topic29Three!=null}"  th:checked="${#strings.contains(deial.topic29Three,'3处')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >4、4处及以上</td>
-                    <td width="80px;"><input type="radio" name="topic29Three" value="4、4处及以上"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="radio" name="topic29Three" value="4、4处及以上" th:if="${deial.topic29Three!=null}"  th:checked="${#strings.contains(deial.topic29Three,'4处及以上')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
 
 
