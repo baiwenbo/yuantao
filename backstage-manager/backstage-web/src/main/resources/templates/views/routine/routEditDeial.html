@@ -24,7 +24,7 @@
       <div >
         <div  pad15="" style="align-items: center;" th:each="deial:${testPaper}">
           <form enctype="multipart/form-data" th:action="@{/testPaper/save}" method="post" style="align:center" align="center" >
-            <div th:replace="views/hans/addFile::html" ></div>
+            <div th:replace="views/routine/editFile::html" ></div>
               <input type="hidden" name="id" th:value="${deial.id}"/>
               <input type="hidden" name="companyId" id="companyId" th:value="${deial.companyId}"/>
               <h3 align="center" >总分:<span th:text="${deial.score}"></span> </h3>
