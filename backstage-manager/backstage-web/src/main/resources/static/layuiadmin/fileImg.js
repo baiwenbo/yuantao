@@ -4,7 +4,9 @@ $(document).ready(function(){
 
 function  fileFour(obj) {
     var formData = new FormData();
+
  var nameId=obj.id;
+ var  file= $("input[name='"+nameId+"']")
  nameId=nameId.substr(0, nameId.length - 4);
  var name=$("#"+nameId+"").val();
     formData.append("file", $("input[name='"+obj.id+"']")[0].files[0]);
@@ -25,6 +27,8 @@ function  fileFour(obj) {
               urlimg=result;
           }
             $("#"+nameId+"").val(urlimg);
+          //上传完图片后需要删除该图片，否则该图片依然存在就会导致上传图片文件过大原因
+            file.val("");
         },
         error: function(result) {
             alert("服务异常");
