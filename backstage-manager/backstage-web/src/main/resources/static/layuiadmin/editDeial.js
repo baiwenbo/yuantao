@@ -65,7 +65,7 @@ if (th8.indexOf("完全")>0){
     $("#eight").hide();
 }
 if (th9.indexOf("有")>0){
-    $("#ninesuper").hide();
+    $("#ninesuper").show();
 }
 if (th9t.indexOf("完全")>0){
     $("#nine").hide();
@@ -262,6 +262,7 @@ function ninesuperDiv(type) {
         $("#ninesuper").show();
     }else{
         $("#ninesuper").hide();
+        $("#nine").hide();
     }
 }
 function nineDiv(type) {
