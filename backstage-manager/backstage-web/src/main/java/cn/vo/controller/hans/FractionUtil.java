@@ -183,6 +183,8 @@ public class FractionUtil {
             if (testPaper.getTopic29One().contains("不")){
                 if (testPaper.getTopic29Three() != null && !testPaper.getTopic29Three().isEmpty()) {
                     testPaper.setTopic29Fraction(FractionUtil.getNumber("th29",testPaper.getTopic29Three()));
+                }else{
+                    testPaper.setTopic29Fraction("0");
                 }
             }else{
                 testPaper.setTopic29Fraction("4");
