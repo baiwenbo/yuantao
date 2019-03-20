@@ -1178,6 +1178,19 @@
 
                 </table>
               </div><br/>
+              <div  align="left" class="layui-col-md10" >
+                <label style="width: 100px;">15-3检测中共有几处不符合要求？(单选）</label><br/>
+                <table align="left" >
+                  <tr>
+                    <td >1、1处</td>
+                    <td width="80px;"><input type="radio" name="topic15Three" value="1、1处" th:if="${deial.topic15Three!=null}"  th:checked="${#strings.contains(deial.topic15Three,'1处')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2、2处</td>
+                    <td width="80px;"><input type="radio" name="topic15Three" value="2、2处"  th:if="${deial.topic15Three!=null}"  th:checked="${#strings.contains(deial.topic15Three,'2处')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                </table>
+              </div><br/>
               <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
