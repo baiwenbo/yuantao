@@ -28,15 +28,7 @@ public class ExcelSorceUtils {
                 testPaper.setTh14mark(setMark(testPaper.getTopic14One(),"th14"));
                 testPaper.setTh15mark(setMark(testPaper.getTopic15One(),"th15"));
                 testPaper.setTh16mark(setMark(testPaper.getTopic16One(),"th16"));
-                if (testPaper.getTopic17Three() != null && !testPaper.getTopic17Three().isEmpty()) {
-                    if(testPaper.getTopic17Three().contains("1处")){
-                        testPaper.setTh17mark("2");
-                        testPaper.setTh17sorce("-2");
-                    }else{
-                        testPaper.setTh17mark("0");
-                        testPaper.setTh17sorce("-4");
-                    }
-                }
+                testPaper.setTh17mark(setMark(testPaper.getTopic17One(),"th17"));
                 testPaper.setTh18mark(setMark(testPaper.getTopic18One(),"th18"));
                 testPaper.setTh19mark(setMark(testPaper.getTopic19One(),"th19"));
                 testPaper.setTh20mark(setMark(testPaper.getTopic20One(),"th20"));
@@ -77,6 +69,13 @@ public class ExcelSorceUtils {
                 testPaper.setTh14sorce(setSorce("th14",testPaper.getTopic14Three(),""));
                 testPaper.setTh15sorce(setSorce("th15",testPaper.getTopic15Three(),""));
                 testPaper.setTh16sorce(setSorce("th16",testPaper.getTopic16Three(),""));
+                if (testPaper.getTopic17Three() != null && !testPaper.getTopic17Three().isEmpty()) {
+                    if(testPaper.getTopic17Three().contains("1处")){
+                        testPaper.setTh17sorce("-2");
+                    }else{
+                        testPaper.setTh17sorce("-4");
+                    }
+                }
                 testPaper.setTh18sorce(setSorce("th18",testPaper.getTopic18Three(),""));
                 testPaper.setTh19sorce(setSorce("th19",testPaper.getTopic19Three(),""));
                 testPaper.setTh20sorce(setSorce("th20",testPaper.getTopic20Three(),""));
