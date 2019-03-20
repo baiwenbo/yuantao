@@ -6,7 +6,7 @@ function  fileFour(obj) {
     var formData = new FormData();
 
  var nameId=obj.id;
- var  file= $("input[name='"+nameId+"']")
+ var  file= $("input[name='"+nameId+"']");
  nameId=nameId.substr(0, nameId.length - 4);
  var name=$("#"+nameId+"").val();
     formData.append("file", $("input[name='"+obj.id+"']")[0].files[0]);
