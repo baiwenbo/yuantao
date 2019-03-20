@@ -35,10 +35,10 @@ $("#checkSubject").click(function(){
             alert("请选择不符项");
             return false;
         }
-        if ($("input[name='topic3Three']").is(':checked') === false){
+      /*  if ($("input[name='topic3Three']").is(':checked') === false){
             alert("请选择不符项");
             return false;
-        }
+        }*/
         var topic3Four=$("#topic3Four").val();
         if (topic3Four==""||topic3Four==null){
             alert("请上传图片");
@@ -50,10 +50,10 @@ $("#checkSubject").click(function(){
             alert("请选择不符项");
             return false;
         }
-        if ($("input[name='topic4Three']").is(':checked') === false){
+     /*   if ($("input[name='topic4Three']").is(':checked') === false){
             alert("请选择不符项");
             return false;
-        }
+        }*/
         var topic4Four=$("#topic4Four").val();
         if (topic4Four==""||topic4Four==null){
             alert("请上传图片");
@@ -65,10 +65,10 @@ $("#checkSubject").click(function(){
             alert("请选择不符项");
             return false;
         }
-        if ($("input[name='topic5Three']").is(':checked') === false){
+      /*  if ($("input[name='topic5Three']").is(':checked') === false){
             alert("请选择不符项");
             return false;
-        }
+        }*/
         var topic5Four=$("#topic5Four").val();
         if (topic5Four==""||topic5Four==null){
             alert("请上传图片");
@@ -80,10 +80,10 @@ $("#checkSubject").click(function(){
             alert("请选择不符项");
             return false;
         }
-        if ($("input[name='topic6Three']").is(':checked') === false){
+       /* if ($("input[name='topic6Three']").is(':checked') === false){
             alert("请选择不符项");
             return false;
-        }
+        }*/
         var topic6Four=$("#topic6Four").val();
         if (topic6Four==""||topic6Four==null){
             alert("请上传图片");
@@ -95,10 +95,10 @@ $("#checkSubject").click(function(){
             alert("请选择不符项");
             return false;
         }
-        if ($("input[name='topic7Three']").is(':checked') === false){
+      /*  if ($("input[name='topic7Three']").is(':checked') === false){
             alert("请选择不符项");
             return false;
-        }
+        }*/
         var topic7Four=$("#topic7Four").val();
         if (topic7Four==""||topic7Four==null){
             alert("请上传图片");
@@ -111,10 +111,10 @@ $("#checkSubject").click(function(){
             alert("请选择不符项");
             return false;
         }
-        if ($("input[name='topic8Three']").is(':checked') === false){
+      /*  if ($("input[name='topic8Three']").is(':checked') === false){
             alert("请选择不符项");
             return false;
-        }
+        }*/
         var topic8Four=$("#topic8Four").val();
         if (topic8Four==""||topic8Four==null){
             alert("请上传图片");
@@ -156,10 +156,10 @@ $("#checkSubject").click(function(){
             alert("请选择不符项");
             return false;
         }
-        if ($("input[name='topic11Three']").is(':checked') === false){
+       /* if ($("input[name='topic11Three']").is(':checked') === false){
             alert("请选择不符项");
             return false;
-        }
+        }*/
         var topic10Four=$("#topic10Four").val();
         if (topic10Four==""||topic10Four==null){
             alert("请上传图片");
@@ -171,10 +171,10 @@ $("#checkSubject").click(function(){
             alert("请选择不符项");
             return false;
         }
-        if ($("input[name='topic12Three']").is(':checked') === false){
+      /*  if ($("input[name='topic12Three']").is(':checked') === false){
             alert("请选择不符项");
             return false;
-        }
+        }*/
         var topic12Four=$("#topic12Four").val();
         if (topic12Four==""||topic12Four==null){
             alert("请上传图片");
@@ -186,10 +186,10 @@ $("#checkSubject").click(function(){
             alert("请选择不符项");
             return false;
         }
-        if ($("input[name='topic13Three']").is(':checked') === false){
+       /* if ($("input[name='topic13Three']").is(':checked') === false){
             alert("请选择不符项");
             return false;
-        }
+        }*/
         var topic13Four=$("#topic13Four").val();
         if (topic13Four==""||topic13Four==null){
             alert("请上传图片");
@@ -261,10 +261,10 @@ $("#checkSubject").click(function(){
             alert("请选择不符项");
             return false;
         }
-        if ($("input[name='topic18Three']").is(':checked') === false){
+       /* if ($("input[name='topic18Three']").is(':checked') === false){
             alert("请选择不符项");
             return false;
-        }
+        }*/
         var topic18Four=$("#topic18Four").val();
         if (topic18Four==""||topic18Four==null){
             alert("请上传图片");
@@ -336,10 +336,10 @@ $("#checkSubject").click(function(){
             alert("请选择不符项");
             return false;
         }
-        if ($("input[name='topic23Three']").is(':checked') === false){
+       /* if ($("input[name='topic23Three']").is(':checked') === false){
             alert("请选择不符项");
             return false;
-        }
+        }*/
         var topic23Four=$("#topic23Four").val();
         if (topic23Four==""||topic23Four==null){
             alert("请上传图片");
@@ -351,10 +351,10 @@ $("#checkSubject").click(function(){
             alert("请选择不符项");
             return false;
         }
-        if ($("input[name='topic24Three']").is(':checked') === false){
+     /*   if ($("input[name='topic24Three']").is(':checked') === false){
             alert("请选择不符项");
             return false;
-        }
+        }*/
         var topic24Four=$("#topic24Four").val();
         if (topic24Four==""||topic24Four==null){
             alert("请上传图片");
@@ -366,10 +366,10 @@ $("#checkSubject").click(function(){
             alert("请选择不符项");
             return false;
         }
-        if ($("input[name='topic25Three']").is(':checked') === false){
+      /*  if ($("input[name='topic25Three']").is(':checked') === false){
             alert("请选择不符项");
             return false;
-        }
+        }*/
         var topic25Four=$("#topic25Four").val();
         if (topic25Four==""||topic25Four==null){
             alert("请上传图片");
@@ -381,10 +381,10 @@ $("#checkSubject").click(function(){
             alert("请选择不符项");
             return false;
         }
-        if ($("input[name='topic26Three']").is(':checked') === false){
+        /*if ($("input[name='topic26Three']").is(':checked') === false){
             alert("请选择不符项");
             return false;
-        }
+        }*/
         var topic26Four=$("#topic26Four").val();
         if (topic26Four==""||topic26Four==null){
             alert("请上传图片");
@@ -406,10 +406,10 @@ $("#checkSubject").click(function(){
             alert("请选择不符项");
             return false;
         }
-        if ($("input[name='topic28Three']").is(':checked') === false){
+      /*  if ($("input[name='topic28Three']").is(':checked') === false){
             alert("请选择不符项");
             return false;
-        }
+        }*/
     }
     if (type29=="2"){
         if ($("input[name='topic29Two']").is(':checked') === false){
@@ -531,10 +531,10 @@ $("#checkSubject").click(function(){
             alert("请选择不符项");
             return false;
         }
-        if ($("input[name='topic38Three']").is(':checked') === false){
+       /* if ($("input[name='topic38Three']").is(':checked') === false){
             alert("请选择不符项");
             return false;
-        }
+        }*/
         var topic38Four=$("#topic38Four").val();
         if (topic38Four==""||topic38Four==null){
             alert("请上传图片");
@@ -546,10 +546,10 @@ $("#checkSubject").click(function(){
             alert("请选择不符项");
             return false;
         }
-        if ($("input[name='topic39Three']").is(':checked') === false){
+      /*  if ($("input[name='topic39Three']").is(':checked') === false){
             alert("请选择不符项");
             return false;
-        }
+        }*/
         var topic39Four=$("#topic39Four").val();
         if (topic39Four==""||topic39Four==null){
             alert("请上传图片");
