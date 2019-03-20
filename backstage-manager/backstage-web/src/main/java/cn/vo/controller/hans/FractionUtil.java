@@ -132,7 +132,11 @@ public class FractionUtil {
             }
             if (testPaper.getTopic17One().contains("不")){
                 if (testPaper.getTopic17Three() != null && !testPaper.getTopic17Three().isEmpty()) {
-                    testPaper.setTopic17Fraction(Integer.valueOf(FractionUtil.getNumber("th17",testPaper.getTopic17Three())) * 2 + "");
+                    if(testPaper.getTopic17Three().contains("1处")){
+                        testPaper.setTopic17Fraction("2");
+                    }else{
+                        testPaper.setTopic17Fraction("0");
+                    }
                 } else if (testPaper.getTopic17Two() != null && !testPaper.getTopic17Two().isEmpty()) {
                     testPaper.setTopic17Fraction("0");
                 } else {

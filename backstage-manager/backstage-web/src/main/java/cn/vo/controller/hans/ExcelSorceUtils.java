@@ -69,7 +69,13 @@ public class ExcelSorceUtils {
                 testPaper.setTh14sorce(setSorce("th14",testPaper.getTopic14Three(),""));
                 testPaper.setTh15sorce(setSorce("th15",testPaper.getTopic15Three(),""));
                 testPaper.setTh16sorce(setSorce("th16",testPaper.getTopic16Three(),""));
-                testPaper.setTh17sorce(setSorce("th17",testPaper.getTopic17Three(),""));
+                if (testPaper.getTopic17Three() != null && !testPaper.getTopic17Three().isEmpty()) {
+                    if(testPaper.getTopic17Three().contains("1处")){
+                        testPaper.setTh17sorce("-2");
+                    }else{
+                        testPaper.setTh17sorce("-4");
+                    }
+                }
                 testPaper.setTh18sorce(setSorce("th18",testPaper.getTopic18Three(),""));
                 testPaper.setTh19sorce(setSorce("th19",testPaper.getTopic19Three(),""));
                 testPaper.setTh20sorce(setSorce("th20",testPaper.getTopic20Three(),""));
