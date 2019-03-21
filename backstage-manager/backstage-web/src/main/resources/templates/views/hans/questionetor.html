@@ -272,7 +272,7 @@
                 <tr>
                   <td >6、其他请注明</td>
                   <td width="80px;"><input type="text" name="topic1Six" th:value="${deial.topic1Six}" class="layui-input"/>
-                    <input type="checkbox" name="topic1Two"  value=""  checked="checked"  style="display:none"/>
+                  <!--  <input type="checkbox" name="topic1Two"  value=""  checked="checked"  style="display:none"/>-->
                   </td>
                 </tr>
 
@@ -349,7 +349,7 @@
                     <td >4、门店有海报张贴不整齐工整</td>
                     <td width="80px;"><input type="checkbox"  name="topic2Two" value="4、门店有海报张贴不整齐工整" th:if="${deial.topic2Two!=null}" th:checked="${#strings.contains(deial.topic2Two,'门店有海报张贴不整齐工整')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
-                  <input type="checkbox" name="topic2Two"  value=""  checked="checked"  style="display:none"/>
+               <!--   <input type="checkbox" name="topic2Two"  value=""  checked="checked"  style="display:none"/>-->
                   <tr>
                     <td >5、其他请注明</td>
                     <td width="80px;"><input type="text"  name="topic2Six" th:value="${deial.topic2Six}" class="layui-input" />
@@ -433,7 +433,7 @@
                     <td >4、空调未根据气候情况开启（开启温度要求：冷气温度未达26℃，暖气温度未达18℃）</td>
                     <td width="80px;"><input type="checkbox" name="topic3Two" value="4、空调未根据气候情况开启（开启温度要求：冷气温度未达26℃，暖气温度未达18℃）" th:if="${deial.topic3Two!=null}" th:checked="${#strings.contains(deial.topic3Two,'开启温度要求：冷气温度未达26℃，暖气温度未达18℃')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
-                  <input type="checkbox" name="topic3Two"  value=""  checked="checked"  style="display:none"/>
+                  <!--<input type="checkbox" name="topic3Two"  value=""  checked="checked"  style="display:none"/>-->
                   <tr>
                     <td >5、其他请注明</td>
                     <td width="80px;"><input type="text" name="topic3Six" th:value="${deial.topic3Six}"  class="layui-input"/></td>
@@ -498,7 +498,7 @@
                   <tr>
                     <td >5、有过期促销物料存在</td>
                     <td width="80px;"><input type="checkbox"   name="topic4Two" value="5、有过期促销物料存在"  th:if="${deial.topic4Two!=null}" th:checked="${#strings.contains(deial.topic4Two,'有过期促销物料存在')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic4Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic4Two"  value=""  checked="checked"  style="display:none"/>-->
                   <tr>
                     <td >6、其他请注明_</td>
                     <td width="80px;"><input type="text"  name="topic4Six" th:value="${deial.topic4Six}"  class="layui-input"/></td>
@@ -561,7 +561,7 @@
                   <tr>
                     <td >5、贩物篮数量低于5个</td>
                     <td width="80px;"><input type="checkbox" name="topic5Two" value="5、贩物篮数量低于5个"  th:if="${deial.topic5Two!=null}" th:checked="${#strings.contains(deial.topic5Two,'贩物篮数量低于5个')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic5Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic5Two"  value=""  checked="checked"  style="display:none"/>-->
                   <tr>
                     <td >6、其他请注明</td>
                     <td width="80px;"><input type="text" name="topic5Six" th:value="${deial.topic5Six}" class="layui-input" /></td>
@@ -628,7 +628,7 @@
                   <tr>
                     <td >5、非下雨天考核门店地面湿滑时未将“小心地滑” 指示牌立出</td>
                     <td width="80px;"><input type="checkbox"   name="topic6Two" value="5、非下雨天考核门店地面湿滑时未将“小心地滑” 指示牌立出" th:if="${deial.topic6Two!=null}" th:checked="${#strings.contains(deial.topic6Two,'非下雨天考核门店地面湿滑时未将')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic6Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic6Two"  value=""  checked="checked"  style="display:none"/>-->
 
                   <tr>
                     <td >6、其他请注明</td>
@@ -690,7 +690,7 @@
                   <tr>
                     <td >4、收银前后柜台有员工私人物品</td>
                     <td width="80px;"><input type="checkbox"  name="topic7Two" value="4、收银前后柜台有员工私人物品"  th:if="${deial.topic7Two!=null}" th:checked="${#strings.contains(deial.topic7Two,'收银前后柜台有员工私人物品')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic7Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic7Two"  value=""  checked="checked"  style="display:none"/>-->
 
                   <tr>
                     <td >5、其他请注明</td>
@@ -748,7 +748,7 @@
                   <tr>
                     <td >3、关东煮锅.烤肠机防尘罩上有汢渍.有污渍</td>
                     <td width="80px;"><input type="checkbox"   name="topic8Two" value="3、关东煮锅.烤肠机防尘罩上有汢渍.有污渍"  th:if="${deial.topic8Two!=null}" th:checked="${#strings.contains(deial.topic8Two,'关东煮锅.烤肠机防尘罩上有汢渍.有污渍')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic8Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic8Two"  value=""  checked="checked"  style="display:none"/>-->
 
                   <tr>
                     <td >4、其他请注明</td>
@@ -808,7 +808,7 @@
                   <tr>
                     <td >2、桌椅摆放不整齐</td>
                     <td width="80px;"><input type="checkbox" name="topic9Three"  value="2、桌椅摆放不整齐" lay-skin="primary"  th:if="${deial.topic9Three!=null}"  th:checked="${#strings.contains(deial.topic9Three,'桌椅摆放不整齐')}" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic9Three"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic9Three"  value=""  checked="checked"  style="display:none"/>-->
                   <tr>
                     <td >3、其他请注明</td>
                     <td width="80px;"><input type="text" name="topic9Six" th:value="${deial.topic9Six}" class="layui-input"/></td>
@@ -860,7 +860,7 @@
                   <tr>
                     <td >2、商品不清洁有灰尘</td>
                     <td width="80px;"><input type="checkbox" name="topic10Two" value="2、商品不清洁有灰尘"  th:if="${deial.topic10Two!=null}" th:checked="${#strings.contains(deial.topic10Two,'货架和三个设备层板不清洁有灰尘.虫尸')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic10Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic10Two"  value=""  checked="checked"  style="display:none"/>-->
                   <tr>
                     <td >3、其他请注明</td>
                     <td width="80px;"><input type="text" name="topic10Six" th:value="${deial.topic10Six}" class="layui-input"/></td>
@@ -937,7 +937,7 @@
                   <tr>
                     <td >2、冷冻柜温度未定时检查未在温度登记表上做记录并签字</td>
                     <td width="80px;"><input type="checkbox"  name="topic11Two" value="2、冷冻柜温度未定时检查未在温度登记表上做记录并签字"  th:if="${deial.topic11Two!=null}" th:checked="${#strings.contains(deial.topic11Two,'冷冻柜温度未定时检查未在温度登记表上做记录并签字')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic11Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic11Two"  value=""  checked="checked"  style="display:none"/>-->
                   <tr>
                     <td >3、其他请注明</td>
                     <td width="80px;"><input type="text"  name="topic11Six" th:value="${deial.topic11Six}"  class="layui-input"/></td>
@@ -993,7 +993,7 @@
                   <tr>
                     <td >3、其他请注明_</td>
                     <td width="80px;"><input type="text" name="topic12Six" th:value="${deial.topic12Six}" class="layui-input"/></td>
-                  </tr><input type="checkbox" name="topic12Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic12Two"  value=""  checked="checked"  style="display:none"/>-->
 
                 </table>
               </div><br/>
@@ -1048,7 +1048,7 @@
                   <tr>
                     <td >4、安全出口指示地贴不完整有破损，消防通道不畅通</td>
                     <td width="80px;"><input type="checkbox" name="topic13Two" value="4、安全出口指示地贴不完整有破损，消防通道不畅通"  th:if="${deial.topic13Two!=null}" th:checked="${#strings.contains(deial.topic13Two,'安全出口指示地贴不完整有破损，消防通道不畅通')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic13Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic13Two"  value=""  checked="checked"  style="display:none"/>-->
                   <tr>
                     <td >5、其他请注明</td>
                     <td width="80px;"><input type="text" name="topic13Six" th:value="${deial.topic13Six}" class="layui-input"/></td>
@@ -1094,7 +1094,7 @@
                     <td >1、价签错误.破损.未左下角挂放.缺失情况合计超过5处</td>
                     <td width="80px;"><input type="checkbox" name="topic14Two" value="1、价签错误.破损.未左下角挂放.缺失情况合计超过5处"   th:if="${deial.topic14Two!=null}"  th:checked="${#strings.contains(deial.topic14Two,'缺失情况合计超过5处')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
-                 <input type="checkbox" name="topic14Two"  value=""  checked="checked"  style="display:none"/>
+               <!--  <input type="checkbox" name="topic14Two"  value=""  checked="checked"  style="display:none"/>-->
                   <tr>
                     <td >2、其他请注明</td>
                     <td width="80px;"><input type="text" th:value="${deial.topic14Six}" name="topic14Six" class="layui-input"/></td>
@@ -1169,7 +1169,7 @@
                   <tr>
                     <td >2、未及时打理</td>
                     <td width="80px;"><input type="checkbox" name="topic15Two" value="2、未及时打理"  th:if="${deial.topic15Two!=null}"  th:checked="${#strings.contains(deial.topic15Two,'未及时打理')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic15Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic15Two"  value=""  checked="checked"  style="display:none"/>-->
 
                   <tr>
                     <td >3、其他请注明 </td>
@@ -1242,7 +1242,7 @@
                   <tr>
                     <td >4、只能存放雪糕.水饺.汢圆.面点，有存放日配原材料及其他有气味冻制品</td>
                     <td width="80px;"><input type="checkbox" name="topic16Two" value="4、只能存放雪糕.水饺.汢圆.面点，有存放日配原材料及其他有气味冻制品"  th:if="${deial.topic15Two!=null}"  th:checked="${#strings.contains(deial.topic15Two,'未及时打理')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic16Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic16Two"  value=""  checked="checked"  style="display:none"/>-->
 
                   <tr>
                     <td >5、其他请注明</td>
@@ -1318,7 +1318,7 @@
                   <tr>
                     <td >2、饭团.三明治.便当陈列总数量低于9个</td>
                     <td width="80px;"><input type="checkbox" name="topic17Two" value="2、饭团.三明治.便当陈列总数量低于9个" th:if="${deial.topic17Two!=null}"  th:checked="${#strings.contains(deial.topic17Two,'2、饭团.三明治.便当陈列总数量低于9个')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic17Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--input type="checkbox" name="topic17Two"  value=""  checked="checked"  style="display:none"/>-->
 
                   <tr>
                     <td >3、其他请注明</td>
@@ -1385,7 +1385,7 @@
                   <tr>
                     <td >2、饮料冷藏柜内货架商品欠品是否超出2处（注意；供应链欠品不考核门店）</td>
                     <td width="80px;"><input type="checkbox" name="topic18Two" value="2、饮料冷藏柜内货架商品欠品是否超出2处（注意；供应链欠品不考核门店）" th:if="${deial.topic18Two!=null}"  th:checked="${#strings.contains(deial.topic18Two,'饮料冷藏柜内货架商品欠品是否超出2处')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic18Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic18Two"  value=""  checked="checked"  style="display:none"/>-->
 
                   <tr>
                     <td >3、其他请注明</td>
@@ -1446,7 +1446,7 @@
                   <tr>
                     <td >4、烤肠有发黑.表皮爆裂情况</td>
                     <td width="80px;"><input type="checkbox" name="topic19Two" value="4、烤肠有发黑.表皮爆裂情况"  th:if="${deial.topic19Two!=null}"  th:checked="${#strings.contains(deial.topic19Two,'烤肠有发黑.表皮爆裂情况')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic19Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic19Two"  value=""  checked="checked"  style="display:none"/>-->
 
                   <tr>
                     <td >3、其他请注明</td>
@@ -1512,7 +1512,7 @@
                     <tr>
                       <td >2、茶叶蛋陈列数量低于10个</td>
                       <td width="80px;"><input type="checkbox" name="topic20Two" value="2、茶叶蛋陈列数量低于10个"  th:if="${deial.topic20Two!=null}"  th:checked="${#strings.contains(deial.topic20Two,'茶叶蛋陈列数量低于10个')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                    </tr><input type="checkbox" name="topic20Two"  value=""  checked="checked"  style="display:none"/>
+                    </tr><!--<input type="checkbox" name="topic20Two"  value=""  checked="checked"  style="display:none"/>-->
 
                     <tr>
                       <td >3、其他请注明</td>
@@ -1590,7 +1590,7 @@
                   <tr>
                     <td >4、离峰时，面包未集中向上陈列</td>
                     <td width="80px;"><input type="checkbox" name="topic21Two" value="4、离峰时，面包未集中向上陈列"  th:if="${deial.topic21Two!=null}"  th:checked="${#strings.contains(deial.topic21Two,'面包未集中向上陈列')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic21Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic21Two"  value=""  checked="checked"  style="display:none"/>-->
 
                   <tr>
                     <td >其他请注明</td>
@@ -1670,7 +1670,7 @@
                   <tr>
                     <td >3、单层货架欠品数超2个</td>
                     <td width="80px;"><input type="checkbox" name="topic22Two" value="3、单层货架欠品数超2个" th:if="${deial.topic22Two!=null}"  th:checked="${#strings.contains(deial.topic22Two,'单层货架欠品数超2个')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic22Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic22Two"  value=""  checked="checked"  style="display:none"/>-->
 
                   <tr>
                     <td >3、其他请注明</td>
@@ -1748,7 +1748,7 @@
                   <tr>
                     <td >5、缺货商品挂放缺货牌后，左右商品拉牌面货架有空位</td>
                     <td width="80px;"><input type="checkbox" name="topic23Two" value="5、缺货商品挂放缺货牌后，左右商品拉牌面货架有空位" th:if="${deial.topic23Two!=null}"  th:checked="${#strings.contains(deial.topic23Two,'左右商品拉牌面货架有空位')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic23Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic23Two"  value=""  checked="checked"  style="display:none"/>-->
 
                   <tr>
                     <td >6、其他请注明</td>
@@ -1797,7 +1797,7 @@
                   <tr>
                     <td >1、门店内货物或推车堵塞通道影响顾客贩物</td>
                     <td width="80px;"><input type="checkbox" name="topic24Two" value="1、门店内货物或推车堵塞通道影响顾客贩物"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic24Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic24Two"  value=""  checked="checked"  style="display:none"/>-->
                   <tr>
                     <td >2、其他请注明</td>
                     <td width="80px;"><input type="text" name="topic24Six" class="layui-input"/></td>
@@ -1845,7 +1845,7 @@
                   <tr>
                     <td >1、商品直接落地存放</td>
                     <td width="80px;"><input type="checkbox" name="topic25Two" value="1、商品直接落地存放" th:if="${deial.topic25Two!=null}"  th:checked="${#strings.contains(deial.topic25Two,'商品直接落地存放')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic25Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic25Two"  value=""  checked="checked"  style="display:none"/>-->
                   <tr>
                     <td >2、其他请注明</td>
                     <td width="80px;"><input type="text" name="topic25Six" th:value="${deial.topic25Six}" class="layui-input"/></td>
@@ -1893,7 +1893,7 @@
                   <tr>
                     <td >1、有过期变质商品存架</td>
                     <td width="80px;"><input type="checkbox" name="topic26Two" value="1、有过期变质商品存架"   th:if="${deial.topic26Two!=null}"  th:checked="${#strings.contains(deial.topic26Two,'有过期变质商品存架')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic26Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic26Two"  value=""  checked="checked"  style="display:none"/>-->
                   <tr>
                     <td >2、其他请注明</td>
                     <td width="80px;"><input type="text" name="topic26Six" th:value="${deial.topic26Six}" class="layui-input"/></td>
@@ -1950,7 +1950,7 @@
                   <tr>
                     <td >3、员工未对所有顾客都有服务用语</td>
                     <td width="80px;"><input type="checkbox" name="topic27Two" value="1、有过期变质商品存架"  th:if="${deial.topic27Two!=null}"  th:checked="${#strings.contains(deial.topic27Two,'有过期变质商品存架')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic27Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic27Two"  value=""  checked="checked"  style="display:none"/>-->
 
                   <tr>
                     <td >4、其他请注明</td>
@@ -2008,7 +2008,7 @@
                   <tr>
                     <td >1、当月活动未推荐和宣传</td>
                     <td width="80px;"><input type="checkbox" name="topic28Two" value="1、当月活动未推荐和宣传" th:if="${deial.topic28Two!=null}"  th:checked="${#strings.contains(deial.topic28Two,'当月活动未推荐和宣传')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic28Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic28Two"  value=""  checked="checked"  style="display:none"/>-->
                   <tr>
                     <td >2、其他请注明</td>
                     <td width="80px;"><input type="text" name="topic28Six" th:value="${deial.topic28Six}" class="layui-input"/></td>
@@ -2048,7 +2048,7 @@
                   <tr>
                     <td >3、未推荐顾客下载APP</td>
                     <td width="80px;"><input type="checkbox" name="topic29Two" value="3、未推荐顾客下载APP" th:if="${deial.topic29Two!=null}"  th:checked="${#strings.contains(deial.topic29Two,'未推荐顾客下载APP')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic29Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic29Two"  value=""  checked="checked"  style="display:none"/>-->
 
                   <tr>
                     <td >4、其他请注明</td>
@@ -2118,7 +2118,7 @@
                   <tr>
                     <td >4、未报出应收总金额</td>
                     <td width="80px;"><input type="checkbox" name="topic30Two" value="4、未报出应收总金额"  th:if="${deial.topic30Two!=null}"  th:checked="${#strings.contains(deial.topic30Two,'未报出应收总金额')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic30Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic30Two"  value=""  checked="checked"  style="display:none"/>-->
 
                   <tr>
                     <td >5、其他请注明</td>
@@ -2177,7 +2177,7 @@
                   <tr>
                     <td >3、是否推荐顾客进入门店社群</td>
                     <td width="80px;"><input type="checkbox" name="topic31Two" value="3、是否推荐顾客进入门店社群" th:if="${deial.topic31Two!=null}"  th:checked="${#strings.contains(deial.topic31Two,'是否推荐顾客进入门店社群')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic31Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic31Two"  value=""  checked="checked"  style="display:none"/>-->
 
                   <tr>
                     <td >4、其他请注明</td>
@@ -2228,7 +2228,7 @@
                   <tr>
                     <td >1、顾客离开门店时，员工未对所有顾客告别（发现一次未道别就扣分）</td>
                     <td width="80px;"><input type="checkbox" name="topic32Two" value="1、顾客离开门店时，员工未对所有顾客告别（发现一次未道别就扣分）" th:if="${deial.topic32Two!=null}"  th:checked="${#strings.contains(deial.topic32Two,'顾客离开门店时，员工未对所有顾客告别')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic32Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic32Two"  value=""  checked="checked"  style="display:none"/>-->
                   <tr>
                     <td >2、其他请注明</td>
                     <td width="80px;"><input type="text" name="topic32Six" th:value="${deial.topic32Six}" class="layui-input"/></td>
@@ -2282,7 +2282,7 @@
                   <tr>
                     <td >6、内衬衣有外漏</td>
                     <td width="80px;"><input type="checkbox" name="topic33Two" value="6、内衬衣有外漏" th:if="${deial.topic33Two!=null}"  th:checked="${#strings.contains(deial.topic33Two,'内衬衣有外漏')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic33Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic33Two"  value=""  checked="checked"  style="display:none"/>-->
                   <tr>
                     <td >7、其他请注明</td>
                     <td width="80px;"><input type="text" name="topic33Six" th:value="${deial.topic33Six}" class="layui-input"/></td>
@@ -2365,7 +2365,7 @@
                   <tr>
                     <td >4、未穿袜子</td>
                     <td width="80px;"><input type="checkbox" name="topic34Two" value="4、未穿袜子" th:if="${deial.topic34Two!=null}"  th:checked="${#strings.contains(deial.topic34Two,'未穿袜子')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic34Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic34Two"  value=""  checked="checked"  style="display:none"/>-->
                   <tr>
                     <td >5、其他请注明</td>
                     <td width="80px;"><input type="text" name="topic34Six" th:value="${deial.topic34Six}" class="layui-input"/></td>
@@ -2439,7 +2439,7 @@
                   <tr>
                     <td >4、女生长发未扎起来，刘海遮眼睛，带耳钉.耳环</td>
                     <td width="80px;"><input type="checkbox" name="topic35Two" value="4、女生长发未扎起来，刘海遮眼睛，带耳钉.耳环"  th:if="${deial.topic35Two!=null}"  th:checked="${#strings.contains(deial.topic35Two,'女生长发未扎起来，刘海遮眼睛，带耳钉.耳环')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic35Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic35Two"  value=""  checked="checked"  style="display:none"/>-->
                   <tr>
                     <td >5、其他请注明</td>
                     <td width="80px;"><input type="text" name="topic35Six" th:value="${deial.topic35Six}" class="layui-input"/></td>
@@ -2513,7 +2513,7 @@
                   <tr>
                     <td >4、女生上班浓妆艳抹；戴假睫毛；戴鼻环.唇环</td>
                     <td width="80px;"><input type="checkbox" name="topic36Two" value="4、女生上班浓妆艳抹；戴假睫毛；戴鼻环.唇环"  th:if="${deial.topic36Two!=null}"  th:checked="${#strings.contains(deial.topic36Two,'女生上班浓妆艳抹；戴假睫毛；戴鼻环.唇环')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic36Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic36Two"  value=""  checked="checked"  style="display:none"/>-->
                   <tr>
                     <td >5、其他请注明</td>
                     <td width="80px;"><input type="text" name="topic36Six" th:value="${deial.topic36Six}" class="layui-input"/></td>
@@ -2595,7 +2595,7 @@
                   <tr>
                     <td >6、上班时佩戴饰物</td>
                     <td width="80px;"><input type="checkbox" name="topic37Two" value="6、上班时佩戴饰物" th:if="${deial.topic37Two!=null}"  th:checked="${#strings.contains(deial.topic37Two,'上班时佩戴饰物')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic37Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic37Two"  value=""  checked="checked"  style="display:none"/>-->
                   <tr>
                     <td >7、其他请注明</td>
                     <td width="80px;"><input type="text" name="topic37Six"  th:value="${deial.topic37Six}" class="layui-input"/></td>
@@ -2669,7 +2669,7 @@
                   <tr>
                     <td >4、在卖场玩手机（包括不限于着工装抽烟.打电话.玩游戏等）</td>
                     <td width="80px;"><input type="checkbox" name="topic38Two" value="4、在卖场玩手机（包括不限于着工装抽烟.打电话.玩游戏等）" th:if="${deial.topic38Two!=null}"  th:checked="${#strings.contains(deial.topic38Two,'包括不限于着工装抽烟')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic38Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic38Two"  value=""  checked="checked"  style="display:none"/>-->
 
                   <tr>
                     <td >5、其他请注明</td>
@@ -2724,7 +2724,7 @@
                     <td >3、员工健康证未在收银区公示</td>
                     <td width="80px;"><input type="checkbox" name="topic39Two" value="3、员工健康证未在收银区公示" th:if="${deial.topic39Two!=null}"  th:checked="${#strings.contains(deial.topic39Two,'员工健康证未在收银区公示')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
-                  <input type="checkbox" name="topic39Two"  value=""  checked="checked"  style="display:none"/>
+                 <!-- <input type="checkbox" name="topic39Two"  value=""  checked="checked"  style="display:none"/>-->
 
                   <tr>
                     <td >4、其他请注明</td>
@@ -2781,7 +2781,7 @@
                   <tr>
                     <td >3、苏宁帮客没有物料宣传</td>
                     <td width="80px;"><input type="checkbox" name="topic40Two" value="3、苏宁帮客没有物料宣传"  th:if="${deial.topic40Two!=null}"  th:checked="${#strings.contains(deial.topic40Two,'苏宁帮客没有物料宣传')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                  </tr><input type="checkbox" name="topic40Two"  value=""  checked="checked"  style="display:none"/>
+                  </tr><!--<input type="checkbox" name="topic40Two"  value=""  checked="checked"  style="display:none"/>-->
                   <tr>
                     <td >4、其他请注明</td>
                     <td width="80px;"><input type="text" name="topic40Six" th:value="${deial.topic40Six}" class="layui-input"/></td>
@@ -2830,7 +2830,7 @@
             <div class="layui-form-item layui-layout-admin" id="deialSee">
               <div class="layui-input-block">
                 <div class="layui-footer" style="left: 0;">
-                  <input class="layui-btn" lay-submit="" lay-filter="component-form-demo1" type="submit"  value="提交"/>
+                  <input class="layui-btn" lay-submit="" lay-filter="component-form-demo1" type="submit" id="checkSubject"  value="提交"/>
                   <button  class="layui-btn layui-btn-primary" onclick="resert()"> 重置</button>
                 </div>
               </div>
