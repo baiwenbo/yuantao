@@ -42,126 +42,206 @@ $(document).ready(function(){
     var th40=$("input[name='topic40One']:checked").val();
 if (th1.indexOf("完全")>0){
     $("#one").hide();
+}else{
+    type1="2";
 }
 if (th2.indexOf("完全")>0){
     $("#two").hide();
+}else{
+    type2="2";
 }
 if (th3.indexOf("完全")>0){
     $("#three").hide();
+}else{
+    type3="2";
 }
 if (th4.indexOf("完全")>0){
     $("#four").hide();
+}else{
+    type4="2";
 }
 if (th5.indexOf("完全")>0){
     $("#five").hide();
+}else{
+    type5="2";
 }
 if (th6.indexOf("完全")>0){
     $("#six").hide();
+}else{
+    type6="2";
 }
 if (th7.indexOf("完全")>0){
     $("#seven").hide();
+}else{
+    type7="2";
 }
 if (th8.indexOf("完全")>0){
     $("#eight").hide();
+}else{
+    type8="2";
 }
 if (th9.indexOf("有")>0){
     $("#ninesuper").show();
 }
 if (th9t.indexOf("完全")>0){
     $("#nine").hide();
+}else{
+    type9="2";
 }
 if (th10.indexOf("完全")>0){
     $("#ten").hide();
+}else{
+    type10="2";
 }
 if (th11.indexOf("完全")>0){
     $("#eleven").hide();
+}else{
+    type11="2";
 }
 if (th12.indexOf("完全")>0){
     $("#twelve").hide();
+}else{
+    type12="2";
 }
 if (th13.indexOf("完全")>0){
     $("#thirteen").hide();
+}else{
+    type13="2";
 }
 if (th14.indexOf("完全")>0){
     $("#th14").hide();
+}else{
+    type14="2";
 }
 if (th15.indexOf("完全")>0){
     $("#th15").hide();
+}else{
+    type15="2";
 }
 if (th16.indexOf("完全")>0){
     $("#th16").hide();
+}else{
+    type16="2";
 }
     if (th17.indexOf("完全")>0){
         $("#th17").hide();
+    }else{
+        type17="2";
     }
     if (th18.indexOf("完全")>0){
         $("#th18").hide();
+    }else{
+        type18="2";
     }
     if (th19.indexOf("完全")>0){
         $("#th19").hide();
+    }else{
+        type19="2";
     }
     if (th20.indexOf("完全")>0){
         $("#th20").hide();
+    }else{
+        type20="2";
     }
     if (th21.indexOf("完全")>0){
         $("#th21").hide();
+    }else{
+        type21="2";
     }
     if (th22.indexOf("完全")>0){
         $("#th22").hide();
+    }else{
+        type22="2";
     }
     if (th23.indexOf("完全")>0){
         $("#th23").hide();
+    }else{
+        type23="2";
     }
     if (th24.indexOf("完全")>0){
         $("#th24").hide();
+    }else{
+        type24="2";
     }
     if (th25.indexOf("完全")>0){
         $("#th25").hide();
+    }else{
+        type25="2";
     }
     if (th26.indexOf("完全")>0){
         $("#th26").hide();
+    }else{
+        type26="2";
     }
     if (th27.indexOf("完全")>0){
         $("#th27").hide();
+    }else{
+        type27="2";
     }
     if (th28.indexOf("完全")>0){
         $("#th28").hide();
+    }else{
+        type28="2";
     }
     if (th29.indexOf("完全")>0){
         $("#th29").hide();
+    }else{
+        type29="2";
     }
     if (th30.indexOf("完全")>0){
         $("#th30").hide();
+    }else{
+        type30="2";
     }
     if (th31.indexOf("完全")>0){
         $("#th31").hide();
+    }else{
+        type31="2";
     }
     if (th32.indexOf("完全")>0){
         $("#th32").hide();
+    }else{
+        type32="2";
     }
     if (th33.indexOf("完全")>0){
         $("#th33").hide();
+    }else{
+        type33="2";
     }
     if (th34.indexOf("完全")>0){
         $("#th34").hide();
+    }else{
+        type34="2";
     }
     if (th35.indexOf("完全")>0){
         $("#th35").hide();
+    }else{
+        type35="2";
     }
     if (th36.indexOf("完全")>0){
         $("#th36").hide();
+    }else{
+        type36="2";
     }
     if (th37.indexOf("完全")>0){
         $("#th37").hide();
+    }else{
+        type37="2";
     }
     if (th38.indexOf("完全")>0){
         $("#th38").hide();
+    }else{
+        type38="2";
     }
     if (th39.indexOf("完全")>0){
         $("#th39").hide();
+    }else{
+        type39="2";
     }
     if (th40.indexOf("完全")>0){
         $("#th40").hide();
+    }else{
+        type40="2";
     }
     $("#queryCompany").click(function(){
 
@@ -201,278 +281,6 @@ if (th16.indexOf("完全")>0){
 
 });
 
-function oneDiv(type) {
-    if (type==2){
-        $("#one").show();
-    }else{
-        $("#one").hide();
-    }
-}
-function twoDiv(type) {
-    if (type==2){
-        $("#two").show();
-    }else{
-        $("#two").hide();
-    }
-}
-function threeDiv(type) {
-    if (type==2){
-        $("#three").show();
-    }else{
-        $("#three").hide();
-    }
-}
-function fourDiv(type) {
-    if (type==2){
-        $("#four").show();
-    }else{
-        $("#four").hide();
-    }
-}
-function fiveDiv(type) {
-    if (type==2){
-        $("#five").show();
-    }else{
-        $("#five").hide();
-    }
-}
-function sixDiv(type) {
-    if (type==2){
-        $("#six").show();
-    }else{
-        $("#six").hide();
-    }
-}
-function sevenDiv(type) {
-    if (type==2){
-        $("#seven").show();
-    }else{
-        $("#seven").hide();
-    }
-}
-function eightDiv(type) {
-    if (type==2){
-        $("#eight").show();
-    }else{
-        $("#eight").hide();
-    }
-}
-function ninesuperDiv(type) {
-    if (type==2){
-        $("#ninesuper").show();
-    }else{
-        $("#ninesuper").hide();
-        $("#nine").hide();
-    }
-}
-function nineDiv(type) {
-    if (type==2){
-        $("#nine").show();
-    }else{
-        $("#nine").hide();
-    }
-}
-function tenDiv(type) {
-    if (type==2){
-        $("#ten").show();
-    }else{
-        $("#ten").hide();
-    }
-}
-function elevenDiv(type) {
-    if (type==2){
-        $("#eleven").show();
-    }else{
-        $("#eleven").hide();
-    }
-}
-function twelveDiv(type) {
-    if (type==2){
-        $("#twelve").show();
-    }else{
-        $("#twelve").hide();
-    }
-}
-function thirteenDiv(type) {
-    if (type==2){
-        $("#thirteen").show();
-    }else{
-        $("#thirteen").hide();
-    }
-}
-function resert() {
-    window.location.reload();
-}
-function th14Div(type) {
-    if (type==2){
-        $("#th14").show();
-    }else{
-        $("#th14").hide();
-    }
-}function th15Div(type) {
-    if (type==2){
-        $("#th15").show();
-    }else{
-        $("#th15").hide();
-    }
-}function th16Div(type) {
-    if (type==2){
-        $("#th16").show();
-    }else{
-        $("#th16").hide();
-    }
-}function th17Div(type) {
-    if (type==2){
-        $("#th17").show();
-    }else{
-        $("#th17").hide();
-    }
-}function th18Div(type) {
-    if (type==2){
-        $("#th18").show();
-    }else{
-        $("#th18").hide();
-    }
-}function th19Div(type) {
-    if (type==2){
-        $("#th19").show();
-    }else{
-        $("#th19").hide();
-    }
-}function th20Div(type) {
-    if (type==2){
-        $("#th20").show();
-    }else{
-        $("#th20").hide();
-    }
-}function th21Div(type) {
-    if (type==2){
-        $("#th21").show();
-    }else{
-        $("#th21").hide();
-    }
-}function th22Div(type) {
-    if (type==2){
-        $("#th22").show();
-    }else{
-        $("#th22").hide();
-    }
-}function th23Div(type) {
-    if (type==2){
-        $("#th23").show();
-    }else{
-        $("#th23").hide();
-    }
-}function th24Div(type) {
-    if (type==2){
-        $("#th24").show();
-    }else{
-        $("#th24").hide();
-    }
-}function th25Div(type) {
-    if (type==2){
-        $("#th25").show();
-    }else{
-        $("#th25").hide();
-    }
-}function th26Div(type) {
-    if (type==2){
-        $("#th26").show();
-    }else{
-        $("#th26").hide();
-    }
-}function th27Div(type) {
-    if (type==2){
-        $("#th27").show();
-    }else{
-        $("#th27").hide();
-    }
-}function th28Div(type) {
-    if (type==2){
-        $("#th28").show();
-    }else{
-        $("#th28").hide();
-    }
-}function th29Div(type) {
-    if (type==2){
-        $("#th29").show();
-    }else{
-        $("#th29").hide();
-    }
-}function th30Div(type) {
-    if (type==2){
-        $("#th30").show();
-    }else{
-        $("#th30").hide();
-    }
-}function th31Div(type) {
-    if (type==2){
-        $("#th31").show();
-    }else{
-        $("#th31").hide();
-    }
-}function th32Div(type) {
-    if (type==2){
-        $("#th32").show();
-    }else{
-        $("#th32").hide();
-    }
-}function th33Div(type) {
-    if (type==2){
-        $("#th33").show();
-    }else{
-        $("#th33").hide();
-    }
-}function th34Div(type) {
-    if (type==2){
-        $("#th34").show();
-    }else{
-        $("#th34").hide();
-    }
-
-}
-function th35Div(type) {
-    if (type==2){
-        $("#th35").show();
-    }else{
-        $("#th35").hide();
-    }
-}
-function th37Div(type) {
-    if (type==2){
-        $("#th37").show();
-    }else{
-        $("#th37").hide();
-    }
-}
-function th36Div(type) {
-    if (type==2){
-        $("#th36").show();
-    }else{
-        $("#th36").hide();
-    }
-}
-function th38Div(type) {
-    if (type==2){
-        $("#th38").show();
-    }else{
-        $("#th38").hide();
-    }
-}
-function th39Div(type) {
-    if (type==2){
-        $("#th39").show();
-    }else{
-        $("#th39").hide();
-    }
-}
-function th40Div(type) {
-    if (type==2){
-        $("#th40").show();
-    }else{
-        $("#th40").hide();
-    }
-}
 layui.config({
     base: path+'/layuiadmin/' //静态资源所在路径
 }).extend({
