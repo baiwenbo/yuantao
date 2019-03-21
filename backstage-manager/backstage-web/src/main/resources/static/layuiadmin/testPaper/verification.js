@@ -336,11 +336,11 @@ $("#checkSubject").click(function(){
             alert("请选择题21不符项");
             return false;
         }
-        var topic21Four=$("#topic21Four").val();
+       /* var topic21Four=$("#topic21Four").val();
         if (topic21Four==""||topic21Four==null){
             alert("请上传题21图片");
             return false;
-        }
+        }*/
     }
     if (type22=="2"){
         var remark22=$("input[name='topic22Six']").val();
