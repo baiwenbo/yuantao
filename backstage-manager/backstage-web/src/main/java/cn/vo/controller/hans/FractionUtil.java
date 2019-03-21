@@ -351,7 +351,6 @@ public class FractionUtil {
             }else {
                 testPaper.setScore(FractionUtil.getsSore(testPaper));
             }
-            testPaper.setScore(FractionUtil.getsSore(testPaper));
         }catch (Exception e){
             e.printStackTrace();
             return testPaper;
