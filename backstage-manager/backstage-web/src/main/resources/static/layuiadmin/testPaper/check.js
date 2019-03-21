@@ -244,7 +244,7 @@ function th14Div(type) {
 }function th28Div(type) {
     if (type==2){
         $("#th28").show();
-        type3="2";
+        type28="2";
     }else{
         $("#th28").hide();
         type28="1";
