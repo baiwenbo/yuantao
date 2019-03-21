@@ -1,22 +1,29 @@
 package cn.vo.shiro;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 
+import com.google.common.collect.Maps;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.cache.ehcache.EhCacheManager;
 import org.apache.shiro.mgt.SecurityManager;
+import org.apache.shiro.session.SessionListener;
+import org.apache.shiro.session.mgt.SessionManager;
 import org.apache.shiro.spring.LifecycleBeanPostProcessor;
 import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
+import org.apache.shiro.web.session.mgt.DefaultWebSessionManager;
 import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
 
 import at.pollux.thymeleaf.shiro.dialect.ShiroDialect;
+
+import javax.servlet.Filter;
 
 @Configuration
 public class ShiroConfig {
@@ -69,6 +76,7 @@ public class ShiroConfig {
         DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
         securityManager.setRealm(shiroRealm());
         securityManager.setCacheManager(ehCacheManager());
+
         return securityManager;
     }
 
@@ -97,6 +105,8 @@ public class ShiroConfig {
         return shiroFilterFactoryBean;
     }
 
+
+
     /**
      * DefaultAdvisorAutoProxyCreator，Spring的一个bean，由Advisor决定对哪些类的方法进行AOP代理。
      */
@@ -119,8 +129,36 @@ public class ShiroConfig {
         return aASA;
     }
 
+
     @Bean
     public ShiroDialect shiroDialect() {
         return new ShiroDialect();
     }
+    @Bean("sessionManager")
+    public SessionManager sessionManager() {
+
+        DefaultWebSessionManager sessionManager = new DefaultWebSessionManager();
+        Collection<SessionListener> listeners = new ArrayList<SessionListener>();
+        //配置监听
+
+        sessionManager.setSessionListeners(listeners);
+
+        sessionManager.setCacheManager(ehCacheManager());
+
+        //全局会话超时时间（单位毫秒），默认30分钟  ，单位是毫秒
+        sessionManager.setGlobalSessionTimeout(7200*1000);
+        //是否开启删除无效的session对象  默认为true
+        sessionManager.setDeleteInvalidSessions(true);
+        //是否开启定时调度器进行检测过期session 默认为true
+        sessionManager.setSessionValidationSchedulerEnabled(true);
+        //设置session失效的扫描时间, 清理用户直接关闭浏览器造成的孤立会话 默认为 1个小时
+        //设置该属性 就不需要设置 ExecutorServiceSessionValidationScheduler 底层也是默认自动调用ExecutorServiceSessionValidationScheduler
+        //暂时设置为 5秒 用来测试
+      //  sessionManager.setSessionValidationInterval(3600000);
+
+        return sessionManager;
+
+    }
+
+
 }
