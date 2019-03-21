@@ -80,8 +80,9 @@ if (th8.indexOf("完全")>0){
 }else{
     type8="2";
 }
-if (th9.indexOf("有")>0){
-    $("#ninesuper").show();
+
+if (th9.indexOf("无休闲区")>0){
+    $("#ninesuper").hide();
 }
 if (th9t.indexOf("完全")>0){
     $("#nine").hide();
