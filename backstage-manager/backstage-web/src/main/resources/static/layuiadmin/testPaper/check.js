@@ -180,7 +180,7 @@ function th14Div(type) {
 }function th20Div(type) {
     if (type==2){
         $("#th20").show();
-        type3="2";
+        type20="2";
     }else{
         $("#th20").hide();
         type20="1";

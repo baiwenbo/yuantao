@@ -135,12 +135,12 @@ $("#checkSubject").click(function(){
         }
     }
     if (type9=="2"){
-        var remark9=$("input[name='topic9Six']").val();
-        if ($("input[name='topic9Two']").is(':checked') === false && remark9 ==""){
+        if ($("input[name='topic9Two']").is(':checked') === false ){
             alert("请选择题9不符项");
             return false;
         }
-        if ($("input[name='topic9Three']").is(':checked') === false){
+        var remark9=$("input[name='topic9Six']").val();
+        if ($("input[name='topic9Three']").is(':checked') === false && remark9 ==""){
             alert("请选择题9不符项");
             return false;
         }
