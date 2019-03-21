@@ -101,7 +101,7 @@ $("#checkSubject").click(function(){
         }
     }
     if (type7=="2"){
-        var remark2=$("input[name='topic7Six']").val();
+        var remark7=$("input[name='topic7Six']").val();
         if ($("input[name='topic7Two']").is(':checked') === false && remark7 ==""){
             alert("请选择题7不符项");
             return false;
@@ -110,6 +110,7 @@ $("#checkSubject").click(function(){
             alert("请选择不符项");
             return false;
         }*/
+
         var topic7Four=$("#topic7Four").val();
         if (topic7Four==""||topic7Four==null){
             alert("请上传题7图片");
