@@ -207,9 +207,12 @@
               <div class="layui-input-block">
                 <textarea name="qcheck" th:text="${deial.qcheck}" class="layui-textarea"></textarea>
               </div>
-              <input type="file" class="layui-btn" name="trough1File"  value="上传图片"/>
+
+              <input type="file"  class="layui-btn" name="trough1file"  />
+              <input  type="button" class="layui-btn"  id="trough1file" onclick="fileFour(this)"  value="上传图片"/>
               <input name="mark1" type="hidden" th:value="${deial.trough1}"/>
-              <input type="text" class="layui-btn"  id="mark1" value="查看扣分点图片" onclick="look(this)"/>
+              <input type="text" align="left" class="layui-btn"  id="mark1" value="查看扣分点图片" onclick="look(this)"/>
+
             </div>
 
             <div class="layui-form-item layui-form-text">
