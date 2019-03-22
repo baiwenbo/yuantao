@@ -167,6 +167,7 @@ public class TestPaperController {
             if("开".equals(testPaperMendian.getAppeal())){
                 if("0".equals(user.getScpcqx())){
                     testPaperMendian.setQcheck(testPaper.getQcheck());
+                    testPaperMendian.setTrough1(testPaper.getTrough1());
                     testPaperMendian.setQcheckstatus("已申诉");
                     testPaperService.updateId(testPaperMendian);
                 }
