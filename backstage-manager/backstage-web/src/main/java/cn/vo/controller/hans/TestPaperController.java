@@ -148,12 +148,11 @@ public class TestPaperController {
     }
 
     @PostMapping("update")
-    public String update(@ModelAttribute TestPaper testPaper,HttpServletRequest request,
-                         @RequestParam("trough1File") MultipartFile trough1File){
+    public String update(@ModelAttribute TestPaper testPaper,HttpServletRequest request){
         try{
 
 
-            testPaper.setTrough1(FileUpload.uploadFile(trough1File,trough1File.getName()));
+            //testPaper.setTrough1(FileUpload.uploadFile(trough1File,trough1File.getName()));
 
             TestPaper  testPaperMendian=testPaperService.getById(testPaper.getId());
 
