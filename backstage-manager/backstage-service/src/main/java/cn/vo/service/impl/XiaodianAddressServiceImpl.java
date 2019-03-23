@@ -1,7 +1,6 @@
 package cn.vo.service.impl;
 
 import cn.vo.dao.XiaodianAddressMapper;
-import cn.vo.dao.hans.XiaoDianAddressMapper;
 import cn.vo.pojo.entity.XiaodianAddress;
 import cn.vo.pojo.entity.XiaodianAddressExample;
 import cn.vo.service.IXiaodianAddressService;
