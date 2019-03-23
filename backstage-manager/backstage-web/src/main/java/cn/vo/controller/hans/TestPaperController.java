@@ -4,7 +4,10 @@ package cn.vo.controller.hans;
 import cn.vo.Utils.FileUpload;
 import cn.vo.backstage.Utils.ListResult;
 import cn.vo.backstage.Utils.PageUtils;
+import cn.vo.controller.sift.SiftCount;
+import cn.vo.dao.hans.SiftAddressMapper;
 import cn.vo.pojo.User;
+import cn.vo.pojo.entity.HansSiftAddress;
 import cn.vo.pojo.entity.TestPaper;
 import cn.vo.pojo.entity.XiaodianAddress;
 import cn.vo.service.IQuestionService;
@@ -43,7 +46,8 @@ public class TestPaperController {
     @Autowired
     private IUserService iUserService;
 
-
+    @Autowired
+    private SiftAddressMapper siftAddressMapper;
     @GetMapping("list")
     public  String  list(String close, Model model,HttpServletRequest request){
         HttpSession session=request.getSession();
@@ -96,12 +100,14 @@ public class TestPaperController {
                 testPaperService.save(FractionUtil.getFraction(testPaper));
             }else if (testPaper.getType()==2){
                 testPaperService.save(SorceUtils.getFraction(testPaper));
+            }else if(testPaper.getType()==3){
+                testPaperService.save(SiftCount.getFraction(testPaper));
             }
         }catch (Exception e){
             e.printStackTrace();
             return "redirect:/testPaper/list?close="+"error";
         }
-        return  "redirect:/testPaper/list?close="+"ok";
+        return  result(testPaper);
     }
 
     @ResponseBody
@@ -123,12 +129,23 @@ public class TestPaperController {
         User user= (User) session.getAttribute("USER");
         model.addAttribute("scpcqx",user.getScpcqx());
         model.addAttribute("testPaper",testPaper);
-      if (testPaper.getType()==2){
-            return "views/routine/routEditDeial";
-        }else{
-            return "views/hans/questionetor";
-        }
+        return editResult(testPaper);
+
     }
+    public String editResult(TestPaper testPaper){
+        String result="";
+        if (testPaper.getType()==1){
+            result= "views/hans/questionetor";
+        }else if(testPaper.getType()==2){
+            result="views/routine/routEditDeial";
+        }else if(testPaper.getType()==3){
+            result="views/sift/siftEdit";
+        }else{
+            result="views/hans/questionetor";
+        }
+        return result;
+    }
+
     @GetMapping("deial")
     public String deial(Integer id, Model model){
         TestPaper testPaper=testPaperService.getById(id);
@@ -159,6 +176,9 @@ public class TestPaperController {
             if(testPaper.getCompanyId()==null){
                 testPaper.setCompanyId(testPaperMendian.getCompanyId());
             }
+            if(testPaper.getType()==null){
+                testPaper.setType(testPaperMendian.getType());
+            }
             saveTestPaper(testPaper);
             HttpSession session=request.getSession();
             User user=(User) session.getAttribute("USER");
@@ -178,13 +198,19 @@ public class TestPaperController {
                 }
             }
             if("5".equals(user.getScpcqx())){
-                testPaperService.updateId(FractionUtil.getFraction(testPaper));
+                if (testPaper.getType()==1){
+                    testPaperService.updateId(FractionUtil.getFraction(testPaper));
+                }else if (testPaper.getType()==2){
+                    testPaperService.updateId(SorceUtils.getFraction(testPaper));
+                }else if(testPaper.getType()==3){
+                    testPaperService.updateId(SiftCount.getFraction(testPaper));
+                }
             }
         }catch (Exception e){
             e.printStackTrace();
             return "redirect:/testPaper/list?close="+"error";
         }
-        return  "redirect:/testPaper/list?close="+"ok";
+        return  result(testPaper);
     }
 
     @GetMapping("appealOpen")
@@ -214,14 +240,25 @@ public class TestPaperController {
     }
 
     public TestPaper saveTestPaper(TestPaper testPaper){
-        XiaodianAddress xiaodianAddress=xiaodianAddressService.getById(Long.valueOf(testPaper.getCompanyId()));
-        testPaper.setName(xiaodianAddress.getName());
-        testPaper.setCode(xiaodianAddress.getCode());
-        testPaper.setCompany(xiaodianAddress.getCompany());
-        testPaper.setAddress(xiaodianAddress.getAddress());
-        testPaper.setPianqu(xiaodianAddress.getPianqu());
-        testPaper.setCity(xiaodianAddress.getCity());
-        testPaper.setDaqu(xiaodianAddress.getDaqu());
+        if (testPaper.getType()==1){
+            XiaodianAddress xiaodianAddress=xiaodianAddressService.getById(Long.valueOf(testPaper.getCompanyId()));
+            testPaper.setName(xiaodianAddress.getName());
+            testPaper.setCode(xiaodianAddress.getCode());
+            testPaper.setCompany(xiaodianAddress.getCompany());
+            testPaper.setAddress(xiaodianAddress.getAddress());
+            testPaper.setPianqu(xiaodianAddress.getPianqu());
+            testPaper.setCity(xiaodianAddress.getCity());
+            testPaper.setDaqu(xiaodianAddress.getDaqu());
+        } else if(testPaper.getType()==3){
+            HansSiftAddress hansSiftAddress=siftAddressMapper.findOne(Long.valueOf(testPaper.getCompanyId()));
+            testPaper.setName(hansSiftAddress.getName());
+            testPaper.setCode(hansSiftAddress.getCode());
+            testPaper.setCompany(hansSiftAddress.getCompany());
+            testPaper.setAddress(hansSiftAddress.getAddress());
+            testPaper.setPianqu(hansSiftAddress.getPianqu());
+            testPaper.setCity(hansSiftAddress.getCity());
+            testPaper.setDaqu(hansSiftAddress.getDaqu());
+        }
         return testPaper;
     }
 
@@ -244,6 +281,19 @@ public class TestPaperController {
     }
 
 
+    public String result(TestPaper testPaper){
+        String result="";
+        if (testPaper.getType()==1){
+            result=  "redirect:/testPaper/list?close="+"ok";
+        }else if(testPaper.getType()==2){
+
+        }else if(testPaper.getType()==3){
+            result=  "redirect:/sift/siftList?close="+"ok";
+        }else{
+            result=  "redirect:/sift/siftList?close="+"ok";
+        }
+        return result;
+    }
 
 
 
