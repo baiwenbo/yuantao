@@ -46,7 +46,13 @@ public class ExcelController {
         //加载excel模板文件
         File file = null;
         try {
-            file = ResourceUtils.getFile("classpath:excel/question.xlsx");
+            if (type==1){
+                file = ResourceUtils.getFile("classpath:excel/question.xlsx");
+
+            }else if (type==2){
+                file = ResourceUtils.getFile("classpath:excel/rout.xlsx");
+            }
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
 
