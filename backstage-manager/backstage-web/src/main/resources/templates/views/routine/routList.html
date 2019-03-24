@@ -41,7 +41,7 @@
     </div>
     <button class="layui-btn" data-type="reload">搜索</button>
     <span th:if="${user.scpcqx == '5'}">
-        <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="question()">录入</button>
+        <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="routAdd()">录入</button>
 	</span>
     <span th:if="${user.username == 'admin'}">
         <a data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" th:href="@{/excel/export(type=2)}">导出</a>

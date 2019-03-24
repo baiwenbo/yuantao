@@ -54,6 +54,7 @@ public class ExcelSorceUtils {
                 testPaper.setTh39mark(setMark(testPaper.getType(),testPaper.getTopic39One(),"th39"));
                 testPaper.setTh40mark(setMark(testPaper.getType(),testPaper.getTopic40One(),"th40"));
 
+
                 testPaper.setTh1sorce(setSorce("th1",testPaper.getTopic1Three(),testPaper.getType()+""));
                 testPaper.setTh2sorce(setSorce("th2",testPaper.getTopic2Three(),testPaper.getType()+""));
                 testPaper.setTh3sorce(setSorce("th3",testPaper.getTopic3Three(),testPaper.getType()+""));
@@ -159,6 +160,8 @@ public class ExcelSorceUtils {
                 number= String.valueOf(EnumerationMap.getFraction(quest));
             }else if (type==2){
                 number= String.valueOf(SourceMap.getFraction(quest));
+            }else if(type==3){
+                number=String.valueOf(EnumerationMap.getSift(quest));
             }
 
         }
