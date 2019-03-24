@@ -243,16 +243,7 @@ public class TestPaperController {
     }
 
     public TestPaper saveTestPaper(TestPaper testPaper){
-        if (testPaper.getType()==1){
-            XiaodianAddress xiaodianAddress=xiaodianAddressService.getById(Long.valueOf(testPaper.getCompanyId()));
-            testPaper.setName(xiaodianAddress.getName());
-            testPaper.setCode(xiaodianAddress.getCode());
-            testPaper.setCompany(xiaodianAddress.getCompany());
-            testPaper.setAddress(xiaodianAddress.getAddress());
-            testPaper.setPianqu(xiaodianAddress.getPianqu());
-            testPaper.setCity(xiaodianAddress.getCity());
-            testPaper.setDaqu(xiaodianAddress.getDaqu());
-        } else if(testPaper.getType()==3){
+        if(testPaper.getType()==3){
             HansSiftAddress hansSiftAddress=siftAddressMapper.findOne(Long.valueOf(testPaper.getCompanyId()));
             testPaper.setName(hansSiftAddress.getName());
             testPaper.setCode(hansSiftAddress.getCode());
@@ -261,6 +252,15 @@ public class TestPaperController {
             testPaper.setPianqu(hansSiftAddress.getPianqu());
             testPaper.setCity(hansSiftAddress.getCity());
             testPaper.setDaqu(hansSiftAddress.getDaqu());
+        }else{
+            XiaodianAddress xiaodianAddress=xiaodianAddressService.getById(Long.valueOf(testPaper.getCompanyId()));
+            testPaper.setName(xiaodianAddress.getName());
+            testPaper.setCode(xiaodianAddress.getCode());
+            testPaper.setCompany(xiaodianAddress.getCompany());
+            testPaper.setAddress(xiaodianAddress.getAddress());
+            testPaper.setPianqu(xiaodianAddress.getPianqu());
+            testPaper.setCity(xiaodianAddress.getCity());
+            testPaper.setDaqu(xiaodianAddress.getDaqu());
         }
         return testPaper;
     }
