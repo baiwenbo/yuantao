@@ -42,7 +42,7 @@
                   <div class="layui-inline">
                       <label class="layui-form-label">门店名称</label>
                       <div class="layui-input-inline">
-                          <input type="text" name="name" id="name"  disabled="disabled" autocomplete="off" class="layui-input" />
+                          <input type="text" name="name" id="name"  readonly="true" autocomplete="off" class="layui-input" />
                       </div>
                   </div>
               </div>
@@ -52,19 +52,19 @@
                   <div class="layui-inline">
                       <label class="layui-form-label">门店地址</label>
                       <div class="layui-input-inline">
-                          <input type="text" name="address" id="address" disabled="disabled"  autocomplete="off" class="layui-input" />
+                          <input type="text" name="address" id="address" readonly="true"  autocomplete="off" class="layui-input" />
                       </div>
                   </div>
                   <div class="layui-inline">
                       <label class="layui-form-label">所属片区</label>
                       <div class="layui-input-inline">
-                          <input type="text" name="pianqu" id="pianqu" disabled="disabled" autocomplete="off" class="layui-input" />
+                          <input type="text" name="pianqu" id="pianqu" readonly="true" autocomplete="off" class="layui-input" />
                       </div>
                   </div>
                   <div class="layui-inline">
                       <label class="layui-form-label">所属大区</label>
                       <div class="layui-input-inline">
-                          <input type="text" name="daqu" id="daqu" disabled="disabled" autocomplete="off" class="layui-input" />
+                          <input type="text" name="daqu" id="daqu" readonly="true" autocomplete="off" class="layui-input" />
                       </div>
                   </div>
               </div>
@@ -73,7 +73,7 @@
                   <div class="layui-inline">
                       <label class="layui-form-label">所属子公司</label>
                       <div class="layui-input-inline">
-                          <input type="text" name="company" id="company" disabled="disabled"  autocomplete="off" class="layui-input" />
+                          <input type="text" name="company" id="company" readonly="true"  autocomplete="off" class="layui-input" />
                       </div>
                   </div>
                   <div class="layui-inline">
@@ -181,9 +181,10 @@
               <div class="text-left">
             <div align="left">
               <label style="width: 100px;">1-1外观形象是否符合要求？(单选）</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607">（苏宁店招明显无遮挡无破损，外部橱窗干净明亮，户内外广告内容无过期）</label>
               <div >
-                <label style="width: 100px;">1.完全符合</label> <input type="radio" name="topic1One" value="1.完全符合" onclick="oneDiv(1)" checked="checked"/><br/>
-                <label style="width: 100px;">2.不符合要求</label> <input type="radio" name="topic1One" value="2.不符合要求"  onclick="oneDiv(2)" />
+                <label style="width: 100px;">1、完全符合</label> <input type="radio" name="topic1One" value="1、完全符合" onclick="oneDiv(1)" checked="checked"/><br/>
+                <label style="width: 100px;">2、不符合要求</label> <input type="radio" name="topic1One" value="2、不符合要求"  onclick="oneDiv(2)" />
               </div>
             </div><br/>
             <div id="one" align="left">
@@ -191,16 +192,16 @@
                 <label style="width: 100px;">1-2不符合要求的原因是？(多选）</label><br/>
                <table    >
                   <tr>
-                    <td >1.苏宁店招明显遮挡有破损</td>
-                    <td width="80px;"><input value="1.苏宁店招明显遮挡有破损" type="checkbox" name="topic1Two" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >1、苏宁店招明显遮挡有破损</td>
+                    <td width="80px;"><input value="1、苏宁店招明显遮挡有破损" type="checkbox" name="topic1Two" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >2.外部橱窗干净明亮</td>
-                    <td width="80px;"><input type="checkbox" name="topic1Two" value="2.外部橱窗干净明亮"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >2、外部橱窗干净明亮</td>
+                    <td width="80px;"><input type="checkbox" name="topic1Two" value="2、外部橱窗干净明亮"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >3.户内外广告内容无过期</td>
-                    <td width="80px;"><input type="checkbox" name="topic1Two" value="3.户内外广告内容无过期"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >3、户内外广告内容无过期</td>
+                    <td width="80px;"><input type="checkbox" name="topic1Two" value="3、户内外广告内容无过期"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >其他请注明</td>
@@ -213,16 +214,16 @@
 
                <table   >
                   <tr>
-                    <td >1.1起</td>
-                    <td width="80px;"><input type="radio" value="1.1起"  name="topic1Three" style="height: 20px;width: 50px;"/></td>
+                    <td >1、1起</td>
+                    <td width="80px;"><input type="radio" value="1、1起"  name="topic1Three" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >2.2起</td>
-                    <td width="80px;"><input type="radio" value="2.2起" name="topic1Three"  style="height: 20px;width: 50px;" /> </td>
+                    <td >2、2起</td>
+                    <td width="80px;"><input type="radio" value="2、2起" name="topic1Three"  style="height: 20px;width: 50px;" /> </td>
                   </tr>
                   <tr>
-                    <td >3.3起及以上</td>
-                    <td width="80px;"><input type="radio" value="3.3起及以上" name="topic1Three"  style="height: 20px;width: 50px;"/></td>
+                    <td >3、3起及以上</td>
+                    <td width="80px;"><input type="radio" value="3、3起及以上" name="topic1Three"  style="height: 20px;width: 50px;"/></td>
                   </tr>
                 </table><br/>
                 <input type="file" class="layui-btn"  name="topic1Fourfile" id="test-upload-normal" onchange="validate_img(this);" />
@@ -231,9 +232,10 @@
             </div>
             <div   align="left">
               <label style="width: 100px;">2-1店堂环境是否符合要求？(单选）</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607">（地面、墙面清洁，垃圾桶无堆满，现场无杂物堆积、无黄纸箱、无废弃展台）</label>
               <div >
-                <label style="width: 100px;">1.完全符合   </label> <input type="radio" name="topic2One" value="1.完全符合" onclick="twoDiv(1)" checked="checked"/><br/>
-                <label style="width: 100px;">2.不符合要求</label> <input type="radio" name="topic2One" value="2.不符合要求" onclick="twoDiv(2)" />
+                <label style="width: 100px;">1、完全符合   </label> <input type="radio" name="topic2One" value="1、完全符合" onclick="twoDiv(1)" checked="checked"/><br/>
+                <label style="width: 100px;">2、不符合要求</label> <input type="radio" name="topic2One" value="2、不符合要求" onclick="twoDiv(2)" />
 
               </div>
             </div><br/>
@@ -243,16 +245,28 @@
                 <label style="width: 100px;">2-2不符合要求的原因是？(多选）</label><br/><br/>
                <table    style="align:center">
                   <tr>
-                    <td >1.地面.墙面不清洁</td>
-                    <td width="80px;"><input type="checkbox" name="topic2Two" value="1.地面.墙面不清洁"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >1、店堂环境地面不清洁</td>
+                    <td width="80px;"><input type="checkbox" name="topic2Two" value="1、店堂环境地面不清洁"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >2.垃圾桶有堆满</td>
-                    <td width="80px;"><input type="checkbox"  name="topic2Two" value="2.垃圾桶有堆满" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >2、店堂环境墙面不清洁</td>
+                    <td width="80px;"><input type="checkbox"  name="topic2Two" value="2、店堂环境墙面不清洁" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >3.现场有杂物堆积有黄纸箱.有废弃展台</td>
-                    <td width="80px;"><input type="checkbox"  name="topic2Two"  value="3.现场有杂物堆积有黄纸箱.有废弃展台" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >3、垃圾桶有堆满</td>
+                    <td width="80px;"><input type="checkbox"  name="topic2Two"  value="3、垃圾桶有堆满" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >4、现场有杂物堆积</td>
+                    <td width="80px;"><input type="checkbox"  name="topic2Two"  value="4、现场有杂物堆积" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >5、现场有黄纸箱</td>
+                    <td width="80px;"><input type="checkbox"  name="topic2Two"  value="5、现场有黄纸箱" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >6、现场有废弃展台</td>
+                    <td width="80px;"><input type="checkbox"  name="topic2Two"  value="6、现场有废弃展台" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >其他请注明</td>
@@ -267,16 +281,16 @@
 
                <table >
                   <tr>
-                    <td >1.1起</td>
-                    <td width="80px;"><input type="radio" value="1.1起"  name="topic2Three" style="height: 20px;width: 50px;"/></td>
+                    <td >1、1起</td>
+                    <td width="80px;"><input type="radio" value="1、1起"  name="topic2Three" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >2.2起</td>
-                    <td width="80px;"><input type="radio"  name="topic2Three" value="2.2起"  style="height: 20px;width: 50px;"/></td>
+                    <td >2、2起</td>
+                    <td width="80px;"><input type="radio"  name="topic2Three" value="2、2起"  style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >3.3起及以上</td>
-                    <td width="80px;"><input type="radio"  name="topic2Three" value="3.3起及以上"  style="height: 20px;width: 50px;"/></td>
+                    <td >3、3起及以上</td>
+                    <td width="80px;"><input type="radio"  name="topic2Three" value="3、3起及以上"  style="height: 20px;width: 50px;"/></td>
                   </tr>
                 </table>
               </div><br/>
@@ -287,17 +301,18 @@
             <div   align="left">
               <label style="width: 100px;">3-1门店内是否有卫生间？(单选）</label><br/>
               <div >
-                <label style="width: 100px;">1:有卫生间 </label> <input type="radio" name="trough2" value="1.有卫生间"  onclick="th3Div(1)" checked="checked" /><br/>
-                <label style="width: 100px;">2:无卫生间</label> <input type="radio" name="trough2" value="2.无卫生间"   onclick="th3Div(2)"/>
+                <label style="width: 100px;">1、有卫生间 </label> <input type="radio" name="trough2" value="1、有卫生间"  onclick="th3Div(1)" checked="checked" /><br/>
+                <label style="width: 100px;">2、无卫生间</label> <input type="radio" name="trough2" value="2、无卫生间"   onclick="th3Div(2)"/>
 
               </div>
             </div><br/>
             <div id="th3">
                 <div   align="left">
                   <label style="width: 100px;">3-2卫生间是否符合要求？(单选）</label><br/>
+                    <label style="text-align: left;font-size: 12px;color: #cf3607">（地面、台面、镜面、马桶等整洁干净，无异味）</label>
                   <div >
-                    <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic3One" value="1.完全符合"  onclick="threeDiv(1)" checked="checked" /><br/>
-                    <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic3One" value="2.不符合要求"   onclick="threeDiv(2)"/>
+                    <label style="width: 100px;">1、完全符合   </label> <input type="radio" name="topic3One" value="1、完全符合"  onclick="threeDiv(1)" checked="checked" /><br/>
+                    <label style="width: 100px;">2、不符合要求</label> <input type="radio" name="topic3One" value="2、不符合要求"   onclick="threeDiv(2)"/>
 
                   </div>
                 </div><br/>
@@ -306,24 +321,24 @@
                 <label style="width: 100px;">3-3不符合要求的原因是？(多选）</label><br/><br/>
                <table    >
                   <tr>
-                    <td >1.地面不整洁不干净</td>
-                    <td width="80px;"><input type="checkbox" name="topic3Two" value="1.地面不整洁不干净"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >1、地面不整洁不干净</td>
+                    <td width="80px;"><input type="checkbox" name="topic3Two" value="1、地面不整洁不干净"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >2.台面不整洁不干净</td>
-                    <td width="80px;"><input type="checkbox" name="topic3Two" value="2.台面不整洁不干净"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >2、台面不整洁不干净</td>
+                    <td width="80px;"><input type="checkbox" name="topic3Two" value="2、台面不整洁不干净"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >3.镜面不整洁不干净</td>
-                    <td width="80px;"><input type="checkbox" name="topic3Two" value="3.镜面不整洁不干净"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >3、镜面不整洁不干净</td>
+                    <td width="80px;"><input type="checkbox" name="topic3Two" value="3、镜面不整洁不干净"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >4.马桶不整洁不干净</td>
-                    <td width="80px;"><input type="checkbox" name="topic3Two" value="4.马桶不整洁不干净"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >4、马桶不整洁不干净</td>
+                    <td width="80px;"><input type="checkbox" name="topic3Two" value="4、马桶不整洁不干净"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >4.有异味</td>
-                    <td width="80px;"><input type="checkbox" name="topic3Two" value="4.有异味"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >5、有异味</td>
+                    <td width="80px;"><input type="checkbox" name="topic3Two" value="5、有异味"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
 
                   <tr>
@@ -338,13 +353,13 @@
                 <label style="width: 100px;">3-4几起不合格？(单选）</label><br/><br/>
                <table    >
                    <tr>
-                       <td >1.1起</td>
-                       <td width="80px;"><input type="radio" value="1.1起"  name="topic3Three" style="height: 20px;width: 50px;"/></td>
+                       <td >1、1起</td>
+                       <td width="80px;"><input type="radio" value="1、1起"  name="topic3Three" style="height: 20px;width: 50px;"/></td>
                    </tr>
 
                    <tr>
-                       <td >2.2起及以上</td>
-                       <td width="80px;"><input type="radio"  name="topic3Three" value="2.2起及以上"  style="height: 20px;width: 50px;"/></td>
+                       <td >2、2起及以上</td>
+                       <td width="80px;"><input type="radio"  name="topic3Three" value="2、2起及以上"  style="height: 20px;width: 50px;"/></td>
                    </tr>
                 </table>
 
@@ -370,9 +385,10 @@
            <div   align="left">
 
               <label style="width: 100px;">4-1商品陈列是否符合要求？(单选）</label><br/>
+               <label style="text-align: left;font-size: 12px;color: #cf3607">（陈列样机无破损、污渍等，摆放整齐，无乱扔/空样现象）</label>
               <div >
-                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic4One"  value="1.完全符合" checked="checked" onclick="fourDiv(1)"/><br/>
-                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic4One" value="2.不符合要求" onclick="fourDiv(2)" />
+                <label style="width: 100px;">1、完全符合   </label> <input type="radio" name="topic4One"  value="1、完全符合" checked="checked" onclick="fourDiv(1)"/><br/>
+                <label style="width: 100px;">2、不符合要求</label> <input type="radio" name="topic4One" value="2、不符合要求" onclick="fourDiv(2)" />
 
               </div>
             </div><br/>
@@ -381,20 +397,24 @@
                 <label style="width: 100px;">4-2不符合要求的原因是？(多选）</label><br/><br/>
                <table    >
                   <tr>
-                    <td >1.陈列样机有破损</td>
-                    <td width="80px;"><input type="checkbox" name="topic4Two"  value="1.陈列样机有破损" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >1、陈列样机有破损</td>
+                    <td width="80px;"><input type="checkbox" name="topic4Two"  value="1、陈列样机有破损" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >2.陈列样机有污渍</td>
-                    <td width="80px;"><input type="checkbox"  name="topic4Two" value="2.陈列样机有污渍"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >2、陈列样机有污渍</td>
+                    <td width="80px;"><input type="checkbox"  name="topic4Two" value="2、陈列样机有污渍"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >3.摆放不整齐</td>
-                    <td width="80px;"><input type="checkbox"  name="topic4Two" value="3.摆放不整齐"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >3、摆放不整齐</td>
+                    <td width="80px;"><input type="checkbox"  name="topic4Two" value="3、摆放不整齐"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >4.有乱扔/空样现象</td>
-                    <td width="80px;"><input type="checkbox"   name="topic4Two" value="4.有乱扔/空样现象"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >4、有空样现象</td>
+                    <td width="80px;"><input type="checkbox"   name="topic4Two" value="4、有空样现象"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >5、有乱扔现象</td>
+                    <td width="80px;"><input type="checkbox"   name="topic4Two" value="5、有乱扔现象"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
 
                   <tr>
@@ -409,16 +429,16 @@
                 <label style="width: 100px;">4-3几起不合格？(单选）</label><br/><br/>
                   <table >
                       <tr>
-                          <td >1.1起</td>
-                          <td width="80px;"><input type="radio" value="1.1起"  name="topic4Three" style="height: 20px;width: 50px;"/></td>
+                          <td >1、1起</td>
+                          <td width="80px;"><input type="radio" value="1、1起"  name="topic4Three" style="height: 20px;width: 50px;"/></td>
                       </tr>
                       <tr>
-                          <td >2.2起</td>
-                          <td width="80px;"><input type="radio"  name="topic4Three" value="2.2起"  style="height: 20px;width: 50px;"/></td>
+                          <td >2、2起</td>
+                          <td width="80px;"><input type="radio"  name="topic4Three" value="2、2起"  style="height: 20px;width: 50px;"/></td>
                       </tr>
                       <tr>
-                          <td >3.3起及以上</td>
-                          <td width="80px;"><input type="radio"  name="topic4Three" value="3.3起及以上"  style="height: 20px;width: 50px;"/></td>
+                          <td >3、3起及以上</td>
+                          <td width="80px;"><input type="radio"  name="topic4Three" value="3、3起及以上"  style="height: 20px;width: 50px;"/></td>
                       </tr>
                   </table>
 
@@ -442,9 +462,10 @@
             </div>
             <div   align="left">
               <label style="width: 100px;">5-1仪表仪容是否符合要求？(单选）</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607">（全体人员佩戴工牌、全套工装，穿着整洁干净、精神饱满)</label>
               <div >
-                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic5One"  value="1.完全符合" onclick="fiveDiv(1)" checked="checked"/><br/>
-                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic5One" value="2.不符合要求"  onclick="fiveDiv(2)"/>
+                <label style="width: 100px;">1、完全符合   </label> <input type="radio" name="topic5One"  value="1、完全符合" onclick="fiveDiv(1)" checked="checked"/><br/>
+                <label style="width: 100px;">2、不符合要求</label> <input type="radio" name="topic5One" value="2、不符合要求"  onclick="fiveDiv(2)"/>
 
               </div>
             </div><br/>
@@ -453,16 +474,20 @@
                 <label style="width: 100px;">5-2不符合要求的原因是？(多选）</label><br/><br/>
                <table >
                   <tr>
-                    <td >1.有员工未佩戴工牌.未着全套工装（只要发现一人，即扣分）</td>
-                    <td width="80px;"><input type="checkbox" name="topic5Two" value="1.有员工未佩戴工牌.未着全套工装（只要发现一人，即扣分）" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >1、有员工未佩戴工牌（只要发现一人，即扣分）</td>
+                    <td width="80px;"><input type="checkbox" name="topic5Two" value="1、有员工未佩戴工牌（只要发现一人，即扣分）" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >2.穿着整洁不干净（只要发现一人，即扣分）</td>
-                    <td width="80px;"><input type="checkbox" name="topic5Two" value="2.穿着整洁不干净（只要发现一人，即扣分）"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >2、有员工未着全套工装（只要发现一人，即扣分）</td>
+                    <td width="80px;"><input type="checkbox" name="topic5Two" value="2、有员工未着全套工装（只要发现一人，即扣分）"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >3.精神不饱满（只要发现一人，即扣分）</td>
-                    <td width="80px;"><input type="checkbox" name="topic5Two" value="3.精神不饱满（只要发现一人，即扣分）"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >3、穿着整洁不干净（只要发现一人，即扣分）</td>
+                    <td width="80px;"><input type="checkbox" name="topic5Two" value="3、穿着整洁不干净（只要发现一人，即扣分）"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >4、精神不饱满（只要发现一人，即扣分）</td>
+                    <td width="80px;"><input type="checkbox" name="topic5Two" value="4、精神不饱满（只要发现一人，即扣分）"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
 
                   <tr>
@@ -476,16 +501,16 @@
                 <label style="width: 100px;">5-3几人不合格？(单选）</label><br/><br/>
                   <table>
                       <tr>
-                          <td >1.1人</td>
-                          <td width="80px;"><input type="radio" value="1.1人"  name="topic5Three" style="height: 20px;width: 50px;"/></td>
+                          <td >1、1人</td>
+                          <td width="80px;"><input type="radio" value="1、1人"  name="topic5Three" style="height: 20px;width: 50px;"/></td>
                       </tr>
                       <tr>
-                          <td >2.2人</td>
-                          <td width="80px;"><input type="radio"  name="topic5Three" value="2.2人"  style="height: 20px;width: 50px;"/></td>
+                          <td >2、2人</td>
+                          <td width="80px;"><input type="radio"  name="topic5Three" value="2、2人"  style="height: 20px;width: 50px;"/></td>
                       </tr>
                       <tr>
-                          <td >3.3人及以上</td>
-                          <td width="80px;"><input type="radio"  name="topic5Three" value="3.人及以上"  style="height: 20px;width: 50px;"/></td>
+                          <td >3、3人及以上</td>
+                          <td width="80px;"><input type="radio"  name="topic5Three" value="3、3人及以上"  style="height: 20px;width: 50px;"/></td>
                       </tr>
                   </table>
               </div>
@@ -510,9 +535,10 @@
             <div   align="left">
 
               <label style="width: 100px;">6-1行为规范是否符合要求？(单选）</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607">(营业期间站姿自然，无坐岗、趴柜、靠柜、横屏看手机（玩游戏）以及3人及以上聚岗现象)</label>
               <div >
-                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic6One"  value="1.完全符合"  onclick="sixDiv(1)" checked="checked"/><br/>
-                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic6One" value="2.不符合要求"  onclick="sixDiv(2)" />
+                <label style="width: 100px;">1、完全符合   </label> <input type="radio" name="topic6One"  value="1、完全符合"  onclick="sixDiv(1)" checked="checked"/><br/>
+                <label style="width: 100px;">2、不符合要求</label> <input type="radio" name="topic6One" value="2、不符合要求"  onclick="sixDiv(2)" />
 
               </div>
             </div><br/>
@@ -521,20 +547,28 @@
                 <label style="width: 100px;">6-2不符合要求的原因是？(多选）</label><br/><br/>
                <table  >
                   <tr>
-                    <td >1.店员营业期间站姿不自然</td>
-                    <td width="80px;"><input type="checkbox" name="topic6Two" value=" 1.店员营业期间站姿不自然"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >1、店员营业期间站姿不自然</td>
+                    <td width="80px;"><input type="checkbox" name="topic6Two" value=" 1、店员营业期间站姿不自然"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >2.店员有坐岗.趴柜.靠柜</td>
-                    <td width="80px;"><input type="checkbox"  name="topic6Two" value="2店员有坐岗.趴柜.靠柜"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >2、店员有坐岗</td>
+                    <td width="80px;"><input type="checkbox"  name="topic6Two" value="2、店员有坐岗"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >3.店员有横屏看手机（玩游戏）</td>
-                    <td width="80px;"><input type="checkbox"  name="topic6Two"  value="3.店员有横屏看手机（玩游戏）" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >3、店员有趴柜</td>
+                    <td width="80px;"><input type="checkbox"  name="topic6Two"  value="3、店员有趴柜" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >4.店员有3人及以上聚岗现象</td>
-                    <td width="80px;"><input type="checkbox"  name="topic6Two"  value="4.店员有3人及以上聚岗现象"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >4、店员有靠柜</td>
+                    <td width="80px;"><input type="checkbox"  name="topic6Two"  value="4、店员有靠柜"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >5、店员有横屏看手机（玩游戏）</td>
+                    <td width="80px;"><input type="checkbox"  name="topic6Two"  value="5、店员有横屏看手机（玩游戏）"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >6、店员有3人及以上聚岗现象</td>
+                    <td width="80px;"><input type="checkbox"  name="topic6Two"  value="6、店员有3人及以上聚岗现象"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >其他请注明</td>
@@ -545,19 +579,19 @@
 
               </div><br/>
                 <div  lay-filter="" >
-                    <label style="width: 100px;">6-3几人不合格？(单选）</label><br/><br/>
+                    <label style="width: 100px;">6-3几人不合格？(单选）</label><br/>
                     <table>
                         <tr>
-                            <td >1.1人</td>
-                            <td width="80px;"><input type="radio" value="1.1人"  name="topic6Three" style="height: 20px;width: 50px;"/></td>
+                            <td >1、1人</td>
+                            <td width="80px;"><input type="radio" value="1、1人"  name="topic6Three" style="height: 20px;width: 50px;"/></td>
                         </tr>
                         <tr>
-                            <td >2.2人</td>
-                            <td width="80px;"><input type="radio"  name="topic6Three" value="2.2人"  style="height: 20px;width: 50px;"/></td>
+                            <td >2、2人</td>
+                            <td width="80px;"><input type="radio"  name="topic6Three" value="2、2人"  style="height: 20px;width: 50px;"/></td>
                         </tr>
                         <tr>
-                            <td >3.3人及以上</td>
-                            <td width="80px;"><input type="radio"  name="topic6Three" value="3.人及以上"  style="height: 20px;width: 50px;"/></td>
+                            <td >3、3人及以上</td>
+                            <td width="80px;"><input type="radio"  name="topic6Three" value="3、3人及以上"  style="height: 20px;width: 50px;"/></td>
                         </tr>
                     </table>
                 </div>
@@ -580,9 +614,10 @@
             </div>
             <div   align="left">
               <label style="width: 100px;">7-1接待礼仪是否符合要求？(单选）</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607">（顾客要寻求帮助、有眼神交汇时，对顾客说您好欢迎光临，或微笑示意（含收银员））</label>
               <div >
-                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic7One" value="1.完全符合"  checked="checked" onclick="sevenDiv(1)" /><br/>
-                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic7One" value="2.不符合要求" onclick="sevenDiv(2)" />
+                <label style="width: 100px;">1、完全符合   </label> <input type="radio" name="topic7One" value="1、完全符合"  checked="checked" onclick="sevenDiv(1)" /><br/>
+                <label style="width: 100px;">2、不符合要求</label> <input type="radio" name="topic7One" value="2、不符合要求" onclick="sevenDiv(2)" />
 
               </div>
             </div><br/>
@@ -591,12 +626,12 @@
                 <label style="width: 100px;">7-2不符合要求的原因是？(多选）</label><br/><br/>
                <table    >
                   <tr>
-                    <td >1.顾客要寻求帮助.有眼神交汇时，未对顾客说您好欢迎光临</td>
-                    <td width="80px;"><input type="checkbox"  name="topic7Two" value="1.顾客要寻求帮助.有眼神交汇时，未对顾客说您好欢迎光临" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >1、顾客要寻求帮助.有眼神交汇时，未对顾客说您好欢迎光临</td>
+                    <td width="80px;"><input type="checkbox"  name="topic7Two" value="1、顾客要寻求帮助.有眼神交汇时，未对顾客说您好欢迎光临" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >2.顾客要寻求帮助.有眼神交汇时，未对顾客微笑示意（含收银员）</td>
-                    <td width="80px;"><input type="checkbox" name="topic7Two" value="2.顾客要寻求帮助.有眼神交汇时，未对顾客微笑示意（含收银员）"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >2、顾客要寻求帮助.有眼神交汇时，未对顾客微笑示意（含收银员）</td>
+                    <td width="80px;"><input type="checkbox" name="topic7Two" value="2、顾客要寻求帮助.有眼神交汇时，未对顾客微笑示意（含收银员）"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >其他请注明</td>
@@ -610,12 +645,12 @@
                 <label style="width: 100px;">7-3几人不合格？(单选）</label><br/><br/>
                <table    >
                    <tr>
-                       <td >1.1人</td>
-                       <td width="80px;"><input type="radio" value="1.1人"  name="topic7Three" style="height: 20px;width: 50px;"/></td>
+                       <td >1、1人</td>
+                       <td width="80px;"><input type="radio" value="1、1人"  name="topic7Three" style="height: 20px;width: 50px;"/></td>
                    </tr>
                    <tr>
-                       <td >2.2人及以上</td>
-                       <td width="80px;"><input type="radio"  name="topic7Three" value="2.2人及以上"  style="height: 20px;width: 50px;"/></td>
+                       <td >2、2人及以上</td>
+                       <td width="80px;"><input type="radio"  name="topic7Three" value="2、2人及以上"  style="height: 20px;width: 50px;"/></td>
                    </tr>
 
                 </table>
@@ -627,9 +662,10 @@
             </div>
             <div   align="left">
               <label style="width: 100px;">8-1接待礼仪是否符合要求？(单选）</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607">（顾客明确表示无购物需求，礼貌送别，无明显敷衍、怠慢行为）</label>
               <div >
-                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic8One" value="1.完全符合"  checked="checked" onclick="eightDiv(1)" /><br/>
-                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic8One" value="2.不符合要求"  onclick="eightDiv(2)" />
+                <label style="width: 100px;">1、完全符合   </label> <input type="radio" name="topic8One" value="1、完全符合"  checked="checked" onclick="eightDiv(1)" /><br/>
+                <label style="width: 100px;">2、不符合要求</label> <input type="radio" name="topic8One" value="2、不符合要求"  onclick="eightDiv(2)" />
 
               </div>
             </div><br/>
@@ -638,12 +674,16 @@
                 <label style="width: 100px;">8-2不符合要求的原因是？(多选）</label><br/><br/>
                <table    >
                   <tr>
-                    <td >1.顾客明确表示无购物需求，未礼貌送别</td>
-                    <td width="80px;"><input type="checkbox" name="topic8Two" value="1.顾客明确表示无购物需求，未礼貌送别"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >1、顾客明确表示无购物需求，未礼貌送别</td>
+                    <td width="80px;"><input type="checkbox" name="topic8Two" value="1、顾客明确表示无购物需求，未礼貌送别"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >2.顾客明确表示无购物需求，有明显敷衍.怠慢行为</td>
-                    <td width="80px;"><input type="checkbox"  name="topic8Two" value="2.顾客明确表示无购物需求，有明显敷衍.怠慢行为"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >2、顾客明确表示无购物需求，有明显敷衍</td>
+                    <td width="80px;"><input type="checkbox"  name="topic8Two" value="2、顾客明确表示无购物需求，有明显敷衍"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3、顾客明确表示无购物需求，怠慢行为</td>
+                    <td width="80px;"><input type="checkbox"  name="topic8Two" value="3、顾客明确表示无购物需求，怠慢行为"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >其他请注明</td>
@@ -675,9 +715,10 @@
 
               <div >
                 <label style="width: 100px;">9-1接待礼仪是否符合要求？(单选）</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（无诋毁其他品牌（含苏宁易购线上商品和服务）行为）</label>
                 <div >
-                  <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic9One" value="1.完全符合" onclick="nineDiv(1)" checked="checked" /><br/>
-                  <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic9One" value="2.不符合要求" onclick="nineDiv(2)" />
+                  <label style="width: 100px;">1、完全符合   </label> <input type="radio" name="topic9One" value="1、完全符合" onclick="nineDiv(1)" checked="checked" /><br/>
+                  <label style="width: 100px;">2、不符合要求</label> <input type="radio" name="topic9One" value="2、不符合要求" onclick="nineDiv(2)" />
                 </div>
               </div><br/>
             </div>
@@ -700,26 +741,14 @@
               </div><br/>
                 <input type="file" class="layui-btn" name="topic9Fourfile" id="test-upload-normal" value="上传图片"/>
                 <input  type="button" class="layui-btn"  id="topic9Fourfile" onclick="fileFour(this)"  value="上传图片"/>
-             <!-- <div class="layui-col-md12">
-                <div class="layui-card">
-                  <div class="layui-card-header">上传多张图片</div>
-                  <div class="layui-card-body">
-                    <div class="layui-upload">
-                      <button type="button" class="layui-btn" id="topic9Fourfile">多图片上传</button>
-                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
-                        预览图：
-                        <div class="layui-upload-list" id="test-upload-more-list"></div>
-                      </blockquote>
-                    </div>
-                  </div>
-                </div>
-              </div>-->
+
             </div>
             <div   align="left">
               <label style="width: 100px;">10-1销售人员的销售能力是否符合要求？(单选）</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607">(销售人员熟知商品功能卖点，能够根据顾客需求及预算快速推荐合适的商品并详细介绍)</label>
               <div >
-                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic10One" value="1.完全符合" checked="checked" onclick="tenDiv(1)"/><br/>
-                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic10One" value="2.不符合要求" onclick="tenDiv(2)" />
+                <label style="width: 100px;">1、完全符合   </label> <input type="radio" name="topic10One" value="1、完全符合" checked="checked" onclick="tenDiv(1)"/><br/>
+                <label style="width: 100px;">2、不符合要求</label> <input type="radio" name="topic10One" value="2、不符合要求" onclick="tenDiv(2)" />
               </div>
             </div><br/>
             <div id="ten" align="left">
@@ -727,12 +756,12 @@
                 <label style="width: 100px;">10-2不符合要求的原因是？(多选）</label><br/><br/>
                <table    >
                   <tr>
-                    <td >1.销售人员对商品功能卖点不熟</td>
-                    <td width="80px;"><input type="checkbox" name="topic10Two" value="1.销售人员对商品功能卖点不熟"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >1、销售人员对商品功能卖点不熟</td>
+                    <td width="80px;"><input type="checkbox" name="topic10Two" value="1、销售人员对商品功能卖点不熟"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >2.销售人员熟知商品功能卖点，但不能够根据顾客需求及预算快速推荐合适的商品并详细介绍</td>
-                    <td width="80px;"><input type="checkbox" name="topic10Two" value="2.销售人员熟知商品功能卖点，但不能够根据顾客需求及预算快速推荐合适的商品并详细介绍"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >2、销售人员熟知商品功能卖点，但不能够根据顾客需求及预算快速推荐合适的商品并详细介绍</td>
+                    <td width="80px;"><input type="checkbox" name="topic10Two" value="2、销售人员熟知商品功能卖点，但不能够根据顾客需求及预算快速推荐合适的商品并详细介绍"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >其他请注明</td>
@@ -746,42 +775,30 @@
                 <label style="width: 100px;">10-3几人不合格？(单选）</label><br/><br/>
                <table    >
                   <tr>
-                    <td >1.1人</td>
-                    <td width="80px;"><input type="radio"  name="topic10Three"  value="1.1人"  style="height: 20px;width: 50px;"/></td>
+                    <td >1、1人</td>
+                    <td width="80px;"><input type="radio"  name="topic10Three"  value="1、1人"  style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >2.2人</td>
-                    <td width="80px;"><input type="radio"  name="topic10Three"  value="2.2人"   style="height: 20px;width: 50px;"/></td>
+                    <td >2、2人</td>
+                    <td width="80px;"><input type="radio"  name="topic10Three"  value="2、2人"   style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >3.3人及以上</td>
-                    <td width="80px;"><input type="radio"  name="topic10Three"  value="3.3人及以上"   style="height: 20px;width: 50px;"/></td>
+                    <td >3、3人及以上</td>
+                    <td width="80px;"><input type="radio"  name="topic10Three"  value="3、3人及以上"   style="height: 20px;width: 50px;"/></td>
                   </tr>
 
                 </table>
               </div><br/>
                 <input type="file" class="layui-btn" name="topic10Fourfile" id="test-upload-normal" value="上传图片"/>
                 <input  type="button" class="layui-btn"  id="topic10Fourfile" onclick="fileFour(this)"  value="上传图片"/>
-             <!-- <div class="layui-col-md12">
-                <div class="layui-card">
-                  <div class="layui-card-header">上传多张图片</div>
-                  <div class="layui-card-body">
-                    <div class="layui-upload">
-                      <button type="button" class="layui-btn" id="topic10Fourfile">多图片上传</button>
-                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
-                        预览图：
-                        <div class="layui-upload-list" id="test-upload-more-list"></div>
-                      </blockquote>
-                    </div>
-                  </div>
-                </div>
-              </div>-->
+
             </div>
             <div   align="left">
               <label style="width: 100px;">11-1达成销售后是否符合要求？(单选）</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607">(在达成销售后，能详细告知顾客物流、售后信息及商品使用注意事项)</label>
               <div >
-                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic11One" value="1.完全符合" checked="checked" onclick="elevenDiv(1)" /><br/>
-                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic11One" value="2.不符合要求"  onclick="elevenDiv(2)" />
+                <label style="width: 100px;">1、完全符合   </label> <input type="radio" name="topic11One" value="1、完全符合" checked="checked" onclick="elevenDiv(1)" /><br/>
+                <label style="width: 100px;">2、不符合要求</label> <input type="radio" name="topic11One" value="2、不符合要求"  onclick="elevenDiv(2)" />
               </div>
             </div><br/>
             <div id="eleven" align="left">
@@ -789,16 +806,16 @@
                 <label style="width: 100px;">11-2不符合要求的原因是？(多选）</label><br/><br/>
                <table    >
                   <tr>
-                    <td >1.在达成销售后，不能详细告知顾客物流信息</td>
-                    <td width="80px;"><input type="checkbox" name="topic11Two" value="1.在达成销售后，不能详细告知顾客物流信息"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >1、在达成销售后，不能详细告知顾客物流信息</td>
+                    <td width="80px;"><input type="checkbox" name="topic11Two" value="1、在达成销售后，不能详细告知顾客物流信息"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >2.在达成销售后，不能详细告知顾客售后信息</td>
-                    <td width="80px;"><input type="checkbox"  name="topic11Two" value="2.在达成销售后，不能详细告知顾客售后信息"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >2、在达成销售后，不能详细告知顾客售后信息</td>
+                    <td width="80px;"><input type="checkbox"  name="topic11Two" value="2、在达成销售后，不能详细告知顾客售后信息"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >3.在达成销售后，不能详细告知顾客商品使用注意事项</td>
-                    <td width="80px;"><input type="checkbox"  name="topic11Two" value="3.在达成销售后，不能详细告知顾客商品使用注意事项"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >3、在达成销售后，不能详细告知顾客商品使用注意事项</td>
+                    <td width="80px;"><input type="checkbox"  name="topic11Two" value="3、在达成销售后，不能详细告知顾客商品使用注意事项"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >其他请注明</td>
@@ -826,9 +843,10 @@
             </div>
             <div   align="left">
               <label style="width: 100px;">12-1收银规范是否符合要求？(单选）</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607">(收银员在顾客接近收银台时主动站立迎接，微笑服务，跟顾客确认收款金额)</label>
               <div >
-                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic12One" value="1.完全符合" checked="checked" onclick="twelveDiv(1)" /><br/>
-                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic12One" value="2.不符合要求"  onclick="twelveDiv(2)" />
+                <label style="width: 100px;">1、完全符合   </label> <input type="radio" name="topic12One" value="1、完全符合" checked="checked" onclick="twelveDiv(1)" /><br/>
+                <label style="width: 100px;">2、不符合要求</label> <input type="radio" name="topic12One" value="2、不符合要求"  onclick="twelveDiv(2)" />
               </div>
             </div><br/>
             <div id="twelve" align="left">
@@ -836,16 +854,16 @@
                 <label style="width: 100px;">12-2不符合要求的原因是？(多选）</label><br/><br/>
                <table    >
                   <tr>
-                    <td >1.收银员在顾客接近收银台时未主动站立迎接</td>
-                    <td width="80px;"><input type="checkbox" name="topic12Two" value="1.收银员在顾客接近收银台时未主动站立迎接"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >1、收银员在顾客接近收银台时未主动站立迎接</td>
+                    <td width="80px;"><input type="checkbox" name="topic12Two" value="1、收银员在顾客接近收银台时未主动站立迎接"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >2.收银员在顾客接近收银台时无微笑服务</td>
-                    <td width="80px;"><input type="checkbox" name="topic12Two" value="2.收银员在顾客接近收银台时无微笑服务"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >2、收银员在顾客接近收银台时无微笑服务</td>
+                    <td width="80px;"><input type="checkbox" name="topic12Two" value="2、收银员在顾客接近收银台时无微笑服务"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >3.收银员在顾客接近收银台时无微笑服务</td>
-                    <td width="80px;"><input type="checkbox" name="topic12Two" value="3.收银员在收银时未跟顾客确认收款金额"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >3、收银员在收银时未跟顾客确认收款金额</td>
+                    <td width="80px;"><input type="checkbox" name="topic12Two" value="3、收银员在收银时未跟顾客确认收款金额"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >其他请注明_</td>
@@ -873,26 +891,27 @@
             </div>
             <div   align="left">
               <label style="width: 100px;">13-1商品安全是否符合要求？(单选）</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607">(门店3C品类所有出样真机必须配备防盗器且能正常工作，发生警报时10秒内有现场人员响应)</label>
               <div >
-                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic13One" value="1.完全符合" onclick="thirteenDiv(1)" checked="checked" /><br/>
-                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic13One" value="2.不符合要求"  onclick="thirteenDiv(2)" />
+                <label style="width: 100px;">1、完全符合   </label> <input type="radio" name="topic13One" value="1、完全符合" onclick="thirteenDiv(1)" checked="checked" /><br/>
+                <label style="width: 100px;">2、不符合要求</label> <input type="radio" name="topic13One" value="2、不符合要求"  onclick="thirteenDiv(2)" />
               </div>
             </div><br/>
             <div id="thirteen" align="left">
               <div  lay-filter="" >
-                <label style="width: 100px;">13-2不符合要求的原因是？(多选）</label><br/><br/>
+                <label style="width: 100px;">13-2不符合要求的原因是？(多选）</label><br/>
                <table    >
                   <tr>
-                    <td >1.门店3C品类有出样真机未配备防盗器（所有样机都应配备，有一个未配备即扣分）</td>
-                    <td width="80px;"><input type="checkbox" name="topic13Two" value="1.门店3C品类有出样真机未配备防盗器（所有样机都应配备，有一个未配备即扣分）"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >1、门店3C品类有出样真机未配备防盗器（所有样机都应配备，有一个未配备即扣分）</td>
+                    <td width="80px;"><input type="checkbox" name="topic13Two" value="1、门店3C品类有出样真机未配备防盗器（所有样机都应配备，有一个未配备即扣分）"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >2.门店3C品类的防盗器不能正常工作</td>
-                    <td width="80px;"><input type="checkbox" name="topic13Two" value="2.门店3C品类的防盗器不能正常工作"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >2、门店3C品类的防盗器不能正常工作</td>
+                    <td width="80px;"><input type="checkbox" name="topic13Two" value="2、门店3C品类的防盗器不能正常工作"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >3.门店3C品类的防盗器，发生警报时10秒内有现场人员响应</td>
-                    <td width="80px;"><input type="checkbox" name="topic13Two" value="3.门店3C品类的防盗器，发生警报时10秒内有现场人员响应"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td >3、门店3C品类的防盗器，发生警报时10秒内有现场人员响应</td>
+                    <td width="80px;"><input type="checkbox" name="topic13Two" value="3、门店3C品类的防盗器，发生警报时10秒内有现场人员响应"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
 
                   <tr>
@@ -921,9 +940,10 @@
             </div><br/>
               <div   align="left">
                   <label style="width: 100px;">14-1消防安全是否符合要求？(单选）</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">(防火门保持常闭不落锁，防火卷帘门下无物品堆放影响开关，无样机、物料等堵塞消防通道、遮挡消防标识现象)</label>
                   <div >
-                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic14One" value="1.完全符合" onclick="th14Div(1)" checked="checked" /><br/>
-                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic14One" value="2.不符合要求"  onclick="th14Div(2)" />
+                      <label style="width: 100px;">1、完全符合   </label> <input type="radio" name="topic14One" value="1、完全符合" onclick="th14Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2、不符合要求</label> <input type="radio" name="topic14One" value="2、不符合要求"  onclick="th14Div(2)" />
                   </div>
               </div><br/>
               <div id="th14" align="left">
@@ -931,20 +951,20 @@
                           <label style="width: 100px;">14-2不符合要求的原因是？(多选）</label><br/><br/>
                           <table align="left" >
                               <tr>
-                                  <td >1.防火门敞开，未保持常闭</td>
-                                  <td width="80px;"><input type="checkbox" name="topic14Two" value="1.防火门敞开，未保持常闭"    lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                                  <td >1、防火门敞开，未保持常闭</td>
+                                  <td width="80px;"><input type="checkbox" name="topic14Two" value="1、防火门敞开，未保持常闭"    lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                               </tr>
                               <tr>
-                                  <td >2.防火门紧锁</td>
-                                  <td width="80px;"><input type="checkbox" name="topic14Two" value="2.防火门紧锁"    lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                                  <td >2、防火门紧锁</td>
+                                  <td width="80px;"><input type="checkbox" name="topic14Two" value="2、防火门紧锁"    lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                               </tr>
                               <tr>
-                                  <td >3.防火卷帘门下有物品堆放影响开关</td>
-                                  <td width="80px;"><input type="checkbox" name="topic14Two" value="3.防火卷帘门下有物品堆放影响开关"    lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                                  <td >3、防火卷帘门下有物品堆放影响开关</td>
+                                  <td width="80px;"><input type="checkbox" name="topic14Two" value="3、防火卷帘门下有物品堆放影响开关"    lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                               </tr>
                               <tr>
-                                  <td >4.防火卷帘门下有样机.物料等堵塞消防通道.遮挡消防标识现象</td>
-                                  <td width="80px;"><input type="checkbox" name="topic14Two" value="4.防火卷帘门下有样机.物料等堵塞消防通道.遮挡消防标识现象"    lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                                  <td >4、防火卷帘门下有样机.物料等堵塞消防通道.遮挡消防标识现象</td>
+                                  <td width="80px;"><input type="checkbox" name="topic14Two" value="4、防火卷帘门下有样机.物料等堵塞消防通道.遮挡消防标识现象"    lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                               </tr>
                               <input type="checkbox" name="topic14Two"  value=""  checked="checked"  style="display:none"/>
                               <tr>
@@ -959,16 +979,16 @@
                           <label style="width: 100px;">14-3几起不合格？(单选）</label><br/>
                           <table align="left">
                               <tr>
-                                  <td >1.1起</td>
-                                  <td width="80px;"><input type="radio"  name="topic14Three"  value="1.1起"   style="height: 20px;width: 50px;"/></td>
+                                  <td >1、1起</td>
+                                  <td width="80px;"><input type="radio"  name="topic14Three"  value="1、1起"   style="height: 20px;width: 50px;"/></td>
                               </tr>
                               <tr>
-                                  <td >2.2起</td>
-                                  <td width="80px;"><input type="radio"  name="topic14Three"  value="2.2起"    style="height: 20px;width: 50px;"/></td>
+                                  <td >2、2起</td>
+                                  <td width="80px;"><input type="radio"  name="topic14Three"  value="2、2起"    style="height: 20px;width: 50px;"/></td>
                               </tr>
                               <tr>
-                                  <td >3.3起及以上</td>
-                                  <td width="80px;"><input type="radio"  name="topic14Three"  value="3.3起及以上"    style="height: 20px;width: 50px;"/></td>
+                                  <td >3、3起及以上</td>
+                                  <td width="80px;"><input type="radio"  name="topic14Three"  value="3、3起及以上"    style="height: 20px;width: 50px;"/></td>
                               </tr>
 
 
@@ -993,9 +1013,10 @@
               </div><br/><br/>
               <div   align="left">
                   <label style="width: 100px;">15-1消防安全是否符合要求？(单选）</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">(无私接乱接电源、违规使用大功率电器（小太阳、电水壶等）现象)</label>
                   <div >
-                      <label style="width: 100px;">1:完全符合</label> <input type="radio" name="topic15One" value="1.完全符合" onclick="th15Div(1)" checked="checked" /><br/>
-                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic15One" value="2.不符合要求"  onclick="th15Div(2)" />
+                      <label style="width: 100px;">1、完全符合</label> <input type="radio" name="topic15One" value="1、完全符合" onclick="th15Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2、不符合要求</label> <input type="radio" name="topic15One" value="2、不符合要求"  onclick="th15Div(2)" />
                   </div>
               </div><br/><br/>
               <div id="th15" align="left">
@@ -1003,14 +1024,13 @@
                       <label style="width: 100px;">15-2不符合要求的原因是？(多选）</label><br/><br/>
                       <table    >
                           <tr>
-                              <td >1.有私接乱接电源</td>
-                              <td width="80px;"><input type="checkbox" name="topic15Two" value="1.有私接乱接电源"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              <td >1、有私接乱接电源</td>
+                              <td width="80px;"><input type="checkbox" name="topic15Two" value="1、有私接乱接电源"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                           <tr>
-                              <td >2.有违规使用大功率电器（小太阳.电水壶等）现象</td>
-                              <td width="80px;"><input type="checkbox" name="topic15Two" value="2.有违规使用大功率电器（小太阳.电水壶等）现象"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              <td >2、有违规使用大功率电器（小太阳.电水壶等）现象</td>
+                              <td width="80px;"><input type="checkbox" name="topic15Two" value="2、有违规使用大功率电器（小太阳.电水壶等）现象"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
-
                           <tr>
                               <td >其他请注明 </td>
                               <td width="80px;"><input type="text" name="topic15Six" class="layui-input"/></td>
@@ -1022,15 +1042,15 @@
                       <label style="width: 100px;">15-3几起不合格？(单选）</label><br/><br/>
                       <table align="left">
                           <tr>
-                              <td >1.1起</td>
-                              <td width="80px;"><input type="radio"  name="topic15Three"  value="1.1起"   style="height: 20px;width: 50px;"/></td>
+                              <td >1、1起</td>
+                              <td width="80px;"><input type="radio"  name="topic15Three"  value="1、1起"   style="height: 20px;width: 50px;"/></td>
                           </tr>
                           <tr>
-                              <td >2.2起</td>
-                              <td width="80px;"><input type="radio"  name="topic15Three"  value="2.2起"    style="height: 20px;width: 50px;"/></td>
+                              <td >2、2起</td>
+                              <td width="80px;"><input type="radio"  name="topic15Three"  value="2、2起"    style="height: 20px;width: 50px;"/></td>
                           </tr>
                       </table>
-                  </div><br/>
+                  </div><br/><br/><br/>
                   <input type="file" class="layui-btn" name="topic15Fourfile" id="test-upload-normal" value="上传图片"/>
                   <input  type="button" class="layui-btn"  id="topic15Fourfile" onclick="fileFour(this)"  value="上传图片"/>
                   <!--<div class="layui-col-md12">
@@ -1050,9 +1070,10 @@
               </div><br/>
               <div   align="left">
                   <label style="width: 100px;">16-1各类宣传是否符合要求？(单选）</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">(各类宣传中无违规用词、虚假宣传、活动条例表述不清、有工厂二维码随意布展)</label>
                   <div >
-                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic16One" value="1.完全符合" onclick="th16Div(1)" checked="checked" /><br/>
-                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic16One" value="2.不符合要求"  onclick="th16Div(2)" />
+                      <label style="width: 100px;">1、完全符合   </label> <input type="radio" name="topic16One" value="1、完全符合" onclick="th16Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2、不符合要求</label> <input type="radio" name="topic16One" value="2、不符合要求"  onclick="th16Div(2)" />
                   </div>
               </div><br/>
               <div id="th16" align="left">
@@ -1060,20 +1081,20 @@
                       <label style="width: 100px;">16-2不符合要求的原因是？(多选）</label><br/><br/>
                       <table    >
                           <tr>
-                              <td >1.各类宣传中有违规用词</td>
-                              <td width="80px;"><input type="checkbox" name="topic16Two" value="1.各类宣传中有违规用词"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              <td >1、各类宣传中有违规用词</td>
+                              <td width="80px;"><input type="checkbox" name="topic16Two" value="1、各类宣传中有违规用词"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                           <tr>
-                              <td >2.各类宣传中有虚假宣传</td>
-                              <td width="80px;"><input type="checkbox" name="topic16Two" value="2.各类宣传中有虚假宣传"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              <td >2、各类宣传中有虚假宣传</td>
+                              <td width="80px;"><input type="checkbox" name="topic16Two" value="2、各类宣传中有虚假宣传"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                           <tr>
-                              <td >3.各类宣传中有活动条例表述不清</td>
-                              <td width="80px;"><input type="checkbox" name="topic16Two" value="3.各类宣传中有活动条例表述不清"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              <td >3、各类宣传中有活动条例表述不清</td>
+                              <td width="80px;"><input type="checkbox" name="topic16Two" value="3、各类宣传中有活动条例表述不清"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                           <tr>
-                              <td >4.各类宣传中有工厂二维码随意布展</td>
-                              <td width="80px;"><input type="checkbox" name="topic16Two" value="4.各类宣传中有工厂二维码随意布展"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              <td >4、各类宣传中有工厂二维码随意布展</td>
+                              <td width="80px;"><input type="checkbox" name="topic16Two" value="4、各类宣传中有工厂二维码随意布展"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
 
                           <tr>
@@ -1087,16 +1108,16 @@
                       <label style="width: 100px;">16-3几起不合格？(单选）</label><br/><br/>
                       <table    >
                           <tr>
-                              <td >1.1起</td>
-                              <td width="80px;"><input type="radio" name="topic16Three" value="1.1起"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              <td >1、1起</td>
+                              <td width="80px;"><input type="radio" name="topic16Three" value="1、1起"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                           <tr>
-                              <td >2.2起</td>
-                              <td width="80px;"><input type="radio" name="topic16Three" value="2.2起"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              <td >2、2起</td>
+                              <td width="80px;"><input type="radio" name="topic16Three" value="2、2起"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                           <tr>
-                              <td >3.3起及以上</td>
-                              <td width="80px;"><input type="radio" name="topic16Three" value="3.3起及以上"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              <td >3、3起及以上</td>
+                              <td width="80px;"><input type="radio" name="topic16Three" value="3、3起及以上"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                       </table>
                   </div><br/>
@@ -1119,9 +1140,10 @@
               </div>
               <div   align="left">
                   <label style="width: 100px;">17-1宣传规范是否符合要求？(单选）</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">(门店不得播放无版权电影/电视剧等影音产品)</label>
                   <div >
-                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic17One" value="1.完全符合" onclick="th17Div(1)" checked="checked" /><br/>
-                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic17One" value="2.不符合要求"  onclick="th17Div(2)" />
+                      <label style="width: 100px;">1、完全符合   </label> <input type="radio" name="topic17One" value="1、完全符合" onclick="th17Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2、不符合要求</label> <input type="radio" name="topic17One" value="2、不符合要求"  onclick="th17Div(2)" />
                   </div>
               </div><br/>
               <div id="th17" align="left">
@@ -1129,8 +1151,8 @@
                       <label style="width: 100px;">17-2不符合要求的原因是？(多选）</label><br/><br/>
                       <table    >
                           <tr>
-                              <td >1.门店播放无版权电影/电视剧等影音产品</td>
-                              <td width="80px;"><input type="checkbox" name="topic17Two" value="1.门店播放无版权电影/电视剧等影音产品"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              <td >1、门店播放无版权电影/电视剧等影音产品</td>
+                              <td width="80px;"><input type="checkbox" name="topic17Two" value="1、门店播放无版权电影/电视剧等影音产品"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                           <tr>
                               <td >其他请注明</td>
@@ -1142,12 +1164,12 @@
                       <label style="width: 100px;">17-3几起不合格？(单选）</label><br/><br/>
                       <table    >
                           <tr>
-                              <td >1.1起</td>
-                              <td width="80px;"><input type="radio" name="topic17Three" value="1.1起"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              <td >1、1起</td>
+                              <td width="80px;"><input type="radio" name="topic17Three" value="1、1起"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                           <tr>
-                              <td >2.2起</td>
-                              <td width="80px;"><input type="radio" name="topic17Three" value="2.2起"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              <td >2、2起</td>
+                              <td width="80px;"><input type="radio" name="topic17Three" value="2、2起"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
 
 
@@ -1155,26 +1177,14 @@
                   </div><br/>
                   <input type="file" class="layui-btn" name="topic17Fourfile" id="test-upload-normal" value="上传图片"/>
                   <input  type="button" class="layui-btn"  id="topic17Fourfile" onclick="fileFour(this)"  value="上传图片"/>
-                  <!--<div class="layui-col-md12">
-                      <div class="layui-card">
-                          <div class="layui-card-header">上传多张图片</div>
-                          <div class="layui-card-body">
-                              <div class="layui-upload">
-                                  <button type="button" class="layui-btn" id="topic17Fourfile">多图片上传</button>
-                                  <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
-                                      预览图：
-                                      <div class="layui-upload-list" id="test-upload-more-listcs"></div>
-                                  </blockquote>
-                              </div>
-                          </div>
-                      </div>
-                  </div>-->
+
               </div>
               <div   align="left">
                   <label style="width: 100px;">18-1商品安全是否符合要求？(单选）</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">(无促销活动指导书、商品库存表、顾客购买台帐外露现象)</label>
                   <div >
-                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic18One" value="1.完全符合" onclick="th18Div(1)" checked="checked" /><br/>
-                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic18One" value="2.不符合要求"  onclick="th18Div(2)" />
+                      <label style="width: 100px;">1、完全符合   </label> <input type="radio" name="topic18One" value="1、完全符合" onclick="th18Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2、不符合要求</label> <input type="radio" name="topic18One" value="2、不符合要求"  onclick="th18Div(2)" />
                   </div>
               </div><br/>
               <div id="th18" align="left">
@@ -1182,16 +1192,16 @@
                       <label style="width: 100px;">18-2不符合要求的原因是？(多选）</label><br/><br/>
                       <table    >
                           <tr>
-                              <td >1.有促销活动指导书外露现象</td>
-                              <td width="80px;"><input type="checkbox" name="topic18Two" value="1.有促销活动指导书外露现象"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              <td >1、有促销活动指导书外露现象</td>
+                              <td width="80px;"><input type="checkbox" name="topic18Two" value="1、有促销活动指导书外露现象"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                           <tr>
-                              <td >2.有商品库存表外露现象</td>
-                              <td width="80px;"><input type="checkbox" name="topic18Two" value="2.有商品库存表外露现象"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              <td >2、有商品库存表外露现象</td>
+                              <td width="80px;"><input type="checkbox" name="topic18Two" value="2、有商品库存表外露现象"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                           <tr>
-                              <td >3.有顾客购买台帐外露现象</td>
-                              <td width="80px;"><input type="checkbox" name="topic18Two" value="3.有顾客购买台帐外露现象"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              <td >3、有顾客购买台帐外露现象</td>
+                              <td width="80px;"><input type="checkbox" name="topic18Two" value="3、有顾客购买台帐外露现象"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                           <tr>
                               <td >其他请注明</td>
@@ -1202,26 +1212,14 @@
                   </div><br/>
                   <input type="file" class="layui-btn" name="topic18Fourfile" id="test-upload-normal" value="上传图片"/>
                   <input  type="button" class="layui-btn"  id="topic18Fourfile" onclick="fileFour(this)"  value="上传图片"/>
-                 <!-- <div class="layui-col-md12">
-                      <div class="layui-card">
-                          <div class="layui-card-header">上传多张图片</div>
-                          <div class="layui-card-body">
-                              <div class="layui-upload">
-                                  <button type="button" class="layui-btn" id="topic18Fourfile">多图片上传</button>
-                                  <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
-                                      预览图：
-                                      <div class="layui-upload-list" id="test-upload-more-listcs"></div>
-                                  </blockquote>
-                              </div>
-                          </div>
-                      </div>
-                  </div>-->
+
               </div>
               <div   align="left">
                   <label style="width: 100px;">19-1渠道公示是否符合要求？(单选）</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（收银台、POS台、服务台处有公示苏宁投诉、举报渠道）</label>
                   <div >
-                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic19One" value="1.完全符合" onclick="th19Div(1)" checked="checked" /><br/>
-                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic19One" value="2.不符合要求"  onclick="th19Div(2)" />
+                      <label style="width: 100px;">1、完全符合   </label> <input type="radio" name="topic19One" value="1、完全符合" onclick="th19Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2、不符合要求</label> <input type="radio" name="topic19One" value="2、不符合要求"  onclick="th19Div(2)" />
                   </div>
               </div><br/>
               <div id="th19" align="left">
@@ -1229,16 +1227,16 @@
                       <label style="width: 100px;">19-2不符合要求的原因是？(多选）</label><br/><br/>
                       <table    >
                           <tr>
-                              <td >1.收银台无公示苏宁投诉.举报渠道</td>
-                              <td width="80px;"><input type="checkbox" name="topic19Two" value="1.收银台无公示苏宁投诉.举报渠道"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              <td >1、收银台无公示苏宁投诉.举报渠道</td>
+                              <td width="80px;"><input type="checkbox" name="topic19Two" value="1、收银台无公示苏宁投诉.举报渠道"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                           <tr>
-                              <td >2.POS台无公示苏宁投诉.举报渠道</td>
-                              <td width="80px;"><input type="checkbox" name="topic19Two" value="2.POS台无公示苏宁投诉.举报渠道"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              <td >2、POS台无公示苏宁投诉.举报渠道</td>
+                              <td width="80px;"><input type="checkbox" name="topic19Two" value="2、POS台无公示苏宁投诉.举报渠道"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                           <tr>
-                              <td >3.服务台无公示苏宁投诉.举报渠道</td>
-                              <td width="80px;"><input type="checkbox" name="topic19Two" value="3.服务台无公示苏宁投诉.举报渠道"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              <td >3、服务台无公示苏宁投诉.举报渠道</td>
+                              <td width="80px;"><input type="checkbox" name="topic19Two" value="3、服务台无公示苏宁投诉.举报渠道"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                           <tr>
                               <td >其他请注明</td>
@@ -1251,16 +1249,16 @@
                       <label style="width: 100px;">19-3几起不合格？(单选）</label><br/><br/>
                       <table    >
                           <tr>
-                              <td >1.1起</td>
-                              <td width="80px;"><input type="radio" name="topic19Three" value="1.1起"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              <td >1、1起</td>
+                              <td width="80px;"><input type="radio" name="topic19Three" value="1、1起"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                           <tr>
-                              <td >2.2起</td>
-                              <td width="80px;"><input type="radio" name="topic19Three" value="2.2起"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              <td >2、2起</td>
+                              <td width="80px;"><input type="radio" name="topic19Three" value="2、2起"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                           <tr>
-                              <td >3.3起及以上</td>
-                              <td width="80px;"><input type="radio" name="topic19Three" value="3.3起及以上"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              <td >3、3起及以上</td>
+                              <td width="80px;"><input type="radio" name="topic19Three" value="3、3起及以上"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
 
 
@@ -1269,56 +1267,68 @@
                       <input  type="button" class="layui-btn"  id="topic19Fourfile" onclick="fileFour(this)"  value="上传图片"/>
                   </div><br/>
 
-                  <label style="width: 100px;">20-1违规销售是否符合要求？(单选）</label><br/>
-                  <div >
-                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic20One" value="1.完全符合" onclick="th20Div(1)" checked="checked" /><br/>
-                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic20One" value="2.不符合要求"  onclick="th20Div(2)" />
-                  </div><br/>
-              <div id="th20" align="left" >
-                  <div  lay-filter="" >
-                      <label style="width: 100px;">20-2不符合要求的原因是？(多选）</label><br/><br/>
-                      <table    >
-                          <tr>
-                              <td >1.有发现私收货款.窜码开票.飞单（含安装飞单.收旧飞单）等违规销售行为</td>
-                              <td width="80px;"><input type="checkbox" name="topic20Two" value="1.有发现私收货款.窜码开票.飞单（含安装飞单.收旧飞单）等违规销售行为"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                          </tr>
-                          <tr>
-                              <td >其他请注明</td>
-                              <td width="80px;"><input type="text" name="topic20Six" class="layui-input"/></td>
-                          </tr>
 
-                      </table>
-                  </div><br/>
-                  <input type="file" class="layui-btn" name="topic20Fourfile" id="test-upload-normal" value="上传图片"/>
-                  <input  type="button" class="layui-btn"  id="topic20Fourfile" onclick="fileFour(this)"  value="上传图片"/>
-                 <!-- <div class="layui-col-md12">
-                      <div class="layui-card">
-                          <div class="layui-card-header">上传多张图片</div>
-                          <div class="layui-card-body">
-                              <div class="layui-upload">
-                                  <button type="button" class="layui-btn" id="topic20Fourfile">多图片上传</button>
-                                  <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
-                                      预览图：
-                                      <div class="layui-upload-list" id="test-upload-more-listcs"></div>
-                                  </blockquote>
-                              </div>
-                          </div>
+
+              </div>
+                  <div align="left">
+                      <label style="width: 100px;">20-1违规销售是否符合要求？(单选）</label><br/>
+                      <label style="text-align: left;font-size: 12px;color: #cf3607">（是否发现私收货款、窜码开票、飞单（含安装飞单、收旧飞单）等违规销售行为）</label>
+                      <div >
+                          <label style="width: 100px;">1、完全符合</label> <input type="radio" name="topic20One" value="1、完全符合" onclick="th20Div(1)" checked="checked" /><br/>
+                          <label style="width: 100px;">2、不符合要求</label> <input type="radio" name="topic20One" value="2、不符合要求"  onclick="th20Div(2)" />
                       </div>
-                  </div>-->
-              </div>
+                  </div><br/>
+                  <div id="th20" align="left" >
+                      <div  lay-filter="" >
+                          <label style="width: 100px;">20-2不符合要求的原因是？(多选）</label><br/><br/>
+                          <table    >
+                              <tr>
+                                  <td >1、有发现私收货款违规销售行为</td>
+                                  <td width="80px;"><input type="checkbox" name="topic20Two" value="1、有发现私收货款违规销售行为"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              </tr>
+                              <tr>
+                                  <td >2、有发现窜码开票违规销售行为</td>
+                                  <td width="80px;"><input type="checkbox" name="topic20Two" value="2、有发现窜码开票违规销售行为"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              </tr>
+                              <tr>
+                                  <td >3、有发现飞单（含安装飞单、收旧飞单）违规销售行为</td>
+                                  <td width="80px;"><input type="checkbox" name="topic20Two" value="3、有发现飞单（含安装飞单、收旧飞单）违规销售行为"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              </tr>
 
-              </div>
+                              <tr>
+                                  <td >其他请注明</td>
+                                  <td width="80px;"><input type="text" name="topic20Six" class="layui-input"/></td>
+                              </tr>
 
-          </div>
+                          </table>
+                      </div><br/>
+                      <input type="file" class="layui-btn" name="topic20Fourfile" id="test-upload-normal" value="上传图片"/>
+                      <input  type="button" class="layui-btn"  id="topic20Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+
+                  </div>
+                 </div>
+              <div class="layui-form-item layui-form-text">
+                  <label class="layui-form-label" style="width: 65px">整体反馈</label>
+                  <div class="layui-input-block">
+                      <textarea name="qchecksn"  class="layui-textarea"></textarea>
+                  </div>
+              </div>
+              <div align="left" style="padding-left: 100px">
+                  <label  >30-1 外立面大牌、户外LED大屏、龙门架、扶梯贴、吊旗、内场展位（指非品牌展厅之外的公共区域是否有临时摆放的展位）、</label><br/>
+                  <label  >   外场展位（指门口户外广场是否有摆放的品牌展位或品牌广告宣传物料）、</label><br/>
+                      <label  >   各种自助售卖机（咖啡机、照片打印机、彩票机等）、门店店招，有苏宁广告截图上传</label><br/>
+                  <input type="file" class="layui-btn" name=""  value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="" onclick="fileFour(this)"  value="上传图片"/>
+              </div><br/><br/><br/>
 
               <div class="layui-form-item layui-layout-admin">
-              <div class="layui-input-block">
-                <div style="left: 0;height: 30px">
-                  <input class="layui-btn" lay-submit="" lay-filter="component-form-demo1" type="submit"  value="提交"/>
-                  <button  class="layui-btn layui-btn-primary" onclick="resert()"> 重置</button>
-                </div>
+                  <div class="layui-input-block">
+                      <div class="layui-footer" style="left: 0;">
+                          <input class="layui-btn" lay-submit="" lay-filter="component-form-demo1" type="submit" id="checkSubject"  value="提交"/>
+                          <button  class="layui-btn layui-btn-primary" onclick="resert()"> 重置</button>
+                      </div>
+                  </div>
               </div>
-            </div>
           </form>
         </div>
       </div>
@@ -1328,6 +1338,8 @@
 <script th:src="@{/layuiadmin/layui/jquery-1.9.0.js}" ></script>
 <script th:src="@{/layuiadmin/layui/layui.js}" ></script>
 <script th:src="@{/layuiadmin/rout/rout.js}" ></script>
+<script th:src="@{/layuiadmin/rout/routCheck.js}" ></script>
+<script th:src="@{/layuiadmin/rout/routVerification.js}" ></script>
 <script th:src="@{/layuiadmin/fileImg.js}" ></script>
 
 
