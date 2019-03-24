@@ -167,7 +167,6 @@ public class ExcelSorceUtils {
 
     public static String setSorce(String quest,String three,String two){
         String num="";
-
         try {
             three=three.substring(three.indexOf("、") + 1);
             three=three.trim();

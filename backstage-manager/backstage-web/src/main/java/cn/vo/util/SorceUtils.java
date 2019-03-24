@@ -264,7 +264,6 @@ public class SorceUtils {
         }
         return  score;
     }
-
     public  static  String getsSore(TestPaper testPaper){
         Integer score=0;
         try {
