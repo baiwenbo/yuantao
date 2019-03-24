@@ -1375,22 +1375,42 @@
                       <input  type="button" class="layui-btn"  id="topic20Fourfile" onclick="fileFour(this)"  value="上传图片"/>
 
                   </div>
+
+              <div align="left" class="layui-col-md10">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
-              <div class="layui-form-item layui-form-text">
-                  <label class="layui-form-label" style="width: 65px">整体反馈</label>
-                  <div class="layui-input-block">
-                      <textarea name="qchecksn"  class="layui-textarea"></textarea>
+              <div class="layui-col-md10" align="left">
+                  <label style="width: 100px;">21-1检查人员针对本次检查的门店有何优化建议（开放题）</label><br/>
+              </div>
+                  <div >
+                      <div  align="left" class="layui-col-md10" >
+                          <table align="left" >
+                              <tr>
+                              <td width="600px;"><textarea type="text" name="topic39Six" th:value="${deial.topic39Six}" class="layui-input"/></td>
+                          </tr>
+                      </table>
+                  </div><br/>
+              </div><br/><br/><br/><br/><br/><br/>
+              <div align="left" class="layui-col-md10">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div class="layui-col-md10" align="left">
+                  <label style="width: 100px;">22-1上传图片</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">外立面大牌、户外LED大屏、龙门架、扶梯贴、吊旗、内场展位（指非品牌展厅之外的公共区域是否有临时摆放的展位）、外场展位（指门口户外广场是否有摆放的品牌展位或品牌广告宣传物料）、各种自助售卖机（咖啡机、照片打印机、彩票机等）、门店店招，有苏宁广告截图上传</label>
+              </div><br/>
+              <div id="th40">
+                  <div  align="left" class="layui-col-md10" >
+                  </div><br/>
+                  <div align="left" class="layui-col-md10">
+                      <input type="file" class="layui-btn" name="topic40Fourfile" id="test-upload-normal" value="上传图片"/>
+                      <input  type="button" class="layui-btn"  id="topic40Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                      <input name="t40" type="hidden" th:value="${deial.topic40Four}"/>
+                      <input type="text" class="layui-btn"  id="t40" value="查看扣分点图片" onclick="look(this)"/>
                   </div>
               </div>
-              <div align="left" style="padding-left: 100px">
-                  <label  >30-1 外立面大牌、户外LED大屏、龙门架、扶梯贴、吊旗、内场展位（指非品牌展厅之外的公共区域是否有临时摆放的展位）、</label><br/>
-                  <label  >   外场展位（指门口户外广场是否有摆放的品牌展位或品牌广告宣传物料）、</label><br/>
-                  <label  >   各种自助售卖机（咖啡机、照片打印机、彩票机等）、门店店招，有苏宁广告截图上传</label><br/>
-                  <input type="file" class="layui-btn" name=""  value="上传图片"/>
-                  <input  type="button" class="layui-btn"  id="" onclick="fileFour(this)"  value="上传图片"/>
-              </div><br/><br/><br/>
+             </div>
+              <input type="hidden" id="deialName" th:value="${deialName}"/>
 
-              <input type="hidden" id="deialName" th:value="${deialSee}"/>
               <div class="layui-form-item layui-layout-admin" id="deialSee">
                   <div class="layui-form-item layui-layout-admin">
                       <div class="layui-input-block">
