@@ -51,7 +51,7 @@ public class SiftCount {
                 testPaper.setTopic8Fraction("2");
             }
 
-            if (testPaper.getTopic9Two().contains("不")){
+                if (testPaper.getTopic9Two().contains("不")){
                 testPaper.setTopic9Fraction("0");
             }else{
                 testPaper.setTopic9Fraction("2");
@@ -141,7 +141,7 @@ public class SiftCount {
                     testPaper.setTopic23Fraction("0");
                 }
             }else{
-                testPaper.setTopic23Fraction("2");
+                testPaper.setTopic23Fraction("4");
             }
             if (testPaper.getTopic24One().contains("不")){
                 testPaper.setTopic24Fraction("0");
@@ -181,7 +181,7 @@ public class SiftCount {
             if (testPaper.getTopic31One().contains("不")){
                 testPaper.setTopic31Fraction("0");
             }else{
-                testPaper.setTopic31Fraction("0");
+                testPaper.setTopic31Fraction("2");
             }
             if (testPaper.getTopic32One().contains("不")){
                  testPaper.setTopic32Fraction("0");
