@@ -209,7 +209,7 @@
     function appealOpen(){
         $.ajax({
             type: "get",
-            url: path+"/testPaper/appealOpen",
+            url: path+"/testPaper/appealOpen?type=1",
             data: {},
             dataType: "text",
             success: function (data) {
@@ -226,7 +226,7 @@
     function appealClose(){
         $.ajax({
             type: "get",
-            url: path+"/testPaper/appealClose",
+            url: path+"/testPaper/appealClose?type=1",
             data:{},
             dataType: "text",
             success: function (data) {
@@ -243,7 +243,7 @@
     function batchCheck(){
         $.ajax({
             type: "get",
-            url: path+"/testPaper/batchCheck",
+            url: path+"/testPaper/batchCheck?type=1",
             data:{},
             dataType: "text",
             success: function (data) {
