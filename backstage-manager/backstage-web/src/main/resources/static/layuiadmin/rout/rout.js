@@ -57,7 +57,7 @@ $(document).ready(function(){
     });
 
 });
-
+/*
 function oneDiv(type) {
     if (type==2){
         $("#one").show();
@@ -208,7 +208,7 @@ function th14Div(type) {
     }else{
         $("#th20").hide();
     }
-}
+}*/
 layui.config({
     base: path+'/layuiadmin/' //静态资源所在路径
 }).extend({
