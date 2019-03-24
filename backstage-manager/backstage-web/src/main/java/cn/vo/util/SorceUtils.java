@@ -1,7 +1,5 @@
 package cn.vo.util;
 
-import cn.vo.controller.hans.EnumerationMap;
-import cn.vo.controller.hans.FractionUtil;
 import cn.vo.pojo.entity.TestPaper;
 
 public class SorceUtils {
@@ -233,7 +231,6 @@ public class SorceUtils {
             }else{
                 testPaper.setTopic20Fraction("6");
             }
-
             testPaper.setScore(getsSore(testPaper));
         }catch (Exception e){
             e.printStackTrace();
@@ -247,7 +244,7 @@ public class SorceUtils {
         String num="";
         String score="";
         try {
-            three=three.substring(three.indexOf(".") + 1);
+            three=three.substring(three.indexOf("、") + 1);
             three=three.trim();
             if(three != null && !"".equals(three)){
                 for(int i=0;i<three.length();i++){

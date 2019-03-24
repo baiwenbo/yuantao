@@ -4547,11 +4547,17 @@
   </select>
    <update id="updateAppeal" parameterType="map" >
       update test_paper
-      set appeal = #{appeal}
+      set appeal = #{appeal} where disabled=0
+     <if test="type != null" >
+       and  type = #{type}
+     </if>
     </update>
   <update id="batchCheck" parameterType="map" >
       update test_paper
-      set checkStatus = #{checkStatus}
+      set checkStatus = #{checkStatus} where disabled=0
+    <if test="type != null" >
+      and  type = #{type}
+    </if>
     </update>
 
 

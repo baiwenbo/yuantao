@@ -215,25 +215,28 @@ public class TestPaperController {
 
     @GetMapping("appealOpen")
     @ResponseBody
-    public String appealOpen(){
+    public String appealOpen(Integer type){
         Map map=new HashMap();
         map.put("appeal","开");
+        map.put("type",type);
         testPaperService.updateAppeal(map);
         return  "ok";
     }
     @GetMapping("appealClose")
     @ResponseBody
-    public String appealClose(){
+    public String appealClose(Integer type){
         Map map=new HashMap();
         map.put("appeal","关");
+        map.put("type",type);
         testPaperService.updateAppeal(map);
         return  "ok";
     }
 
     @GetMapping("batchCheck")
     @ResponseBody
-    public String batchCheck(){
+    public String batchCheck(Integer type){
         Map map=new HashMap();
+        map.put("type",type);
         map.put("checkStatus","审核通过");
         testPaperService.batchCheck(map);
         return  "ok";
