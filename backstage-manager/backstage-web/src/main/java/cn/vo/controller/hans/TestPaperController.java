@@ -289,7 +289,7 @@ public class TestPaperController {
         if (testPaper.getType()==1){
             result=  "redirect:/testPaper/list?close="+"ok";
         }else if(testPaper.getType()==2){
-            result="redirect:/rout/routList";
+            result="redirect:/rout/routList?close=ok";
         }else if(testPaper.getType()==3){
             result=  "redirect:/sift/siftList?close="+"ok";
         }else{
