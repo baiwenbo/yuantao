@@ -50,6 +50,40 @@ public class EnumerationMap {
         return map.get(que);
     }
 
+    public static Integer getSift(String que){
+        Map<String,Integer> map = new HashMap();
+        map.put("th1",4);
+        map.put("th2",4);
+        map.put("th4",4);
+        map.put("th5",2);
+        map.put("th6",4);
+        map.put("th7",4);
+        map.put("th8",2);
+        map.put("th9",2);
+        map.put("th10",4);
+        map.put("th11",4);
+        map.put("th12",2);
+        map.put("th13",2);
+        map.put("th14",2);
+        map.put("th15",4);
+        map.put("th16",4);
+        map.put("th17",4);
+        map.put("th18",4);
+        map.put("th19",2);
+        map.put("th20",4);
+        map.put("th21",2);
+        map.put("th22",4);
+        map.put("th23",4);
+        map.put("th24",4);
+        map.put("th25",4);
+        map.put("th26",4);
+        map.put("th27",4);
+        map.put("th28",4);
+        map.put("th29",4);
+        map.put("th30",2);
+        map.put("th31",2);
+        return map.get(que);
+    }
 
 
 }
