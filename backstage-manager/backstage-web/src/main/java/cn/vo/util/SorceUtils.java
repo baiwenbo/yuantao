@@ -189,7 +189,7 @@ public class SorceUtils {
             }
             if (testPaper.getTopic17One().contains("不")){
                 if (testPaper.getTopic17Three() != null && !testPaper.getTopic17Three().isEmpty()) {
-                    testPaper.setTopic17Fraction(Integer.valueOf(getNumber("th17",testPaper.getTopic17Three())) * 2 + "");
+                    testPaper.setTopic17Fraction(getNumber("th17",testPaper.getTopic17Three()));
                 } else if (testPaper.getTopic17Two() != null && !testPaper.getTopic17Two().isEmpty()) {
                     testPaper.setTopic17Fraction("0");
                 } else {
@@ -253,7 +253,11 @@ public class SorceUtils {
                     }
                 }
             }
-            score=String.valueOf(SourceMap.getFraction(ques)-Integer.valueOf(num)*2);
+            if (!ques.equals("th19")){
+                score=String.valueOf(SourceMap.getFraction(ques)-Integer.valueOf(num)*2);
+            }else{
+                score=String.valueOf(SourceMap.getFraction(ques)-Integer.valueOf(num));
+            }
         }catch (Exception e){
             e.printStackTrace();
             return "0";

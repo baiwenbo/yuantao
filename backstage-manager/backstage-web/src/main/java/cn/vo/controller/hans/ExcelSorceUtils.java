@@ -54,22 +54,22 @@ public class ExcelSorceUtils {
                 testPaper.setTh39mark(setMark(testPaper.getType(),testPaper.getTopic39One(),"th39"));
                 testPaper.setTh40mark(setMark(testPaper.getType(),testPaper.getTopic40One(),"th40"));
 
-                testPaper.setTh1sorce(setSorce("th1",testPaper.getTopic1Three(),""));
-                testPaper.setTh2sorce(setSorce("th2",testPaper.getTopic2Three(),""));
-                testPaper.setTh3sorce(setSorce("th3",testPaper.getTopic3Three(),""));
-                testPaper.setTh4sorce(setSorce("th4",testPaper.getTopic4Three(),""));
-                testPaper.setTh5sorce(setSorce("th5",testPaper.getTopic5Three(),""));
-                testPaper.setTh6sorce(setSorce("th6",testPaper.getTopic6Three(),""));
-                testPaper.setTh7sorce(setSorce("th7",testPaper.getTopic7Three(),""));
-                testPaper.setTh8sorce(setSorce("th8",testPaper.getTopic8Three(),""));
-                testPaper.setTh9sorce(setSorce("th9",testPaper.getTopic9Three(),""));
-                testPaper.setTh10sorce(setSorce("th10",testPaper.getTopic10Three(),""));
-                testPaper.setTh11sorce(setSorce("th11",testPaper.getTopic11Three(),""));
-                testPaper.setTh12sorce(setSorce("th12",testPaper.getTopic12Three(),""));
-                testPaper.setTh13sorce(setSorce("th13",testPaper.getTopic13Three(),""));
-                testPaper.setTh14sorce(setSorce("th14",testPaper.getTopic14Three(),""));
-                testPaper.setTh15sorce(setSorce("th15",testPaper.getTopic15Three(),""));
-                testPaper.setTh16sorce(setSorce("th16",testPaper.getTopic16Three(),""));
+                testPaper.setTh1sorce(setSorce("th1",testPaper.getTopic1Three(),testPaper.getType()+""));
+                testPaper.setTh2sorce(setSorce("th2",testPaper.getTopic2Three(),testPaper.getType()+""));
+                testPaper.setTh3sorce(setSorce("th3",testPaper.getTopic3Three(),testPaper.getType()+""));
+                testPaper.setTh4sorce(setSorce("th4",testPaper.getTopic4Three(),testPaper.getType()+""));
+                testPaper.setTh5sorce(setSorce("th5",testPaper.getTopic5Three(),testPaper.getType()+""));
+                testPaper.setTh6sorce(setSorce("th6",testPaper.getTopic6Three(),testPaper.getType()+""));
+                testPaper.setTh7sorce(setSorce("th7",testPaper.getTopic7Three(),testPaper.getType()+""));
+                testPaper.setTh8sorce(setSorce("th8",testPaper.getTopic8Three(),testPaper.getType()+""));
+                testPaper.setTh9sorce(setSorce("th9",testPaper.getTopic9Three(),testPaper.getType()+""));
+                testPaper.setTh10sorce(setSorce("th10",testPaper.getTopic10Three(),testPaper.getType()+""));
+                testPaper.setTh11sorce(setSorce("th11",testPaper.getTopic11Three(),testPaper.getType()+""));
+                testPaper.setTh12sorce(setSorce("th12",testPaper.getTopic12Three(),testPaper.getType()+""));
+                testPaper.setTh13sorce(setSorce("th13",testPaper.getTopic13Three(),testPaper.getType()+""));
+                testPaper.setTh14sorce(setSorce("th14",testPaper.getTopic14Three(),testPaper.getType()+""));
+                testPaper.setTh15sorce(setSorce("th15",testPaper.getTopic15Three(),testPaper.getType()+""));
+                testPaper.setTh16sorce(setSorce("th16",testPaper.getTopic16Three(),testPaper.getType()+""));
                 if (testPaper.getTopic17Three() != null && !testPaper.getTopic17Three().isEmpty()) {
                     if(testPaper.getTopic17Three().contains("1处")){
                         testPaper.setTh17sorce("-2");
@@ -77,9 +77,9 @@ public class ExcelSorceUtils {
                         testPaper.setTh17sorce("-4");
                     }
                 }
-                testPaper.setTh18sorce(setSorce("th18",testPaper.getTopic18Three(),""));
-                testPaper.setTh19sorce(setSorce("th19",testPaper.getTopic19Three(),""));
-                testPaper.setTh20sorce(setSorce("th20",testPaper.getTopic20Three(),""));
+                testPaper.setTh18sorce(setSorce("th18",testPaper.getTopic18Three(),testPaper.getType()+""));
+                testPaper.setTh19sorce(setSorce("th19",testPaper.getTopic19Three(),testPaper.getType()+""));
+                testPaper.setTh20sorce(setSorce("th20",testPaper.getTopic20Three(),testPaper.getType()+""));
                 testPaper.setTh21sorce(setSorce("th21",testPaper.getTopic21Three(),""));
                 testPaper.setTh22sorce(setSorce("th22",testPaper.getTopic22Three(),""));
                 testPaper.setTh23sorce(setSorce("th23",testPaper.getTopic23Three(),""));
@@ -176,6 +176,9 @@ public class ExcelSorceUtils {
                     if(three.charAt(i)>=48 && three.charAt(i)<=57){
                         num+=three.charAt(i);
                     }
+                }
+                if (!"".equals(num)&&!quest.equals("th19")&&two.equals("2")){
+                    num=  Integer.valueOf(num)*2+"";
                 }
             }
         }catch (Exception e){
