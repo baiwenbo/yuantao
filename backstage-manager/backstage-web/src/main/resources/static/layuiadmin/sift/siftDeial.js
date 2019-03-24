@@ -7,7 +7,6 @@ $(document).ready(function(){
     var th6=$("input[name='topic6One']:checked").val();
     var th7=$("input[name='topic7One']:checked").val();
     var th8=$("input[name='topic8One']:checked").val();
-    var th9=$("input[name='topic9One']:checked").val();
     var th9t=$("input[name='topic9Two']:checked").val();
     var th10=$("input[name='topic10One']:checked").val();
     var th11=$("input[name='topic11One']:checked").val();
@@ -64,9 +63,6 @@ if (th7.indexOf("完全")>0){
 }
 if (th8.indexOf("完全")>0){
     $("#eight").hide();
-}
-if (th9.indexOf("有")>0){
-    $("#ninesuper").hide();
 }
 if (th9t.indexOf("完全")>0){
     $("#nine").hide();
@@ -179,31 +175,7 @@ if (th16.indexOf("完全")>0){
     } else {
         type35 = "2";
     }
-    if (th36.indexOf("完全") > 0) {
-        $("#th36").hide();
-    } else {
-        type36 = "2";
-    }
-    if (th37.indexOf("完全") > 0) {
-        $("#th37").hide();
-    } else {
-        type37 = "2";
-    }
-    if (th38.indexOf("完全") > 0) {
-        $("#th38").hide();
-    } else {
-        type38 = "2";
-    }
-    if (th39.indexOf("完全") > 0) {
-        $("#th39").hide();
-    } else {
-        type39 = "2";
-    }
-    if (th40.indexOf("完全") > 0) {
-        $("#th40").hide();
-    } else {
-        type40 = "2";
-    }
+
     $("#queryCompany").click(function(){
 
         var code=$("#code").val();
