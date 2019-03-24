@@ -1,6 +1,7 @@
 package cn.vo.controller.hans;
 
 import cn.vo.pojo.entity.TestPaper;
+import cn.vo.util.SourceMap;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,46 +13,46 @@ public class ExcelSorceUtils {
         if (list.size()>0){
             for (int i=0;i<list.size();i++){
                 TestPaper testPaper=list.get(i);
-                testPaper.setTh1mark(setMark(testPaper.getTopic1One(),"th1"));
-                testPaper.setTh2mark(setMark(testPaper.getTopic2One(),"th2"));
-                testPaper.setTh3mark(setMark(testPaper.getTopic3One(),"th3"));
-                testPaper.setTh4mark(setMark(testPaper.getTopic4One(),"th4"));
-                testPaper.setTh5mark(setMark(testPaper.getTopic5One(),"th5"));
-                testPaper.setTh6mark(setMark(testPaper.getTopic6One(),"th6"));
-                testPaper.setTh7mark(setMark(testPaper.getTopic7One(),"th7"));
-                testPaper.setTh8mark(setMark(testPaper.getTopic8One(),"th8"));
-                testPaper.setTh9mark(setMark(testPaper.getTopic9Two(),"th9"));
-                testPaper.setTh10mark(setMark(testPaper.getTopic10One(),"th10"));
-                testPaper.setTh11mark(setMark(testPaper.getTopic11One(),"th11"));
-                testPaper.setTh12mark(setMark(testPaper.getTopic12One(),"th12"));
-                testPaper.setTh13mark(setMark(testPaper.getTopic13One(),"th13"));
-                testPaper.setTh14mark(setMark(testPaper.getTopic14One(),"th14"));
-                testPaper.setTh15mark(setMark(testPaper.getTopic15One(),"th15"));
-                testPaper.setTh16mark(setMark(testPaper.getTopic16One(),"th16"));
-                testPaper.setTh17mark(setMark(testPaper.getTopic17One(),"th17"));
-                testPaper.setTh18mark(setMark(testPaper.getTopic18One(),"th18"));
-                testPaper.setTh19mark(setMark(testPaper.getTopic19One(),"th19"));
-                testPaper.setTh20mark(setMark(testPaper.getTopic20One(),"th20"));
-                testPaper.setTh21mark(setMark(testPaper.getTopic21One(),"th21"));
-                testPaper.setTh22mark(setMark(testPaper.getTopic22One(),"th22"));
-                testPaper.setTh23mark(setMark(testPaper.getTopic23One(),"th23"));
-                testPaper.setTh24mark(setMark(testPaper.getTopic24One(),"th24"));
-                testPaper.setTh25mark(setMark(testPaper.getTopic25One(),"th25"));
-                testPaper.setTh26mark(setMark(testPaper.getTopic26One(),"th26"));
-                testPaper.setTh27mark(setMark(testPaper.getTopic27One(),"th27"));
-                testPaper.setTh28mark(setMark(testPaper.getTopic28One(),"th28"));
-                testPaper.setTh29mark(setMark(testPaper.getTopic29One(),"th29"));
-                testPaper.setTh30mark(setMark(testPaper.getTopic30One(),"th30"));
-                testPaper.setTh31mark(setMark(testPaper.getTopic31One(),"th31"));
-                testPaper.setTh32mark(setMark(testPaper.getTopic32One(),"th32"));
-                testPaper.setTh33mark(setMark(testPaper.getTopic33One(),"th33"));
-                testPaper.setTh34mark(setMark(testPaper.getTopic34One(),"th34"));
-                testPaper.setTh35mark(setMark(testPaper.getTopic35One(),"th35"));
-                testPaper.setTh36mark(setMark(testPaper.getTopic36One(),"th36"));
-                testPaper.setTh37mark(setMark(testPaper.getTopic37One(),"th37"));
-                testPaper.setTh38mark(setMark(testPaper.getTopic38One(),"th38"));
-                testPaper.setTh39mark(setMark(testPaper.getTopic39One(),"th39"));
-                testPaper.setTh40mark(setMark(testPaper.getTopic40One(),"th40"));
+                testPaper.setTh1mark(setMark(testPaper.getType(),testPaper.getTopic1One(),"th1"));
+                testPaper.setTh2mark(setMark(testPaper.getType(),testPaper.getTopic2One(),"th2"));
+                testPaper.setTh3mark(setMark(testPaper.getType(),testPaper.getTopic3One(),"th3"));
+                testPaper.setTh4mark(setMark(testPaper.getType(),testPaper.getTopic4One(),"th4"));
+                testPaper.setTh5mark(setMark(testPaper.getType(),testPaper.getTopic5One(),"th5"));
+                testPaper.setTh6mark(setMark(testPaper.getType(),testPaper.getTopic6One(),"th6"));
+                testPaper.setTh7mark(setMark(testPaper.getType(),testPaper.getTopic7One(),"th7"));
+                testPaper.setTh8mark(setMark(testPaper.getType(),testPaper.getTopic8One(),"th8"));
+                testPaper.setTh9mark(setMark(testPaper.getType(),testPaper.getTopic9Two(),"th9"));
+                testPaper.setTh10mark(setMark(testPaper.getType(),testPaper.getTopic10One(),"th10"));
+                testPaper.setTh11mark(setMark(testPaper.getType(),testPaper.getTopic11One(),"th11"));
+                testPaper.setTh12mark(setMark(testPaper.getType(),testPaper.getTopic12One(),"th12"));
+                testPaper.setTh13mark(setMark(testPaper.getType(),testPaper.getTopic13One(),"th13"));
+                testPaper.setTh14mark(setMark(testPaper.getType(),testPaper.getTopic14One(),"th14"));
+                testPaper.setTh15mark(setMark(testPaper.getType(),testPaper.getTopic15One(),"th15"));
+                testPaper.setTh16mark(setMark(testPaper.getType(),testPaper.getTopic16One(),"th16"));
+                testPaper.setTh17mark(setMark(testPaper.getType(),testPaper.getTopic17One(),"th17"));
+                testPaper.setTh18mark(setMark(testPaper.getType(),testPaper.getTopic18One(),"th18"));
+                testPaper.setTh19mark(setMark(testPaper.getType(),testPaper.getTopic19One(),"th19"));
+                testPaper.setTh20mark(setMark(testPaper.getType(),testPaper.getTopic20One(),"th20"));
+                testPaper.setTh21mark(setMark(testPaper.getType(),testPaper.getTopic21One(),"th21"));
+                testPaper.setTh22mark(setMark(testPaper.getType(),testPaper.getTopic22One(),"th22"));
+                testPaper.setTh23mark(setMark(testPaper.getType(),testPaper.getTopic23One(),"th23"));
+                testPaper.setTh24mark(setMark(testPaper.getType(),testPaper.getTopic24One(),"th24"));
+                testPaper.setTh25mark(setMark(testPaper.getType(),testPaper.getTopic25One(),"th25"));
+                testPaper.setTh26mark(setMark(testPaper.getType(),testPaper.getTopic26One(),"th26"));
+                testPaper.setTh27mark(setMark(testPaper.getType(),testPaper.getTopic27One(),"th27"));
+                testPaper.setTh28mark(setMark(testPaper.getType(),testPaper.getTopic28One(),"th28"));
+                testPaper.setTh29mark(setMark(testPaper.getType(),testPaper.getTopic29One(),"th29"));
+                testPaper.setTh30mark(setMark(testPaper.getType(),testPaper.getTopic30One(),"th30"));
+                testPaper.setTh31mark(setMark(testPaper.getType(),testPaper.getTopic31One(),"th31"));
+                testPaper.setTh32mark(setMark(testPaper.getType(),testPaper.getTopic32One(),"th32"));
+                testPaper.setTh33mark(setMark(testPaper.getType(),testPaper.getTopic33One(),"th33"));
+                testPaper.setTh34mark(setMark(testPaper.getType(),testPaper.getTopic34One(),"th34"));
+                testPaper.setTh35mark(setMark(testPaper.getType(),testPaper.getTopic35One(),"th35"));
+                testPaper.setTh36mark(setMark(testPaper.getType(),testPaper.getTopic36One(),"th36"));
+                testPaper.setTh37mark(setMark(testPaper.getType(),testPaper.getTopic37One(),"th37"));
+                testPaper.setTh38mark(setMark(testPaper.getType(),testPaper.getTopic38One(),"th38"));
+                testPaper.setTh39mark(setMark(testPaper.getType(),testPaper.getTopic39One(),"th39"));
+                testPaper.setTh40mark(setMark(testPaper.getType(),testPaper.getTopic40One(),"th40"));
 
                 testPaper.setTh1sorce(setSorce("th1",testPaper.getTopic1Three(),""));
                 testPaper.setTh2sorce(setSorce("th2",testPaper.getTopic2Three(),""));
@@ -149,12 +150,17 @@ public class ExcelSorceUtils {
 
 
 
-    public static String setMark(String disable,String quest){
+    public static String setMark(Integer type,String disable,String quest){
         String number="0";
         if (disable.contains("不符合")){
             return  number;
         }else{
-             number= String.valueOf(EnumerationMap.getFraction(quest));
+            if (type==1){
+                number= String.valueOf(EnumerationMap.getFraction(quest));
+            }else if (type==2){
+                number= String.valueOf(SourceMap.getFraction(quest));
+            }
+
         }
         return number;
     }
