@@ -40,20 +40,25 @@
         </select>
     </div>
     <button class="layui-btn" data-type="reload">搜索</button>
-    <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="routAdd()">录入</button>
-    <a data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" th:href="@{/excel/export(type=2)}">导出</a>
-    <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="appealOpen()">申诉开</button>
-    <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="appealClose()">申诉关</button>
-    <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="batchCheck()">批量审核通过</button>
-
+    <span th:if="${user.scpcqx == '5'}">
+        <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="question()">录入</button>
+	</span>
+    <span th:if="${user.username == 'admin'}">
+        <a data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" th:href="@{/excel/export(type=3)}">导出</a>
+            <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="appealOpen()">申诉开</button>
+        <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="appealClose()">申诉关</button>
+        <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="batchCheck()">批量审核通过</button>
+	</span>
 </div>
 <table id="demo" lay-filter="test"></table>
 <script type="text/html" id="barDemo">
-<!--
-    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail"  >查看</a>
--->
+    <!--
+        <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail"  >查看</a>
+    -->
     <a class="layui-btn layui-btn-xs" lay-event="edit" >编辑</a>
+    <span th:if="${user.username == 'admin'}">
     <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del" >删除</a>
+    </span>
 </script>
 <input type="hidden" id="opener" th:value="${close}"/>
 <script th:src="@{/layuiadmin/layui/layui.js}" ></script>
