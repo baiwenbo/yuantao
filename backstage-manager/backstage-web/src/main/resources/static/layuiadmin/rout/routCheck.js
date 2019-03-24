@@ -18,6 +18,13 @@ function twoDiv(type) {
         type2="1";
     }
 }
+function th3Div(type) {
+    if (type==2){
+        $("#th3").hide();
+    }else{
+        $("#th3").show();
+    }
+}
 function threeDiv(type) {
     if (type==2){
         $("#three").show();

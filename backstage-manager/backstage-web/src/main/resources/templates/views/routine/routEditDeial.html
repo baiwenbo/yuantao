@@ -295,8 +295,10 @@
                               <td width="80px;"><input type="radio" value="3、3起及以上"  th:if="${deial.topic1Three!=null}" th:checked="${#strings.contains(deial.topic1Three,'3起及以上')}" name="topic1Three"  style="height: 20px;width: 50px;"/></td>
                           </tr>
                       </table><br/>
-                      <input type="file" class="layui-btn"  name="topic1Fourfile" id="test-upload-normal" onchange="validate_img(this);" />
+                      <input type="file"  class="layui-btn" name="topic1Fourfile"  />
                       <input  type="button" class="layui-btn"  id="topic1Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                      <input name="t1" type="hidden" th:value="${deial.topic1Four}"/>
+                      <input type="text" align="left" class="layui-btn"  id="t1" value="查看扣分点图片" onclick="look(this)"/>
 
                   </div>
                   <div align="left">
@@ -366,8 +368,10 @@
                               </tr>
                           </table>
                       </div><br/>
-                      <input type="file" class="layui-btn" name="topic2Fourfile" id="test-upload-normal" value="上传图片"/>
+                      <input type="file" align="left" class="layui-btn" name="topic2Fourfile" value="上传图片"/>
                       <input  type="button" class="layui-btn"  id="topic2Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                      <input name="t2" type="hidden" th:value="${deial.topic2Four}"/>
+                      <input type="text" class="layui-btn" align="left"   id="t2" value="查看扣分点图片" onclick="look(this)"/>
 
                   </div>
                   <div align="left">
@@ -439,22 +443,10 @@
                               </table>
 
                           </div><br/>
-                          <input type="file" class="layui-btn" name="topic3Fourfile" id="test-upload-normal" value="上传图片"/>
+                          <input type="file" align="left" class="layui-btn" name="topic3Fourfile"  value="上传图片"/>
                           <input  type="button" class="layui-btn"  id="topic3Fourfile" onclick="fileFour(this)"  value="上传图片"/>
-                          <!-- <div class="layui-col-md12">
-                             <div class="layui-card">
-                               <div class="layui-card-header">上传多张图片</div>
-                               <div class="layui-card-body">
-                                 <div class="layui-upload">
-                                   <button type="button" class="layui-btn" id="topic3Fourfile">多图片上传</button>
-                                   <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
-                                     预览图：
-                                     <div class="layui-upload-list" id="test-upload-more-list"></div>
-                                   </blockquote>
-                                 </div>
-                               </div>
-                             </div>
-                           </div>-->
+                          <input name="t3" type="hidden" th:value="${deial.topic3Four}"/>
+                          <input type="text" class="layui-btn" align="left" id="t3" value="查看扣分点图片" onclick="look(this)"/>
                       </div>
                   </div>
                   <div align="left">
@@ -523,20 +515,8 @@
                       </div><br/>
                       <input type="file" class="layui-btn" name="topic4Fourfile" id="test-upload-normal" value="上传图片"/>
                       <input  type="button" class="layui-btn"  id="topic4Fourfile" onclick="fileFour(this)"  value="上传图片"/>
-                      <!-- <div class="layui-col-md12">
-                         <div class="layui-card">
-                           <div class="layui-card-header">上传多张图片</div>
-                           <div class="layui-card-body">
-                             <div class="layui-upload">
-                               <button type="button" class="layui-btn" id="topic4Fourfile">多图片上传</button>
-                               <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
-                                 预览图：
-                                 <div class="layui-upload-list" id="test-upload-more-list"></div>
-                               </blockquote>
-                             </div>
-                           </div>
-                         </div>
-                       </div>-->
+                      <input name="t4" type="hidden" th:value="${deial.topic4Four}"/>
+                      <input type="text" class="layui-btn"  id="t4" value="查看扣分点图片" onclick="look(this)"/>
                   </div>
                   <div align="left">
                       <span style="color: #c7cccf">———————————————————————————————————————————————</span>
@@ -595,8 +575,12 @@
                               </tr>
                           </table>
                       </div>
-                      <input type="file" class="layui-btn" name="topic5Fourfile" id="test-upload-normal" value="上传图片"/>
-                      <input  type="button" class="layui-btn"  id="topic5Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                      <div align="left" class="layui-col-md10">
+                          <input type="file" align="left" class="layui-btn" name="topic5Fourfile" id="test-upload-normal" />
+                          <input  type="button" class="layui-btn"  id="topic5Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                          <input name="t5"  type="hidden" th:value="${deial.topic5Four}"/>
+                          <input type="text" align="left" class="layui-btn"  id="t5" value="查看扣分点图片" onclick="look(this)"/>
+                      </div>
                   </div><br/>
                   <!--<div class="layui-col-md12">
                     <div class="layui-card">
@@ -678,22 +662,12 @@
                               </tr>
                           </table>
                       </div>
-                      <input type="file" class="layui-btn" name="topic6Fourfile" id="test-upload-normal" value="上传图片"/>
-                      <input  type="button" class="layui-btn"  id="topic6Fourfile" onclick="fileFour(this)"  value="上传图片"/>
-                      <!-- <div class="layui-col-md12">
-                         <div class="layui-card">
-                           <div class="layui-card-header">上传多张图片</div>
-                           <div class="layui-card-body">
-                             <div class="layui-upload">
-                               <button type="button" class="layui-btn" id="topic6Fourfile">多图片上传</button>
-                               <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
-                                 预览图：
-                                 <div class="layui-upload-list" id="test-upload-more-list"></div>
-                               </blockquote>
-                             </div>
-                           </div>
-                         </div>
-                       </div>-->
+                      <div align="left" class="layui-col-md10">
+                          <input type="file" align="left" class="layui-btn" name="topic6Fourfile" id="test-upload-normal" />
+                          <input  type="button" class="layui-btn"  id="topic6Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                          <input name="t6" align="left" type="hidden" th:value="${deial.topic6Four}"/>
+                          <input type="text" alignl="left" class="layui-btn"  id="t6" value="查看扣分点图片" onclick="look(this)"/>
+                      </div>
                   </div>
                   <div align="left">
                       <span style="color: #c7cccf">———————————————————————————————————————————————</span>
@@ -742,8 +716,12 @@
                           </table>
 
                       </div><br/>
-                      <input type="file" class="layui-btn" name="topic7Fourfile" id="test-upload-normal" value="上传图片"/>
-                      <input  type="button" class="layui-btn"  id="topic7Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                      <div align="left" class="layui-col-md10">
+                          <input type="file" class="layui-btn" name="topic7Fourfile" id="test-upload-normal" value="上传图片"/>
+                          <input  type="button" class="layui-btn"  id="topic7Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                          <input name="t7" type="hidden" th:value="${deial.topic7Four}"/>
+                          <input type="text" class="layui-btn"  id="t7" value="查看扣分点图片" onclick="look(this)"/>
+                      </div>
 
                   </div>
                   <div align="left">
@@ -782,22 +760,12 @@
                           </table>
 
                       </div><br/>
-                      <input type="file" class="layui-btn" name="topic8Fourfile" id="test-upload-normal" value="上传图片"/>
-                      <input  type="button" class="layui-btn"  id="topic8Fourfile" onclick="fileFour(this)"  value="上传图片"/>
-                      <!--<div class="layui-col-md12">
-                        <div class="layui-card">
-                          <div class="layui-card-header">上传多张图片</div>
-                          <div class="layui-card-body">
-                            <div class="layui-upload">
-                              <button type="button" class="layui-btn" id="topic8Fourfile">多图片上传</button>
-                              <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
-                                预览图：
-                                <div class="layui-upload-list" id="test-upload-more-list"></div>
-                              </blockquote>
-                            </div>
-                          </div>
-                        </div>
-                      </div>-->
+                      <div align="left" class="layui-col-md10">
+                          <input type="file" class="layui-btn" name="topic8Fourfile" id="test-upload-normal" value="上传图片"/>
+                          <input  type="button" class="layui-btn"  id="topic8Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                          <input name="t8" type="hidden" th:value="${deial.topic8Four}"/>
+                          <input type="text" class="layui-btn"  id="t8" value="查看扣分点图片" onclick="look(this)"/>
+                      </div>
                   </div>
                   <div align="left">
                       <span style="color: #c7cccf">———————————————————————————————————————————————</span>
@@ -831,9 +799,12 @@
                           </table>
 
                       </div><br/>
-                      <input type="file" class="layui-btn" name="topic9Fourfile" id="test-upload-normal" value="上传图片"/>
-                      <input  type="button" class="layui-btn"  id="topic9Fourfile" onclick="fileFour(this)"  value="上传图片"/>
-
+                      <div align="left" class="layui-col-md10">
+                          <input type="file" class="layui-btn" name="topic9Fourfile" id="test-upload-normal" value="上传图片"/>
+                          <input  type="button" class="layui-btn"  id="topic9Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                          <input name="t9" type="hidden" th:value="${deial.topic9Four}"/>
+                          <input type="text" class="layui-btn"  id="t9" value="查看扣分点图片" onclick="look(this)"/>
+                      </div>
                   </div>
                   <div align="left">
                       <span style="color: #c7cccf">———————————————————————————————————————————————</span>
@@ -884,9 +855,12 @@
 
                           </table>
                       </div><br/>
-                      <input type="file" class="layui-btn" name="topic10Fourfile" id="test-upload-normal" value="上传图片"/>
-                      <input  type="button" class="layui-btn"  id="topic10Fourfile" onclick="fileFour(this)"  value="上传图片"/>
-
+                      <div align="left" class="layui-col-md10">
+                          <input type="file" class="layui-btn" name="topic10Fourfile" id="test-upload-normal" value="上传图片"/>
+                          <input  type="button" class="layui-btn"  id="topic10Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                          <input name="t10" type="hidden" th:value="${deial.topic10Four}"/>
+                          <input type="text" class="layui-btn"  id="t10" value="查看扣分点图片" onclick="look(this)"/>
+                      </div>
                   </div>
                   <div align="left">
                       <span style="color: #c7cccf">———————————————————————————————————————————————</span>
@@ -922,22 +896,12 @@
 
                           </table>
                       </div><br/>
-                      <input type="file" class="layui-btn" name="topic11Fourfile" id="test-upload-normal" value="上传图片"/>
-                      <input  type="button" class="layui-btn"  id="topic11Fourfile" onclick="fileFour(this)"  value="上传图片"/>
-                      <!-- <div class="layui-col-md12">
-                         <div class="layui-card">
-                           <div class="layui-card-header">上传多张图片</div>
-                           <div class="layui-card-body">
-                             <div class="layui-upload">
-                               <input type="file" class="layui-btn" id="topic11Fourfile">多图片上传</input>
-                               <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
-                                 预览图：
-                                 <div class="layui-upload-list" id="test-upload-more-list"></div>
-                               </blockquote>
-                             </div>
-                           </div>
-                         </div>
-                       </div>-->
+                      <div align="left" class="layui-col-md10">
+                          <input type="file" class="layui-btn" name="topic11Fourfile" id="test-upload-normal" value="上传图片"/>
+                          <input  type="button" class="layui-btn"  id="topic11Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                          <input name="t11" type="hidden" th:value="${deial.topic11Four}"/>
+                          <input type="text" class="layui-btn"  id="t11" value="查看扣分点图片" onclick="look(this)"/>
+                      </div>
                   </div>
                   <div align="left">
                       <span style="color: #c7cccf">———————————————————————————————————————————————</span>
@@ -973,22 +937,12 @@
 
                           </table>
                       </div><br/>
-                      <input type="file" class="layui-btn" name="topic12Fourfile" id="test-upload-normal" value="上传图片"/>
-                      <input  type="button" class="layui-btn"  id="topic12Fourfile" onclick="fileFour(this)"  value="上传图片"/>
-                      <!--<div class="layui-col-md12">
-                        <div class="layui-card">
-                          <div class="layui-card-header">上传多张图片</div>
-                          <div class="layui-card-body">
-                            <div class="layui-upload">
-                              <button type="button" class="layui-btn" id="topic12Fourfile">多图片上传</button>
-                              <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
-                                预览图：
-                                <div class="layui-upload-list" id="test-upload-more-list"></div>
-                              </blockquote>
-                            </div>
-                          </div>
-                        </div>
-                      </div>-->
+                      <div align="left" class="layui-col-md10">
+                          <input type="file" class="layui-btn" name="topic12Fourfile" id="test-upload-normal" value="上传图片"/>
+                          <input  type="button" class="layui-btn"  id="topic12Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                          <input name="t12" type="hidden" th:value="${deial.topic12Four}"/>
+                          <input type="text" class="layui-btn"  id="t12" value="查看扣分点图片" onclick="look(this)"/>
+                      </div>
                   </div>
                   <div align="left">
                       <span style="color: #c7cccf">———————————————————————————————————————————————</span>
@@ -1027,20 +981,8 @@
                       </div><br/>
                       <input type="file" class="layui-btn" name="topic13Fourfile" id="test-upload-normal" value="上传图片"/>
                       <input  type="button" class="layui-btn"  id="topic13Fourfile" onclick="fileFour(this)"  value="上传图片"/>
-                      <!--  <div class="layui-col-md12">
-                          <div class="layui-card">
-                            <div class="layui-card-header">上传多张图片</div>
-                            <div class="layui-card-body">
-                              <div class="layui-upload">
-                                <button type="button" class="layui-btn" id="topic13Fourfile">多图片上传</button>
-                                <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
-                                  预览图：
-                                  <div class="layui-upload-list" id="test-upload-more-listcs"></div>
-                                </blockquote>
-                              </div>
-                            </div>
-                          </div>
-                        </div>-->
+                      <input name="t13" type="hidden" th:value="${deial.topic13Four}"/>
+                      <input type="text" class="layui-btn"  id="t13" value="查看扣分点图片" onclick="look(this)"/>
                   </div><br/>
                   <div align="left">
                       <span style="color: #c7cccf">———————————————————————————————————————————————</span>
@@ -1101,22 +1043,12 @@
 
                           </table>
                       </div><br/><br/><br/><br/>
-                      <input type="file" class="layui-btn" name="topic14Fourfile" id="test-upload-normal" value="上传图片"/>
-                      <input  type="button" class="layui-btn"  id="topic14Fourfile" onclick="fileFour(this)"  value="上传图片"/>
-                      <!--<div class="layui-col-md12">
-                          <div class="layui-card">
-                              <div class="layui-card-header">上传多张图片</div>
-                              <div class="layui-card-body">
-                                  <div class="layui-upload">
-                                      <button type="button" class="layui-btn" id="topic14Fourfile">多图片上传</button>
-                                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
-                                          预览图：
-                                          <div class="layui-upload-list" id="test-upload-more-listcs"></div>
-                                      </blockquote>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>-->
+                      <div align="left">
+                          <input type="file" class="layui-btn" name="topic14Fourfile" id="test-upload-normal" value="上传图片"/>
+                          <input  type="button" class="layui-btn"  id="topic14Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                          <input name="t14" type="hidden" th:value="${deial.topic14Four}"/>
+                          <input type="text" class="layui-btn"  id="t14" value="查看扣分点图片" onclick="look(this)"/>
+                      </div>
                   </div><br/><br/>
                   <div align="left">
                       <span style="color: #c7cccf">———————————————————————————————————————————————</span>
@@ -1161,22 +1093,12 @@
                               </tr>
                           </table>
                       </div><br/><br/><br/>
-                      <input type="file" class="layui-btn" name="topic15Fourfile" id="test-upload-normal" value="上传图片"/>
-                      <input  type="button" class="layui-btn"  id="topic15Fourfile" onclick="fileFour(this)"  value="上传图片"/>
-                      <!--<div class="layui-col-md12">
-                          <div class="layui-card">
-                              <div class="layui-card-header">上传多张图片</div>
-                              <div class="layui-card-body">
-                                  <div class="layui-upload">
-                                      <button type="button" class="layui-btn" id="topic15Fourfile">多图片上传</button>
-                                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
-                                          预览图：
-                                          <div class="layui-upload-list" id="test-upload-more-listcs"></div>
-                                      </blockquote>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>-->
+                      <div align="left" class="layui-col-md10">
+                          <input type="file" class="layui-btn" name="topic15Fourfile" id="test-upload-normal" value="上传图片"/>
+                          <input  type="button" class="layui-btn"  id="topic15Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                          <input name="t15" type="hidden" th:value="${deial.topic15Four}"/>
+                          <input type="text" class="layui-btn"  id="t15" value="查看扣分点图片" onclick="look(this)"/>
+                      </div>
                   </div><br/>
                   <div align="left">
                       <span style="color: #c7cccf">———————————————————————————————————————————————</span>
@@ -1234,22 +1156,12 @@
                               </tr>
                           </table>
                       </div><br/>
-                      <input type="file" class="layui-btn" name="topic16Fourfile" id="test-upload-normal" value="上传图片"/>
-                      <input  type="button" class="layui-btn"  id="topic16Fourfile" onclick="fileFour(this)"  value="上传图片"/>
-                      <!--<div class="layui-col-md12">
-                          <div class="layui-card">
-                              <div class="layui-card-header">上传多张图片</div>
-                              <div class="layui-card-body">
-                                  <div class="layui-upload">
-                                      <button type="button" class="layui-btn" id="topic16Fourfile">多图片上传</button>
-                                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
-                                          预览图：
-                                          <div class="layui-upload-list" id="test-upload-more-listcs"></div>
-                                      </blockquote>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>-->
+                      <div align="left" class="layui-col-md10">
+                          <input type="file" class="layui-btn" name="topic16Fourfile" id="test-upload-normal" value="上传图片"/>
+                          <input  type="button" class="layui-btn"  id="topic16Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                          <input name="t16" type="hidden" th:value="${deial.topic16Four}"/>
+                          <input type="text" class="layui-btn"  id="t16" value="查看扣分点图片" onclick="look(this)"/>
+                      </div>
                   </div>
                   <div align="left">
                       <span style="color: #c7cccf">———————————————————————————————————————————————</span>
@@ -1291,8 +1203,12 @@
 
                           </table>
                       </div><br/>
-                      <input type="file" class="layui-btn" name="topic17Fourfile" id="test-upload-normal" value="上传图片"/>
-                      <input  type="button" class="layui-btn"  id="topic17Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                      <div align="left" class="layui-col-md10">
+                          <input type="file" class="layui-btn" name="topic17Fourfile" id="test-upload-normal" value="上传图片"/>
+                          <input  type="button" class="layui-btn"  id="topic17Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                          <input name="t17" type="hidden" th:value="${deial.topic17Four}"/>
+                          <input type="text" class="layui-btn"  id="t17" value="查看扣分点图片" onclick="look(this)"/>
+                      </div>
                   </div>
                   <div align="left">
                       <span style="color: #c7cccf">———————————————————————————————————————————————</span>
@@ -1328,9 +1244,12 @@
 
                           </table>
                       </div><br/>
-                      <input type="file" class="layui-btn" name="topic18Fourfile" id="test-upload-normal" value="上传图片"/>
-                      <input  type="button" class="layui-btn"  id="topic18Fourfile" onclick="fileFour(this)"  value="上传图片"/>
-
+                      <div align="left" class="layui-col-md10">
+                          <input type="file" class="layui-btn" name="topic18Fourfile" id="test-upload-normal" value="上传图片"/>
+                          <input  type="button" class="layui-btn"  id="topic18Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                          <input name="t18" type="hidden" th:value="${deial.topic18Four}"/>
+                          <input type="text" class="layui-btn"  id="t18" value="查看扣分点图片" onclick="look(this)"/>
+                      </div>
                   </div>
                   <div align="left">
                       <span style="color: #c7cccf">———————————————————————————————————————————————</span>
@@ -1384,8 +1303,10 @@
 
 
                           </table>
-                          <input type="file" class="layui-btn" name="topic19Fourfile" id="test-upload-normal" value="上传图片"/>
-                          <input  type="button" class="layui-btn"  id="topic19Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                              <input type="file" class="layui-btn" name="topic19Fourfile" id="test-upload-normal" value="上传图片"/>
+                              <input  type="button" class="layui-btn"  id="topic19Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                              <input name="t19" type="hidden" th:value="${deial.topic19Four}"/>
+                              <input type="text" class="layui-btn"  id="t19" value="查看扣分点图片" onclick="look(this)"/>
                       </div><br/>
 
 
@@ -1426,8 +1347,12 @@
 
                           </table>
                       </div><br/>
-                      <input type="file" class="layui-btn" name="topic20Fourfile" id="test-upload-normal" value="上传图片"/>
-                      <input  type="button" class="layui-btn"  id="topic20Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                      <div align="left" >
+                          <input type="file" class="layui-btn" name="topic20Fourfile" id="test-upload-normal" value="上传图片"/>
+                          <input  type="button" class="layui-btn"  id="topic20Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                          <input name="t20" type="hidden" th:value="${deial.topic20Four}"/>
+                          <input type="text" class="layui-btn"  id="t20" value="查看扣分点图片" onclick="look(this)"/>
+                      </div>
 
                   </div>
 
@@ -1469,7 +1394,7 @@
               <div class="layui-form-item layui-layout-admin" id="deialSee">
                   <div class="layui-form-item layui-layout-admin">
                       <div class="layui-input-block">
-                          <div class="layui-footer" style="left: 0;">
+                          <div class="layui-footer" style="left: 0;height: 30px">
                               <input class="layui-btn" lay-submit="" lay-filter="component-form-demo1" type="submit" id="checkSubject"  value="提交"/>
                               <button  class="layui-btn layui-btn-primary" onclick="resert()"> 重置</button>
                           </div>

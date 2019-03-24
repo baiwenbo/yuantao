@@ -7,7 +7,7 @@ $(document).ready(function(){
     $("#six").hide();
     $("#seven").hide();
     $("#eight").hide();
-    $("#ninesuper").hide();
+   // $("#ninesuper").hide();
     $("#nine").hide();
     $("#ten").hide();
     $("#eleven").hide();

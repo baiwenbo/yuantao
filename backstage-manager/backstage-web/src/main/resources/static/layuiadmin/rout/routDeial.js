@@ -27,12 +27,15 @@ if (th1.indexOf("完全")>0){
 if (th2.indexOf("完全")>0){
     $("#two").hide();
 }
-if (th3.indexOf("完全")>0){
+if (th3t.indexOf("有")>0){
+    $("#th3").show();
+}else{
     $("#th3").hide();
 }
-if (th3t.indexOf("有")>0){
+if (th3.indexOf("完全")>0){
     $("#three").hide();
 }
+
 if (th4.indexOf("完全")>0){
     $("#four").hide();
 }
@@ -48,8 +51,8 @@ if (th7.indexOf("完全")>0){
 if (th8.indexOf("完全")>0){
     $("#eight").hide();
 }
-if (th9.indexOf("有")>0){
-    $("#ninesuper").hide();
+if (th9.indexOf("完全")>0){
+    $("#nine").hide();
 }
 
 if (th10.indexOf("完全")>0){
