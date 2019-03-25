@@ -191,11 +191,16 @@ $("#checkSubject").click(function(){
             alert("请选择不符项");
             return false;
         }*/
-        var topic12Four=$("#topic12Four").val();
-        if (topic12Four==""||topic12Four==null){
-            alert("请上传题12图片");
-            return false;
+        var topic12Two=$("input[name='topic12Two']:checked").val();
+
+        if (topic12Two.indexOf("主动站立迎接")>0){
+            var topic12Four=$("#topic12Four").val();
+            if (topic12Four==""||topic12Four==null){
+                alert("请上传题12图片");
+                return false;
+            }
         }
+
     }
     if (type13=="2"){
         var remark13=$("input[name='topic13Six']").val();
