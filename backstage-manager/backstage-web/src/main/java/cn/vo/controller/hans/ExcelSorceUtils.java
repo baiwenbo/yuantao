@@ -54,53 +54,85 @@ public class ExcelSorceUtils {
                 testPaper.setTh39mark(setMark(testPaper.getType(),testPaper.getTopic39One(),"th39"));
                 testPaper.setTh40mark(setMark(testPaper.getType(),testPaper.getTopic40One(),"th40"));
 
-
-                testPaper.setTh1sorce(setSorce("th1",testPaper.getTopic1Three(),testPaper.getType()+""));
-                testPaper.setTh2sorce(setSorce("th2",testPaper.getTopic2Three(),testPaper.getType()+""));
-                testPaper.setTh3sorce(setSorce("th3",testPaper.getTopic3Three(),testPaper.getType()+""));
-                testPaper.setTh4sorce(setSorce("th4",testPaper.getTopic4Three(),testPaper.getType()+""));
-                testPaper.setTh5sorce(setSorce("th5",testPaper.getTopic5Three(),testPaper.getType()+""));
-                testPaper.setTh6sorce(setSorce("th6",testPaper.getTopic6Three(),testPaper.getType()+""));
-                testPaper.setTh7sorce(setSorce("th7",testPaper.getTopic7Three(),testPaper.getType()+""));
-                testPaper.setTh8sorce(setSorce("th8",testPaper.getTopic8Three(),testPaper.getType()+""));
-                testPaper.setTh9sorce(setSorce("th9",testPaper.getTopic9Three(),testPaper.getType()+""));
-                testPaper.setTh10sorce(setSorce("th10",testPaper.getTopic10Three(),testPaper.getType()+""));
-                testPaper.setTh11sorce(setSorce("th11",testPaper.getTopic11Three(),testPaper.getType()+""));
-                testPaper.setTh12sorce(setSorce("th12",testPaper.getTopic12Three(),testPaper.getType()+""));
-                testPaper.setTh13sorce(setSorce("th13",testPaper.getTopic13Three(),testPaper.getType()+""));
-                testPaper.setTh14sorce(setSorce("th14",testPaper.getTopic14Three(),testPaper.getType()+""));
-                testPaper.setTh15sorce(setSorce("th15",testPaper.getTopic15Three(),testPaper.getType()+""));
-                testPaper.setTh16sorce(setSorce("th16",testPaper.getTopic16Three(),testPaper.getType()+""));
-                if (testPaper.getTopic17Three() != null && !testPaper.getTopic17Three().isEmpty()) {
-                    if(testPaper.getTopic17Three().contains("1处")){
-                        testPaper.setTh17sorce("-2");
-                    }else{
-                        testPaper.setTh17sorce("-4");
+                if(testPaper.getType()==3){
+                    if (testPaper.getTopic10Three() != null && !testPaper.getTopic10Three().isEmpty()) {
+                        if(testPaper.getTopic10Three().contains("1处")){
+                            testPaper.setTh10sorce("-2");
+                        }else{
+                            testPaper.setTh10sorce("-4");
+                        }
                     }
+                    if (testPaper.getTopic16Three() != null && !testPaper.getTopic16Three().isEmpty()) {
+                        if(testPaper.getTopic16Three().contains("1处")){
+                            testPaper.setTh16sorce("-2");
+                        }else{
+                            testPaper.setTh16sorce("-4");
+                        }
+                    }
+                    if (testPaper.getTopic17Three() != null && !testPaper.getTopic17Three().isEmpty()) {
+                        if(testPaper.getTopic17Three().contains("1处")){
+                            testPaper.setTh17sorce("-2");
+                        }else{
+                            testPaper.setTh17sorce("-4");
+                        }
+                    }
+                    if (testPaper.getTopic23Three() != null && !testPaper.getTopic23Three().isEmpty()) {
+                        if(testPaper.getTopic23Three().contains("1")){
+                            testPaper.setTh23sorce("-2");
+                        }else{
+                            testPaper.setTh23sorce("-4");
+                        }
+                    }
+                }else{
+                    testPaper.setTh1sorce(setSorce("th1",testPaper.getTopic1Three(),testPaper.getType()+""));
+                    testPaper.setTh2sorce(setSorce("th2",testPaper.getTopic2Three(),testPaper.getType()+""));
+                    testPaper.setTh3sorce(setSorce("th3",testPaper.getTopic3Three(),testPaper.getType()+""));
+                    testPaper.setTh4sorce(setSorce("th4",testPaper.getTopic4Three(),testPaper.getType()+""));
+                    testPaper.setTh5sorce(setSorce("th5",testPaper.getTopic5Three(),testPaper.getType()+""));
+                    testPaper.setTh6sorce(setSorce("th6",testPaper.getTopic6Three(),testPaper.getType()+""));
+                    testPaper.setTh7sorce(setSorce("th7",testPaper.getTopic7Three(),testPaper.getType()+""));
+                    testPaper.setTh8sorce(setSorce("th8",testPaper.getTopic8Three(),testPaper.getType()+""));
+                    testPaper.setTh9sorce(setSorce("th9",testPaper.getTopic9Three(),testPaper.getType()+""));
+                    testPaper.setTh10sorce(setSorce("th10",testPaper.getTopic10Three(),testPaper.getType()+""));
+                    testPaper.setTh11sorce(setSorce("th11",testPaper.getTopic11Three(),testPaper.getType()+""));
+                    testPaper.setTh12sorce(setSorce("th12",testPaper.getTopic12Three(),testPaper.getType()+""));
+                    testPaper.setTh13sorce(setSorce("th13",testPaper.getTopic13Three(),testPaper.getType()+""));
+                    testPaper.setTh14sorce(setSorce("th14",testPaper.getTopic14Three(),testPaper.getType()+""));
+                    testPaper.setTh15sorce(setSorce("th15",testPaper.getTopic15Three(),testPaper.getType()+""));
+                    testPaper.setTh16sorce(setSorce("th16",testPaper.getTopic16Three(),testPaper.getType()+""));
+                    if (testPaper.getTopic17Three() != null && !testPaper.getTopic17Three().isEmpty()) {
+                        if(testPaper.getTopic17Three().contains("1处")){
+                            testPaper.setTh17sorce("-2");
+                        }else{
+                            testPaper.setTh17sorce("-4");
+                        }
+                    }
+                    testPaper.setTh18sorce(setSorce("th18",testPaper.getTopic18Three(),testPaper.getType()+""));
+                    testPaper.setTh19sorce(setSorce("th19",testPaper.getTopic19Three(),testPaper.getType()+""));
+                    testPaper.setTh20sorce(setSorce("th20",testPaper.getTopic20Three(),testPaper.getType()+""));
+                    testPaper.setTh21sorce(setSorce("th21",testPaper.getTopic21Three(),""));
+                    testPaper.setTh22sorce(setSorce("th22",testPaper.getTopic22Three(),""));
+                    testPaper.setTh23sorce(setSorce("th23",testPaper.getTopic23Three(),""));
+                    testPaper.setTh24sorce(setSorce("th24",testPaper.getTopic24Three(),""));
+                    testPaper.setTh25sorce(setSorce("th25",testPaper.getTopic25Three(),""));
+                    testPaper.setTh26sorce(setSorce("th26",testPaper.getTopic26Three(),""));
+                    testPaper.setTh27sorce(setSorce("th27",testPaper.getTopic27Three(),""));
+                    testPaper.setTh28sorce(setSorce("th28",testPaper.getTopic28Three(),""));
+                    testPaper.setTh29sorce(setSorce("th29",testPaper.getTopic29Three(),""));
+                    testPaper.setTh30sorce(setSorce("th30",testPaper.getTopic30Three(),""));
+                    testPaper.setTh31sorce(setSorce("th31",testPaper.getTopic31Three(),""));
+                    testPaper.setTh32sorce(setSorce("th32",testPaper.getTopic32Three(),""));
+                    testPaper.setTh33sorce(setSorce("th33",testPaper.getTopic33Three(),""));
+                    testPaper.setTh34sorce(setSorce("th34",testPaper.getTopic34Three(),""));
+                    testPaper.setTh35sorce(setSorce("th35",testPaper.getTopic35Three(),""));
+                    testPaper.setTh36sorce(setSorce("th36",testPaper.getTopic36Three(),""));
+                    testPaper.setTh37sorce(setSorce("th37",testPaper.getTopic37Three(),""));
+                    testPaper.setTh38sorce(setSorce("th38",testPaper.getTopic38Three(),""));
+                    testPaper.setTh39sorce(setSorce("th39",testPaper.getTopic39Three(),""));
+                    testPaper.setTh40sorce(setSorce("th40",testPaper.getTopic40Three(),""));
                 }
-                testPaper.setTh18sorce(setSorce("th18",testPaper.getTopic18Three(),testPaper.getType()+""));
-                testPaper.setTh19sorce(setSorce("th19",testPaper.getTopic19Three(),testPaper.getType()+""));
-                testPaper.setTh20sorce(setSorce("th20",testPaper.getTopic20Three(),testPaper.getType()+""));
-                testPaper.setTh21sorce(setSorce("th21",testPaper.getTopic21Three(),""));
-                testPaper.setTh22sorce(setSorce("th22",testPaper.getTopic22Three(),""));
-                testPaper.setTh23sorce(setSorce("th23",testPaper.getTopic23Three(),""));
-                testPaper.setTh24sorce(setSorce("th24",testPaper.getTopic24Three(),""));
-                testPaper.setTh25sorce(setSorce("th25",testPaper.getTopic25Three(),""));
-                testPaper.setTh26sorce(setSorce("th26",testPaper.getTopic26Three(),""));
-                testPaper.setTh27sorce(setSorce("th27",testPaper.getTopic27Three(),""));
-                testPaper.setTh28sorce(setSorce("th28",testPaper.getTopic28Three(),""));
-                testPaper.setTh29sorce(setSorce("th29",testPaper.getTopic29Three(),""));
-                testPaper.setTh30sorce(setSorce("th30",testPaper.getTopic30Three(),""));
-                testPaper.setTh31sorce(setSorce("th31",testPaper.getTopic31Three(),""));
-                testPaper.setTh32sorce(setSorce("th32",testPaper.getTopic32Three(),""));
-                testPaper.setTh33sorce(setSorce("th33",testPaper.getTopic33Three(),""));
-                testPaper.setTh34sorce(setSorce("th34",testPaper.getTopic34Three(),""));
-                testPaper.setTh35sorce(setSorce("th35",testPaper.getTopic35Three(),""));
-                testPaper.setTh36sorce(setSorce("th36",testPaper.getTopic36Three(),""));
-                testPaper.setTh37sorce(setSorce("th37",testPaper.getTopic37Three(),""));
-                testPaper.setTh38sorce(setSorce("th38",testPaper.getTopic38Three(),""));
-                testPaper.setTh39sorce(setSorce("th39",testPaper.getTopic39Three(),""));
-                testPaper.setTh40sorce(setSorce("th40",testPaper.getTopic40Three(),""));
+
+
 
                 testPaper.setTopic1Two(testPaper.getTopic1Two()+testPaper.getTopic1Six());
                 testPaper.setTopic2Two(testPaper.getTopic2Two()+testPaper.getTopic2Six());
@@ -110,7 +142,11 @@ public class ExcelSorceUtils {
                 testPaper.setTopic6Two(testPaper.getTopic6Two()+testPaper.getTopic6Six());
                 testPaper.setTopic7Two(testPaper.getTopic7Two()+testPaper.getTopic7Six());
                 testPaper.setTopic8Two(testPaper.getTopic8Two()+testPaper.getTopic8Six());
-                testPaper.setTopic9Two(testPaper.getTopic9Three()+testPaper.getTopic9Six());
+                if(testPaper.getType()==3){
+
+                }else{
+                    testPaper.setTopic9Two(testPaper.getTopic9Three()+testPaper.getTopic9Six());
+                }
                 testPaper.setTopic10Two(testPaper.getTopic10Two()+testPaper.getTopic10Six());
                 testPaper.setTopic11Two(testPaper.getTopic11Two()+testPaper.getTopic11Six());
                 testPaper.setTopic12Two(testPaper.getTopic12Two()+testPaper.getTopic12Six());

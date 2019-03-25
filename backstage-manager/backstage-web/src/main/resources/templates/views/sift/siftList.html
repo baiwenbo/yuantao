@@ -44,7 +44,7 @@
         <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="question()">录入</button>
 	</span>
     <span th:if="${user.username == 'admin'}">
-        <a data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" th:href="@{/excel/export(type=2)}">导出</a>
+        <a data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" th:href="@{/excel/export(type=3)}">导出</a>
             <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="appealOpen()">申诉开</button>
         <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="appealClose()">申诉关</button>
         <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="batchCheck()">批量审核通过</button>
