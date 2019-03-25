@@ -97,57 +97,22 @@
                               <input type="text" name="spotdate" id="spotdate" placeholder="yyyy-MM-dd HH:mm:ss" autocomplete="off" class="layui-input" />
                           </div>
                       </div>
-                      <div class="layui-inline">
-                          <label class="layui-form-label">购买商品</label>
-                          <div class="layui-input-inline">
-                              <input type="text" name="commodity" lay-verify="email" autocomplete="off" class="layui-input" />
-                          </div>
-                      </div>
 
-                  </div>
-
-                  <div class="layui-form-item">
-                      <div class="layui-inline">
-                          <label class="layui-form-label">消费金额</label>
-                          <div class="layui-input-inline">
-                              <input type="tel" name="money" lay-verify="required|phone" autocomplete="off" class="layui-input" />
-                          </div>
-                      </div>
-                      <div class="layui-inline">
-                          <label class="layui-form-label">天气</label>
-                          <div class="layui-input-inline">
-                              <input type="text" name="weather"  autocomplete="off" class="layui-input" />
-                          </div>
-                      </div>
-                      <div class="layui-inline">
-                          <label class="layui-form-label">是否地铁店</label>
-                          <div class="layui-input-inline">
-                              <input type="text" name="metro" lay-verify="required|phone" autocomplete="off" class="layui-input" />
-                          </div>
-                      </div>
-                  </div>
-                  <div class="layui-form-item">
-                      <div class="layui-inline">
-                          <label class="layui-form-label">支付方式</label>
-                          <div class="layui-input-inline">
-                              <input type="text" name="payment"   autocomplete="off" class="layui-input" />
-                          </div>
-                      </div>
                       <div class="layui-inline">
                           <label class="layui-form-label">神客姓名</label>
                           <div class="layui-input-inline">
                               <input type="text" name="personname" lay-verify="email" autocomplete="off" class="layui-input" />
                           </div>
                       </div>
+                  </div>
 
+                  <div class="layui-form-item">
                       <div class="layui-inline">
                           <label class="layui-form-label">视频链接</label>
                           <div class="layui-input-inline">
                               <input type="text" name="vedio" lay-verify="required|phone" autocomplete="off" class="layui-input" />
                           </div>
                       </div>
-                  </div>
-                  <div class="layui-form-item">
                       <div class="layui-inline">
                           <label class="layui-form-label" style="width: 65px">视频链接提取码</label>
                           <div class="layui-input-inline">
@@ -158,12 +123,6 @@
                           <label class="layui-form-label" style="height:50px;">视频时长</label>
                           <div class="layui-input-inline">
                               <input type="text" name="duration" lay-verify="email" autocomplete="off" class="layui-input" />
-                          </div>
-                      </div>
-                      <div class="layui-inline">
-                          <label class="layui-form-label" style="height:50px;">收银员姓名(如无法看清楚姓名描述体貌特征)</label>
-                          <div class="layui-input-inline">
-                              <input type="text" name="cashiername" placeholder="收银员姓名(如无法看清楚姓名描述体貌特征)" autocomplete="off" class="layui-input" />
                           </div>
                       </div>
 
@@ -298,8 +257,8 @@
             <div   align="left">
               <label style="width: 100px;">3-1门店内是否有卫生间？(单选）</label><br/>
               <div >
-                <label style="width: 100px;">1、有卫生间 </label> <input type="radio" name="trough2" value="1、有卫生间"  onclick="th3Div(1)" checked="checked" /><br/>
-                <label style="width: 100px;">2、无卫生间</label> <input type="radio" name="trough2" value="2、无卫生间"   onclick="th3Div(2)"/>
+                <label style="width: 100px;">1、无卫生间 </label> <input type="radio" name="trough2" value="1、无卫生间"  onclick="th3Div(1)" checked="checked" /><br/>
+                <label style="width: 100px;">2、有卫生间</label> <input type="radio" name="trough2" value="2、有卫生间"   onclick="th3Div(2)"/>
 
               </div>
             </div><br/>
@@ -664,8 +623,8 @@
                 </table>
 
               </div><br/>
-                <input type="file" class="layui-btn" name="topic7Fourfile" id="test-upload-normal" value="上传图片"/>
-                <input  type="button" class="layui-btn"  id="topic7Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+            <!--    <input type="file" class="layui-btn" name="topic7Fourfile" id="test-upload-normal" value="上传图片"/>
+                <input  type="button" class="layui-btn"  id="topic7Fourfile" onclick="fileFour(this)"  value="上传图片"/>-->
 
             </div>
                   <div align="left">
@@ -704,22 +663,9 @@
                 </table>
 
               </div><br/>
-                <input type="file" class="layui-btn" name="topic8Fourfile" id="test-upload-normal" value="上传图片"/>
+               <!-- <input type="file" class="layui-btn" name="topic8Fourfile" id="test-upload-normal" value="上传图片"/>
                 <input  type="button" class="layui-btn"  id="topic8Fourfile" onclick="fileFour(this)"  value="上传图片"/>
-              <!--<div class="layui-col-md12">
-                <div class="layui-card">
-                  <div class="layui-card-header">上传多张图片</div>
-                  <div class="layui-card-body">
-                    <div class="layui-upload">
-                      <button type="button" class="layui-btn" id="topic8Fourfile">多图片上传</button>
-                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
-                        预览图：
-                        <div class="layui-upload-list" id="test-upload-more-list"></div>
-                      </blockquote>
-                    </div>
-                  </div>
-                </div>
-              </div>-->
+             -->
             </div>
                   <div align="left">
                       <span style="color: #c7cccf">———————————————————————————————————————————————</span>
@@ -753,9 +699,9 @@
                 </table>
 
               </div><br/>
-                <input type="file" class="layui-btn" name="topic9Fourfile" id="test-upload-normal" value="上传图片"/>
+               <!-- <input type="file" class="layui-btn" name="topic9Fourfile" id="test-upload-normal" value="上传图片"/>
                 <input  type="button" class="layui-btn"  id="topic9Fourfile" onclick="fileFour(this)"  value="上传图片"/>
-
+-->
             </div>
                   <div align="left">
                       <span style="color: #c7cccf">———————————————————————————————————————————————</span>
@@ -806,9 +752,9 @@
 
                 </table>
               </div><br/>
-                <input type="file" class="layui-btn" name="topic10Fourfile" id="test-upload-normal" value="上传图片"/>
+              <!--  <input type="file" class="layui-btn" name="topic10Fourfile" id="test-upload-normal" value="上传图片"/>
                 <input  type="button" class="layui-btn"  id="topic10Fourfile" onclick="fileFour(this)"  value="上传图片"/>
-
+-->
             </div>
                   <div align="left">
                       <span style="color: #c7cccf">———————————————————————————————————————————————</span>
@@ -844,22 +790,9 @@
 
                 </table>
               </div><br/>
-                <input type="file" class="layui-btn" name="topic11Fourfile" id="test-upload-normal" value="上传图片"/>
+              <!--  <input type="file" class="layui-btn" name="topic11Fourfile" id="test-upload-normal" value="上传图片"/>
                 <input  type="button" class="layui-btn"  id="topic11Fourfile" onclick="fileFour(this)"  value="上传图片"/>
-             <!-- <div class="layui-col-md12">
-                <div class="layui-card">
-                  <div class="layui-card-header">上传多张图片</div>
-                  <div class="layui-card-body">
-                    <div class="layui-upload">
-                      <input type="file" class="layui-btn" id="topic11Fourfile">多图片上传</input>
-                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
-                        预览图：
-                        <div class="layui-upload-list" id="test-upload-more-list"></div>
-                      </blockquote>
-                    </div>
-                  </div>
-                </div>
-              </div>-->
+-->
             </div>
                   <div align="left">
                       <span style="color: #c7cccf">———————————————————————————————————————————————</span>
@@ -947,22 +880,9 @@
 
                 </table>
               </div><br/>
-                <input type="file" class="layui-btn" name="topic13Fourfile" id="test-upload-normal" value="上传图片"/>
-                <input  type="button" class="layui-btn"  id="topic13Fourfile" onclick="fileFour(this)"  value="上传图片"/>
-            <!--  <div class="layui-col-md12">
-                <div class="layui-card">
-                  <div class="layui-card-header">上传多张图片</div>
-                  <div class="layui-card-body">
-                    <div class="layui-upload">
-                      <button type="button" class="layui-btn" id="topic13Fourfile">多图片上传</button>
-                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
-                        预览图：
-                        <div class="layui-upload-list" id="test-upload-more-listcs"></div>
-                      </blockquote>
-                    </div>
-                  </div>
-                </div>
-              </div>-->
+               <!-- <input type="file" class="layui-btn" name="topic13Fourfile" id="test-upload-normal" value="上传图片"/>
+                <input  type="button" class="layui-btn"  id="topic13Fourfile" onclick="fileFour(this)"  value="上传图片"/>-->
+
             </div><br/>
                   <div align="left">
                       <span style="color: #c7cccf">———————————————————————————————————————————————</span>
@@ -1305,9 +1225,9 @@
                               <td width="80px;"><input type="radio" name="topic19Three" value="3、3起及以上"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                       </table>
-                      <input type="file" class="layui-btn" name="topic19Fourfile" id="test-upload-normal" value="上传图片"/>
+                      <!--<input type="file" class="layui-btn" name="topic19Fourfile" id="test-upload-normal" value="上传图片"/>
                       <input  type="button" class="layui-btn"  id="topic19Fourfile" onclick="fileFour(this)"  value="上传图片"/>
-                  </div><br/>
+                -->  </div><br/>
 
 
 
@@ -1347,9 +1267,9 @@
 
                           </table>
                       </div><br/>
-                      <input type="file" class="layui-btn" name="topic20Fourfile" id="test-upload-normal" value="上传图片"/>
+                      <!--<input type="file" class="layui-btn" name="topic20Fourfile" id="test-upload-normal" value="上传图片"/>
                       <input  type="button" class="layui-btn"  id="topic20Fourfile" onclick="fileFour(this)"  value="上传图片"/>
-
+-->
                   </div>
 
               <div align="left" class="layui-col-md10">

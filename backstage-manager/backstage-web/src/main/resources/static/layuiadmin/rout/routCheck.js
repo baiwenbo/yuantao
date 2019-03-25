@@ -20,9 +20,9 @@ function twoDiv(type) {
 }
 function th3Div(type) {
     if (type==2){
-        $("#th3").hide();
-    }else{
         $("#th3").show();
+    }else{
+        $("#th3").hide();
     }
 }
 function threeDiv(type) {

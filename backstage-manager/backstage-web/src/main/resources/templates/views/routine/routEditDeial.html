@@ -86,19 +86,14 @@
                       </div>
                   </div>
                   <div class="layui-inline">
-                      <label class="layui-form-label" style="height:50px;">收银员姓名（如无法看清楚姓名描述体貌特征）</label>
-                      <div class="layui-input-inline">
-                          <input type="text" name="cashiername" th:value="${deial.cashiername}" autocomplete="off" class="layui-input" />
-                      </div>
-                  </div>
-              </div>
-              <div class="layui-form-item">
-                  <div class="layui-inline">
                       <label class="layui-form-label">视频链接</label>
                       <div class="layui-input-inline">
                           <input type="text" name="vedio" th:value="${deial.vedio}" autocomplete="off" class="layui-input" />
                       </div>
                   </div>
+              </div>
+              <div class="layui-form-item">
+
                   <div class="layui-inline">
                       <label class="layui-form-label" style="width: 65px">视频链接提取码</label>
                       <div class="layui-input-inline">
@@ -111,49 +106,16 @@
                           <input type="text" name="duration" th:value="${deial.duration}" autocomplete="off" class="layui-input" />
                       </div>
                   </div>
-              </div>
-              <span th:if="${scpcqx == '5'}">
-            <div class="layui-form-item">
-              <div class="layui-inline">
-                <label class="layui-form-label">购买商品</label>
-                <div class="layui-input-inline">
-                  <input type="text" name="commodity" th:value="${deial.commodity}" autocomplete="off" class="layui-input" />
-                </div>
-              </div>
-              <div class="layui-inline">
-                <label class="layui-form-label">花费金额</label>
-                <div class="layui-input-inline">
-                  <input type="tel" name="money" th:value="${deial.money}" autocomplete="off" class="layui-input" />
-                </div>
-              </div>
-              <div class="layui-inline">
-                <label class="layui-form-label">天气</label>
-                <div class="layui-input-inline">
-                  <input type="text" name="weather"  th:value="${deial.weather}" autocomplete="off" class="layui-input" />
-                </div>
-              </div>
-            </div>
-            <div class="layui-form-item">
-              <div class="layui-inline">
-                <label class="layui-form-label">是否地铁</label>
-                <div class="layui-input-inline">
-                  <input type="text" name="metro" th:value="${deial.metro}" autocomplete="off" class="layui-input" />
-                </div>
-              </div>
-              <div class="layui-inline">
-                <label class="layui-form-label">支付方式</label>
-                <div class="layui-input-inline">
-                  <input type="text" name="payment"  th:value="${deial.payment}"  autocomplete="off" class="layui-input" />
-                </div>
-              </div>
-               <div class="layui-inline">
+                  <span th:if="${scpcqx == '5'}">
+                  <div class="layui-inline">
                       <label class="layui-form-label">点检日期</label>
                       <div class="layui-input-inline">
-                  <input type="text" name="spotdate" id="spotdate" th:value="${deial.spotdate}" placeholder="yyyy-MM-dd HH:mm:ss" autocomplete="off" class="layui-input"  />
-                </div>
+                          <input type="text" name="spotdate" id="spotdate" th:value="${deial.spotdate}" placeholder="yyyy-MM-dd HH:mm:ss" autocomplete="off" class="layui-input"  />
+                      </div>
+                  </div>
+                  </span>
               </div>
-
-            </div>
+              <span th:if="${scpcqx == '5'}">
             <div class="layui-form-item">
 
               <div class="layui-inline">
@@ -371,8 +333,8 @@
                   <div   align="left">
                       <label style="width: 100px;">3-1门店内是否有卫生间？(单选）</label><br/>
                       <div >
-                          <label style="width: 100px;">1、有卫生间 </label> <input type="radio" name="trough2" value="1、有卫生间"  onclick="th3Div(1)"  th:if="${deial.trough2!=null}" th:checked="${#strings.contains(deial.trough2,'有卫生间')}"  /><br/>
-                          <label style="width: 100px;">2、无卫生间</label> <input type="radio" name="trough2" value="2、无卫生间"   onclick="th3Div(2)"  th:if="${deial.trough2!=null}" th:checked="${#strings.contains(deial.trough2,'无卫生间')}"  />
+                          <label style="width: 100px;">1、无卫生间 </label> <input type="radio" name="trough2" value="1、无卫生间"  onclick="th3Div(1)"  th:if="${deial.trough2!=null}" th:checked="${#strings.contains(deial.trough2,'无卫生间')}"  /><br/>
+                          <label style="width: 100px;">2、有卫生间</label> <input type="radio" name="trough2" value="2、有卫生间"   onclick="th3Div(2)"  th:if="${deial.trough2!=null}" th:checked="${#strings.contains(deial.trough2,'有卫生间')}"  />
 
                       </div>
                   </div><br/>
@@ -707,12 +669,12 @@
                           </table>
 
                       </div><br/>
-                      <div align="left" class="layui-col-md10">
+                   <!--   <div align="left" class="layui-col-md10">
                           <input type="file" class="layui-btn" name="topic7Fourfile" id="test-upload-normal" value="上传图片"/>
                           <input  type="button" class="layui-btn"  id="topic7Fourfile" onclick="fileFour(this)"  value="上传图片"/>
                           <input name="t7" type="hidden" th:value="${deial.topic7Four}"/>
                           <input type="text" class="layui-btn"  id="t7" value="查看扣分点图片" onclick="look(this)"/>
-                      </div>
+                      </div>-->
 
                   </div>
                   <div align="left">
@@ -751,12 +713,12 @@
                           </table>
 
                       </div><br/>
-                      <div align="left" class="layui-col-md10">
+                      <!--<div align="left" class="layui-col-md10">
                           <input type="file" class="layui-btn" name="topic8Fourfile" id="test-upload-normal" value="上传图片"/>
                           <input  type="button" class="layui-btn"  id="topic8Fourfile" onclick="fileFour(this)"  value="上传图片"/>
                           <input name="t8" type="hidden" th:value="${deial.topic8Four}"/>
                           <input type="text" class="layui-btn"  id="t8" value="查看扣分点图片" onclick="look(this)"/>
-                      </div>
+                      </div>-->
                   </div>
                   <div align="left">
                       <span style="color: #c7cccf">———————————————————————————————————————————————</span>
@@ -790,12 +752,12 @@
                           </table>
 
                       </div><br/>
-                      <div align="left" class="layui-col-md10">
+                      <!--<div align="left" class="layui-col-md10">
                           <input type="file" class="layui-btn" name="topic9Fourfile" id="test-upload-normal" value="上传图片"/>
                           <input  type="button" class="layui-btn"  id="topic9Fourfile" onclick="fileFour(this)"  value="上传图片"/>
                           <input name="t9" type="hidden" th:value="${deial.topic9Four}"/>
                           <input type="text" class="layui-btn"  id="t9" value="查看扣分点图片" onclick="look(this)"/>
-                      </div>
+                      </div>-->
                   </div>
                   <div align="left">
                       <span style="color: #c7cccf">———————————————————————————————————————————————</span>
@@ -846,12 +808,12 @@
 
                           </table>
                       </div><br/>
-                      <div align="left" class="layui-col-md10">
+                     <!-- <div align="left" class="layui-col-md10">
                           <input type="file" class="layui-btn" name="topic10Fourfile" id="test-upload-normal" value="上传图片"/>
                           <input  type="button" class="layui-btn"  id="topic10Fourfile" onclick="fileFour(this)"  value="上传图片"/>
                           <input name="t10" type="hidden" th:value="${deial.topic10Four}"/>
                           <input type="text" class="layui-btn"  id="t10" value="查看扣分点图片" onclick="look(this)"/>
-                      </div>
+                      </div>-->
                   </div>
                   <div align="left">
                       <span style="color: #c7cccf">———————————————————————————————————————————————</span>
@@ -887,12 +849,12 @@
 
                           </table>
                       </div><br/>
-                      <div align="left" class="layui-col-md10">
+                    <!--  <div align="left" class="layui-col-md10">
                           <input type="file" class="layui-btn" name="topic11Fourfile" id="test-upload-normal" value="上传图片"/>
                           <input  type="button" class="layui-btn"  id="topic11Fourfile" onclick="fileFour(this)"  value="上传图片"/>
                           <input name="t11" type="hidden" th:value="${deial.topic11Four}"/>
                           <input type="text" class="layui-btn"  id="t11" value="查看扣分点图片" onclick="look(this)"/>
-                      </div>
+                      </div>-->
                   </div>
                   <div align="left">
                       <span style="color: #c7cccf">———————————————————————————————————————————————</span>
@@ -970,10 +932,10 @@
 
                           </table>
                       </div><br/>
-                      <input type="file" class="layui-btn" name="topic13Fourfile" id="test-upload-normal" value="上传图片"/>
+                     <!-- <input type="file" class="layui-btn" name="topic13Fourfile" id="test-upload-normal" value="上传图片"/>
                       <input  type="button" class="layui-btn"  id="topic13Fourfile" onclick="fileFour(this)"  value="上传图片"/>
                       <input name="t13" type="hidden" th:value="${deial.topic13Four}"/>
-                      <input type="text" class="layui-btn"  id="t13" value="查看扣分点图片" onclick="look(this)"/>
+                      <input type="text" class="layui-btn"  id="t13" value="查看扣分点图片" onclick="look(this)"/>-->
                   </div><br/>
                   <div align="left">
                       <span style="color: #c7cccf">———————————————————————————————————————————————</span>
@@ -1294,10 +1256,10 @@
 
 
                           </table>
-                              <input type="file" class="layui-btn" name="topic19Fourfile" id="test-upload-normal" value="上传图片"/>
+                              <!--<input type="file" class="layui-btn" name="topic19Fourfile" id="test-upload-normal" value="上传图片"/>
                               <input  type="button" class="layui-btn"  id="topic19Fourfile" onclick="fileFour(this)"  value="上传图片"/>
                               <input name="t19" type="hidden" th:value="${deial.topic19Four}"/>
-                              <input type="text" class="layui-btn"  id="t19" value="查看扣分点图片" onclick="look(this)"/>
+                              <input type="text" class="layui-btn"  id="t19" value="查看扣分点图片" onclick="look(this)"/>-->
                       </div><br/>
 
 
@@ -1338,12 +1300,12 @@
 
                           </table>
                       </div><br/>
-                      <div align="left" >
+                     <!-- <div align="left" >
                           <input type="file" class="layui-btn" name="topic20Fourfile" id="test-upload-normal" value="上传图片"/>
                           <input  type="button" class="layui-btn"  id="topic20Fourfile" onclick="fileFour(this)"  value="上传图片"/>
                           <input name="t20" type="hidden" th:value="${deial.topic20Four}"/>
                           <input type="text" class="layui-btn"  id="t20" value="查看扣分点图片" onclick="look(this)"/>
-                      </div>
+                      </div>-->
 
                   </div>
 

@@ -1,6 +1,7 @@
 $(document).ready(function(){
     $("#one").hide();
     $("#two").hide();
+    $("#th3").hide();
     $("#three").hide();
     $("#four").hide();
     $("#five").hide();
