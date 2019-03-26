@@ -9,10 +9,5 @@
   <artifactId>backstage-manager</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <modules>
-  	<module>backstage-pojo</module>
-  	<module>backstage-service</module>
-  	<module>backstage-dao</module>
-  	<module>backstage-web</module>
-  </modules>
+
 </project>
