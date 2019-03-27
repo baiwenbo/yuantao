@@ -4533,7 +4533,7 @@
 
   <select id="getCompanyQuery" resultMap="BaseResultMap" parameterType="map">
     select  <include refid="Base_Column_List" /> from test_paper
-    where  company = #{company} and type=#{type} monthJudge is null
+    where  company = #{company} and type=#{type} and monthJudge is null
     <if test="name != null and name.length()>0" >
       and  name like '%${name}%'
     </if>
@@ -4563,7 +4563,7 @@
 
   <select id="queryAll" resultMap="BaseResultMap" parameterType="map">
     select  <include refid="Base_Column_List" /> from test_paper
-    where  disabled=0
+    where  disabled=0    and monthJudge is null
     <if test="type != null" >
       and  type=#{type}
     </if>

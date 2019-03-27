@@ -2,11 +2,13 @@ package cn.vo.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+import javax.servlet.http.HttpSession;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -50,11 +52,13 @@ public class LoginController {
 	}
 
 	@GetMapping("views")
-	public String views(HttpServletRequest request) {
+	public String views(HttpServletRequest request,Model model) {
 		User user=(User) request.getSession().getAttribute("USER");
+
 		if(user==null){
 			return "redirect:/index";
 		}
+		model.addAttribute("user",user);
 		return "views";
 	}
 

@@ -88,6 +88,7 @@
                 </dd>
               </dl>
             </li>
+            <span th:if="${user.company == '小店' || user.scpcqx == '5'}" >
            <li data-name="component" class="layui-nav-item">
               <a href="javascript:;" lay-tips="组件" lay-direction="2">
                 <i class="layui-icon layui-icon-component"></i>
@@ -102,7 +103,8 @@
                 </dd>
               </dl>
            </li>
-         <shiro:hasPermission shiro:hasPermission="admin">
+          </span>
+            <span th:if="${user.company == '常规' || user.scpcqx == '5'}" >
            <li data-name="component" class="layui-nav-item">
               <a href="javascript:;" lay-tips="组件" lay-direction="2">
                 <i class="layui-icon layui-icon-component"></i>
@@ -117,8 +119,8 @@
                 </dd>
               </dl>
            </li>
-         </shiro:hasPermission>
-
+            </span>
+            <span th:if="${user.company == '精选' || user.scpcqx == '5'}" >
             <li data-name="senior" class="layui-nav-item">
               <a href="javascript:;" lay-tips="高级" lay-direction="2">
                 <i class="layui-icon layui-icon-senior"></i>
@@ -133,6 +135,7 @@
                 </dd>
               </dl>
             </li>
+            </span>
             <shiro:hasPermission shiro:hasPermission="admin">
             <li data-name="user" class="layui-nav-item">
               <a href="javascript:;" lay-tips="用户" lay-direction="2">
