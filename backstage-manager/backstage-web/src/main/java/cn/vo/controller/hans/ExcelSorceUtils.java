@@ -144,6 +144,8 @@ public class ExcelSorceUtils {
                 testPaper.setTopic8Two(testPaper.getTopic8Two()+testPaper.getTopic8Six());
                 if(testPaper.getType()==3){
 
+                }else if (testPaper.getType()==2){
+
                 }else{
                     testPaper.setTopic9Two(testPaper.getTopic9Three()+testPaper.getTopic9Six());
                 }
