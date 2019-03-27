@@ -4502,7 +4502,7 @@
 
   <select id="getListQuery" resultMap="BaseResultMap" parameterType="map">
     select  <include refid="Base_Column_List" /> from test_paper
-    where disabled=0  and type=#{type}
+    where disabled=0  and type=#{type} and monthJudge=#{monthJudge}
     <if test="name != null and name.length()>0" >
       and  (name like '%${name}%' or company like '%${name}%' or  code like '%${name}%')
     </if>
@@ -4518,7 +4518,7 @@
 
   <select id="getMendianQuery" resultMap="BaseResultMap" parameterType="map">
     select  <include refid="Base_Column_List" /> from test_paper
-    where  code = #{code} and type=#{type}
+    where  code = #{code} and type=#{type} and monthJudge=#{monthJudge}
     <if test="name != null and name.length()>0" >
       and  name like '%${name}%'
     </if>
@@ -4533,7 +4533,7 @@
 
   <select id="getCompanyQuery" resultMap="BaseResultMap" parameterType="map">
     select  <include refid="Base_Column_List" /> from test_paper
-    where  company = #{company} and type=#{type}
+    where  company = #{company} and type=#{type} and monthJudge=#{monthJudge}
     <if test="name != null and name.length()>0" >
       and  name like '%${name}%'
     </if>

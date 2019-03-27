@@ -1,10 +1,16 @@
 package cn.vo.controller.sift;
 
+import cn.vo.backstage.Utils.ListResult;
+import cn.vo.backstage.Utils.PageUtils;
 import cn.vo.dao.hans.SiftAddressMapper;
 import cn.vo.pojo.User;
 import cn.vo.pojo.entity.HansSiftAddress;
+import cn.vo.pojo.entity.TestPaper;
 import cn.vo.service.ITestPaperService;
 import com.alibaba.fastjson.JSONObject;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,4 +58,37 @@ public class SiftController {
         return  json;
     }
 
+    @GetMapping("/listOld")
+    @ResponseBody
+    public ListResult<TestPaper> listJson(HttpServletRequest request,Integer monthjudge, String name,String qcheckstatus,
+        String checkstatus,Integer type, Integer page, Integer limit){
+        Map map=new HashMap<>();
+        map.put("monthJudge", monthjudge);
+        map.put("name", name);
+        map.put("type", type);
+        map.put("qcheckstatus", qcheckstatus);
+        map.put("checkstatus", checkstatus);
+        map.put("index", PageUtils.getPageIndex(page, limit));
+        map.put("pageSize", PageUtils.getPageSize(page, limit));
+        HttpSession session=request.getSession();
+        User user=(User) session.getAttribute("USER");
+        List<TestPaper> list=null;
+        if("0".equals(user.getScpcqx())){
+            map.put("code", user.getUsername());
+            list=testPaperService.getMendianQuery(map);
+        }
+        if("2".equals(user.getScpcqx())){
+            map.put("company", user.getUsername());
+            list=testPaperService.getCompanyQuery(map);
+        }
+        if("5".equals(user.getScpcqx()) || "3".equals(user.getScpcqx()) ){
+            list=testPaperService.getListQuery(map);
+        }
+        ListResult<TestPaper> result=new ListResult<>();
+        result.setCode("0");
+        result.setCount(Long.valueOf(testPaperService.count()));
+        result.setMsg("");
+        result.setData(list);
+        return result;
+    }
 }

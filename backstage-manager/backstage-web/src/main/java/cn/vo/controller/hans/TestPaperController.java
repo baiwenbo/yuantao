@@ -56,6 +56,14 @@ public class TestPaperController {
         model.addAttribute("close",close);
         return "views/hans/testPaperList";
     }
+    @GetMapping("oldList")
+    public  String  oldList(String close, Model model,HttpServletRequest request){
+        HttpSession session=request.getSession();
+        User user= (User) session.getAttribute("USER");
+        model.addAttribute("user",user);
+        model.addAttribute("close",close);
+        return "views/hans/oldPaperList";
+    }
 
     //增加类型 区分苏宁小店 常规小店等
     @GetMapping("/listJson")
@@ -63,6 +71,7 @@ public class TestPaperController {
     public ListResult<TestPaper> listJson(HttpServletRequest request, String name,String qcheckstatus,
                                           String checkstatus,Integer type, Integer page, Integer limit){
         Map map=new HashMap<>();
+        map.put("monthJudge", null);
         map.put("name", name);
         map.put("type", type);
         map.put("qcheckstatus", qcheckstatus);

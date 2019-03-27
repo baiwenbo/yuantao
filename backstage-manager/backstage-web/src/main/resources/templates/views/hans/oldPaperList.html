@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>地址</title>
+    <link rel="stylesheet"  th:href="@{/layuiadmin/layui/css/layui.css}" media="all"/>
+    <link rel="stylesheet"  th:href="@{/layuiadmin/style/admin.css}" media="all"/>
+    <style>
+        body{margin: 10px;}
+        .demo-carousel{height: 200px; line-height: 200px; text-align: center;}
+    </style>
+</head>
+<body>
+<div class="layui-btn-group" style="margin-bottom: 15px;">
+
+</div>
+<div class="demoTable">
+    门店代码：
+    <div class="layui-inline">
+        <input class="layui-input" id="qname" autocomplete="off"/>
+    </div>
+    审核状态：
+    <div class="layui-inline">
+        <select name="checkstatus" id="checkstatus" class="layui-input" style="width: 120px;">
+            <option value="">请选择</option>
+            <option value="正在审核">正在审核</option>
+            <option value="审核通过">审核通过</option>
+            <option value="待审核">待审核</option>
+        </select>
+    </div>
+    申诉状态：
+    <div class="layui-inline">
+        <select name="qcheckstatus" id="qcheckstatus" class="layui-input" style="width: 120px;">
+            <option value="">请选择</option>
+            <option value="已申诉">已申诉</option>
+            <option value="已回复">已回复</option>
+            <option value="待批复">待批复</option>
+            <option value="已批复">已批复</option>
+        </select>
+    </div>
+    月份选择：
+    <div class="layui-inline">
+        <select name="monthjudge" id="monthjudge" class="layui-input" style="width: 120px;">
+            <option value="">请选择</option>
+            <option value="3">3月</option>
+            <option value="4">4月</option>
+            <option value="5">5月</option>
+            <option value="6">6月</option>
+            <option value="7">7月</option>
+            <option value="8">8月</option>
+            <option value="9">9月</option>
+            <option value="10">10月</option>
+            <option value="11">11月</option>
+            <option value="12">12月</option>
+        </select>
+    </div>
+    <button class="layui-btn" data-type="reload">搜索</button>
+    <span th:if="${user.scpcqx == '5'}">
+        <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="question()">录入</button>
+	</span>
+    <span th:if="${user.username == 'admin'}">
+        <a data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" th:href="@{/excel/export(type=1)}">导出</a>
+            <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="appealOpen()">申诉开</button>
+        <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="appealClose()">申诉关</button>
+<!--
+        <button data-method="offset" data-type="auto" class="layui-btn layui-btn-primary" onclick="batchCheck()">批量审核通过</button>
+-->
+	</span>
+</div>
+<table id="demo" lay-filter="test"></table>
+<script type="text/html" id="barDemo">
+<!--
+    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail"  >查看</a>
+-->
+    <a class="layui-btn layui-btn-xs" lay-event="edit" >编辑</a>
+    <span th:if="${user.username == 'admin'}">
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del" >删除</a>
+    </span>
+</script>
+<input type="hidden" id="opener" th:value="${close}"/>
+<script th:src="@{/layuiadmin/layui/layui.js}" ></script>
+<script th:src="@{/layuiadmin/layui/jquery-1.9.0.js}" ></script>
+<script>
+    $(document).ready(function(){
+
+        var open=$("#opener").val();
+        /*<![CDATA[*/
+        if (open!=null && open!=''){
+            if (open=="ok"){
+                alert("成功");
+                parent.location.reload();
+            }else{
+                alert("失败");
+                parent.location.reload();
+            }
+        }
+        /*]]>*/
+    });
+</script>
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    layui.use('table', function(){
+        var table = layui.table;
+        var $ = layui.$
+            ,admin = layui.admin
+            ,element = layui.element
+            ,router = layui.router();
+
+        //第一个实例
+        table.render({
+            elem: '#demo'
+            ,height: 600
+            ,url: path+'/sift/listOld?type=1' //数据接口
+            ,page: true //开启分页
+            ,cols: [[ //表头
+                {field: 'id', title: 'ID', width:80, sort: true, fixed: 'left'}
+                ,{field: 'code', title: '门店代码',width:100}
+                ,{field: 'name', title: '门店名称', width:160}
+                ,{field: 'score', title: '总得分',width:100}
+                ,{field: 'vedio', title: '视频链接',width:100}
+                ,{field: 'url', title: '视频链接提取码',width:150}
+                ,{field: 'appeal', title: '申诉开关',width:120}
+                ,{field: 'checkstatus', title: '审核状态',width:100}
+                ,{field: 'qcheckstatus', title: '申诉状态',width:100}
+                ,{fixed: 'right',title: '操作', width: 180, align:'center', toolbar: '#barDemo'}
+            ]]
+        });
+        var $ = layui.$, active =
+            {
+                reload: function () {
+                    var name = $('#qname').val();//获取输入框的值
+                    var qcheckstatus = $('#qcheckstatus').val();//获取输入框的值
+
+                    var checkstatus = $('#checkstatus').val();//获取输入框的值
+                    var monthjudge = $('#monthjudge').val();
+                    //执行重载
+                    table.reload('demo',
+                        {
+                            page:
+                                {
+                                    curr: 1 //重新从第 1 页开始
+                                }
+                            , where: { name: name,
+                                qcheckstatus:qcheckstatus,
+                                type:1,
+                                monthjudge:monthjudge,
+                                checkstatus:checkstatus}//这里传参  向后台
+                            , url:path+ '/sift/listOld'//后台做模糊搜索接口路径
+                            , method: 'get'
+                        });
+                }
+            };
+
+
+//这个是用于创建点击事件的实例
+        $('.demoTable .layui-btn').on('click', function ()
+        {
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+
+        table.on('tool(test)', function(obj){ //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
+            var data = obj.data //获得当前行数据
+                ,layEvent = obj.event; //获得 lay-event 对应的值
+            if(layEvent === 'detail'){
+                layer.open({
+                    type: 2,
+                    shade: false,
+                    maxmin: true,
+                    area: ['100%', '100%']
+                    ,content: path+'/testPaper/deial?id='+data.id
+                    ,yes: function(index){
+                        layer.close(index);
+                    }
+                });
+
+            } else if(layEvent === 'del'){
+                layer.confirm('真的删除问卷吗？', function(index){
+                    $.ajax({
+                        type: "get",
+                        url: path+"/testPaper/delete",
+                        data: "id="+data.id,
+                        dataType: "text",
+                        success: function (data) {
+                            layer.msg('删除成功');
+                        },
+                        error: function () {
+                            layer.msg('删除失败');
+                        }
+
+                    })
+                    layer.close(index);
+                    location.reload();
+                });
+            } else if(layEvent === 'edit'){
+
+                layer.open({
+                    type: 2,
+                    shade: false,
+                    maxmin: true,
+                    area: ['100%', '100%']
+                    ,content:path+ '/testPaper/edit?id='+data.id
+                    ,yes: function(index){
+                        layer.close(index);
+                    }
+                });
+            }
+
+        });
+
+    });
+
+
+    function question(){
+
+        layer.open({
+            type: 2,
+            shade: false,
+            maxmin: true,
+            area: ['100%', '100%']
+            ,content:path+ '/testPaper/add'
+            ,yes: function(index){
+                layer.close(index);
+            }
+        });
+    }
+    function appealOpen(){
+        $.ajax({
+            type: "get",
+            url: path+"/testPaper/appealOpen?type=1",
+            data: {},
+            dataType: "text",
+            success: function (data) {
+                alert("打开成功");
+            },
+            error: function () {
+                alert("成功");
+            }
+
+        })
+        location.reload();
+
+    }
+    function appealClose(){
+        $.ajax({
+            type: "get",
+            url: path+"/testPaper/appealClose?type=1",
+            data:{},
+            dataType: "text",
+            success: function (data) {
+                alert("打开成功");
+            },
+            error: function () {
+                alert("成功");
+            }
+
+        })
+        location.reload();
+    }
+
+    function batchCheck(){
+        $.ajax({
+            type: "get",
+            url: path+"/testPaper/batchCheck?type=1",
+            data:{},
+            dataType: "text",
+            success: function (data) {
+                alert("打开成功");
+            },
+            error: function () {
+                alert("成功");
+            }
+
+        })
+        location.reload();
+    }
+
+    /*]]>*/
+</script>
+</body>
+</html>

@@ -4,7 +4,6 @@ import cn.vo.dao.hans.TestPaperMapper;
 import cn.vo.pojo.entity.TestPaper;
 import cn.vo.pojo.entity.TestPaperExample;
 import cn.vo.service.ITestPaperService;
-import io.swagger.models.auth.In;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
