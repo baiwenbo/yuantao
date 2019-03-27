@@ -44,6 +44,15 @@ public class SiftController {
         return "views/sift/siftList";
     }
 
+    @GetMapping("siftOldList")
+    public  String  siftOldList(String close, Model model, HttpServletRequest request){
+        HttpSession session=request.getSession();
+        User user= (User) session.getAttribute("USER");
+        model.addAttribute("user",user);
+        model.addAttribute("close",close);
+        return "views/sift/siftOldList";
+    }
+
     @GetMapping("queryCode")
     @ResponseBody
     public String queryCode(String code){
@@ -60,7 +69,7 @@ public class SiftController {
 
     @GetMapping("/listOld")
     @ResponseBody
-    public ListResult<TestPaper> listJson(HttpServletRequest request,Integer monthjudge, String name,String qcheckstatus,
+    public ListResult<TestPaper> listJson(HttpServletRequest request,String monthjudge, String name,String qcheckstatus,
         String checkstatus,Integer type, Integer page, Integer limit){
         Map map=new HashMap<>();
         map.put("monthJudge", monthjudge);
@@ -75,14 +84,14 @@ public class SiftController {
         List<TestPaper> list=null;
         if("0".equals(user.getScpcqx())){
             map.put("code", user.getUsername());
-            list=testPaperService.getMendianQuery(map);
+            list=testPaperService.getOldMendianQuery(map);
         }
         if("2".equals(user.getScpcqx())){
             map.put("company", user.getUsername());
-            list=testPaperService.getCompanyQuery(map);
+            list=testPaperService.getOldCompanyQuery(map);
         }
         if("5".equals(user.getScpcqx()) || "3".equals(user.getScpcqx()) ){
-            list=testPaperService.getListQuery(map);
+            list=testPaperService.getOldListQuery(map);
         }
         ListResult<TestPaper> result=new ListResult<>();
         result.setCode("0");

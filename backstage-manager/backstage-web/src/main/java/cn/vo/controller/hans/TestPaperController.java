@@ -71,7 +71,6 @@ public class TestPaperController {
     public ListResult<TestPaper> listJson(HttpServletRequest request, String name,String qcheckstatus,
                                           String checkstatus,Integer type, Integer page, Integer limit){
         Map map=new HashMap<>();
-        map.put("monthJudge", null);
         map.put("name", name);
         map.put("type", type);
         map.put("qcheckstatus", qcheckstatus);

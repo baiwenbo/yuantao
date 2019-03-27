@@ -73,7 +73,22 @@ public class TestPaperServiceImpl implements ITestPaperService {
 
     @Override
     public List<TestPaper> queryAll(Map map) {
-
         return testPaperMapper.queryAll(map);
     }
+
+    @Override
+    public List<TestPaper> getOldListQuery(Map map) {
+        return testPaperMapper.getOldListQuery(map);
+    }
+
+    @Override
+    public List<TestPaper> getOldMendianQuery(Map map) {
+        return testPaperMapper.getOldMendianQuery(map);
+    }
+
+    @Override
+    public List<TestPaper> getOldCompanyQuery(Map map) {
+        return testPaperMapper.getOldCompanyQuery(map);
+    }
+
 }

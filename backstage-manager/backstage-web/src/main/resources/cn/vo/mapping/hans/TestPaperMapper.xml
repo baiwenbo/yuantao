@@ -4502,7 +4502,7 @@
 
   <select id="getListQuery" resultMap="BaseResultMap" parameterType="map">
     select  <include refid="Base_Column_List" /> from test_paper
-    where disabled=0  and type=#{type} and monthJudge=#{monthJudge}
+    where disabled=0  and type=#{type} and  monthJudge is null
     <if test="name != null and name.length()>0" >
       and  (name like '%${name}%' or company like '%${name}%' or  code like '%${name}%')
     </if>
@@ -4518,7 +4518,7 @@
 
   <select id="getMendianQuery" resultMap="BaseResultMap" parameterType="map">
     select  <include refid="Base_Column_List" /> from test_paper
-    where  code = #{code} and type=#{type} and monthJudge=#{monthJudge}
+    where  code = #{code} and type=#{type} and monthJudge is null
     <if test="name != null and name.length()>0" >
       and  name like '%${name}%'
     </if>
@@ -4533,7 +4533,7 @@
 
   <select id="getCompanyQuery" resultMap="BaseResultMap" parameterType="map">
     select  <include refid="Base_Column_List" /> from test_paper
-    where  company = #{company} and type=#{type} and monthJudge=#{monthJudge}
+    where  company = #{company} and type=#{type} monthJudge is null
     <if test="name != null and name.length()>0" >
       and  name like '%${name}%'
     </if>
@@ -4569,4 +4569,59 @@
     </if>
   </select>
 
+
+  <select id="getOldListQuery" resultMap="BaseResultMap" parameterType="map">
+    select  <include refid="Base_Column_List" /> from test_paper
+    where disabled=0  and type=#{type}
+    <if test="monthJudge != null and monthJudge.length()>0" >
+      and  monthJudge = #{monthJudge}
+    </if>
+    <if test="name != null and name.length()>0" >
+      and  (name like '%${name}%' or company like '%${name}%' or  code like '%${name}%')
+    </if>
+    <if test="qcheckstatus != null and qcheckstatus.length()>0" >
+      and  qcheckStatus = #{qcheckstatus}
+    </if>
+    <if test="checkstatus != null and checkstatus.length()>0" >
+      and  checkStatus = #{checkstatus}
+    </if>
+    limit  #{index} , #{pageSize}
+  </select>
+
+
+  <select id="getOldMendianQuery" resultMap="BaseResultMap" parameterType="map">
+    select  <include refid="Base_Column_List" /> from test_paper
+    where  code = #{code} and type=#{type} and monthJudge is null
+    <if test="name != null and name.length()>0" >
+      and  name like '%${name}%'
+    </if>
+    <if test="monthJudge != null and monthJudge.length()>0" >
+      and  monthJudge = #{monthJudge}
+    </if>
+    <if test="qcheckstatus != null and qcheckstatus.length()>0" >
+      and  qcheckStatus = #{qcheckstatus}
+    </if>
+    <if test="checkstatus != null and checkstatus.length()>0" >
+      and  checkStatus = #{checkstatus}
+    </if>
+    limit  #{index} , #{pageSize}
+  </select>
+
+  <select id="getOldCompanyQuery" resultMap="BaseResultMap" parameterType="map">
+    select  <include refid="Base_Column_List" /> from test_paper
+    where  company = #{company} and type=#{type} monthJudge is null
+    <if test="name != null and name.length()>0" >
+      and  name like '%${name}%'
+    </if>
+    <if test="monthJudge != null and monthJudge.length()>0" >
+      and  monthJudge = #{monthJudge}
+    </if>
+    <if test="qcheckstatus != null and qcheckstatus.length()>0" >
+      and  qcheckStatus = #{qcheckstatus}
+    </if>
+    <if test="checkstatus != null and checkstatus.length()>0" >
+      and  checkStatus = #{checkstatus}
+    </if>
+    limit  #{index} , #{pageSize}
+  </select>
 </mapper>

@@ -30,5 +30,14 @@ public class RoutController {
         return    "views/routine/routList";
     }
 
+    @GetMapping("routOldList")
+    public  String  routOldList(String close, Model model, HttpServletRequest request){
+        HttpSession session=request.getSession();
+        User user= (User) session.getAttribute("USER");
+        model.addAttribute("user",user);
+        model.addAttribute("close",close);
+        return    "views/routine/routOldList";
+    }
+
 
 }

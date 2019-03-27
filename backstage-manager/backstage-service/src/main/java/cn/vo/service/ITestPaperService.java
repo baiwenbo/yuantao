@@ -29,5 +29,11 @@ public interface ITestPaperService {
 
     List<TestPaper> queryAll(Map map);
 
+    List<TestPaper> getOldListQuery(Map map);
+
+    List<TestPaper> getOldMendianQuery(Map map);
+
+    List<TestPaper> getOldCompanyQuery(Map map);
+
 
 }

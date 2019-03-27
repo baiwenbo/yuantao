@@ -45,4 +45,9 @@ public interface TestPaperMapper {
 
     List<TestPaper> queryAll(Map map);
 
+    //以往数据查询
+    List<TestPaper> getOldListQuery(Map map);
+    List<TestPaper> getOldMendianQuery(Map map);
+    List<TestPaper> getOldCompanyQuery(Map map);
+
 }
