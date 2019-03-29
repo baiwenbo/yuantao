@@ -2,10 +2,12 @@ package cn.vo.dao.hans;
 
 import cn.vo.pojo.entity.TestPaper;
 import cn.vo.pojo.entity.TestPaperExample;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Param;
 
 @Mapper
@@ -17,7 +19,7 @@ public interface TestPaperMapper {
     int deleteByPrimaryKey(Integer id);
 
     int insert(TestPaper record);
-
+    @Options(useGeneratedKeys = true,keyProperty = "id",keyColumn = "id")
     int insertSelective(TestPaper record);
 
     List<TestPaper> selectByExample(TestPaperExample example);

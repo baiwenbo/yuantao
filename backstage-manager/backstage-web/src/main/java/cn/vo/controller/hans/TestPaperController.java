@@ -1,27 +1,26 @@
 package cn.vo.controller.hans;
 
 
-import cn.vo.Utils.FileUpload;
 import cn.vo.backstage.Utils.ListResult;
 import cn.vo.backstage.Utils.PageUtils;
 import cn.vo.controller.sift.SiftCount;
 import cn.vo.dao.hans.SiftAddressMapper;
 import cn.vo.pojo.User;
 import cn.vo.pojo.entity.HansSiftAddress;
+import cn.vo.pojo.entity.TestHans;
 import cn.vo.pojo.entity.TestPaper;
 import cn.vo.pojo.entity.XiaodianAddress;
 import cn.vo.service.IQuestionService;
 import cn.vo.service.ITestPaperService;
 import cn.vo.service.IUserService;
 import cn.vo.service.IXiaodianAddressService;
+import cn.vo.service.hans.ITestHansService;
 import cn.vo.util.SorceUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
-
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -48,6 +47,10 @@ public class TestPaperController {
 
     @Autowired
     private SiftAddressMapper siftAddressMapper;
+
+    @Autowired
+    private ITestHansService testHansService;
+
     @GetMapping("list")
     public  String  list(String close, Model model,HttpServletRequest request){
         HttpSession session=request.getSession();
@@ -99,18 +102,21 @@ public class TestPaperController {
         return result;
     }
     @PostMapping("save")
-    public String save(@ModelAttribute TestPaper testPaper){
+    public String save(@ModelAttribute TestPaper testPaper,@ModelAttribute TestHans testHans){
         try {
 
             saveTestPaper(testPaper);
             testPaper.setCheckstatus("正在审核");
             if (testPaper.getType()==1){
                 testPaperService.save(FractionUtil.getFraction(testPaper));
+                testHans.setTestid(testPaper.getId());
+                testHansService.save(testHans);
             }else if (testPaper.getType()==2){
                 testPaperService.save(SorceUtils.getFraction(testPaper));
             }else if(testPaper.getType()==3){
                 testPaperService.save(SiftCount.getFraction(testPaper));
             }
+
         }catch (Exception e){
             e.printStackTrace();
             return "redirect:/testPaper/list?close="+"error";

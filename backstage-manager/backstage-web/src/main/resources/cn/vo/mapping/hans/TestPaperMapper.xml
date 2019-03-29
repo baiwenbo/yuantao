@@ -601,7 +601,7 @@
       #{topic40Two,jdbcType=VARCHAR}, #{topic40Three,jdbcType=VARCHAR}, #{topic40Four,jdbcType=VARCHAR}, 
       #{topic40Fraction,jdbcType=VARCHAR}, #{topic40Six,jdbcType=VARCHAR},#{company})
   </insert>
-  <insert id="insertSelective" parameterType="cn.vo.pojo.entity.TestPaper" >
+  <insert id="insertSelective" parameterType="cn.vo.pojo.entity.TestPaper" useGeneratedKeys="true" keyProperty="id">
     insert into test_paper
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >

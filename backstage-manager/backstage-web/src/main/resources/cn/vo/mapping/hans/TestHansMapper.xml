@@ -1,0 +1,4200 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.vo.dao.hans.TestHansMapper" >
+  <resultMap id="BaseResultMap" type="cn.vo.pojo.entity.TestHans" >
+    <id column="hansId" property="hansid" jdbcType="INTEGER" />
+    <result column="testId" property="testid" jdbcType="INTEGER" />
+    <result column="trough4" property="trough4" jdbcType="VARCHAR" />
+    <result column="trough5" property="trough5" jdbcType="VARCHAR" />
+    <result column="trough6" property="trough6" jdbcType="VARCHAR" />
+    <result column="trough7" property="trough7" jdbcType="INTEGER" />
+    <result column="trough8" property="trough8" jdbcType="VARCHAR" />
+    <result column="trough9" property="trough9" jdbcType="VARCHAR" />
+    <result column="trough10" property="trough10" jdbcType="VARCHAR" />
+    <result column="trough11" property="trough11" jdbcType="VARCHAR" />
+    <result column="trough12" property="trough12" jdbcType="VARCHAR" />
+    <result column="trough13" property="trough13" jdbcType="VARCHAR" />
+    <result column="trough14" property="trough14" jdbcType="VARCHAR" />
+    <result column="trough15" property="trough15" jdbcType="VARCHAR" />
+    <result column="trough16" property="trough16" jdbcType="VARCHAR" />
+    <result column="trough17" property="trough17" jdbcType="VARCHAR" />
+    <result column="trough18" property="trough18" jdbcType="VARCHAR" />
+    <result column="topic41_one" property="topic41One" jdbcType="VARCHAR" />
+    <result column="topic41_two" property="topic41Two" jdbcType="VARCHAR" />
+    <result column="topic41_three" property="topic41Three" jdbcType="VARCHAR" />
+    <result column="topic41_four" property="topic41Four" jdbcType="VARCHAR" />
+    <result column="topic41_fraction" property="topic41Fraction" jdbcType="VARCHAR" />
+    <result column="topic41_six" property="topic41Six" jdbcType="VARCHAR" />
+    <result column="topic42_one" property="topic42One" jdbcType="VARCHAR" />
+    <result column="topic42_two" property="topic42Two" jdbcType="VARCHAR" />
+    <result column="topic42_three" property="topic42Three" jdbcType="VARCHAR" />
+    <result column="topic42_four" property="topic42Four" jdbcType="VARCHAR" />
+    <result column="topic42_fraction" property="topic42Fraction" jdbcType="VARCHAR" />
+    <result column="topic42_six" property="topic42Six" jdbcType="VARCHAR" />
+    <result column="topic43_one" property="topic43One" jdbcType="VARCHAR" />
+    <result column="topic43_two" property="topic43Two" jdbcType="VARCHAR" />
+    <result column="topic43_three" property="topic43Three" jdbcType="VARCHAR" />
+    <result column="topic43_four" property="topic43Four" jdbcType="VARCHAR" />
+    <result column="topic43_fraction" property="topic43Fraction" jdbcType="VARCHAR" />
+    <result column="topic43_six" property="topic43Six" jdbcType="VARCHAR" />
+    <result column="topic44_one" property="topic44One" jdbcType="VARCHAR" />
+    <result column="topic44_two" property="topic44Two" jdbcType="VARCHAR" />
+    <result column="topic44_three" property="topic44Three" jdbcType="VARCHAR" />
+    <result column="topic44_four" property="topic44Four" jdbcType="VARCHAR" />
+    <result column="topic44_fraction" property="topic44Fraction" jdbcType="VARCHAR" />
+    <result column="topic44_six" property="topic44Six" jdbcType="VARCHAR" />
+    <result column="topic45_one" property="topic45One" jdbcType="VARCHAR" />
+    <result column="topic45_two" property="topic45Two" jdbcType="VARCHAR" />
+    <result column="topic45_three" property="topic45Three" jdbcType="VARCHAR" />
+    <result column="topic45_four" property="topic45Four" jdbcType="VARCHAR" />
+    <result column="topic45_fraction" property="topic45Fraction" jdbcType="VARCHAR" />
+    <result column="topic45_six" property="topic45Six" jdbcType="VARCHAR" />
+    <result column="topic46_one" property="topic46One" jdbcType="VARCHAR" />
+    <result column="topic46_two" property="topic46Two" jdbcType="VARCHAR" />
+    <result column="topic46_three" property="topic46Three" jdbcType="VARCHAR" />
+    <result column="topic46_four" property="topic46Four" jdbcType="VARCHAR" />
+    <result column="topic46_fraction" property="topic46Fraction" jdbcType="VARCHAR" />
+    <result column="topic46_six" property="topic46Six" jdbcType="VARCHAR" />
+    <result column="topic47_one" property="topic47One" jdbcType="VARCHAR" />
+    <result column="topic47_two" property="topic47Two" jdbcType="VARCHAR" />
+    <result column="topic47_three" property="topic47Three" jdbcType="VARCHAR" />
+    <result column="topic47_four" property="topic47Four" jdbcType="VARCHAR" />
+    <result column="topic47_fraction" property="topic47Fraction" jdbcType="VARCHAR" />
+    <result column="topic47_six" property="topic47Six" jdbcType="VARCHAR" />
+    <result column="topic48_one" property="topic48One" jdbcType="VARCHAR" />
+    <result column="topic48_two" property="topic48Two" jdbcType="VARCHAR" />
+    <result column="topic48_three" property="topic48Three" jdbcType="VARCHAR" />
+    <result column="topic48_four" property="topic48Four" jdbcType="VARCHAR" />
+    <result column="topic48_fraction" property="topic48Fraction" jdbcType="VARCHAR" />
+    <result column="topic48_six" property="topic48Six" jdbcType="VARCHAR" />
+    <result column="topic49_one" property="topic49One" jdbcType="VARCHAR" />
+    <result column="topic49_two" property="topic49Two" jdbcType="VARCHAR" />
+    <result column="topic49_three" property="topic49Three" jdbcType="VARCHAR" />
+    <result column="topic49_four" property="topic49Four" jdbcType="VARCHAR" />
+    <result column="topic49_fraction" property="topic49Fraction" jdbcType="VARCHAR" />
+    <result column="topic49_six" property="topic49Six" jdbcType="VARCHAR" />
+    <result column="topic50_one" property="topic50One" jdbcType="VARCHAR" />
+    <result column="topic50_two" property="topic50Two" jdbcType="VARCHAR" />
+    <result column="topic50_three" property="topic50Three" jdbcType="VARCHAR" />
+    <result column="topic50_four" property="topic50Four" jdbcType="VARCHAR" />
+    <result column="topic50_fraction" property="topic50Fraction" jdbcType="VARCHAR" />
+    <result column="topic50_six" property="topic50Six" jdbcType="VARCHAR" />
+    <result column="topic51_one" property="topic51One" jdbcType="VARCHAR" />
+    <result column="topic51_two" property="topic51Two" jdbcType="VARCHAR" />
+    <result column="topic51_three" property="topic51Three" jdbcType="VARCHAR" />
+    <result column="topic51_four" property="topic51Four" jdbcType="VARCHAR" />
+    <result column="topic51_fraction" property="topic51Fraction" jdbcType="VARCHAR" />
+    <result column="topic51_six" property="topic51Six" jdbcType="VARCHAR" />
+    <result column="topic52_one" property="topic52One" jdbcType="VARCHAR" />
+    <result column="topic52_two" property="topic52Two" jdbcType="VARCHAR" />
+    <result column="topic52_three" property="topic52Three" jdbcType="VARCHAR" />
+    <result column="topic52_four" property="topic52Four" jdbcType="VARCHAR" />
+    <result column="topic52_fraction" property="topic52Fraction" jdbcType="VARCHAR" />
+    <result column="topic52_six" property="topic52Six" jdbcType="VARCHAR" />
+    <result column="topic53_one" property="topic53One" jdbcType="VARCHAR" />
+    <result column="topic53_two" property="topic53Two" jdbcType="VARCHAR" />
+    <result column="topic53_three" property="topic53Three" jdbcType="VARCHAR" />
+    <result column="topic53_four" property="topic53Four" jdbcType="VARCHAR" />
+    <result column="topic53_fraction" property="topic53Fraction" jdbcType="VARCHAR" />
+    <result column="topic53_six" property="topic53Six" jdbcType="VARCHAR" />
+    <result column="topic54_one" property="topic54One" jdbcType="VARCHAR" />
+    <result column="topic54_two" property="topic54Two" jdbcType="VARCHAR" />
+    <result column="topic54_three" property="topic54Three" jdbcType="VARCHAR" />
+    <result column="topic54_four" property="topic54Four" jdbcType="VARCHAR" />
+    <result column="topic54_fraction" property="topic54Fraction" jdbcType="VARCHAR" />
+    <result column="topic54_six" property="topic54Six" jdbcType="VARCHAR" />
+    <result column="topic55_one" property="topic55One" jdbcType="VARCHAR" />
+    <result column="topic55_two" property="topic55Two" jdbcType="VARCHAR" />
+    <result column="topic55_three" property="topic55Three" jdbcType="VARCHAR" />
+    <result column="topic55_four" property="topic55Four" jdbcType="VARCHAR" />
+    <result column="topic55_fraction" property="topic55Fraction" jdbcType="VARCHAR" />
+    <result column="topic55_six" property="topic55Six" jdbcType="VARCHAR" />
+    <result column="topic56_one" property="topic56One" jdbcType="VARCHAR" />
+    <result column="topic56_two" property="topic56Two" jdbcType="VARCHAR" />
+    <result column="topic56_three" property="topic56Three" jdbcType="VARCHAR" />
+    <result column="topic56_four" property="topic56Four" jdbcType="VARCHAR" />
+    <result column="topic56_fraction" property="topic56Fraction" jdbcType="VARCHAR" />
+    <result column="topic56_six" property="topic56Six" jdbcType="VARCHAR" />
+    <result column="topic57_one" property="topic57One" jdbcType="VARCHAR" />
+    <result column="topic57_two" property="topic57Two" jdbcType="VARCHAR" />
+    <result column="topic57_three" property="topic57Three" jdbcType="VARCHAR" />
+    <result column="topic57_four" property="topic57Four" jdbcType="VARCHAR" />
+    <result column="topic57_fraction" property="topic57Fraction" jdbcType="VARCHAR" />
+    <result column="topic57_six" property="topic57Six" jdbcType="VARCHAR" />
+    <result column="topic58_one" property="topic58One" jdbcType="VARCHAR" />
+    <result column="topic58_two" property="topic58Two" jdbcType="VARCHAR" />
+    <result column="topic58_three" property="topic58Three" jdbcType="VARCHAR" />
+    <result column="topic58_four" property="topic58Four" jdbcType="VARCHAR" />
+    <result column="topic58_fraction" property="topic58Fraction" jdbcType="VARCHAR" />
+    <result column="topic58_six" property="topic58Six" jdbcType="VARCHAR" />
+    <result column="topic59_one" property="topic59One" jdbcType="VARCHAR" />
+    <result column="topic59_two" property="topic59Two" jdbcType="VARCHAR" />
+    <result column="topic59_three" property="topic59Three" jdbcType="VARCHAR" />
+    <result column="topic59_four" property="topic59Four" jdbcType="VARCHAR" />
+    <result column="topic59_fraction" property="topic59Fraction" jdbcType="VARCHAR" />
+    <result column="topic59_six" property="topic59Six" jdbcType="VARCHAR" />
+    <result column="topic60_one" property="topic60One" jdbcType="VARCHAR" />
+    <result column="topic60_two" property="topic60Two" jdbcType="VARCHAR" />
+    <result column="topic60_three" property="topic60Three" jdbcType="VARCHAR" />
+    <result column="topic60_four" property="topic60Four" jdbcType="VARCHAR" />
+    <result column="topic60_fraction" property="topic60Fraction" jdbcType="VARCHAR" />
+    <result column="topic60_six" property="topic60Six" jdbcType="VARCHAR" />
+    <result column="topic61_one" property="topic61One" jdbcType="VARCHAR" />
+    <result column="topic61_two" property="topic61Two" jdbcType="VARCHAR" />
+    <result column="topic61_three" property="topic61Three" jdbcType="VARCHAR" />
+    <result column="topic61_four" property="topic61Four" jdbcType="VARCHAR" />
+    <result column="topic61_fraction" property="topic61Fraction" jdbcType="VARCHAR" />
+    <result column="topic61_six" property="topic61Six" jdbcType="VARCHAR" />
+    <result column="topic62_one" property="topic62One" jdbcType="VARCHAR" />
+    <result column="topic62_two" property="topic62Two" jdbcType="VARCHAR" />
+    <result column="topic62_three" property="topic62Three" jdbcType="VARCHAR" />
+    <result column="topic62_four" property="topic62Four" jdbcType="VARCHAR" />
+    <result column="topic62_fraction" property="topic62Fraction" jdbcType="VARCHAR" />
+    <result column="topic62_six" property="topic62Six" jdbcType="VARCHAR" />
+    <result column="topic63_one" property="topic63One" jdbcType="VARCHAR" />
+    <result column="topic63_two" property="topic63Two" jdbcType="VARCHAR" />
+    <result column="topic63_three" property="topic63Three" jdbcType="VARCHAR" />
+    <result column="topic63_four" property="topic63Four" jdbcType="VARCHAR" />
+    <result column="topic63_fraction" property="topic63Fraction" jdbcType="VARCHAR" />
+    <result column="topic63_six" property="topic63Six" jdbcType="VARCHAR" />
+    <result column="topic64_one" property="topic64One" jdbcType="VARCHAR" />
+    <result column="topic64_two" property="topic64Two" jdbcType="VARCHAR" />
+    <result column="topic64_three" property="topic64Three" jdbcType="VARCHAR" />
+    <result column="topic64_four" property="topic64Four" jdbcType="VARCHAR" />
+    <result column="topic64_fraction" property="topic64Fraction" jdbcType="VARCHAR" />
+    <result column="topic64_six" property="topic64Six" jdbcType="VARCHAR" />
+    <result column="topic65_one" property="topic65One" jdbcType="VARCHAR" />
+    <result column="topic65_two" property="topic65Two" jdbcType="VARCHAR" />
+    <result column="topic65_three" property="topic65Three" jdbcType="VARCHAR" />
+    <result column="topic65_four" property="topic65Four" jdbcType="VARCHAR" />
+    <result column="topic65_fraction" property="topic65Fraction" jdbcType="VARCHAR" />
+    <result column="topic65_six" property="topic65Six" jdbcType="VARCHAR" />
+    <result column="topic66_one" property="topic66One" jdbcType="VARCHAR" />
+    <result column="topic66_two" property="topic66Two" jdbcType="VARCHAR" />
+    <result column="topic66_three" property="topic66Three" jdbcType="VARCHAR" />
+    <result column="topic66_four" property="topic66Four" jdbcType="VARCHAR" />
+    <result column="topic66_fraction" property="topic66Fraction" jdbcType="VARCHAR" />
+    <result column="topic66_six" property="topic66Six" jdbcType="VARCHAR" />
+    <result column="topic67_one" property="topic67One" jdbcType="VARCHAR" />
+    <result column="topic67_two" property="topic67Two" jdbcType="VARCHAR" />
+    <result column="topic67_three" property="topic67Three" jdbcType="VARCHAR" />
+    <result column="topic67_four" property="topic67Four" jdbcType="VARCHAR" />
+    <result column="topic67_fraction" property="topic67Fraction" jdbcType="VARCHAR" />
+    <result column="topic67_six" property="topic67Six" jdbcType="VARCHAR" />
+    <result column="topic68_one" property="topic68One" jdbcType="VARCHAR" />
+    <result column="topic68_two" property="topic68Two" jdbcType="VARCHAR" />
+    <result column="topic68_three" property="topic68Three" jdbcType="VARCHAR" />
+    <result column="topic68_four" property="topic68Four" jdbcType="VARCHAR" />
+    <result column="topic68_fraction" property="topic68Fraction" jdbcType="VARCHAR" />
+    <result column="topic68_six" property="topic68Six" jdbcType="VARCHAR" />
+    <result column="topic69_one" property="topic69One" jdbcType="VARCHAR" />
+    <result column="topic69_two" property="topic69Two" jdbcType="VARCHAR" />
+    <result column="topic69_three" property="topic69Three" jdbcType="VARCHAR" />
+    <result column="topic69_four" property="topic69Four" jdbcType="VARCHAR" />
+    <result column="topic69_fraction" property="topic69Fraction" jdbcType="VARCHAR" />
+    <result column="topic69_six" property="topic69Six" jdbcType="VARCHAR" />
+    <result column="topic70_one" property="topic70One" jdbcType="VARCHAR" />
+    <result column="topic70_two" property="topic70Two" jdbcType="VARCHAR" />
+    <result column="topic70_three" property="topic70Three" jdbcType="VARCHAR" />
+    <result column="topic70_four" property="topic70Four" jdbcType="VARCHAR" />
+    <result column="topic70_fraction" property="topic70Fraction" jdbcType="VARCHAR" />
+    <result column="topic70_six" property="topic70Six" jdbcType="VARCHAR" />
+    <result column="topic71_one" property="topic71One" jdbcType="VARCHAR" />
+    <result column="topic71_two" property="topic71Two" jdbcType="VARCHAR" />
+    <result column="topic71_three" property="topic71Three" jdbcType="VARCHAR" />
+    <result column="topic71_four" property="topic71Four" jdbcType="VARCHAR" />
+    <result column="topic71_fraction" property="topic71Fraction" jdbcType="VARCHAR" />
+    <result column="topic71_six" property="topic71Six" jdbcType="VARCHAR" />
+    <result column="topic72_one" property="topic72One" jdbcType="VARCHAR" />
+    <result column="topic72_two" property="topic72Two" jdbcType="VARCHAR" />
+    <result column="topic72_three" property="topic72Three" jdbcType="VARCHAR" />
+    <result column="topic72_four" property="topic72Four" jdbcType="VARCHAR" />
+    <result column="topic72_fraction" property="topic72Fraction" jdbcType="VARCHAR" />
+    <result column="topic72_six" property="topic72Six" jdbcType="VARCHAR" />
+    <result column="topic73_one" property="topic73One" jdbcType="VARCHAR" />
+    <result column="topic73_two" property="topic73Two" jdbcType="VARCHAR" />
+    <result column="topic73_three" property="topic73Three" jdbcType="VARCHAR" />
+    <result column="topic73_four" property="topic73Four" jdbcType="VARCHAR" />
+    <result column="topic73_fraction" property="topic73Fraction" jdbcType="VARCHAR" />
+    <result column="topic73_six" property="topic73Six" jdbcType="VARCHAR" />
+    <result column="topic74_one" property="topic74One" jdbcType="VARCHAR" />
+    <result column="topic74_two" property="topic74Two" jdbcType="VARCHAR" />
+    <result column="topic74_three" property="topic74Three" jdbcType="VARCHAR" />
+    <result column="topic74_four" property="topic74Four" jdbcType="VARCHAR" />
+    <result column="topic74_fraction" property="topic74Fraction" jdbcType="VARCHAR" />
+    <result column="topic74_six" property="topic74Six" jdbcType="VARCHAR" />
+    <result column="topic75_one" property="topic75One" jdbcType="VARCHAR" />
+    <result column="topic75_two" property="topic75Two" jdbcType="VARCHAR" />
+    <result column="topic75_three" property="topic75Three" jdbcType="VARCHAR" />
+    <result column="topic75_four" property="topic75Four" jdbcType="VARCHAR" />
+    <result column="topic75_fraction" property="topic75Fraction" jdbcType="VARCHAR" />
+    <result column="topic75_six" property="topic75Six" jdbcType="VARCHAR" />
+    <result column="topic76_one" property="topic76One" jdbcType="VARCHAR" />
+    <result column="topic76_two" property="topic76Two" jdbcType="VARCHAR" />
+    <result column="topic76_three" property="topic76Three" jdbcType="VARCHAR" />
+    <result column="topic76_four" property="topic76Four" jdbcType="VARCHAR" />
+    <result column="topic76_fraction" property="topic76Fraction" jdbcType="VARCHAR" />
+    <result column="topic76_six" property="topic76Six" jdbcType="VARCHAR" />
+    <result column="topic77_one" property="topic77One" jdbcType="VARCHAR" />
+    <result column="topic77_two" property="topic77Two" jdbcType="VARCHAR" />
+    <result column="topic77_three" property="topic77Three" jdbcType="VARCHAR" />
+    <result column="topic77_four" property="topic77Four" jdbcType="VARCHAR" />
+    <result column="topic77_fraction" property="topic77Fraction" jdbcType="VARCHAR" />
+    <result column="topic77_six" property="topic77Six" jdbcType="VARCHAR" />
+    <result column="topic78_one" property="topic78One" jdbcType="VARCHAR" />
+    <result column="topic78_two" property="topic78Two" jdbcType="VARCHAR" />
+    <result column="topic78_three" property="topic78Three" jdbcType="VARCHAR" />
+    <result column="topic78_four" property="topic78Four" jdbcType="VARCHAR" />
+    <result column="topic78_fraction" property="topic78Fraction" jdbcType="VARCHAR" />
+    <result column="topic78_six" property="topic78Six" jdbcType="VARCHAR" />
+    <result column="topic79_one" property="topic79One" jdbcType="VARCHAR" />
+    <result column="topic79_two" property="topic79Two" jdbcType="VARCHAR" />
+    <result column="topic79_three" property="topic79Three" jdbcType="VARCHAR" />
+    <result column="topic79_four" property="topic79Four" jdbcType="VARCHAR" />
+    <result column="topic79_fraction" property="topic79Fraction" jdbcType="VARCHAR" />
+    <result column="topic79_six" property="topic79Six" jdbcType="VARCHAR" />
+    <result column="topic80_one" property="topic80One" jdbcType="VARCHAR" />
+    <result column="topic80_two" property="topic80Two" jdbcType="VARCHAR" />
+    <result column="topic80_three" property="topic80Three" jdbcType="VARCHAR" />
+    <result column="topic80_four" property="topic80Four" jdbcType="VARCHAR" />
+    <result column="topic80_fraction" property="topic80Fraction" jdbcType="VARCHAR" />
+    <result column="topic80_six" property="topic80Six" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    hansId, testId, trough4, trough5, trough6, trough7, trough8, trough9, trough10, trough11, 
+    trough12, trough13, trough14, trough15, trough16, trough17, trough18, topic41_one, 
+    topic41_two, topic41_three, topic41_four, topic41_fraction, topic41_six, topic42_one, 
+    topic42_two, topic42_three, topic42_four, topic42_fraction, topic42_six, topic43_one, 
+    topic43_two, topic43_three, topic43_four, topic43_fraction, topic43_six, topic44_one, 
+    topic44_two, topic44_three, topic44_four, topic44_fraction, topic44_six, topic45_one, 
+    topic45_two, topic45_three, topic45_four, topic45_fraction, topic45_six, topic46_one, 
+    topic46_two, topic46_three, topic46_four, topic46_fraction, topic46_six, topic47_one, 
+    topic47_two, topic47_three, topic47_four, topic47_fraction, topic47_six, topic48_one, 
+    topic48_two, topic48_three, topic48_four, topic48_fraction, topic48_six, topic49_one, 
+    topic49_two, topic49_three, topic49_four, topic49_fraction, topic49_six, topic50_one, 
+    topic50_two, topic50_three, topic50_four, topic50_fraction, topic50_six, topic51_one, 
+    topic51_two, topic51_three, topic51_four, topic51_fraction, topic51_six, topic52_one, 
+    topic52_two, topic52_three, topic52_four, topic52_fraction, topic52_six, topic53_one, 
+    topic53_two, topic53_three, topic53_four, topic53_fraction, topic53_six, topic54_one, 
+    topic54_two, topic54_three, topic54_four, topic54_fraction, topic54_six, topic55_one, 
+    topic55_two, topic55_three, topic55_four, topic55_fraction, topic55_six, topic56_one, 
+    topic56_two, topic56_three, topic56_four, topic56_fraction, topic56_six, topic57_one, 
+    topic57_two, topic57_three, topic57_four, topic57_fraction, topic57_six, topic58_one, 
+    topic58_two, topic58_three, topic58_four, topic58_fraction, topic58_six, topic59_one, 
+    topic59_two, topic59_three, topic59_four, topic59_fraction, topic59_six, topic60_one, 
+    topic60_two, topic60_three, topic60_four, topic60_fraction, topic60_six, topic61_one, 
+    topic61_two, topic61_three, topic61_four, topic61_fraction, topic61_six, topic62_one, 
+    topic62_two, topic62_three, topic62_four, topic62_fraction, topic62_six, topic63_one, 
+    topic63_two, topic63_three, topic63_four, topic63_fraction, topic63_six, topic64_one, 
+    topic64_two, topic64_three, topic64_four, topic64_fraction, topic64_six, topic65_one, 
+    topic65_two, topic65_three, topic65_four, topic65_fraction, topic65_six, topic66_one, 
+    topic66_two, topic66_three, topic66_four, topic66_fraction, topic66_six, topic67_one, 
+    topic67_two, topic67_three, topic67_four, topic67_fraction, topic67_six, topic68_one, 
+    topic68_two, topic68_three, topic68_four, topic68_fraction, topic68_six, topic69_one, 
+    topic69_two, topic69_three, topic69_four, topic69_fraction, topic69_six, topic70_one, 
+    topic70_two, topic70_three, topic70_four, topic70_fraction, topic70_six, topic71_one, 
+    topic71_two, topic71_three, topic71_four, topic71_fraction, topic71_six, topic72_one, 
+    topic72_two, topic72_three, topic72_four, topic72_fraction, topic72_six, topic73_one, 
+    topic73_two, topic73_three, topic73_four, topic73_fraction, topic73_six, topic74_one, 
+    topic74_two, topic74_three, topic74_four, topic74_fraction, topic74_six, topic75_one, 
+    topic75_two, topic75_three, topic75_four, topic75_fraction, topic75_six, topic76_one, 
+    topic76_two, topic76_three, topic76_four, topic76_fraction, topic76_six, topic77_one, 
+    topic77_two, topic77_three, topic77_four, topic77_fraction, topic77_six, topic78_one, 
+    topic78_two, topic78_three, topic78_four, topic78_fraction, topic78_six, topic79_one, 
+    topic79_two, topic79_three, topic79_four, topic79_fraction, topic79_six, topic80_one, 
+    topic80_two, topic80_three, topic80_four, topic80_fraction, topic80_six
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="cn.vo.pojo.entity.TestHansExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from test_hans
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from test_hans
+    where hansId = #{hansid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from test_hans
+    where hansId = #{hansid,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="cn.vo.pojo.entity.TestHansExample" >
+    delete from test_hans
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="cn.vo.pojo.entity.TestHans" >
+    insert into test_hans (hansId, testId, trough4, 
+      trough5, trough6, trough7, 
+      trough8, trough9, trough10, 
+      trough11, trough12, trough13, 
+      trough14, trough15, trough16, 
+      trough17, trough18, topic41_one, 
+      topic41_two, topic41_three, topic41_four, 
+      topic41_fraction, topic41_six, topic42_one, 
+      topic42_two, topic42_three, topic42_four, 
+      topic42_fraction, topic42_six, topic43_one, 
+      topic43_two, topic43_three, topic43_four, 
+      topic43_fraction, topic43_six, topic44_one, 
+      topic44_two, topic44_three, topic44_four, 
+      topic44_fraction, topic44_six, topic45_one, 
+      topic45_two, topic45_three, topic45_four, 
+      topic45_fraction, topic45_six, topic46_one, 
+      topic46_two, topic46_three, topic46_four, 
+      topic46_fraction, topic46_six, topic47_one, 
+      topic47_two, topic47_three, topic47_four, 
+      topic47_fraction, topic47_six, topic48_one, 
+      topic48_two, topic48_three, topic48_four, 
+      topic48_fraction, topic48_six, topic49_one, 
+      topic49_two, topic49_three, topic49_four, 
+      topic49_fraction, topic49_six, topic50_one, 
+      topic50_two, topic50_three, topic50_four, 
+      topic50_fraction, topic50_six, topic51_one, 
+      topic51_two, topic51_three, topic51_four, 
+      topic51_fraction, topic51_six, topic52_one, 
+      topic52_two, topic52_three, topic52_four, 
+      topic52_fraction, topic52_six, topic53_one, 
+      topic53_two, topic53_three, topic53_four, 
+      topic53_fraction, topic53_six, topic54_one, 
+      topic54_two, topic54_three, topic54_four, 
+      topic54_fraction, topic54_six, topic55_one, 
+      topic55_two, topic55_three, topic55_four, 
+      topic55_fraction, topic55_six, topic56_one, 
+      topic56_two, topic56_three, topic56_four, 
+      topic56_fraction, topic56_six, topic57_one, 
+      topic57_two, topic57_three, topic57_four, 
+      topic57_fraction, topic57_six, topic58_one, 
+      topic58_two, topic58_three, topic58_four, 
+      topic58_fraction, topic58_six, topic59_one, 
+      topic59_two, topic59_three, topic59_four, 
+      topic59_fraction, topic59_six, topic60_one, 
+      topic60_two, topic60_three, topic60_four, 
+      topic60_fraction, topic60_six, topic61_one, 
+      topic61_two, topic61_three, topic61_four, 
+      topic61_fraction, topic61_six, topic62_one, 
+      topic62_two, topic62_three, topic62_four, 
+      topic62_fraction, topic62_six, topic63_one, 
+      topic63_two, topic63_three, topic63_four, 
+      topic63_fraction, topic63_six, topic64_one, 
+      topic64_two, topic64_three, topic64_four, 
+      topic64_fraction, topic64_six, topic65_one, 
+      topic65_two, topic65_three, topic65_four, 
+      topic65_fraction, topic65_six, topic66_one, 
+      topic66_two, topic66_three, topic66_four, 
+      topic66_fraction, topic66_six, topic67_one, 
+      topic67_two, topic67_three, topic67_four, 
+      topic67_fraction, topic67_six, topic68_one, 
+      topic68_two, topic68_three, topic68_four, 
+      topic68_fraction, topic68_six, topic69_one, 
+      topic69_two, topic69_three, topic69_four, 
+      topic69_fraction, topic69_six, topic70_one, 
+      topic70_two, topic70_three, topic70_four, 
+      topic70_fraction, topic70_six, topic71_one, 
+      topic71_two, topic71_three, topic71_four, 
+      topic71_fraction, topic71_six, topic72_one, 
+      topic72_two, topic72_three, topic72_four, 
+      topic72_fraction, topic72_six, topic73_one, 
+      topic73_two, topic73_three, topic73_four, 
+      topic73_fraction, topic73_six, topic74_one, 
+      topic74_two, topic74_three, topic74_four, 
+      topic74_fraction, topic74_six, topic75_one, 
+      topic75_two, topic75_three, topic75_four, 
+      topic75_fraction, topic75_six, topic76_one, 
+      topic76_two, topic76_three, topic76_four, 
+      topic76_fraction, topic76_six, topic77_one, 
+      topic77_two, topic77_three, topic77_four, 
+      topic77_fraction, topic77_six, topic78_one, 
+      topic78_two, topic78_three, topic78_four, 
+      topic78_fraction, topic78_six, topic79_one, 
+      topic79_two, topic79_three, topic79_four, 
+      topic79_fraction, topic79_six, topic80_one, 
+      topic80_two, topic80_three, topic80_four, 
+      topic80_fraction, topic80_six)
+    values (#{hansid,jdbcType=INTEGER}, #{testid,jdbcType=INTEGER}, #{trough4,jdbcType=VARCHAR}, 
+      #{trough5,jdbcType=VARCHAR}, #{trough6,jdbcType=VARCHAR}, #{trough7,jdbcType=INTEGER}, 
+      #{trough8,jdbcType=VARCHAR}, #{trough9,jdbcType=VARCHAR}, #{trough10,jdbcType=VARCHAR}, 
+      #{trough11,jdbcType=VARCHAR}, #{trough12,jdbcType=VARCHAR}, #{trough13,jdbcType=VARCHAR}, 
+      #{trough14,jdbcType=VARCHAR}, #{trough15,jdbcType=VARCHAR}, #{trough16,jdbcType=VARCHAR}, 
+      #{trough17,jdbcType=VARCHAR}, #{trough18,jdbcType=VARCHAR}, #{topic41One,jdbcType=VARCHAR}, 
+      #{topic41Two,jdbcType=VARCHAR}, #{topic41Three,jdbcType=VARCHAR}, #{topic41Four,jdbcType=VARCHAR}, 
+      #{topic41Fraction,jdbcType=VARCHAR}, #{topic41Six,jdbcType=VARCHAR}, #{topic42One,jdbcType=VARCHAR}, 
+      #{topic42Two,jdbcType=VARCHAR}, #{topic42Three,jdbcType=VARCHAR}, #{topic42Four,jdbcType=VARCHAR}, 
+      #{topic42Fraction,jdbcType=VARCHAR}, #{topic42Six,jdbcType=VARCHAR}, #{topic43One,jdbcType=VARCHAR}, 
+      #{topic43Two,jdbcType=VARCHAR}, #{topic43Three,jdbcType=VARCHAR}, #{topic43Four,jdbcType=VARCHAR}, 
+      #{topic43Fraction,jdbcType=VARCHAR}, #{topic43Six,jdbcType=VARCHAR}, #{topic44One,jdbcType=VARCHAR}, 
+      #{topic44Two,jdbcType=VARCHAR}, #{topic44Three,jdbcType=VARCHAR}, #{topic44Four,jdbcType=VARCHAR}, 
+      #{topic44Fraction,jdbcType=VARCHAR}, #{topic44Six,jdbcType=VARCHAR}, #{topic45One,jdbcType=VARCHAR}, 
+      #{topic45Two,jdbcType=VARCHAR}, #{topic45Three,jdbcType=VARCHAR}, #{topic45Four,jdbcType=VARCHAR}, 
+      #{topic45Fraction,jdbcType=VARCHAR}, #{topic45Six,jdbcType=VARCHAR}, #{topic46One,jdbcType=VARCHAR}, 
+      #{topic46Two,jdbcType=VARCHAR}, #{topic46Three,jdbcType=VARCHAR}, #{topic46Four,jdbcType=VARCHAR}, 
+      #{topic46Fraction,jdbcType=VARCHAR}, #{topic46Six,jdbcType=VARCHAR}, #{topic47One,jdbcType=VARCHAR}, 
+      #{topic47Two,jdbcType=VARCHAR}, #{topic47Three,jdbcType=VARCHAR}, #{topic47Four,jdbcType=VARCHAR}, 
+      #{topic47Fraction,jdbcType=VARCHAR}, #{topic47Six,jdbcType=VARCHAR}, #{topic48One,jdbcType=VARCHAR}, 
+      #{topic48Two,jdbcType=VARCHAR}, #{topic48Three,jdbcType=VARCHAR}, #{topic48Four,jdbcType=VARCHAR}, 
+      #{topic48Fraction,jdbcType=VARCHAR}, #{topic48Six,jdbcType=VARCHAR}, #{topic49One,jdbcType=VARCHAR}, 
+      #{topic49Two,jdbcType=VARCHAR}, #{topic49Three,jdbcType=VARCHAR}, #{topic49Four,jdbcType=VARCHAR}, 
+      #{topic49Fraction,jdbcType=VARCHAR}, #{topic49Six,jdbcType=VARCHAR}, #{topic50One,jdbcType=VARCHAR}, 
+      #{topic50Two,jdbcType=VARCHAR}, #{topic50Three,jdbcType=VARCHAR}, #{topic50Four,jdbcType=VARCHAR}, 
+      #{topic50Fraction,jdbcType=VARCHAR}, #{topic50Six,jdbcType=VARCHAR}, #{topic51One,jdbcType=VARCHAR}, 
+      #{topic51Two,jdbcType=VARCHAR}, #{topic51Three,jdbcType=VARCHAR}, #{topic51Four,jdbcType=VARCHAR}, 
+      #{topic51Fraction,jdbcType=VARCHAR}, #{topic51Six,jdbcType=VARCHAR}, #{topic52One,jdbcType=VARCHAR}, 
+      #{topic52Two,jdbcType=VARCHAR}, #{topic52Three,jdbcType=VARCHAR}, #{topic52Four,jdbcType=VARCHAR}, 
+      #{topic52Fraction,jdbcType=VARCHAR}, #{topic52Six,jdbcType=VARCHAR}, #{topic53One,jdbcType=VARCHAR}, 
+      #{topic53Two,jdbcType=VARCHAR}, #{topic53Three,jdbcType=VARCHAR}, #{topic53Four,jdbcType=VARCHAR}, 
+      #{topic53Fraction,jdbcType=VARCHAR}, #{topic53Six,jdbcType=VARCHAR}, #{topic54One,jdbcType=VARCHAR}, 
+      #{topic54Two,jdbcType=VARCHAR}, #{topic54Three,jdbcType=VARCHAR}, #{topic54Four,jdbcType=VARCHAR}, 
+      #{topic54Fraction,jdbcType=VARCHAR}, #{topic54Six,jdbcType=VARCHAR}, #{topic55One,jdbcType=VARCHAR}, 
+      #{topic55Two,jdbcType=VARCHAR}, #{topic55Three,jdbcType=VARCHAR}, #{topic55Four,jdbcType=VARCHAR}, 
+      #{topic55Fraction,jdbcType=VARCHAR}, #{topic55Six,jdbcType=VARCHAR}, #{topic56One,jdbcType=VARCHAR}, 
+      #{topic56Two,jdbcType=VARCHAR}, #{topic56Three,jdbcType=VARCHAR}, #{topic56Four,jdbcType=VARCHAR}, 
+      #{topic56Fraction,jdbcType=VARCHAR}, #{topic56Six,jdbcType=VARCHAR}, #{topic57One,jdbcType=VARCHAR}, 
+      #{topic57Two,jdbcType=VARCHAR}, #{topic57Three,jdbcType=VARCHAR}, #{topic57Four,jdbcType=VARCHAR}, 
+      #{topic57Fraction,jdbcType=VARCHAR}, #{topic57Six,jdbcType=VARCHAR}, #{topic58One,jdbcType=VARCHAR}, 
+      #{topic58Two,jdbcType=VARCHAR}, #{topic58Three,jdbcType=VARCHAR}, #{topic58Four,jdbcType=VARCHAR}, 
+      #{topic58Fraction,jdbcType=VARCHAR}, #{topic58Six,jdbcType=VARCHAR}, #{topic59One,jdbcType=VARCHAR}, 
+      #{topic59Two,jdbcType=VARCHAR}, #{topic59Three,jdbcType=VARCHAR}, #{topic59Four,jdbcType=VARCHAR}, 
+      #{topic59Fraction,jdbcType=VARCHAR}, #{topic59Six,jdbcType=VARCHAR}, #{topic60One,jdbcType=VARCHAR}, 
+      #{topic60Two,jdbcType=VARCHAR}, #{topic60Three,jdbcType=VARCHAR}, #{topic60Four,jdbcType=VARCHAR}, 
+      #{topic60Fraction,jdbcType=VARCHAR}, #{topic60Six,jdbcType=VARCHAR}, #{topic61One,jdbcType=VARCHAR}, 
+      #{topic61Two,jdbcType=VARCHAR}, #{topic61Three,jdbcType=VARCHAR}, #{topic61Four,jdbcType=VARCHAR}, 
+      #{topic61Fraction,jdbcType=VARCHAR}, #{topic61Six,jdbcType=VARCHAR}, #{topic62One,jdbcType=VARCHAR}, 
+      #{topic62Two,jdbcType=VARCHAR}, #{topic62Three,jdbcType=VARCHAR}, #{topic62Four,jdbcType=VARCHAR}, 
+      #{topic62Fraction,jdbcType=VARCHAR}, #{topic62Six,jdbcType=VARCHAR}, #{topic63One,jdbcType=VARCHAR}, 
+      #{topic63Two,jdbcType=VARCHAR}, #{topic63Three,jdbcType=VARCHAR}, #{topic63Four,jdbcType=VARCHAR}, 
+      #{topic63Fraction,jdbcType=VARCHAR}, #{topic63Six,jdbcType=VARCHAR}, #{topic64One,jdbcType=VARCHAR}, 
+      #{topic64Two,jdbcType=VARCHAR}, #{topic64Three,jdbcType=VARCHAR}, #{topic64Four,jdbcType=VARCHAR}, 
+      #{topic64Fraction,jdbcType=VARCHAR}, #{topic64Six,jdbcType=VARCHAR}, #{topic65One,jdbcType=VARCHAR}, 
+      #{topic65Two,jdbcType=VARCHAR}, #{topic65Three,jdbcType=VARCHAR}, #{topic65Four,jdbcType=VARCHAR}, 
+      #{topic65Fraction,jdbcType=VARCHAR}, #{topic65Six,jdbcType=VARCHAR}, #{topic66One,jdbcType=VARCHAR}, 
+      #{topic66Two,jdbcType=VARCHAR}, #{topic66Three,jdbcType=VARCHAR}, #{topic66Four,jdbcType=VARCHAR}, 
+      #{topic66Fraction,jdbcType=VARCHAR}, #{topic66Six,jdbcType=VARCHAR}, #{topic67One,jdbcType=VARCHAR}, 
+      #{topic67Two,jdbcType=VARCHAR}, #{topic67Three,jdbcType=VARCHAR}, #{topic67Four,jdbcType=VARCHAR}, 
+      #{topic67Fraction,jdbcType=VARCHAR}, #{topic67Six,jdbcType=VARCHAR}, #{topic68One,jdbcType=VARCHAR}, 
+      #{topic68Two,jdbcType=VARCHAR}, #{topic68Three,jdbcType=VARCHAR}, #{topic68Four,jdbcType=VARCHAR}, 
+      #{topic68Fraction,jdbcType=VARCHAR}, #{topic68Six,jdbcType=VARCHAR}, #{topic69One,jdbcType=VARCHAR}, 
+      #{topic69Two,jdbcType=VARCHAR}, #{topic69Three,jdbcType=VARCHAR}, #{topic69Four,jdbcType=VARCHAR}, 
+      #{topic69Fraction,jdbcType=VARCHAR}, #{topic69Six,jdbcType=VARCHAR}, #{topic70One,jdbcType=VARCHAR}, 
+      #{topic70Two,jdbcType=VARCHAR}, #{topic70Three,jdbcType=VARCHAR}, #{topic70Four,jdbcType=VARCHAR}, 
+      #{topic70Fraction,jdbcType=VARCHAR}, #{topic70Six,jdbcType=VARCHAR}, #{topic71One,jdbcType=VARCHAR}, 
+      #{topic71Two,jdbcType=VARCHAR}, #{topic71Three,jdbcType=VARCHAR}, #{topic71Four,jdbcType=VARCHAR}, 
+      #{topic71Fraction,jdbcType=VARCHAR}, #{topic71Six,jdbcType=VARCHAR}, #{topic72One,jdbcType=VARCHAR}, 
+      #{topic72Two,jdbcType=VARCHAR}, #{topic72Three,jdbcType=VARCHAR}, #{topic72Four,jdbcType=VARCHAR}, 
+      #{topic72Fraction,jdbcType=VARCHAR}, #{topic72Six,jdbcType=VARCHAR}, #{topic73One,jdbcType=VARCHAR}, 
+      #{topic73Two,jdbcType=VARCHAR}, #{topic73Three,jdbcType=VARCHAR}, #{topic73Four,jdbcType=VARCHAR}, 
+      #{topic73Fraction,jdbcType=VARCHAR}, #{topic73Six,jdbcType=VARCHAR}, #{topic74One,jdbcType=VARCHAR}, 
+      #{topic74Two,jdbcType=VARCHAR}, #{topic74Three,jdbcType=VARCHAR}, #{topic74Four,jdbcType=VARCHAR}, 
+      #{topic74Fraction,jdbcType=VARCHAR}, #{topic74Six,jdbcType=VARCHAR}, #{topic75One,jdbcType=VARCHAR}, 
+      #{topic75Two,jdbcType=VARCHAR}, #{topic75Three,jdbcType=VARCHAR}, #{topic75Four,jdbcType=VARCHAR}, 
+      #{topic75Fraction,jdbcType=VARCHAR}, #{topic75Six,jdbcType=VARCHAR}, #{topic76One,jdbcType=VARCHAR}, 
+      #{topic76Two,jdbcType=VARCHAR}, #{topic76Three,jdbcType=VARCHAR}, #{topic76Four,jdbcType=VARCHAR}, 
+      #{topic76Fraction,jdbcType=VARCHAR}, #{topic76Six,jdbcType=VARCHAR}, #{topic77One,jdbcType=VARCHAR}, 
+      #{topic77Two,jdbcType=VARCHAR}, #{topic77Three,jdbcType=VARCHAR}, #{topic77Four,jdbcType=VARCHAR}, 
+      #{topic77Fraction,jdbcType=VARCHAR}, #{topic77Six,jdbcType=VARCHAR}, #{topic78One,jdbcType=VARCHAR}, 
+      #{topic78Two,jdbcType=VARCHAR}, #{topic78Three,jdbcType=VARCHAR}, #{topic78Four,jdbcType=VARCHAR}, 
+      #{topic78Fraction,jdbcType=VARCHAR}, #{topic78Six,jdbcType=VARCHAR}, #{topic79One,jdbcType=VARCHAR}, 
+      #{topic79Two,jdbcType=VARCHAR}, #{topic79Three,jdbcType=VARCHAR}, #{topic79Four,jdbcType=VARCHAR}, 
+      #{topic79Fraction,jdbcType=VARCHAR}, #{topic79Six,jdbcType=VARCHAR}, #{topic80One,jdbcType=VARCHAR}, 
+      #{topic80Two,jdbcType=VARCHAR}, #{topic80Three,jdbcType=VARCHAR}, #{topic80Four,jdbcType=VARCHAR}, 
+      #{topic80Fraction,jdbcType=VARCHAR}, #{topic80Six,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.vo.pojo.entity.TestHans" >
+    insert into test_hans
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="hansid != null" >
+        hansId,
+      </if>
+      <if test="testid != null" >
+        testId,
+      </if>
+      <if test="trough4 != null" >
+        trough4,
+      </if>
+      <if test="trough5 != null" >
+        trough5,
+      </if>
+      <if test="trough6 != null" >
+        trough6,
+      </if>
+      <if test="trough7 != null" >
+        trough7,
+      </if>
+      <if test="trough8 != null" >
+        trough8,
+      </if>
+      <if test="trough9 != null" >
+        trough9,
+      </if>
+      <if test="trough10 != null" >
+        trough10,
+      </if>
+      <if test="trough11 != null" >
+        trough11,
+      </if>
+      <if test="trough12 != null" >
+        trough12,
+      </if>
+      <if test="trough13 != null" >
+        trough13,
+      </if>
+      <if test="trough14 != null" >
+        trough14,
+      </if>
+      <if test="trough15 != null" >
+        trough15,
+      </if>
+      <if test="trough16 != null" >
+        trough16,
+      </if>
+      <if test="trough17 != null" >
+        trough17,
+      </if>
+      <if test="trough18 != null" >
+        trough18,
+      </if>
+      <if test="topic41One != null" >
+        topic41_one,
+      </if>
+      <if test="topic41Two != null" >
+        topic41_two,
+      </if>
+      <if test="topic41Three != null" >
+        topic41_three,
+      </if>
+      <if test="topic41Four != null" >
+        topic41_four,
+      </if>
+      <if test="topic41Fraction != null" >
+        topic41_fraction,
+      </if>
+      <if test="topic41Six != null" >
+        topic41_six,
+      </if>
+      <if test="topic42One != null" >
+        topic42_one,
+      </if>
+      <if test="topic42Two != null" >
+        topic42_two,
+      </if>
+      <if test="topic42Three != null" >
+        topic42_three,
+      </if>
+      <if test="topic42Four != null" >
+        topic42_four,
+      </if>
+      <if test="topic42Fraction != null" >
+        topic42_fraction,
+      </if>
+      <if test="topic42Six != null" >
+        topic42_six,
+      </if>
+      <if test="topic43One != null" >
+        topic43_one,
+      </if>
+      <if test="topic43Two != null" >
+        topic43_two,
+      </if>
+      <if test="topic43Three != null" >
+        topic43_three,
+      </if>
+      <if test="topic43Four != null" >
+        topic43_four,
+      </if>
+      <if test="topic43Fraction != null" >
+        topic43_fraction,
+      </if>
+      <if test="topic43Six != null" >
+        topic43_six,
+      </if>
+      <if test="topic44One != null" >
+        topic44_one,
+      </if>
+      <if test="topic44Two != null" >
+        topic44_two,
+      </if>
+      <if test="topic44Three != null" >
+        topic44_three,
+      </if>
+      <if test="topic44Four != null" >
+        topic44_four,
+      </if>
+      <if test="topic44Fraction != null" >
+        topic44_fraction,
+      </if>
+      <if test="topic44Six != null" >
+        topic44_six,
+      </if>
+      <if test="topic45One != null" >
+        topic45_one,
+      </if>
+      <if test="topic45Two != null" >
+        topic45_two,
+      </if>
+      <if test="topic45Three != null" >
+        topic45_three,
+      </if>
+      <if test="topic45Four != null" >
+        topic45_four,
+      </if>
+      <if test="topic45Fraction != null" >
+        topic45_fraction,
+      </if>
+      <if test="topic45Six != null" >
+        topic45_six,
+      </if>
+      <if test="topic46One != null" >
+        topic46_one,
+      </if>
+      <if test="topic46Two != null" >
+        topic46_two,
+      </if>
+      <if test="topic46Three != null" >
+        topic46_three,
+      </if>
+      <if test="topic46Four != null" >
+        topic46_four,
+      </if>
+      <if test="topic46Fraction != null" >
+        topic46_fraction,
+      </if>
+      <if test="topic46Six != null" >
+        topic46_six,
+      </if>
+      <if test="topic47One != null" >
+        topic47_one,
+      </if>
+      <if test="topic47Two != null" >
+        topic47_two,
+      </if>
+      <if test="topic47Three != null" >
+        topic47_three,
+      </if>
+      <if test="topic47Four != null" >
+        topic47_four,
+      </if>
+      <if test="topic47Fraction != null" >
+        topic47_fraction,
+      </if>
+      <if test="topic47Six != null" >
+        topic47_six,
+      </if>
+      <if test="topic48One != null" >
+        topic48_one,
+      </if>
+      <if test="topic48Two != null" >
+        topic48_two,
+      </if>
+      <if test="topic48Three != null" >
+        topic48_three,
+      </if>
+      <if test="topic48Four != null" >
+        topic48_four,
+      </if>
+      <if test="topic48Fraction != null" >
+        topic48_fraction,
+      </if>
+      <if test="topic48Six != null" >
+        topic48_six,
+      </if>
+      <if test="topic49One != null" >
+        topic49_one,
+      </if>
+      <if test="topic49Two != null" >
+        topic49_two,
+      </if>
+      <if test="topic49Three != null" >
+        topic49_three,
+      </if>
+      <if test="topic49Four != null" >
+        topic49_four,
+      </if>
+      <if test="topic49Fraction != null" >
+        topic49_fraction,
+      </if>
+      <if test="topic49Six != null" >
+        topic49_six,
+      </if>
+      <if test="topic50One != null" >
+        topic50_one,
+      </if>
+      <if test="topic50Two != null" >
+        topic50_two,
+      </if>
+      <if test="topic50Three != null" >
+        topic50_three,
+      </if>
+      <if test="topic50Four != null" >
+        topic50_four,
+      </if>
+      <if test="topic50Fraction != null" >
+        topic50_fraction,
+      </if>
+      <if test="topic50Six != null" >
+        topic50_six,
+      </if>
+      <if test="topic51One != null" >
+        topic51_one,
+      </if>
+      <if test="topic51Two != null" >
+        topic51_two,
+      </if>
+      <if test="topic51Three != null" >
+        topic51_three,
+      </if>
+      <if test="topic51Four != null" >
+        topic51_four,
+      </if>
+      <if test="topic51Fraction != null" >
+        topic51_fraction,
+      </if>
+      <if test="topic51Six != null" >
+        topic51_six,
+      </if>
+      <if test="topic52One != null" >
+        topic52_one,
+      </if>
+      <if test="topic52Two != null" >
+        topic52_two,
+      </if>
+      <if test="topic52Three != null" >
+        topic52_three,
+      </if>
+      <if test="topic52Four != null" >
+        topic52_four,
+      </if>
+      <if test="topic52Fraction != null" >
+        topic52_fraction,
+      </if>
+      <if test="topic52Six != null" >
+        topic52_six,
+      </if>
+      <if test="topic53One != null" >
+        topic53_one,
+      </if>
+      <if test="topic53Two != null" >
+        topic53_two,
+      </if>
+      <if test="topic53Three != null" >
+        topic53_three,
+      </if>
+      <if test="topic53Four != null" >
+        topic53_four,
+      </if>
+      <if test="topic53Fraction != null" >
+        topic53_fraction,
+      </if>
+      <if test="topic53Six != null" >
+        topic53_six,
+      </if>
+      <if test="topic54One != null" >
+        topic54_one,
+      </if>
+      <if test="topic54Two != null" >
+        topic54_two,
+      </if>
+      <if test="topic54Three != null" >
+        topic54_three,
+      </if>
+      <if test="topic54Four != null" >
+        topic54_four,
+      </if>
+      <if test="topic54Fraction != null" >
+        topic54_fraction,
+      </if>
+      <if test="topic54Six != null" >
+        topic54_six,
+      </if>
+      <if test="topic55One != null" >
+        topic55_one,
+      </if>
+      <if test="topic55Two != null" >
+        topic55_two,
+      </if>
+      <if test="topic55Three != null" >
+        topic55_three,
+      </if>
+      <if test="topic55Four != null" >
+        topic55_four,
+      </if>
+      <if test="topic55Fraction != null" >
+        topic55_fraction,
+      </if>
+      <if test="topic55Six != null" >
+        topic55_six,
+      </if>
+      <if test="topic56One != null" >
+        topic56_one,
+      </if>
+      <if test="topic56Two != null" >
+        topic56_two,
+      </if>
+      <if test="topic56Three != null" >
+        topic56_three,
+      </if>
+      <if test="topic56Four != null" >
+        topic56_four,
+      </if>
+      <if test="topic56Fraction != null" >
+        topic56_fraction,
+      </if>
+      <if test="topic56Six != null" >
+        topic56_six,
+      </if>
+      <if test="topic57One != null" >
+        topic57_one,
+      </if>
+      <if test="topic57Two != null" >
+        topic57_two,
+      </if>
+      <if test="topic57Three != null" >
+        topic57_three,
+      </if>
+      <if test="topic57Four != null" >
+        topic57_four,
+      </if>
+      <if test="topic57Fraction != null" >
+        topic57_fraction,
+      </if>
+      <if test="topic57Six != null" >
+        topic57_six,
+      </if>
+      <if test="topic58One != null" >
+        topic58_one,
+      </if>
+      <if test="topic58Two != null" >
+        topic58_two,
+      </if>
+      <if test="topic58Three != null" >
+        topic58_three,
+      </if>
+      <if test="topic58Four != null" >
+        topic58_four,
+      </if>
+      <if test="topic58Fraction != null" >
+        topic58_fraction,
+      </if>
+      <if test="topic58Six != null" >
+        topic58_six,
+      </if>
+      <if test="topic59One != null" >
+        topic59_one,
+      </if>
+      <if test="topic59Two != null" >
+        topic59_two,
+      </if>
+      <if test="topic59Three != null" >
+        topic59_three,
+      </if>
+      <if test="topic59Four != null" >
+        topic59_four,
+      </if>
+      <if test="topic59Fraction != null" >
+        topic59_fraction,
+      </if>
+      <if test="topic59Six != null" >
+        topic59_six,
+      </if>
+      <if test="topic60One != null" >
+        topic60_one,
+      </if>
+      <if test="topic60Two != null" >
+        topic60_two,
+      </if>
+      <if test="topic60Three != null" >
+        topic60_three,
+      </if>
+      <if test="topic60Four != null" >
+        topic60_four,
+      </if>
+      <if test="topic60Fraction != null" >
+        topic60_fraction,
+      </if>
+      <if test="topic60Six != null" >
+        topic60_six,
+      </if>
+      <if test="topic61One != null" >
+        topic61_one,
+      </if>
+      <if test="topic61Two != null" >
+        topic61_two,
+      </if>
+      <if test="topic61Three != null" >
+        topic61_three,
+      </if>
+      <if test="topic61Four != null" >
+        topic61_four,
+      </if>
+      <if test="topic61Fraction != null" >
+        topic61_fraction,
+      </if>
+      <if test="topic61Six != null" >
+        topic61_six,
+      </if>
+      <if test="topic62One != null" >
+        topic62_one,
+      </if>
+      <if test="topic62Two != null" >
+        topic62_two,
+      </if>
+      <if test="topic62Three != null" >
+        topic62_three,
+      </if>
+      <if test="topic62Four != null" >
+        topic62_four,
+      </if>
+      <if test="topic62Fraction != null" >
+        topic62_fraction,
+      </if>
+      <if test="topic62Six != null" >
+        topic62_six,
+      </if>
+      <if test="topic63One != null" >
+        topic63_one,
+      </if>
+      <if test="topic63Two != null" >
+        topic63_two,
+      </if>
+      <if test="topic63Three != null" >
+        topic63_three,
+      </if>
+      <if test="topic63Four != null" >
+        topic63_four,
+      </if>
+      <if test="topic63Fraction != null" >
+        topic63_fraction,
+      </if>
+      <if test="topic63Six != null" >
+        topic63_six,
+      </if>
+      <if test="topic64One != null" >
+        topic64_one,
+      </if>
+      <if test="topic64Two != null" >
+        topic64_two,
+      </if>
+      <if test="topic64Three != null" >
+        topic64_three,
+      </if>
+      <if test="topic64Four != null" >
+        topic64_four,
+      </if>
+      <if test="topic64Fraction != null" >
+        topic64_fraction,
+      </if>
+      <if test="topic64Six != null" >
+        topic64_six,
+      </if>
+      <if test="topic65One != null" >
+        topic65_one,
+      </if>
+      <if test="topic65Two != null" >
+        topic65_two,
+      </if>
+      <if test="topic65Three != null" >
+        topic65_three,
+      </if>
+      <if test="topic65Four != null" >
+        topic65_four,
+      </if>
+      <if test="topic65Fraction != null" >
+        topic65_fraction,
+      </if>
+      <if test="topic65Six != null" >
+        topic65_six,
+      </if>
+      <if test="topic66One != null" >
+        topic66_one,
+      </if>
+      <if test="topic66Two != null" >
+        topic66_two,
+      </if>
+      <if test="topic66Three != null" >
+        topic66_three,
+      </if>
+      <if test="topic66Four != null" >
+        topic66_four,
+      </if>
+      <if test="topic66Fraction != null" >
+        topic66_fraction,
+      </if>
+      <if test="topic66Six != null" >
+        topic66_six,
+      </if>
+      <if test="topic67One != null" >
+        topic67_one,
+      </if>
+      <if test="topic67Two != null" >
+        topic67_two,
+      </if>
+      <if test="topic67Three != null" >
+        topic67_three,
+      </if>
+      <if test="topic67Four != null" >
+        topic67_four,
+      </if>
+      <if test="topic67Fraction != null" >
+        topic67_fraction,
+      </if>
+      <if test="topic67Six != null" >
+        topic67_six,
+      </if>
+      <if test="topic68One != null" >
+        topic68_one,
+      </if>
+      <if test="topic68Two != null" >
+        topic68_two,
+      </if>
+      <if test="topic68Three != null" >
+        topic68_three,
+      </if>
+      <if test="topic68Four != null" >
+        topic68_four,
+      </if>
+      <if test="topic68Fraction != null" >
+        topic68_fraction,
+      </if>
+      <if test="topic68Six != null" >
+        topic68_six,
+      </if>
+      <if test="topic69One != null" >
+        topic69_one,
+      </if>
+      <if test="topic69Two != null" >
+        topic69_two,
+      </if>
+      <if test="topic69Three != null" >
+        topic69_three,
+      </if>
+      <if test="topic69Four != null" >
+        topic69_four,
+      </if>
+      <if test="topic69Fraction != null" >
+        topic69_fraction,
+      </if>
+      <if test="topic69Six != null" >
+        topic69_six,
+      </if>
+      <if test="topic70One != null" >
+        topic70_one,
+      </if>
+      <if test="topic70Two != null" >
+        topic70_two,
+      </if>
+      <if test="topic70Three != null" >
+        topic70_three,
+      </if>
+      <if test="topic70Four != null" >
+        topic70_four,
+      </if>
+      <if test="topic70Fraction != null" >
+        topic70_fraction,
+      </if>
+      <if test="topic70Six != null" >
+        topic70_six,
+      </if>
+      <if test="topic71One != null" >
+        topic71_one,
+      </if>
+      <if test="topic71Two != null" >
+        topic71_two,
+      </if>
+      <if test="topic71Three != null" >
+        topic71_three,
+      </if>
+      <if test="topic71Four != null" >
+        topic71_four,
+      </if>
+      <if test="topic71Fraction != null" >
+        topic71_fraction,
+      </if>
+      <if test="topic71Six != null" >
+        topic71_six,
+      </if>
+      <if test="topic72One != null" >
+        topic72_one,
+      </if>
+      <if test="topic72Two != null" >
+        topic72_two,
+      </if>
+      <if test="topic72Three != null" >
+        topic72_three,
+      </if>
+      <if test="topic72Four != null" >
+        topic72_four,
+      </if>
+      <if test="topic72Fraction != null" >
+        topic72_fraction,
+      </if>
+      <if test="topic72Six != null" >
+        topic72_six,
+      </if>
+      <if test="topic73One != null" >
+        topic73_one,
+      </if>
+      <if test="topic73Two != null" >
+        topic73_two,
+      </if>
+      <if test="topic73Three != null" >
+        topic73_three,
+      </if>
+      <if test="topic73Four != null" >
+        topic73_four,
+      </if>
+      <if test="topic73Fraction != null" >
+        topic73_fraction,
+      </if>
+      <if test="topic73Six != null" >
+        topic73_six,
+      </if>
+      <if test="topic74One != null" >
+        topic74_one,
+      </if>
+      <if test="topic74Two != null" >
+        topic74_two,
+      </if>
+      <if test="topic74Three != null" >
+        topic74_three,
+      </if>
+      <if test="topic74Four != null" >
+        topic74_four,
+      </if>
+      <if test="topic74Fraction != null" >
+        topic74_fraction,
+      </if>
+      <if test="topic74Six != null" >
+        topic74_six,
+      </if>
+      <if test="topic75One != null" >
+        topic75_one,
+      </if>
+      <if test="topic75Two != null" >
+        topic75_two,
+      </if>
+      <if test="topic75Three != null" >
+        topic75_three,
+      </if>
+      <if test="topic75Four != null" >
+        topic75_four,
+      </if>
+      <if test="topic75Fraction != null" >
+        topic75_fraction,
+      </if>
+      <if test="topic75Six != null" >
+        topic75_six,
+      </if>
+      <if test="topic76One != null" >
+        topic76_one,
+      </if>
+      <if test="topic76Two != null" >
+        topic76_two,
+      </if>
+      <if test="topic76Three != null" >
+        topic76_three,
+      </if>
+      <if test="topic76Four != null" >
+        topic76_four,
+      </if>
+      <if test="topic76Fraction != null" >
+        topic76_fraction,
+      </if>
+      <if test="topic76Six != null" >
+        topic76_six,
+      </if>
+      <if test="topic77One != null" >
+        topic77_one,
+      </if>
+      <if test="topic77Two != null" >
+        topic77_two,
+      </if>
+      <if test="topic77Three != null" >
+        topic77_three,
+      </if>
+      <if test="topic77Four != null" >
+        topic77_four,
+      </if>
+      <if test="topic77Fraction != null" >
+        topic77_fraction,
+      </if>
+      <if test="topic77Six != null" >
+        topic77_six,
+      </if>
+      <if test="topic78One != null" >
+        topic78_one,
+      </if>
+      <if test="topic78Two != null" >
+        topic78_two,
+      </if>
+      <if test="topic78Three != null" >
+        topic78_three,
+      </if>
+      <if test="topic78Four != null" >
+        topic78_four,
+      </if>
+      <if test="topic78Fraction != null" >
+        topic78_fraction,
+      </if>
+      <if test="topic78Six != null" >
+        topic78_six,
+      </if>
+      <if test="topic79One != null" >
+        topic79_one,
+      </if>
+      <if test="topic79Two != null" >
+        topic79_two,
+      </if>
+      <if test="topic79Three != null" >
+        topic79_three,
+      </if>
+      <if test="topic79Four != null" >
+        topic79_four,
+      </if>
+      <if test="topic79Fraction != null" >
+        topic79_fraction,
+      </if>
+      <if test="topic79Six != null" >
+        topic79_six,
+      </if>
+      <if test="topic80One != null" >
+        topic80_one,
+      </if>
+      <if test="topic80Two != null" >
+        topic80_two,
+      </if>
+      <if test="topic80Three != null" >
+        topic80_three,
+      </if>
+      <if test="topic80Four != null" >
+        topic80_four,
+      </if>
+      <if test="topic80Fraction != null" >
+        topic80_fraction,
+      </if>
+      <if test="topic80Six != null" >
+        topic80_six,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="hansid != null" >
+        #{hansid,jdbcType=INTEGER},
+      </if>
+      <if test="testid != null" >
+        #{testid,jdbcType=INTEGER},
+      </if>
+      <if test="trough4 != null" >
+        #{trough4,jdbcType=VARCHAR},
+      </if>
+      <if test="trough5 != null" >
+        #{trough5,jdbcType=VARCHAR},
+      </if>
+      <if test="trough6 != null" >
+        #{trough6,jdbcType=VARCHAR},
+      </if>
+      <if test="trough7 != null" >
+        #{trough7,jdbcType=INTEGER},
+      </if>
+      <if test="trough8 != null" >
+        #{trough8,jdbcType=VARCHAR},
+      </if>
+      <if test="trough9 != null" >
+        #{trough9,jdbcType=VARCHAR},
+      </if>
+      <if test="trough10 != null" >
+        #{trough10,jdbcType=VARCHAR},
+      </if>
+      <if test="trough11 != null" >
+        #{trough11,jdbcType=VARCHAR},
+      </if>
+      <if test="trough12 != null" >
+        #{trough12,jdbcType=VARCHAR},
+      </if>
+      <if test="trough13 != null" >
+        #{trough13,jdbcType=VARCHAR},
+      </if>
+      <if test="trough14 != null" >
+        #{trough14,jdbcType=VARCHAR},
+      </if>
+      <if test="trough15 != null" >
+        #{trough15,jdbcType=VARCHAR},
+      </if>
+      <if test="trough16 != null" >
+        #{trough16,jdbcType=VARCHAR},
+      </if>
+      <if test="trough17 != null" >
+        #{trough17,jdbcType=VARCHAR},
+      </if>
+      <if test="trough18 != null" >
+        #{trough18,jdbcType=VARCHAR},
+      </if>
+      <if test="topic41One != null" >
+        #{topic41One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic41Two != null" >
+        #{topic41Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic41Three != null" >
+        #{topic41Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic41Four != null" >
+        #{topic41Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic41Fraction != null" >
+        #{topic41Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic41Six != null" >
+        #{topic41Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic42One != null" >
+        #{topic42One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic42Two != null" >
+        #{topic42Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic42Three != null" >
+        #{topic42Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic42Four != null" >
+        #{topic42Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic42Fraction != null" >
+        #{topic42Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic42Six != null" >
+        #{topic42Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic43One != null" >
+        #{topic43One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic43Two != null" >
+        #{topic43Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic43Three != null" >
+        #{topic43Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic43Four != null" >
+        #{topic43Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic43Fraction != null" >
+        #{topic43Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic43Six != null" >
+        #{topic43Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic44One != null" >
+        #{topic44One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic44Two != null" >
+        #{topic44Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic44Three != null" >
+        #{topic44Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic44Four != null" >
+        #{topic44Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic44Fraction != null" >
+        #{topic44Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic44Six != null" >
+        #{topic44Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic45One != null" >
+        #{topic45One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic45Two != null" >
+        #{topic45Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic45Three != null" >
+        #{topic45Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic45Four != null" >
+        #{topic45Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic45Fraction != null" >
+        #{topic45Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic45Six != null" >
+        #{topic45Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic46One != null" >
+        #{topic46One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic46Two != null" >
+        #{topic46Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic46Three != null" >
+        #{topic46Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic46Four != null" >
+        #{topic46Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic46Fraction != null" >
+        #{topic46Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic46Six != null" >
+        #{topic46Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic47One != null" >
+        #{topic47One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic47Two != null" >
+        #{topic47Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic47Three != null" >
+        #{topic47Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic47Four != null" >
+        #{topic47Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic47Fraction != null" >
+        #{topic47Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic47Six != null" >
+        #{topic47Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic48One != null" >
+        #{topic48One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic48Two != null" >
+        #{topic48Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic48Three != null" >
+        #{topic48Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic48Four != null" >
+        #{topic48Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic48Fraction != null" >
+        #{topic48Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic48Six != null" >
+        #{topic48Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic49One != null" >
+        #{topic49One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic49Two != null" >
+        #{topic49Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic49Three != null" >
+        #{topic49Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic49Four != null" >
+        #{topic49Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic49Fraction != null" >
+        #{topic49Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic49Six != null" >
+        #{topic49Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic50One != null" >
+        #{topic50One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic50Two != null" >
+        #{topic50Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic50Three != null" >
+        #{topic50Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic50Four != null" >
+        #{topic50Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic50Fraction != null" >
+        #{topic50Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic50Six != null" >
+        #{topic50Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic51One != null" >
+        #{topic51One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic51Two != null" >
+        #{topic51Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic51Three != null" >
+        #{topic51Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic51Four != null" >
+        #{topic51Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic51Fraction != null" >
+        #{topic51Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic51Six != null" >
+        #{topic51Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic52One != null" >
+        #{topic52One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic52Two != null" >
+        #{topic52Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic52Three != null" >
+        #{topic52Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic52Four != null" >
+        #{topic52Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic52Fraction != null" >
+        #{topic52Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic52Six != null" >
+        #{topic52Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic53One != null" >
+        #{topic53One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic53Two != null" >
+        #{topic53Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic53Three != null" >
+        #{topic53Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic53Four != null" >
+        #{topic53Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic53Fraction != null" >
+        #{topic53Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic53Six != null" >
+        #{topic53Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic54One != null" >
+        #{topic54One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic54Two != null" >
+        #{topic54Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic54Three != null" >
+        #{topic54Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic54Four != null" >
+        #{topic54Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic54Fraction != null" >
+        #{topic54Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic54Six != null" >
+        #{topic54Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic55One != null" >
+        #{topic55One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic55Two != null" >
+        #{topic55Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic55Three != null" >
+        #{topic55Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic55Four != null" >
+        #{topic55Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic55Fraction != null" >
+        #{topic55Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic55Six != null" >
+        #{topic55Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic56One != null" >
+        #{topic56One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic56Two != null" >
+        #{topic56Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic56Three != null" >
+        #{topic56Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic56Four != null" >
+        #{topic56Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic56Fraction != null" >
+        #{topic56Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic56Six != null" >
+        #{topic56Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic57One != null" >
+        #{topic57One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic57Two != null" >
+        #{topic57Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic57Three != null" >
+        #{topic57Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic57Four != null" >
+        #{topic57Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic57Fraction != null" >
+        #{topic57Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic57Six != null" >
+        #{topic57Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic58One != null" >
+        #{topic58One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic58Two != null" >
+        #{topic58Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic58Three != null" >
+        #{topic58Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic58Four != null" >
+        #{topic58Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic58Fraction != null" >
+        #{topic58Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic58Six != null" >
+        #{topic58Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic59One != null" >
+        #{topic59One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic59Two != null" >
+        #{topic59Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic59Three != null" >
+        #{topic59Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic59Four != null" >
+        #{topic59Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic59Fraction != null" >
+        #{topic59Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic59Six != null" >
+        #{topic59Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic60One != null" >
+        #{topic60One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic60Two != null" >
+        #{topic60Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic60Three != null" >
+        #{topic60Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic60Four != null" >
+        #{topic60Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic60Fraction != null" >
+        #{topic60Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic60Six != null" >
+        #{topic60Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic61One != null" >
+        #{topic61One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic61Two != null" >
+        #{topic61Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic61Three != null" >
+        #{topic61Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic61Four != null" >
+        #{topic61Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic61Fraction != null" >
+        #{topic61Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic61Six != null" >
+        #{topic61Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic62One != null" >
+        #{topic62One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic62Two != null" >
+        #{topic62Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic62Three != null" >
+        #{topic62Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic62Four != null" >
+        #{topic62Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic62Fraction != null" >
+        #{topic62Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic62Six != null" >
+        #{topic62Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic63One != null" >
+        #{topic63One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic63Two != null" >
+        #{topic63Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic63Three != null" >
+        #{topic63Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic63Four != null" >
+        #{topic63Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic63Fraction != null" >
+        #{topic63Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic63Six != null" >
+        #{topic63Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic64One != null" >
+        #{topic64One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic64Two != null" >
+        #{topic64Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic64Three != null" >
+        #{topic64Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic64Four != null" >
+        #{topic64Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic64Fraction != null" >
+        #{topic64Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic64Six != null" >
+        #{topic64Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic65One != null" >
+        #{topic65One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic65Two != null" >
+        #{topic65Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic65Three != null" >
+        #{topic65Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic65Four != null" >
+        #{topic65Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic65Fraction != null" >
+        #{topic65Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic65Six != null" >
+        #{topic65Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic66One != null" >
+        #{topic66One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic66Two != null" >
+        #{topic66Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic66Three != null" >
+        #{topic66Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic66Four != null" >
+        #{topic66Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic66Fraction != null" >
+        #{topic66Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic66Six != null" >
+        #{topic66Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic67One != null" >
+        #{topic67One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic67Two != null" >
+        #{topic67Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic67Three != null" >
+        #{topic67Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic67Four != null" >
+        #{topic67Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic67Fraction != null" >
+        #{topic67Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic67Six != null" >
+        #{topic67Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic68One != null" >
+        #{topic68One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic68Two != null" >
+        #{topic68Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic68Three != null" >
+        #{topic68Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic68Four != null" >
+        #{topic68Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic68Fraction != null" >
+        #{topic68Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic68Six != null" >
+        #{topic68Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic69One != null" >
+        #{topic69One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic69Two != null" >
+        #{topic69Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic69Three != null" >
+        #{topic69Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic69Four != null" >
+        #{topic69Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic69Fraction != null" >
+        #{topic69Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic69Six != null" >
+        #{topic69Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic70One != null" >
+        #{topic70One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic70Two != null" >
+        #{topic70Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic70Three != null" >
+        #{topic70Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic70Four != null" >
+        #{topic70Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic70Fraction != null" >
+        #{topic70Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic70Six != null" >
+        #{topic70Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic71One != null" >
+        #{topic71One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic71Two != null" >
+        #{topic71Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic71Three != null" >
+        #{topic71Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic71Four != null" >
+        #{topic71Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic71Fraction != null" >
+        #{topic71Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic71Six != null" >
+        #{topic71Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic72One != null" >
+        #{topic72One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic72Two != null" >
+        #{topic72Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic72Three != null" >
+        #{topic72Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic72Four != null" >
+        #{topic72Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic72Fraction != null" >
+        #{topic72Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic72Six != null" >
+        #{topic72Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic73One != null" >
+        #{topic73One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic73Two != null" >
+        #{topic73Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic73Three != null" >
+        #{topic73Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic73Four != null" >
+        #{topic73Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic73Fraction != null" >
+        #{topic73Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic73Six != null" >
+        #{topic73Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic74One != null" >
+        #{topic74One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic74Two != null" >
+        #{topic74Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic74Three != null" >
+        #{topic74Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic74Four != null" >
+        #{topic74Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic74Fraction != null" >
+        #{topic74Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic74Six != null" >
+        #{topic74Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic75One != null" >
+        #{topic75One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic75Two != null" >
+        #{topic75Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic75Three != null" >
+        #{topic75Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic75Four != null" >
+        #{topic75Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic75Fraction != null" >
+        #{topic75Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic75Six != null" >
+        #{topic75Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic76One != null" >
+        #{topic76One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic76Two != null" >
+        #{topic76Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic76Three != null" >
+        #{topic76Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic76Four != null" >
+        #{topic76Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic76Fraction != null" >
+        #{topic76Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic76Six != null" >
+        #{topic76Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic77One != null" >
+        #{topic77One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic77Two != null" >
+        #{topic77Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic77Three != null" >
+        #{topic77Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic77Four != null" >
+        #{topic77Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic77Fraction != null" >
+        #{topic77Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic77Six != null" >
+        #{topic77Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic78One != null" >
+        #{topic78One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic78Two != null" >
+        #{topic78Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic78Three != null" >
+        #{topic78Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic78Four != null" >
+        #{topic78Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic78Fraction != null" >
+        #{topic78Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic78Six != null" >
+        #{topic78Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic79One != null" >
+        #{topic79One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic79Two != null" >
+        #{topic79Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic79Three != null" >
+        #{topic79Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic79Four != null" >
+        #{topic79Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic79Fraction != null" >
+        #{topic79Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic79Six != null" >
+        #{topic79Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic80One != null" >
+        #{topic80One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic80Two != null" >
+        #{topic80Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic80Three != null" >
+        #{topic80Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic80Four != null" >
+        #{topic80Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic80Fraction != null" >
+        #{topic80Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic80Six != null" >
+        #{topic80Six,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="cn.vo.pojo.entity.TestHansExample" resultType="java.lang.Integer" >
+    select count(*) from test_hans
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update test_hans
+    <set >
+      <if test="record.hansid != null" >
+        hansId = #{record.hansid,jdbcType=INTEGER},
+      </if>
+      <if test="record.testid != null" >
+        testId = #{record.testid,jdbcType=INTEGER},
+      </if>
+      <if test="record.trough4 != null" >
+        trough4 = #{record.trough4,jdbcType=VARCHAR},
+      </if>
+      <if test="record.trough5 != null" >
+        trough5 = #{record.trough5,jdbcType=VARCHAR},
+      </if>
+      <if test="record.trough6 != null" >
+        trough6 = #{record.trough6,jdbcType=VARCHAR},
+      </if>
+      <if test="record.trough7 != null" >
+        trough7 = #{record.trough7,jdbcType=INTEGER},
+      </if>
+      <if test="record.trough8 != null" >
+        trough8 = #{record.trough8,jdbcType=VARCHAR},
+      </if>
+      <if test="record.trough9 != null" >
+        trough9 = #{record.trough9,jdbcType=VARCHAR},
+      </if>
+      <if test="record.trough10 != null" >
+        trough10 = #{record.trough10,jdbcType=VARCHAR},
+      </if>
+      <if test="record.trough11 != null" >
+        trough11 = #{record.trough11,jdbcType=VARCHAR},
+      </if>
+      <if test="record.trough12 != null" >
+        trough12 = #{record.trough12,jdbcType=VARCHAR},
+      </if>
+      <if test="record.trough13 != null" >
+        trough13 = #{record.trough13,jdbcType=VARCHAR},
+      </if>
+      <if test="record.trough14 != null" >
+        trough14 = #{record.trough14,jdbcType=VARCHAR},
+      </if>
+      <if test="record.trough15 != null" >
+        trough15 = #{record.trough15,jdbcType=VARCHAR},
+      </if>
+      <if test="record.trough16 != null" >
+        trough16 = #{record.trough16,jdbcType=VARCHAR},
+      </if>
+      <if test="record.trough17 != null" >
+        trough17 = #{record.trough17,jdbcType=VARCHAR},
+      </if>
+      <if test="record.trough18 != null" >
+        trough18 = #{record.trough18,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic41One != null" >
+        topic41_one = #{record.topic41One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic41Two != null" >
+        topic41_two = #{record.topic41Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic41Three != null" >
+        topic41_three = #{record.topic41Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic41Four != null" >
+        topic41_four = #{record.topic41Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic41Fraction != null" >
+        topic41_fraction = #{record.topic41Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic41Six != null" >
+        topic41_six = #{record.topic41Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic42One != null" >
+        topic42_one = #{record.topic42One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic42Two != null" >
+        topic42_two = #{record.topic42Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic42Three != null" >
+        topic42_three = #{record.topic42Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic42Four != null" >
+        topic42_four = #{record.topic42Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic42Fraction != null" >
+        topic42_fraction = #{record.topic42Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic42Six != null" >
+        topic42_six = #{record.topic42Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic43One != null" >
+        topic43_one = #{record.topic43One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic43Two != null" >
+        topic43_two = #{record.topic43Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic43Three != null" >
+        topic43_three = #{record.topic43Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic43Four != null" >
+        topic43_four = #{record.topic43Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic43Fraction != null" >
+        topic43_fraction = #{record.topic43Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic43Six != null" >
+        topic43_six = #{record.topic43Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic44One != null" >
+        topic44_one = #{record.topic44One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic44Two != null" >
+        topic44_two = #{record.topic44Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic44Three != null" >
+        topic44_three = #{record.topic44Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic44Four != null" >
+        topic44_four = #{record.topic44Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic44Fraction != null" >
+        topic44_fraction = #{record.topic44Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic44Six != null" >
+        topic44_six = #{record.topic44Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic45One != null" >
+        topic45_one = #{record.topic45One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic45Two != null" >
+        topic45_two = #{record.topic45Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic45Three != null" >
+        topic45_three = #{record.topic45Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic45Four != null" >
+        topic45_four = #{record.topic45Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic45Fraction != null" >
+        topic45_fraction = #{record.topic45Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic45Six != null" >
+        topic45_six = #{record.topic45Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic46One != null" >
+        topic46_one = #{record.topic46One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic46Two != null" >
+        topic46_two = #{record.topic46Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic46Three != null" >
+        topic46_three = #{record.topic46Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic46Four != null" >
+        topic46_four = #{record.topic46Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic46Fraction != null" >
+        topic46_fraction = #{record.topic46Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic46Six != null" >
+        topic46_six = #{record.topic46Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic47One != null" >
+        topic47_one = #{record.topic47One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic47Two != null" >
+        topic47_two = #{record.topic47Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic47Three != null" >
+        topic47_three = #{record.topic47Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic47Four != null" >
+        topic47_four = #{record.topic47Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic47Fraction != null" >
+        topic47_fraction = #{record.topic47Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic47Six != null" >
+        topic47_six = #{record.topic47Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic48One != null" >
+        topic48_one = #{record.topic48One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic48Two != null" >
+        topic48_two = #{record.topic48Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic48Three != null" >
+        topic48_three = #{record.topic48Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic48Four != null" >
+        topic48_four = #{record.topic48Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic48Fraction != null" >
+        topic48_fraction = #{record.topic48Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic48Six != null" >
+        topic48_six = #{record.topic48Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic49One != null" >
+        topic49_one = #{record.topic49One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic49Two != null" >
+        topic49_two = #{record.topic49Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic49Three != null" >
+        topic49_three = #{record.topic49Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic49Four != null" >
+        topic49_four = #{record.topic49Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic49Fraction != null" >
+        topic49_fraction = #{record.topic49Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic49Six != null" >
+        topic49_six = #{record.topic49Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic50One != null" >
+        topic50_one = #{record.topic50One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic50Two != null" >
+        topic50_two = #{record.topic50Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic50Three != null" >
+        topic50_three = #{record.topic50Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic50Four != null" >
+        topic50_four = #{record.topic50Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic50Fraction != null" >
+        topic50_fraction = #{record.topic50Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic50Six != null" >
+        topic50_six = #{record.topic50Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic51One != null" >
+        topic51_one = #{record.topic51One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic51Two != null" >
+        topic51_two = #{record.topic51Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic51Three != null" >
+        topic51_three = #{record.topic51Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic51Four != null" >
+        topic51_four = #{record.topic51Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic51Fraction != null" >
+        topic51_fraction = #{record.topic51Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic51Six != null" >
+        topic51_six = #{record.topic51Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic52One != null" >
+        topic52_one = #{record.topic52One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic52Two != null" >
+        topic52_two = #{record.topic52Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic52Three != null" >
+        topic52_three = #{record.topic52Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic52Four != null" >
+        topic52_four = #{record.topic52Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic52Fraction != null" >
+        topic52_fraction = #{record.topic52Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic52Six != null" >
+        topic52_six = #{record.topic52Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic53One != null" >
+        topic53_one = #{record.topic53One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic53Two != null" >
+        topic53_two = #{record.topic53Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic53Three != null" >
+        topic53_three = #{record.topic53Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic53Four != null" >
+        topic53_four = #{record.topic53Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic53Fraction != null" >
+        topic53_fraction = #{record.topic53Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic53Six != null" >
+        topic53_six = #{record.topic53Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic54One != null" >
+        topic54_one = #{record.topic54One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic54Two != null" >
+        topic54_two = #{record.topic54Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic54Three != null" >
+        topic54_three = #{record.topic54Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic54Four != null" >
+        topic54_four = #{record.topic54Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic54Fraction != null" >
+        topic54_fraction = #{record.topic54Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic54Six != null" >
+        topic54_six = #{record.topic54Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic55One != null" >
+        topic55_one = #{record.topic55One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic55Two != null" >
+        topic55_two = #{record.topic55Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic55Three != null" >
+        topic55_three = #{record.topic55Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic55Four != null" >
+        topic55_four = #{record.topic55Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic55Fraction != null" >
+        topic55_fraction = #{record.topic55Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic55Six != null" >
+        topic55_six = #{record.topic55Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic56One != null" >
+        topic56_one = #{record.topic56One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic56Two != null" >
+        topic56_two = #{record.topic56Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic56Three != null" >
+        topic56_three = #{record.topic56Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic56Four != null" >
+        topic56_four = #{record.topic56Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic56Fraction != null" >
+        topic56_fraction = #{record.topic56Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic56Six != null" >
+        topic56_six = #{record.topic56Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic57One != null" >
+        topic57_one = #{record.topic57One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic57Two != null" >
+        topic57_two = #{record.topic57Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic57Three != null" >
+        topic57_three = #{record.topic57Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic57Four != null" >
+        topic57_four = #{record.topic57Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic57Fraction != null" >
+        topic57_fraction = #{record.topic57Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic57Six != null" >
+        topic57_six = #{record.topic57Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic58One != null" >
+        topic58_one = #{record.topic58One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic58Two != null" >
+        topic58_two = #{record.topic58Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic58Three != null" >
+        topic58_three = #{record.topic58Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic58Four != null" >
+        topic58_four = #{record.topic58Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic58Fraction != null" >
+        topic58_fraction = #{record.topic58Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic58Six != null" >
+        topic58_six = #{record.topic58Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic59One != null" >
+        topic59_one = #{record.topic59One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic59Two != null" >
+        topic59_two = #{record.topic59Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic59Three != null" >
+        topic59_three = #{record.topic59Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic59Four != null" >
+        topic59_four = #{record.topic59Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic59Fraction != null" >
+        topic59_fraction = #{record.topic59Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic59Six != null" >
+        topic59_six = #{record.topic59Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic60One != null" >
+        topic60_one = #{record.topic60One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic60Two != null" >
+        topic60_two = #{record.topic60Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic60Three != null" >
+        topic60_three = #{record.topic60Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic60Four != null" >
+        topic60_four = #{record.topic60Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic60Fraction != null" >
+        topic60_fraction = #{record.topic60Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic60Six != null" >
+        topic60_six = #{record.topic60Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic61One != null" >
+        topic61_one = #{record.topic61One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic61Two != null" >
+        topic61_two = #{record.topic61Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic61Three != null" >
+        topic61_three = #{record.topic61Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic61Four != null" >
+        topic61_four = #{record.topic61Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic61Fraction != null" >
+        topic61_fraction = #{record.topic61Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic61Six != null" >
+        topic61_six = #{record.topic61Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic62One != null" >
+        topic62_one = #{record.topic62One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic62Two != null" >
+        topic62_two = #{record.topic62Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic62Three != null" >
+        topic62_three = #{record.topic62Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic62Four != null" >
+        topic62_four = #{record.topic62Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic62Fraction != null" >
+        topic62_fraction = #{record.topic62Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic62Six != null" >
+        topic62_six = #{record.topic62Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic63One != null" >
+        topic63_one = #{record.topic63One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic63Two != null" >
+        topic63_two = #{record.topic63Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic63Three != null" >
+        topic63_three = #{record.topic63Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic63Four != null" >
+        topic63_four = #{record.topic63Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic63Fraction != null" >
+        topic63_fraction = #{record.topic63Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic63Six != null" >
+        topic63_six = #{record.topic63Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic64One != null" >
+        topic64_one = #{record.topic64One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic64Two != null" >
+        topic64_two = #{record.topic64Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic64Three != null" >
+        topic64_three = #{record.topic64Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic64Four != null" >
+        topic64_four = #{record.topic64Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic64Fraction != null" >
+        topic64_fraction = #{record.topic64Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic64Six != null" >
+        topic64_six = #{record.topic64Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic65One != null" >
+        topic65_one = #{record.topic65One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic65Two != null" >
+        topic65_two = #{record.topic65Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic65Three != null" >
+        topic65_three = #{record.topic65Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic65Four != null" >
+        topic65_four = #{record.topic65Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic65Fraction != null" >
+        topic65_fraction = #{record.topic65Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic65Six != null" >
+        topic65_six = #{record.topic65Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic66One != null" >
+        topic66_one = #{record.topic66One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic66Two != null" >
+        topic66_two = #{record.topic66Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic66Three != null" >
+        topic66_three = #{record.topic66Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic66Four != null" >
+        topic66_four = #{record.topic66Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic66Fraction != null" >
+        topic66_fraction = #{record.topic66Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic66Six != null" >
+        topic66_six = #{record.topic66Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic67One != null" >
+        topic67_one = #{record.topic67One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic67Two != null" >
+        topic67_two = #{record.topic67Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic67Three != null" >
+        topic67_three = #{record.topic67Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic67Four != null" >
+        topic67_four = #{record.topic67Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic67Fraction != null" >
+        topic67_fraction = #{record.topic67Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic67Six != null" >
+        topic67_six = #{record.topic67Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic68One != null" >
+        topic68_one = #{record.topic68One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic68Two != null" >
+        topic68_two = #{record.topic68Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic68Three != null" >
+        topic68_three = #{record.topic68Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic68Four != null" >
+        topic68_four = #{record.topic68Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic68Fraction != null" >
+        topic68_fraction = #{record.topic68Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic68Six != null" >
+        topic68_six = #{record.topic68Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic69One != null" >
+        topic69_one = #{record.topic69One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic69Two != null" >
+        topic69_two = #{record.topic69Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic69Three != null" >
+        topic69_three = #{record.topic69Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic69Four != null" >
+        topic69_four = #{record.topic69Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic69Fraction != null" >
+        topic69_fraction = #{record.topic69Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic69Six != null" >
+        topic69_six = #{record.topic69Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic70One != null" >
+        topic70_one = #{record.topic70One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic70Two != null" >
+        topic70_two = #{record.topic70Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic70Three != null" >
+        topic70_three = #{record.topic70Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic70Four != null" >
+        topic70_four = #{record.topic70Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic70Fraction != null" >
+        topic70_fraction = #{record.topic70Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic70Six != null" >
+        topic70_six = #{record.topic70Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic71One != null" >
+        topic71_one = #{record.topic71One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic71Two != null" >
+        topic71_two = #{record.topic71Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic71Three != null" >
+        topic71_three = #{record.topic71Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic71Four != null" >
+        topic71_four = #{record.topic71Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic71Fraction != null" >
+        topic71_fraction = #{record.topic71Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic71Six != null" >
+        topic71_six = #{record.topic71Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic72One != null" >
+        topic72_one = #{record.topic72One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic72Two != null" >
+        topic72_two = #{record.topic72Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic72Three != null" >
+        topic72_three = #{record.topic72Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic72Four != null" >
+        topic72_four = #{record.topic72Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic72Fraction != null" >
+        topic72_fraction = #{record.topic72Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic72Six != null" >
+        topic72_six = #{record.topic72Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic73One != null" >
+        topic73_one = #{record.topic73One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic73Two != null" >
+        topic73_two = #{record.topic73Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic73Three != null" >
+        topic73_three = #{record.topic73Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic73Four != null" >
+        topic73_four = #{record.topic73Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic73Fraction != null" >
+        topic73_fraction = #{record.topic73Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic73Six != null" >
+        topic73_six = #{record.topic73Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic74One != null" >
+        topic74_one = #{record.topic74One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic74Two != null" >
+        topic74_two = #{record.topic74Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic74Three != null" >
+        topic74_three = #{record.topic74Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic74Four != null" >
+        topic74_four = #{record.topic74Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic74Fraction != null" >
+        topic74_fraction = #{record.topic74Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic74Six != null" >
+        topic74_six = #{record.topic74Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic75One != null" >
+        topic75_one = #{record.topic75One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic75Two != null" >
+        topic75_two = #{record.topic75Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic75Three != null" >
+        topic75_three = #{record.topic75Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic75Four != null" >
+        topic75_four = #{record.topic75Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic75Fraction != null" >
+        topic75_fraction = #{record.topic75Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic75Six != null" >
+        topic75_six = #{record.topic75Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic76One != null" >
+        topic76_one = #{record.topic76One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic76Two != null" >
+        topic76_two = #{record.topic76Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic76Three != null" >
+        topic76_three = #{record.topic76Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic76Four != null" >
+        topic76_four = #{record.topic76Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic76Fraction != null" >
+        topic76_fraction = #{record.topic76Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic76Six != null" >
+        topic76_six = #{record.topic76Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic77One != null" >
+        topic77_one = #{record.topic77One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic77Two != null" >
+        topic77_two = #{record.topic77Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic77Three != null" >
+        topic77_three = #{record.topic77Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic77Four != null" >
+        topic77_four = #{record.topic77Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic77Fraction != null" >
+        topic77_fraction = #{record.topic77Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic77Six != null" >
+        topic77_six = #{record.topic77Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic78One != null" >
+        topic78_one = #{record.topic78One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic78Two != null" >
+        topic78_two = #{record.topic78Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic78Three != null" >
+        topic78_three = #{record.topic78Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic78Four != null" >
+        topic78_four = #{record.topic78Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic78Fraction != null" >
+        topic78_fraction = #{record.topic78Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic78Six != null" >
+        topic78_six = #{record.topic78Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic79One != null" >
+        topic79_one = #{record.topic79One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic79Two != null" >
+        topic79_two = #{record.topic79Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic79Three != null" >
+        topic79_three = #{record.topic79Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic79Four != null" >
+        topic79_four = #{record.topic79Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic79Fraction != null" >
+        topic79_fraction = #{record.topic79Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic79Six != null" >
+        topic79_six = #{record.topic79Six,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic80One != null" >
+        topic80_one = #{record.topic80One,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic80Two != null" >
+        topic80_two = #{record.topic80Two,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic80Three != null" >
+        topic80_three = #{record.topic80Three,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic80Four != null" >
+        topic80_four = #{record.topic80Four,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic80Fraction != null" >
+        topic80_fraction = #{record.topic80Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.topic80Six != null" >
+        topic80_six = #{record.topic80Six,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update test_hans
+    set hansId = #{record.hansid,jdbcType=INTEGER},
+      testId = #{record.testid,jdbcType=INTEGER},
+      trough4 = #{record.trough4,jdbcType=VARCHAR},
+      trough5 = #{record.trough5,jdbcType=VARCHAR},
+      trough6 = #{record.trough6,jdbcType=VARCHAR},
+      trough7 = #{record.trough7,jdbcType=INTEGER},
+      trough8 = #{record.trough8,jdbcType=VARCHAR},
+      trough9 = #{record.trough9,jdbcType=VARCHAR},
+      trough10 = #{record.trough10,jdbcType=VARCHAR},
+      trough11 = #{record.trough11,jdbcType=VARCHAR},
+      trough12 = #{record.trough12,jdbcType=VARCHAR},
+      trough13 = #{record.trough13,jdbcType=VARCHAR},
+      trough14 = #{record.trough14,jdbcType=VARCHAR},
+      trough15 = #{record.trough15,jdbcType=VARCHAR},
+      trough16 = #{record.trough16,jdbcType=VARCHAR},
+      trough17 = #{record.trough17,jdbcType=VARCHAR},
+      trough18 = #{record.trough18,jdbcType=VARCHAR},
+      topic41_one = #{record.topic41One,jdbcType=VARCHAR},
+      topic41_two = #{record.topic41Two,jdbcType=VARCHAR},
+      topic41_three = #{record.topic41Three,jdbcType=VARCHAR},
+      topic41_four = #{record.topic41Four,jdbcType=VARCHAR},
+      topic41_fraction = #{record.topic41Fraction,jdbcType=VARCHAR},
+      topic41_six = #{record.topic41Six,jdbcType=VARCHAR},
+      topic42_one = #{record.topic42One,jdbcType=VARCHAR},
+      topic42_two = #{record.topic42Two,jdbcType=VARCHAR},
+      topic42_three = #{record.topic42Three,jdbcType=VARCHAR},
+      topic42_four = #{record.topic42Four,jdbcType=VARCHAR},
+      topic42_fraction = #{record.topic42Fraction,jdbcType=VARCHAR},
+      topic42_six = #{record.topic42Six,jdbcType=VARCHAR},
+      topic43_one = #{record.topic43One,jdbcType=VARCHAR},
+      topic43_two = #{record.topic43Two,jdbcType=VARCHAR},
+      topic43_three = #{record.topic43Three,jdbcType=VARCHAR},
+      topic43_four = #{record.topic43Four,jdbcType=VARCHAR},
+      topic43_fraction = #{record.topic43Fraction,jdbcType=VARCHAR},
+      topic43_six = #{record.topic43Six,jdbcType=VARCHAR},
+      topic44_one = #{record.topic44One,jdbcType=VARCHAR},
+      topic44_two = #{record.topic44Two,jdbcType=VARCHAR},
+      topic44_three = #{record.topic44Three,jdbcType=VARCHAR},
+      topic44_four = #{record.topic44Four,jdbcType=VARCHAR},
+      topic44_fraction = #{record.topic44Fraction,jdbcType=VARCHAR},
+      topic44_six = #{record.topic44Six,jdbcType=VARCHAR},
+      topic45_one = #{record.topic45One,jdbcType=VARCHAR},
+      topic45_two = #{record.topic45Two,jdbcType=VARCHAR},
+      topic45_three = #{record.topic45Three,jdbcType=VARCHAR},
+      topic45_four = #{record.topic45Four,jdbcType=VARCHAR},
+      topic45_fraction = #{record.topic45Fraction,jdbcType=VARCHAR},
+      topic45_six = #{record.topic45Six,jdbcType=VARCHAR},
+      topic46_one = #{record.topic46One,jdbcType=VARCHAR},
+      topic46_two = #{record.topic46Two,jdbcType=VARCHAR},
+      topic46_three = #{record.topic46Three,jdbcType=VARCHAR},
+      topic46_four = #{record.topic46Four,jdbcType=VARCHAR},
+      topic46_fraction = #{record.topic46Fraction,jdbcType=VARCHAR},
+      topic46_six = #{record.topic46Six,jdbcType=VARCHAR},
+      topic47_one = #{record.topic47One,jdbcType=VARCHAR},
+      topic47_two = #{record.topic47Two,jdbcType=VARCHAR},
+      topic47_three = #{record.topic47Three,jdbcType=VARCHAR},
+      topic47_four = #{record.topic47Four,jdbcType=VARCHAR},
+      topic47_fraction = #{record.topic47Fraction,jdbcType=VARCHAR},
+      topic47_six = #{record.topic47Six,jdbcType=VARCHAR},
+      topic48_one = #{record.topic48One,jdbcType=VARCHAR},
+      topic48_two = #{record.topic48Two,jdbcType=VARCHAR},
+      topic48_three = #{record.topic48Three,jdbcType=VARCHAR},
+      topic48_four = #{record.topic48Four,jdbcType=VARCHAR},
+      topic48_fraction = #{record.topic48Fraction,jdbcType=VARCHAR},
+      topic48_six = #{record.topic48Six,jdbcType=VARCHAR},
+      topic49_one = #{record.topic49One,jdbcType=VARCHAR},
+      topic49_two = #{record.topic49Two,jdbcType=VARCHAR},
+      topic49_three = #{record.topic49Three,jdbcType=VARCHAR},
+      topic49_four = #{record.topic49Four,jdbcType=VARCHAR},
+      topic49_fraction = #{record.topic49Fraction,jdbcType=VARCHAR},
+      topic49_six = #{record.topic49Six,jdbcType=VARCHAR},
+      topic50_one = #{record.topic50One,jdbcType=VARCHAR},
+      topic50_two = #{record.topic50Two,jdbcType=VARCHAR},
+      topic50_three = #{record.topic50Three,jdbcType=VARCHAR},
+      topic50_four = #{record.topic50Four,jdbcType=VARCHAR},
+      topic50_fraction = #{record.topic50Fraction,jdbcType=VARCHAR},
+      topic50_six = #{record.topic50Six,jdbcType=VARCHAR},
+      topic51_one = #{record.topic51One,jdbcType=VARCHAR},
+      topic51_two = #{record.topic51Two,jdbcType=VARCHAR},
+      topic51_three = #{record.topic51Three,jdbcType=VARCHAR},
+      topic51_four = #{record.topic51Four,jdbcType=VARCHAR},
+      topic51_fraction = #{record.topic51Fraction,jdbcType=VARCHAR},
+      topic51_six = #{record.topic51Six,jdbcType=VARCHAR},
+      topic52_one = #{record.topic52One,jdbcType=VARCHAR},
+      topic52_two = #{record.topic52Two,jdbcType=VARCHAR},
+      topic52_three = #{record.topic52Three,jdbcType=VARCHAR},
+      topic52_four = #{record.topic52Four,jdbcType=VARCHAR},
+      topic52_fraction = #{record.topic52Fraction,jdbcType=VARCHAR},
+      topic52_six = #{record.topic52Six,jdbcType=VARCHAR},
+      topic53_one = #{record.topic53One,jdbcType=VARCHAR},
+      topic53_two = #{record.topic53Two,jdbcType=VARCHAR},
+      topic53_three = #{record.topic53Three,jdbcType=VARCHAR},
+      topic53_four = #{record.topic53Four,jdbcType=VARCHAR},
+      topic53_fraction = #{record.topic53Fraction,jdbcType=VARCHAR},
+      topic53_six = #{record.topic53Six,jdbcType=VARCHAR},
+      topic54_one = #{record.topic54One,jdbcType=VARCHAR},
+      topic54_two = #{record.topic54Two,jdbcType=VARCHAR},
+      topic54_three = #{record.topic54Three,jdbcType=VARCHAR},
+      topic54_four = #{record.topic54Four,jdbcType=VARCHAR},
+      topic54_fraction = #{record.topic54Fraction,jdbcType=VARCHAR},
+      topic54_six = #{record.topic54Six,jdbcType=VARCHAR},
+      topic55_one = #{record.topic55One,jdbcType=VARCHAR},
+      topic55_two = #{record.topic55Two,jdbcType=VARCHAR},
+      topic55_three = #{record.topic55Three,jdbcType=VARCHAR},
+      topic55_four = #{record.topic55Four,jdbcType=VARCHAR},
+      topic55_fraction = #{record.topic55Fraction,jdbcType=VARCHAR},
+      topic55_six = #{record.topic55Six,jdbcType=VARCHAR},
+      topic56_one = #{record.topic56One,jdbcType=VARCHAR},
+      topic56_two = #{record.topic56Two,jdbcType=VARCHAR},
+      topic56_three = #{record.topic56Three,jdbcType=VARCHAR},
+      topic56_four = #{record.topic56Four,jdbcType=VARCHAR},
+      topic56_fraction = #{record.topic56Fraction,jdbcType=VARCHAR},
+      topic56_six = #{record.topic56Six,jdbcType=VARCHAR},
+      topic57_one = #{record.topic57One,jdbcType=VARCHAR},
+      topic57_two = #{record.topic57Two,jdbcType=VARCHAR},
+      topic57_three = #{record.topic57Three,jdbcType=VARCHAR},
+      topic57_four = #{record.topic57Four,jdbcType=VARCHAR},
+      topic57_fraction = #{record.topic57Fraction,jdbcType=VARCHAR},
+      topic57_six = #{record.topic57Six,jdbcType=VARCHAR},
+      topic58_one = #{record.topic58One,jdbcType=VARCHAR},
+      topic58_two = #{record.topic58Two,jdbcType=VARCHAR},
+      topic58_three = #{record.topic58Three,jdbcType=VARCHAR},
+      topic58_four = #{record.topic58Four,jdbcType=VARCHAR},
+      topic58_fraction = #{record.topic58Fraction,jdbcType=VARCHAR},
+      topic58_six = #{record.topic58Six,jdbcType=VARCHAR},
+      topic59_one = #{record.topic59One,jdbcType=VARCHAR},
+      topic59_two = #{record.topic59Two,jdbcType=VARCHAR},
+      topic59_three = #{record.topic59Three,jdbcType=VARCHAR},
+      topic59_four = #{record.topic59Four,jdbcType=VARCHAR},
+      topic59_fraction = #{record.topic59Fraction,jdbcType=VARCHAR},
+      topic59_six = #{record.topic59Six,jdbcType=VARCHAR},
+      topic60_one = #{record.topic60One,jdbcType=VARCHAR},
+      topic60_two = #{record.topic60Two,jdbcType=VARCHAR},
+      topic60_three = #{record.topic60Three,jdbcType=VARCHAR},
+      topic60_four = #{record.topic60Four,jdbcType=VARCHAR},
+      topic60_fraction = #{record.topic60Fraction,jdbcType=VARCHAR},
+      topic60_six = #{record.topic60Six,jdbcType=VARCHAR},
+      topic61_one = #{record.topic61One,jdbcType=VARCHAR},
+      topic61_two = #{record.topic61Two,jdbcType=VARCHAR},
+      topic61_three = #{record.topic61Three,jdbcType=VARCHAR},
+      topic61_four = #{record.topic61Four,jdbcType=VARCHAR},
+      topic61_fraction = #{record.topic61Fraction,jdbcType=VARCHAR},
+      topic61_six = #{record.topic61Six,jdbcType=VARCHAR},
+      topic62_one = #{record.topic62One,jdbcType=VARCHAR},
+      topic62_two = #{record.topic62Two,jdbcType=VARCHAR},
+      topic62_three = #{record.topic62Three,jdbcType=VARCHAR},
+      topic62_four = #{record.topic62Four,jdbcType=VARCHAR},
+      topic62_fraction = #{record.topic62Fraction,jdbcType=VARCHAR},
+      topic62_six = #{record.topic62Six,jdbcType=VARCHAR},
+      topic63_one = #{record.topic63One,jdbcType=VARCHAR},
+      topic63_two = #{record.topic63Two,jdbcType=VARCHAR},
+      topic63_three = #{record.topic63Three,jdbcType=VARCHAR},
+      topic63_four = #{record.topic63Four,jdbcType=VARCHAR},
+      topic63_fraction = #{record.topic63Fraction,jdbcType=VARCHAR},
+      topic63_six = #{record.topic63Six,jdbcType=VARCHAR},
+      topic64_one = #{record.topic64One,jdbcType=VARCHAR},
+      topic64_two = #{record.topic64Two,jdbcType=VARCHAR},
+      topic64_three = #{record.topic64Three,jdbcType=VARCHAR},
+      topic64_four = #{record.topic64Four,jdbcType=VARCHAR},
+      topic64_fraction = #{record.topic64Fraction,jdbcType=VARCHAR},
+      topic64_six = #{record.topic64Six,jdbcType=VARCHAR},
+      topic65_one = #{record.topic65One,jdbcType=VARCHAR},
+      topic65_two = #{record.topic65Two,jdbcType=VARCHAR},
+      topic65_three = #{record.topic65Three,jdbcType=VARCHAR},
+      topic65_four = #{record.topic65Four,jdbcType=VARCHAR},
+      topic65_fraction = #{record.topic65Fraction,jdbcType=VARCHAR},
+      topic65_six = #{record.topic65Six,jdbcType=VARCHAR},
+      topic66_one = #{record.topic66One,jdbcType=VARCHAR},
+      topic66_two = #{record.topic66Two,jdbcType=VARCHAR},
+      topic66_three = #{record.topic66Three,jdbcType=VARCHAR},
+      topic66_four = #{record.topic66Four,jdbcType=VARCHAR},
+      topic66_fraction = #{record.topic66Fraction,jdbcType=VARCHAR},
+      topic66_six = #{record.topic66Six,jdbcType=VARCHAR},
+      topic67_one = #{record.topic67One,jdbcType=VARCHAR},
+      topic67_two = #{record.topic67Two,jdbcType=VARCHAR},
+      topic67_three = #{record.topic67Three,jdbcType=VARCHAR},
+      topic67_four = #{record.topic67Four,jdbcType=VARCHAR},
+      topic67_fraction = #{record.topic67Fraction,jdbcType=VARCHAR},
+      topic67_six = #{record.topic67Six,jdbcType=VARCHAR},
+      topic68_one = #{record.topic68One,jdbcType=VARCHAR},
+      topic68_two = #{record.topic68Two,jdbcType=VARCHAR},
+      topic68_three = #{record.topic68Three,jdbcType=VARCHAR},
+      topic68_four = #{record.topic68Four,jdbcType=VARCHAR},
+      topic68_fraction = #{record.topic68Fraction,jdbcType=VARCHAR},
+      topic68_six = #{record.topic68Six,jdbcType=VARCHAR},
+      topic69_one = #{record.topic69One,jdbcType=VARCHAR},
+      topic69_two = #{record.topic69Two,jdbcType=VARCHAR},
+      topic69_three = #{record.topic69Three,jdbcType=VARCHAR},
+      topic69_four = #{record.topic69Four,jdbcType=VARCHAR},
+      topic69_fraction = #{record.topic69Fraction,jdbcType=VARCHAR},
+      topic69_six = #{record.topic69Six,jdbcType=VARCHAR},
+      topic70_one = #{record.topic70One,jdbcType=VARCHAR},
+      topic70_two = #{record.topic70Two,jdbcType=VARCHAR},
+      topic70_three = #{record.topic70Three,jdbcType=VARCHAR},
+      topic70_four = #{record.topic70Four,jdbcType=VARCHAR},
+      topic70_fraction = #{record.topic70Fraction,jdbcType=VARCHAR},
+      topic70_six = #{record.topic70Six,jdbcType=VARCHAR},
+      topic71_one = #{record.topic71One,jdbcType=VARCHAR},
+      topic71_two = #{record.topic71Two,jdbcType=VARCHAR},
+      topic71_three = #{record.topic71Three,jdbcType=VARCHAR},
+      topic71_four = #{record.topic71Four,jdbcType=VARCHAR},
+      topic71_fraction = #{record.topic71Fraction,jdbcType=VARCHAR},
+      topic71_six = #{record.topic71Six,jdbcType=VARCHAR},
+      topic72_one = #{record.topic72One,jdbcType=VARCHAR},
+      topic72_two = #{record.topic72Two,jdbcType=VARCHAR},
+      topic72_three = #{record.topic72Three,jdbcType=VARCHAR},
+      topic72_four = #{record.topic72Four,jdbcType=VARCHAR},
+      topic72_fraction = #{record.topic72Fraction,jdbcType=VARCHAR},
+      topic72_six = #{record.topic72Six,jdbcType=VARCHAR},
+      topic73_one = #{record.topic73One,jdbcType=VARCHAR},
+      topic73_two = #{record.topic73Two,jdbcType=VARCHAR},
+      topic73_three = #{record.topic73Three,jdbcType=VARCHAR},
+      topic73_four = #{record.topic73Four,jdbcType=VARCHAR},
+      topic73_fraction = #{record.topic73Fraction,jdbcType=VARCHAR},
+      topic73_six = #{record.topic73Six,jdbcType=VARCHAR},
+      topic74_one = #{record.topic74One,jdbcType=VARCHAR},
+      topic74_two = #{record.topic74Two,jdbcType=VARCHAR},
+      topic74_three = #{record.topic74Three,jdbcType=VARCHAR},
+      topic74_four = #{record.topic74Four,jdbcType=VARCHAR},
+      topic74_fraction = #{record.topic74Fraction,jdbcType=VARCHAR},
+      topic74_six = #{record.topic74Six,jdbcType=VARCHAR},
+      topic75_one = #{record.topic75One,jdbcType=VARCHAR},
+      topic75_two = #{record.topic75Two,jdbcType=VARCHAR},
+      topic75_three = #{record.topic75Three,jdbcType=VARCHAR},
+      topic75_four = #{record.topic75Four,jdbcType=VARCHAR},
+      topic75_fraction = #{record.topic75Fraction,jdbcType=VARCHAR},
+      topic75_six = #{record.topic75Six,jdbcType=VARCHAR},
+      topic76_one = #{record.topic76One,jdbcType=VARCHAR},
+      topic76_two = #{record.topic76Two,jdbcType=VARCHAR},
+      topic76_three = #{record.topic76Three,jdbcType=VARCHAR},
+      topic76_four = #{record.topic76Four,jdbcType=VARCHAR},
+      topic76_fraction = #{record.topic76Fraction,jdbcType=VARCHAR},
+      topic76_six = #{record.topic76Six,jdbcType=VARCHAR},
+      topic77_one = #{record.topic77One,jdbcType=VARCHAR},
+      topic77_two = #{record.topic77Two,jdbcType=VARCHAR},
+      topic77_three = #{record.topic77Three,jdbcType=VARCHAR},
+      topic77_four = #{record.topic77Four,jdbcType=VARCHAR},
+      topic77_fraction = #{record.topic77Fraction,jdbcType=VARCHAR},
+      topic77_six = #{record.topic77Six,jdbcType=VARCHAR},
+      topic78_one = #{record.topic78One,jdbcType=VARCHAR},
+      topic78_two = #{record.topic78Two,jdbcType=VARCHAR},
+      topic78_three = #{record.topic78Three,jdbcType=VARCHAR},
+      topic78_four = #{record.topic78Four,jdbcType=VARCHAR},
+      topic78_fraction = #{record.topic78Fraction,jdbcType=VARCHAR},
+      topic78_six = #{record.topic78Six,jdbcType=VARCHAR},
+      topic79_one = #{record.topic79One,jdbcType=VARCHAR},
+      topic79_two = #{record.topic79Two,jdbcType=VARCHAR},
+      topic79_three = #{record.topic79Three,jdbcType=VARCHAR},
+      topic79_four = #{record.topic79Four,jdbcType=VARCHAR},
+      topic79_fraction = #{record.topic79Fraction,jdbcType=VARCHAR},
+      topic79_six = #{record.topic79Six,jdbcType=VARCHAR},
+      topic80_one = #{record.topic80One,jdbcType=VARCHAR},
+      topic80_two = #{record.topic80Two,jdbcType=VARCHAR},
+      topic80_three = #{record.topic80Three,jdbcType=VARCHAR},
+      topic80_four = #{record.topic80Four,jdbcType=VARCHAR},
+      topic80_fraction = #{record.topic80Fraction,jdbcType=VARCHAR},
+      topic80_six = #{record.topic80Six,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.vo.pojo.entity.TestHans" >
+    update test_hans
+    <set >
+      <if test="testid != null" >
+        testId = #{testid,jdbcType=INTEGER},
+      </if>
+      <if test="trough4 != null" >
+        trough4 = #{trough4,jdbcType=VARCHAR},
+      </if>
+      <if test="trough5 != null" >
+        trough5 = #{trough5,jdbcType=VARCHAR},
+      </if>
+      <if test="trough6 != null" >
+        trough6 = #{trough6,jdbcType=VARCHAR},
+      </if>
+      <if test="trough7 != null" >
+        trough7 = #{trough7,jdbcType=INTEGER},
+      </if>
+      <if test="trough8 != null" >
+        trough8 = #{trough8,jdbcType=VARCHAR},
+      </if>
+      <if test="trough9 != null" >
+        trough9 = #{trough9,jdbcType=VARCHAR},
+      </if>
+      <if test="trough10 != null" >
+        trough10 = #{trough10,jdbcType=VARCHAR},
+      </if>
+      <if test="trough11 != null" >
+        trough11 = #{trough11,jdbcType=VARCHAR},
+      </if>
+      <if test="trough12 != null" >
+        trough12 = #{trough12,jdbcType=VARCHAR},
+      </if>
+      <if test="trough13 != null" >
+        trough13 = #{trough13,jdbcType=VARCHAR},
+      </if>
+      <if test="trough14 != null" >
+        trough14 = #{trough14,jdbcType=VARCHAR},
+      </if>
+      <if test="trough15 != null" >
+        trough15 = #{trough15,jdbcType=VARCHAR},
+      </if>
+      <if test="trough16 != null" >
+        trough16 = #{trough16,jdbcType=VARCHAR},
+      </if>
+      <if test="trough17 != null" >
+        trough17 = #{trough17,jdbcType=VARCHAR},
+      </if>
+      <if test="trough18 != null" >
+        trough18 = #{trough18,jdbcType=VARCHAR},
+      </if>
+      <if test="topic41One != null" >
+        topic41_one = #{topic41One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic41Two != null" >
+        topic41_two = #{topic41Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic41Three != null" >
+        topic41_three = #{topic41Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic41Four != null" >
+        topic41_four = #{topic41Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic41Fraction != null" >
+        topic41_fraction = #{topic41Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic41Six != null" >
+        topic41_six = #{topic41Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic42One != null" >
+        topic42_one = #{topic42One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic42Two != null" >
+        topic42_two = #{topic42Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic42Three != null" >
+        topic42_three = #{topic42Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic42Four != null" >
+        topic42_four = #{topic42Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic42Fraction != null" >
+        topic42_fraction = #{topic42Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic42Six != null" >
+        topic42_six = #{topic42Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic43One != null" >
+        topic43_one = #{topic43One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic43Two != null" >
+        topic43_two = #{topic43Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic43Three != null" >
+        topic43_three = #{topic43Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic43Four != null" >
+        topic43_four = #{topic43Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic43Fraction != null" >
+        topic43_fraction = #{topic43Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic43Six != null" >
+        topic43_six = #{topic43Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic44One != null" >
+        topic44_one = #{topic44One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic44Two != null" >
+        topic44_two = #{topic44Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic44Three != null" >
+        topic44_three = #{topic44Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic44Four != null" >
+        topic44_four = #{topic44Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic44Fraction != null" >
+        topic44_fraction = #{topic44Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic44Six != null" >
+        topic44_six = #{topic44Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic45One != null" >
+        topic45_one = #{topic45One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic45Two != null" >
+        topic45_two = #{topic45Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic45Three != null" >
+        topic45_three = #{topic45Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic45Four != null" >
+        topic45_four = #{topic45Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic45Fraction != null" >
+        topic45_fraction = #{topic45Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic45Six != null" >
+        topic45_six = #{topic45Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic46One != null" >
+        topic46_one = #{topic46One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic46Two != null" >
+        topic46_two = #{topic46Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic46Three != null" >
+        topic46_three = #{topic46Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic46Four != null" >
+        topic46_four = #{topic46Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic46Fraction != null" >
+        topic46_fraction = #{topic46Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic46Six != null" >
+        topic46_six = #{topic46Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic47One != null" >
+        topic47_one = #{topic47One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic47Two != null" >
+        topic47_two = #{topic47Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic47Three != null" >
+        topic47_three = #{topic47Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic47Four != null" >
+        topic47_four = #{topic47Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic47Fraction != null" >
+        topic47_fraction = #{topic47Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic47Six != null" >
+        topic47_six = #{topic47Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic48One != null" >
+        topic48_one = #{topic48One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic48Two != null" >
+        topic48_two = #{topic48Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic48Three != null" >
+        topic48_three = #{topic48Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic48Four != null" >
+        topic48_four = #{topic48Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic48Fraction != null" >
+        topic48_fraction = #{topic48Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic48Six != null" >
+        topic48_six = #{topic48Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic49One != null" >
+        topic49_one = #{topic49One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic49Two != null" >
+        topic49_two = #{topic49Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic49Three != null" >
+        topic49_three = #{topic49Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic49Four != null" >
+        topic49_four = #{topic49Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic49Fraction != null" >
+        topic49_fraction = #{topic49Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic49Six != null" >
+        topic49_six = #{topic49Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic50One != null" >
+        topic50_one = #{topic50One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic50Two != null" >
+        topic50_two = #{topic50Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic50Three != null" >
+        topic50_three = #{topic50Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic50Four != null" >
+        topic50_four = #{topic50Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic50Fraction != null" >
+        topic50_fraction = #{topic50Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic50Six != null" >
+        topic50_six = #{topic50Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic51One != null" >
+        topic51_one = #{topic51One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic51Two != null" >
+        topic51_two = #{topic51Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic51Three != null" >
+        topic51_three = #{topic51Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic51Four != null" >
+        topic51_four = #{topic51Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic51Fraction != null" >
+        topic51_fraction = #{topic51Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic51Six != null" >
+        topic51_six = #{topic51Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic52One != null" >
+        topic52_one = #{topic52One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic52Two != null" >
+        topic52_two = #{topic52Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic52Three != null" >
+        topic52_three = #{topic52Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic52Four != null" >
+        topic52_four = #{topic52Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic52Fraction != null" >
+        topic52_fraction = #{topic52Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic52Six != null" >
+        topic52_six = #{topic52Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic53One != null" >
+        topic53_one = #{topic53One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic53Two != null" >
+        topic53_two = #{topic53Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic53Three != null" >
+        topic53_three = #{topic53Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic53Four != null" >
+        topic53_four = #{topic53Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic53Fraction != null" >
+        topic53_fraction = #{topic53Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic53Six != null" >
+        topic53_six = #{topic53Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic54One != null" >
+        topic54_one = #{topic54One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic54Two != null" >
+        topic54_two = #{topic54Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic54Three != null" >
+        topic54_three = #{topic54Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic54Four != null" >
+        topic54_four = #{topic54Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic54Fraction != null" >
+        topic54_fraction = #{topic54Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic54Six != null" >
+        topic54_six = #{topic54Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic55One != null" >
+        topic55_one = #{topic55One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic55Two != null" >
+        topic55_two = #{topic55Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic55Three != null" >
+        topic55_three = #{topic55Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic55Four != null" >
+        topic55_four = #{topic55Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic55Fraction != null" >
+        topic55_fraction = #{topic55Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic55Six != null" >
+        topic55_six = #{topic55Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic56One != null" >
+        topic56_one = #{topic56One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic56Two != null" >
+        topic56_two = #{topic56Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic56Three != null" >
+        topic56_three = #{topic56Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic56Four != null" >
+        topic56_four = #{topic56Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic56Fraction != null" >
+        topic56_fraction = #{topic56Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic56Six != null" >
+        topic56_six = #{topic56Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic57One != null" >
+        topic57_one = #{topic57One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic57Two != null" >
+        topic57_two = #{topic57Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic57Three != null" >
+        topic57_three = #{topic57Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic57Four != null" >
+        topic57_four = #{topic57Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic57Fraction != null" >
+        topic57_fraction = #{topic57Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic57Six != null" >
+        topic57_six = #{topic57Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic58One != null" >
+        topic58_one = #{topic58One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic58Two != null" >
+        topic58_two = #{topic58Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic58Three != null" >
+        topic58_three = #{topic58Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic58Four != null" >
+        topic58_four = #{topic58Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic58Fraction != null" >
+        topic58_fraction = #{topic58Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic58Six != null" >
+        topic58_six = #{topic58Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic59One != null" >
+        topic59_one = #{topic59One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic59Two != null" >
+        topic59_two = #{topic59Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic59Three != null" >
+        topic59_three = #{topic59Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic59Four != null" >
+        topic59_four = #{topic59Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic59Fraction != null" >
+        topic59_fraction = #{topic59Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic59Six != null" >
+        topic59_six = #{topic59Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic60One != null" >
+        topic60_one = #{topic60One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic60Two != null" >
+        topic60_two = #{topic60Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic60Three != null" >
+        topic60_three = #{topic60Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic60Four != null" >
+        topic60_four = #{topic60Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic60Fraction != null" >
+        topic60_fraction = #{topic60Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic60Six != null" >
+        topic60_six = #{topic60Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic61One != null" >
+        topic61_one = #{topic61One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic61Two != null" >
+        topic61_two = #{topic61Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic61Three != null" >
+        topic61_three = #{topic61Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic61Four != null" >
+        topic61_four = #{topic61Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic61Fraction != null" >
+        topic61_fraction = #{topic61Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic61Six != null" >
+        topic61_six = #{topic61Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic62One != null" >
+        topic62_one = #{topic62One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic62Two != null" >
+        topic62_two = #{topic62Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic62Three != null" >
+        topic62_three = #{topic62Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic62Four != null" >
+        topic62_four = #{topic62Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic62Fraction != null" >
+        topic62_fraction = #{topic62Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic62Six != null" >
+        topic62_six = #{topic62Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic63One != null" >
+        topic63_one = #{topic63One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic63Two != null" >
+        topic63_two = #{topic63Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic63Three != null" >
+        topic63_three = #{topic63Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic63Four != null" >
+        topic63_four = #{topic63Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic63Fraction != null" >
+        topic63_fraction = #{topic63Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic63Six != null" >
+        topic63_six = #{topic63Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic64One != null" >
+        topic64_one = #{topic64One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic64Two != null" >
+        topic64_two = #{topic64Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic64Three != null" >
+        topic64_three = #{topic64Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic64Four != null" >
+        topic64_four = #{topic64Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic64Fraction != null" >
+        topic64_fraction = #{topic64Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic64Six != null" >
+        topic64_six = #{topic64Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic65One != null" >
+        topic65_one = #{topic65One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic65Two != null" >
+        topic65_two = #{topic65Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic65Three != null" >
+        topic65_three = #{topic65Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic65Four != null" >
+        topic65_four = #{topic65Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic65Fraction != null" >
+        topic65_fraction = #{topic65Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic65Six != null" >
+        topic65_six = #{topic65Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic66One != null" >
+        topic66_one = #{topic66One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic66Two != null" >
+        topic66_two = #{topic66Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic66Three != null" >
+        topic66_three = #{topic66Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic66Four != null" >
+        topic66_four = #{topic66Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic66Fraction != null" >
+        topic66_fraction = #{topic66Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic66Six != null" >
+        topic66_six = #{topic66Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic67One != null" >
+        topic67_one = #{topic67One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic67Two != null" >
+        topic67_two = #{topic67Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic67Three != null" >
+        topic67_three = #{topic67Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic67Four != null" >
+        topic67_four = #{topic67Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic67Fraction != null" >
+        topic67_fraction = #{topic67Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic67Six != null" >
+        topic67_six = #{topic67Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic68One != null" >
+        topic68_one = #{topic68One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic68Two != null" >
+        topic68_two = #{topic68Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic68Three != null" >
+        topic68_three = #{topic68Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic68Four != null" >
+        topic68_four = #{topic68Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic68Fraction != null" >
+        topic68_fraction = #{topic68Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic68Six != null" >
+        topic68_six = #{topic68Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic69One != null" >
+        topic69_one = #{topic69One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic69Two != null" >
+        topic69_two = #{topic69Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic69Three != null" >
+        topic69_three = #{topic69Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic69Four != null" >
+        topic69_four = #{topic69Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic69Fraction != null" >
+        topic69_fraction = #{topic69Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic69Six != null" >
+        topic69_six = #{topic69Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic70One != null" >
+        topic70_one = #{topic70One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic70Two != null" >
+        topic70_two = #{topic70Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic70Three != null" >
+        topic70_three = #{topic70Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic70Four != null" >
+        topic70_four = #{topic70Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic70Fraction != null" >
+        topic70_fraction = #{topic70Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic70Six != null" >
+        topic70_six = #{topic70Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic71One != null" >
+        topic71_one = #{topic71One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic71Two != null" >
+        topic71_two = #{topic71Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic71Three != null" >
+        topic71_three = #{topic71Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic71Four != null" >
+        topic71_four = #{topic71Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic71Fraction != null" >
+        topic71_fraction = #{topic71Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic71Six != null" >
+        topic71_six = #{topic71Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic72One != null" >
+        topic72_one = #{topic72One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic72Two != null" >
+        topic72_two = #{topic72Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic72Three != null" >
+        topic72_three = #{topic72Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic72Four != null" >
+        topic72_four = #{topic72Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic72Fraction != null" >
+        topic72_fraction = #{topic72Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic72Six != null" >
+        topic72_six = #{topic72Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic73One != null" >
+        topic73_one = #{topic73One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic73Two != null" >
+        topic73_two = #{topic73Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic73Three != null" >
+        topic73_three = #{topic73Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic73Four != null" >
+        topic73_four = #{topic73Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic73Fraction != null" >
+        topic73_fraction = #{topic73Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic73Six != null" >
+        topic73_six = #{topic73Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic74One != null" >
+        topic74_one = #{topic74One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic74Two != null" >
+        topic74_two = #{topic74Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic74Three != null" >
+        topic74_three = #{topic74Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic74Four != null" >
+        topic74_four = #{topic74Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic74Fraction != null" >
+        topic74_fraction = #{topic74Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic74Six != null" >
+        topic74_six = #{topic74Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic75One != null" >
+        topic75_one = #{topic75One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic75Two != null" >
+        topic75_two = #{topic75Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic75Three != null" >
+        topic75_three = #{topic75Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic75Four != null" >
+        topic75_four = #{topic75Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic75Fraction != null" >
+        topic75_fraction = #{topic75Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic75Six != null" >
+        topic75_six = #{topic75Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic76One != null" >
+        topic76_one = #{topic76One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic76Two != null" >
+        topic76_two = #{topic76Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic76Three != null" >
+        topic76_three = #{topic76Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic76Four != null" >
+        topic76_four = #{topic76Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic76Fraction != null" >
+        topic76_fraction = #{topic76Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic76Six != null" >
+        topic76_six = #{topic76Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic77One != null" >
+        topic77_one = #{topic77One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic77Two != null" >
+        topic77_two = #{topic77Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic77Three != null" >
+        topic77_three = #{topic77Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic77Four != null" >
+        topic77_four = #{topic77Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic77Fraction != null" >
+        topic77_fraction = #{topic77Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic77Six != null" >
+        topic77_six = #{topic77Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic78One != null" >
+        topic78_one = #{topic78One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic78Two != null" >
+        topic78_two = #{topic78Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic78Three != null" >
+        topic78_three = #{topic78Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic78Four != null" >
+        topic78_four = #{topic78Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic78Fraction != null" >
+        topic78_fraction = #{topic78Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic78Six != null" >
+        topic78_six = #{topic78Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic79One != null" >
+        topic79_one = #{topic79One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic79Two != null" >
+        topic79_two = #{topic79Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic79Three != null" >
+        topic79_three = #{topic79Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic79Four != null" >
+        topic79_four = #{topic79Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic79Fraction != null" >
+        topic79_fraction = #{topic79Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic79Six != null" >
+        topic79_six = #{topic79Six,jdbcType=VARCHAR},
+      </if>
+      <if test="topic80One != null" >
+        topic80_one = #{topic80One,jdbcType=VARCHAR},
+      </if>
+      <if test="topic80Two != null" >
+        topic80_two = #{topic80Two,jdbcType=VARCHAR},
+      </if>
+      <if test="topic80Three != null" >
+        topic80_three = #{topic80Three,jdbcType=VARCHAR},
+      </if>
+      <if test="topic80Four != null" >
+        topic80_four = #{topic80Four,jdbcType=VARCHAR},
+      </if>
+      <if test="topic80Fraction != null" >
+        topic80_fraction = #{topic80Fraction,jdbcType=VARCHAR},
+      </if>
+      <if test="topic80Six != null" >
+        topic80_six = #{topic80Six,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where hansId = #{hansid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.vo.pojo.entity.TestHans" >
+    update test_hans
+    set testId = #{testid,jdbcType=INTEGER},
+      trough4 = #{trough4,jdbcType=VARCHAR},
+      trough5 = #{trough5,jdbcType=VARCHAR},
+      trough6 = #{trough6,jdbcType=VARCHAR},
+      trough7 = #{trough7,jdbcType=INTEGER},
+      trough8 = #{trough8,jdbcType=VARCHAR},
+      trough9 = #{trough9,jdbcType=VARCHAR},
+      trough10 = #{trough10,jdbcType=VARCHAR},
+      trough11 = #{trough11,jdbcType=VARCHAR},
+      trough12 = #{trough12,jdbcType=VARCHAR},
+      trough13 = #{trough13,jdbcType=VARCHAR},
+      trough14 = #{trough14,jdbcType=VARCHAR},
+      trough15 = #{trough15,jdbcType=VARCHAR},
+      trough16 = #{trough16,jdbcType=VARCHAR},
+      trough17 = #{trough17,jdbcType=VARCHAR},
+      trough18 = #{trough18,jdbcType=VARCHAR},
+      topic41_one = #{topic41One,jdbcType=VARCHAR},
+      topic41_two = #{topic41Two,jdbcType=VARCHAR},
+      topic41_three = #{topic41Three,jdbcType=VARCHAR},
+      topic41_four = #{topic41Four,jdbcType=VARCHAR},
+      topic41_fraction = #{topic41Fraction,jdbcType=VARCHAR},
+      topic41_six = #{topic41Six,jdbcType=VARCHAR},
+      topic42_one = #{topic42One,jdbcType=VARCHAR},
+      topic42_two = #{topic42Two,jdbcType=VARCHAR},
+      topic42_three = #{topic42Three,jdbcType=VARCHAR},
+      topic42_four = #{topic42Four,jdbcType=VARCHAR},
+      topic42_fraction = #{topic42Fraction,jdbcType=VARCHAR},
+      topic42_six = #{topic42Six,jdbcType=VARCHAR},
+      topic43_one = #{topic43One,jdbcType=VARCHAR},
+      topic43_two = #{topic43Two,jdbcType=VARCHAR},
+      topic43_three = #{topic43Three,jdbcType=VARCHAR},
+      topic43_four = #{topic43Four,jdbcType=VARCHAR},
+      topic43_fraction = #{topic43Fraction,jdbcType=VARCHAR},
+      topic43_six = #{topic43Six,jdbcType=VARCHAR},
+      topic44_one = #{topic44One,jdbcType=VARCHAR},
+      topic44_two = #{topic44Two,jdbcType=VARCHAR},
+      topic44_three = #{topic44Three,jdbcType=VARCHAR},
+      topic44_four = #{topic44Four,jdbcType=VARCHAR},
+      topic44_fraction = #{topic44Fraction,jdbcType=VARCHAR},
+      topic44_six = #{topic44Six,jdbcType=VARCHAR},
+      topic45_one = #{topic45One,jdbcType=VARCHAR},
+      topic45_two = #{topic45Two,jdbcType=VARCHAR},
+      topic45_three = #{topic45Three,jdbcType=VARCHAR},
+      topic45_four = #{topic45Four,jdbcType=VARCHAR},
+      topic45_fraction = #{topic45Fraction,jdbcType=VARCHAR},
+      topic45_six = #{topic45Six,jdbcType=VARCHAR},
+      topic46_one = #{topic46One,jdbcType=VARCHAR},
+      topic46_two = #{topic46Two,jdbcType=VARCHAR},
+      topic46_three = #{topic46Three,jdbcType=VARCHAR},
+      topic46_four = #{topic46Four,jdbcType=VARCHAR},
+      topic46_fraction = #{topic46Fraction,jdbcType=VARCHAR},
+      topic46_six = #{topic46Six,jdbcType=VARCHAR},
+      topic47_one = #{topic47One,jdbcType=VARCHAR},
+      topic47_two = #{topic47Two,jdbcType=VARCHAR},
+      topic47_three = #{topic47Three,jdbcType=VARCHAR},
+      topic47_four = #{topic47Four,jdbcType=VARCHAR},
+      topic47_fraction = #{topic47Fraction,jdbcType=VARCHAR},
+      topic47_six = #{topic47Six,jdbcType=VARCHAR},
+      topic48_one = #{topic48One,jdbcType=VARCHAR},
+      topic48_two = #{topic48Two,jdbcType=VARCHAR},
+      topic48_three = #{topic48Three,jdbcType=VARCHAR},
+      topic48_four = #{topic48Four,jdbcType=VARCHAR},
+      topic48_fraction = #{topic48Fraction,jdbcType=VARCHAR},
+      topic48_six = #{topic48Six,jdbcType=VARCHAR},
+      topic49_one = #{topic49One,jdbcType=VARCHAR},
+      topic49_two = #{topic49Two,jdbcType=VARCHAR},
+      topic49_three = #{topic49Three,jdbcType=VARCHAR},
+      topic49_four = #{topic49Four,jdbcType=VARCHAR},
+      topic49_fraction = #{topic49Fraction,jdbcType=VARCHAR},
+      topic49_six = #{topic49Six,jdbcType=VARCHAR},
+      topic50_one = #{topic50One,jdbcType=VARCHAR},
+      topic50_two = #{topic50Two,jdbcType=VARCHAR},
+      topic50_three = #{topic50Three,jdbcType=VARCHAR},
+      topic50_four = #{topic50Four,jdbcType=VARCHAR},
+      topic50_fraction = #{topic50Fraction,jdbcType=VARCHAR},
+      topic50_six = #{topic50Six,jdbcType=VARCHAR},
+      topic51_one = #{topic51One,jdbcType=VARCHAR},
+      topic51_two = #{topic51Two,jdbcType=VARCHAR},
+      topic51_three = #{topic51Three,jdbcType=VARCHAR},
+      topic51_four = #{topic51Four,jdbcType=VARCHAR},
+      topic51_fraction = #{topic51Fraction,jdbcType=VARCHAR},
+      topic51_six = #{topic51Six,jdbcType=VARCHAR},
+      topic52_one = #{topic52One,jdbcType=VARCHAR},
+      topic52_two = #{topic52Two,jdbcType=VARCHAR},
+      topic52_three = #{topic52Three,jdbcType=VARCHAR},
+      topic52_four = #{topic52Four,jdbcType=VARCHAR},
+      topic52_fraction = #{topic52Fraction,jdbcType=VARCHAR},
+      topic52_six = #{topic52Six,jdbcType=VARCHAR},
+      topic53_one = #{topic53One,jdbcType=VARCHAR},
+      topic53_two = #{topic53Two,jdbcType=VARCHAR},
+      topic53_three = #{topic53Three,jdbcType=VARCHAR},
+      topic53_four = #{topic53Four,jdbcType=VARCHAR},
+      topic53_fraction = #{topic53Fraction,jdbcType=VARCHAR},
+      topic53_six = #{topic53Six,jdbcType=VARCHAR},
+      topic54_one = #{topic54One,jdbcType=VARCHAR},
+      topic54_two = #{topic54Two,jdbcType=VARCHAR},
+      topic54_three = #{topic54Three,jdbcType=VARCHAR},
+      topic54_four = #{topic54Four,jdbcType=VARCHAR},
+      topic54_fraction = #{topic54Fraction,jdbcType=VARCHAR},
+      topic54_six = #{topic54Six,jdbcType=VARCHAR},
+      topic55_one = #{topic55One,jdbcType=VARCHAR},
+      topic55_two = #{topic55Two,jdbcType=VARCHAR},
+      topic55_three = #{topic55Three,jdbcType=VARCHAR},
+      topic55_four = #{topic55Four,jdbcType=VARCHAR},
+      topic55_fraction = #{topic55Fraction,jdbcType=VARCHAR},
+      topic55_six = #{topic55Six,jdbcType=VARCHAR},
+      topic56_one = #{topic56One,jdbcType=VARCHAR},
+      topic56_two = #{topic56Two,jdbcType=VARCHAR},
+      topic56_three = #{topic56Three,jdbcType=VARCHAR},
+      topic56_four = #{topic56Four,jdbcType=VARCHAR},
+      topic56_fraction = #{topic56Fraction,jdbcType=VARCHAR},
+      topic56_six = #{topic56Six,jdbcType=VARCHAR},
+      topic57_one = #{topic57One,jdbcType=VARCHAR},
+      topic57_two = #{topic57Two,jdbcType=VARCHAR},
+      topic57_three = #{topic57Three,jdbcType=VARCHAR},
+      topic57_four = #{topic57Four,jdbcType=VARCHAR},
+      topic57_fraction = #{topic57Fraction,jdbcType=VARCHAR},
+      topic57_six = #{topic57Six,jdbcType=VARCHAR},
+      topic58_one = #{topic58One,jdbcType=VARCHAR},
+      topic58_two = #{topic58Two,jdbcType=VARCHAR},
+      topic58_three = #{topic58Three,jdbcType=VARCHAR},
+      topic58_four = #{topic58Four,jdbcType=VARCHAR},
+      topic58_fraction = #{topic58Fraction,jdbcType=VARCHAR},
+      topic58_six = #{topic58Six,jdbcType=VARCHAR},
+      topic59_one = #{topic59One,jdbcType=VARCHAR},
+      topic59_two = #{topic59Two,jdbcType=VARCHAR},
+      topic59_three = #{topic59Three,jdbcType=VARCHAR},
+      topic59_four = #{topic59Four,jdbcType=VARCHAR},
+      topic59_fraction = #{topic59Fraction,jdbcType=VARCHAR},
+      topic59_six = #{topic59Six,jdbcType=VARCHAR},
+      topic60_one = #{topic60One,jdbcType=VARCHAR},
+      topic60_two = #{topic60Two,jdbcType=VARCHAR},
+      topic60_three = #{topic60Three,jdbcType=VARCHAR},
+      topic60_four = #{topic60Four,jdbcType=VARCHAR},
+      topic60_fraction = #{topic60Fraction,jdbcType=VARCHAR},
+      topic60_six = #{topic60Six,jdbcType=VARCHAR},
+      topic61_one = #{topic61One,jdbcType=VARCHAR},
+      topic61_two = #{topic61Two,jdbcType=VARCHAR},
+      topic61_three = #{topic61Three,jdbcType=VARCHAR},
+      topic61_four = #{topic61Four,jdbcType=VARCHAR},
+      topic61_fraction = #{topic61Fraction,jdbcType=VARCHAR},
+      topic61_six = #{topic61Six,jdbcType=VARCHAR},
+      topic62_one = #{topic62One,jdbcType=VARCHAR},
+      topic62_two = #{topic62Two,jdbcType=VARCHAR},
+      topic62_three = #{topic62Three,jdbcType=VARCHAR},
+      topic62_four = #{topic62Four,jdbcType=VARCHAR},
+      topic62_fraction = #{topic62Fraction,jdbcType=VARCHAR},
+      topic62_six = #{topic62Six,jdbcType=VARCHAR},
+      topic63_one = #{topic63One,jdbcType=VARCHAR},
+      topic63_two = #{topic63Two,jdbcType=VARCHAR},
+      topic63_three = #{topic63Three,jdbcType=VARCHAR},
+      topic63_four = #{topic63Four,jdbcType=VARCHAR},
+      topic63_fraction = #{topic63Fraction,jdbcType=VARCHAR},
+      topic63_six = #{topic63Six,jdbcType=VARCHAR},
+      topic64_one = #{topic64One,jdbcType=VARCHAR},
+      topic64_two = #{topic64Two,jdbcType=VARCHAR},
+      topic64_three = #{topic64Three,jdbcType=VARCHAR},
+      topic64_four = #{topic64Four,jdbcType=VARCHAR},
+      topic64_fraction = #{topic64Fraction,jdbcType=VARCHAR},
+      topic64_six = #{topic64Six,jdbcType=VARCHAR},
+      topic65_one = #{topic65One,jdbcType=VARCHAR},
+      topic65_two = #{topic65Two,jdbcType=VARCHAR},
+      topic65_three = #{topic65Three,jdbcType=VARCHAR},
+      topic65_four = #{topic65Four,jdbcType=VARCHAR},
+      topic65_fraction = #{topic65Fraction,jdbcType=VARCHAR},
+      topic65_six = #{topic65Six,jdbcType=VARCHAR},
+      topic66_one = #{topic66One,jdbcType=VARCHAR},
+      topic66_two = #{topic66Two,jdbcType=VARCHAR},
+      topic66_three = #{topic66Three,jdbcType=VARCHAR},
+      topic66_four = #{topic66Four,jdbcType=VARCHAR},
+      topic66_fraction = #{topic66Fraction,jdbcType=VARCHAR},
+      topic66_six = #{topic66Six,jdbcType=VARCHAR},
+      topic67_one = #{topic67One,jdbcType=VARCHAR},
+      topic67_two = #{topic67Two,jdbcType=VARCHAR},
+      topic67_three = #{topic67Three,jdbcType=VARCHAR},
+      topic67_four = #{topic67Four,jdbcType=VARCHAR},
+      topic67_fraction = #{topic67Fraction,jdbcType=VARCHAR},
+      topic67_six = #{topic67Six,jdbcType=VARCHAR},
+      topic68_one = #{topic68One,jdbcType=VARCHAR},
+      topic68_two = #{topic68Two,jdbcType=VARCHAR},
+      topic68_three = #{topic68Three,jdbcType=VARCHAR},
+      topic68_four = #{topic68Four,jdbcType=VARCHAR},
+      topic68_fraction = #{topic68Fraction,jdbcType=VARCHAR},
+      topic68_six = #{topic68Six,jdbcType=VARCHAR},
+      topic69_one = #{topic69One,jdbcType=VARCHAR},
+      topic69_two = #{topic69Two,jdbcType=VARCHAR},
+      topic69_three = #{topic69Three,jdbcType=VARCHAR},
+      topic69_four = #{topic69Four,jdbcType=VARCHAR},
+      topic69_fraction = #{topic69Fraction,jdbcType=VARCHAR},
+      topic69_six = #{topic69Six,jdbcType=VARCHAR},
+      topic70_one = #{topic70One,jdbcType=VARCHAR},
+      topic70_two = #{topic70Two,jdbcType=VARCHAR},
+      topic70_three = #{topic70Three,jdbcType=VARCHAR},
+      topic70_four = #{topic70Four,jdbcType=VARCHAR},
+      topic70_fraction = #{topic70Fraction,jdbcType=VARCHAR},
+      topic70_six = #{topic70Six,jdbcType=VARCHAR},
+      topic71_one = #{topic71One,jdbcType=VARCHAR},
+      topic71_two = #{topic71Two,jdbcType=VARCHAR},
+      topic71_three = #{topic71Three,jdbcType=VARCHAR},
+      topic71_four = #{topic71Four,jdbcType=VARCHAR},
+      topic71_fraction = #{topic71Fraction,jdbcType=VARCHAR},
+      topic71_six = #{topic71Six,jdbcType=VARCHAR},
+      topic72_one = #{topic72One,jdbcType=VARCHAR},
+      topic72_two = #{topic72Two,jdbcType=VARCHAR},
+      topic72_three = #{topic72Three,jdbcType=VARCHAR},
+      topic72_four = #{topic72Four,jdbcType=VARCHAR},
+      topic72_fraction = #{topic72Fraction,jdbcType=VARCHAR},
+      topic72_six = #{topic72Six,jdbcType=VARCHAR},
+      topic73_one = #{topic73One,jdbcType=VARCHAR},
+      topic73_two = #{topic73Two,jdbcType=VARCHAR},
+      topic73_three = #{topic73Three,jdbcType=VARCHAR},
+      topic73_four = #{topic73Four,jdbcType=VARCHAR},
+      topic73_fraction = #{topic73Fraction,jdbcType=VARCHAR},
+      topic73_six = #{topic73Six,jdbcType=VARCHAR},
+      topic74_one = #{topic74One,jdbcType=VARCHAR},
+      topic74_two = #{topic74Two,jdbcType=VARCHAR},
+      topic74_three = #{topic74Three,jdbcType=VARCHAR},
+      topic74_four = #{topic74Four,jdbcType=VARCHAR},
+      topic74_fraction = #{topic74Fraction,jdbcType=VARCHAR},
+      topic74_six = #{topic74Six,jdbcType=VARCHAR},
+      topic75_one = #{topic75One,jdbcType=VARCHAR},
+      topic75_two = #{topic75Two,jdbcType=VARCHAR},
+      topic75_three = #{topic75Three,jdbcType=VARCHAR},
+      topic75_four = #{topic75Four,jdbcType=VARCHAR},
+      topic75_fraction = #{topic75Fraction,jdbcType=VARCHAR},
+      topic75_six = #{topic75Six,jdbcType=VARCHAR},
+      topic76_one = #{topic76One,jdbcType=VARCHAR},
+      topic76_two = #{topic76Two,jdbcType=VARCHAR},
+      topic76_three = #{topic76Three,jdbcType=VARCHAR},
+      topic76_four = #{topic76Four,jdbcType=VARCHAR},
+      topic76_fraction = #{topic76Fraction,jdbcType=VARCHAR},
+      topic76_six = #{topic76Six,jdbcType=VARCHAR},
+      topic77_one = #{topic77One,jdbcType=VARCHAR},
+      topic77_two = #{topic77Two,jdbcType=VARCHAR},
+      topic77_three = #{topic77Three,jdbcType=VARCHAR},
+      topic77_four = #{topic77Four,jdbcType=VARCHAR},
+      topic77_fraction = #{topic77Fraction,jdbcType=VARCHAR},
+      topic77_six = #{topic77Six,jdbcType=VARCHAR},
+      topic78_one = #{topic78One,jdbcType=VARCHAR},
+      topic78_two = #{topic78Two,jdbcType=VARCHAR},
+      topic78_three = #{topic78Three,jdbcType=VARCHAR},
+      topic78_four = #{topic78Four,jdbcType=VARCHAR},
+      topic78_fraction = #{topic78Fraction,jdbcType=VARCHAR},
+      topic78_six = #{topic78Six,jdbcType=VARCHAR},
+      topic79_one = #{topic79One,jdbcType=VARCHAR},
+      topic79_two = #{topic79Two,jdbcType=VARCHAR},
+      topic79_three = #{topic79Three,jdbcType=VARCHAR},
+      topic79_four = #{topic79Four,jdbcType=VARCHAR},
+      topic79_fraction = #{topic79Fraction,jdbcType=VARCHAR},
+      topic79_six = #{topic79Six,jdbcType=VARCHAR},
+      topic80_one = #{topic80One,jdbcType=VARCHAR},
+      topic80_two = #{topic80Two,jdbcType=VARCHAR},
+      topic80_three = #{topic80Three,jdbcType=VARCHAR},
+      topic80_four = #{topic80Four,jdbcType=VARCHAR},
+      topic80_fraction = #{topic80Fraction,jdbcType=VARCHAR},
+      topic80_six = #{topic80Six,jdbcType=VARCHAR}
+    where hansId = #{hansid,jdbcType=INTEGER}
+  </update>
+</mapper>
