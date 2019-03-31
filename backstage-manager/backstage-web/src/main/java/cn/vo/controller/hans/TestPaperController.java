@@ -16,6 +16,7 @@ import cn.vo.service.IUserService;
 import cn.vo.service.IXiaodianAddressService;
 import cn.vo.service.hans.ITestHansService;
 import cn.vo.util.SorceUtils;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Controller;
@@ -104,7 +105,7 @@ public class TestPaperController {
     @PostMapping("save")
     public String save(@ModelAttribute TestPaper testPaper,@ModelAttribute TestHans testHans){
         try {
-
+            BeanUtils.copyProperties(testPaper,testHans);
             saveTestPaper(testPaper);
             testPaper.setCheckstatus("正在审核");
             if (testPaper.getType()==1){
@@ -139,10 +140,12 @@ public class TestPaperController {
     @GetMapping("edit")
     public String edit(Integer id, Model model,HttpServletRequest request){
         TestPaper testPaper=testPaperService.getById(id);
+        TestHans testHans=testHansService.getId(id);
         HttpSession session=request.getSession();
         User user= (User) session.getAttribute("USER");
         model.addAttribute("scpcqx",user.getScpcqx());
         model.addAttribute("testPaper",testPaper);
+        model.addAttribute("testPaper",testHans);
         return editResult(testPaper);
 
     }
@@ -179,7 +182,7 @@ public class TestPaperController {
     }
 
     @PostMapping("update")
-    public String update(@ModelAttribute TestPaper testPaper,HttpServletRequest request){
+    public String update(@ModelAttribute TestPaper testPaper,@ModelAttribute TestHans testHans,HttpServletRequest request){
         try{
 
 
@@ -214,6 +217,8 @@ public class TestPaperController {
             if("5".equals(user.getScpcqx())){
                 if (testPaper.getType()==1){
                     testPaperService.updateId(FractionUtil.getFraction(testPaper));
+                    testHans.setTestid(testPaper.getId());
+                    testHansService.save(testHans);
                 }else if (testPaper.getType()==2){
                     testPaperService.updateId(SorceUtils.getFraction(testPaper));
                 }else if(testPaper.getType()==3){

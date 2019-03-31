@@ -5,4 +5,6 @@ import cn.vo.pojo.entity.TestHans;
 public interface ITestHansService {
 
     void save(TestHans testHans);
+
+    TestHans getId(Integer testId);
 }

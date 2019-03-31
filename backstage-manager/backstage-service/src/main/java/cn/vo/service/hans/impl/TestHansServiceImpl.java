@@ -16,4 +16,10 @@ public class TestHansServiceImpl implements ITestHansService {
     public void save(TestHans testHans) {
         testHansMapper.insert(testHans);
     }
+
+    @Override
+    public TestHans getId(Integer testId) {
+        TestHans testHans= testHansMapper.selectByPrimaryKey(testId);
+        return testHans;
+    }
 }

@@ -380,7 +380,7 @@
     select 
     <include refid="Base_Column_List" />
     from test_hans
-    where hansId = #{hansid,jdbcType=INTEGER}
+    where testId = #{testId}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from test_hans
