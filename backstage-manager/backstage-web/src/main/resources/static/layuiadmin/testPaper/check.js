@@ -72,15 +72,6 @@ function eightDiv(type) {
         type8="1";
     }
 }
-function ninesuperDiv(type) {
-    if (type==2){
-        $("#ninesuper").show();
-
-    }else{
-        $("#ninesuper").hide();
-
-    }
-}
 function nineDiv(type) {
     if (type==2){
         $("#nine").show();
@@ -352,5 +343,208 @@ function th40Div(type) {
     }else{
         $("#th40").hide();
         type40="1";
+    }
+}
+function th41Div(type) {
+    if (type==2){
+        $("#th41").show();
+        type41="2";
+    }else{
+        $("#th41").hide();
+        type41="1";
+    }
+}function th42Div(type) {
+    if (type==2){
+        $("#th42").show();
+        type42="2";
+    }else{
+        $("#th42").hide();
+        type42="1";
+    }
+}function th43Div(type) {
+    if (type==2){
+        $("#th43").show();
+        type43="2";
+    }else{
+        $("#th43").hide();
+        type43="1";
+    }
+}function th44Div(type) {
+    if (type==2){
+        $("#th44").show();
+        type44="2";
+    }else{
+        $("#th44").hide();
+        type44="1";
+    }
+
+}
+function th45Div(type) {
+    if (type==2){
+        $("#th45").show();
+        type45="2";
+    }else{
+        $("#th45").hide();
+        type45="1";
+    }
+}
+function th47Div(type) {
+    if (type==2){
+        $("#th47").show();
+        type47="2";
+    }else{
+        $("#th47").hide();
+        type47="1";
+    }
+}
+function th46Div(type) {
+    if (type==2){
+        $("#th46").show();
+        type46="2";
+    }else{
+        $("#th46").hide();
+        type46="1";
+    }
+
+}
+function th48Div(type) {
+    if (type==2){
+        $("#th48").show();
+        type48="2";
+    }else{
+        $("#th48").hide();
+        type48="1";
+    }
+}
+function th49Div(type) {
+    if (type==2){
+        $("#th49").show();
+        type49="2";
+    }else{
+        $("#th49").hide();
+        type49="1";
+    }
+}
+function th50Div(type) {
+    if (type==2){
+        $("#th50").show();
+        type50="2";
+    }else{
+        $("#th50").hide();
+        type50="1";
+    }
+}
+function th51Div(type) {
+    if (type==2){
+        $("#th51").show();
+        type51="2";
+    }else{
+        $("#th51").hide();
+        type51="1";
+    }
+}function th52Div(type) {
+    if (type==2){
+        $("#th52").show();
+        type52="2";
+    }else{
+        $("#th52").hide();
+        type52="1";
+    }
+}function th53Div(type) {
+    if (type==2){
+        $("#th53").show();
+        type53="2";
+    }else{
+        $("#th53").hide();
+        type53="1";
+    }
+}function th54Div(type) {
+    if (type==2){
+        $("#th54").show();
+        type54="2";
+    }else{
+        $("#th54").hide();
+        type54="1";
+    }
+
+}
+function th55Div(type) {
+    if (type==2){
+        $("#th55").show();
+        type55="2";
+    }else{
+        $("#th55").hide();
+        type55="1";
+    }
+}
+function th57Div(type) {
+    if (type==2){
+        $("#th57").show();
+        type57="2";
+    }else{
+        $("#th57").hide();
+        type57="1";
+    }
+}
+function th56Div(type) {
+    if (type==2){
+        $("#th56").show();
+        type56="2";
+    }else{
+        $("#th56").hide();
+        type56="1";
+    }
+
+}
+function th58Div(type) {
+    if (type==2){
+        $("#th58").show();
+        type58="2";
+    }else{
+        $("#th58").hide();
+        type58="1";
+    }
+}
+function th59Div(type) {
+    if (type==2){
+        $("#th59").show();
+        type59="2";
+    }else{
+        $("#th59").hide();
+        type59="1";
+    }
+}
+function th60Div(type) {
+    if (type==2){
+        $("#th60").show();
+        type60="2";
+    }else{
+        $("#th60").hide();
+        type60="1";
+    }
+}
+function th61Div(type) {
+    if (type==2){
+        $("#th61").show();
+        type61="2";
+    }else{
+        $("#th61").hide();
+        type61="1";
+    }
+}function th62Div(type) {
+    if (type==2){
+        $("#th62").show();
+        type62="2";
+    }else{
+        $("#th62").hide();
+        type62="1";
+    }
+}function th63Div(type) {
+    if (type==2){
+        $("#th63").show();
+        type63="2";
+    }else{
+        $("#th63").hide();
+        type63="1";
     }
 }

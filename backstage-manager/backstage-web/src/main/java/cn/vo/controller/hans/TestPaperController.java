@@ -105,11 +105,10 @@ public class TestPaperController {
     @PostMapping("save")
     public String save(@ModelAttribute TestPaper testPaper,@ModelAttribute TestHans testHans){
         try {
-            BeanUtils.copyProperties(testPaper,testHans);
             saveTestPaper(testPaper);
             testPaper.setCheckstatus("正在审核");
             if (testPaper.getType()==1){
-                testPaperService.save(FractionUtil.getFraction(testPaper));
+                testPaperService.save(FractionUtil.getFraction(testPaper,testHans));
                 testHans.setTestid(testPaper.getId());
                 testHansService.save(testHans);
             }else if (testPaper.getType()==2){
@@ -145,7 +144,7 @@ public class TestPaperController {
         User user= (User) session.getAttribute("USER");
         model.addAttribute("scpcqx",user.getScpcqx());
         model.addAttribute("testPaper",testPaper);
-        model.addAttribute("testPaper",testHans);
+        model.addAttribute("testHans",testHans);
         return editResult(testPaper);
 
     }
@@ -216,7 +215,7 @@ public class TestPaperController {
             }
             if("5".equals(user.getScpcqx())){
                 if (testPaper.getType()==1){
-                    testPaperService.updateId(FractionUtil.getFraction(testPaper));
+                    testPaperService.updateId(FractionUtil.getFraction(testPaper,testHans));
                     testHans.setTestid(testPaper.getId());
                     testHansService.save(testHans);
                 }else if (testPaper.getType()==2){

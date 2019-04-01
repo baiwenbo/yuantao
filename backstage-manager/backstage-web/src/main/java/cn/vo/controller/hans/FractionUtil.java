@@ -1,11 +1,13 @@
 package cn.vo.controller.hans;
 
+import cn.vo.pojo.entity.TestHans;
 import cn.vo.pojo.entity.TestPaper;
+import org.aspectj.weaver.ast.Test;
 
 public class FractionUtil {
 
     //赋值得分
-    public static TestPaper getFraction(TestPaper testPaper){
+    public static TestPaper getFraction(TestPaper testPaper,TestHans testHans){
         try {
             if (testPaper.getTopic1One().contains("不")){
                     testPaper.setTopic1Fraction("0");
@@ -261,35 +263,132 @@ public class FractionUtil {
                 testPaper.setTopic40Fraction("2");
             }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            if (testPaper.getTopic26One().contains("不")){
+            if (testHans.getTopic41One().contains("不")){
+                testHans.setTopic41Fraction("0");
+            }else{
+                testHans.setTopic41Fraction("2");
+            }
+            if (testHans.getTopic42One().contains("不")){
+                testHans.setTopic42Fraction("0");
+            }else{
+                testHans.setTopic42Fraction("2");
+            }
+            if (testHans.getTopic43One().contains("不")){
+                testHans.setTopic43Fraction("0");
+            }else{
+                testHans.setTopic43Fraction("2");
+            }
+            if (testHans.getTopic44One().contains("不")){
+                testHans.setTopic44Fraction("0");
+            }else{
+                testHans.setTopic44Fraction("2");
+            }
+            if (testHans.getTopic45One().contains("不")){
+                testHans.setTopic45Fraction("0");
+            }else{
+                testHans.setTopic45Fraction("2");
+            }
+            if (testHans.getTopic46One().contains("不")){
+                testHans.setTopic46Fraction("0");
+            }else{
+                testHans.setTopic46Fraction("2");
+            }
+            if (testHans.getTopic47One().contains("不")){
+                testHans.setTopic47Fraction("0");
+            }else{
+                testHans.setTopic47Fraction("2");
+            }
+            if (testHans.getTopic48One().contains("不")){
+                if (testHans.getTopic48Three() != null && !testHans.getTopic48Three().isEmpty()) {
+                    if(testHans.getTopic48Three().contains("手写价签1处或价签破")){
+                        testHans.setTopic48Fraction("1");
+                    }else if(testHans.getTopic48Three().contains("手写价签2处")){
+                        testHans.setTopic48Fraction("0");
+                    }else{
+                        testHans.setTopic48Fraction("2");
+                    }
+                } else {
+                    testHans.setTopic48Fraction("3");
+                }
+            }else{
+                testHans.setTopic48Fraction("2");
+            }
+            if (testHans.getTopic49One().contains("不")){
+                testHans.setTopic49Fraction("0");
+            }else{
+                testHans.setTopic49Fraction("2");
+            }
+            if (testHans.getTopic50One().contains("不")){
+                testHans.setTopic50Fraction("0");
+            }else{
+                testHans.setTopic50Fraction("2");
+            }
+            if (testHans.getTopic51One().contains("不")){
+                testHans.setTopic51Fraction("0");
+            }else{
+                testHans.setTopic51Fraction("1");
+            }
+            if (testHans.getTopic52One().contains("不")){
+                testHans.setTopic52Fraction("0");
+            }else{
+                testHans.setTopic52Fraction("2");
+            }
+            if (testHans.getTopic53One().contains("不")){
+                testHans.setTopic53Fraction("0");
+            }else{
+                testHans.setTopic53Fraction("1");
+            }
+            if (testHans.getTopic54One().contains("不")){
+                testHans.setTopic54Fraction("0");
+            }else{
+                testHans.setTopic54Fraction("1");
+            }
+            if (testHans.getTopic55One().contains("不")){
+                testHans.setTopic55Fraction("0");
+            }else{
+                testHans.setTopic55Fraction("1");
+            }
+            if (testHans.getTopic56One().contains("不")){
+                testHans.setTopic56Fraction("0");
+            }else{
+                testHans.setTopic56Fraction("1");
+            }
+            if (testHans.getTopic57One().contains("不")){
+                testHans.setTopic57Fraction("0");
+            }else{
+                testHans.setTopic57Fraction("1");
+            }
+            if (testHans.getTopic58One().contains("不")){
+                testHans.setTopic58Fraction("0");
+            }else{
+                testHans.setTopic58Fraction("2");
+            }
+            if (testHans.getTopic59One().contains("不")){
+                testHans.setTopic59Fraction("0");
+            }else{
+                testHans.setTopic59Fraction("1");
+            }
+            if (testHans.getTopic60One().contains("不")){
+                testHans.setTopic60Fraction("0");
+            }else{
+                testHans.setTopic60Fraction("1");
+            }
+            if (testHans.getTopic61One().contains("不")){
+                testHans.setTopic61Fraction("0");
+            }else{
+                testHans.setTopic61Fraction("2");
+            }
+            if (testHans.getTopic62One().contains("存在，有过")){
                 testPaper.setScore("0");
-            }else {
-                testPaper.setScore(FractionUtil.getsSore(testPaper));
+            }else if (testHans.getTopic63One().contains("存在，有私设")){
+                testPaper.setScore("0");
+            } else{
+                testPaper.setScore(FractionUtil.getsSore(testPaper,testHans));
             }
         }catch (Exception e){
             e.printStackTrace();
             return testPaper;
         }
-
         return testPaper;
 
     }
@@ -318,10 +417,10 @@ public class FractionUtil {
 
 
     //计算总分数
-    public  static  String getsSore(TestPaper testPaper){
+    public  static  String getsSore(TestPaper testPaper,TestHans testHans){
         Integer score=0;
         try {
-             score =score+ Integer.valueOf(testPaper.getTopic1Fraction());
+            score =score+ Integer.valueOf(testPaper.getTopic1Fraction());
             score = score + Integer.valueOf(testPaper.getTopic2Fraction());
             score = score + Integer.valueOf(testPaper.getTopic3Fraction());
             score = score + Integer.valueOf(testPaper.getTopic4Fraction());
@@ -366,6 +465,31 @@ public class FractionUtil {
             score = score + Integer.valueOf(testPaper.getTopic38Fraction());
             score = score + Integer.valueOf(testPaper.getTopic39Fraction());
             score = score + Integer.valueOf(testPaper.getTopic40Fraction());
+
+
+            score = score + Integer.valueOf(testHans.getTopic41Fraction());
+            score = score + Integer.valueOf(testHans.getTopic42Fraction());
+            score = score + Integer.valueOf(testHans.getTopic43Fraction());
+            score = score + Integer.valueOf(testHans.getTopic44Fraction());
+            score = score + Integer.valueOf(testHans.getTopic45Fraction());
+            score = score + Integer.valueOf(testHans.getTopic46Fraction());
+            score = score + Integer.valueOf(testHans.getTopic47Fraction());
+            score = score + Integer.valueOf(testHans.getTopic48Fraction());
+            score = score + Integer.valueOf(testHans.getTopic49Fraction());
+            score = score + Integer.valueOf(testHans.getTopic50Fraction());
+
+            score = score + Integer.valueOf(testHans.getTopic51Fraction());
+            score = score + Integer.valueOf(testHans.getTopic52Fraction());
+            score = score + Integer.valueOf(testHans.getTopic53Fraction());
+            score = score + Integer.valueOf(testHans.getTopic54Fraction());
+            score = score + Integer.valueOf(testHans.getTopic55Fraction());
+            score = score + Integer.valueOf(testHans.getTopic56Fraction());
+            score = score + Integer.valueOf(testHans.getTopic57Fraction());
+            score = score + Integer.valueOf(testHans.getTopic58Fraction());
+            score = score + Integer.valueOf(testHans.getTopic59Fraction());
+            score = score + Integer.valueOf(testHans.getTopic60Fraction());
+            score = score + Integer.valueOf(testHans.getTopic61Fraction());
+
         }catch (Exception e){
             e.printStackTrace();
              return "";

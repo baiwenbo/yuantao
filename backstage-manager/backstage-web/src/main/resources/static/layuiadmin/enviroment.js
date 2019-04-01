@@ -40,6 +40,33 @@ $(document).ready(function(){
     $("#th38").hide();
     $("#th39").hide();
     $("#th40").hide();
+    $("#th40").hide();
+    $("#th41").hide();
+    $("#th42").hide();
+    $("#th43").hide();
+    $("#th44").hide();
+    $("#th45").hide();
+    $("#th46").hide();
+    $("#th47").hide();
+    $("#th48").hide();
+    $("#th49").hide();
+    $("#th50").hide();
+
+    $("#th51").hide();
+    $("#th52").hide();
+    $("#th53").hide();
+    $("#th54").hide();
+    $("#th55").hide();
+    $("#th56").hide();
+    $("#th57").hide();
+    $("#th58").hide();
+    $("#th59").hide();
+    $("#th60").hide();
+
+    $("#th61").hide();
+    $("#th62").hide();
+    $("#th63").hide();
+
 
 
     $("#queryCompany").click(function(){

@@ -8,7 +8,6 @@ $(document).ready(function () {
     var th7 = $("input[name='topic7One']:checked").val();
     var th8 = $("input[name='topic8One']:checked").val();
     var th9 = $("input[name='topic9One']:checked").val();
-    var th9t = $("input[name='topic9Two']:checked").val();
     var th10 = $("input[name='topic10One']:checked").val();
     var th11 = $("input[name='topic11One']:checked").val();
     var th12 = $("input[name='topic12One']:checked").val();
@@ -40,6 +39,32 @@ $(document).ready(function () {
     var th38 = $("input[name='topic38One']:checked").val();
     var th39 = $("input[name='topic39One']:checked").val();
     var th40 = $("input[name='topic40One']:checked").val();
+
+    var th41 = $("input[name='topic41One']:checked").val();
+    var th42 = $("input[name='topic42One']:checked").val();
+    var th43 = $("input[name='topic43One']:checked").val();
+    var th44 = $("input[name='topic44One']:checked").val();
+    var th45 = $("input[name='topic45One']:checked").val();
+    var th46 = $("input[name='topic46One']:checked").val();
+    var th47 = $("input[name='topic47One']:checked").val();
+    var th48 = $("input[name='topic48One']:checked").val();
+    var th49 = $("input[name='topic49One']:checked").val();
+    var th50 = $("input[name='topic50One']:checked").val();
+
+    var th51 = $("input[name='topic51One']:checked").val();
+    var th52 = $("input[name='topic52One']:checked").val();
+    var th53 = $("input[name='topic53One']:checked").val();
+    var th54 = $("input[name='topic54One']:checked").val();
+    var th55 = $("input[name='topic55One']:checked").val();
+    var th56 = $("input[name='topic56One']:checked").val();
+    var th57 = $("input[name='topic57One']:checked").val();
+    var th58 = $("input[name='topic58One']:checked").val();
+    var th59 = $("input[name='topic59One']:checked").val();
+    var th60 = $("input[name='topic60One']:checked").val();
+
+    var th61 = $("input[name='topic61One']:checked").val();
+    var th62 = $("input[name='topic62One']:checked").val();
+    var th63 = $("input[name='topic63One']:checked").val();
     if (th1.indexOf("完全") > 0) {
         $("#one").hide();
     } else {
@@ -80,11 +105,7 @@ $(document).ready(function () {
     } else {
         type8 = "2";
     }
-
-    if (th9.indexOf("无休闲区") > 0) {
-        $("#ninesuper").hide();
-    }
-    if (th9t.indexOf("完全") > 0) {
+    if (th9.indexOf("完全") > 0) {
         $("#nine").hide();
     } else {
         type9 = "2";
@@ -244,6 +265,133 @@ $(document).ready(function () {
     } else {
         type40 = "2";
     }
+
+    if (th41.indexOf("完全") > 0) {
+        $("#th41").hide();
+    } else {
+        type41 = "2";
+    }
+    if (th42.indexOf("完全") > 0) {
+        $("#th42").hide();
+    } else {
+        type42 = "2";
+    }
+    if (th43.indexOf("完全") > 0) {
+        $("#th43").hide();
+    } else {
+        type43 = "2";
+    }
+    if (th44.indexOf("完全") > 0) {
+        $("#th44").hide();
+    } else {
+        type44 = "2";
+    }
+    if (th45.indexOf("完全") > 0) {
+        $("#th45").hide();
+    } else {
+        type45 = "2";
+    }
+    if (th46.indexOf("完全") > 0) {
+        $("#th46").hide();
+    } else {
+        type46 = "2";
+    }
+    if (th47.indexOf("完全") > 0) {
+        $("#th47").hide();
+    } else {
+        type47 = "2";
+    }
+    if (th48.indexOf("完全") > 0) {
+        $("#th48").hide();
+    } else {
+        type48 = "2";
+    }
+    if (th49.indexOf("完全") > 0) {
+        $("#th49").hide();
+    } else {
+        type49 = "2";
+    }
+    if (th50.indexOf("完全") > 0) {
+        $("#th50").hide();
+    } else {
+        type50 = "2";
+    }
+
+    if (th51.indexOf("完全") > 0) {
+        $("#th51").hide();
+    } else {
+        type51 = "2";
+    }
+    if (th52.indexOf("完全") > 0) {
+        $("#th52").hide();
+    } else {
+        type52 = "2";
+    }
+    if (th53.indexOf("完全") > 0) {
+        $("#th53").hide();
+    } else {
+        type53 = "2";
+    }
+    if (th54.indexOf("完全") > 0) {
+        $("#th54").hide();
+    } else {
+        type54 = "2";
+    }
+    if (th55.indexOf("完全") > 0) {
+        $("#th55").hide();
+    } else {
+        type55 = "2";
+    }
+    if (th56.indexOf("完全") > 0) {
+        $("#th56").hide();
+    } else {
+        type56 = "2";
+    }
+    if (th57.indexOf("完全") > 0) {
+        $("#th57").hide();
+    } else {
+        type57 = "2";
+    }
+    if (th58.indexOf("完全") > 0) {
+        $("#th58").hide();
+    } else {
+        type58 = "2";
+    }
+    if (th59.indexOf("完全") > 0) {
+        $("#th59").hide();
+    } else {
+        type59 = "2";
+    }
+    if (th60.indexOf("完全") > 0) {
+        $("#th60").hide();
+    } else {
+        type60 = "2";
+    }
+
+    if (th61.indexOf("完全") > 0) {
+        $("#th61").hide();
+    } else {
+        type61 = "2";
+    }
+    if (th62.indexOf("完全") > 0) {
+        $("#th62").hide();
+    } else {
+        type62 = "2";
+    }
+    if (th63.indexOf("完全") > 0) {
+        $("#th63").hide();
+    } else {
+        type63 = "2";
+    }
+
+
+
+
+
+
+
+
+
     $("#queryCompany").click(function () {
 
         var code = $("#code").val();
