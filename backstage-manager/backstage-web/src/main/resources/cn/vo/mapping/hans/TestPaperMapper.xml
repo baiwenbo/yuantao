@@ -286,6 +286,388 @@
     <result column="daqu" property="daqu" />
 
   </resultMap>
+
+  <resultMap id="ExcelResultMap" type="cn.vo.pojo.entity.TestPaper" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="monthJudge" property="monthjudge" jdbcType="INTEGER" />
+    <result column="appeal" property="appeal" jdbcType="VARCHAR" />
+    <result column="qcheck" property="qcheck" jdbcType="VARCHAR" />
+    <result column="qchecksn" property="qchecksn" jdbcType="VARCHAR" />
+    <result column="qcheckInput" property="qcheckinput" jdbcType="VARCHAR" />
+    <result column="qcheckStatus" property="qcheckstatus" jdbcType="VARCHAR" />
+    <result column="checkStatus" property="checkstatus" jdbcType="VARCHAR" />
+    <result column="company_id" property="companyId" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="code" property="code" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="pianqu" property="pianqu" jdbcType="VARCHAR" />
+    <result column="city" property="city" jdbcType="VARCHAR" />
+    <result column="executeDate" property="executedate" jdbcType="VARCHAR" />
+    <result column="startTime" property="starttime" jdbcType="VARCHAR" />
+    <result column="endTime" property="endtime" jdbcType="VARCHAR" />
+    <result column="personName" property="personname" jdbcType="VARCHAR" />
+    <result column="cashierName" property="cashiername" jdbcType="VARCHAR" />
+    <result column="populationQty" property="populationqty" jdbcType="VARCHAR" />
+    <result column="consumeQty" property="consumeqty" jdbcType="VARCHAR" />
+    <result column="commodity" property="commodity" jdbcType="VARCHAR" />
+    <result column="money" property="money" jdbcType="VARCHAR" />
+    <result column="url" property="url" jdbcType="VARCHAR" />
+    <result column="crertTime" property="crerttime" jdbcType="VARCHAR" />
+    <result column="score" property="score" jdbcType="VARCHAR" />
+    <result column="trough1" property="trough1" jdbcType="VARCHAR" />
+    <result column="trough2" property="trough2" jdbcType="VARCHAR" />
+    <result column="trough3" property="trough3" jdbcType="VARCHAR" />
+    <result column="topic1_one" property="topic1One" jdbcType="VARCHAR" />
+    <result column="topic1_two" property="topic1Two" jdbcType="VARCHAR" />
+    <result column="topic1_three" property="topic1Three" jdbcType="VARCHAR" />
+    <result column="topic1_four" property="topic1Four" jdbcType="VARCHAR" />
+    <result column="topic1_fraction" property="topic1Fraction" jdbcType="VARCHAR" />
+    <result column="topic1_six" property="topic1Six" jdbcType="VARCHAR" />
+    <result column="topic2_one" property="topic2One" jdbcType="VARCHAR" />
+    <result column="topic2_two" property="topic2Two" jdbcType="VARCHAR" />
+    <result column="topic2_three" property="topic2Three" jdbcType="VARCHAR" />
+    <result column="topic2_four" property="topic2Four" jdbcType="VARCHAR" />
+    <result column="topic2_fraction" property="topic2Fraction" jdbcType="VARCHAR" />
+    <result column="topic2_six" property="topic2Six" jdbcType="VARCHAR" />
+    <result column="topic3_one" property="topic3One" jdbcType="VARCHAR" />
+    <result column="topic3_two" property="topic3Two" jdbcType="VARCHAR" />
+    <result column="topic3_three" property="topic3Three" jdbcType="VARCHAR" />
+    <result column="topic3_four" property="topic3Four" jdbcType="VARCHAR" />
+    <result column="topic3_fraction" property="topic3Fraction" jdbcType="VARCHAR" />
+    <result column="topic3_six" property="topic3Six" jdbcType="VARCHAR" />
+    <result column="topic4_one" property="topic4One" jdbcType="VARCHAR" />
+    <result column="topic4_two" property="topic4Two" jdbcType="VARCHAR" />
+    <result column="topic4_three" property="topic4Three" jdbcType="VARCHAR" />
+    <result column="topic4_four" property="topic4Four" jdbcType="VARCHAR" />
+    <result column="topic4_fraction" property="topic4Fraction" jdbcType="VARCHAR" />
+    <result column="topic4_six" property="topic4Six" jdbcType="VARCHAR" />
+    <result column="topic5_one" property="topic5One" jdbcType="VARCHAR" />
+    <result column="topic5_two" property="topic5Two" jdbcType="VARCHAR" />
+    <result column="topic5_three" property="topic5Three" jdbcType="VARCHAR" />
+    <result column="topic5_four" property="topic5Four" jdbcType="VARCHAR" />
+    <result column="topic5_fraction" property="topic5Fraction" jdbcType="VARCHAR" />
+    <result column="topic5_six" property="topic5Six" jdbcType="VARCHAR" />
+    <result column="topic6_one" property="topic6One" jdbcType="VARCHAR" />
+    <result column="topic6_two" property="topic6Two" jdbcType="VARCHAR" />
+    <result column="topic6_three" property="topic6Three" jdbcType="VARCHAR" />
+    <result column="topic6_four" property="topic6Four" jdbcType="VARCHAR" />
+    <result column="topic6_fraction" property="topic6Fraction" jdbcType="VARCHAR" />
+    <result column="topic6_six" property="topic6Six" jdbcType="VARCHAR" />
+    <result column="topic7_one" property="topic7One" jdbcType="VARCHAR" />
+    <result column="topic7_two" property="topic7Two" jdbcType="VARCHAR" />
+    <result column="topic7_three" property="topic7Three" jdbcType="VARCHAR" />
+    <result column="topic7_four" property="topic7Four" jdbcType="VARCHAR" />
+    <result column="topic7_fraction" property="topic7Fraction" jdbcType="VARCHAR" />
+    <result column="topic7_six" property="topic7Six" jdbcType="VARCHAR" />
+    <result column="topic8_one" property="topic8One" jdbcType="VARCHAR" />
+    <result column="topic8_two" property="topic8Two" jdbcType="VARCHAR" />
+    <result column="topic8_three" property="topic8Three" jdbcType="VARCHAR" />
+    <result column="topic8_four" property="topic8Four" jdbcType="VARCHAR" />
+    <result column="topic8_fraction" property="topic8Fraction" jdbcType="VARCHAR" />
+    <result column="topic8_six" property="topic8Six" jdbcType="VARCHAR" />
+    <result column="topic9_one" property="topic9One" jdbcType="VARCHAR" />
+    <result column="topic9_two" property="topic9Two" jdbcType="VARCHAR" />
+    <result column="topic9_three" property="topic9Three" jdbcType="VARCHAR" />
+    <result column="topic9_four" property="topic9Four" jdbcType="VARCHAR" />
+    <result column="topic9_fraction" property="topic9Fraction" jdbcType="VARCHAR" />
+    <result column="topic9_six" property="topic9Six" jdbcType="VARCHAR" />
+    <result column="topic10_one" property="topic10One" jdbcType="VARCHAR" />
+    <result column="topic10_two" property="topic10Two" jdbcType="VARCHAR" />
+    <result column="topic10_three" property="topic10Three" jdbcType="VARCHAR" />
+    <result column="topic10_four" property="topic10Four" jdbcType="VARCHAR" />
+    <result column="topic10_fraction" property="topic10Fraction" jdbcType="VARCHAR" />
+    <result column="topic10_six" property="topic10Six" jdbcType="VARCHAR" />
+    <result column="topic11_one" property="topic11One" jdbcType="VARCHAR" />
+    <result column="topic11_two" property="topic11Two" jdbcType="VARCHAR" />
+    <result column="topic11_three" property="topic11Three" jdbcType="VARCHAR" />
+    <result column="topic11_four" property="topic11Four" jdbcType="VARCHAR" />
+    <result column="topic11_fraction" property="topic11Fraction" jdbcType="VARCHAR" />
+    <result column="topic11_six" property="topic11Six" jdbcType="VARCHAR" />
+    <result column="topic12_one" property="topic12One" jdbcType="VARCHAR" />
+    <result column="topic12_two" property="topic12Two" jdbcType="VARCHAR" />
+    <result column="topic12_three" property="topic12Three" jdbcType="VARCHAR" />
+    <result column="topic12_four" property="topic12Four" jdbcType="VARCHAR" />
+    <result column="topic12_fraction" property="topic12Fraction" jdbcType="VARCHAR" />
+    <result column="topic12_six" property="topic12Six" jdbcType="VARCHAR" />
+    <result column="topic13_one" property="topic13One" jdbcType="VARCHAR" />
+    <result column="topic13_two" property="topic13Two" jdbcType="VARCHAR" />
+    <result column="topic13_three" property="topic13Three" jdbcType="VARCHAR" />
+    <result column="topic13_four" property="topic13Four" jdbcType="VARCHAR" />
+    <result column="topic13_fraction" property="topic13Fraction" jdbcType="VARCHAR" />
+    <result column="topic13_six" property="topic13Six" jdbcType="VARCHAR" />
+    <result column="topic14_one" property="topic14One" jdbcType="VARCHAR" />
+    <result column="topic14_two" property="topic14Two" jdbcType="VARCHAR" />
+    <result column="topic14_three" property="topic14Three" jdbcType="VARCHAR" />
+    <result column="topic14_four" property="topic14Four" jdbcType="VARCHAR" />
+    <result column="topic14_fraction" property="topic14Fraction" jdbcType="VARCHAR" />
+    <result column="topic14_six" property="topic14Six" jdbcType="VARCHAR" />
+    <result column="topic15_one" property="topic15One" jdbcType="VARCHAR" />
+    <result column="topic15_two" property="topic15Two" jdbcType="VARCHAR" />
+    <result column="topic15_three" property="topic15Three" jdbcType="VARCHAR" />
+    <result column="topic15_four" property="topic15Four" jdbcType="VARCHAR" />
+    <result column="topic15_fraction" property="topic15Fraction" jdbcType="VARCHAR" />
+    <result column="topic15_six" property="topic15Six" jdbcType="VARCHAR" />
+    <result column="topic16_one" property="topic16One" jdbcType="VARCHAR" />
+    <result column="topic16_two" property="topic16Two" jdbcType="VARCHAR" />
+    <result column="topic16_three" property="topic16Three" jdbcType="VARCHAR" />
+    <result column="topic16_four" property="topic16Four" jdbcType="VARCHAR" />
+    <result column="topic16_fraction" property="topic16Fraction" jdbcType="VARCHAR" />
+    <result column="topic16_six" property="topic16Six" jdbcType="VARCHAR" />
+    <result column="topic17_one" property="topic17One" jdbcType="VARCHAR" />
+    <result column="topic17_two" property="topic17Two" jdbcType="VARCHAR" />
+    <result column="topic17_three" property="topic17Three" jdbcType="VARCHAR" />
+    <result column="topic17_four" property="topic17Four" jdbcType="VARCHAR" />
+    <result column="topic17_fraction" property="topic17Fraction" jdbcType="VARCHAR" />
+    <result column="topic17_six" property="topic17Six" jdbcType="VARCHAR" />
+    <result column="topic18_one" property="topic18One" jdbcType="VARCHAR" />
+    <result column="topic18_two" property="topic18Two" jdbcType="VARCHAR" />
+    <result column="topic18_three" property="topic18Three" jdbcType="VARCHAR" />
+    <result column="topic18_four" property="topic18Four" jdbcType="VARCHAR" />
+    <result column="topic18_fraction" property="topic18Fraction" jdbcType="VARCHAR" />
+    <result column="topic18_six" property="topic18Six" jdbcType="VARCHAR" />
+    <result column="topic19_one" property="topic19One" jdbcType="VARCHAR" />
+    <result column="topic19_two" property="topic19Two" jdbcType="VARCHAR" />
+    <result column="topic19_three" property="topic19Three" jdbcType="VARCHAR" />
+    <result column="topic19_four" property="topic19Four" jdbcType="VARCHAR" />
+    <result column="topic19_fraction" property="topic19Fraction" jdbcType="VARCHAR" />
+    <result column="topic19_six" property="topic19Six" jdbcType="VARCHAR" />
+    <result column="topic20_one" property="topic20One" jdbcType="VARCHAR" />
+    <result column="topic20_two" property="topic20Two" jdbcType="VARCHAR" />
+    <result column="topic20_three" property="topic20Three" jdbcType="VARCHAR" />
+    <result column="topic20_four" property="topic20Four" jdbcType="VARCHAR" />
+    <result column="topic20_fraction" property="topic20Fraction" jdbcType="VARCHAR" />
+    <result column="topic20_six" property="topic20Six" jdbcType="VARCHAR" />
+    <result column="topic21_one" property="topic21One" jdbcType="VARCHAR" />
+    <result column="topic21_two" property="topic21Two" jdbcType="VARCHAR" />
+    <result column="topic21_three" property="topic21Three" jdbcType="VARCHAR" />
+    <result column="topic21_four" property="topic21Four" jdbcType="VARCHAR" />
+    <result column="topic21_fraction" property="topic21Fraction" jdbcType="VARCHAR" />
+    <result column="topic21_six" property="topic21Six" jdbcType="VARCHAR" />
+    <result column="topic22_one" property="topic22One" jdbcType="VARCHAR" />
+    <result column="topic22_two" property="topic22Two" jdbcType="VARCHAR" />
+    <result column="topic22_three" property="topic22Three" jdbcType="VARCHAR" />
+    <result column="topic22_four" property="topic22Four" jdbcType="VARCHAR" />
+    <result column="topic22_fraction" property="topic22Fraction" jdbcType="VARCHAR" />
+    <result column="topic22_six" property="topic22Six" jdbcType="VARCHAR" />
+    <result column="topic23_one" property="topic23One" jdbcType="VARCHAR" />
+    <result column="topic23_two" property="topic23Two" jdbcType="VARCHAR" />
+    <result column="topic23_three" property="topic23Three" jdbcType="VARCHAR" />
+    <result column="topic23_four" property="topic23Four" jdbcType="VARCHAR" />
+    <result column="topic23_fraction" property="topic23Fraction" jdbcType="VARCHAR" />
+    <result column="topic23_six" property="topic23Six" jdbcType="VARCHAR" />
+    <result column="topic24_one" property="topic24One" jdbcType="VARCHAR" />
+    <result column="topic24_two" property="topic24Two" jdbcType="VARCHAR" />
+    <result column="topic24_three" property="topic24Three" jdbcType="VARCHAR" />
+    <result column="topic24_four" property="topic24Four" jdbcType="VARCHAR" />
+    <result column="topic24_fraction" property="topic24Fraction" jdbcType="VARCHAR" />
+    <result column="topic24_six" property="topic24Six" jdbcType="VARCHAR" />
+    <result column="topic25_one" property="topic25One" jdbcType="VARCHAR" />
+    <result column="topic25_two" property="topic25Two" jdbcType="VARCHAR" />
+    <result column="topic25_three" property="topic25Three" jdbcType="VARCHAR" />
+    <result column="topic25_four" property="topic25Four" jdbcType="VARCHAR" />
+    <result column="topic25_fraction" property="topic25Fraction" jdbcType="VARCHAR" />
+    <result column="topic25_six" property="topic25Six" jdbcType="VARCHAR" />
+    <result column="topic26_one" property="topic26One" jdbcType="VARCHAR" />
+    <result column="topic26_two" property="topic26Two" jdbcType="VARCHAR" />
+    <result column="topic26_three" property="topic26Three" jdbcType="VARCHAR" />
+    <result column="topic26_four" property="topic26Four" jdbcType="VARCHAR" />
+    <result column="topic26_fraction" property="topic26Fraction" jdbcType="VARCHAR" />
+    <result column="topic26_six" property="topic26Six" jdbcType="VARCHAR" />
+    <result column="topic27_one" property="topic27One" jdbcType="VARCHAR" />
+    <result column="topic27_two" property="topic27Two" jdbcType="VARCHAR" />
+    <result column="topic27_three" property="topic27Three" jdbcType="VARCHAR" />
+    <result column="topic27_four" property="topic27Four" jdbcType="VARCHAR" />
+    <result column="topic27_fraction" property="topic27Fraction" jdbcType="VARCHAR" />
+    <result column="topic27_six" property="topic27Six" jdbcType="VARCHAR" />
+    <result column="topic28_one" property="topic28One" jdbcType="VARCHAR" />
+    <result column="topic28_two" property="topic28Two" jdbcType="VARCHAR" />
+    <result column="topic28_three" property="topic28Three" jdbcType="VARCHAR" />
+    <result column="topic28_four" property="topic28Four" jdbcType="VARCHAR" />
+    <result column="topic28_fraction" property="topic28Fraction" jdbcType="VARCHAR" />
+    <result column="topic28_six" property="topic28Six" jdbcType="VARCHAR" />
+    <result column="topic29_one" property="topic29One" jdbcType="VARCHAR" />
+    <result column="topic29_two" property="topic29Two" jdbcType="VARCHAR" />
+    <result column="topic29_three" property="topic29Three" jdbcType="VARCHAR" />
+    <result column="topic29_four" property="topic29Four" jdbcType="VARCHAR" />
+    <result column="topic29_fraction" property="topic29Fraction" jdbcType="VARCHAR" />
+    <result column="topic29_six" property="topic29Six" jdbcType="VARCHAR" />
+    <result column="topic30_one" property="topic30One" jdbcType="VARCHAR" />
+    <result column="topic30_two" property="topic30Two" jdbcType="VARCHAR" />
+    <result column="topic30_three" property="topic30Three" jdbcType="VARCHAR" />
+    <result column="topic30_four" property="topic30Four" jdbcType="VARCHAR" />
+    <result column="topic30_fraction" property="topic30Fraction" jdbcType="VARCHAR" />
+    <result column="topic30_six" property="topic30Six" jdbcType="VARCHAR" />
+    <result column="topic31_one" property="topic31One" jdbcType="VARCHAR" />
+    <result column="topic31_two" property="topic31Two" jdbcType="VARCHAR" />
+    <result column="topic31_three" property="topic31Three" jdbcType="VARCHAR" />
+    <result column="topic31_four" property="topic31Four" jdbcType="VARCHAR" />
+    <result column="topic31_fraction" property="topic31Fraction" jdbcType="VARCHAR" />
+    <result column="topic31_six" property="topic31Six" jdbcType="VARCHAR" />
+    <result column="topic32_one" property="topic32One" jdbcType="VARCHAR" />
+    <result column="topic32_two" property="topic32Two" jdbcType="VARCHAR" />
+    <result column="topic32_three" property="topic32Three" jdbcType="VARCHAR" />
+    <result column="topic32_four" property="topic32Four" jdbcType="VARCHAR" />
+    <result column="topic32_fraction" property="topic32Fraction" jdbcType="VARCHAR" />
+    <result column="topic32_six" property="topic32Six" jdbcType="VARCHAR" />
+    <result column="topic33_one" property="topic33One" jdbcType="VARCHAR" />
+    <result column="topic33_two" property="topic33Two" jdbcType="VARCHAR" />
+    <result column="topic33_three" property="topic33Three" jdbcType="VARCHAR" />
+    <result column="topic33_four" property="topic33Four" jdbcType="VARCHAR" />
+    <result column="topic33_fraction" property="topic33Fraction" jdbcType="VARCHAR" />
+    <result column="topic33_six" property="topic33Six" jdbcType="VARCHAR" />
+    <result column="topic34_one" property="topic34One" jdbcType="VARCHAR" />
+    <result column="topic34_two" property="topic34Two" jdbcType="VARCHAR" />
+    <result column="topic34_three" property="topic34Three" jdbcType="VARCHAR" />
+    <result column="topic34_four" property="topic34Four" jdbcType="VARCHAR" />
+    <result column="topic34_fraction" property="topic34Fraction" jdbcType="VARCHAR" />
+    <result column="topic34_six" property="topic34Six" jdbcType="VARCHAR" />
+    <result column="topic35_one" property="topic35One" jdbcType="VARCHAR" />
+    <result column="topic35_two" property="topic35Two" jdbcType="VARCHAR" />
+    <result column="topic35_three" property="topic35Three" jdbcType="VARCHAR" />
+    <result column="topic35_four" property="topic35Four" jdbcType="VARCHAR" />
+    <result column="topic35_fraction" property="topic35Fraction" jdbcType="VARCHAR" />
+    <result column="topic35_six" property="topic35Six" jdbcType="VARCHAR" />
+    <result column="topic36_one" property="topic36One" jdbcType="VARCHAR" />
+    <result column="topic36_two" property="topic36Two" jdbcType="VARCHAR" />
+    <result column="topic36_three" property="topic36Three" jdbcType="VARCHAR" />
+    <result column="topic36_four" property="topic36Four" jdbcType="VARCHAR" />
+    <result column="topic36_fraction" property="topic36Fraction" jdbcType="VARCHAR" />
+    <result column="topic36_six" property="topic36Six" jdbcType="VARCHAR" />
+    <result column="topic37_one" property="topic37One" jdbcType="VARCHAR" />
+    <result column="topic37_two" property="topic37Two" jdbcType="VARCHAR" />
+    <result column="topic37_three" property="topic37Three" jdbcType="VARCHAR" />
+    <result column="topic37_four" property="topic37Four" jdbcType="VARCHAR" />
+    <result column="topic37_fraction" property="topic37Fraction" jdbcType="VARCHAR" />
+    <result column="topic37_six" property="topic37Six" jdbcType="VARCHAR" />
+    <result column="topic38_one" property="topic38One" jdbcType="VARCHAR" />
+    <result column="topic38_two" property="topic38Two" jdbcType="VARCHAR" />
+    <result column="topic38_three" property="topic38Three" jdbcType="VARCHAR" />
+    <result column="topic38_four" property="topic38Four" jdbcType="VARCHAR" />
+    <result column="topic38_fraction" property="topic38Fraction" jdbcType="VARCHAR" />
+    <result column="topic38_six" property="topic38Six" jdbcType="VARCHAR" />
+    <result column="topic39_one" property="topic39One" jdbcType="VARCHAR" />
+    <result column="topic39_two" property="topic39Two" jdbcType="VARCHAR" />
+    <result column="topic39_three" property="topic39Three" jdbcType="VARCHAR" />
+    <result column="topic39_four" property="topic39Four" jdbcType="VARCHAR" />
+    <result column="topic39_fraction" property="topic39Fraction" jdbcType="VARCHAR" />
+    <result column="topic39_six" property="topic39Six" jdbcType="VARCHAR" />
+    <result column="topic40_one" property="topic40One" jdbcType="VARCHAR" />
+    <result column="topic40_two" property="topic40Two" jdbcType="VARCHAR" />
+    <result column="topic40_three" property="topic40Three" jdbcType="VARCHAR" />
+    <result column="topic40_four" property="topic40Four" jdbcType="VARCHAR" />
+    <result column="topic40_fraction" property="topic40Fraction" jdbcType="VARCHAR" />
+    <result column="topic40_six" property="topic40Six" jdbcType="VARCHAR" />
+
+    <result column="topic41_one" property="topic41One"/>
+    <result column="topic42_one" property="topic42One"/>
+    <result column="topic43_one" property="topic43One"/>
+    <result column="topic44_one" property="topic44One"/>
+    <result column="topic45_one" property="topic45One"/>
+    <result column="topic46_one" property="topic46One"/>
+    <result column="topic47_one" property="topic47One"/>
+    <result column="topic48_one" property="topic48One"/>
+    <result column="topic49_one" property="topic49One"/>
+    <result column="topic50_one" property="topic50One"/>
+    <result column="topic51_one" property="topic51One"/>
+    <result column="topic52_one" property="topic52One"/>
+    <result column="topic53_one" property="topic53One"/>
+    <result column="topic54_one" property="topic54One"/>
+    <result column="topic55_one" property="topic55One"/>
+    <result column="topic56_one" property="topic56One"/>
+    <result column="topic57_one" property="topic57One"/>
+    <result column="topic58_one" property="topic58One"/>
+    <result column="topic59_one" property="topic59One"/>
+    <result column="topic60_one" property="topic60One"/>
+    <result column="topic61_one" property="topic61One"/>
+    <result column="topic62_one" property="topic62One"/>
+    <result column="topic63_one" property="topic63One"	/>
+
+    <result column="topic41_two" property="topic41Two"/>
+    <result column="topic42_two" property="topic42Two"/>
+    <result column="topic43_two" property="topic43Two"/>
+    <result column="topic44_two" property="topic44Two"/>
+    <result column="topic45_two" property="topic45Two"/>
+    <result column="topic46_two" property="topic46Two"/>
+    <result column="topic47_two" property="topic47Two"/>
+    <result column="topic48_two" property="topic48Two"/>
+    <result column="topic49_two" property="topic49Two"/>
+    <result column="topic50_two" property="topic50Two"/>
+    <result column="topic51_two" property="topic51Two"/>
+    <result column="topic52_two" property="topic52Two"/>
+    <result column="topic53_two" property="topic53Two"/>
+    <result column="topic54_two" property="topic54Two"/>
+    <result column="topic55_two" property="topic55Two"/>
+    <result column="topic56_two" property="topic56Two"/>
+    <result column="topic57_two" property="topic57Two"/>
+    <result column="topic58_two" property="topic58Two"/>
+    <result column="topic59_two" property="topic59Two"/>
+    <result column="topic60_two" property="topic60Two"/>
+    <result column="topic61_two" property="topic61Two"/>
+    <result column="topic62_two" property="topic62Two"/>
+    <result column="topic63_two" property="topic63Two"	/>
+    <result column="topic41_three" property="topic41Three"/>
+    <result column="topic42_three" property="topic42Three"/>
+    <result column="topic43_three" property="topic43Three"/>
+    <result column="topic44_three" property="topic44Three"/>
+    <result column="topic45_three" property="topic45Three"/>
+    <result column="topic46_three" property="topic46Three"/>
+    <result column="topic47_three" property="topic47Three"/>
+    <result column="topic48_three" property="topic48Three"/>
+    <result column="topic49_three" property="topic49Three"/>
+    <result column="topic50_three" property="topic50Three"/>
+    <result column="topic51_three" property="topic51Three"/>
+    <result column="topic52_three" property="topic52Three"/>
+    <result column="topic53_three" property="topic53Three"/>
+    <result column="topic54_three" property="topic54Three"/>
+    <result column="topic55_three" property="topic55Three"/>
+    <result column="topic56_three" property="topic56Three"/>
+    <result column="topic57_three" property="topic57Three"/>
+    <result column="topic58_three" property="topic58Three"/>
+    <result column="topic59_three" property="topic59Three"/>
+    <result column="topic60_three" property="topic60Three"/>
+    <result column="topic61_three" property="topic61Three"/>
+    <result column="topic62_three" property="topic62Three"/>
+    <result column="topic63_three" property="topic63Three"/>
+
+    <result column="topic41_six" property="topic41Six"/>
+    <result column="topic42_six" property="topic42Six"/>
+    <result column="topic43_six" property="topic43Six"/>
+    <result column="topic44_six" property="topic44Six"/>
+    <result column="topic45_six" property="topic45Six"/>
+    <result column="topic46_six" property="topic46Six"/>
+    <result column="topic47_six" property="topic47Six"/>
+    <result column="topic48_six" property="topic48Six"/>
+    <result column="topic49_six" property="topic49Six"/>
+    <result column="topic50_six" property="topic50Six"/>
+    <result column="topic51_six" property="topic51Six"/>
+    <result column="topic52_six" property="topic52Six"/>
+    <result column="topic53_six" property="topic53Six"/>
+    <result column="topic54_six" property="topic54Six"/>
+    <result column="topic55_six" property="topic55Six"/>
+    <result column="topic56_six" property="topic56Six"/>
+    <result column="topic57_six" property="topic57Six"/>
+    <result column="topic58_six" property="topic58Six"/>
+    <result column="topic59_six" property="topic59Six"/>
+    <result column="topic60_six" property="topic60Six"/>
+    <result column="topic61_six" property="topic61Six"/>
+    <result column="topic62_six" property="topic62Six"/>
+    <result column="topic63_six" property="topic63Six"	/>
+
+    <result column="company" property="company" jdbcType="VARCHAR" />
+    <result column="disabled" property="disabled" />
+
+
+    <result column="weather" property="weather" />
+    <result column="metro" property="metro" />
+    <result column="payment" property="payment" />
+    <result column="screenshot" property="screenshot" />
+    <result column="vedio" property="vedio" />
+    <result column="duration" property="duration" />
+    <result column="type" property="type" />
+    <result column="spotdate" property="spotdate" />
+    <result column="daqu" property="daqu" />
+
+  </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
       <foreach collection="oredCriteria" item="criteria" separator="or" >
@@ -4561,11 +4943,11 @@
     </update>
 
 
-  <select id="queryAll" resultMap="BaseResultMap" parameterType="map">
-    select  <include refid="Base_Column_List" /> from test_paper
-    where  disabled=0    and monthJudge is null
+  <select id="queryAll" resultMap="ExcelResultMap" parameterType="map">
+    select  tp.*,th.*  from test_paper tp LEFT JOIN test_hans th ON th.testId=tp.id
+    where  tp.disabled=0    and  tp.monthJudge is null
     <if test="type != null" >
-      and  type=#{type}
+      and  tp.type=#{type}
     </if>
   </select>
 
