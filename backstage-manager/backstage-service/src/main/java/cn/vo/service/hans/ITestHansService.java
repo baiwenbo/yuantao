@@ -6,5 +6,7 @@ public interface ITestHansService {
 
     void save(TestHans testHans);
 
-    TestHans getId(Integer testId);
+    void updateId(TestHans testHans);
+
+    TestHans getTestId(Integer testId);
 }
