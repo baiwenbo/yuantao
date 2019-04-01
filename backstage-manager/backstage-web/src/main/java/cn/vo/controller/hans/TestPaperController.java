@@ -139,7 +139,7 @@ public class TestPaperController {
     @GetMapping("edit")
     public String edit(Integer id, Model model,HttpServletRequest request){
         TestPaper testPaper=testPaperService.getById(id);
-        TestHans testHans=testHansService.getId(id);
+        TestHans testHans=testHansService.getTestId(id);
         HttpSession session=request.getSession();
         User user= (User) session.getAttribute("USER");
         model.addAttribute("scpcqx",user.getScpcqx());
@@ -183,11 +183,12 @@ public class TestPaperController {
     @PostMapping("update")
     public String update(@ModelAttribute TestPaper testPaper,@ModelAttribute TestHans testHans,HttpServletRequest request){
         try{
-
-
             //testPaper.setTrough1(FileUpload.uploadFile(trough1File,trough1File.getName()));
 
             TestPaper  testPaperMendian=testPaperService.getById(testPaper.getId());
+            TestHans hans=testHansService.getTestId(testPaper.getId());
+
+            testHans.setHansid(hans.getHansid());
 
             if(testPaper.getCompanyId()==null){
                 testPaper.setCompanyId(testPaperMendian.getCompanyId());
@@ -206,7 +207,6 @@ public class TestPaperController {
                     testPaperMendian.setQcheckstatus("已申诉");
                     testPaperService.updateId(testPaperMendian);
                 }
-
                 if("3".equals(user.getScpcqx())){
                     testPaperMendian.setQchecksn(testPaper.getQchecksn());
                     testPaperMendian.setQcheckstatus("已批复");
@@ -217,7 +217,7 @@ public class TestPaperController {
                 if (testPaper.getType()==1){
                     testPaperService.updateId(FractionUtil.getFraction(testPaper,testHans));
                     testHans.setTestid(testPaper.getId());
-                    testHansService.save(testHans);
+                    testHansService.updateId(testHans);
                 }else if (testPaper.getType()==2){
                     testPaperService.updateId(SorceUtils.getFraction(testPaper));
                 }else if(testPaper.getType()==3){
