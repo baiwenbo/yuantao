@@ -631,6 +631,353 @@ $("#checkSubject").click(function(){
         }
     }
 
+    if (type41=="2"){
+        var remark41=$("input[name='topic41Six']").val();
+        if ($("input[name='topic41Two']").is(':checked') === false && remark41 ==""){
+            alert("请选择题41不符项");
+            return false;
+        }
+        var topic41Four=$("#topic41Four").val();
+        if (topic41Four==""||topic41Four==null){
+            alert("请上传题41图片");
+            return false;
+        }
+    }
+    if (type42=="2"){
+        var remark42=$("input[name='topic42Six']").val();
+        if ($("input[name='topic42Two']").is(':checked') === false && remark42 ==""){
+            alert("请选择题42不符项");
+            return false;
+        }
+        var topic42Four=$("#topic42Four").val();
+        if (topic42Four==""||topic42Four==null){
+            alert("请上传题42图片");
+            return false;
+        }
+
+    }
+    if (type43=="2"){
+      /*  var remark43=$("input[name='topic43Six']").val();
+        if ($("input[name='topic43Two']").is(':checked') === false && remark43 ==""){
+            alert("请选择题43不符项");
+            return false;
+        }*/
+        // if ($("input[name='topic44Three']").is(':checked') === false){
+        //     alert("请选择题44不符项");
+        //     return false;
+        // }
+        var topic43Four=$("#topic43Four").val();
+        if (topic43Four==""||topic43Four==null){
+            alert("请上传题43图片");
+            return false;
+        }
+    }
+    if (type44=="2"){
+        var remark44=$("input[name='topic44Six']").val();
+        if ($("input[name='topic44Two']").is(':checked') === false && remark44 ==""){
+            alert("请选择题44不符项");
+            return false;
+        }
+        // if ($("input[name='topic44Three']").is(':checked') === false){
+        //     alert("请选择题44不符项");
+        //     return false;
+        // }
+        var topic44Four=$("#topic44Four").val();
+        if (topic44Four==""||topic44Four==null){
+            alert("请上传题44图片");
+            return false;
+        }
+    }
+    if (type45=="2"){
+        var remark45=$("input[name='topic45Six']").val();
+        if ($("input[name='topic45Two']").is(':checked') === false && remark45 ==""){
+            alert("请选择题45不符项");
+            return false;
+        }
+        /* if ($("input[name='topic45Three']").is(':checked') === false){
+             alert("请选择题45不符项");
+             return false;
+         }*/
+        var topic45Four=$("#topic45Four").val();
+        if (topic45Four==""||topic45Four==null){
+            alert("请上传题45图片");
+            return false;
+        }
+    }
+    if (type46=="2"){
+        var remark46=$("input[name='topic46Six']").val();
+        if ($("input[name='topic46Two']").is(':checked') === false && remark46 ==""){
+            alert("请选择题46不符项");
+            return false;
+        }
+        /*  if ($("input[name='topic46Three']").is(':checked') === false){
+              alert("请选择题46不符项");
+              return false;
+          }*/
+        var topic46Four=$("#topic46Four").val();
+        if (topic46Four==""||topic46Four==null){
+            alert("请上传题46图片");
+            return false;
+        }
+    }
+    if (type47=="2"){
+        var remark47=$("input[name='topic47Six']").val();
+        if ($("input[name='topic47Two']").is(':checked') === false && remark47 ==""){
+            alert("请选择题47不符项");
+            return false;
+        }
+        /*if ($("input[name='topic47Three']").is(':checked') === false){
+            alert("请选择题47不符项");
+            return false;
+        }*/
+        var topic47Four=$("#topic47Four").val();
+        if (topic47Four==""||topic47Four==null){
+            alert("请上传题47图片");
+            return false;
+        }
+    }
+    if (type48=="2"){
+        var remark48=$("input[name='topic48Six']").val();
+        if ($("input[name='topic48Two']").is(':checked') === false && remark48 ==""){
+            alert("请选择题48不符项");
+            return false;
+        }
+         if ($("input[name='topic48Three']").is(':checked') === false){
+             alert("请选择不符项");
+             return false;
+         }
+         var topic48Four=$("#topic48Four").val();
+         if (topic48Four==""||topic48Four==null){
+             alert("请上传题48图片");
+             return false;
+         }
+    }
+    if (type49=="2"){
+        var remark49=$("input[name='topic49Six']").val();
+        if ($("input[name='topic49Two']").is(':checked') === false && remark49 ==""){
+            alert("请选择题49不符项");
+            return false;
+        }
+        /*  if ($("input[name='topic49Three']").is(':checked') === false){
+              alert("请选择不符项");
+              return false;
+          }*/
+        var topic49Four=$("#topic49Four").val();
+        if (topic49Four==""||topic49Four==null){
+            alert("请上传题49图片");
+            return false;
+        }
+    }
+    if (type50=="2"){
+        var remark50=$("input[name='topic50Six']").val();
+        if ($("input[name='topic50Two']").is(':checked') === false && remark50 ==""){
+            alert("请选择题50不符项");
+            return false;
+        }
+        /*if ($("input[name='topic50Three']").is(':checked') === false){
+            alert("请选择题50不符项");
+            return false;
+        }*/
+        var topic50Four=$("#topic50Four").val();
+        if (topic50Four==""||topic50Four==null){
+            alert("请上传题50图片");
+            return false;
+        }
+    }
+    if (type51=="2"){
+        var remark51=$("input[name='topic51Six']").val();
+        if ($("input[name='topic51Two']").is(':checked') === false && remark51 ==""){
+            alert("请选择题51不符项");
+            return false;
+        }
+        var topic51Four=$("#topic51Four").val();
+        if (topic51Four==""||topic51Four==null){
+            alert("请上传题51图片");
+            return false;
+        }
+    }
+    if (type52=="2"){
+        var remark52=$("input[name='topic52Six']").val();
+        if ($("input[name='topic52Two']").is(':checked') === false && remark52 ==""){
+            alert("请选择题52不符项");
+            return false;
+        }
+        var topic52Four=$("#topic52Four").val();
+        if (topic52Four==""||topic52Four==null){
+            alert("请上传题52图片");
+            return false;
+        }
+
+    }
+    if (type53=="2"){
+        var remark53=$("input[name='topic53Six']").val();
+        if ($("input[name='topic53Two']").is(':checked') === false && remark53 ==""){
+            alert("请选择题53不符项");
+            return false;
+        }
+        // if ($("input[name='topic55Three']").is(':checked') === false){
+        //     alert("请选择题55不符项");
+        //     return false;
+        // }
+        var topic53Four=$("#topic53Four").val();
+        if (topic53Four==""||topic53Four==null){
+            alert("请上传题53图片");
+            return false;
+        }
+    }
+    if (type54=="2"){
+        var remark54=$("input[name='topic54Six']").val();
+        if ($("input[name='topic54Two']").is(':checked') === false && remark54 ==""){
+            alert("请选择题54不符项");
+            return false;
+        }
+        // if ($("input[name='topic54Three']").is(':checked') === false){
+        //     alert("请选择题54不符项");
+        //     return false;
+        // }
+        var topic54Four=$("#topic54Four").val();
+        if (topic54Four==""||topic54Four==null){
+            alert("请上传题54图片");
+            return false;
+        }
+    }
+    if (type55=="2"){
+        var remark55=$("input[name='topic55Six']").val();
+        if ($("input[name='topic55Two']").is(':checked') === false && remark55 ==""){
+            alert("请选择题55不符项");
+            return false;
+        }
+        /* if ($("input[name='topic55Three']").is(':checked') === false){
+             alert("请选择题55不符项");
+             return false;
+         }*/
+        var topic55Four=$("#topic55Four").val();
+        if (topic55Four==""||topic55Four==null){
+            alert("请上传题55图片");
+            return false;
+        }
+    }
+    if (type56=="2"){
+        var remark56=$("input[name='topic56Six']").val();
+        if ($("input[name='topic56Two']").is(':checked') === false && remark56 ==""){
+            alert("请选择题56不符项");
+            return false;
+        }
+        /*  if ($("input[name='topic56Three']").is(':checked') === false){
+              alert("请选择题56不符项");
+              return false;
+          }*/
+        var topic56Four=$("#topic56Four").val();
+        if (topic56Four==""||topic56Four==null){
+            alert("请上传题56图片");
+            return false;
+        }
+    }
+    if (type57=="2"){
+        var remark57=$("input[name='topic57Six']").val();
+        if ($("input[name='topic57Two']").is(':checked') === false && remark57 ==""){
+            alert("请选择题57不符项");
+            return false;
+        }
+        /*if ($("input[name='topic57Three']").is(':checked') === false){
+            alert("请选择题57不符项");
+            return false;
+        }*/
+        var topic57Four=$("#topic57Four").val();
+        if (topic57Four==""||topic57Four==null){
+            alert("请上传题57图片");
+            return false;
+        }
+    }
+    if (type58=="2"){
+        var remark58=$("input[name='topic58Six']").val();
+        if ($("input[name='topic58Two']").is(':checked') === false && remark58 ==""){
+            alert("请选择题58不符项");
+            return false;
+        }
+        /* if ($("input[name='topic58Three']").is(':checked') === false){
+             alert("请选择不符项");
+             return false;
+         }*/
+         var topic58Four=$("#topic58Four").val();
+         if (topic58Four==""||topic58Four==null){
+             alert("请上传题58图片");
+             return false;
+         }
+    }
+    if (type59=="2"){
+        var remark59=$("input[name='topic59Six']").val();
+        if ($("input[name='topic59Two']").is(':checked') === false && remark59 ==""){
+            alert("请选择题59不符项");
+            return false;
+        }
+        /*  if ($("input[name='topic59Three']").is(':checked') === false){
+              alert("请选择不符项");
+              return false;
+          }*/
+        var topic59Four=$("#topic59Four").val();
+        if (topic59Four==""||topic59Four==null){
+            alert("请上传题59图片");
+            return false;
+        }
+    }
+    if (type60=="2"){
+        var remark60=$("input[name='topic60Six']").val();
+        if ($("input[name='topic60Two']").is(':checked') === false && remark60 ==""){
+            alert("请选择题60不符项");
+            return false;
+        }
+        /*if ($("input[name='topic60Three']").is(':checked') === false){
+            alert("请选择题60不符项");
+            return false;
+        }*/
+        var topic60Four=$("#topic60Four").val();
+        if (topic60Four==""||topic60Four==null){
+            alert("请上传题60图片");
+            return false;
+        }
+    }
+    if (type61=="2"){
+        var remark61=$("input[name='topic61Six']").val();
+        if ($("input[name='topic61Two']").is(':checked') === false && remark61 ==""){
+            alert("请选择题61不符项");
+            return false;
+        }
+        var topic61Four=$("#topic61Four").val();
+        if (topic61Four==""||topic61Four==null){
+            alert("请上传题61图片");
+            return false;
+        }
+    }
+    if (type62=="2"){
+      /*  var remark62=$("input[name='topic62Six']").val();
+        if ($("input[name='topic62Two']").is(':checked') === false && remark62 ==""){
+            alert("请选择题62不符项");
+            return false;
+        }*/
+        var topic62Four=$("#topic62Four").val();
+        if (topic62Four==""||topic62Four==null){
+            alert("请上传题62图片");
+            return false;
+        }
+
+    }
+    if (type63=="2"){
+        var remark63=$("input[name='topic63Six']").val();
+        if ($("input[name='topic63Two']").is(':checked') === false && remark63 ==""){
+            alert("请选择题63不符项");
+            return false;
+        }
+        // if ($("input[name='topic66Three']").is(':checked') === false){
+        //     alert("请选择题66不符项");
+        //     return false;
+        // }
+        var topic63Four=$("#topic63Four").val();
+        if (topic63Four==""||topic63Four==null){
+            alert("请上传题63图片");
+            return false;
+        }
+    }
 
 
 });
@@ -695,4 +1042,7 @@ var type57="1";
 var type58="1";
 var type59="1";
 var type60="1";
+var type61="1";
+var type62="1";
+var type63="1";
 
