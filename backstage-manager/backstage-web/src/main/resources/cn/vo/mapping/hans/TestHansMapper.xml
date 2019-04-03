@@ -384,7 +384,7 @@
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from test_hans
-    where hansId = #{hansid,jdbcType=INTEGER}
+    where testId = #{testId}
   </delete>
   <delete id="deleteByExample" parameterType="cn.vo.pojo.entity.TestHansExample" >
     delete from test_hans

@@ -11,7 +11,7 @@ public interface TestHansMapper {
 
     int deleteByExample(TestHansExample example);
 
-    int deleteByPrimaryKey(Integer hansid);
+    int deleteByPrimaryKey(Integer testId);
 
     int insert(TestHans record);
 

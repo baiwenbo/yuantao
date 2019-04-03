@@ -128,7 +128,12 @@ public class TestPaperController {
     @GetMapping("delete")
     public String delete(Integer id){
         try{
+            TestPaper testPaper=testPaperService.getById(id);
+            if(1==testPaper.getType()){
+                testHansService.delete(id);
+            }
             testPaperService.deleteId(id);
+
         }catch (Exception e){
             e.printStackTrace();
             return  "error";

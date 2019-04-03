@@ -8,5 +8,7 @@ public interface ITestHansService {
 
     void updateId(TestHans testHans);
 
+    void delete(Integer testId);
+
     TestHans getTestId(Integer testId);
 }

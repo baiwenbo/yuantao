@@ -26,6 +26,11 @@ public class TestHansServiceImpl implements ITestHansService {
     }
 
     @Override
+    public void delete(Integer testId) {
+        testHansMapper.deleteByPrimaryKey(testId);
+    }
+
+    @Override
     public TestHans getTestId(Integer testId) {
         TestHansExample testHansExample =new TestHansExample();
         TestHansExample.Criteria criteria=testHansExample.createCriteria();
