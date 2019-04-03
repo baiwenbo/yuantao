@@ -446,12 +446,12 @@ $("#checkSubject").click(function(){
       /*  if ($("input[name='topic28Three']").is(':checked') === false){
             alert("请选择不符项");
             return false;
-        }*/
+        }
         var topic28Four=$("#topic28Four").val();
         if (topic28Four==""||topic28Four==null){
             alert("请上传题28图片");
             return false;
-        }
+        }*/
     }
     if (type29=="2"){
         var remark29=$("input[name='topic29Six']").val();

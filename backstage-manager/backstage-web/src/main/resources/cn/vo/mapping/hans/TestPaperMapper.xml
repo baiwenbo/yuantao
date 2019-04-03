@@ -653,6 +653,32 @@
     <result column="topic62_six" property="topic62Six"/>
     <result column="topic63_six" property="topic63Six"	/>
 
+
+    <result column="topic41_fraction" property="topic41Fraction"/>
+    <result column="topic42_fraction" property="topic42Fraction"/>
+    <result column="topic43_fraction" property="topic43Fraction"/>
+    <result column="topic44_fraction" property="topic44Fraction"/>
+    <result column="topic45_fraction" property="topic45Fraction"/>
+    <result column="topic46_fraction" property="topic46Fraction"/>
+    <result column="topic47_fraction" property="topic47Fraction"/>
+    <result column="topic48_fraction" property="topic48Fraction"/>
+    <result column="topic49_fraction" property="topic49Fraction"/>
+    <result column="topic50_fraction" property="topic50Fraction"/>
+    <result column="topic51_fraction" property="topic51Fraction"/>
+    <result column="topic52_fraction" property="topic52Fraction"/>
+    <result column="topic53_fraction" property="topic53Fraction"/>
+    <result column="topic54_fraction" property="topic54Fraction"/>
+    <result column="topic55_fraction" property="topic55Fraction"/>
+    <result column="topic56_fraction" property="topic56Fraction"/>
+    <result column="topic57_fraction" property="topic57Fraction"/>
+    <result column="topic58_fraction" property="topic58Fraction"/>
+    <result column="topic59_fraction" property="topic59Fraction"/>
+    <result column="topic60_fraction" property="topic60Fraction"/>
+    <result column="topic61_fraction" property="topic61Fraction"/>
+    <result column="topic62_fraction" property="topic62Fraction"/>
+    <result column="topic63_fraction" property="topic63Fraction"/>
+
+
     <result column="company" property="company" jdbcType="VARCHAR" />
     <result column="disabled" property="disabled" />
 
