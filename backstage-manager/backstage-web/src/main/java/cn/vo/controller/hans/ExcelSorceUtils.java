@@ -164,6 +164,7 @@ public class ExcelSorceUtils {
                     testPaper.setTh38sorce(setSorce("th38",testPaper.getTopic38Three(),""));
                     testPaper.setTh39sorce(setSorce("th39",testPaper.getTopic39Three(),""));
                     testPaper.setTh40sorce(setSorce("th40",testPaper.getTopic40Three(),""));
+                    testPaper.setTh48sorce(setSorce("th48",testPaper.getTopic48Three(),""));
                 }
 
 
