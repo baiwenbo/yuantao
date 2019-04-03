@@ -373,7 +373,7 @@ $(document).ready(function () {
     } else {
         type61 = "2";
     }
-    if (th62.indexOf("完全") > 0) {
+    if (th62.indexOf("不存在") > 0) {
         $("#th62").hide();
     } else {
         type62 = "2";
