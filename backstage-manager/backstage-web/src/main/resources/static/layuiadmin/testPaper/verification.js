@@ -743,7 +743,7 @@ $("#checkSubject").click(function(){
             return false;
         }
          if ($("input[name='topic48Three']").is(':checked') === false){
-             alert("请选择不符项");
+             alert("请选择48不符项");
              return false;
          }
          var topic48Four=$("#topic48Four").val();
@@ -1024,7 +1024,7 @@ var type39="1";
 var type40="1";
 var type41="1";
 var type42="1";
-var type44="1";
+var type43="1";
 var type44="1";
 var type45="1";
 var type46="1";
