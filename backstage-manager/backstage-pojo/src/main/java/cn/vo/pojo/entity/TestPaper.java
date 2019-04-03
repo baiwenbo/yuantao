@@ -1109,6 +1109,27 @@ public class TestPaper {
     private		String 		th38sorce;
     private		String 		th39sorce;
     private		String 		th40sorce;
+    private		String 		th41sorce;
+    private		String 		th42sorce;
+    private		String 		th43sorce;
+    private		String 		th44sorce;
+    private		String 		th45sorce;
+    private		String 		th46sorce;
+    private		String 		th47sorce;
+    private		String 		th48sorce;
+    private		String 		th49sorce;
+    private		String 		th50sorce;
+    private		String 		th51sorce;
+    private		String 		th52sorce;
+    private		String 		th53sorce;
+    private		String 		th54sorce;
+    private		String 		th55sorce;
+    private		String 		th56sorce;
+    private		String 		th57sorce;
+    private		String 		th58sorce;
+    private		String 		th59sorce;
+    private		String 		th60sorce;
+    private		String 		th61sorce;
 
     private		String		th1mark;
     private		String		th2mark;
@@ -1150,6 +1171,499 @@ public class TestPaper {
     private		String		th38mark;
     private		String		th39mark;
     private		String		th40mark;
+    private		String		th41mark;
+    private		String		th42mark;
+    private		String		th43mark;
+    private		String		th44mark;
+    private		String		th45mark;
+    private		String		th46mark;
+    private		String		th47mark;
+    private		String		th48mark;
+    private		String		th49mark;
+    private		String		th50mark;
+    private		String		th51mark;
+    private		String		th52mark;
+    private		String		th53mark;
+    private		String		th54mark;
+    private		String		th55mark;
+    private		String		th56mark;
+    private		String		th57mark;
+    private		String		th58mark;
+    private		String		th59mark;
+    private		String		th60mark;
+    private		String		th61mark;
+
+    public Integer getHansid() {
+        return hansid;
+    }
+
+    public void setHansid(Integer hansid) {
+        this.hansid = hansid;
+    }
+
+    public Integer getTestid() {
+        return testid;
+    }
+
+    public void setTestid(Integer testid) {
+        this.testid = testid;
+    }
+
+    public String getTrough4() {
+        return trough4;
+    }
+
+    public void setTrough4(String trough4) {
+        this.trough4 = trough4;
+    }
+
+    public String getTrough5() {
+        return trough5;
+    }
+
+    public void setTrough5(String trough5) {
+        this.trough5 = trough5;
+    }
+
+    public String getTrough6() {
+        return trough6;
+    }
+
+    public void setTrough6(String trough6) {
+        this.trough6 = trough6;
+    }
+
+    public Integer getTrough7() {
+        return trough7;
+    }
+
+    public void setTrough7(Integer trough7) {
+        this.trough7 = trough7;
+    }
+
+    public String getTrough8() {
+        return trough8;
+    }
+
+    public void setTrough8(String trough8) {
+        this.trough8 = trough8;
+    }
+
+    public String getTrough9() {
+        return trough9;
+    }
+
+    public void setTrough9(String trough9) {
+        this.trough9 = trough9;
+    }
+
+    public String getTrough10() {
+        return trough10;
+    }
+
+    public void setTrough10(String trough10) {
+        this.trough10 = trough10;
+    }
+
+    public String getTrough11() {
+        return trough11;
+    }
+
+    public void setTrough11(String trough11) {
+        this.trough11 = trough11;
+    }
+
+    public String getTrough12() {
+        return trough12;
+    }
+
+    public void setTrough12(String trough12) {
+        this.trough12 = trough12;
+    }
+
+    public String getTrough13() {
+        return trough13;
+    }
+
+    public void setTrough13(String trough13) {
+        this.trough13 = trough13;
+    }
+
+    public String getTrough14() {
+        return trough14;
+    }
+
+    public void setTrough14(String trough14) {
+        this.trough14 = trough14;
+    }
+
+    public String getTrough15() {
+        return trough15;
+    }
+
+    public void setTrough15(String trough15) {
+        this.trough15 = trough15;
+    }
+
+    public String getTrough16() {
+        return trough16;
+    }
+
+    public void setTrough16(String trough16) {
+        this.trough16 = trough16;
+    }
+
+    public String getTrough17() {
+        return trough17;
+    }
+
+    public void setTrough17(String trough17) {
+        this.trough17 = trough17;
+    }
+
+    public String getTrough18() {
+        return trough18;
+    }
+
+    public void setTrough18(String trough18) {
+        this.trough18 = trough18;
+    }
+
+    public String getTh41sorce() {
+        return th41sorce;
+    }
+
+    public void setTh41sorce(String th41sorce) {
+        this.th41sorce = th41sorce;
+    }
+
+    public String getTh42sorce() {
+        return th42sorce;
+    }
+
+    public void setTh42sorce(String th42sorce) {
+        this.th42sorce = th42sorce;
+    }
+
+    public String getTh43sorce() {
+        return th43sorce;
+    }
+
+    public void setTh43sorce(String th43sorce) {
+        this.th43sorce = th43sorce;
+    }
+
+    public String getTh44sorce() {
+        return th44sorce;
+    }
+
+    public void setTh44sorce(String th44sorce) {
+        this.th44sorce = th44sorce;
+    }
+
+    public String getTh45sorce() {
+        return th45sorce;
+    }
+
+    public void setTh45sorce(String th45sorce) {
+        this.th45sorce = th45sorce;
+    }
+
+    public String getTh46sorce() {
+        return th46sorce;
+    }
+
+    public void setTh46sorce(String th46sorce) {
+        this.th46sorce = th46sorce;
+    }
+
+    public String getTh47sorce() {
+        return th47sorce;
+    }
+
+    public void setTh47sorce(String th47sorce) {
+        this.th47sorce = th47sorce;
+    }
+
+    public String getTh48sorce() {
+        return th48sorce;
+    }
+
+    public void setTh48sorce(String th48sorce) {
+        this.th48sorce = th48sorce;
+    }
+
+    public String getTh49sorce() {
+        return th49sorce;
+    }
+
+    public void setTh49sorce(String th49sorce) {
+        this.th49sorce = th49sorce;
+    }
+
+    public String getTh50sorce() {
+        return th50sorce;
+    }
+
+    public void setTh50sorce(String th50sorce) {
+        this.th50sorce = th50sorce;
+    }
+
+    public String getTh51sorce() {
+        return th51sorce;
+    }
+
+    public void setTh51sorce(String th51sorce) {
+        this.th51sorce = th51sorce;
+    }
+
+    public String getTh52sorce() {
+        return th52sorce;
+    }
+
+    public void setTh52sorce(String th52sorce) {
+        this.th52sorce = th52sorce;
+    }
+
+    public String getTh53sorce() {
+        return th53sorce;
+    }
+
+    public void setTh53sorce(String th53sorce) {
+        this.th53sorce = th53sorce;
+    }
+
+    public String getTh54sorce() {
+        return th54sorce;
+    }
+
+    public void setTh54sorce(String th54sorce) {
+        this.th54sorce = th54sorce;
+    }
+
+    public String getTh55sorce() {
+        return th55sorce;
+    }
+
+    public void setTh55sorce(String th55sorce) {
+        this.th55sorce = th55sorce;
+    }
+
+    public String getTh56sorce() {
+        return th56sorce;
+    }
+
+    public void setTh56sorce(String th56sorce) {
+        this.th56sorce = th56sorce;
+    }
+
+    public String getTh57sorce() {
+        return th57sorce;
+    }
+
+    public void setTh57sorce(String th57sorce) {
+        this.th57sorce = th57sorce;
+    }
+
+    public String getTh58sorce() {
+        return th58sorce;
+    }
+
+    public void setTh58sorce(String th58sorce) {
+        this.th58sorce = th58sorce;
+    }
+
+    public String getTh59sorce() {
+        return th59sorce;
+    }
+
+    public void setTh59sorce(String th59sorce) {
+        this.th59sorce = th59sorce;
+    }
+
+    public String getTh60sorce() {
+        return th60sorce;
+    }
+
+    public void setTh60sorce(String th60sorce) {
+        this.th60sorce = th60sorce;
+    }
+
+    public String getTh61sorce() {
+        return th61sorce;
+    }
+
+    public void setTh61sorce(String th61sorce) {
+        this.th61sorce = th61sorce;
+    }
+
+    public String getTh41mark() {
+        return th41mark;
+    }
+
+    public void setTh41mark(String th41mark) {
+        this.th41mark = th41mark;
+    }
+
+    public String getTh42mark() {
+        return th42mark;
+    }
+
+    public void setTh42mark(String th42mark) {
+        this.th42mark = th42mark;
+    }
+
+    public String getTh43mark() {
+        return th43mark;
+    }
+
+    public void setTh43mark(String th43mark) {
+        this.th43mark = th43mark;
+    }
+
+    public String getTh44mark() {
+        return th44mark;
+    }
+
+    public void setTh44mark(String th44mark) {
+        this.th44mark = th44mark;
+    }
+
+    public String getTh45mark() {
+        return th45mark;
+    }
+
+    public void setTh45mark(String th45mark) {
+        this.th45mark = th45mark;
+    }
+
+    public String getTh46mark() {
+        return th46mark;
+    }
+
+    public void setTh46mark(String th46mark) {
+        this.th46mark = th46mark;
+    }
+
+    public String getTh47mark() {
+        return th47mark;
+    }
+
+    public void setTh47mark(String th47mark) {
+        this.th47mark = th47mark;
+    }
+
+    public String getTh48mark() {
+        return th48mark;
+    }
+
+    public void setTh48mark(String th48mark) {
+        this.th48mark = th48mark;
+    }
+
+    public String getTh49mark() {
+        return th49mark;
+    }
+
+    public void setTh49mark(String th49mark) {
+        this.th49mark = th49mark;
+    }
+
+    public String getTh50mark() {
+        return th50mark;
+    }
+
+    public void setTh50mark(String th50mark) {
+        this.th50mark = th50mark;
+    }
+
+    public String getTh51mark() {
+        return th51mark;
+    }
+
+    public void setTh51mark(String th51mark) {
+        this.th51mark = th51mark;
+    }
+
+    public String getTh52mark() {
+        return th52mark;
+    }
+
+    public void setTh52mark(String th52mark) {
+        this.th52mark = th52mark;
+    }
+
+    public String getTh53mark() {
+        return th53mark;
+    }
+
+    public void setTh53mark(String th53mark) {
+        this.th53mark = th53mark;
+    }
+
+    public String getTh54mark() {
+        return th54mark;
+    }
+
+    public void setTh54mark(String th54mark) {
+        this.th54mark = th54mark;
+    }
+
+    public String getTh55mark() {
+        return th55mark;
+    }
+
+    public void setTh55mark(String th55mark) {
+        this.th55mark = th55mark;
+    }
+
+    public String getTh56mark() {
+        return th56mark;
+    }
+
+    public void setTh56mark(String th56mark) {
+        this.th56mark = th56mark;
+    }
+
+    public String getTh57mark() {
+        return th57mark;
+    }
+
+    public void setTh57mark(String th57mark) {
+        this.th57mark = th57mark;
+    }
+
+    public String getTh58mark() {
+        return th58mark;
+    }
+
+    public void setTh58mark(String th58mark) {
+        this.th58mark = th58mark;
+    }
+
+    public String getTh59mark() {
+        return th59mark;
+    }
+
+    public void setTh59mark(String th59mark) {
+        this.th59mark = th59mark;
+    }
+
+    public String getTh60mark() {
+        return th60mark;
+    }
+
+    public void setTh60mark(String th60mark) {
+        this.th60mark = th60mark;
+    }
+
+    public String getTh61mark() {
+        return th61mark;
+    }
+
+    public void setTh61mark(String th61mark) {
+        this.th61mark = th61mark;
+    }
 
     public String getTopic41One() {
         return topic41One;
