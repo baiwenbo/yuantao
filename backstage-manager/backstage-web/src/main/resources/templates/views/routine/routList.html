@@ -97,15 +97,14 @@
             ,page: true //开启分页
             ,cols: [[ //表头
                 {field: 'id', title: 'ID', width:80, sort: true, fixed: 'left'}
-                ,{field: 'company', title: '公司', width:80}
-                ,{field: 'name', title: '门店名称', width:160}
                 ,{field: 'code', title: '门店代码',width:100}
-                ,{field: 'score', title: '总分',width:60}
-                ,{field: 'url', title: '视频和图片下载地址',width:200}
+                ,{field: 'name', title: '门店名称', width:160}
+                ,{field: 'score', title: '总得分',width:100}
+                ,{field: 'vedio', title: '视频链接',width:100}
+                ,{field: 'url', title: '视频链接提取码',width:150}
                 ,{field: 'appeal', title: '申诉开关',width:120}
                 ,{field: 'checkstatus', title: '审核状态',width:100}
                 ,{field: 'qcheckstatus', title: '申诉状态',width:100}
-                ,{field: 'executedate', title: '执行日期',width:160}
                 ,{fixed: 'right',title: '操作', width: 180, align:'center', toolbar: '#barDemo'}
             ]]
         });
