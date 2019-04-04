@@ -52,4 +52,8 @@ public interface TestPaperMapper {
     List<TestPaper> getOldMendianQuery(Map map);
     List<TestPaper> getOldCompanyQuery(Map map);
 
+    int count(Map map);
+
+    int countOld(Map map);
+
 }

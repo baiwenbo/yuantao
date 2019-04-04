@@ -91,4 +91,14 @@ public class TestPaperServiceImpl implements ITestPaperService {
         return testPaperMapper.getOldCompanyQuery(map);
     }
 
+    @Override
+    public Integer countList(Map map) {
+        return testPaperMapper.count(map);
+    }
+
+    @Override
+    public Integer countListOld(Map map) {
+        return testPaperMapper.countOld(map);
+    }
+
 }

@@ -4980,7 +4980,7 @@
 
   <select id="getOldListQuery" resultMap="BaseResultMap" parameterType="map">
     select  <include refid="Base_Column_List" /> from test_paper
-    where disabled=0  and type=#{type}
+    where disabled=0  and type=#{type} and monthJudge is  not null
     <if test="monthJudge != null and monthJudge.length()>0" >
       and  monthJudge = #{monthJudge}
     </if>
@@ -4999,7 +4999,7 @@
 
   <select id="getOldMendianQuery" resultMap="BaseResultMap" parameterType="map">
     select  <include refid="Base_Column_List" /> from test_paper
-    where  code = #{code} and type=#{type} and monthJudge is null
+    where  code = #{code} and type=#{type} and monthJudge is  not null
     <if test="name != null and name.length()>0" >
       and  name like '%${name}%'
     </if>
@@ -5017,7 +5017,7 @@
 
   <select id="getOldCompanyQuery" resultMap="BaseResultMap" parameterType="map">
     select  <include refid="Base_Column_List" /> from test_paper
-    where  company = #{company} and type=#{type} monthJudge is null
+    where  company = #{company} and type=#{type} and monthJudge is  not null
     <if test="name != null and name.length()>0" >
       and  name like '%${name}%'
     </if>
@@ -5031,5 +5031,37 @@
       and  checkStatus = #{checkstatus}
     </if>
     limit  #{index} , #{pageSize}
+  </select>
+
+
+  <select id="count" parameterType="map" resultType="java.lang.Integer" >
+    select count(*) from test_paper where type=#{type} and monthJudge is  null
+    <if test="monthJudge != null and monthJudge.length()>0" >
+      and  monthJudge = #{monthJudge}
+    </if>
+    <if test="name != null and name.length()>0" >
+      and  (name like '%${name}%' or company like '%${name}%' or  code like '%${name}%')
+    </if>
+    <if test="qcheckstatus != null and qcheckstatus.length()>0" >
+      and  qcheckStatus = #{qcheckstatus}
+    </if>
+    <if test="checkstatus != null and checkstatus.length()>0" >
+      and  checkStatus = #{checkstatus}
+    </if>
+  </select>
+  <select id="countOld" parameterType="map" resultType="java.lang.Integer" >
+    select count(*) from test_paper where type=#{type} and monthJudge is  not null
+    <if test="monthJudge != null and monthJudge.length()>0" >
+      and  monthJudge = #{monthJudge}
+    </if>
+    <if test="name != null and name.length()>0" >
+      and  (name like '%${name}%' or company like '%${name}%' or  code like '%${name}%')
+    </if>
+    <if test="qcheckstatus != null and qcheckstatus.length()>0" >
+      and  qcheckStatus = #{qcheckstatus}
+    </if>
+    <if test="checkstatus != null and checkstatus.length()>0" >
+      and  checkStatus = #{checkstatus}
+    </if>
   </select>
 </mapper>

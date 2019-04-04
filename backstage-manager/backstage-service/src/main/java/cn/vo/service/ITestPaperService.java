@@ -36,5 +36,9 @@ public interface ITestPaperService {
 
     List<TestPaper> getOldCompanyQuery(Map map);
 
+    Integer countList(Map map);
+
+    Integer countListOld(Map map);
+
 
 }

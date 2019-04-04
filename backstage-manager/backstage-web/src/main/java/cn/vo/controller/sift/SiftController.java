@@ -95,7 +95,7 @@ public class SiftController {
         }
         ListResult<TestPaper> result=new ListResult<>();
         result.setCode("0");
-        result.setCount(Long.valueOf(testPaperService.count()));
+        result.setCount(Long.valueOf(testPaperService.countListOld(map)));
         result.setMsg("");
         result.setData(list);
         return result;

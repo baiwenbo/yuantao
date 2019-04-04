@@ -97,7 +97,7 @@ public class TestPaperController {
         }
         ListResult<TestPaper> result=new ListResult<>();
         result.setCode("0");
-        result.setCount(Long.valueOf(testPaperService.count()));
+        result.setCount(Long.valueOf(testPaperService.countList(map)));
         result.setMsg("");
         result.setData(list);
         return result;
