@@ -88,24 +88,12 @@ public class SorceUtils {
                 testPaper.setTopic7Fraction("4");
             }
             if (testPaper.getTopic8One().contains("不")){
-                if (testPaper.getTopic8Three() != null && !testPaper.getTopic8Three().isEmpty()) {
-                    testPaper.setTopic8Fraction(getNumber("th8",testPaper.getTopic8Three()));
-                } else if (testPaper.getTopic8Two() != null && !testPaper.getTopic8Two().isEmpty()) {
-                    testPaper.setTopic8Fraction("0");
-                } else {
-                    testPaper.setTopic8Fraction("4");
-                }
+                 testPaper.setTopic8Fraction("0");
             }else{
                 testPaper.setTopic8Fraction("4");
             }
             if (testPaper.getTopic9One().contains("不")){
-                if (testPaper.getTopic9Three() != null && !testPaper.getTopic9Three().isEmpty()) {
-                    testPaper.setTopic9Fraction(getNumber("th9",testPaper.getTopic9Three()));
-                } else if (testPaper.getTopic9Two() != null && !testPaper.getTopic9Two().isEmpty()) {
-                    testPaper.setTopic9Fraction("0");
-                } else {
-                    testPaper.setTopic9Fraction("5");
-                }
+                 testPaper.setTopic9Fraction("0");
             }else{
                 testPaper.setTopic9Fraction("5");
             }
@@ -122,35 +110,17 @@ public class SorceUtils {
                 testPaper.setTopic10Fraction("6");
             }
             if (testPaper.getTopic11One().contains("不")){
-                if (testPaper.getTopic11Three() != null && !testPaper.getTopic11Three().isEmpty()) {
-                    testPaper.setTopic11Fraction(getNumber("th11",testPaper.getTopic11Three()));
-                } else if (testPaper.getTopic11Two() != null && !testPaper.getTopic11Two().isEmpty()) {
-                    testPaper.setTopic11Fraction("0");
-                } else {
-                    testPaper.setTopic11Fraction("4");
-                }
+                testPaper.setTopic11Fraction("0");
             }else{
                 testPaper.setTopic11Fraction("4");
             }
             if (testPaper.getTopic12One().contains("不")){
-                if (testPaper.getTopic12Three() != null && !testPaper.getTopic12Three().isEmpty()) {
-                    testPaper.setTopic12Fraction(getNumber("th12",testPaper.getTopic12Three()));
-                } else if (testPaper.getTopic12Two() != null && !testPaper.getTopic12Two().isEmpty()) {
                     testPaper.setTopic12Fraction("0");
-                } else {
-                    testPaper.setTopic12Fraction("4");
-                }
             }else{
                 testPaper.setTopic12Fraction("4");
             }
             if (testPaper.getTopic13One().contains("不")){
-                if (testPaper.getTopic13Three() != null && !testPaper.getTopic13Three().isEmpty()) {
-                    testPaper.setTopic13Fraction(getNumber("th13",testPaper.getTopic13Three()));
-                } else if (testPaper.getTopic13Two() != null && !testPaper.getTopic13Two().isEmpty()) {
-                    testPaper.setTopic13Fraction("0");
-                } else {
-                    testPaper.setTopic13Fraction("5");
-                }
+                testPaper.setTopic13Fraction("0");
             }else{
                 testPaper.setTopic13Fraction("5");
             }
@@ -199,13 +169,7 @@ public class SorceUtils {
                 testPaper.setTopic17Fraction("4");
             }
             if (testPaper.getTopic18One().contains("不")){
-                if (testPaper.getTopic18Three() != null && !testPaper.getTopic18Three().isEmpty()) {
-                    testPaper.setTopic18Fraction(getNumber("th18",testPaper.getTopic18Three()));
-                } else if (testPaper.getTopic18Two() != null && !testPaper.getTopic18Two().isEmpty()) {
-                    testPaper.setTopic18Fraction("0");
-                } else {
-                    testPaper.setTopic18Fraction("5");
-                }
+                testPaper.setTopic18Fraction("0");
             }else{
                 testPaper.setTopic18Fraction("5");
             }
@@ -221,17 +185,12 @@ public class SorceUtils {
                 testPaper.setTopic19Fraction("3");
             }
             if (testPaper.getTopic20One().contains("不")){
-                if (testPaper.getTopic20Three() != null && !testPaper.getTopic20Three().isEmpty()) {
-                    testPaper.setTopic20Fraction(getNumber("th20",testPaper.getTopic20Three()));
-                } else if (testPaper.getTopic20Two() != null && !testPaper.getTopic20Two().isEmpty()) {
-                    testPaper.setTopic20Fraction("0");
-                } else {
-                    testPaper.setTopic20Fraction("6");
-                }
+                testPaper.setTopic20Fraction("0");
+                testPaper.setScore("0");
             }else{
                 testPaper.setTopic20Fraction("6");
+                testPaper.setScore(getsSore(testPaper));
             }
-            testPaper.setScore(getsSore(testPaper));
         }catch (Exception e){
             e.printStackTrace();
             return testPaper;
