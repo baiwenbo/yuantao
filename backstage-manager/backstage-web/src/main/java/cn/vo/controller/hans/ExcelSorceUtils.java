@@ -47,6 +47,7 @@ public class ExcelSorceUtils {
                 testPaper.setTh18mark(setMark(testPaper.getType(),testPaper.getTopic18One(),"th18"));
                 testPaper.setTh19mark(setMark(testPaper.getType(),testPaper.getTopic19One(),"th19"));
                 testPaper.setTh20mark(setMark(testPaper.getType(),testPaper.getTopic20One(),"th20"));
+
                 testPaper.setTh21mark(setMark(testPaper.getType(),testPaper.getTopic21One(),"th21"));
                 testPaper.setTh22mark(setMark(testPaper.getType(),testPaper.getTopic22One(),"th22"));
                 testPaper.setTh23mark(setMark(testPaper.getType(),testPaper.getTopic23One(),"th23"));
@@ -67,27 +68,30 @@ public class ExcelSorceUtils {
                 testPaper.setTh38mark(setMark(testPaper.getType(),testPaper.getTopic38One(),"th38"));
                 testPaper.setTh39mark(setMark(testPaper.getType(),testPaper.getTopic39One(),"th39"));
                 testPaper.setTh40mark(setMark(testPaper.getType(),testPaper.getTopic40One(),"th40"));
-                testPaper.setTh41mark(setMark(testPaper.getType(),testHans.getTopic41One(),"th41"));
-                testPaper.setTh42mark(setMark(testPaper.getType(),testHans.getTopic42One(),"th42"));
-                testPaper.setTh43mark(setMark(testPaper.getType(),testHans.getTopic43One(),"th43"));
-                testPaper.setTh44mark(setMark(testPaper.getType(),testHans.getTopic44One(),"th44"));
-                testPaper.setTh45mark(setMark(testPaper.getType(),testHans.getTopic45One(),"th45"));
-                testPaper.setTh46mark(setMark(testPaper.getType(),testHans.getTopic46One(),"th46"));
-                testPaper.setTh47mark(setMark(testPaper.getType(),testHans.getTopic47One(),"th47"));
-                testPaper.setTh48mark(setMark(testPaper.getType(),testHans.getTopic48One(),"th48"));
-                testPaper.setTh49mark(setMark(testPaper.getType(),testHans.getTopic49One(),"th49"));
-                testPaper.setTh50mark(setMark(testPaper.getType(),testHans.getTopic50One(),"th50"));
-                testPaper.setTh51mark(setMark(testPaper.getType(),testHans.getTopic51One(),"th51"));
-                testPaper.setTh52mark(setMark(testPaper.getType(),testHans.getTopic52One(),"th52"));
-                testPaper.setTh53mark(setMark(testPaper.getType(),testHans.getTopic53One(),"th53"));
-                testPaper.setTh54mark(setMark(testPaper.getType(),testHans.getTopic54One(),"th54"));
-                testPaper.setTh55mark(setMark(testPaper.getType(),testHans.getTopic55One(),"th55"));
-                testPaper.setTh56mark(setMark(testPaper.getType(),testHans.getTopic56One(),"th56"));
-                testPaper.setTh57mark(setMark(testPaper.getType(),testHans.getTopic57One(),"th57"));
-                testPaper.setTh58mark(setMark(testPaper.getType(),testHans.getTopic58One(),"th58"));
-                testPaper.setTh59mark(setMark(testPaper.getType(),testHans.getTopic59One(),"th59"));
-                testPaper.setTh60mark(setMark(testPaper.getType(),testHans.getTopic60One(),"th60"));
-                testPaper.setTh61mark(setMark(testPaper.getType(),testHans.getTopic61One(),"th61"));
+                if (testPaper.getType()==1) {
+
+                    testPaper.setTh41mark(setMark(testPaper.getType(), testHans.getTopic41One(), "th41"));
+                    testPaper.setTh42mark(setMark(testPaper.getType(), testHans.getTopic42One(), "th42"));
+                    testPaper.setTh43mark(setMark(testPaper.getType(), testHans.getTopic43One(), "th43"));
+                    testPaper.setTh44mark(setMark(testPaper.getType(), testHans.getTopic44One(), "th44"));
+                    testPaper.setTh45mark(setMark(testPaper.getType(), testHans.getTopic45One(), "th45"));
+                    testPaper.setTh46mark(setMark(testPaper.getType(), testHans.getTopic46One(), "th46"));
+                    testPaper.setTh47mark(setMark(testPaper.getType(), testHans.getTopic47One(), "th47"));
+                    testPaper.setTh48mark(setMark(testPaper.getType(), testHans.getTopic48One(), "th48"));
+                    testPaper.setTh49mark(setMark(testPaper.getType(), testHans.getTopic49One(), "th49"));
+                    testPaper.setTh50mark(setMark(testPaper.getType(), testHans.getTopic50One(), "th50"));
+                    testPaper.setTh51mark(setMark(testPaper.getType(), testHans.getTopic51One(), "th51"));
+                    testPaper.setTh52mark(setMark(testPaper.getType(), testHans.getTopic52One(), "th52"));
+                    testPaper.setTh53mark(setMark(testPaper.getType(), testHans.getTopic53One(), "th53"));
+                    testPaper.setTh54mark(setMark(testPaper.getType(), testHans.getTopic54One(), "th54"));
+                    testPaper.setTh55mark(setMark(testPaper.getType(), testHans.getTopic55One(), "th55"));
+                    testPaper.setTh56mark(setMark(testPaper.getType(), testHans.getTopic56One(), "th56"));
+                    testPaper.setTh57mark(setMark(testPaper.getType(), testHans.getTopic57One(), "th57"));
+                    testPaper.setTh58mark(setMark(testPaper.getType(), testHans.getTopic58One(), "th58"));
+                    testPaper.setTh59mark(setMark(testPaper.getType(), testHans.getTopic59One(), "th59"));
+                    testPaper.setTh60mark(setMark(testPaper.getType(), testHans.getTopic60One(), "th60"));
+                    testPaper.setTh61mark(setMark(testPaper.getType(), testHans.getTopic61One(), "th61"));
+                }
                 if(testPaper.getType()==3){
                     if (testPaper.getTopic10Three() != null && !testPaper.getTopic10Three().isEmpty()) {
                         if(testPaper.getTopic10Three().contains("1处")){
@@ -164,7 +168,7 @@ public class ExcelSorceUtils {
                     testPaper.setTh38sorce(setSorce("th38",testPaper.getTopic38Three(),""));
                     testPaper.setTh39sorce(setSorce("th39",testPaper.getTopic39Three(),""));
                     testPaper.setTh40sorce(setSorce("th40",testPaper.getTopic40Three(),""));
-                    testPaper.setTh48sorce(setSorce("th48",testPaper.getTopic48Three(),""));
+
                 }
 
 
@@ -209,29 +213,35 @@ public class ExcelSorceUtils {
                 testPaper.setTopic38Two(testPaper.getTopic38Two()+testPaper.getTopic38Six());
                 testPaper.setTopic39Two(testPaper.getTopic39Two()+testPaper.getTopic39Six());
                 testPaper.setTopic40Two(testPaper.getTopic40Two()+testPaper.getTopic40Six());
-                testPaper.setTopic41Two(testHans.getTopic41Two()+testHans.getTopic41Six());
-                testPaper.setTopic42Two(testHans.getTopic42Two()+testHans.getTopic42Six());
-                testPaper.setTopic43Two(testHans.getTopic43Two()+testHans.getTopic43Six());
-                testPaper.setTopic44Two(testHans.getTopic44Two()+testHans.getTopic44Six());
-                testPaper.setTopic45Two(testHans.getTopic45Two()+testHans.getTopic45Six());
-                testPaper.setTopic46Two(testHans.getTopic46Two()+testHans.getTopic46Six());
-                testPaper.setTopic47Two(testHans.getTopic47Two()+testHans.getTopic47Six());
-                testPaper.setTopic48Two(testHans.getTopic48Two()+testHans.getTopic48Six());
-                testPaper.setTopic49Two(testHans.getTopic49Two()+testHans.getTopic49Six());
-                testPaper.setTopic50Two(testHans.getTopic50Two()+testHans.getTopic50Six());
-                testPaper.setTopic51Two(testHans.getTopic51Two()+testHans.getTopic51Six());
-                testPaper.setTopic52Two(testHans.getTopic52Two()+testHans.getTopic52Six());
-                testPaper.setTopic53Two(testHans.getTopic53Two()+testHans.getTopic53Six());
-                testPaper.setTopic54Two(testHans.getTopic54Two()+testHans.getTopic54Six());
-                testPaper.setTopic55Two(testHans.getTopic55Two()+testHans.getTopic55Six());
-                testPaper.setTopic56Two(testHans.getTopic56Two()+testHans.getTopic56Six());
-                testPaper.setTopic57Two(testHans.getTopic57Two()+testHans.getTopic57Six());
-                testPaper.setTopic58Two(testHans.getTopic58Two()+testHans.getTopic58Six());
-                testPaper.setTopic59Two(testHans.getTopic59Two()+testHans.getTopic59Six());
-                testPaper.setTopic60Two(testHans.getTopic60Two()+testHans.getTopic60Six());
-                testPaper.setTopic61Two(testHans.getTopic61Two()+testHans.getTopic61Six());
-                testPaper.setTopic62Two(testHans.getTopic62Two()+testHans.getTopic62Six());
-                testPaper.setTopic63Two(testHans.getTopic63Two()+testHans.getTopic63Six());
+                if (testPaper.getType()==1){
+                    testPaper.setTopic41Two(testHans.getTopic41Two()+testHans.getTopic41Six());
+                    testPaper.setTopic42Two(testHans.getTopic42Two()+testHans.getTopic42Six());
+                    testPaper.setTopic43Two(testHans.getTopic43Two()+testHans.getTopic43Six());
+                    testPaper.setTopic44Two(testHans.getTopic44Two()+testHans.getTopic44Six());
+                    testPaper.setTopic45Two(testHans.getTopic45Two()+testHans.getTopic45Six());
+                    testPaper.setTopic46Two(testHans.getTopic46Two()+testHans.getTopic46Six());
+                    testPaper.setTopic47Two(testHans.getTopic47Two()+testHans.getTopic47Six());
+                    testPaper.setTopic48Two(testHans.getTopic48Two()+testHans.getTopic48Six());
+                    testPaper.setTopic49Two(testHans.getTopic49Two()+testHans.getTopic49Six());
+                    testPaper.setTopic50Two(testHans.getTopic50Two()+testHans.getTopic50Six());
+                    testPaper.setTopic51Two(testHans.getTopic51Two()+testHans.getTopic51Six());
+                    testPaper.setTopic52Two(testHans.getTopic52Two()+testHans.getTopic52Six());
+                    testPaper.setTopic53Two(testHans.getTopic53Two()+testHans.getTopic53Six());
+                    testPaper.setTopic54Two(testHans.getTopic54Two()+testHans.getTopic54Six());
+                    testPaper.setTopic55Two(testHans.getTopic55Two()+testHans.getTopic55Six());
+                    testPaper.setTopic56Two(testHans.getTopic56Two()+testHans.getTopic56Six());
+                    testPaper.setTopic57Two(testHans.getTopic57Two()+testHans.getTopic57Six());
+                    testPaper.setTopic58Two(testHans.getTopic58Two()+testHans.getTopic58Six());
+                    testPaper.setTopic59Two(testHans.getTopic59Two()+testHans.getTopic59Six());
+                    testPaper.setTopic60Two(testHans.getTopic60Two()+testHans.getTopic60Six());
+                    testPaper.setTopic61Two(testHans.getTopic61Two()+testHans.getTopic61Six());
+                    testPaper.setTopic62Two(testHans.getTopic62Two()+testHans.getTopic62Six());
+                    testPaper.setTopic63Two(testHans.getTopic63Two()+testHans.getTopic63Six());
+
+                    testPaper.setTh48sorce(setSorce("th48",testPaper.getTopic48Three(),""));
+                }
+
+
                 paperList.add(testPaper);
             }
         }
@@ -243,18 +253,21 @@ public class ExcelSorceUtils {
 
     public static String setMark(Integer type,String disable,String quest){
         String number="0";
-        if (disable.contains("不符合")){
-            return  number;
-        }else{
-            if (type==1){
-                number= String.valueOf(EnumerationMap.getFraction(quest));
-            }else if (type==2){
-                number= String.valueOf(SourceMap.getFraction(quest));
-            }else if(type==3){
-                number=String.valueOf(EnumerationMap.getSift(quest));
-            }
+        if (null!=disable){
+            if (disable.contains("不符合")){
+                return  number;
+            }else{
+                if (type==1){
+                    number= String.valueOf(EnumerationMap.getFraction(quest));
+                }else if (type==2){
+                    number= String.valueOf(SourceMap.getFraction(quest));
+                }else if(type==3){
+                    number=String.valueOf(EnumerationMap.getSift(quest));
+                }
 
+            }
         }
+
         return number;
     }
 
