@@ -94,9 +94,9 @@
                   </div>
               </div>
               <div class="layui-inline">
-                  <label class="layui-form-label">点检日期</label>
+                  <label class="layui-form-label">小票显示时间</label>
                   <div class="layui-input-inline">
-                      <input type="text" name="spotdate" id="spotdate" placeholder="yyyy-MM-dd HH:mm:ss" autocomplete="off" class="layui-input" />
+                      <input type="text" name="spotdate" id="spotdate" placeholder="小票显示时间" autocomplete="off" class="layui-input" />
                   </div>
               </div>
               <div class="layui-inline">
@@ -116,20 +116,6 @@
                   </div>
               </div>
               <div class="layui-inline">
-                  <label class="layui-form-label">天气</label>
-                  <div class="layui-input-inline">
-                      <input type="text" name="weather"  autocomplete="off" class="layui-input" />
-                  </div>
-              </div>
-              <div class="layui-inline">
-                  <label class="layui-form-label">是否地铁店</label>
-                  <div class="layui-input-inline">
-                      <input type="text" name="metro" lay-verify="required|phone" autocomplete="off" class="layui-input" />
-                  </div>
-              </div>
-          </div>
-          <div class="layui-form-item">
-              <div class="layui-inline">
                   <label class="layui-form-label">支付方式</label>
                   <div class="layui-input-inline">
                       <input type="text" name="payment"   autocomplete="off" class="layui-input" />
@@ -141,6 +127,21 @@
                       <input type="text" name="personname" lay-verify="email" autocomplete="off" class="layui-input" />
                   </div>
               </div>
+           <!--   <div class="layui-inline">
+                  <label class="layui-form-label">天气</label>
+                  <div class="layui-input-inline">
+                      <input type="text" name="weather"  autocomplete="off" class="layui-input" />
+                  </div>
+              </div>
+              <div class="layui-inline">
+                  <label class="layui-form-label">是否地铁店</label>
+                  <div class="layui-input-inline">
+                      <input type="text" name="metro" lay-verify="required|phone" autocomplete="off" class="layui-input" />
+                  </div>
+              </div>-->
+          </div>
+          <div class="layui-form-item">
+
 
               <div class="layui-inline">
                   <label class="layui-form-label">视频链接</label>
@@ -148,8 +149,6 @@
                       <input type="text" name="vedio" lay-verify="required|phone" autocomplete="off" class="layui-input" />
                   </div>
               </div>
-          </div>
-          <div class="layui-form-item">
               <div class="layui-inline">
                   <label class="layui-form-label" style="width: 65px">视频链接提取码</label>
                   <div class="layui-input-inline">
@@ -157,17 +156,21 @@
                   </div>
               </div>
               <div class="layui-inline">
+                  <label class="layui-form-label" style="height:50px;">收银员截图</label>
+                  <div class="layui-input-inline">
+                      <input type="text" name="cashiername" placeholder="收银员截图" autocomplete="off" class="layui-input" />
+                  </div>
+              </div>
+
+          </div>
+          <div class="layui-form-item">
+
+           <!--   <div class="layui-inline">
                   <label class="layui-form-label" style="height:50px;">视频时长</label>
                   <div class="layui-input-inline">
                       <input type="text" name="duration" lay-verify="email" autocomplete="off" class="layui-input" />
                   </div>
-              </div>
-              <div class="layui-inline">
-                  <label class="layui-form-label" style="height:50px;">收银员姓名(如无法看清楚姓名描述体貌特征)</label>
-                  <div class="layui-input-inline">
-                      <input type="text" name="cashiername" placeholder="收银员姓名(如无法看清楚姓名描述体貌特征)" autocomplete="off" class="layui-input" />
-                  </div>
-              </div>
+              </div>-->
 
           </div>
 
@@ -176,8 +179,8 @@
 
           <div class="text-left">
             <div align="left">
-              <label style="width: 100px;">1-1 （门店外三米内干净，无纸屑、烟头、摇摇车及其他非门店经营物品，屋檐下无蜘蛛网）是否符合要求？(单选）--店外区域</label><br/>
-                <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+              <label style="width: 100px;">1-1 是否符合要求？(单选）--店外区域</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607">（门店外三米内干净，无纸屑、烟头、摇摇车及其他非门店经营物品，屋檐下无蜘蛛网）</label><br/>
               <div >
                 <label style="width: 100px;">1、完全符合</label> <input type="radio" name="topic1One" value="1、完全符合" onclick="oneDiv(1)" checked="checked"/><br/>
                 <label style="width: 100px;">2、不符合要求</label> <input type="radio" name="topic1One" value="2、不符合要求"  onclick="oneDiv(2)" />
@@ -199,8 +202,8 @@
                     <td >3、门店外三米内不干净，有摇摇车</td>
                     <td width="80px;"><input type="checkbox" name="topic1Two" value="3、门店外三米内不干净，有摇摇车"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
-                  <tr>
-                    <td >4、灯管有损坏4、门店外三米内不干净，有其他非门店经营物品</td>
+                 <tr>
+                    <td >4、门店外三米内不干净，有其他非门店经营物品</td>
                     <td width="80px;"><input type="checkbox" name="topic1Two"  value="4、门店外三米内不干净，有其他非门店经营物品" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
@@ -208,7 +211,7 @@
                     <td width="80px;"><input type="checkbox" name="topic1Two"  value="5、屋檐下有蜘蛛网"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
-                    <td >6、其他请注明</td>
+                    <td >其他请注明</td>
                     <td width="80px;"><input type="text" name="topic1Six" class="layui-input"/></td>
                   </tr>
 
@@ -236,8 +239,8 @@
               </div>
 
             <div   align="left">
-              <label style="width: 100px;">2-1 （店外招牌干净整洁、有无破损；招牌灯正常开启/关闭）是否符合要求？(单选）----店外区域</label><br/>
-                <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+              <label style="width: 100px;">2-1 是否符合要求？(单选）----店外区域</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607">（店外招牌干净整洁、有无破损；招牌灯正常开启/关闭）</label><br/>
               <div >
                 <label style="width: 100px;">1、完全符合   </label> <input type="radio" name="topic2One" value="1、完全符合" onclick="twoDiv(1)" checked="checked"/><br/>
                 <label style="width: 100px;">2、不符合要求</label> <input type="radio" name="topic2One" value="2、不符合要求" onclick="twoDiv(2)" />
@@ -296,8 +299,8 @@
               </div>
 
             <div   align="left">
-              <label style="width: 100px;">3-1 （店门玻璃、橱窗玻璃干净明亮、清洁无污渍）是否符合要求？(单选）--店外区域</label><br/>
-                <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+              <label style="width: 100px;">3-1是否符合要求？(单选）--店外区域</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607"> （店门玻璃、橱窗玻璃干净明亮、清洁无污渍）</label><br/>
               <div >
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic3One" value="1、完全符合"  onclick="threeDiv(1)" checked="checked" /><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic3One" value="2、不符合要求"   onclick="threeDiv(2)"/>
@@ -356,8 +359,8 @@
 
             <div   align="left">
 
-              <label style="width: 100px;">4-1 （促销活动/新商品玻璃橱窗海报无过期内容【注：有透明屏的门店需要确认屏幕是否开启】；“你身边的超级生活管家”服务型海报张贴在醒目位置，所有海报整齐张贴在玻璃橱窗腰线以下；）是否符合要求？(单选）--店外区域</label><br/>
-                <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+              <label style="width: 100px;">4-1 是否符合要求？(单选）--店外区域</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607">（促销活动/新商品玻璃橱窗海报无过期内容【注：有透明屏的门店需要确认屏幕是否开启】；“你身边的超级生活管家”服务型海报张贴在醒目位置，所有海报整齐张贴在玻璃橱窗腰线以下）</label><br/>
               <div >
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic4One"  value="1、完全符合" checked="checked" onclick="fourDiv(1)"/><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic4One" value="2、不符合要求" onclick="fourDiv(2)" />
@@ -414,8 +417,8 @@
               </div>
 
             <div   align="left">
-              <label style="width: 100px;">5-1 (进店时，门铃、音乐正常播放，并且音量适中)是否符合要求？(单选）--卖场周边区域</label><br/>
-                <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+              <label style="width: 100px;">5-1 是否符合要求？(单选）--卖场周边区域</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607">(进店时，门铃、音乐正常播放，并且音量适中)</label><br/>
               <div >
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic5One"  value="1、完全符合" onclick="fiveDiv(1)" checked="checked"/><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic5One" value="2、不符合要求"  onclick="fiveDiv(2)"/>
@@ -471,8 +474,8 @@
               </div>
             <div   align="left">
 
-              <label style="width: 100px;">6-1 （店内灯光全部正常开启，营造出购物环境）是否符合要求？(单选）--卖场周边区域</label><br/>
-                <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+              <label style="width: 100px;">6-1 是否符合要求？(单选）--卖场周边区域</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607">（店内灯光全部正常开启，营造出购物环境）</label><br/>
               <div >
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic6One"  value="1、完全符合"  onclick="sixDiv(1)" checked="checked"/><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic6One" value="2、不符合要求"  onclick="sixDiv(2)" />
@@ -536,8 +539,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
             <div   align="left">
-              <label style="width: 100px;">7-1 （空调开启温度：气温高于30℃时可开启冷气，冷气温度26℃；气温低于10℃时可开暖气，最高温度不得超过18℃；其他情况不允许开启；以体感舒适度为准）是否符合要求？(单选）--卖场周边区域</label><br/>
-                <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+              <label style="width: 100px;">7-1 是否符合要求？(单选）--卖场周边区域</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607">（空调开启温度：气温高于30℃时可开启冷气，冷气温度26℃；气温低于10℃时可开暖气，最高温度不得超过18℃；其他情况不允许开启；以体感舒适度为准）</label><br/>
               <div >
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic7One" value="1、完全符合"  checked="checked" onclick="sevenDiv(1)" /><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic7One" value="2、不符合要求" onclick="sevenDiv(2)" />
@@ -598,8 +601,8 @@
               </div>
 
             <div   align="left">
-              <label style="width: 100px;">8-1 （购物篮放置门内进门口处，清洁无污渍、油渍，且数量不低于5个）是否符合要求？(单选）--卖场周边区域</label><br/>
-                <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+              <label style="width: 100px;">8-1 是否符合要求？(单选）--卖场周边区域</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607">（购物篮放置门内进门口处，清洁无污渍、油渍，且数量不低于5个）</label><br/>
               <div >
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic8One" value="1、完全符合"  checked="checked" onclick="eightDiv(1)" /><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic8One" value="2、不符合要求"  onclick="eightDiv(2)" />
@@ -655,8 +658,8 @@
 
             <div   align="left">
               <div >
-                <label style="width: 100px;">9-1（休闲区桌面干净整洁，桌椅摆放整齐）是否符合要求？(单选）[神客请注意；顾客正在占用位置不考核，其它位置考核]--卖场周边区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                <label style="width: 100px;">9-1是否符合要求？(单选）[神客请注意；顾客正在占用位置不考核，其它位置考核]--卖场周边区域</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（休闲区桌面干净整洁，桌椅摆放整齐）</label><br/>
                 <div >
                   <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic9One" value="1、完全符合" onclick="nineDiv(1)" checked="checked" /><br/>
                   <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic9One" value="2、不符合要求" onclick="nineDiv(2)" />
@@ -705,8 +708,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
             <div   align="left">
-              <label style="width: 100px;">10-1 （店内垃圾桶：店内垃圾桶表面干净无污渍，无垃圾袋外露，桶内垃圾无溢出）是否符合要求？(单选）--卖场周边区域</label><br/>
-                <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+              <label style="width: 100px;">10-1 是否符合要求？(单选）--卖场周边区域</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607">（店内垃圾桶：店内垃圾桶表面干净无污渍，无垃圾袋外露，桶内垃圾无溢出）</label><br/>
               <div >
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic10One" value="1、完全符合" checked="checked" onclick="tenDiv(1)"/><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic10One" value="2、不符合要求" onclick="tenDiv(2)" />
@@ -757,8 +760,8 @@
               </div>
 
             <div   align="left">
-              <label style="width: 100px;">11-1（店内天花板无蜘蛛网，地面干净整洁【下雨天不考评地板污渍】；地面湿滑，门店有将 “小心地滑” 指示牌立出）是否符合要求？(单选）--卖场周边区域</label><br/>
-                <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+              <label style="width: 100px;">11-1是否符合要求？(单选）--卖场周边区域</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607">（店内天花板无蜘蛛网，地面干净整洁【下雨天不考评地板污渍】；地面湿滑，门店有将 “小心地滑” 指示牌立出）</label><br/>
               <div >
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic11One" value="1、完全符合" checked="checked" onclick="elevenDiv(1)" /><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic11One" value="2、不符合要求"  onclick="elevenDiv(2)" />
@@ -813,8 +816,8 @@
               </div>
 
             <div   align="left">
-              <label style="width: 100px;">12-1（消防设备（灭火器、消防栓）前方1米内无遮挡；在指定使用期限内；指针在绿色区域，消防通道畅通）是否符合要求？(单选）--卖场周边区域</label><br/>
-                <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+              <label style="width: 100px;">12-1是否符合要求？(单选）--卖场周边区域</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607">（消防设备（灭火器、消防栓）前方1米内无遮挡；在指定使用期限内；指针在绿色区域，消防通道畅通）</label><br/>
               <div >
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic12One" value="1、完全符合" checked="checked" onclick="twelveDiv(1)" /><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic12One" value="2、不符合要求"  onclick="twelveDiv(2)" />
@@ -868,8 +871,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
             <div   align="left">
-              <label style="width: 100px;">13-1 （应急指示灯：安全指示灯正常工作；应急照明灯无损坏；疏散地贴无破损)是否符合要求？(单选）--卖场周边区域</label><br/>
-                <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+              <label style="width: 100px;">13-1 是否符合要求？(单选）--卖场周边区域</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607">（应急指示灯：安全指示灯正常工作；应急照明灯无损坏；疏散地贴无破损)</label><br/>
               <div >
                 <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic13One" value="1、完全符合" onclick="thirteenDiv(1)" checked="checked" /><br/>
                 <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic13One" value="2、不符合要求"  onclick="thirteenDiv(2)" />
@@ -924,8 +927,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">14-1 （苏宁帮客：1、屏显（滚动播放）、广播必须有；2、侧挡板、台卡、三折页、单页、海报，（有一处有即可）；3、有苏宁邮局的门店必须要有帮客的宣传内容，如：台卡，展架）是否符合要求？--卖场周边区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">14-1是否符合要求？--卖场周边区域</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"> （苏宁帮客：1、屏显（滚动播放）、广播必须有；2、侧挡板、台卡、三折页、单页、海报，（有一处有即可）；3、有苏宁邮局的门店必须要有帮客的宣传内容，如：台卡，展架）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic14One" value="1、完全符合" onclick="th14Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic14One" value="2、不符合要求"  onclick="th14Div(2)" />
@@ -981,8 +984,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">15-1 （苏宁邮局：1、邮局内不得摆放小店货物（货物，纸箱，杂物等）；2、邮局是否有“苏宁邮局”四个字背景墙）是否符合要求？--卖场周边区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">15-1 是否符合要求？--卖场周边区域</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（苏宁邮局：1、邮局内不得摆放小店货物（货物，纸箱，杂物等）；2、邮局是否有“苏宁邮局”四个字背景墙）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic15One" value="1、完全符合" onclick="th15Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic15One" value="2、不符合要求"  onclick="th15Div(2)" />
@@ -1030,8 +1033,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">16-1 （顾客进店时，店员员工对所有进店顾客喊“欢迎光临苏宁小店”）是否符合要求？(单选）--柜台服务</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">16-1 是否符合要求？(单选）--柜台服务</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（顾客进店时，店员员工对所有进店顾客喊“欢迎光临苏宁小店”）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic16One" value="1、完全符合" onclick="th16Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic16One" value="2、不符合要求"  onclick="th16Div(2)" />
@@ -1110,9 +1113,9 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">17-1 顾客购物时（当该顾客选择商品时，推荐顾客办理超级会员）是否符合要求？--柜台服务
+                  <label style="width: 100px;">17-1 顾客购物时是否符合要求？--柜台服务
                       [话术：这款商品是会员价商品，现在办理苏宁小店超级会员，可以省×块钱。苏宁小店超级会员，每月只需9.9元可立享会员专享价，还有劲爆商品供您挑选。]</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（当该顾客选择商品时，推荐顾客办理超级会员）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic17One" value="1、完全符合" onclick="th17Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic17One" value="2、不符合要求"  onclick="th17Div(2)" />
@@ -1163,12 +1166,12 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">18-1 顾客付款时（当顾客付款时，能说“您好，会员有积分有优惠，请您出示会员码”）是否符合要求？--柜台服务
+                  <label style="width: 100px;">18-1 顾客付款时是否符合要求？--柜台服务
                       [情况一：没有会员码的时候推荐“顾客下载APP”，下载完APP后再扫顾客APP上的会员码。
                       话术：“那可以帮您下载，现新用户还可以领取15元优惠券（含线上28-10元优惠券，线下15-5优惠券），即领即用。
                       情况二：如果顾客不愿意出示会员码或下载APP，是否让顾客报手机号。
                       话术：那您报一下手机号，我们可以帮您积分。]</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（当顾客付款时，能说“您好，会员有积分有优惠，请您出示会员码”）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic18One" value="1、完全符合" onclick="th18Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic18One" value="2、不符合要求"  onclick="th18Div(2)" />
@@ -1218,9 +1221,9 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">19-1 顾客支付时（顾客支付时，店员是否有说“您好，总计消费XX钱”，在顾客购2件及以上商品提醒【您是否需要购物袋】，若顾客购买的商品中有会员价商品，是否推荐办理超级会员）是否符合要求？--柜台服务
+                  <label style="width: 100px;">19-1 顾客支付时是否符合要求？--柜台服务
                       [话术：“您购买的商品中有会员价商品，您可以9.9元办理一个月会员，立享会员价”]</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（顾客支付时，店员是否有说“您好，总计消费XX钱”，在顾客购2件及以上商品提醒【您是否需要购物袋】，若顾客购买的商品中有会员价商品，是否推荐办理超级会员）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic19One" value="1、完全符合" onclick="th19Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic19One" value="2、不符合要求"  onclick="th19Div(2)" />
@@ -1271,9 +1274,9 @@
                   </div>
 
               <div   align="left">
-                  <label style="width: 100px;">20-1 顾客选择支付时（顾客支付选择时：店员是否有说“请问您是使用苏宁支付吗”？，如果顾客用苏宁支付，是否推荐开通免密支付）是否符合要求？--柜台服务
+                  <label style="width: 100px;">20-1 顾客选择支付时是否符合要求？--柜台服务
                       [话术：“请您出示付款码，您也可以开通免密支付，下次支付更便捷。（如已开通不需要推荐）]</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（顾客支付选择时：店员是否有说“请问您是使用苏宁支付吗”？，如果顾客用苏宁支付，是否推荐开通免密支付）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic20One" value="1、完全符合" onclick="th20Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic20One" value="2、不符合要求"  onclick="th20Div(2)" />
@@ -1321,8 +1324,8 @@
               </div>
 
               <div   align="left">
-                  <label style="width: 100px;">21-1 顾客付款后（付款后，店员是否有说“您的小票请收好！”，同时向顾客双手呈递购物小票及找零【含刷卡】）是否符合要求？--柜台服务</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">21-1 顾客付款后是否符合要求？--柜台服务</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（付款后，店员是否有说“您的小票请收好！”，同时向顾客双手呈递购物小票及找零【含刷卡】）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic21One" value="1、完全符合" onclick="th21Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic21One" value="2、不符合要求"  onclick="th21Div(2)" />
@@ -1369,8 +1372,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">22-1 （顾客离开门店时，员工有向顾客表示谢意：“欢迎下次光临，请慢走！”等告别用语）是否符合要求？(单选）--柜台服务</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">22-1 是否符合要求？(单选）--柜台服务</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（顾客离开门店时，员工有向顾客表示谢意：“欢迎下次光临，请慢走！”等告别用语）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic22One" value="1、完全符合" onclick="th22Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic22One" value="2、不符合要求"  onclick="th22Div(2)" />
@@ -1427,8 +1430,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">24-1 （工装平整、干净，无油渍，无脏黑；上衣放在裤子外面；按标准佩戴工牌；按季节穿不同工装；内衬衣服不外漏；操作熟食必须佩带手套和口罩；）是否符合要求？--柜台服务</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">24-1 是否符合要求？--柜台服务</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（工装平整、干净，无油渍，无脏黑；上衣放在裤子外面；按标准佩戴工牌；按季节穿不同工装；内衬衣服不外漏；操作熟食必须佩带手套和口罩）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic24One" value="1、完全符合" onclick="th24Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic24One" value="2、不符合要求"  onclick="th24Div(2)" />
@@ -1495,8 +1498,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">25-1 （穿蓝色、深色牛仔长裤或蓝色、深色无其他装饰休闲裤；不得穿乞丐裤、哈韩裤或其他夸张裤；裤子长度以遮住脚踝为准；不得穿拖鞋式雨鞋、凉鞋、拖鞋、高跟鞋、靴子；必须穿袜子）是否符合要求？--柜台服务</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">25-1 是否符合要求？--柜台服务</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（穿蓝色、深色牛仔长裤或蓝色、深色无其他装饰休闲裤；不得穿乞丐裤、哈韩裤或其他夸张裤；裤子长度以遮住脚踝为准；不得穿拖鞋式雨鞋、凉鞋、拖鞋、高跟鞋、靴子；必须穿袜子）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic25One" value="1、完全符合" onclick="th25Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic25One" value="2、不符合要求"  onclick="th25Div(2)" />
@@ -1551,8 +1554,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">26-1 （不允许挑染或全染夸张颜色；头发干净，看不到头屑；男生不留鬓角；男生前面头发不得超过眉毛；男生两侧头发必须露出整个耳朵；女生刘海不得遮住眼睛；女生长发（过肩即为长发）要扎起，不得披发；不戴耳环、耳钉）是否符合要求？--柜台服务</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">26-1 是否符合要求？--柜台服务</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（不允许挑染或全染夸张颜色；头发干净，看不到头屑；男生不留鬓角；男生前面头发不得超过眉毛；男生两侧头发必须露出整个耳朵；女生刘海不得遮住眼睛；女生长发（过肩即为长发）要扎起，不得披发；不戴耳环、耳钉）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic26One" value="1、完全符合" onclick="th26Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic26One" value="2、不符合要求"  onclick="th26Div(2)" />
@@ -1611,8 +1614,8 @@
               </div>
               <div   align="left">
 
-                  <label style="width: 100px;">27-1 （男生：不留胡须；不戴金属项链；不得化妆；上班前不吃葱、蒜等有异味食物；不喝酒及含酒精的饮料。女生：上班可淡妆，不得浓妆艳抹；不得戴假睫毛；不得戴鼻环、唇环；上班前不吃葱、蒜等有异味食物；不喝酒及含酒精的饮料）是否符合要求？--柜台服务</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label>
+                  <label style="width: 100px;">27-1 是否符合要求？--柜台服务</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（男生：不留胡须；不戴金属项链；不得化妆；上班前不吃葱、蒜等有异味食物；不喝酒及含酒精的饮料。女生：上班可淡妆，不得浓妆艳抹；不得戴假睫毛；不得戴鼻环、唇环；上班前不吃葱、蒜等有异味食物；不喝酒及含酒精的饮料）</label>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic27One" value="1、完全符合" onclick="th27Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic27One" value="2、不符合要求"  onclick="th27Div(2)" />
@@ -1670,8 +1673,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">28-1 （手部保持清洁，指甲无污垢；指甲修剪整齐，长度为从掌心方向看不到指甲露出指尖为适合；当班期间不能涂指甲油；不带假指甲；不得有纹身、刺青（包括手臂、手肘处）；上班时不允许佩戴任何饰物（戒指、手表等））是否符合要求？--柜台服务</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">28-1 是否符合要求？--柜台服务</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（手部保持清洁，指甲无污垢；指甲修剪整齐，长度为从掌心方向看不到指甲露出指尖为适合；当班期间不能涂指甲油；不带假指甲；不得有纹身、刺青（包括手臂、手肘处）；上班时不允许佩戴任何饰物（戒指、手表等））</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic28One" value="1、完全符合" onclick="th28Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic28One" value="2、不符合要求"  onclick="th28Div(2)" />
@@ -1720,8 +1723,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">29-1 （员工在店内的行为违反店面运营管理规范即扣分；例如：着工装抽烟、在店内玩手机、聚众聊天、双手环抱、倚靠货架等；）是否符合要求？--柜台服务</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">29-1 是否符合要求？--柜台服务</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（员工在店内的行为违反店面运营管理规范即扣分；例如：着工装抽烟、在店内玩手机、聚众聊天、双手环抱、倚靠货架等）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic29One" value="1、完全符合" onclick="th29Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic29One" value="2、不符合要求"  onclick="th29Div(2)" />
@@ -1782,8 +1785,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">30-1 （收银前后柜台表面干净整洁，无文件台账及私人物品【手机、护手霜、水杯等】存放）是否符合要求？(单选）--收银柜台区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">30-1 是否符合要求？(单选）--收银柜台区域</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（收银前后柜台表面干净整洁，无文件台账及私人物品【手机、护手霜、水杯等】存放）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic30One" value="1、完全符合" onclick="th30Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic30One" value="2、不符合要求"  onclick="th30Div(2)" />
@@ -1820,8 +1823,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">31-1（档期活动布展物料：屏显、客显正常播放，A4台卡放置在收银台，且无过期内容）是否符合要求？(单选）--收银柜台区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">31-1是否符合要求？(单选）--收银柜台区域</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（档期活动布展物料：屏显、客显正常播放，A4台卡放置在收银台，且无过期内容）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic31One" value="1、完全符合" onclick="th31Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic31One" value="2、不符合要求"  onclick="th31Div(2)" />
@@ -1870,8 +1873,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">32-1 关东煮：收银台有关东煮设备，关东煮无发黑品项，品项数不低于5个）是否符合要求？(单选）--收银柜台区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">32-1 是否符合要求？(单选）--收银柜台区域</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">(关东煮：收银台有关东煮设备，关东煮无发黑品项，品项数不低于5个）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic32One" value="1、完全符合" onclick="th32Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic32One" value="2、不符合要求"  onclick="th32Div(2)" />
@@ -1907,8 +1910,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">33-1（烤肠机：收银台有烤肠机设备，烤肠机陈列量不低于5根，无发黑品质、无表皮爆裂品项）是否符合要求？(单选）--收银柜台区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">33-1是否符合要求？(单选）--收银柜台区域</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（烤肠机：收银台有烤肠机设备，烤肠机陈列量不低于5根，无发黑品质、无表皮爆裂品项）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic33One" value="1、完全符合" onclick="th33Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic33One" value="2、不符合要求"  onclick="th33Div(2)" />
@@ -1963,8 +1966,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">34-1 （蒸包机：收银台有蒸包机设备，蒸包机陈列品项数不低于4个）是否符合要求？(单选）--收银柜台区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">34-1 是否符合要求？(单选）--收银柜台区域</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（蒸包机：收银台有蒸包机设备，蒸包机陈列品项数不低于4个）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic34One" value="1、完全符合" onclick="th34Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic34One" value="2、不符合要求"  onclick="th34Div(2)" />
@@ -2010,8 +2013,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">35-1 （茶叶蛋锅：收银台有茶叶蛋锅设备，茶叶蛋陈列数量不低于10个）是否符合要求？(单选）--收银柜台区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">35-1 是否符合要求？(单选）--收银柜台区域</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（茶叶蛋锅：收银台有茶叶蛋锅设备，茶叶蛋陈列数量不低于10个）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic35One" value="1、完全符合" onclick="th35Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic35One" value="2、不符合要求"  onclick="th35Div(2)" />
@@ -2058,8 +2061,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">36-1（门店有香烟经营，并且陈列整齐，货量充足[地铁店和学校店不考核]）是否符合要求？(单选）--收银柜台区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">36-1是否符合要求？(单选）--收银柜台区域</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（门店有香烟经营，并且陈列整齐，货量充足[地铁店和学校店不考核]）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic36One" value="1、完全符合" onclick="th36Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic36One" value="2、不符合要求"  onclick="th36Div(2)" />
@@ -2113,8 +2116,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">37-1（打餐区是否干净整洁，无杂物堆积；关东煮锅、烤肠机、茶叶蛋锅、蒸包机周边、防尘罩上无汤渍、无污渍）是否符合要求？(单选）--收银柜台区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label>
+                  <label style="width: 100px;">37-1是否符合要求？(单选）--收银柜台区域</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（打餐区是否干净整洁，无杂物堆积；关东煮锅、烤肠机、茶叶蛋锅、蒸包机周边、防尘罩上无汤渍、无污渍）</label>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic37One" value="1、完全符合" onclick="th37Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic37One" value="2、不符合要求"  onclick="th37Div(2)" />
@@ -2180,8 +2183,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">38-1 （小店卡卡架是否按照要求陈列【摆放在收银台显眼位置】）是否符合要求？(单选）--收银柜台区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">38-1 是否符合要求？(单选）--收银柜台区域</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（小店卡卡架是否按照要求陈列【摆放在收银台显眼位置】）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic38One" value="1、完全符合" onclick="th38Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic38One" value="2、不符合要求"  onclick="th38Div(2)" />
@@ -2209,8 +2212,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">39-1 （门店营业许可证、食品经营许可证是否公示；员工健康证是否齐全，在有效期内，并在收银区公示）是否符合要求？--收银柜台区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">39-1是否符合要求？--收银柜台区域</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"> （门店营业许可证、食品经营许可证是否公示；员工健康证是否齐全，在有效期内，并在收银区公示）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic39One" value="1、完全符合" onclick="th39Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic39One" value="2、不符合要求"  onclick="th39Div(2)" />
@@ -2268,8 +2271,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">40-1 （生鲜商品陈列整齐，按分类、大小、色彩搭配陈列，颜色相近商品不要放在一起，如橙子与橘子[无水果蔬菜则直接得分]）是否符合要求？(单选）--生鲜区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">40-1 是否符合要求？(单选）--生鲜区域</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（生鲜商品陈列整齐，按分类、大小、色彩搭配陈列，颜色相近商品不要放在一起，如橙子与橘子[无水果蔬菜则直接得分]）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic40One" value="1、完全符合" onclick="th40Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic40One" value="2、不符合要求"  onclick="th40Div(2)" />
@@ -2319,8 +2322,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">41-1 （有水果蔬菜品项售卖的，14点前货架无缝陈列，不可以露台面）是否符合要求？(单选）--生鲜区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">41-1 是否符合要求？(单选）--生鲜区域</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（有水果蔬菜品项售卖的，14点前货架无缝陈列，不可以露台面）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic41One" value="1、完全符合" onclick="th41Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic41One" value="2、不符合要求"  onclick="th41Div(2)" />
@@ -2352,8 +2355,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">42-1（门店冷冻柜陈列要求：水产肉品陈列面不低于整个冰柜的1/2，低于1/2则此项扣分[无生鲜冷柜直接得分]）是否符合要求？(单选）--生鲜区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">42-1是否符合要求？(单选）--生鲜区域</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（门店冷冻柜陈列要求：水产肉品陈列面不低于整个冰柜的1/2，低于1/2则此项扣分[无生鲜冷柜直接得分]）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic42One" value="1、完全符合" onclick="th42Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic42One" value="2、不符合要求"  onclick="th42Div(2)" />
@@ -2385,8 +2388,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">43-1（生鲜品质检查；品质不佳【干瘪、发蔫、碰撞坏损】的单个商品应小于5个）是否符合要求？(单选）--生鲜区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">43-1是否符合要求？(单选）--生鲜区域</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（生鲜品质检查；品质不佳【干瘪、发蔫、碰撞坏损】的单个商品应小于5个）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic43One" value="1、完全符合" onclick="th43Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic43One" value="2、不符合要求"  onclick="th43Div(2)" />
@@ -2415,8 +2418,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">44-1（风幕柜及冷冻柜温度定时检查，并在温度登记表上做好记录、签字）是否符合要求？(单选）--冷藏设备区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">44-1是否符合要求？(单选）--冷藏设备区域</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（风幕柜及冷冻柜温度定时检查，并在温度登记表上做好记录、签字）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic44One" value="1、完全符合" onclick="th44Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic44One" value="2、不符合要求"  onclick="th44Div(2)" />
@@ -2462,8 +2465,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">45-1 （风幕柜货架牌面有货，但未向前陈列数应该小于3个；风幕柜饭团、三明治、便当总数量应大约9个）是否符合要求？(单选）--冷藏设备区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">45-1是否符合要求？(单选）--冷藏设备区域</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"> （风幕柜货架牌面有货，但未向前陈列数应该小于3个；风幕柜饭团、三明治、便当总数量应大约9个）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic45One" value="1、完全符合" onclick="th45Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic45One" value="2、不符合要求"  onclick="th45Div(2)" />
@@ -2510,8 +2513,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">46-1（冰淇淋柜内商品陈列不超过红色警戒线；柜壁冰霜厚度不超过1cm；柜门保持关闭；【只能存放雪糕、水饺、汤圆、面点，不得存放日配原材料及其他有气味冻制品】）是否符合要求？(单选）--冷藏设备区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">46-1是否符合要求？(单选）--冷藏设备区域</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（冰淇淋柜内商品陈列不超过红色警戒线；柜壁冰霜厚度不超过1cm；柜门保持关闭；【只能存放雪糕、水饺、汤圆、面点，不得存放日配原材料及其他有气味冻制品】）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic46One" value="1、完全符合" onclick="th46Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic46One" value="2、不符合要求"  onclick="th46Div(2)" />
@@ -2565,8 +2568,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">47-1（饮料冷藏柜货架牌面有货，未向前陈列数应小于3个；饮料冷藏柜货架牌面无货数应小于5个）是否符合要求？(单选）--冷藏设备区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label>
+                  <label style="width: 100px;">47-1是否符合要求？(单选）--冷藏设备区域</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（饮料冷藏柜货架牌面有货，未向前陈列数应小于3个；饮料冷藏柜货架牌面无货数应小于5个）</label>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic47One" value="1、完全符合" onclick="th47Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic47One" value="2、不符合要求"  onclick="th47Div(2)" />
@@ -2612,8 +2615,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">48-1 （1、所有货架的价签应及时更新；2、价签破损或缺失数总计应低于5个；3、价签商品左下角对齐，未对齐应低于5个；4、不得手写价签）是否符合要求？(单选）--货架区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">48-1 是否符合要求？(单选）--货架区域</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（1、所有货架的价签应及时更新；2、价签破损或缺失数总计应低于5个；3、价签商品左下角对齐，未对齐应低于5个；4、不得手写价签）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic48One" value="1、完全符合" onclick="th48Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic48One" value="2、不符合要求"  onclick="th48Div(2)" />
@@ -2681,8 +2684,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">49-1 （面包货架应陈列整齐丰满，面包品项数应高于6个，面包陈列总数量应高于12个）是否符合要求？(单选）--货架区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">49-1 是否符合要求？(单选）--货架区域</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（面包货架应陈列整齐丰满，面包品项数应高于6个，面包陈列总数量应高于12个）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic49One" value="1、完全符合" onclick="th49Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic49One" value="2、不符合要求"  onclick="th49Div(2)" />
@@ -2740,8 +2743,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">50-1 （常规商品陈列整齐（前后左右一条线），无破损、无挤压变形、无缺货（常温商品:单层货架上，牌面有货，但未向前陈列数应低于5个，全场货架欠品数应低于5个）是否符合要求？(单选）--货架区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">50-1 是否符合要求？(单选）--货架区域</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（常规商品陈列整齐（前后左右一条线），无破损、无挤压变形、无缺货（常温商品:单层货架上，牌面有货，但未向前陈列数应低于5个，全场货架欠品数应低于5个）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic50One" value="1、完全符合" onclick="th50Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic50One" value="2、不符合要求"  onclick="th50Div(2)" />
@@ -2795,9 +2798,12 @@
                        </div>
                    </div>-->
               </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
               <div   align="left">
-                  <label style="width: 100px;">51-1（门店内购物车和商品不得堵塞购物通道，商品存放不应直接落地）是否符合要求？(单选）--货架区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">51-1是否符合要求？(单选）--货架区域</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（门店内购物车和商品不得堵塞购物通道，商品存放不应直接落地）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic51One" value="1、完全符合" onclick="th51Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic51One" value="2、不符合要求"  onclick="th51Div(2)" />
@@ -2829,8 +2835,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">52-1（地堆陈列必须使用防潮栈板，重点检查两个必做品：伊利安慕希、蒙牛纯甄）是否符合要求？(单选）--货架区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">52-1是否符合要求？(单选）--货架区域</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（地堆陈列必须使用防潮栈板，重点检查两个必做品：伊利安慕希、蒙牛纯甄）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic52One" value="1、完全符合" onclick="th52Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic52One" value="2、不符合要求"  onclick="th52Div(2)" />
@@ -2866,8 +2872,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">53-1 （夏令商品陈列：防晒霜、花露水、驱蚊驱虫、丝袜、凉拖、小风扇）是否符合要求？(单选）--货架区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">53-1是否符合要求？(单选）--货架区域</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"> （夏令商品陈列：防晒霜、花露水、驱蚊驱虫、丝袜、凉拖、小风扇）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic53One" value="1、完全符合" onclick="th53Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic53One" value="2、不符合要求"  onclick="th53Div(2)" />
@@ -2930,8 +2936,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">54-1（非食产品陈列：口罩、红包、计生用品、毛巾、牙线、创可贴、玩具、面膜、雨伞）是否符合要求？(单选）--货架区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">54-1是否符合要求？(单选）--货架区域</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（非食产品陈列：口罩、红包、计生用品、毛巾、牙线、创可贴、玩具、面膜、雨伞）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic54One" value="1、完全符合" onclick="th54Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic54One" value="2、不符合要求"  onclick="th54Div(2)" />
@@ -3005,8 +3011,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">55-1 （重点品牌商品陈列：蓝月亮、云南白药、冈本、南孚、金霸王门店必须经营；有香烟经营的门店必须要有打火机销售）是否符合要求？(单选）--货架区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">55-1 是否符合要求？(单选）--货架区域</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（重点品牌商品陈列：蓝月亮、云南白药、冈本、南孚、金霸王门店必须经营；有香烟经营的门店必须要有打火机销售）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic55One" value="1、完全符合" onclick="th55Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic55One" value="2、不符合要求"  onclick="th55Div(2)" />
@@ -3069,8 +3075,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">56-1（自有商品陈列：苏宁小店定制洁肤柔湿巾80片、Ｍｉｎｉ洁肤柔湿巾10片六联包、平口型垃圾袋门店必须上架销售）是否符合要求？(单选）</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">56-1是否符合要求？(单选）</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（自有商品陈列：苏宁小店定制洁肤柔湿巾80片、Ｍｉｎｉ洁肤柔湿巾10片六联包、平口型垃圾袋门店必须上架销售）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic56One" value="1、完全符合" onclick="th56Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic56One" value="2、不符合要求"  onclick="th56Div(2)" />
@@ -3120,8 +3126,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">57-1 （货架【包含风幕柜、冷冻柜、常温货架、蔬果架】清洁无灰尘、无虫尸）是否符合要求？(单选）--货架区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label>
+                  <label style="width: 100px;">57-1 是否符合要求？(单选）--货架区域</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（货架【包含风幕柜、冷冻柜、常温货架、蔬果架】清洁无灰尘、无虫尸）</label>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic57One" value="1、完全符合" onclick="th57Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic57One" value="2、不符合要求"  onclick="th57Div(2)" />
@@ -3168,8 +3174,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">58-1 （会员物料（收银台跳跳卡、APP下载桌贴）是否按公司标准摆放，是否及时更新，无过期内容）是否符合要求？(单选）[照片要求：必须系统上传会员物料照片]--货架区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">58-1 是否符合要求？(单选）[照片要求：必须系统上传会员物料照片]--货架区域</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（会员物料（收银台跳跳卡、APP下载桌贴）是否按公司标准摆放，是否及时更新，无过期内容）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic58One" value="1、完全符合" onclick="th58Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic58One" value="2、不符合要求"  onclick="th58Div(2)" />
@@ -3224,8 +3230,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">59-1 （档期活动布展物料：有吊旗挂放，吊旗挂放整齐，无过期内容[层高不够不能挂放门店不考核,直接给分]）是否符合要求？(单选）</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">59-1 是否符合要求？(单选）</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（档期活动布展物料：有吊旗挂放，吊旗挂放整齐，无过期内容[层高不够不能挂放门店不考核,直接给分]）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic59One" value="1、完全符合" onclick="th59Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic59One" value="2、不符合要求"  onclick="th59Div(2)" />
@@ -3279,8 +3285,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">60-1 （档期活动布展物料：跳跳卡、货架价签卡条正常使用，无过期内容）是否符合要求？(单选）</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">60-1 是否符合要求？(单选）</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（档期活动布展物料：跳跳卡、货架价签卡条正常使用，无过期内容）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic60One" value="1、完全符合" onclick="th60Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic60One" value="2、不符合要求"  onclick="th60Div(2)" />
@@ -3334,8 +3340,8 @@
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
               </div>
               <div   align="left">
-                  <label style="width: 100px;">61-1（按照打折标准对品质下降的商品进行限时折价售卖，是否张贴临期打折标贴）洗手池是否符合要求？(单选）--货架区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">61-1是否符合要求？(单选）--货架区域</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（按照打折标准对品质下降的商品进行限时折价售卖，是否张贴临期打折标贴）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic61One" value="1、完全符合" onclick="th61Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic61One" value="2、不符合要求"  onclick="th61Div(2)" />
@@ -3412,8 +3418,8 @@
               </div>
 
               <div   align="left">
-                  <label style="width: 100px;">63-1（店内无存在私设二维码（微信、支付宝）情况[如有，门店当月巡检成绩计0分]）是否符合要求？(单选）</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <label style="width: 100px;">63-1是否符合要求？(单选）</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（店内无存在私设二维码（微信、支付宝）情况[如有，门店当月巡检成绩计0分]）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic63One" value="1、完全符合" onclick="th63Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic63One" value="2、不符合要求"  onclick="th63Div(2)" />
