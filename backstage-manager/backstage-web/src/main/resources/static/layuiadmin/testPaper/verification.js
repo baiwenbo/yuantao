@@ -10,11 +10,11 @@ $("#checkSubject").click(function(){
             alert("请选择题1不符项");
             return false;
         }*/
-        // var topic1Four=$("#topic1Four").val();
-        // if (topic1Four==""||topic1Four==null){
-        //     alert("请上传题1图片");
-        //     return false;
-        // }
+        var topic1Four=$("#topic1Four").val();
+        if (topic1Four==""||topic1Four==null){
+             alert("请上传题1图片");
+             return false;
+         }
     }
     if (type2=="2"){
         var remark2=$("input[name='topic2Six']").val();
