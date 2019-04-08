@@ -192,9 +192,9 @@ public class TestPaperController {
 
             TestPaper  testPaperMendian=testPaperService.getById(testPaper.getId());
             TestHans hans=testHansService.getTestId(testPaper.getId());
-
-            testHans.setHansid(hans.getHansid());
-
+            if(hans!=null){
+                testHans.setHansid(hans.getHansid());
+            }
             if(testPaper.getCompanyId()==null){
                 testPaper.setCompanyId(testPaperMendian.getCompanyId());
             }
