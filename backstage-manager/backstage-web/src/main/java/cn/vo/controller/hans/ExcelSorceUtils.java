@@ -35,7 +35,11 @@ public class ExcelSorceUtils {
                 testPaper.setTh6mark(setMark(testPaper.getType(),testPaper.getTopic6One(),"th6"));
                 testPaper.setTh7mark(setMark(testPaper.getType(),testPaper.getTopic7One(),"th7"));
                 testPaper.setTh8mark(setMark(testPaper.getType(),testPaper.getTopic8One(),"th8"));
-                testPaper.setTh9mark(setMark(testPaper.getType(),testPaper.getTopic9Two(),"th9"));
+                if (testPaper.getType()==3) {
+                    testPaper.setTh9mark(setMark(testPaper.getType(),testPaper.getTopic9Two(),"th9"));
+                }else{
+                    testPaper.setTh9mark(setMark(testPaper.getType(),testPaper.getTopic9One(),"th9"));
+                }
                 testPaper.setTh10mark(setMark(testPaper.getType(),testPaper.getTopic10One(),"th10"));
                 testPaper.setTh11mark(setMark(testPaper.getType(),testPaper.getTopic11One(),"th11"));
                 testPaper.setTh12mark(setMark(testPaper.getType(),testPaper.getTopic12One(),"th12"));
