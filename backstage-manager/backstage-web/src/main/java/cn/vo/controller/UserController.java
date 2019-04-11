@@ -27,8 +27,14 @@ public class UserController {
 	
 	@Autowired
 	private IUserService iUserService;
-	
-	
+
+	@GetMapping("/editpass")
+	public String editpass(Model model,HttpServletRequest request){
+		HttpSession session=request.getSession();
+		User user=(User) session.getAttribute("USER");
+		model.addAttribute("user", user);
+		return "views/user/password";
+	}
 	
 	@GetMapping("/info")
 	public String info(Model model,HttpServletRequest request){
