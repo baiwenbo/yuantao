@@ -4941,7 +4941,7 @@
 
   <select id="getCompanyQuery" resultMap="BaseResultMap" parameterType="map">
     select  <include refid="Base_Column_List" /> from test_paper
-    where  company = #{company} and type=#{type} and monthJudge is null
+    where  pianqu = #{pianqu} and type=#{type} and monthJudge is null
     <if test="name != null and name.length()>0" >
       and  name like '%${name}%'
     </if>
@@ -5017,7 +5017,7 @@
 
   <select id="getOldCompanyQuery" resultMap="BaseResultMap" parameterType="map">
     select  <include refid="Base_Column_List" /> from test_paper
-    where  company = #{company} and type=#{type} and monthJudge is  not null
+    where  pianqu = #{pianqu} and type=#{type} and monthJudge is  not null
     <if test="name != null and name.length()>0" >
       and  name like '%${name}%'
     </if>
@@ -5048,6 +5048,9 @@
     <if test="checkstatus != null and checkstatus.length()>0" >
       and  checkStatus = #{checkstatus}
     </if>
+    <if test="pianqu != null and pianqu.length()>0" >
+      and  pianqu = #{pianqu}
+    </if>
   </select>
   <select id="countOld" parameterType="map" resultType="java.lang.Integer" >
     select count(*) from test_paper where type=#{type} and monthJudge is  not null
@@ -5062,6 +5065,9 @@
     </if>
     <if test="checkstatus != null and checkstatus.length()>0" >
       and  checkStatus = #{checkstatus}
+    </if>
+    <if test="pianqu != null and pianqu.length()>0" >
+      and  pianqu = #{pianqu}
     </if>
   </select>
 </mapper>

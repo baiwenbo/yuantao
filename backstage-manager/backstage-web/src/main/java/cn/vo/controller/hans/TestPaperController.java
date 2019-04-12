@@ -89,7 +89,7 @@ public class TestPaperController {
             list=testPaperService.getMendianQuery(map);
         }
         if("2".equals(user.getScpcqx())){
-            map.put("company", user.getUsername());
+            map.put("pianqu", user.getUsername());
             list=testPaperService.getCompanyQuery(map);
         }
         if("5".equals(user.getScpcqx()) || "3".equals(user.getScpcqx()) ){
