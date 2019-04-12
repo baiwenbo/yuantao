@@ -34,10 +34,10 @@ public class TestHansServiceImpl implements ITestHansService {
     public TestHans getTestId(Integer testId) {
         TestHansExample testHansExample =new TestHansExample();
         TestHansExample.Criteria criteria=testHansExample.createCriteria();
-        List<TestHans> list=testHansMapper.selectByExample(testHansExample);
-        if (list.size()>0){
+        TestHans list=testHansMapper.selectByPrimaryKey(testId);
+       /* if (list.size()>0){
             return list.get(0);
-        }
-        return null;
+        }*/
+        return list;
     }
 }
