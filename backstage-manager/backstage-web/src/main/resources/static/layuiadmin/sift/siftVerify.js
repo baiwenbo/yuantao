@@ -359,7 +359,7 @@ $("#checkSubject").click(function(){
             return false;
         }
         if ($("input[name='topic23Three']").is(':checked') === false){
-            alert("请选择不符项");
+            alert("请选择23不符项");
             return false;
         }
         var topic23Four=$("#topic23Four").val();
