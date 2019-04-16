@@ -73,7 +73,7 @@ public class ExcelSorceUtils {
                 testPaper.setTh39mark(setMark(testPaper.getType(),testPaper.getTopic39One(),"th39"));
                 testPaper.setTh40mark(setMark(testPaper.getType(),testPaper.getTopic40One(),"th40"));
                 if (testPaper.getType()==1) {
-
+                try{
                     testPaper.setTh41mark(setMark(testPaper.getType(), testHans.getTopic41One(), "th41"));
                     testPaper.setTh42mark(setMark(testPaper.getType(), testHans.getTopic42One(), "th42"));
                     testPaper.setTh43mark(setMark(testPaper.getType(), testHans.getTopic43One(), "th43"));
@@ -95,6 +95,9 @@ public class ExcelSorceUtils {
                     testPaper.setTh59mark(setMark(testPaper.getType(), testHans.getTopic59One(), "th59"));
                     testPaper.setTh60mark(setMark(testPaper.getType(), testHans.getTopic60One(), "th60"));
                     testPaper.setTh61mark(setMark(testPaper.getType(), testHans.getTopic61One(), "th61"));
+                }catch (Exception e){
+                    System.out.println(testPaper.getId());
+                }
                 }
                 if(testPaper.getType()==3){
                     if (testPaper.getTopic10Three() != null && !testPaper.getTopic10Three().isEmpty()) {

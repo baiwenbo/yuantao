@@ -379,7 +379,7 @@ public class FractionUtil {
             }
             if (testHans.getTopic62One().contains("存在，有过")){
                 testPaper.setScore("0");
-            }else if (testHans.getTopic63One().contains("存在，有私设")){
+            }else if (testHans.getTopic63One().contains("不符合要求")){
                 testPaper.setScore("0");
             } else{
                 testPaper.setScore(FractionUtil.getsSore(testPaper,testHans));
