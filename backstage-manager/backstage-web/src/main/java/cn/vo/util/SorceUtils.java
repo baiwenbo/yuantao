@@ -186,11 +186,10 @@ public class SorceUtils {
             }
             if (testPaper.getTopic20One().contains("不")){
                 testPaper.setTopic20Fraction("0");
-                testPaper.setScore("0");
             }else{
                 testPaper.setTopic20Fraction("6");
-                testPaper.setScore(getsSore(testPaper));
             }
+            testPaper.setScore(getsSore(testPaper));
         }catch (Exception e){
             e.printStackTrace();
             return testPaper;
