@@ -1,0 +1,3008 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+  <meta charset="utf-8"/>
+  <meta name="renderer" content="webkit"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1、0, minimum-scale=1、0, maximum-scale=1、0, user-scalable=0"/>
+  <link rel="stylesheet"  th:href="@{/layuiadmin/layui/css/layui.css}"  media="all"/>
+  <link rel="stylesheet"  th:href="@{/layuiadmin/style/admin.css}" media="all"/>
+<style>
+    .text-left{
+        padding-left: 100px;
+        font-size: 18px;
+        line-height:23px
+    }
+
+</style>
+
+</head>
+<body>
+<div >
+  <div >
+    <div >
+      <div >
+        <div  pad15="" style="align-items: center;">
+          <form enctype="multipart/form-data" th:action="@{/testPaper/save}" method="post" style="align:center" align="center" >
+<div th:replace="views/red/addFile::html" ></div>
+        <input type="hidden" name="type" value="1"/>
+        <input type="hidden" name="companyId" id="companyId"/>
+          <div class="layui-form-item" >
+              <div class="layui-inline">
+                  <div class="layui-input-inline" >
+                      <input type="text" id="code" name="code" lay-verify="required" autocomplete="off" placeholder="可输入门店代码进行搜索"  class="layui-input"  style="width: 200px;"/>
+                  </div>
+              </div>
+              <div class="layui-inline" style="padding-left: 60px;">
+
+                  <div class="layui-input-inline" style="float:right">
+                      <input class="layui-btn" style="width: 85px" data-type="reload" id="queryCompany" value="搜索" />
+                  </div>
+              </div>
+
+
+          </div>
+
+              <div class="layui-form-item">
+
+                  <div class="layui-inline">
+                      <label class="layui-form-label">门店名称</label>
+                      <div class="layui-input-inline">
+                          <input type="text" name="name" id="name"  disabled="disabled" autocomplete="off" class="layui-input" />
+                      </div>
+                  </div>
+                  <div class="layui-inline">
+                      <label class="layui-form-label">所属片区</label>
+                      <div class="layui-input-inline">
+                          <input type="text" name="pianqu" id="pianqu" disabled="disabled" autocomplete="off" class="layui-input" />
+                      </div>
+                  </div>
+                  <div class="layui-inline">
+                      <label class="layui-form-label">所属大区</label>
+                      <div class="layui-input-inline">
+                          <input type="text" name="daqu" id="daqu" disabled="disabled" autocomplete="off" class="layui-input" />
+                      </div>
+                  </div>
+              </div>
+              <div class="layui-form-item">
+                  <div class="layui-inline">
+                      <label class="layui-form-label">门店地址</label>
+                      <div class="layui-input-inline">
+                          <input type="text" name="address" id="address" disabled="disabled"  autocomplete="off" class="layui-input" />
+                      </div>
+                  </div>
+                  <div class="layui-inline">
+                      <label class="layui-form-label">所属子公司</label>
+                      <div class="layui-input-inline">
+                          <input type="text" name="company" id="company" disabled="disabled"  autocomplete="off" class="layui-input" />
+                      </div>
+                  </div>
+                  <div class="layui-inline">
+                      <label class="layui-form-label">进店时间</label>
+                      <div class="layui-input-inline">
+                          <input type="text" name="starttime" id="starttime" placeholder="yyyy-MM-dd HH:mm:ss" autocomplete="off" class="layui-input" />
+                      </div>
+                  </div>
+              </div>
+
+
+          <div class="layui-form-item">
+              <div class="layui-inline">
+                  <label class="layui-form-label">离店时间</label>
+                  <div class="layui-input-inline">
+                      <input type="text" name="endtime" id="endtime" placeholder="yyyy-MM-dd HH:mm:ss" autocomplete="off" class="layui-input" />
+                  </div>
+              </div>
+              <div class="layui-inline">
+                  <label class="layui-form-label">小票显示时间</label>
+                  <div class="layui-input-inline">
+                      <input type="text" name="spotdate" id="spotdate" placeholder="小票显示时间" autocomplete="off" class="layui-input" />
+                  </div>
+              </div>
+              <div class="layui-inline">
+                  <label class="layui-form-label">购买商品</label>
+                  <div class="layui-input-inline">
+                      <input type="text" name="commodity" lay-verify="email" autocomplete="off" class="layui-input" />
+                  </div>
+              </div>
+
+          </div>
+
+          <div class="layui-form-item">
+              <div class="layui-inline">
+                  <label class="layui-form-label">消费金额</label>
+                  <div class="layui-input-inline">
+                      <input type="tel" name="money" lay-verify="required|phone" autocomplete="off" class="layui-input" />
+                  </div>
+              </div>
+              <div class="layui-inline">
+                  <label class="layui-form-label">支付方式</label>
+                  <div class="layui-input-inline">
+                      <input type="text" name="payment"   autocomplete="off" class="layui-input" />
+                  </div>
+              </div>
+              <div class="layui-inline">
+                  <label class="layui-form-label">神客姓名</label>
+                  <div class="layui-input-inline">
+                      <input type="text" name="personname" lay-verify="email" autocomplete="off" class="layui-input" />
+                  </div>
+              </div>
+           <!--   <div class="layui-inline">
+                  <label class="layui-form-label">天气</label>
+                  <div class="layui-input-inline">
+                      <input type="text" name="weather"  autocomplete="off" class="layui-input" />
+                  </div>
+              </div>
+              <div class="layui-inline">
+                  <label class="layui-form-label">是否地铁店</label>
+                  <div class="layui-input-inline">
+                      <input type="text" name="metro" lay-verify="required|phone" autocomplete="off" class="layui-input" />
+                  </div>
+              </div>-->
+          </div>
+          <div class="layui-form-item">
+
+
+              <div class="layui-inline">
+                  <label class="layui-form-label">视频链接</label>
+                  <div class="layui-input-inline">
+                      <input type="text" name="vedio" lay-verify="required|phone" autocomplete="off" class="layui-input" />
+                  </div>
+              </div>
+              <div class="layui-inline">
+                  <label class="layui-form-label" style="width: 65px">视频链接提取码</label>
+                  <div class="layui-input-inline">
+                      <input type="text" name="url" lay-verify="email" autocomplete="off" class="layui-input" />
+                  </div>
+              </div>
+              <div class="layui-inline">
+                  <label class="layui-form-label" style="height:50px;">收银员截图</label>
+                  <div class="layui-input-inline">
+                      <input type="text" name="cashiername" placeholder="收银员截图" autocomplete="off" class="layui-input" />
+                  </div>
+              </div>
+
+          </div>
+          <div class="layui-form-item">
+
+           <!--   <div class="layui-inline">
+                  <label class="layui-form-label" style="height:50px;">视频时长</label>
+                  <div class="layui-input-inline">
+                      <input type="text" name="duration" lay-verify="email" autocomplete="off" class="layui-input" />
+                  </div>
+              </div>-->
+
+          </div>
+
+
+
+
+          <div class="text-left">
+            <div align="left">
+              <label style="width: 100px;">1-1 （店招干净无破损，LOGO保持常亮状态，并且LOGO内无阴影出现）是否符合要求？(单选）--店外区域</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+              <div >
+                <label style="width: 100px;">1、完全符合</label> <input type="radio" name="topic1One" value="1、完全符合" onclick="oneDiv(1)" checked="checked"/><br/>
+                <label style="width: 100px;">2、不符合要求</label> <input type="radio" name="topic1One" value="2、不符合要求"  onclick="oneDiv(2)" />
+              </div>
+            </div><br/>
+            <div id="one" align="left">
+
+                <label style="width: 100px;">1-2不符合要求的原因是？(多选）</label><br/>
+               <table    >
+                  <tr>
+                    <td >1、LOGO外观不干净</td>
+                    <td width="80px;"><input value="1、LOGO外观不干净" type="checkbox" name="topic1Two" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2、招牌有破损，不能正常使用</td>
+                    <td width="80px;"><input type="checkbox" name="topic1Two" value="2、招牌有破损，不能正常使用"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3、LOGO不能保持常亮状态</td>
+                    <td width="80px;"><input type="checkbox" name="topic1Two" value="3、LOGO不能保持常亮状态"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                 <tr>
+                    <td >4、LOGO内有阴影出现</td>
+                    <td width="80px;"><input type="checkbox" name="topic1Two"  value="4、LOGO内有阴影出现" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >5、临街店招夜间灯光未开启</td>
+                    <td width="80px;"><input type="checkbox" name="topic1Two"  value="5、临街店招夜间灯光未开启"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >6、其他请注明</td>
+                    <td width="80px;"><input type="text" name="topic1Six" class="layui-input"/></td>
+                  </tr>
+
+                </table><br/>
+
+                <input type="file" class="layui-btn"  name="topic1Fourfile" id="test-upload-normal" />
+                <input  type="button" class="layui-btn"  id="topic1Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+              <!--<div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                        <button type="button" class="layui-btn" id="topic1Fourfile">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="topic1Fourfile-list"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>-->
+            </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+
+            <div   align="left">
+              <label style="width: 100px;">2-1 （外围墙面和橱窗玻璃干净，无破损和污渍，橱窗陈列主题突出）是否符合要求？(单选）----店外区域</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+              <div >
+                <label style="width: 100px;">1、完全符合   </label> <input type="radio" name="topic2One" value="1、完全符合" onclick="twoDiv(1)" checked="checked"/><br/>
+                <label style="width: 100px;">2、不符合要求</label> <input type="radio" name="topic2One" value="2、不符合要求" onclick="twoDiv(2)" />
+
+              </div>
+            </div><br/>
+            <div id="two" align="left" >
+              <div  lay-filter="">
+
+                <label style="width: 100px;">2-2不符合要求的原因是？(多选）</label><br/><br/>
+               <table    style="align:center">
+                  <tr>
+                    <td >1、店外外围墙面不干净，有破损，有手印及明显灰尘</td>
+                    <td width="80px;"><input type="checkbox" name="topic2Two" value="1、店外外围墙面不干净，有破损，有手印及明显灰尘"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2、店外外围玻璃窗不干净，有破损，有手印及明显灰尘</td>
+                    <td width="80px;"><input type="checkbox"  name="topic2Two" value="2、店外外围玻璃窗不干净，有破损，有手印及明显灰尘" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3、橱窗未应季陈列调整</td>
+                    <td width="80px;"><input type="checkbox"  name="topic2Two"  value="3、橱窗未应季陈列调整" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                   <tr>
+                    <td >4、其他请注明</td>
+                    <td width="80px;"><input type="text"  name="topic2Six" class="layui-input" /></td>
+                  </tr>
+
+                </table>
+
+              </div><br/>
+                <input type="file" class="layui-btn" name="topic2Fourfile" id="test-upload-normal" value="上传图片"/>
+                <input  type="button" class="layui-btn"  id="topic2Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+             <!-- <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic2Fourfile">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-list"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>-->
+            </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+
+            <div   align="left">
+              <label style="width: 100px;">3-1 （门店购物车、购物篮表面干净无污渍、无破损，摆放整齐）是否符合要求？(单选）----店外区域</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607"> </label><br/>
+              <div >
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic3One" value="1、完全符合"  onclick="threeDiv(1)" checked="checked" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic3One" value="2、不符合要求"   onclick="threeDiv(2)"/>
+
+              </div>
+            </div><br/>
+            <div id="three" align="left">
+              <div  lay-filter=""  >
+                <label style="width: 100px;">3-2不符合要求的原因是？(多选）</label><br/><br/>
+               <table    >
+                  <tr>
+                    <td >1、门店购物车表面不干净有污渍、有破损</td>
+                    <td width="80px;"><input type="checkbox" name="topic3Two" value="1、门店购物车表面不干净有污渍、有破损"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2、购物篮表面不干净有污渍、有破损</td>
+                    <td width="80px;"><input type="checkbox" name="topic3Two" value="2、购物篮表面不干净有污渍、有破损"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3、购物车未在入口处集中摆放，不能方便顾客使用</td>
+                    <td width="80px;"><input type="checkbox" name="topic3Two" value="3、购物车未在入口处集中摆放，不能方便顾客使用"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >4、购物篮未在入口处集中摆放，不能方便顾客使用</td>
+                    <td width="80px;"><input type="checkbox" name="topic3Two" value="4、购物篮未在入口处集中摆放，不能方便顾客使用"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                   <tr>
+                       <td >5、卖场通道内顾客丢弃的购物车未能在5分钟内归位</td>
+                       <td width="80px;"><input type="checkbox" name="topic3Two" value="5、卖场通道内顾客丢弃的购物车未能在5分钟内归位"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                   </tr>
+                  <tr>
+                    <td >6、其他请注明</td>
+                    <td width="80px;"><input type="text" name="topic3Six"  class="layui-input"/></td>
+                  </tr>
+
+                </table>
+
+              </div><br/>
+                <input type="file" class="layui-btn" name="topic3Fourfile" id="test-upload-normal" value="上传图片"/>
+                <input  type="button" class="layui-btn"  id="topic3Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+             <!-- <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic3Fourfile">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-list"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>-->
+            </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+
+            <div   align="left">
+
+              <label style="width: 100px;">4-1 （门店所有电视均正常打开）--店外区域</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+              <div >
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic4One"  value="1、完全符合" checked="checked" onclick="fourDiv(1)"/><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic4One" value="2、不符合要求" onclick="fourDiv(2)" />
+
+              </div>
+            </div><br/>
+            <div id="four" align="left">
+              <div  lay-filter="" >
+                <label style="width: 100px;">4-2不符合要求的原因是？(多选）</label><br/><br/>
+               <table    >
+                  <tr>
+                    <td >1、门店的电视未正常打开（只要有一台电视未打开即扣分）</td>
+                    <td width="80px;"><input type="checkbox" name="topic4Two"  value="1、门店的电视未正常打开（只要有一台电视未打开即扣分）" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2、门店内的电视未播放当期活动信息或公司相关宣传片</td>
+                    <td width="80px;"><input type="checkbox"  name="topic4Two" value="2、门店内的电视未播放当期活动信息或公司相关宣传片"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3、如总部或大区有指定播放的主题或内容，门店未执行播放</td>
+                    <td width="80px;"><input type="checkbox"  name="topic4Two" value="3、如总部或大区有指定播放的主题或内容，门店未执行播放"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >4、其他请注明</td>
+                    <td width="80px;"><input type="text"  name="topic4Six"  class="layui-input"/></td>
+                  </tr>
+
+                </table>
+
+              </div><br/>
+                <input type="file" class="layui-btn" name="topic4Fourfile" id="test-upload-normal" value="上传图片"/>
+                <input  type="button" class="layui-btn"  id="topic4Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+             <!-- <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic4Fourfile">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-list"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>-->
+            </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+
+            <div   align="left">
+              <label style="width: 100px;">5-1 (店内背景音乐正常开启且内容播放)是否符合要求？(单选）--店面环境</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+              <div >
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic5One"  value="1、完全符合" onclick="fiveDiv(1)" checked="checked"/><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic5One" value="2、不符合要求"  onclick="fiveDiv(2)"/>
+
+              </div>
+            </div><br/>
+            <div id="five" align="left">
+              <div  lay-filter="" >
+                <label style="width: 100px;">5-2不符合要求的原因是？(多选）</label><br/><br/>
+               <table    >
+                  <tr>
+                    <td >1、店内未播放音乐</td>
+                    <td width="80px;"><input type="checkbox" name="topic5Two" value="1、店内未播放音乐" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2、店内音乐播放不适中，过大或过小影响员工与顾客沟通</td>
+                    <td width="80px;"><input type="checkbox" name="topic5Two" value="2、店内音乐播放不适中，过大或过小影响员工与顾客沟通"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3、门店背景音乐中播放期间，超过30分钟未插播门店当期或预期的商品促销及活动信息</td>
+                    <td width="80px;"><input type="checkbox" name="topic5Two" value="3、门店背景音乐中播放期间，超过30分钟未插播门店当期或预期的商品促销及活动信息"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >4、其他请注明</td>
+                    <td width="80px;"><input type="text" name="topic5Six" class="layui-input" /></td>
+                  </tr>
+
+                </table>
+              </div>
+               <!-- <input type="file" class="layui-btn" name="topic5Fourfile" id="test-upload-normal" value="上传图片"/>
+                <input  type="button" class="layui-btn"  id="topic5Fourfile" onclick="fileFour(this)"  value="上传图片"/>-->
+            </div><br/>
+              <!--<div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic5Fourfile">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-list"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>-->
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+            <div   align="left">
+
+              <label style="width: 100px;">6-1 （店内无异味，地面无污渍）是否符合要求？(单选）--店面环境</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+              <div >
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic6One"  value="1、完全符合"  onclick="sixDiv(1)" checked="checked"/><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic6One" value="2、不符合要求"  onclick="sixDiv(2)" />
+
+              </div>
+            </div><br/>
+            <div id="six" align="left">
+              <div  lay-filter="" >
+                <label style="width: 100px;">6-2不符合要求的原因是？(多选）</label><br/><br/>
+               <table    >
+                  <tr>
+                    <td >1、店内有异味</td>
+                    <td width="80px;"><input type="checkbox" name="topic6Two" value="1、店内有异味"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2、地面有明显污渍</td>
+                    <td width="80px;"><input type="checkbox"  name="topic6Two" value="2、地面有明显污渍"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3、废弃纸箱放置在卖场，未及时清理</td>
+                    <td width="80px;"><input type="checkbox"  name="topic6Two"  value="3、废弃纸箱放置在卖场，未及时清理" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >4、店内经营区未堆码原装箱货</td>
+                    <td width="80px;"><input type="checkbox"  name="topic6Two"  value="4、店内经营区未堆码原装箱货"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >5、墙面有灰尘</td>
+                    <td width="80px;"><input type="checkbox"   name="topic6Two" value="5、墙面有灰尘"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                   <tr>
+                       <td >6、蜘蛛网</td>
+                       <td width="80px;"><input type="checkbox"   name="topic6Two" value="6、蜘蛛网"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                   </tr>
+                  <tr>
+                    <td >7、其他请注明</td>
+                    <td width="80px;"><input type="text"  name="topic6Six" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+
+              </div><br/>
+                <input type="file" class="layui-btn" name="topic6Fourfile" id="test-upload-normal" value="上传图片"/>
+                <input  type="button" class="layui-btn"  id="topic6Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+             <!-- <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic6Fourfile">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-list"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>-->
+            </div>
+
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+            <div   align="left">
+              <label style="width: 100px;">7-1 （店内主通道必须保持畅通）是否符合要求？(单选）--卖场周边区域</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+              <div >
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic7One" value="1、完全符合"  checked="checked" onclick="sevenDiv(1)" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic7One" value="2、不符合要求" onclick="sevenDiv(2)" />
+
+              </div>
+            </div><br/>
+            <div id="seven" align="left">
+              <div  lay-filter="">
+                <label style="width: 100px;">7-2不符合要求的原因是？(多选）</label><br/><br/>
+               <table    >
+                  <tr>
+                    <td >1、店内有通道未保持畅通，通道内有摆放商品或其他物品（只要有一处不通畅即扣分）</td>
+                    <td width="80px;"><input type="checkbox"  name="topic7Two" value="1、店内有通道未保持畅通，通道内有摆放商品或其他物品（只要有一处不通畅即扣分）" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2、通道内有员工上货，但货品未靠边堆放，未保留通道60CM以上</td>
+                    <td width="80px;"><input type="checkbox" name="topic7Two" value="2、通道内有员工上货，但货品未靠边堆放，未保留通道60CM以上"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3、店铺运营期间，通道内进行陈列调整，未保持1/2通道宽度供顾客行走，且通道两端用1M线拦住通道，贴”货架整理中，请绕行，给你带来的不变敬请谅解！“告示贴</td>
+                    <td width="80px;"><input type="checkbox"  name="topic7Two" value="3、店铺运营期间，通道内进行陈列调整，未保持1/2通道宽度供顾客行走，且通道两端用1M线拦住通道，贴”货架整理中，请绕行，给你带来的不变敬请谅解！“告示贴"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >4、其他请注明</td>
+                    <td width="80px;"><input type="text" name="topic7Six" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+
+              </div><br/>
+                <input type="file" class="layui-btn" name="topic7Fourfile" id="test-upload-normal" value="上传图片"/>
+                <input  type="button" class="layui-btn"  id="topic7Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+             <!-- <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic7Fourfile">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-list"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>-->
+            </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+
+            <div   align="left">
+              <label style="width: 100px;">8-1 （妈妈课堂设施设备完好，干净整洁，无堆货）是否符合要求？(单选）--店面环境</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+              <div >
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic8One" value="1、完全符合"  checked="checked" onclick="eightDiv(1)" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic8One" value="2、不符合要求"  onclick="eightDiv(2)" />
+
+              </div>
+            </div><br/>
+            <div id="eight" align="left">
+              <div  lay-filter="" >
+                <label style="width: 100px;">8-2不符合要求的原因是？(多选）</label><br/><br/>
+               <table    >
+                  <tr>
+                    <td >1、妈妈课堂设施设备未能完好，有破损等</td>
+                    <td width="80px;"><input type="checkbox" name="topic8Two" value="1、妈妈课堂设施设备未能完好，有破损等"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2、妈妈课堂的投影仪等设备未完好不能正常工作</td>
+                    <td width="80px;"><input type="checkbox"  name="topic8Two" value="2、妈妈课堂的投影仪等设备未完好不能正常工作"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3、妈妈课堂内环境不干净整洁</td>
+                    <td width="80px;"><input type="checkbox"   name="topic8Two" value="3、妈妈课堂内环境不干净整洁"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+
+                   <tr>
+                       <td >4、妈妈课堂内有物料、道具等堆物</td>
+                       <td width="80px;"><input type="checkbox"   name="topic8Two" value="4、妈妈课堂内有物料、道具等堆物"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                   </tr>
+                  <tr>
+                    <td >5、其他请注明</td>
+                    <td width="80px;"><input type="text"  name="topic8Six" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+
+              </div><br/>
+                <input type="file" class="layui-btn" name="topic8Fourfile" id="test-upload-normal" value="上传图片"/>
+                <input  type="button" class="layui-btn"  id="topic8Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+              <!--<div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic8Fourfile">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-list"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>-->
+            </div>
+
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+
+            <div   align="left">
+              <div >
+                <label style="width: 100px;">9-1（清洁道具、拉货推车不能放置卖场）是否符合要求？(单选）--店面环境</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                <div >
+                  <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic9One" value="1、完全符合" onclick="nineDiv(1)" checked="checked" /><br/>
+                  <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic9One" value="2、不符合要求" onclick="nineDiv(2)" />
+                </div>
+              </div><br/>
+            </div>
+            <div id="nine" align="left">
+              <div  lay-filter="" >
+                <label style="width: 100px;">9-2不符合要求的原因是？(多选）</label><br/><br/>
+               <table    >
+                  <tr>
+                    <td >1、清洁道具有放置在卖场</td>
+                    <td width="80px;"><input type="checkbox"  name="topic9Two" value="1、清洁道具有放置在卖场"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2、拉货推车有放置在卖场</td>
+                    <td width="80px;"><input type="checkbox" name="topic9Two"  value="2、拉货推车有放置在卖场" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                   <tr>
+                       <td >3、垃圾箱满了未及时清理</td>
+                       <td width="80px;"><input type="checkbox" name="topic9Two"  value="3、垃圾箱满了未及时清理" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                   </tr>
+                  <tr>
+                    <td >4、其他请注明</td>
+                    <td width="80px;"><input type="text" name="topic9Six" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+
+              </div><br/>
+                <input type="file" class="layui-btn" name="topic9Fourfile" id="test-upload-normal" value="上传图片"/>
+                <input  type="button" class="layui-btn"  id="topic9Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+             <!-- <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic9Fourfile">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-list"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>-->
+            </div>
+
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+            <div   align="left">
+              <label style="width: 100px;">10-1 （卖场、货架禁止放私人物品）是否符合要求？(单选）--店面环境</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+              <div >
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic10One" value="1、完全符合" checked="checked" onclick="tenDiv(1)"/><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic10One" value="2、不符合要求" onclick="tenDiv(2)" />
+              </div>
+            </div><br/>
+            <div id="ten" align="left">
+              <div  lay-filter="" >
+                <label style="width: 100px;">10-2不符合要求的原因是？(多选）</label><br/><br/>
+               <table    >
+                  <tr>
+                    <td >1、卖场内放有私人物品（水杯，衣物，包包等）</td>
+                    <td width="80px;"><input type="checkbox" name="topic10Two" value="1、卖场内放有私人物品（水杯，衣物，包包等）"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2、货架上放有私人物品（水杯，衣物，包包等）</td>
+                    <td width="80px;"><input type="checkbox" name="topic10Two" value="2、货架上放有私人物品（水杯，衣物，包包等）"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3、其他请注明</td>
+                    <td width="80px;"><input type="text" name="topic10Six" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+                <input type="file" class="layui-btn" name="topic10Fourfile" id="test-upload-normal" value="上传图片"/>
+                <input  type="button" class="layui-btn"  id="topic10Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+             <!-- <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic10Fourfile">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-list"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>-->
+            </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+
+            <div   align="left">
+              <label style="width: 100px;">11-1（员工不得在卖场进行手机充电）是否符合要求？(单选）--店面环境</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+              <div >
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic11One" value="1、完全符合" checked="checked" onclick="elevenDiv(1)" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic11One" value="2、不符合要求"  onclick="elevenDiv(2)" />
+              </div>
+            </div><br/>
+            <div id="eleven" align="left">
+              <div  lay-filter="" ><!--
+                <label style="width: 100px;">11-2不符合要求的原因是？(多选）</label><br/><br/>
+               <table    >
+                  <tr>
+                    <td >1、店内天花板有蜘蛛网（注意墙角）</td>
+                    <td width="80px;"><input type="checkbox" name="topic11Two" value="1、店内天花板有蜘蛛网（注意墙角）"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2、地板有垃圾，有污渍，有铺纸皮（下雨天不考评地板污渍）</td>
+                    <td width="80px;"><input type="checkbox"  name="topic11Two" value="2、地板有垃圾，有污渍，有铺纸皮（下雨天不考评地板污渍）"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                   <tr>
+                       <td >3、下雨天门店时，门店未将“小心地滑挃示牌立出</td>
+                       <td width="80px;"><input type="checkbox"  name="topic11Two" value="3、下雨天门店时，门店未将“小心地滑挃示牌立出"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                   </tr>
+                   <tr>
+                       <td >4、非下雨天时，当门店地面湿滑时，门店未将“小心地滑” 指示牌立出</td>
+                       <td width="80px;"><input type="checkbox"  name="topic11Two" value="4、非下雨天时，当门店地面湿滑时，门店未将“小心地滑” 指示牌立出"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                   </tr>
+                  <tr>
+                    <td >5、其他请注明</td>
+                    <td width="80px;"><input type="text"  name="topic11Six"   class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              --></div><br/>
+                <input type="file" class="layui-btn" name="topic11Fourfile" id="test-upload-normal" value="上传图片"/>
+                <input  type="button" class="layui-btn"  id="topic11Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+             <!-- <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <input type="file" class="layui-btn" id="topic11Fourfile">多图片上传</input>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-list"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>-->
+            </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+
+            <div   align="left">
+              <label style="width: 100px;">12-1（收银时必须站立，不能坐着收银）是否符合要求？(单选）--收银服务</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+              <div >
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic12One" value="1、完全符合" checked="checked" onclick="twelveDiv(1)" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic12One" value="2、不符合要求"  onclick="twelveDiv(2)" />
+              </div>
+            </div><br/>
+            <div id="twelve" align="left">
+              <div  lay-filter="" >
+                <label style="width: 100px;">12-2不符合要求的原因是？(多选）</label><br/><br/>
+               <table    >
+                  <tr>
+                    <td >1、收银时未站立，坐着收银</td>
+                    <td width="80px;"><input type="checkbox" name="topic12Two" value="1、收银时未站立，坐着收银"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2、收银员在顾客临柜1m范围内未起立迎接</td>
+                    <td width="80px;"><input type="checkbox" name="topic12Two" value="2、收银员在顾客临柜1m范围内未起立迎接"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                   <tr>
+                       <td >3、收银结束未目送顾客离开就直接坐下</td>
+                       <td width="80px;"><input type="checkbox" name="topic12Two" value="3、收银结束未目送顾客离开就直接坐下"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                   </tr>
+                  <tr>
+                    <td >4、其他请注明_</td>
+                    <td width="80px;"><input type="text" name="topic12Six" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+                <input type="file" class="layui-btn" name="topic12Fourfile" id="test-upload-normal" value="上传图片"/>
+                <input  type="button" class="layui-btn"  id="topic12Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+              <!--<div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic12Fourfile">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-list"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>-->
+            </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+            <div   align="left">
+              <label style="width: 100px;">13-1 （收银员结账服务准确快捷，唱收唱付)是否符合要求？(单选）--收银服务</label><br/>
+                <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+              <div >
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic13One" value="1、完全符合" onclick="thirteenDiv(1)" checked="checked" /><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic13One" value="2、不符合要求"  onclick="thirteenDiv(2)" />
+              </div>
+            </div><br/>
+            <div id="thirteen" align="left">
+              <div  lay-filter="" >
+                <label style="width: 100px;">13-2不符合要求的原因是？(多选）</label><br/><br/>
+               <table    >
+                  <tr>
+                    <td >1、收银员未询问顾客是否有会员[询问话术如：您好，请问您是苏宁红孩子会员吗？]</td>
+                    <td width="80px;"><input type="checkbox" name="topic13Two" value="1、收银员未询问顾客是否有会员[询问话术如：您好，请问您是苏宁红孩子会员吗？]"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >2、收银员未对促销品促销[促销话术如：这是我们公司的促销商品XXX，请问要买一件吗？]</td>
+                    <td width="80px;"><input type="checkbox" name="topic13Two" value="2、收银员未对促销品促销[促销话术如：这是我们公司的促销商品XXX，请问要买一件吗？]"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >3、收银员未告知产品数量和价格[话术如：一共是X件商，一共XX钱]</td>
+                    <td width="80px;"><input type="checkbox" name="topic13Two" value="3、收银员未告知产品数量和价格[话术如：一共是X件商，一共XX钱]"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                  <tr>
+                    <td >4、收银员未告知收款金额[话术如：收您XX钱]</td>
+                    <td width="80px;"><input type="checkbox" name="topic13Two" value="4、收银员未告知收款金额[话术如：收您XX钱]"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                  </tr>
+                   <tr>
+                       <td >5、找零时，收银员未告知找零金额、呈递小票，为要求顾客扫码赢云钻、做服务评价并致谢[话术如：找您多少钱，请拿好小票，请您扫码评价赢云钻，对我们的服务进行评价！谢谢，请慢走！]</td>
+                       <td width="80px;"><input type="checkbox" name="topic13Two" value="5、找零时，收银员未告知找零金额、呈递小票，为要求顾客扫码赢云钻、做服务评价并致谢[话术如：找您多少钱，请拿好小票，请您扫码评价赢云钻，对我们的服务进行评价！谢谢，请慢走！]"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                   </tr>
+                  <tr>
+                    <td >6、其他请注明</td>
+                    <td width="80px;"><input type="text" name="topic13Six" class="layui-input"/></td>
+                  </tr>
+
+                </table>
+              </div><br/>
+                <input type="file" class="layui-btn" name="topic13Fourfile" id="test-upload-normal" value="上传图片"/>
+                <input  type="button" class="layui-btn"  id="topic13Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+            <!--  <div class="layui-col-md12">
+                <div class="layui-card">
+                  <div class="layui-card-header">上传多张图片</div>
+                  <div class="layui-card-body">
+                    <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="topic13Fourfile">多图片上传</button>
+                      <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>-->
+            </div><br/>
+
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">14-1 （做关联商品推荐）是否符合要求？--收银服务</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"> </label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic14One" value="1、完全符合" onclick="th14Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic14One" value="2、不符合要求"  onclick="th14Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th14" align="left">
+
+                      <div  align="left"  >
+                          <label style="width: 100px;">14-2不符合要求的原因是？(多选）</label><br/><br/>
+                          <table align="left" >
+                              <tr>
+                                  <td >1、收银员未做关联商品推荐</td>
+                                  <td width="80px;"><input type="checkbox" name="topic14Two" value="1、收银员未做关联商品推荐"    lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              </tr>
+                              <tr>
+                                  <td >2、收银员未做档期活动介绍或爆款推荐</td>
+                                  <td width="80px;"><input type="checkbox" name="topic14Two" value="2、收银员未做档期活动介绍或爆款推荐"    lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              </tr>
+                              <tr>
+                                  <td >3、收银员不熟悉商品促销信息</td>
+                                  <td width="80px;"><input type="checkbox" name="topic14Two" value="3、收银员不熟悉商品促销信息"    lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              </tr>
+                              <tr>
+                                  <td >4、在顾客结账时未针对关联产品进行推荐销售</td>
+                                  <td width="80px;"><input type="checkbox" name="topic14Two" value="4、在顾客结账时未针对关联产品进行推荐销售"    lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              </tr>
+
+                              <tr>
+                                  <td >5、其他请注明</td>
+                                  <td width="80px;"><input type="text" name="topic14Six" class="layui-input"/></td>
+                              </tr>
+
+                          </table>
+                      </div><br/>
+                  <input type="file" class="layui-btn" name="topic14Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic14Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                  <!--<div class="layui-col-md12">
+                      <div class="layui-card">
+                          <div class="layui-card-header">上传多张图片</div>
+                          <div class="layui-card-body">
+                              <div class="layui-upload">
+                                  <button type="button" class="layui-btn" id="topic14Fourfile">多图片上传</button>
+                                  <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                                      预览图：
+                                      <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                                  </blockquote>
+                              </div>
+                          </div>
+                      </div>
+                  </div>-->
+              </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">15-1 （禁止单手递送商品、现金等行为，结账完毕后，收银员主动将商品送至顾客手上）是否符合要求？--收银服务</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic15One" value="1、完全符合" onclick="th15Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic15One" value="2、不符合要求"  onclick="th15Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th15" align="left">
+                  <div  lay-filter="" >
+                      <label style="width: 100px;">15-2不符合要求的原因是？(多选）</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、收银员有单手递送商品、现金行为</td>
+                              <td width="80px;"><input type="checkbox" name="topic15Two" value="1、收银员有单手递送商品、现金行为"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、结账完毕后，收银员未主动将商品送至顾客手上</td>
+                              <td width="80px;"><input type="checkbox" name="topic15Two" value="2、结账完毕后，收银员未主动将商品送至顾客手上"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、结账完毕后，收银员未使用礼貌用语欢送顾客</td>
+                              <td width="80px;"><input type="checkbox" name="topic15Two" value="2、结账完毕后，收银员未主动将商品送至顾客手上"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+
+                          <tr>
+                              <td >4、其他请注明 </td>
+                              <td width="80px;"><input type="text" name="topic15Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  </div><br/>
+                  <input type="file" class="layui-btn" name="topic15Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic15Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                  <!--<div class="layui-col-md12">
+                      <div class="layui-card">
+                          <div class="layui-card-header">上传多张图片</div>
+                          <div class="layui-card-body">
+                              <div class="layui-upload">
+                                  <button type="button" class="layui-btn" id="topic15Fourfile">多图片上传</button>
+                                  <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                                      预览图：
+                                      <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                                  </blockquote>
+                              </div>
+                          </div>
+                      </div>
+                  </div>-->
+              </div><br/>
+
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">16-1 （收银台台面、收银台内部地面干净整洁）是否符合要求？--收银服务</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic16One" value="1、完全符合" onclick="th16Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic16One" value="2、不符合要求"  onclick="th16Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th16" align="left">
+                  <div  lay-filter="" >
+                      <label style="width: 100px;">16-2不符合要求的原因是？(多选）</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、收银区地面不干净，有无水渍、无纸屑,无乱堆杂物</td>
+                              <td width="80px;"><input type="checkbox" name="topic16Two" value="1、收银区地面不干净，有无水渍、无纸屑,无乱堆杂物"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、收银区墙面不干净，有无水渍、无纸屑,无乱堆杂物</td>
+                              <td width="80px;"><input type="checkbox" name="topic16Two" value="2、收银区墙面不干净，有无水渍、无纸屑,无乱堆杂物"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、收银区标牌不干净，有无水渍、无纸屑,无乱堆杂物</td>
+                              <td width="80px;"><input type="checkbox" name="topic16Two" value="3、收银区标牌不干净，有无水渍、无纸屑,无乱堆杂物"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >4、收银区物品不干净，有无水渍、无纸屑,无乱堆杂物</td>
+                              <td width="80px;"><input type="checkbox" name="topic16Two" value="4、收银区物品不干净，有无水渍、无纸屑,无乱堆杂物"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+
+                          <tr>
+                              <td >5、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic16Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  </div><br/>
+                  <div  lay-filter="" ><!--
+                      <label style="width: 100px;">16-3检测中共有几处不符合要求？(单选））</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、1处</td>
+                              <td width="80px;"><input type="radio" name="topic16Three" value="1、1处"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、2处</td>
+                              <td width="80px;"><input type="radio" name="topic16Three" value="2、2处"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、3处</td>
+                              <td width="80px;"><input type="radio" name="topic16Three" value="3、3处"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >4、4处及以上</td>
+                              <td width="80px;"><input type="radio" name="topic16Three" value="4、4处及以上"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+
+
+
+                      </table>
+                  --></div><br/>
+                  <input type="file" class="layui-btn" name="topic16Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic16Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+              <!--    &lt;!&ndash;<div class="layui-col-md12">
+                      <div class="layui-card">
+                          <div class="layui-card-header">上传多张图片</div>
+                          <div class="layui-card-body">
+                              <div class="layui-upload">
+                                  <button type="button" class="layui-btn" id="topic16Fourfile">多图片上传</button>
+                                  <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                                      预览图：
+                                      <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                                  </blockquote>
+                              </div>
+                          </div>
+                      </div>
+                  </div>&ndash;&gt;-->
+              </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">17-1 （收银台商品摆放整齐）是否符合要求？--收银服务</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic17One" value="1、完全符合" onclick="th17Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic17One" value="2、不符合要求"  onclick="th17Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th17" align="left">
+                  <div  lay-filter="" >
+                      <label style="width: 100px;">17-2不符合要求的原因是？(多选）</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、收银台商品摆放不整齐</td>
+                              <td width="80px;"><input type="checkbox" name="topic17Two" value="1、收银台商品摆放不整齐"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、收银台商品摆放不整齐有散落地面</td>
+                              <td width="80px;"><input type="checkbox" name="topic17Two" value="2、收银台商品摆放不整齐有散落地面"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、收银台放置除[收银显示屏、小票打印机、验钞机、扫描枪、立式水牌/POP及店推宝协议中应该放置的促销商品]以外的物品</td>
+                              <td width="80px;"><input type="checkbox" name="topic17Two" value="3、收银台放置除[收银显示屏、小票打印机、验钞机、扫描枪、立式水牌/POP及店推宝协议中应该放置的促销商品]以外的物品"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+
+                          <tr>
+                              <td >4、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic17Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  </div><br/>
+                  <input type="file" class="layui-btn" name="topic17Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic17Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                  <!--<div class="layui-col-md12">
+                      <div class="layui-card">
+                          <div class="layui-card-header">上传多张图片</div>
+                          <div class="layui-card-body">
+                              <div class="layui-upload">
+                                  <button type="button" class="layui-btn" id="topic17Fourfile">多图片上传</button>
+                                  <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                                      预览图：
+                                      <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                                  </blockquote>
+                              </div>
+                          </div>
+                      </div>
+                  </div>-->
+              </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">18-1 （工作时间内收银员禁止聚众在收银台内聊天、嬉戏打闹）是否符合要求？--收银服务</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic18One" value="1、完全符合" onclick="th18Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic18One" value="2、不符合要求"  onclick="th18Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th18" align="left">
+                  <div  lay-filter="" ><!--
+                      <label style="width: 100px;">18-2不符合要求的原因是？(多选）</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、未说“您好，会员有积分有优惠，请您出示会员码”服务用语</td>
+                              <td width="80px;"><input type="checkbox" name="topic18Two" value="1、未说“您好，会员有积分有优惠，请您出示会员码”服务用语"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、未推荐下载APP，新用户可领15元优惠券</td>
+                              <td width="80px;"><input type="checkbox" name="topic18Two" value="2、未推荐下载APP，新用户可领15元优惠券"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、如顾客明确不愿意下载APP，店员未使用话术，让顾客服手机号，进行积分</td>
+                              <td width="80px;"><input type="checkbox" name="topic18Two" value="3、如顾客明确不愿意下载APP，店员未使用话术，让顾客服手机号，进行积分"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >4、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic18Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  --></div><br/>
+                  <input type="file" class="layui-btn" name="topic18Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic18Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                 <!-- <div class="layui-col-md12">
+                      <div class="layui-card">
+                          <div class="layui-card-header">上传多张图片</div>
+                          <div class="layui-card-body">
+                              <div class="layui-upload">
+                                  <button type="button" class="layui-btn" id="topic18Fourfile">多图片上传</button>
+                                  <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                                      预览图：
+                                      <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                                  </blockquote>
+                              </div>
+                          </div>
+                      </div>
+                  </div>-->
+              </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">19-1 （工作时间内收银员禁止看视频，玩游戏，或其他与工作无关的内容）是否符合要求？--收银服务</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic19One" value="1、完全符合" onclick="th19Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic19One" value="2、不符合要求"  onclick="th19Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th19" align="left">
+                  <div  lay-filter="" >
+                      <label style="width: 100px;">19-2不符合要求的原因是？(多选）</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、收银员在工作时间内看视频</td>
+                              <td width="80px;"><input type="checkbox" name="topic19Two" value="1、收银员在工作时间内看视频"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、收银员在工作时间内玩游戏</td>
+                              <td width="80px;"><input type="checkbox" name="topic19Two" value="2、收银员在工作时间内玩游戏"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、收银员在工作时间内做其他与工作无关的事情</td>
+                              <td width="80px;"><input type="checkbox" name="topic19Two" value="3、收银员在工作时间内做其他与工作无关的事情"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >4、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic19Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  </div><br/>
+                  <input type="file" class="layui-btn" name="topic19Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic19Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                 <!-- <div class="layui-col-md12">
+                      <div class="layui-card">
+                          <div class="layui-card-header">上传多张图片</div>
+                          <div class="layui-card-body">
+                              <div class="layui-upload">
+                                  <button type="button" class="layui-btn" id="topic19Fourfile">多图片上传</button>
+                                  <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                                      预览图：
+                                      <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                                  </blockquote>
+                              </div>
+                          </div>
+                      </div>
+                  </div>-->
+              </div>
+                  <div align="left">
+                      <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+                  </div>
+
+              <div   align="left">
+                  <label style="width: 100px;">20-1 （禁止在收银台内踢、蹬、翘、靠等不规范的仪表及行为）是否符合要求？--收银服务</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic20One" value="1、完全符合" onclick="th20Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic20One" value="2、不符合要求"  onclick="th20Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th20" align="left">
+                  <div  lay-filter="" ><!--
+                      <label style="width: 100px;">20-2不符合要求的原因是？(多选）</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、顾客支付选择时，店员未说“请问您是使用苏宁支付吗”</td>
+                              <td width="80px;"><input type="checkbox" name="topic20Two" value="1、顾客支付选择时，店员未说“请问您是使用苏宁支付吗”"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、如果顾客用苏宁支付，店员未推荐开通免密支付</td>
+                              <td width="80px;"><input type="checkbox" name="topic20Two" value="2、如果顾客用苏宁支付，店员未推荐开通免密支付"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+
+                          <tr>
+                              <td >3、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic20Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  --></div><br/>
+                  <input type="file" class="layui-btn" name="topic20Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic20Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                 <!-- <div class="layui-col-md12">
+                      <div class="layui-card">
+                          <div class="layui-card-header">上传多张图片</div>
+                          <div class="layui-card-body">
+                              <div class="layui-upload">
+                                  <button type="button" class="layui-btn" id="topic20Fourfile">多图片上传</button>
+                                  <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                                      预览图：
+                                      <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                                  </blockquote>
+                              </div>
+                          </div>
+                      </div>
+                  </div>-->
+              </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+
+              <div   align="left">
+                  <label style="width: 100px;">21-1 （收银时主动询问顾客是否持有会员卡）是否符合要求？--收银服务</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（付款后，店员是否有说“您的小票请收好！”，同时向顾客双手呈递购物小票及找零【含刷卡】）</label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic21One" value="1、完全符合" onclick="th21Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic21One" value="2、不符合要求"  onclick="th21Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th21" align="left">
+                  <div  lay-filter="" >
+                      <label style="width: 100px;">21-2不符合要求的原因是？(多选）</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、收银时，收银员未主动询问顾客是否持有会员卡</td>
+                              <td width="80px;"><input type="checkbox" name="topic21Two" value="1、收银时，收银员未主动询问顾客是否持有会员卡”"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、收银时，收银员在得知顾客无会员卡时，未推荐办理会员卡</td>
+                              <td width="80px;"><input type="checkbox" name="topic21Two" value="2、收银时，收银员在得知顾客无会员卡时，未推荐办理会员卡"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、收银时，顾客有办理会员卡需求，收银员未引导其办理</td>
+                              <td width="80px;"><input type="checkbox" name="topic21Two" value="3、收银时，顾客有办理会员卡需求，收银员未引导其办理"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >4、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic21Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  </div><br/>
+                  <input type="file" class="layui-btn" name="topic21Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic21Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                <!--  <div class="layui-col-md12">
+                      <div class="layui-card">
+                          <div class="layui-card-header">上传多张图片</div>
+                          <div class="layui-card-body">
+                              <div class="layui-upload">
+                                  <button type="button" class="layui-btn" id="topic21Fourfile">多图片上传</button>
+                                  <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                                      预览图：
+                                      <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                                  </blockquote>
+                              </div>
+                          </div>
+                      </div>
+                  </div>-->
+
+              </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">22-1 （商品陈列前置原则）是否符合要求？(单选）--商品陈列</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic22One" value="1、完全符合" onclick="th22Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic22One" value="2、不符合要求"  onclick="th22Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th22" align="left">
+                  <div  lay-filter="" >
+                      <label style="width: 100px;">22-2不符合要求的原因是？(多选）</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、所有商品以货架前端价签插条为线，未做到由前至后进行陈列，前后商品不一致</td>
+                              <td width="80px;"><input type="checkbox" name="topic22Two" value="1、所有商品以货架前端价签插条为线，未做到由前至后进行陈列，前后商品不一致"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、商品陈列不整齐有散落</td>
+                              <td width="80px;"><input type="checkbox" name="topic22Two" value="2、商品陈列不整齐有散落"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic22Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  </div><br/>
+                  <input type="file" class="layui-btn" name="topic22Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic22Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+
+              </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">23-1 （货架商品陈列丰满原则）是否符合要求？(单选）--商品陈列</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic23One" value="1、完全符合" onclick="th23Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic23One" value="2、不符合要求"  onclick="th23Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th23" align="left">
+                  <div  lay-filter="" >
+                      <label style="width: 100px;">23-2不符合要求的原因是？(多选）</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、商品占据的空间超过所分配的陈列空间的1/2</td>
+                              <td width="80px;"><input type="checkbox" name="topic23Two" value="1、商品占据的空间超过所分配的陈列空间的1/2"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、前端商品销售后，未及时将后端商品陈列在前端</td>
+                              <td width="80px;"><input type="checkbox" name="topic23Two" value="2、前端商品销售后，未及时将后端商品陈列在前端"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic23Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  </div><br/>
+                  <input type="file" class="layui-btn" name="topic23Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic23Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                 <!-- <div class="layui-col-md12">
+                      <div class="layui-card">
+                          <div class="layui-card-header">上传多张图片</div>
+                          <div class="layui-card-body">
+                              <div class="layui-upload">
+                                  <button type="button" class="layui-btn" id="topic23Fourfile">多图片上传</button>
+                                  <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                                      预览图：
+                                      <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                                  </blockquote>
+                              </div>
+                          </div>
+                      </div>
+                  </div>-->
+              </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">24-1 （货架层板间距合理，商品陈列顶层不得超过货架高度）是否符合要求？(单选）--商品陈列</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic24One" value="1、完全符合" onclick="th24Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic24One" value="2、不符合要求"  onclick="th24Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th24" align="left">
+                  <div  lay-filter="" >
+                      <label style="width: 100px;">24-2不符合要求的原因是？(多选）</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、货架顶层商品陈列高度未做到相对一致</td>
+                              <td width="80px;"><input type="checkbox" name="topic24Two" value="1、货架顶层商品陈列高度未做到相对一致"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、顶层商品高度高于货架顶部高度</td>
+                              <td width="80px;"><input type="checkbox" name="topic24Two" value="2、顶层商品高度高于货架顶部高度"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、商品与货架上层板之间未保持两指宽距离，并露出背板</td>
+                              <td width="80px;"><input type="checkbox" name="topic24Two" value="3、商品与货架上层板之间未保持两指宽距离，并露出背板"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic24Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  </div><br/>
+                  <input type="file" class="layui-btn" name="topic24Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic24Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                  <!--<div class="layui-col-md12">
+                      <div class="layui-card">
+                          <div class="layui-card-header">上传多张图片</div>
+                          <div class="layui-card-body">
+                              <div class="layui-upload">
+                                  <button type="button" class="layui-btn" id="topic24Fourfile">多图片上传</button>
+                                  <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                                      预览图：
+                                      <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                                  </blockquote>
+                              </div>
+                          </div>
+                      </div>
+                  </div>-->
+                  <input type="file" class="layui-btn" name="topic24Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic24Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+              </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">25-1 （商品陈列正面面向顾客）是否符合要求？(单选）--商品陈列</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic25One" value="1、完全符合" onclick="th25Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic25One" value="2、不符合要求"  onclick="th25Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th25" align="left">
+                  <div  lay-filter="" >
+                      <label style="width: 100px;">25-2不符合要求的原因是？(多选）</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、商品的正面[品名清晰、图案、色彩丰富的一面]未正立或根据不同高度调整，未能使正面面向顾客</td>
+                              <td width="80px;"><input type="checkbox" name="topic25Two" value="1、商品的正面[品名清晰、图案、色彩丰富的一面]未正立或根据不同高度调整，未能使正面面向顾客"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、商品朝向不一致</td>
+                              <td width="80px;"><input type="checkbox" name="topic25Two" value="2、商品朝向不一致"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、商品未分界成线[同种商品的各陈列面朝向应一致，相邻两种商品之间的分界线应一目了然]</td>
+                              <td width="80px;"><input type="checkbox" name="topic25Two" value="3、商品未分界成线[同种商品的各陈列面朝向应一致，相邻两种商品之间的分界线应一目了然]"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >4、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic25Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  </div><br/>
+                  <input type="file" class="layui-btn" name="topic25Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic25Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                 <!-- <div class="layui-col-md12">
+                      <div class="layui-card">
+                          <div class="layui-card-header">上传多张图片</div>
+                          <div class="layui-card-body">
+                              <div class="layui-upload">
+                                  <button type="button" class="layui-btn" id="topic25Fourfile">多图片上传</button>
+                                  <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                                      预览图：
+                                      <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                                  </blockquote>
+                              </div>
+                          </div>
+                      </div>
+                  </div>-->
+              </div>
+
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">26-1 (货架上商品陈列需先进先出）是否符合要求？(单选）--商品陈列</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic26One" value="1、完全符合" onclick="th26Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic26One" value="2、不符合要求"  onclick="th26Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th26" align="left">
+                  <div  lay-filter="" ><!--
+                      <label style="width: 100px;">26-2不符合要求的原因是？(多选）</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、头发染夸张颜色</td>
+                              <td width="80px;"><input type="checkbox" name="topic26Two" value="1、头发染夸张颜色"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、头部不干净有头屑</td>
+                              <td width="80px;"><input type="checkbox" name="topic26Two" value="2、头部不干净有头屑"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、男生头发过眉，两侧过耳</td>
+                              <td width="80px;"><input type="checkbox" name="topic26Two" value="3、男生头发过眉，两侧过耳"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >4、女生长发未扎起来，刘海遮眼睛</td>
+                              <td width="80px;"><input type="checkbox" name="topic26Two" value="4、女生长发未扎起来，刘海遮眼睛"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >5、男生/女生带耳钉、耳环</td>
+                              <td width="80px;"><input type="checkbox" name="topic26Two" value="5、男生/女生带耳钉、耳环"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >6、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic26Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  --></div><br/>
+                  <input type="file" class="layui-btn" name="topic26Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic26Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                 <!-- <div class="layui-col-md12">
+                      <div class="layui-card">
+                          <div class="layui-card-header">上传多张图片</div>
+                          <div class="layui-card-body">
+                              <div class="layui-upload">
+                                  <button type="button" class="layui-btn" id="topic26Fourfile">多图片上传</button>
+                                  <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                                      预览图：
+                                      <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                                  </blockquote>
+                              </div>
+                          </div>
+                      </div>
+                  </div>-->
+              </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+
+                  <label style="width: 100px;">27-1 （货架上不得陈列变质、包装破损、临过期商品，商品效期检查表如期检查）是否符合要求？(单选）--商品陈列</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic27One" value="1、完全符合" onclick="th27Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic27One" value="2、不符合要求"  onclick="th27Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th27" align="left">
+                  <div  lay-filter="" >
+                      <label style="width: 100px;">27-2不符合要求的原因是？(多选）</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、有过期商品</td>
+                              <td width="80px;"><input type="checkbox" name="topic27Two" value="1、有过期商品"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、有变质商品</td>
+                              <td width="80px;"><input type="checkbox" name="topic27Two" value="2、有变质商品"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、有严重瘪罐商品</td>
+                              <td width="80px;"><input type="checkbox" name="topic27Two" value="3、有严重瘪罐商品"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >4、有商标脱落商品</td>
+                              <td width="80px;"><input type="checkbox" name="topic27Two" value="4、有商标脱落商品"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >5、有外包装破损商品</td>
+                              <td width="80px;"><input type="checkbox" name="topic27Two" value="5、有外包装破损商品"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >6、有发生严重锈蚀商品</td>
+                              <td width="80px;"><input type="checkbox" name="topic27Two" value="6、有发生严重锈蚀商品"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >7、有标识模糊不清商品</td>
+                              <td width="80px;"><input type="checkbox" name="topic27Two" value="7、有标识模糊不清商品"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >8、有临期商品未下架1（保质期低于12个月的商品应与临期1个月以前下架）</td>
+                              <td width="80px;"><input type="checkbox" name="topic27Two" value="8、有临期商品未下架1（保质期低于12个月的商品应与临期1个月以前下架）"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >9、有临期商品未下架2（保质期在12个月（含）以上的商品应与临期45天以前下架）</td>
+                              <td width="80px;"><input type="checkbox" name="topic27Two" value="9、有临期商品未下架2（保质期在12个月（含）以上的商品应与临期45天以前下架）"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >10、门店无商品有效期检查表</td>
+                              <td width="80px;"><input type="checkbox" name="topic27Two" value="10、门店无商品有效期检查表"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                          <td >11、门店有商品有效期检查表，但未每日填写</td>
+                          <td width="80px;"><input type="checkbox" name="topic27Two" value="11、门店有商品有效期检查表，但未每日填写"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                         </tr>
+                          <tr>
+                              <td >12、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic27Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  </div><br/>
+                  <input type="file" class="layui-btn" name="topic27Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic27Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+
+              </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">28-1 （卖场陈列商品按要求上磁扣）是否符合要求？(单选）--商品陈列</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic28One" value="1、完全符合" onclick="th28Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic28One" value="2、不符合要求"  onclick="th28Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th28" align="left">
+                  <div  lay-filter="" >
+                      <label style="width: 100px;">28-2不符合要求的原因？</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、自营（经销、代销）孕童服饰类未使用磁针扣保护</td>
+                              <td width="80px;"><input type="checkbox" name="topic28Two" value="1、自营（经销、代销）孕童服饰类未使用磁针扣保护"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、鞋类100元以上未使用磁针扣保护</td>
+                              <td width="80px;"><input type="checkbox" name="topic28Two" value="2、鞋类100元以上未使用磁针扣保护"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、自营（经销、代销）服饰配件类（袜子、帽子、围巾）未使用磁针扣保护</td>
+                              <td width="80px;"><input type="checkbox" name="topic28Two" value="3、自营（经销、代销）服饰配件类（袜子、帽子、围巾）未使用磁针扣保护"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >4、箱包类50元以上未使用磁针扣或磁针扣+钢丝绳保护</td>
+                              <td width="80px;"><input type="checkbox" name="topic28Two" value="4、箱包类50元以上未使用磁针扣或磁针扣+钢丝绳保护"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >5、一类（一线畅销品牌）玩具类体积小于30*30（CM）未使用软磁条进行保护</td>
+                              <td width="80px;"><input type="checkbox" name="topic28Two" value="5、一类（一线畅销品牌）玩具类体积小于30*30（CM）未使用软磁条进行保护"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >6、奶粉类100元以上未使用奶粉帽、奶粉扣、奶粉夹或软磁条进行保护</td>
+                              <td width="80px;"><input type="checkbox" name="topic28Two" value="6、奶粉类100元以上未使用奶粉帽、奶粉扣、奶粉夹或软磁条进行保护"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >7、婴童阶段辅助车辆未使用磁针扣+钢丝绳保护</td>
+                              <td width="80px;"><input type="checkbox" name="topic28Two" value="7、婴童阶段辅助车辆未使用磁针扣+钢丝绳保护"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >8、婴童日常辅具类50元以上未使用软磁条进行保护</td>
+                              <td width="80px;"><input type="checkbox" name="topic28Two" value="8、婴童日常辅具类50元以上未使用软磁条进行保护"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >9、清美用品（清洁美妆）50元以上未使用软磁条进行保护</td>
+                              <td width="80px;"><input type="checkbox" name="topic28Two" value="9、清美用品（清洁美妆）50元以上未使用软磁条进行保护"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >10、日常电动辅具类商品（工具）100元以上未使用捆绑扣或软磁条进行保护。</td>
+                              <td width="80px;"><input type="checkbox" name="topic28Two" value="10、日常电动辅具类商品（工具）100元以上未使用捆绑扣或软磁条进行保护。"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >11、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic28Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  </div><br/>
+                  <input type="file" class="layui-btn" name="topic28Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic28Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+
+              </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">29-1 （货架、商品卫生干净无落灰）是否符合要求？(单选）--商品陈列</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic29One" value="1、完全符合" onclick="th29Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic29One" value="2、不符合要求"  onclick="th29Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th29" align="left">
+                  <div  lay-filter="" >
+                      <label style="width: 100px;">29-2不符合要求的原因？</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、店内货架不干净整洁，有垃圾、浮灰或污渍</td>
+                              <td width="80px;"><input type="checkbox" name="topic29Two" value="1、店内货架不干净整洁，有垃圾、浮灰或污渍"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、货架商品上有明显落灰</td>
+                              <td width="80px;"><input type="checkbox" name="topic29Two" value="2、货架商品上有明显落灰"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic29Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  </div><br/>
+                  <input type="file" class="layui-btn" name="topic29Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic29Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+
+              </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">30-1 （货架上遗弃商品及时整理）是否符合要求？(单选）--商品陈列</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic30One" value="1、完全符合" onclick="th30Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic30One" value="2、不符合要求"  onclick="th30Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th30" align="left">
+                  <div  lay-filter="" >
+                      <label style="width: 100px;">30-2不符合要求的原因？</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、正常货架上出现孤儿商品（视为遗弃商品），未及时整理归位</td>
+                              <td width="80px;"><input type="checkbox" name="topic30Two" value="1、正常货架上出现孤儿商品（视为遗弃商品），未及时整理归位"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、正常货架上出现孤儿商品（视为遗弃商品），附近有未接待顾客的员工，10分钟内未对产品进行整理</td>
+                              <td width="80px;"><input type="checkbox" name="topic30Two" value="2、正常货架上出现孤儿商品（视为遗弃商品），附近有未接待顾客的员工，10分钟内未对产品进行整理"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic30Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  </div><br/>
+                  <input type="file" class="layui-btn" name="topic30Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic30Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+
+              </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">31-1 （商品价签无错误损毁）是否符合要求？(单选）--商品陈列</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic31One" value="1、完全符合" onclick="th31Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic31One" value="2、不符合要求"  onclick="th31Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th31" align="left">
+                  <div  lay-filter="" >
+                      <label style="width: 100px;">31-2不符合要求的原因？</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、商品价签有手写现象</td>
+                              <td width="80px;"><input type="checkbox" name="topic31Two" value="1、商品价签有手写现象"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、有破算的价签，且破损的区域超过该价签五分之一且有信息缺失</td>
+                              <td width="80px;"><input type="checkbox" name="topic31Two" value="2、有破算的价签，且破损的区域超过该价签五分之一且有信息缺失"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、店内标签使用超过3个月</td>
+                              <td width="80px;"><input type="checkbox" name="topic31Two" value="3、店内标签使用超过3个月"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >4、价签所标价格与商品实际价格不符</td>
+                              <td width="80px;"><input type="checkbox" name="topic31Two" value="4、价签所标价格与商品实际价格不符"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >5、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic31Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  </div><br/>
+                  <input type="file" class="layui-btn" name="topic31Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic31Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+              </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">32-1 （标价签应放置商品左下角，价签无缺失）是否符合要求？(单选）--商品陈列</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic32One" value="1、完全符合" onclick="th32Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic32One" value="2、不符合要求"  onclick="th32Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th32" align="left">
+                  <div  lay-filter="" >
+                      <label style="width: 100px;">32-2不符合要求的原因？</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、价签有缺失</td>
+                              <td width="80px;"><input type="checkbox" name="topic32Two" value="1、价签有缺失"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、商品左下角未放置标价签</td>
+                              <td width="80px;"><input type="checkbox" name="topic32Two" value="2、商品左下角未放置标价签"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、商品未做到一货一签、货签对应、出现有货无签情况</td>
+                              <td width="80px;"><input type="checkbox" name="topic32Two" value="3、商品未做到一货一签、货签对应、出现有货无签情况"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >4、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic32Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  </div><br/>
+                  <input type="file" class="layui-btn" name="topic32Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic32Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+              </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">33-1 （地堆陈列规范）是否符合要求？(单选）--商品陈列</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic33One" value="1、完全符合" onclick="th33Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic33One" value="2、不符合要求"  onclick="th33Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th33" align="left">
+                  <div  lay-filter="" >
+                      <label style="width: 100px;">33-2不符合要求的原因？</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、有堆头商品陈列高度超过1.5m</td>
+                              <td width="80px;"><input type="checkbox" name="topic33Two" value="1、有堆头商品陈列高度超过1.5m"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、有堆码商品的面积超过4（0.6M*0.6M)</td>
+                              <td width="80px;"><input type="checkbox" name="topic33Two" value="2、有堆码商品的面积超过4（0.6M*0.6M)"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、堆码商品的价格签不醒目</td>
+                              <td width="80px;"><input type="checkbox" name="topic33Two" value="3、堆码商品的价格签不醒目"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >4、POP价签不醒目</td>
+                              <td width="80px;"><input type="checkbox" name="topic33Two" value="4、POP价签不醒目"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >5、同一通道内的同种形式的若干个堆码，大小和高度不统一</td>
+                              <td width="80px;"><input type="checkbox" name="topic33Two" value="5、同一通道内的同种形式的若干个堆码，大小和高度不统一"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >6、堆码商品直接落地（堆码底部未放置一个或两个垫板）</td>
+                              <td width="80px;"><input type="checkbox" name="topic33Two" value="6、堆码商品直接落地（堆码底部未放置一个或两个垫板）"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >7、堆码底部放置一个或两个垫板，但堆码的面积未以垫板的面积为基准</td>
+                              <td width="80px;"><input type="checkbox" name="topic33Two" value="7、堆码底部放置一个或两个垫板，但堆码的面积未以垫板的面积为基准"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >8、堆码底部放置一个或两个垫板，但上面摆放的商品面积与垫板的面积不对应</td>
+                              <td width="80px;"><input type="checkbox" name="topic33Two" value="8、堆码底部放置一个或两个垫板，但上面摆放的商品面积与垫板的面积不对应"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >9、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic33Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  </div><br/>
+                  <input type="file" class="layui-btn" name="topic33Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic33Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                  <!--<div class="layui-col-md12">
+                      <div class="layui-card">
+                          <div class="layui-card-header">上传多张图片</div>
+                          <div class="layui-card-body">
+                              <div class="layui-upload">
+                                  <button type="button" class="layui-btn" id="topic33Fourfile">多图片上传</button>
+                                  <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                                      预览图：
+                                      <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                                  </blockquote>
+                              </div>
+                          </div>
+                      </div>
+                  </div>-->
+              </div>
+
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">34-1 （花车陈列规范）是否符合要求？(单选）--商品陈列</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic34One" value="1、完全符合" onclick="th34Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic34One" value="2、不符合要求"  onclick="th34Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th34" align="left">
+                  <div  lay-filter="" >
+                      <label style="width: 100px;">34-2不符合要求的原因？</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、有堆头商品陈列高度超过1.5m</td>
+                              <td width="80px;"><input type="checkbox" name="topic34Two" value="1、有堆头商品陈列高度超过1.5m"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、有堆码商品的组合面积超过4（0.6M*0.6M)</td>
+                              <td width="80px;"><input type="checkbox" name="topic34Two" value="2、有堆码商品的组合面积超过4（0.6M*0.6M)"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、主通道花车与花车之间距离小于2.4M</td>
+                              <td width="80px;"><input type="checkbox" name="topic34Two" value="3、主通道花车与花车之间距离小于2.4M"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >4、花车与地堆之间距离于2.4M</td>
+                              <td width="80px;"><input type="checkbox" name="topic34Two" value="4、花车与地堆之间距离于2.4M"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >5、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic34Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  </div><br/>
+                  <input type="file" class="layui-btn" name="topic34Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic34Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                <!--  <div class="layui-col-md12">
+                      <div class="layui-card">
+                          <div class="layui-card-header">上传多张图片</div>
+                          <div class="layui-card-body">
+                              <div class="layui-upload">
+                                  <button type="button" class="layui-btn" id="topic34Fourfile">多图片上传</button>
+                                  <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                                      预览图：
+                                      <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                                  </blockquote>
+                              </div>
+                          </div>
+                      </div>
+                  </div>-->
+              </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">35-1 （过期和破损物料及时撤除）是否符合要求？(单选）--美陈布展</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic35One" value="1、完全符合" onclick="th35Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic35One" value="2、不符合要求"  onclick="th35Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th35" align="left">
+                  <div  lay-filter="" >
+                      <label style="width: 100px;">35-2不符合要求的原因？</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、四季布展物料不对应季节进行布展（对应的季节应为：春季：2月初-4月底，秋季：5月初-8月底，夏季：9月初-11月底，冬季：12月初-1月底）</td>
+                              <td width="80px;"><input type="checkbox" name="topic35Two" value="1、四季布展物料不对应季节进行布展（对应的季节应为：春季：2月初-4月底，秋季：5月初-8月底，夏季：9月初-11月底，冬季：12月初-1月底）"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、未及时撤除不在对应促销活动档期的促销物料或破损物料</td>
+                              <td width="80px;"><input type="checkbox" name="topic35Two" value="2、未及时撤除不在对应促销活动档期的促销物料或破损物料"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic35Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  </div><br/>
+                  <input type="file" class="layui-btn" name="topic35Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic35Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                 <!-- <div class="layui-col-md12">
+                      <div class="layui-card">
+                          <div class="layui-card-header">上传多张图片</div>
+                          <div class="layui-card-body">
+                              <div class="layui-upload">
+                                  <button type="button" class="layui-btn" id="topic35Fourfile">多图片上传</button>
+                                  <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                                      预览图：
+                                      <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                                  </blockquote>
+                              </div>
+                          </div>
+                      </div>
+                  </div>-->
+                  <input type="file" class="layui-btn" name="topic35Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic35Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+              </div>
+
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">36-1 （封套布展在标准点位，且按标准规范进行布展，布展内容和布展形式进行对应）是否符合要求？(单选）--美陈布展</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic36One" value="1、完全符合" onclick="th36Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic36One" value="2、不符合要求"  onclick="th36Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th36" align="left">
+                  <div  lay-filter="" >
+                      <label style="width: 100px;">36-2不符合要求的原因？</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、小号促销封套：未布展在中岛货架上</td>
+                              <td width="80px;"><input type="checkbox" name="topic36Two" value="1、小号促销封套：未布展在中岛货架上"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、小号促销封套：于货架最下面一层进行布展</td>
+                              <td width="80px;"><input type="checkbox" name="topic36Two" value="2、小号促销封套：于货架最下面一层进行布展"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、大号促销封套：未布展在高背货架上</td>
+                              <td width="80px;"><input type="checkbox" name="topic36Two" value="3、大号促销封套：未布展在高背货架上"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >4、大号促销封套：于货架最上面一层和最下面一层进行布展</td>
+                              <td width="80px;"><input type="checkbox" name="topic36Two" value="4、大号促销封套：于货架最上面一层和最下面一层进行布展"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >5、小号/大号促销封套：一整节货架促销封套低于2个</td>
+                              <td width="80px;"><input type="checkbox" name="topic36Two" value="5、小号/大号促销封套：一整节货架促销封套低于2个"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >6、小号/大号促销封套：一整节货架促销封套超过6种</td>
+                              <td width="80px;"><input type="checkbox" name="topic36Two" value="6、小号/大号促销封套：一整节货架促销封套超过6种"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >7、小号/大号促销封套：同一种类型出现3次</td>
+                              <td width="80px;"><input type="checkbox" name="topic36Two" value="7、小号/大号促销封套：同一种类型出现3次"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >8、布展内容和布展形式不对应</td>
+                              <td width="80px;"><input type="checkbox" name="topic36Two" value="8、布展内容和布展形式不对应"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >9、有大号封套内放置小号封套纸现象</td>
+                              <td width="80px;"><input type="checkbox" name="topic36Two" value="9、有大号封套内放置小号封套纸现象"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >10、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic36Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  </div><br/>
+                  <input type="file" class="layui-btn" name="topic36Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic36Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                <!--  <div class="layui-col-md12">
+                      <div class="layui-card">
+                          <div class="layui-card-header">上传多张图片</div>
+                          <div class="layui-card-body">
+                              <div class="layui-upload">
+                                  <button type="button" class="layui-btn" id="topic36Fourfile">多图片上传</button>
+                                  <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                                      预览图：
+                                      <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                                  </blockquote>
+                              </div>
+                          </div>
+                      </div>
+                  </div>-->
+              </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">37-1 （POP展示的商品促销信息与实物所在位置一致）是否符合要求？(单选）--美陈布展</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic37One" value="1、完全符合" onclick="th37Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic37One" value="2、不符合要求"  onclick="th37Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th37" align="left">
+                  <div  lay-filter="" ><!--
+                      <label style="width: 100px;">37-2不符合要求的原因？</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、打餐区不干净整洁</td>
+                              <td width="80px;"><input type="checkbox" name="topic37Two" value="1、打餐区不干净整洁"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、打餐区有商品堆积</td>
+                              <td width="80px;"><input type="checkbox" name="topic37Two" value="2、打餐区有商品堆积"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、关东煮锅周边有汤渍、有污渍</td>
+                              <td width="80px;"><input type="checkbox" name="topic37Two" value="3、关东煮锅周边有汤渍、有污渍"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >4、烤肠机周边有汤渍、有污渍</td>
+                              <td width="80px;"><input type="checkbox" name="topic37Two" value="4、烤肠机周边有汤渍、有污渍"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >5、茶叶蛋锅周边有汤渍、有污渍</td>
+                              <td width="80px;"><input type="checkbox" name="topic37Two" value="5、茶叶蛋锅周边有汤渍、有污渍"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >6、蒸包机周边有汤渍、有污渍</td>
+                              <td width="80px;"><input type="checkbox" name="topic37Two" value="6、蒸包机周边有汤渍、有污渍"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >7、关东煮锅、烤肠机防尘罩上有汢渍、有污渍</td>
+                              <td width="80px;"><input type="checkbox" name="topic37Two" value="7、关东煮锅、烤肠机防尘罩上有汢渍、有污渍"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >8、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic37Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  --></div><br/>
+                  <input type="file" class="layui-btn" name="topic37Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic37Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                 <!-- <div class="layui-col-md12">
+                      <div class="layui-card">
+                          <div class="layui-card-header">上传多张图片</div>
+                          <div class="layui-card-body">
+                              <div class="layui-upload">
+                                  <button type="button" class="layui-btn" id="topic37Fourfile">多图片上传</button>
+                                  <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                                      预览图：
+                                      <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                                  </blockquote>
+                              </div>
+                          </div>
+                      </div>
+                  </div>-->
+              </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">38-1 （出现厂家物料，未填写发布单进行发布）是否符合要求？(单选）--美陈布展</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic38One" value="1、完全符合" onclick="th38Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic38One" value="2、不符合要求"  onclick="th38Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th38" align="left">
+                  <input type="file" class="layui-btn" name="topic38Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic38Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                  <!--<div class="layui-col-md12">
+                      <div class="layui-card">
+                          <div class="layui-card-header">上传多张图片</div>
+                          <div class="layui-card-body">
+                              <div class="layui-upload">
+                                  <button type="button" class="layui-btn" id="topic38Fourfile">多图片上传</button>
+                                  <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                                      预览图：
+                                      <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                                  </blockquote>
+                              </div>
+                          </div>
+                      </div>
+                  </div>-->
+              </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">39-1 （商品促销价签是否过期未更换）是否符合要求？(单选）--美陈布展</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"> </label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic39One" value="1、完全符合" onclick="th39Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic39One" value="2、不符合要求"  onclick="th39Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th39" align="left">
+                  <div  lay-filter="" ><!--
+                      <label style="width: 100px;">39-2不符合要求的原因？</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、门店营业许可证未公示</td>
+                              <td width="80px;"><input type="checkbox" name="topic39Two" value="1、门店营业许可证未公示"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、食品经营许可证未公示</td>
+                              <td width="80px;"><input type="checkbox" name="topic39Two" value="2、食品经营许可证未公示"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、员工健康证未办理齐全</td>
+                              <td width="80px;"><input type="checkbox" name="topic39Two" value="3、员工健康证未办理齐全"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >4、员工健康证未在有效期</td>
+                              <td width="80px;"><input type="checkbox" name="topic39Two" value="4、员工健康证未在有效期"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >5、员工健康证未在收银区公示</td>
+                              <td width="80px;"><input type="checkbox" name="topic39Two" value="5、员工健康证未在收银区公示"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >6、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic39Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  --></div><br/>
+                  <input type="file" class="layui-btn" name="topic39Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic39Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                 <!-- <div class="layui-col-md12">
+                      <div class="layui-card">
+                          <div class="layui-card-header">上传多张图片</div>
+                          <div class="layui-card-body">
+                              <div class="layui-upload">
+                                  <button type="button" class="layui-btn" id="topic39Fourfile">多图片上传</button>
+                                  <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                                      预览图：
+                                      <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                                  </blockquote>
+                              </div>
+                          </div>
+                      </div>
+                  </div>-->
+              </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">40-1 （育婴师、苏宁邮局、红孩子APP下载店内是否布展）是否符合要求？(单选）--美陈布展</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic40One" value="1、完全符合" onclick="th40Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic40One" value="2、不符合要求"  onclick="th40Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th40" align="left">
+                  <div  lay-filter="" >
+                      <label style="width: 100px;">40-2不符合要求的原因？</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、育婴师布展未露出</td>
+                              <td width="80px;"><input type="checkbox" name="topic40Two" value="1、育婴师布展未露出"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、苏宁邮局布展未露出</td>
+                              <td width="80px;"><input type="checkbox" name="topic40Two" value="2、苏宁邮局布展未露出"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、红孩子APP下载三个布展门店未露出</td>
+                              <td width="80px;"><input type="checkbox" name="topic40Two" value="3、红孩子APP下载三个布展门店未露出"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >4、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic40Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  </div><br/>
+                  <input type="file" class="layui-btn" name="topic40Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic40Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                 <!-- <div class="layui-col-md12">
+                      <div class="layui-card">
+                          <div class="layui-card-header">上传多张图片</div>
+                          <div class="layui-card-body">
+                              <div class="layui-upload">
+                                  <button type="button" class="layui-btn" id="topic40Fourfile">多图片上传</button>
+                                  <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                                      预览图：
+                                      <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                                  </blockquote>
+                              </div>
+                          </div>
+                      </div>
+                  </div>-->
+              </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">41-1 （工作人员态度良好、礼貌规范[三米原则]）是否符合要求？(单选）--店员服务</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic41One" value="1、完全符合" onclick="th41Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic41One" value="2、不符合要求"  onclick="th41Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th41" align="left">
+                  <div  lay-filter="" >
+                      <label style="width: 100px;">41-2不符合要求的原因？</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、工作人员看见顾客后，未在三米内自然微笑</td>
+                              <td width="80px;"><input type="checkbox" name="topic41Two" value="1、工作人员看见顾客后，未在三米内自然微笑"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、工作人员看见顾客后，未目视顾客</td>
+                              <td width="80px;"><input type="checkbox" name="topic41Two" value="2、工作人员看见顾客后，未目视顾客"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、工作人员看见顾客后，未在距离其1米左右的距离15°弯腰</td>
+                              <td width="80px;"><input type="checkbox" name="topic41Two" value="3、工作人员看见顾客后，未在距离其1米左右的距离15°弯腰"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >4、工作人员看见顾客后，未亲切问候：“欢迎光临苏宁红孩子！”</td>
+                              <td width="80px;"><input type="checkbox" name="topic41Two" value="4、工作人员看见顾客后，未亲切问候：“欢迎光临苏宁红孩子！”"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >5、工作人员发现顾客要离店时，未亲切问候离店时：谢谢光临！</td>
+                              <td width="80px;"><input type="checkbox" name="topic41Two" value="5、工作人员发现顾客要离店时，未亲切问候离店时：谢谢光临！"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >6、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic41Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  </div><br/>
+           <!--       <input type="file" class="layui-btn" name="topic41Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic41Fourfile" onclick="fileFour(this)"  value="上传图片"/>-->
+              </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">42-1 （工作人员仪容仪表整洁规范）是否符合要求？(单选）--店员服务</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic42One" value="1、完全符合" onclick="th42Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic42One" value="2、不符合要求"  onclick="th42Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th42" align="left">
+                  <div  lay-filter="" >
+                      <label style="width: 100px;">42-2不符合要求的原因？</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、女员工长发过肩未扎系</td>
+                              <td width="80px;"><input type="checkbox" name="topic42Two" value="1、女员工长发过肩未扎系"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、男员工留胡须</td>
+                              <td width="80px;"><input type="checkbox" name="topic42Two" value="2、男员工留胡须"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、男员工留长发，鬓角过耳</td>
+                              <td width="80px;"><input type="checkbox" name="topic42Two" value="3、男员工留长发，鬓角过耳"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >4、女员工有涂抹浓艳色彩的指甲油现象</td>
+                              <td width="80px;"><input type="checkbox" name="topic42Two" value="4、女员工有涂抹浓艳色彩的指甲油现象"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >5、女员工未化淡妆或化妆浓妆艳抹、标新立异</td>
+                              <td width="80px;"><input type="checkbox" name="topic42Two" value="5、女员工未化淡妆或化妆浓妆艳抹、标新立异"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >6、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic42Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  </div><br/>
+                  <input type="file" class="layui-btn" name="topic42Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic42Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+              </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">43-1 （工作人员仪态良好，站姿、坐姿端正，无趴柜、靠柜、坐岗，无聚集聊天或把玩手机的现象 ）是否符合要求？(单选）--店员服务</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic43One" value="1、完全符合" onclick="th43Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic43One" value="2、不符合要求"  onclick="th43Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th43" align="left">
+                  <div  lay-filter="" >
+                      <label style="width: 100px;">43-2不符合要求的原因？</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、工作人员仪态较差</td>
+                              <td width="80px;"><input type="checkbox" name="topic43Two" value="1、工作人员仪态较差"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、站姿/坐姿不端正</td>
+                              <td width="80px;"><input type="checkbox" name="topic43Two" value="2、站姿/坐姿不端正"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、有趴柜/靠柜/坐岗现象</td>
+                              <td width="80px;"><input type="checkbox" name="topic43Two" value="3、有趴柜/靠柜/坐岗现象"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >4、有聚集聊天或把玩手机的现象</td>
+                              <td width="80px;"><input type="checkbox" name="topic43Two" value="4、有聚集聊天或把玩手机的现象"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >5、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic43Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  </div><br/>
+                  <input type="file" class="layui-btn" name="topic43Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic43Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                  <!--<div class="layui-col-md12">
+                      <div class="layui-card">
+                          <div class="layui-card-header">上传多张图片</div>
+                          <div class="layui-card-body">
+                              <div class="layui-upload">
+                                  <button type="button" class="layui-btn" id="topic43Fourfile">多图片上传</button>
+                                  <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                                      预览图：
+                                      <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                                  </blockquote>
+                              </div>
+                          </div>
+                      </div>r
+                  </div>-->
+              </div>
+
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">44-1 （工作人员有效提供问询解答）是否符合要求？(单选）--店员服务</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic44One" value="1、完全符合" onclick="th44Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic44One" value="2、不符合要求"  onclick="th44Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th44" align="left">
+                  <div  lay-filter="" >
+                      <label style="width: 100px;">44-2不符合要求的原因？</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、工作人员在遇到询问时（例如询问某商品的位置、价格、产品功能等）未能够清晰的解答</td>
+                              <td width="80px;"><input type="checkbox" name="topic44Two" value="1、工作人员在遇到询问时（例如询问某商品的位置、价格、产品功能等）未能够清晰的解答"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、工作人员在遇到询问时（例如询问某商品的位置、价格、产品功能等）未能够正确的解答</td>
+                              <td width="80px;"><input type="checkbox" name="topic44Two" value="2、工作人员在遇到询问时（例如询问某商品的位置、价格、产品功能等）未能够正确的解答"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、工作人员在遇到询问时（例如询问某商品的位置、价格、产品功能等）未能够熟练的解答</td>
+                              <td width="80px;"><input type="checkbox" name="topic44Two" value="3、工作人员在遇到询问时（例如询问某商品的位置、价格、产品功能等）未能够熟练的解答"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >4、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic44Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  </div><br/>
+                  <input type="file" class="layui-btn" name="topic44Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic44Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                  <!--  <div class="layui-col-md12">
+                        <div class="layui-card">
+                            <div class="layui-card-header">上传多张图片</div>
+                            <div class="layui-card-body">
+                                <div class="layui-upload">
+                                    <button type="button" class="layui-btn" id="topic44Fourfile">多图片上传</button>
+                                    <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                                        预览图：
+                                        <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->
+              </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">45-1 （工作人员主动介绍产品）是否符合要求？(单选）--店员服务</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic45One" value="1、完全符合" onclick="th45Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic45One" value="2、不符合要求"  onclick="th45Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th45" align="left">
+                  <div  lay-filter="" ><!--
+                      <label style="width: 100px;">45-2不符合要求的原因？</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、风幕柜货架牌面有货，但未向前陈列数大于3个</td>
+                              <td width="80px;"><input type="checkbox" name="topic45Two" value="1、风幕柜货架牌面有货，但未向前陈列数大于3个"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、饭团、三明治、便当陈列总数量低于9个</td>
+                              <td width="80px;"><input type="checkbox" name="topic45Two" value="2、饭团、三明治、便当陈列总数量低于9个"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic45Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  --></div><br/>
+                  <!-- <div class="layui-col-md12">
+                       <div class="layui-card">
+                           <div class="layui-card-header">上传多张图片</div>
+                           <div class="layui-card-body">
+                               <div class="layui-upload">
+                                   <button type="button" class="layui-btn" id="topic45Fourfile">多图片上传</button>
+                                   <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                                       预览图：
+                                       <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                                   </blockquote>
+                               </div>
+                           </div>
+                       </div>
+                   </div>-->
+                  <input type="file" class="layui-btn" name="topic45Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic45Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+              </div>
+
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">46-1 （工作人员第一时间为首次进店顾客开通会员）是否符合要求？(单选）--店员服务</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic46One" value="1、完全符合" onclick="th46Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic46One" value="2、不符合要求"  onclick="th46Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th46" align="left">
+                  <div  lay-filter="" >
+                      <label style="width: 100px;">46-2不符合要求的原因？</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、工作人员不会使用红掌柜</td>
+                              <td width="80px;"><input type="checkbox" name="topic46Two" value="1、工作人员不会使用红掌柜"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、工作人员没有第一时间为首次进店顾客开通会员</td>
+                              <td width="80px;"><input type="checkbox" name="topic46wo" value="2、工作人员没有第一时间为首次进店顾客开通会员"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic46Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  </div><br/>
+                  <!--<input type="file" class="layui-btn" name="topic46Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic46Fourfile" onclick="fileFour(this)"  value="上传图片"/>-->
+                  <!--  <div class="layui-col-md12">
+                        <div class="layui-card">
+                            <div class="layui-card-header">上传多张图片</div>
+                            <div class="layui-card-body">
+                                <div class="layui-upload">
+                                    <button type="button" class="layui-btn" id="topic46Fourfile">多图片上传</button>
+                                    <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                                        预览图：
+                                        <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->
+              </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">47-1 （工作时间内不得聚众聊天，嬉戏打闹）是否符合要求？(单选）--店员服务</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic47One" value="1、完全符合" onclick="th47Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic47One" value="2、不符合要求"  onclick="th47Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th47" align="left">
+                  <div  lay-filter="" >
+                      <label style="width: 100px;">47-2不符合要求的原因？</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、工作人员在工作时间内聚众聊天</td>
+                              <td width="80px;"><input type="checkbox" name="topic47Two" value="1、工作人员在工作时间内聚众聊天"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、工作人员在工作时间内嬉戏打闹</td>
+                              <td width="80px;"><input type="checkbox" name="topic47Two" value="2、工作人员在工作时间内嬉戏打闹"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic47Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  </div><br/>
+                  <input type="file" class="layui-btn" name="topic47Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic47Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                  <!-- <div class="layui-col-md12">
+                       <div class="layui-card">
+                           <div class="layui-card-header">上传多张图片</div>
+                           <div class="layui-card-body">
+                               <div class="layui-upload">
+                                   <button type="button" class="layui-btn" id="topic47Fourfile">多图片上传</button>
+                                   <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                                       预览图：
+                                       <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                                   </blockquote>
+                               </div>
+                           </div>
+                       </div>
+                   </div>-->
+              </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">48-1 （工作时间内统一工装，佩戴工牌）是否符合要求？(单选）--店员服务</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic48One" value="1、完全符合" onclick="th48Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic48One" value="2、不符合要求"  onclick="th48Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th48" align="left">
+                  <div  lay-filter="" >
+                      <label style="width: 100px;">48-2不符合要求的原因是？(多选）</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、工作人员工作时间内未着统一工装</td>
+                              <td width="80px;"><input type="checkbox" name="topic48Two" value="1、工作人员工作时间内未着统一工装"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、工作人员工作时间内未佩戴工牌</td>
+                              <td width="80px;"><input type="checkbox" name="topic48Two" value="2、工作人员工作时间内未佩戴工牌"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic48Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  </div><br/>
+                  <div  lay-filter="" ><!--
+
+                      <label style="width: 100px;">48-3检测中共有几处不符合要求？(单选）</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、手写价签1处或价签破损或缺失数总数6处或价签商品左下角对齐，未对齐总数6处</td>
+                              <td width="80px;"><input type="radio"  name="topic48Three"  value="1、手写价签1处或价签破损或缺失数总数6处或价签商品左下角对齐，未对齐总数6处"  style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >1、手写价签1处或价签破损或缺失数总数6处或价签商品左下角对齐，未对齐总数6处</td>
+                              <td width="80px;"><input type="radio"  name="topic48Three"  value="1、手写价签1处或价签破损或缺失数总数6处或价签商品左下角对齐，未对齐总数6处"   style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                      </table>
+                  --></div><br/>
+                  <input type="file" class="layui-btn" name="topic48Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic48Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                  <!--<div class="layui-col-md12">
+                      <div class="layui-card">
+                          <div class="layui-card-header">上传多张图片</div>
+                          <div class="layui-card-body">
+                              <div class="layui-upload">
+                                  <button type="button" class="layui-btn" id="topic48Fourfile">多图片上传</button>
+                                  <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                                      预览图：
+                                      <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                                  </blockquote>
+                              </div>
+                          </div>
+                      </div>
+                  </div>-->
+              </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">49-1 （配置是否齐全，日常用品是否完备）是否符合要求？(单选）--母婴室</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic49One" value="1、完全符合" onclick="th49Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic49One" value="2、不符合要求"  onclick="th49Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th49" align="left">
+                  <div  lay-filter="" >
+                      <label style="width: 100px;">49-2不符合要求的原因？</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、母婴室内无婴儿床和沙发（这两个必备）</td>
+                              <td width="80px;"><input type="checkbox" name="topic49Two" value="1、母婴室内无婴儿床和沙发（这两个必备）"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、母婴室内无洗手台</td>
+                              <td width="80px;"><input type="checkbox" name="topic49Two" value="2、母婴室内无洗手台"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、母婴室内无饮水机</td>
+                              <td width="80px;"><input type="checkbox" name="topic49Two" value="3、母婴室内无饮水机"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >4、母婴室内无垃圾桶</td>
+                              <td width="80px;"><input type="checkbox" name="topic49Two" value="4、母婴室内无垃圾桶"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >5、母婴室内无尿不湿</td>
+                              <td width="80px;"><input type="checkbox" name="topic49Two" value="5、母婴室内无尿不湿"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >6、母婴室内无湿巾</td>
+                              <td width="80px;"><input type="checkbox" name="topic49Two" value="6、母婴室内无湿巾"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >7、母婴室内无洗手液</td>
+                              <td width="80px;"><input type="checkbox" name="topic49Two" value="7、母婴室内无洗手液"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >8、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic49Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  </div><br/>
+                  <input type="file" class="layui-btn" name="topic49Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic49Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                  <!-- <div class="layui-col-md12">
+                       <div class="layui-card">
+                           <div class="layui-card-header">上传多张图片</div>
+                           <div class="layui-card-body">
+                               <div class="layui-upload">
+                                   <button type="button" class="layui-btn" id="topic49Fourfile">多图片上传</button>
+                                   <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                                       预览图：
+                                       <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                                   </blockquote>
+                               </div>
+                           </div>
+                       </div>
+                   </div>-->
+              </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">50-1 （清扫是否彻底）是否符合要求？(单选）--母婴室</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic50One" value="1、完全符合" onclick="th50Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic50One" value="2、不符合要求"  onclick="th50Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th50" align="left">
+                  <div  lay-filter="" >
+                      <label style="width: 100px;">50-2不符合要求的原因？</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、墙面有垃圾、污渍、水渍</td>
+                              <td width="80px;"><input type="checkbox" name="topic50Two" value="1、墙面有垃圾、污渍、水渍"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、地面有垃圾、污渍、水渍</td>
+                              <td width="80px;"><input type="checkbox" name="topic50Two" value="2、地面有垃圾、污渍、水渍"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、洗手台有垃圾、污渍、水渍</td>
+                              <td width="80px;"><input type="checkbox" name="topic50Two" value="3、洗手台有垃圾、污渍、水渍"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >4、婴儿床有垃圾、杂乱物质、污渍、水渍、积灰，未定期消毒</td>
+                              <td width="80px;"><input type="checkbox" name="topic50Two" value="4、婴儿床有垃圾、杂乱物质、污渍、水渍、积灰，未定期消毒"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >5、沙发有垃圾、杂乱物质、污渍、水渍、积灰，未定期消毒</td>
+                              <td width="80px;"><input type="checkbox" name="topic50Two" value="5、沙发有垃圾、杂乱物质、污渍、水渍、积灰，未定期消毒"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >6、垃圾桶内垃圾超过垃圾桶容量2/3</td>
+                              <td width="80px;"><input type="checkbox" name="topic50Two" value="6、垃圾桶内垃圾超过垃圾桶容量2/3"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >7、垃圾桶内有排泄物尿不湿</td>
+                              <td width="80px;"><input type="checkbox" name="topic50Two" value="7、垃圾桶内有排泄物尿不湿"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >8、饮水机有水垢、污渍，未保持机外面干燥</td>
+                              <td width="80px;"><input type="checkbox" name="topic50Two" value="5、沙发有垃圾、杂乱物质、污渍、水渍、积灰，未定期消毒"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >9、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic50Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  </div><br/>
+                  <input type="file" class="layui-btn" name="topic50Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic50Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                  <!-- <div class="layui-col-md12">
+                       <div class="layui-card">
+                           <div class="layui-card-header">上传多张图片</div>
+                           <div class="layui-card-body">
+                               <div class="layui-upload">
+                                   <button type="button" class="layui-btn" id="topic40Fourfile">多图片上传</button>
+                                   <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                                       预览图：
+                                       <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                                   </blockquote>
+                               </div>
+                           </div>
+                       </div>
+                   </div>-->
+              </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">51-1 （门店是否存在飞单：重点检查有厂促和服纺品类）是否符合要求？(单选）--飞单检查</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic51One" value="1、完全符合" onclick="th51Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic51One" value="2、不符合要求"  onclick="th51Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th51" align="left">
+                  <div  lay-filter="" ><!--
+                      <label style="width: 100px;">51-2不符合要求的原因？</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、门店内货物或推车堵塞通道影响顾客贩物</td>
+                              <td width="80px;"><input type="checkbox" name="topic51Two" value="1、门店内货物或推车堵塞通道影响顾客贩物"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、商品直接落地存放</td>
+                              <td width="80px;"><input type="checkbox" name="topic51Two" value="2、商品直接落地存放"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic51Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  --></div><br/>
+                <!--  <input type="file" class="layui-btn" name="topic51Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic51Fourfile" onclick="fileFour(this)"  value="上传图片"/>-->
+              </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+              <div   align="left">
+                  <label style="width: 100px;">52-1 （是否存在盗用顾客账号：针对活动仅限一次或想使用会员券，店内销售员/收营员是否存在盗用顾客账号）是否符合要求？(单选）--盗用顾客帐号</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div >
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic52One" value="1、完全符合" onclick="th52Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic52One" value="2、不符合要求"  onclick="th52Div(2)" />
+                  </div>
+              </div><br/>
+              <div id="th52" align="left">
+                  <div  lay-filter="" ><!--
+                      <label style="width: 100px;">52-2不符合要求的原因？</label><br/><br/>
+                      <table    >
+                          <tr>
+                              <td >1、地堆陈列未使用防潮板</td>
+                              <td width="80px;"><input type="checkbox" name="topic52Two" value="1、地堆陈列未使用防潮板"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >2、伊利安慕希地堆陈列未使用防潮板</td>
+                              <td width="80px;"><input type="checkbox" name="topic52Two" value="2、伊利安慕希地堆陈列未使用防潮板"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >3、蒙牛纯甄地堆陈列未使用防潮板</td>
+                              <td width="80px;"><input type="checkbox" name="topic52Two" value="3、蒙牛纯甄地堆陈列未使用防潮板"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >4、其他请注明</td>
+                              <td width="80px;"><input type="text" name="topic52Six" class="layui-input"/></td>
+                          </tr>
+
+                      </table>
+                  --></div><br/>
+              <!--    <input type="file" class="layui-btn" name="topic52Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic52Fourfile" onclick="fileFour(this)"  value="上传图片"/>-->
+              </div>
+              <div align="left">
+                  <span style="color: #c7cccf">———————————————————————————————————————————————</span>
+              </div>
+
+              <div   align="left">
+                  <label style="width: 100px;">53-1 对指定位置广告位进行拍摄：1.吊旗、2.橱窗、3.货架端头刊板、4.橱窗、5.收银台货架</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
+                  <div ><!--
+                      <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic59One" value="1、完全符合" onclick="th39Div(1)" checked="checked" /><br/>
+                      <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic59One" value="2、不符合要求"  onclick="th39Div(2)" />
+                  --></div>
+              </div><br/>
+              <div id="th53" align="left">
+                  <input type="file" class="layui-btn" name="topic53Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic53Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                  <!-- <div class="layui-col-md12">
+                       <div class="layui-card">
+                           <div class="layui-card-header">上传多张图片</div>
+                           <div class="layui-card-body">
+                               <div class="layui-upload">
+                                   <button type="button" class="layui-btn" id="topic59Fourfile">多图片上传</button>
+                                   <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                                       预览图：
+                                       <div class="layui-upload-list" id="test-upload-more-listcs"></div>
+                                   </blockquote>
+                               </div>
+                           </div>
+                       </div>
+                   </div>-->
+              </div>
+
+          </div>
+
+              <div class="layui-form-item layui-layout-admin">
+              <div class="layui-input-block">
+                <div class="layui-footer" style="left: 0;">
+                  <input class="layui-btn" lay-submit="" lay-filter="component-form-demo1" type="submit" id="checkSubject"  value="提交"/>
+                  <button  class="layui-btn layui-btn-primary" onclick="resert()"> 重置</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script th:src="@{/layuiadmin/layui/jquery-1.9.0.js}" ></script>
+<script th:src="@{/layuiadmin/layui/layui.js}" ></script>
+<script th:src="@{/layuiadmin/red/check.js}" ></script>
+<script th:src="@{/layuiadmin/red/verification.js}" ></script>
+<script th:src="@{/layuiadmin/fileImg.js}" ></script>
+
+
+</body>
+</html>
