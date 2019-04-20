@@ -118,6 +118,8 @@ public class TestPaperController {
                 testPaperService.save(SiftCount.getFraction(testPaper));
             }else if(testPaper.getType()==4){
                 testPaperService.save(RedUtil.getFraction(testPaper,testHans));
+                testHans.setTestid(testPaper.getId());
+                testHansService.save(testHans);
             }
 
         }catch (Exception e){

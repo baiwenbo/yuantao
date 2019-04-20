@@ -70,7 +70,7 @@ $(document).ready(function(){
         $("#companyId").val("");
         $.ajax({
             type:"get",
-            url:path+"/sift/queryCode",
+            url:path+"/environment/queryCode",
             data: "code="+code,
             dataType:"json",
             async : false,

@@ -53,18 +53,7 @@ $(document).ready(function () {
 
     var th51 = $("input[name='topic51One']:checked").val();
     var th52 = $("input[name='topic52One']:checked").val();
-    var th53 = $("input[name='topic53One']:checked").val();
-    var th54 = $("input[name='topic54One']:checked").val();
-    var th55 = $("input[name='topic55One']:checked").val();
-    var th56 = $("input[name='topic56One']:checked").val();
-    var th57 = $("input[name='topic57One']:checked").val();
-    var th58 = $("input[name='topic58One']:checked").val();
-    var th59 = $("input[name='topic59One']:checked").val();
-    var th60 = $("input[name='topic60One']:checked").val();
 
-    var th61 = $("input[name='topic61One']:checked").val();
-    var th62 = $("input[name='topic62One']:checked").val();
-    var th63 = $("input[name='topic63One']:checked").val();
     if (th1.indexOf("完全") > 0) {
         $("#one").hide();
     } else {
