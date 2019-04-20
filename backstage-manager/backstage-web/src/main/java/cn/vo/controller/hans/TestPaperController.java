@@ -3,6 +3,7 @@ package cn.vo.controller.hans;
 
 import cn.vo.backstage.Utils.ListResult;
 import cn.vo.backstage.Utils.PageUtils;
+import cn.vo.controller.red.RedUtil;
 import cn.vo.controller.sift.SiftCount;
 import cn.vo.dao.hans.SiftAddressMapper;
 import cn.vo.pojo.User;
@@ -115,6 +116,8 @@ public class TestPaperController {
                 testPaperService.save(SorceUtils.getFraction(testPaper));
             }else if(testPaper.getType()==3){
                 testPaperService.save(SiftCount.getFraction(testPaper));
+            }else if(testPaper.getType()==4){
+                testPaperService.save(RedUtil.getFraction(testPaper,testHans));
             }
 
         }catch (Exception e){
@@ -161,6 +164,8 @@ public class TestPaperController {
             result="views/routine/routEditDeial";
         }else if(testPaper.getType()==3){
             result="views/sift/siftEdit";
+        }else if(testPaper.getType()==4){
+            result="views/red/redEdit";
         }else{
             result="views/hans/questionetor";
         }
@@ -227,6 +232,10 @@ public class TestPaperController {
                     testPaperService.updateId(SorceUtils.getFraction(testPaper));
                 }else if(testPaper.getType()==3){
                     testPaperService.updateId(SiftCount.getFraction(testPaper));
+                }else if(testPaper.getType()==4){
+                    testPaperService.updateId(RedUtil.getFraction(testPaper,testHans));
+                    testHans.setTestid(testPaper.getId());
+                    testHansService.updateId(testHans);
                 }
             }
         }catch (Exception e){
@@ -315,7 +324,9 @@ public class TestPaperController {
             result="redirect:/rout/routList?close=ok";
         }else if(testPaper.getType()==3){
             result=  "redirect:/sift/siftList?close="+"ok";
-        }else{
+        }else if(testPaper.getType()==4){
+            result=  "redirect:/red/redList?close="+"ok";
+        } else{
             result=  "redirect:/sift/siftList?close="+"ok";
         }
         return result;

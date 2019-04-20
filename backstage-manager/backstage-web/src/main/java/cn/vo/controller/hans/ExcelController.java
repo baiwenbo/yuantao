@@ -54,6 +54,8 @@ public class ExcelController {
 
             }else if (type==3){
                 file = ResourceUtils.getFile("classpath:excel/sift.xlsx");
+            }else if (type==4){
+                file = ResourceUtils.getFile("classpath:excel/red.xlsx");
             }
 
         } catch (FileNotFoundException e) {

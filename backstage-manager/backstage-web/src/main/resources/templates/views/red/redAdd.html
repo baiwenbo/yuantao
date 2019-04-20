@@ -25,7 +25,7 @@
         <div  pad15="" style="align-items: center;">
           <form enctype="multipart/form-data" th:action="@{/testPaper/save}" method="post" style="align:center" align="center" >
 <div th:replace="views/red/addFile::html" ></div>
-        <input type="hidden" name="type" value="1"/>
+        <input type="hidden" name="type" value="4"/>
         <input type="hidden" name="companyId" id="companyId"/>
           <div class="layui-form-item" >
               <div class="layui-inline">
@@ -38,6 +38,17 @@
                   <div class="layui-input-inline" style="float:right">
                       <input class="layui-btn" style="width: 85px" data-type="reload" id="queryCompany" value="搜索" />
                   </div>
+              </div>
+              <div class="layui-inline">
+                  <select name="populationqty" id="populationqty" class="layui-input" style="width: 120px;">
+                      <option value="正常访问">正常访问</option>
+                      <option value="装修">装修</option>
+                      <option value="闭店">闭店</option>
+                      <option value="门店盘点">门店盘点</option>
+                      <option value="按地址找不到该店">按地址找不到该店</option>
+                      <option value="因地处工业园/军事区门卫不让进店">因地处工业园/军事区门卫不让进店</option>
+                      <option value="其他不能点检的情况">其他不能点检的情况</option>
+                  </select>
               </div>
 
 
@@ -1309,7 +1320,7 @@
 
               <div   align="left">
                   <label style="width: 100px;">21-1 （收银时主动询问顾客是否持有会员卡）是否符合要求？--收银服务</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607">（付款后，店员是否有说“您的小票请收好！”，同时向顾客双手呈递购物小票及找零【含刷卡】）</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"></label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic21One" value="1、完全符合" onclick="th21Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic21One" value="2、不符合要求"  onclick="th21Div(2)" />
@@ -2999,8 +3010,9 @@
 </div>
 <script th:src="@{/layuiadmin/layui/jquery-1.9.0.js}" ></script>
 <script th:src="@{/layuiadmin/layui/layui.js}" ></script>
-<script th:src="@{/layuiadmin/red/check.js}" ></script>
-<script th:src="@{/layuiadmin/red/verification.js}" ></script>
+<script th:src="@{/layuiadmin/red/red.js}" ></script>
+<script th:src="@{/layuiadmin/red/redCheck.js}" ></script>
+<script th:src="@{/layuiadmin/red/redVerify.js}" ></script>
 <script th:src="@{/layuiadmin/fileImg.js}" ></script>
 
 

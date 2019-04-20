@@ -42,6 +42,20 @@
                   <input class="layui-btn" style="width: 85px" data-type="reload" id="queryCompany" value="搜索" />
                 </div>
               </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label"></label>
+                    <div class="layui-input-inline">
+                        <select name="populationqty"  style="height: 35px;width: 200px;" >
+                            <option value="正常访问" th:selected="${deial.populationqty == '正常访问'}" >正常访问</option>
+                            <option value="装修" th:selected="${deial.populationqty == '装修'}" >装修</option>
+                            <option value="闭店" th:selected="${deial.populationqty == '闭店'}" >闭店</option>
+                            <option value="门店盘点" th:selected="${deial.populationqty == '门店盘点'}" >门店盘点</option>
+                            <option value="按地址找不到该店" th:selected="${deial.populationqty == '按地址找不到该店'}" >按地址找不到该店</option>
+                            <option value="因地处工业园/军事区门卫不让进店" th:selected="${deial.populationqty == '因地处工业园/军事区门卫不让进店'}" >因地处工业园/军事区门卫不让进店</option>
+                            <option value="其他不能点检的情况" th:selected="${deial.populationqty == '其他不能点检的情况'}" >其他不能点检的情况</option>
+                        </select>
+                    </div>
+                </div>
               <div class="layui-inline">
                 <label class="layui-form-label"><b>总分</b></label>
                 <div class="layui-input-inline">
@@ -1532,11 +1546,11 @@
                 <table align="left" >
                   <tr>
                     <td >1、商品占据的空间超过所分配的陈列空间的1/2</td>
-                    <td width="80px;"><input type="checkbox" name="topic23Two" value="1、商品占据的空间超过所分配的陈列空间的1/2"  th:if="${deial.topic21Two!=null}"  th:checked="${#strings.contains(deial.topic21Two,'1、商品占据的空间超过所分配的陈列空间的1/2')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox" name="topic23Two" value="1、商品占据的空间超过所分配的陈列空间的1/2"  th:if="${deial.topic23Two!=null}"  th:checked="${#strings.contains(deial.topic23Two,'1、商品占据的空间超过所分配的陈列空间的1/2')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >2、前端商品销售后，未及时将后端商品陈列在前端</td>
-                    <td width="80px;"><input type="checkbox" name="topic23Two" value="2、前端商品销售后，未及时将后端商品陈列在前端"  th:if="${deial.topic21Two!=null}"  th:checked="${#strings.contains(deial.topic21Two,'2、前端商品销售后，未及时将后端商品陈列在前端')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox" name="topic23Two" value="2、前端商品销售后，未及时将后端商品陈列在前端"  th:if="${deial.topic23Two!=null}"  th:checked="${#strings.contains(deial.topic23Two,'2、前端商品销售后，未及时将后端商品陈列在前端')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >3、其他请注明</td>
@@ -3289,9 +3303,9 @@
 
 <script th:src="@{/layuiadmin/layui/jquery-1.9.0.js}" ></script>
 <script th:src="@{/layuiadmin/layui/layui.js}" ></script>
-<script th:src="@{/layuiadmin/editDeial.js}" ></script>
-<script th:src="@{/layuiadmin/testPaper/check.js}" ></script>
-<script th:src="@{/layuiadmin/testPaper/verification.js}" ></script>
+<script th:src="@{/layuiadmin/red/redDeial.js}" ></script>
+<script th:src="@{/layuiadmin/red/redCheck.js}" ></script>
+<script th:src="@{/layuiadmin/red/redVerify.js}" ></script>
 <script th:src="@{/layuiadmin/fileImg.js}" ></script>
 
 <script>

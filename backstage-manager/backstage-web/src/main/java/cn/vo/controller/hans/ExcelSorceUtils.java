@@ -72,7 +72,7 @@ public class ExcelSorceUtils {
                 testPaper.setTh38mark(setMark(testPaper.getType(),testPaper.getTopic38One(),"th38"));
                 testPaper.setTh39mark(setMark(testPaper.getType(),testPaper.getTopic39One(),"th39"));
                 testPaper.setTh40mark(setMark(testPaper.getType(),testPaper.getTopic40One(),"th40"));
-                if (testPaper.getType()==1) {
+                if (testPaper.getType()==1 || testPaper.getType()==4) {
                 try{
                     testPaper.setTh41mark(setMark(testPaper.getType(), testHans.getTopic41One(), "th41"));
                     testPaper.setTh42mark(setMark(testPaper.getType(), testHans.getTopic42One(), "th42"));
@@ -220,7 +220,7 @@ public class ExcelSorceUtils {
                 testPaper.setTopic38Two(testPaper.getTopic38Two()+testPaper.getTopic38Six());
                 testPaper.setTopic39Two(testPaper.getTopic39Two()+testPaper.getTopic39Six());
                 testPaper.setTopic40Two(testPaper.getTopic40Two()+testPaper.getTopic40Six());
-                if (testPaper.getType()==1){
+                if (testPaper.getType()==1 || testPaper.getType()==4){
                     testPaper.setTopic41Two(testHans.getTopic41Two()+testHans.getTopic41Six());
                     testPaper.setTopic42Two(testHans.getTopic42Two()+testHans.getTopic42Six());
                     testPaper.setTopic43Two(testHans.getTopic43Two()+testHans.getTopic43Six());
@@ -245,7 +245,10 @@ public class ExcelSorceUtils {
                     testPaper.setTopic62Two(testHans.getTopic62Two()+testHans.getTopic62Six());
                     testPaper.setTopic63Two(testHans.getTopic63Two()+testHans.getTopic63Six());
 
-                    testPaper.setTh48sorce(setSorce("th48",testPaper.getTopic48Three(),""));
+                    if (testPaper.getType()==1){
+                        testPaper.setTh48sorce(setSorce("th48",testPaper.getTopic48Three(),""));
+                    }
+
                 }
 
 
@@ -270,6 +273,8 @@ public class ExcelSorceUtils {
                     number= String.valueOf(SourceMap.getFraction(quest));
                 }else if(type==3){
                     number=String.valueOf(EnumerationMap.getSift(quest));
+                }else if(type==4){
+                    number=String.valueOf(EnumerationMap.getRed(quest));
                 }
 
             }
