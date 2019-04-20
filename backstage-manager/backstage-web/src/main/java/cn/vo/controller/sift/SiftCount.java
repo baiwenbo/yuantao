@@ -209,6 +209,9 @@ public class SiftCount {
             }else {
                 testPaper.setScore(SiftCount.getsSore(testPaper));
             }
+            if (!testPaper.getPopulationqty().contains("正常访问")){
+                testPaper.setScore(" ");
+            }
         }catch (Exception e){
             e.printStackTrace();
             return testPaper;

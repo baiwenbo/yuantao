@@ -384,6 +384,9 @@ public class FractionUtil {
             } else{
                 testPaper.setScore(FractionUtil.getsSore(testPaper,testHans));
             }
+            if (!testPaper.getPopulationqty().contains("正常访问")){
+                testPaper.setScore(" ");
+            }
         }catch (Exception e){
             e.printStackTrace();
             return testPaper;

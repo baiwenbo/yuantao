@@ -190,6 +190,9 @@ public class SorceUtils {
                 testPaper.setTopic20Fraction("6");
             }
             testPaper.setScore(getsSore(testPaper));
+            if (!testPaper.getPopulationqty().contains("正常访问")){
+                testPaper.setScore(" ");
+            }
         }catch (Exception e){
             e.printStackTrace();
             return testPaper;

@@ -43,6 +43,20 @@
                 </div>
               </div>
               <div class="layui-inline">
+                <label class="layui-form-label"></label>
+                <div class="layui-input-inline">
+                  <select name="populationqty"  style="height: 35px;width: 200px;" >
+                    <option value="正常访问" th:selected="${deial.populationqty == '正常访问'}" >正常访问</option>
+                    <option value="装修" th:selected="${deial.populationqty == '装修'}" >装修</option>
+                    <option value="闭店" th:selected="${deial.populationqty == '闭店'}" >闭店</option>
+                    <option value="门店盘点" th:selected="${deial.populationqty == '门店盘点'}" >门店盘点</option>
+                    <option value="按地址找不到该店" th:selected="${deial.populationqty == '按地址找不到该店'}" >按地址找不到该店</option>
+                    <option value="因地处工业园/军事区门卫不让进店" th:selected="${deial.populationqty == '因地处工业园/军事区门卫不让进店'}" >因地处工业园/军事区门卫不让进店</option>
+                    <option value="其他不能点检的情况" th:selected="${deial.populationqty == '其他不能点检的情况'}" >其他不能点检的情况</option>
+                  </select>
+                </div>
+              </div>
+              <div class="layui-inline">
                 <label class="layui-form-label"><b>总分</b></label>
                 <div class="layui-input-inline">
                   <input type="tel" name="name"  id="score" th:value="${deial.score}" disabled="disabled" autocomplete="off" class="layui-input" />
