@@ -208,11 +208,11 @@ $("#checkSubject").click(function(){
              alert("请选择不符项");
              return false;
          }*/
-        var topic13Four=$("#topic13Four").val();
+       /* var topic13Four=$("#topic13Four").val();
         if (topic13Four==""||topic13Four==null){
             alert("请上传题13图片");
             return false;
-        }
+        }*/
     }
     if (type14=="2"){
         var remark14=$("input[name='topic14Six']").val();
@@ -240,11 +240,11 @@ $("#checkSubject").click(function(){
              alert("请选择题15不符项");
              return false;
          }*/
-        var topic15Four=$("#topic15Four").val();
+      /*  var topic15Four=$("#topic15Four").val();
         if (topic15Four==""||topic15Four==null){
             alert("请上传题15图片");
             return false;
-        }
+        }*/
     }
     if (type16=="2"){
         var remark16=$("input[name='topic16Six']").val();
@@ -638,11 +638,11 @@ $("#checkSubject").click(function(){
             alert("请选择题41不符项");
             return false;
         }
-        var topic41Four=$("#topic41Four").val();
+       /* var topic41Four=$("#topic41Four").val();
         if (topic41Four==""||topic41Four==null){
             alert("请上传题41图片");
             return false;
-        }
+        }*/
     }
     if (type42=="2"){
         var remark42=$("input[name='topic42Six']").val();
@@ -683,11 +683,11 @@ $("#checkSubject").click(function(){
         //     alert("请选择题44不符项");
         //     return false;
         // }
-        var topic44Four=$("#topic44Four").val();
+      /*  var topic44Four=$("#topic44Four").val();
         if (topic44Four==""||topic44Four==null){
             alert("请上传题44图片");
             return false;
-        }
+        }*/
     }
     if (type45=="2"){
         var remark45=$("input[name='topic45Six']").val();
@@ -699,11 +699,11 @@ $("#checkSubject").click(function(){
              alert("请选择题45不符项");
              return false;
          }*/
-        var topic45Four=$("#topic45Four").val();
+      /*  var topic45Four=$("#topic45Four").val();
         if (topic45Four==""||topic45Four==null){
             alert("请上传题45图片");
             return false;
-        }
+        }*/
     }
     if (type46=="2"){
         var remark46=$("input[name='topic46Six']").val();
@@ -715,11 +715,11 @@ $("#checkSubject").click(function(){
               alert("请选择题46不符项");
               return false;
           }*/
-        var topic46Four=$("#topic46Four").val();
+       /* var topic46Four=$("#topic46Four").val();
         if (topic46Four==""||topic46Four==null){
             alert("请上传题46图片");
             return false;
-        }
+        }*/
     }
     if (type47=="2"){
         var remark47=$("input[name='topic47Six']").val();
@@ -791,11 +791,11 @@ $("#checkSubject").click(function(){
             alert("请选择题51不符项");
             return false;
         }
-        var topic51Four=$("#topic51Four").val();
+       /* var topic51Four=$("#topic51Four").val();
         if (topic51Four==""||topic51Four==null){
             alert("请上传题51图片");
             return false;
-        }
+        }*/
     }
     if (type52=="2"){
         var remark52=$("input[name='topic52Six']").val();
@@ -803,29 +803,14 @@ $("#checkSubject").click(function(){
             alert("请选择题52不符项");
             return false;
         }
-        var topic52Four=$("#topic52Four").val();
+       /* var topic52Four=$("#topic52Four").val();
         if (topic52Four==""||topic52Four==null){
             alert("请上传题52图片");
             return false;
-        }
+        }*/
 
     }
-    if (type53=="2"){
-        var remark53=$("input[name='topic53Six']").val();
-        if ($("input[name='topic53Two']").is(':checked') === false && remark53 ==""){
-            alert("请选择题53不符项");
-            return false;
-        }
-        // if ($("input[name='topic55Three']").is(':checked') === false){
-        //     alert("请选择题55不符项");
-        //     return false;
-        // }
-        var topic53Four=$("#topic53Four").val();
-        if (topic53Four==""||topic53Four==null){
-            alert("请上传题53图片");
-            return false;
-        }
-    }
+
 
 
 });
