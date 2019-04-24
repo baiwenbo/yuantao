@@ -389,7 +389,7 @@
             <div id="three" align="left" class="layui-col-md10">
               <div  align="left"  >
                 <label style="width: 100px;">3-2不符合要求的原因是？(多选）</label><br/>
-                <table align="left">
+                <table >
                   <tr>
                     <td >1、门店购物车表面不干净有污渍、有破损</td>
                     <td width="80px;"><input type="checkbox" name="topic3Two" value="1、门店购物车表面不干净有污渍、有破损" th:if="${deial.topic3Two!=null}"  th:checked="${#strings.contains(deial.topic3Two,'1、门店购物车表面不干净有污渍、有破损')}" lay-skin="primary" style="height: 20px;width: 50px;"/></td>
@@ -417,7 +417,7 @@
 
                 </table>
 
-              </div><br/><br/><br/><br/><br/><br/><br/>
+              </div><br/><br/>
               <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
@@ -1040,7 +1040,7 @@
             <div id="th14" class="layui-col-md10">
               <div  align="left"  >
                 <label style="width: 100px;">14-2不符合要求的原因是？(多选）</label><br/>
-                <table align="left" >
+                <table  >
                   <tr>
                     <td >1、收银员未做关联商品推荐</td>
                     <td width="80px;"><input type="checkbox" name="topic14Two" value="1、收银员未做关联商品推荐"   th:if="${deial.topic14Two!=null}"  th:checked="${#strings.contains(deial.topic14Two,'1、收银员未做关联商品推荐')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
@@ -1063,7 +1063,7 @@
                   </tr>
 
                 </table>
-              </div><br/><br/><br/><br/>
+              </div><br/>
               <!--<div class="layui-col-md12">
                 <div class="layui-card">
                   <div class="layui-card-header">上传多张图片</div>
@@ -1397,7 +1397,7 @@
                     </tr>
 
                   </table>
-                --></div><br/><br/><br/><br/>
+                --></div><br/>
                 <!--<div class="layui-col-md12">
                   <div class="layui-card">
                     <div class="layui-card-header">上传多张图片</div>
@@ -1848,7 +1848,7 @@
             <div id="th28">
               <div  align="left" class="layui-col-md10" >
                 <label style="width: 100px;">28-2不符合要求的原因？</label><br/>
-                <table align="left" >
+                <table  >
                   <tr>
                     <td >1、自营（经销、代销）孕童服饰类未使用磁针扣保护</td>
                     <td width="80px;"><input type="checkbox" name="topic28Two" value="1、自营（经销、代销）孕童服饰类未使用磁针扣保护" th:if="${deial.topic28Two!=null}"  th:checked="${#strings.contains(deial.topic28Two,'1、自营（经销、代销）孕童服饰类未使用磁针扣保护')}"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
@@ -1896,10 +1896,12 @@
 
                 </table>
               </div><br/>
+              <div align="left" class="layui-col-md10">
               <input type="file" class="layui-btn" name="topic28Fourfile" id="test-upload-normal" value="上传图片"/>
               <input  type="button" class="layui-btn"  id="topic28Fourfile" onclick="fileFour(this)"  value="上传图片"/>
               <input name="t28" type="hidden" th:value="${deial.topic28Four}"/>
               <input type="text" class="layui-btn"  id="t28" value="查看扣分点图片" onclick="look(this)"/>
+              </div>
             </div>
             <div align="left" class="layui-col-md10">
               <span style="color: #c7cccf">———————————————————————————————————————————————</span>
