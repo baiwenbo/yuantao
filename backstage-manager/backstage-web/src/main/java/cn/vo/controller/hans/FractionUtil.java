@@ -16,13 +16,13 @@ public class FractionUtil {
             if (testPaper.getTopic2One().contains("不")){
                 testPaper.setTopic2Fraction("0");
             }else {
-                testPaper.setTopic2Fraction("2");
+                testPaper.setTopic2Fraction("1");
             }
 
             if (testPaper.getTopic3One().contains("不")){
                  testPaper.setTopic3Fraction("0");
             }else{
-                testPaper.setTopic3Fraction("1");
+                testPaper.setTopic3Fraction("2");
             }
 
             if (testPaper.getTopic4One().contains("不")){
@@ -59,12 +59,12 @@ public class FractionUtil {
             if (testPaper.getTopic10One().contains("不")){
                  testPaper.setTopic10Fraction("0");
             }else{
-                testPaper.setTopic10Fraction("1");
+                testPaper.setTopic10Fraction("2");
             }
             if (testPaper.getTopic11One().contains("不")){
                testPaper.setTopic11Fraction("0");
             }else{
-                testPaper.setTopic11Fraction("1");
+                testPaper.setTopic11Fraction("2");
             }
             if (testPaper.getTopic12One().contains("不")){
                testPaper.setTopic12Fraction("0");
@@ -79,7 +79,7 @@ public class FractionUtil {
             if (testPaper.getTopic14One().contains("不")){
                testPaper.setTopic14Fraction("0");
             }else{
-                testPaper.setTopic14Fraction("1");
+                testPaper.setTopic14Fraction("2");
             }
             if (testPaper.getTopic15One().contains("不")){
                   testPaper.setTopic15Fraction("0");
@@ -98,13 +98,13 @@ public class FractionUtil {
                     }else if(testPaper.getTopic17Two().contains("未使用专业用语")){
                         testPaper.setTopic17Fraction("1");
                     }else{
-                        testPaper.setTopic17Fraction("2");
+                        testPaper.setTopic17Fraction("1");
                     }
                 } else {
-                    testPaper.setTopic17Fraction("3");
+                    testPaper.setTopic17Fraction("2");
                 }
             }else{
-                testPaper.setTopic17Fraction("3");
+                testPaper.setTopic17Fraction("2");
             }
             if (testPaper.getTopic18One().contains("不")){
                 if (testPaper.getTopic18Two() != null && !testPaper.getTopic18Two().isEmpty()) {
@@ -128,28 +128,28 @@ public class FractionUtil {
                     }else if(testPaper.getTopic19Two().contains("如顾客有会员商品，店员未推荐超级会员")){
                         testPaper.setTopic19Fraction("1");
                     }else{
-                        testPaper.setTopic19Fraction("2");
+                        testPaper.setTopic19Fraction("1");
                     }
                 } else {
-                    testPaper.setTopic19Fraction("3");
+                    testPaper.setTopic19Fraction("2");
                 }
             }else{
-                testPaper.setTopic19Fraction("3");
+                testPaper.setTopic19Fraction("2");
             }
             if (testPaper.getTopic20One().contains("不")){
                 if (testPaper.getTopic20Two() != null && !testPaper.getTopic20Two().isEmpty()) {
                     if(testPaper.getTopic20Two().contains("请问您是使用苏宁支付吗")){
                         testPaper.setTopic20Fraction("0");
                     }else if(testPaper.getTopic20Two().contains("店员未推荐开通免密支付")){
-                        testPaper.setTopic20Fraction("2");
+                        testPaper.setTopic20Fraction("1");
                     }else{
                         testPaper.setTopic20Fraction("0");
                     }
                 } else {
-                    testPaper.setTopic20Fraction("3");
+                    testPaper.setTopic20Fraction("2");
                 }
             }else{
-                testPaper.setTopic20Fraction("3");
+                testPaper.setTopic20Fraction("2");
             }
             if (testPaper.getTopic21One().contains("不")){
                 if (testPaper.getTopic21Two() != null && !testPaper.getTopic21Two().isEmpty()) {
@@ -204,22 +204,22 @@ public class FractionUtil {
             if (testPaper.getTopic29One().contains("不")){
                 testPaper.setTopic29Fraction("0");
             }else{
-                testPaper.setTopic29Fraction("2");
+                testPaper.setTopic29Fraction("3");
             }
             if (testPaper.getTopic30One().contains("不")){
                testPaper.setTopic30Fraction("0");
             }else{
-                testPaper.setTopic30Fraction("1");
+                testPaper.setTopic30Fraction("2");
             }
             if (testPaper.getTopic31One().contains("不")){
                testPaper.setTopic31Fraction("0");
             }else{
-                testPaper.setTopic31Fraction("1");
+                testPaper.setTopic31Fraction("2");
             }
             if (testPaper.getTopic32One().contains("不")){
                  testPaper.setTopic32Fraction("0");
             }else{
-                testPaper.setTopic32Fraction("2");
+                testPaper.setTopic32Fraction("1");
             }
             if (testPaper.getTopic33One().contains("不")){
                 testPaper.setTopic33Fraction("0");
@@ -229,7 +229,7 @@ public class FractionUtil {
             if (testPaper.getTopic34One().contains("不")){
                testPaper.setTopic34Fraction("0");
             }else{
-                testPaper.setTopic34Fraction("2");
+                testPaper.setTopic34Fraction("1");
             }
             if (testPaper.getTopic35One().contains("不")){
                 testPaper.setTopic35Fraction("0");
@@ -239,7 +239,7 @@ public class FractionUtil {
             if (testPaper.getTopic36One().contains("不")){
                testPaper.setTopic36Fraction("0");
             }else{
-                testPaper.setTopic36Fraction("2");
+                testPaper.setTopic36Fraction("1");
             }
             if (testPaper.getTopic37One().contains("不")){
                  testPaper.setTopic37Fraction("0");
@@ -265,7 +265,7 @@ public class FractionUtil {
             if (testHans.getTopic41One().contains("不")){
                 testHans.setTopic41Fraction("0");
             }else{
-                testHans.setTopic41Fraction("2");
+                testHans.setTopic41Fraction("1");
             }
             if (testHans.getTopic42One().contains("不")){
                 testHans.setTopic42Fraction("0");
@@ -275,7 +275,7 @@ public class FractionUtil {
             if (testHans.getTopic43One().contains("不")){
                 testHans.setTopic43Fraction("0");
             }else{
-                testHans.setTopic43Fraction("2");
+                testHans.setTopic43Fraction("1");
             }
             if (testHans.getTopic44One().contains("不")){
                 testHans.setTopic44Fraction("0");
@@ -287,35 +287,37 @@ public class FractionUtil {
             }else{
                 testHans.setTopic45Fraction("2");
             }
+
             if (testHans.getTopic46One().contains("不")){
-                testHans.setTopic46Fraction("0");
+                if (testHans.getTopic46Three() != null && !testHans.getTopic46Three().isEmpty()) {
+                    if(testHans.getTopic46Three().contains("手写价签1处或价签破")){
+                        testHans.setTopic46Fraction("1");
+                    }else if(testHans.getTopic46Three().contains("手写价签2处")){
+                        testHans.setTopic46Fraction("0");
+                    }else{
+                        testHans.setTopic46Fraction("2");
+                    }
+                } else {
+                    testHans.setTopic46Fraction("3");
+                }
             }else{
                 testHans.setTopic46Fraction("2");
             }
+
             if (testHans.getTopic47One().contains("不")){
                 testHans.setTopic47Fraction("0");
             }else{
                 testHans.setTopic47Fraction("2");
             }
             if (testHans.getTopic48One().contains("不")){
-                if (testHans.getTopic48Three() != null && !testHans.getTopic48Three().isEmpty()) {
-                    if(testHans.getTopic48Three().contains("手写价签1处或价签破")){
-                        testHans.setTopic48Fraction("1");
-                    }else if(testHans.getTopic48Three().contains("手写价签2处")){
-                        testHans.setTopic48Fraction("0");
-                    }else{
-                        testHans.setTopic48Fraction("2");
-                    }
-                } else {
-                    testHans.setTopic48Fraction("3");
-                }
+                testHans.setTopic48Fraction("0");
             }else{
                 testHans.setTopic48Fraction("2");
             }
             if (testHans.getTopic49One().contains("不")){
                 testHans.setTopic49Fraction("0");
             }else{
-                testHans.setTopic49Fraction("2");
+                testHans.setTopic49Fraction("1");
             }
             if (testHans.getTopic50One().contains("不")){
                 testHans.setTopic50Fraction("0");
@@ -325,7 +327,7 @@ public class FractionUtil {
             if (testHans.getTopic51One().contains("不")){
                 testHans.setTopic51Fraction("0");
             }else{
-                testHans.setTopic51Fraction("1");
+                testHans.setTopic51Fraction("2");
             }
             if (testHans.getTopic52One().contains("不")){
                 testHans.setTopic52Fraction("0");
@@ -350,36 +352,32 @@ public class FractionUtil {
             if (testHans.getTopic56One().contains("不")){
                 testHans.setTopic56Fraction("0");
             }else{
-                testHans.setTopic56Fraction("1");
+                testHans.setTopic56Fraction("2");
             }
             if (testHans.getTopic57One().contains("不")){
                 testHans.setTopic57Fraction("0");
             }else{
-                testHans.setTopic57Fraction("1");
+                testHans.setTopic57Fraction("2");
             }
             if (testHans.getTopic58One().contains("不")){
                 testHans.setTopic58Fraction("0");
             }else{
-                testHans.setTopic58Fraction("2");
+                testHans.setTopic58Fraction("1");
             }
             if (testHans.getTopic59One().contains("不")){
                 testHans.setTopic59Fraction("0");
             }else{
-                testHans.setTopic59Fraction("1");
+                testHans.setTopic59Fraction("2");
             }
             if (testHans.getTopic60One().contains("不")){
                 testHans.setTopic60Fraction("0");
             }else{
-                testHans.setTopic60Fraction("1");
+                testHans.setTopic60Fraction("2");
             }
-            if (testHans.getTopic61One().contains("不")){
-                testHans.setTopic61Fraction("0");
-            }else{
-                testHans.setTopic61Fraction("2");
-            }
-            if (testHans.getTopic62One().contains("存在，有过")){
+
+            if (testHans.getTopic61One().contains("存在，有过")){
                 testPaper.setScore("0");
-            }else if (testHans.getTopic63One().contains("不符合要求")){
+            }else if (testHans.getTopic62One().contains("不符合要求")){
                 testPaper.setScore("0");
             } else{
                 testPaper.setScore(FractionUtil.getsSore(testPaper,testHans));
