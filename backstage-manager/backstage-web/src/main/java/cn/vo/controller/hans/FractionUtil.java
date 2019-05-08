@@ -179,7 +179,7 @@ public class FractionUtil {
             if (testPaper.getTopic24One().contains("不")){
                 testPaper.setTopic24Fraction("0");
             }else{
-                testPaper.setTopic24Fraction("1");
+                testPaper.setTopic24Fraction("2");
             }
             if (testPaper.getTopic25One().contains("不")){
                testPaper.setTopic25Fraction("0");
@@ -488,7 +488,6 @@ public class FractionUtil {
             score = score + Integer.valueOf(testHans.getTopic58Fraction());
             score = score + Integer.valueOf(testHans.getTopic59Fraction());
             score = score + Integer.valueOf(testHans.getTopic60Fraction());
-            score = score + Integer.valueOf(testHans.getTopic61Fraction());
 
         }catch (Exception e){
             e.printStackTrace();

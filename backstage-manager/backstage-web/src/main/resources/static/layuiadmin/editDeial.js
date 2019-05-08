@@ -368,21 +368,17 @@ $(document).ready(function () {
         type60 = "2";
     }
 
-    if (th61.indexOf("完全") > 0) {
+    if (th61.indexOf("不存在") > 0) {
         $("#th61").hide();
     } else {
         type61 = "2";
     }
-    if (th62.indexOf("不存在") > 0) {
+    if (th62.indexOf("完全") > 0) {
         $("#th62").hide();
     } else {
         type62 = "2";
     }
-    if (th63.indexOf("完全") > 0) {
-        $("#th63").hide();
-    } else {
-        type63 = "2";
-    }
+
 
 
 

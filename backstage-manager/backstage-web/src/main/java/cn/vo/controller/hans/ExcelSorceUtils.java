@@ -94,7 +94,6 @@ public class ExcelSorceUtils {
                     testPaper.setTh58mark(setMark(testPaper.getType(), testHans.getTopic58One(), "th58"));
                     testPaper.setTh59mark(setMark(testPaper.getType(), testHans.getTopic59One(), "th59"));
                     testPaper.setTh60mark(setMark(testPaper.getType(), testHans.getTopic60One(), "th60"));
-                    testPaper.setTh61mark(setMark(testPaper.getType(), testHans.getTopic61One(), "th61"));
                 }catch (Exception e){
                     System.out.println(testPaper.getId());
                 }
