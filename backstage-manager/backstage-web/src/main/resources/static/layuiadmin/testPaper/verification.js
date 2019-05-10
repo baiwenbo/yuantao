@@ -743,10 +743,7 @@ $("#checkSubject").click(function(){
             alert("请选择题48不符项");
             return false;
         }
-         if ($("input[name='topic48Three']").is(':checked') === false){
-             alert("请选择48不符项");
-             return false;
-         }
+
          var topic48Four=$("#topic48Four").val();
          if (topic48Four==""||topic48Four==null){
              alert("请上传题48图片");
