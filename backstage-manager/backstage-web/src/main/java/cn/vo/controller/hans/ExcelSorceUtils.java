@@ -21,7 +21,7 @@ public class ExcelSorceUtils {
 
     public static ITestHansService testHansService;
 
-    public static List<TestPaper> getSorce(List<TestPaper> list){
+    public static List<TestPaper> getSorce(List<TestPaper> list) {
         List<TestPaper>  paperList=new ArrayList<>();
         if (list.size()>0){
             for (int i=0;i<list.size();i++){
@@ -220,29 +220,36 @@ public class ExcelSorceUtils {
                 testPaper.setTopic39Two(testPaper.getTopic39Two()+testPaper.getTopic39Six());
                 testPaper.setTopic40Two(testPaper.getTopic40Two()+testPaper.getTopic40Six());
                 if (testPaper.getType()==1 || testPaper.getType()==4){
-                    testPaper.setTopic41Two(testHans.getTopic41Two()+testHans.getTopic41Six());
-                    testPaper.setTopic42Two(testHans.getTopic42Two()+testHans.getTopic42Six());
-                    testPaper.setTopic43Two(testHans.getTopic43Two()+testHans.getTopic43Six());
-                    testPaper.setTopic44Two(testHans.getTopic44Two()+testHans.getTopic44Six());
-                    testPaper.setTopic45Two(testHans.getTopic45Two()+testHans.getTopic45Six());
-                    testPaper.setTopic46Two(testHans.getTopic46Two()+testHans.getTopic46Six());
-                    testPaper.setTopic47Two(testHans.getTopic47Two()+testHans.getTopic47Six());
-                    testPaper.setTopic48Two(testHans.getTopic48Two()+testHans.getTopic48Six());
-                    testPaper.setTopic49Two(testHans.getTopic49Two()+testHans.getTopic49Six());
-                    testPaper.setTopic50Two(testHans.getTopic50Two()+testHans.getTopic50Six());
-                    testPaper.setTopic51Two(testHans.getTopic51Two()+testHans.getTopic51Six());
-                    testPaper.setTopic52Two(testHans.getTopic52Two()+testHans.getTopic52Six());
-                    testPaper.setTopic53Two(testHans.getTopic53Two()+testHans.getTopic53Six());
-                    testPaper.setTopic54Two(testHans.getTopic54Two()+testHans.getTopic54Six());
-                    testPaper.setTopic55Two(testHans.getTopic55Two()+testHans.getTopic55Six());
-                    testPaper.setTopic56Two(testHans.getTopic56Two()+testHans.getTopic56Six());
-                    testPaper.setTopic57Two(testHans.getTopic57Two()+testHans.getTopic57Six());
-                    testPaper.setTopic58Two(testHans.getTopic58Two()+testHans.getTopic58Six());
-                    testPaper.setTopic59Two(testHans.getTopic59Two()+testHans.getTopic59Six());
-                    testPaper.setTopic60Two(testHans.getTopic60Two()+testHans.getTopic60Six());
-                    testPaper.setTopic61Two(testHans.getTopic61Two()+testHans.getTopic61Six());
-                    testPaper.setTopic62Two(testHans.getTopic62Two()+testHans.getTopic62Six());
-                    testPaper.setTopic63Two(testHans.getTopic63Two()+testHans.getTopic63Six());
+                    try{
+                        if (testHans.getHansid() != null) {
+                            testPaper.setTopic41Two(testHans.getTopic41Two() + testHans.getTopic41Six());
+                            testPaper.setTopic42Two(testHans.getTopic42Two() + testHans.getTopic42Six());
+                            testPaper.setTopic43Two(testHans.getTopic43Two() + testHans.getTopic43Six());
+                            testPaper.setTopic44Two(testHans.getTopic44Two() + testHans.getTopic44Six());
+                            testPaper.setTopic45Two(testHans.getTopic45Two() + testHans.getTopic45Six());
+                            testPaper.setTopic46Two(testHans.getTopic46Two() + testHans.getTopic46Six());
+                            testPaper.setTopic47Two(testHans.getTopic47Two() + testHans.getTopic47Six());
+                            testPaper.setTopic48Two(testHans.getTopic48Two() + testHans.getTopic48Six());
+                            testPaper.setTopic49Two(testHans.getTopic49Two() + testHans.getTopic49Six());
+                            testPaper.setTopic50Two(testHans.getTopic50Two() + testHans.getTopic50Six());
+                            testPaper.setTopic51Two(testHans.getTopic51Two() + testHans.getTopic51Six());
+                            testPaper.setTopic52Two(testHans.getTopic52Two() + testHans.getTopic52Six());
+                            testPaper.setTopic53Two(testHans.getTopic53Two() + testHans.getTopic53Six());
+                            testPaper.setTopic54Two(testHans.getTopic54Two() + testHans.getTopic54Six());
+                            testPaper.setTopic55Two(testHans.getTopic55Two() + testHans.getTopic55Six());
+                            testPaper.setTopic56Two(testHans.getTopic56Two() + testHans.getTopic56Six());
+                            testPaper.setTopic57Two(testHans.getTopic57Two() + testHans.getTopic57Six());
+                            testPaper.setTopic58Two(testHans.getTopic58Two() + testHans.getTopic58Six());
+                            testPaper.setTopic59Two(testHans.getTopic59Two() + testHans.getTopic59Six());
+                            testPaper.setTopic60Two(testHans.getTopic60Two() + testHans.getTopic60Six());
+                            testPaper.setTopic61Two(testHans.getTopic61Two() + testHans.getTopic61Six());
+                            testPaper.setTopic62Two(testHans.getTopic62Two() + testHans.getTopic62Six());
+                            testPaper.setTopic63Two(testHans.getTopic63Two() + testHans.getTopic63Six());
+                        }
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+
 
                     if (testPaper.getType()==1){
                         testPaper.setTh48sorce(setSorce("th48",testPaper.getTopic48Three(),""));
