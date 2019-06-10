@@ -9,43 +9,47 @@ public class EnumerationMap {
         Map<String,Integer> map = new HashMap();
         map.put("th1",2);
         map.put("th2",1);
-        map.put("th3",2);
-        map.put("th4",2);
+        //需求修改2分改1分 微信号为alipay提 start
+        map.put("th3",1);
+        map.put("th4",1);
+        //end
         map.put("th5",1);
         map.put("th6",1);
         map.put("th7",1);
         map.put("th8",1);
         map.put("th9",1);
         map.put("th10",2);
-        map.put("th11",2);
+        map.put("th11",1); //需求修改2分改1分 微信号为alipay提 start
         map.put("th12",2);
         map.put("th13",1);
-        map.put("th14",2);
+        map.put("th14",1);//需求修改2分改1分 微信号为alipay提
         map.put("th15",1);
         map.put("th16",3);
-        map.put("th17",2);
-        map.put("th18",3);
-        map.put("th19",2);
-        map.put("th20",2);
-        map.put("th21",2);
+        map.put("th17",1);//需求修改2分改1分 微信号为alipay提
+        map.put("th18",2);//需求修改3分改2分
+        //需求修改2分改1分 微信号为alipay提 start
+        map.put("th19",1);
+        map.put("th20",1);
+        map.put("th21",1);
+        //end
         map.put("th22",2);
         map.put("th23",2);
         map.put("th24",2);
         map.put("th25",1);
         map.put("th26",1);
-        map.put("th27",1);
-        map.put("th28",1);
-        map.put("th29",3);
+        map.put("th27",3);
+        map.put("th28",2);
+        map.put("th29",2);
         map.put("th30",2);
         map.put("th31",2);
-        map.put("th32",1);
+        map.put("th32",2);
         map.put("th33",2);
-        map.put("th34",1);
+        map.put("th34",2);
         map.put("th35",2);
-        map.put("th36",1);
+        map.put("th36",2);
         map.put("th37",2);
-        map.put("th38",1);
-        map.put("th39",2);
+        map.put("th38",3);
+        map.put("th39",1);
         map.put("th40",2);
         map.put("th41",1);
         map.put("th42",2);
@@ -55,17 +59,17 @@ public class EnumerationMap {
         map.put("th46",2);
         map.put("th47",2);
         map.put("th48",2);
-        map.put("th49",1);
+        map.put("th49",2);
         map.put("th50",2);
         map.put("th51",2);
         map.put("th52",2);
         map.put("th53",1);
-        map.put("th54",1);
-        map.put("th55",1);
+        map.put("th54",2);
+        map.put("th55",2);
         map.put("th56",2);
         map.put("th57",2);
         map.put("th58",1);
-        map.put("th59",2);
+        map.put("th59",1);
         map.put("th60",2);
         return map.get(que);
     }

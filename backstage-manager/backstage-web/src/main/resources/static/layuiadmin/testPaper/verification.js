@@ -183,11 +183,11 @@ $("#checkSubject").click(function(){
         }
     }
     if (type12=="2"){
-        var remark12=$("input[name='topic12Six']").val();
+      /*  var remark12=$("input[name='topic12Six']").val();
         if ($("input[name='topic12Two']").is(':checked') === false  && remark12 ==""){
             alert("请选择题12不符项");
             return false;
-        }
+        }*/
       /*  if ($("input[name='topic12Three']").is(':checked') === false){
             alert("请选择不符项");
             return false;
@@ -808,20 +808,20 @@ $("#checkSubject").click(function(){
 
     }
     if (type53=="2"){
-        var remark53=$("input[name='topic53Six']").val();
+     /*   var remark53=$("input[name='topic53Six']").val();
         if ($("input[name='topic53Two']").is(':checked') === false && remark53 ==""){
             alert("请选择题53不符项");
             return false;
-        }
+        }*/
         // if ($("input[name='topic55Three']").is(':checked') === false){
         //     alert("请选择题55不符项");
         //     return false;
         // }
-        var topic53Four=$("#topic53Four").val();
+     /*   var topic53Four=$("#topic53Four").val();
         if (topic53Four==""||topic53Four==null){
             alert("请上传题53图片");
             return false;
-        }
+        }*/
     }
     if (type54=="2"){
         var remark54=$("input[name='topic54Six']").val();

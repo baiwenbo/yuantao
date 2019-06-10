@@ -2218,14 +2218,18 @@
                               <td width="80px;"><input type="checkbox" name="topic42Two" value="2、风幕柜商品存放阻挡回风口"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                           <tr>
-                              <td >3、其他请注明</td>
+                              <td >3、风幕柜存在设备空开现象</td>
+                              <td width="80px;"><input type="checkbox" name="topic42Two" value="3、风幕柜存在设备空开现象"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >其他请注明</td>
                               <td width="80px;"><input type="text" name="topic42Six" class="layui-input"/></td>
                           </tr>
 
                       </table>
                   </div><br/>
-                  <input type="file" class="layui-btn" name="topic41Fourfile" id="test-upload-normal" value="上传图片"/>
-                  <input  type="button" class="layui-btn"  id="topic41Fourfile" onclick="fileFour(this)"  value="上传图片"/>
+                  <input type="file" class="layui-btn" name="topic42Fourfile" id="test-upload-normal" value="上传图片"/>
+                  <input  type="button" class="layui-btn"  id="topic42Fourfile" onclick="fileFour(this)"  value="上传图片"/>
 
               </div>
 
@@ -2643,7 +2647,11 @@
                               <td width="80px;"><input type="checkbox" name="topic50Two" value="6、伊利安慕希，金典，蒙牛纯甄，特仑苏4品牌地堆陈列合计未达到3整箱"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                           <tr>
-                              <td >7、其他请注明</td>
+                              <td >7、伊利安慕希，金典，蒙牛纯甄，特仑苏4品牌地堆陈列无价格展示</td>
+                              <td width="80px;"><input type="checkbox" name="topic50Two" value="7、伊利安慕希，金典，蒙牛纯甄，特仑苏4品牌地堆陈列无价格展示"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >其他请注明</td>
                               <td width="80px;"><input type="text" name="topic50Six" class="layui-input"/></td>
                           </tr>
 
@@ -2757,13 +2765,13 @@
               </div>
               <div   align="left">
                   <label style="width: 100px;">53-1是否符合要求？(单选）--货架区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607"> （夏令商品陈列：防晒霜、花露水、驱蚊驱虫、丝袜、凉拖、小风扇）</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607"> （重点活动检查：金霸王是否在各门店有“以旧换新买赠活动”）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic53One" value="1、完全符合" onclick="th53Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic53One" value="2、不符合要求"  onclick="th53Div(2)" />
                   </div>
               </div><br/>
-              <div id="th53" align="left">
+             <!-- <div id="th53" align="left">
                   <div  lay-filter="" >
                       <label style="width: 100px;">53-2不符合要求的原因？</label><br/><br/>
                       <table    >
@@ -2800,7 +2808,7 @@
                   </div><br/>
                   <input type="file" class="layui-btn" name="topic53Fourfile" id="test-upload-normal" value="上传图片"/>
                   <input  type="button" class="layui-btn"  id="topic53Fourfile" onclick="fileFour(this)"  value="上传图片"/>
-                  <!--<div class="layui-col-md12">
+                  &lt;!&ndash;<div class="layui-col-md12">
                       <div class="layui-card">
                           <div class="layui-card-header">上传多张图片</div>
                           <div class="layui-card-body">
@@ -2813,8 +2821,8 @@
                               </div>
                           </div>
                       </div>
-                  </div>-->
-              </div>
+                  </div>&ndash;&gt;
+              </div>-->
 
               <div align="left">
                   <span style="color: #c7cccf">———————————————————————————————————————————————</span>
@@ -2822,7 +2830,7 @@
               
               <div   align="left">
                   <label style="width: 100px;">54-1是否符合要求？(单选）--货架区域</label><br/>
-                  <label style="text-align: left;font-size: 12px;color: #cf3607">（非食产品陈列：口罩、红包、计生用品、毛巾、牙线、创可贴、玩具、面膜、雨伞）</label><br/>
+                  <label style="text-align: left;font-size: 12px;color: #cf3607">（夏令商品陈列：防晒霜、花露水、驱蚊驱虫、丝袜、凉拖、小风扇）</label><br/>
                   <div >
                       <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic54One" value="1、完全符合" onclick="th54Div(1)" checked="checked" /><br/>
                       <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic54One" value="2、不符合要求"  onclick="th54Div(2)" />
@@ -2833,43 +2841,32 @@
                       <label style="width: 100px;">54-2不符合要求的原因？</label><br/><br/>
                       <table    >
                           <tr>
-                              <td >1、无口罩</td>
-                              <td width="80px;"><input type="checkbox" name="topic54Two" value="1、无口罩"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              <td >1、无防晒霜陈列</td>
+                              <td width="80px;"><input type="checkbox" name="topic54Two" value="1、无防晒霜陈列"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                           <tr>
-                              <td >2、无红包</td>
-                              <td width="80px;"><input type="checkbox" name="topic54Two" value="2、无红包"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              <td >2、无花露水陈列</td>
+                              <td width="80px;"><input type="checkbox" name="topic54Two" value="2、无花露水陈列"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                           <tr>
-                              <td >3、无计生用品</td>
-                              <td width="80px;"><input type="checkbox" name="topic54Two" value="3、无计生用品"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              <td >3、无驱蚊驱虫产品</td>
+                              <td width="80px;"><input type="checkbox" name="topic54Two" value="3、无驱蚊驱虫产品"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                           <tr>
-                              <td >4、无毛巾</td>
-                              <td width="80px;"><input type="checkbox" name="topic54Two" value="4、无毛巾"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              <td >4、无丝袜</td>
+                              <td width="80px;"><input type="checkbox" name="topic54Two" value="4、无丝袜"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                           <tr>
-                              <td >5、无牙线</td>
-                              <td width="80px;"><input type="checkbox" name="topic54Two" value="5、无牙线"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              <td >5、无凉拖</td>
+                              <td width="80px;"><input type="checkbox" name="topic54Two" value="5、无凉拖"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                           <tr>
-                              <td >6、无创可贴</td>
-                              <td width="80px;"><input type="checkbox" name="topic54Two" value="6、无创可贴"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              <td >6、无小风扇</td>
+                              <td width="80px;"><input type="checkbox" name="topic54Two" value="6、无小风扇"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
+
                           <tr>
-                              <td >7、无玩具</td>
-                              <td width="80px;"><input type="checkbox" name="topic54Two" value="7、无玩具"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                          </tr>
-                          <tr>
-                              <td >8、无面膜</td>
-                              <td width="80px;"><input type="checkbox" name="topic54Two" value="8、无面膜"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                          </tr>
-                          <tr>
-                              <td >9、无雨伞</td>
-                              <td width="80px;"><input type="checkbox" name="topic54Two" value="9、无雨伞"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
-                          </tr>
-                          <tr>
-                              <td >10、其他请注明</td>
+                              <td >其他请注明</td>
                               <td width="80px;"><input type="text" name="topic54Six" class="layui-input"/></td>
                           </tr>
 
@@ -2904,40 +2901,52 @@
                   </div>
               </div><br/>
               <div id="th55" align="left">
-                  <div  lay-filter="" ><!--
+                  <div  lay-filter="" >
                       <label style="width: 100px;">55-2不符合要求的原因？</label><br/><br/>
                       <table    >
                           <tr>
-                              <td >1、无蓝月亮</td>
+                              <td >1、无口罩</td>
                               <td width="80px;"><input type="checkbox" name="topic55Two" value="1、无蓝月亮"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                           <tr>
-                              <td >2、无云南白药</td>
+                              <td >2、无红包</td>
                               <td width="80px;"><input type="checkbox" name="topic55Two" value="2、无云南白药"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                           <tr>
-                              <td >3、无冈本</td>
-                              <td width="80px;"><input type="checkbox" name="topic55Two" value="3、无冈本"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              <td >3、无计生用品</td>
+                              <td width="80px;"><input type="checkbox" name="topic55Two" value="3、无计生用品"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                           <tr>
-                              <td >4、无南孚</td>
-                              <td width="80px;"><input type="checkbox" name="topic55Two" value="4、无南孚"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              <td >4、无毛巾</td>
+                              <td width="80px;"><input type="checkbox" name="topic55Two" value="4、无毛巾"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                           <tr>
-                              <td >5、无金霸王</td>
-                              <td width="80px;"><input type="checkbox" name="topic55Two" value="5、无金霸王"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              <td >5、无牙线</td>
+                              <td width="80px;"><input type="checkbox" name="topic55Two" value="5、无牙线"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                           <tr>
-                              <td >6、无打火机（仅针对有香烟售卖的门店考核）</td>
-                              <td width="80px;"><input type="checkbox" name="topic55Two" value="6、无打火机（仅针对有香烟售卖的门店考核）"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              <td >6、无创可贴</td>
+                              <td width="80px;"><input type="checkbox" name="topic55Two" value="6、无创可贴"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                           <tr>
-                              <td >7、其他请注明</td>
+                              <td >7、无玩具</td>
+                              <td width="80px;"><input type="checkbox" name="topic55Two" value="7、无玩具"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >8、无面膜</td>
+                              <td width="80px;"><input type="checkbox" name="topic55Two" value="8、无面膜"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >9、无雨伞</td>
+                              <td width="80px;"><input type="checkbox" name="topic55Two" value="9、无雨伞"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                          </tr>
+                          <tr>
+                              <td >其他请注明</td>
                               <td width="80px;"><input type="text" name="topic55Six" class="layui-input"/></td>
                           </tr>
 
                       </table>
-                  --></div><br/>
+                  </div><br/>
                   <!-- <div class="layui-col-md12">
                        <div class="layui-card">
                            <div class="layui-card-header">上传多张图片</div>
@@ -3088,8 +3097,8 @@
                               <td width="80px;"><input type="checkbox" name="topic58Two" value="3、挂放的吊旗有过期内容"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                           <tr>
-                              <td >4、收银台APP下载桌贴未及时更新，有过期内容</td>
-                              <td width="80px;"><input type="checkbox" name="topic58Two" value="4、收银台APP下载桌贴未及时更新，有过期内容"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                              <td >4、吊旗、台卡、海报、插条、客显、电视屏，任意位置之一无苏宁支付活动展示</td>
+                              <td width="80px;"><input type="checkbox" name="topic58Two" value="4、吊旗、台卡、海报、插条、客显、电视屏，任意位置之一无苏宁支付活动展示"   lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                           </tr>
                           <tr>
                               <td >5、其他请注明</td>
