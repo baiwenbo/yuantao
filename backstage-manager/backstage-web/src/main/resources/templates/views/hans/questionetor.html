@@ -2409,9 +2409,9 @@
             <div class="layui-col-md10" align="left">
               <label style="width: 100px;">40-1是否符合要求？(单选）--生鲜区域</label><br/>
               <label style="text-align: left;font-size: 12px;color: #cf3607">（门店冷冻柜陈列要求：水产肉品陈列面不低于整个冰柜的1/2，低于1/2则此项扣分；柜壁冰霜厚度不超过1cm[无生鲜冷柜直接得分]）</label><br/>
-              <div align="left" >
-                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic40One" value="1、完全符合" th:if="${testHans.topic40One!=null}"  th:checked="${#strings.contains(testHans.topic40One,'完全符合')}" onclick="th41Div(1)"/><br/>
-                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic40One" value="2、不符合要求"  th:if="${testHans.topic40One!=null}"  th:checked="${#strings.contains(testHans.topic40One,'不符合要求')}" onclick="th41Div(2)"/>
+             <div align="left" >
+                <label style="width: 100px;">1:完全符合   </label> <input type="radio" name="topic40One" value="1、完全符合" th:if="${deial.topic40One!=null}"  th:checked="${#strings.contains(deial.topic40One,'完全符合')}" onclick="th41Div(1)"/><br/>
+                <label style="width: 100px;">2:不符合要求</label> <input type="radio" name="topic40One" value="2、不符合要求"  th:if="${deial.topic40One!=null}"  th:checked="${#strings.contains(deial.topic40One,'不符合要求')}" onclick="th41Div(2)"/>
               </div>
             </div><br/>
             <div id="th40">
@@ -2420,19 +2420,19 @@
                 <table align="left" >
                   <tr>
                     <td >1、水产陈列面部低于整个冰柜1/2</td>
-                    <td width="80px;"><input type="checkbox" name="topic40Two" value="1、水产陈列面部低于整个冰柜1/2" th:if="${testHans.topic40Two!=null}"  th:checked="${#strings.contains(testHans.topic40Two,'1、水产陈列面部低于整个冰柜1/2')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox" name="topic40Two" value="1、水产陈列面部低于整个冰柜1/2" th:if="${deial.topic40Two!=null}"  th:checked="${#strings.contains(deial.topic40Two,'1、水产陈列面部低于整个冰柜1/2')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >2、肉品陈列面部低于整个冰柜1/2</td>
-                    <td width="80px;"><input type="checkbox" name="topic40Two" value="2、肉品陈列面部低于整个冰柜1/2" th:if="${testHans.topic40Two!=null}"  th:checked="${#strings.contains(testHans.topic40Two,'2、肉品陈列面部低于整个冰柜1/2')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox" name="topic40Two" value="2、肉品陈列面部低于整个冰柜1/2" th:if="${deial.topic40Two!=null}"  th:checked="${#strings.contains(deial.topic40Two,'2、肉品陈列面部低于整个冰柜1/2')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >3、柜壁冰霜厚度超过1cm</td>
-                    <td width="80px;"><input type="checkbox" name="topic40Two" value="3、柜壁冰霜厚度超过1cm" th:if="${testHans.topic40Two!=null}"  th:checked="${#strings.contains(testHans.topic40Two,'3、柜壁冰霜厚度超过1cm')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
+                    <td width="80px;"><input type="checkbox" name="topic40Two" value="3、柜壁冰霜厚度超过1cm" th:if="${deial.topic40Two!=null}"  th:checked="${#strings.contains(deial.topic40Two,'3、柜壁冰霜厚度超过1cm')}"  lay-skin="primary" style="height: 20px;width: 50px;"/></td>
                   </tr>
                   <tr>
                     <td >4、其他请注明</td>
-                    <td width="80px;"><input type="text" name="topic40Six" th:value="${testHans.topic40Six}" class="layui-input"/></td>
+                    <td width="80px;"><input type="text" name="topic40Six" th:value="${deial.topic40Six}" class="layui-input"/></td>
                   </tr>
 
                 </table>
@@ -2440,7 +2440,7 @@
               <div align="left" class="layui-col-md10">
                 <input type="file" class="layui-btn" name="topic40Fourfile" id="test-upload-normal" value="上传图片"/>
                 <input  type="button" class="layui-btn"  id="topic40Fourfile" onclick="fileFour(this)"  value="上传图片"/>
-                <input name="t40" type="hidden" th:value="${testHans.topic40Four}"/>
+                <input name="t40" type="hidden" th:value="${deial.topic40Four}"/>
                 <input type="text" class="layui-btn"  id="t40" value="查看扣分点图片" onclick="look(this)"/>
               </div>
             </div>
